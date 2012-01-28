@@ -56,8 +56,6 @@ JB :
   # Some JB helpers refer to these paths; change theme here if needed.
   #
   archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
@@ -67,12 +65,6 @@ JB :
     provider : disqus
     disqus :
       short_name : blogomgmog
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      apikey : 123
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
@@ -81,9 +73,7 @@ JB :
   analytics :
     provider : google
     google : 
-        tracking_id : 'UA-123-12'
-    getclicky :
-      site_id : 
+        tracking_id : 'UA-18982788-1'
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
