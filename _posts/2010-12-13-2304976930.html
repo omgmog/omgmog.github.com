@@ -11,13 +11,13 @@ title: A simple solution for a jQuery animation loop memory leak
 
 <blockquote class="code">
 
-<pre>$("h1 span").not("#h1p3").everyTime(0,function(){
+<p>$("h1 span").not("#h1p3").everyTime(0,function(){
 
 	$(this).animate({'margin-left':rand_no(),'margin-top':rand_no()});
 
 });
 
-</pre>
+</p>
 
 </blockquote>
 
@@ -27,13 +27,13 @@ title: A simple solution for a jQuery animation loop memory leak
 
 <blockquote class="code">
 
-<pre>$("h1 span").not("#h1p3").everyTime(<strong>500</strong>,function(){
+<p>$("h1 span").not("#h1p3").everyTime(<strong>500</strong>,function(){
 
 	$(this).animate({'margin-left':rand_no(),'margin-top':rand_no()},<strong>490</strong>);
 
 });
 
-</pre>
+</p>
 
 </blockquote>
 
