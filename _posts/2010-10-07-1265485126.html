@@ -1,246 +1,164 @@
 ---
 layout: post
 title: Installing Mac OS X Snow Leopard on the Dell Inspiron 1525
+cover: http://cl.ly/3e27c653b57d07710c9e/content
+cover_width: 490px
 ---
 
-<p class="postimg"><img src="http://cl.ly/3e27c653b57d07710c9e/content" width="490px" height="100px"/></p>
+<p><em>This is an update to my previous guide. I've since changed platform for my site &#8212; and even changed computers &#8212; but there is enough interest in this guide to warrant a re-write, so here we go.</em></p>
 
-<p><em>This is an update to my previous guide. I&#8217;ve since changed platform for my site &#8212; and even changed computers &#8212; but there is enough interest in this guide to warrant a re-write, so here we go.</em></p>
-
-<p>I&#8217;m going to be walking you through installing Mac OS X Snow Leopard 10.6.4 on your Dell Inspiron 1525. The configuration of your Inspiron 1525 might differ from mine, but generally most of the hardware will be the same. <!-- more --></p>
+<p>I'm going to be walking you through installing Mac OS X Snow Leopard 10.6.4 on your Dell Inspiron 1525. The configuration of your Inspiron 1525 might differ from mine, but generally most of the hardware will be the same.</p>
 
 <p>My hardware is as follows:</p>
+<ul>
+	<li>Intel(R) Core(TM)2 Duo processor (2ghz, 2mb cache)</li>
+	<li>2048MB DDR2 SDRAM (667MHz, 10MB dedicated to onboard graphics)</li>
+	<li>Intel Crestline Graphics (This is the GMA X3100, just like the Macbook)</li>
+	<li>Sigmatel 9205 HD Audio</li>
+	<li>Dell Wireless (Broadcom BCM4315, essentially an Airport card)</li>
+</ul>
 
-<ul><li>Intel(R) Core(TM)2 Duo processor (2ghz, 2mb cache)</li>
+<h3>Prerequisites</h3>
+<ul>
+	<li>Dell Inspiron 1525</li>
+</ul>
+<p>This might apply to other Dell models, but I'm not here to support you if it doesn't work. If you want help, check out the InsanelyMac forums, or the OSx86 Wiki</p>
+<ul>
+	<li>OS X Snow Leopard retail DVD</li>
+</ul>
+<p>I'm not going to support installing with hacked/prepackaged non-Apple DVDs. There might be working methods for those, but it won't be covered here.</p>
+<ul>
+	<li>Boot-132 CD (from here)</li>
+	<li>A couple of hours of free time</li>
+</ul>
+<p>A good install will take less than an hour, but you'll most likely want to tweak things after your install is done.</p>
+<ul>
+	<li>Some patience</li>
+</ul>
 
-<li>2048MB DDR2 SDRAM (667MHz, 10MB dedicated to onboard graphics)</li>
+<h3>Let's begin</h3>
 
-<li>Intel Crestline Graphics (This is the GMA X3100, just like the Macbook)</li>
+<ol>
+	<li>Backup your files</li>
+	<li>Burn your Boot-132 CD</li>
+	<li>Setup BIOS settings</li>
+	<li>Boot the installer</li>
+	<li>Install</li>
+	<li>Post-installation configuration and finishing</li>
+</ol>
 
-<li>Sigmatel 9205 HD Audio</li>
-
-<li>Dell Wireless (Broadcom BCM4315, essentially an Airport card)</li>
-
-</ul><p><strong>Prerequisites</strong></p>
-
-<ul><li>Dell Inspiron 1525</li>
-
-</ul><p><span> </span>This might apply to other Dell models, but I&#8217;m not here to support you if it doesn&#8217;t work. If you want help, check out the InsanelyMac forums, or the OSx86 Wiki</p>
-
-<ul><li>OS X Snow Leopard retail DVD</li>
-
-</ul><p>I&#8217;m not going to support installing with hacked/prepackaged non-Apple DVDs. There might be working methods for those, but it won&#8217;t be covered here.</p>
-
-<ul><li>Boot-132 CD (from here)</li>
-
-<li>A couple of hours of free time</li>
-
-</ul><p>A good install will take less than an hour, but you&#8217;ll most likely want to tweak things after your install is done.</p>
-
-<ul><li>Some patience</li>
-
-</ul><p><strong>Let&#8217;s begin</strong></p>
-
-<ol><li>Backup your files</li>
-
-<li>Burn your Boot-132 CD</li>
-
-<li>Setup BIOS settings</li>
-
-<li>Boot the installer</li>
-
-<li>Install</li>
-
-<li>Post-installation configuration and finishing</li>
-
-</ol><p><strong>Backup your files</strong></p>
-
-<p>This is the most important step I guess. This install will wipe everything from the internal hard disk drive inside your Inspiron, so make sure you&#8217;ve backed up anything that you want to keep before continuing.</p>
-
+<h3>Backup your files</h3>
+<p>This is the most important step I guess. This install will wipe everything from the internal hard disk drive inside your Inspiron, so make sure you've backed up anything that you want to keep before continuing.</p>
 <p>Most Inspirons come with a hard disk smaller than 500GB, so you could easily pick up a 500GB or greater sized external hard disk, and backup all of your stuff to that.</p>
 
-<p><strong>Burn your Boot-132 CD</strong></p>
-
+<h3>Burn your Boot-132 CD</h3>
 <p>The Boot-132 CD is the best way to boot a retail Snow Leopard DVD on your Dell, it uses the Chameleon boot loader, a DSDT.aml and Kexts for the Inspiron 1525 hardware to allow the Snow Leopard DVD to boot.</p>
-
-<p>I&#8217;m not going to walk you through burning an ISO to CD, but you can use Imgburn, Nero, Disk Utility, or any other ISO burning software.</p>
-
-<p>I&#8217;ve done this using a CD-RW, CD-R and even a DVD, so you should have no problem finding some compatible disc to burn the ISO to.</p>
-
+<p>I'm not going to walk you through burning an ISO to CD, but you can use Imgburn, Nero, Disk Utility, or any other ISO burning software.</p>
+<p>I've done this using a CD-RW, CD-R and even a DVD, so you should have no problem finding some compatible disc to burn the ISO to.</p>
 <p><img src="http://cl.ly/f7036a249444822c8a5f/content"/></p>
+<p>Download the Boot-132 from macyourpc.com here - <a href="http://www.macyourpc.com/wp-content/uploads/2009/07/BootSLv3wifi.iso" target="_blank">http://www.macyourpc.com/wp-content/uploads/2009/07/BootSLv3wifi.iso</a></p>
 
-<p>Download the Boot-132 from macyourpc.com here - <a href="http://www.macyourpc.com/wp-content/uploads/2009/07/BootSLv3wifi.iso" target="_blank"><a href="http://www.macyourpc.com/wp-content/uploads/2009/07/BootSLv3wifi.iso" target="_blank">http://www.macyourpc.com/wp-content/uploads/2009/07/BootSLv3wifi.iso</a></a></p>
-
-<p><strong>Setup BIOS settings</strong></p>
-
-<p>For whatever reason, you may have your BIOS configured in a weird way. If you&#8217;ve currently got Windows XP on your Inspiron 1525, you might not have AHCI enabled for your hard disk drive.</p>
-
+<h3>Setup BIOS settings</h3>
+<p>For whatever reason, you may have your BIOS configured in a weird way. If you've currently got Windows XP on your Inspiron 1525, you might not have AHCI enabled for your hard disk drive.</p>
 <p>Boot your Inspiron while pressing the F2 key repeatedly, until you are greeted by the BIOS menu.</p>
-
 <p>First you will want to reset the BIOS to default settings, to do this, go to:</p>
+<ul>
+	<li><strong>Maintenance</strong></li>
+	<li>Load Defaults =<strong> Continue</strong></li>
+</ul>
+<p>Below is a list of the important settings in the BIOS, which have worked for me, these should be the default settings:</p>
+<ul>
+	<li><strong>Onboard Devices</strong></li>
+	<li>External USB ports =<strong> Enabled</strong></li>
+	<li>Media Card and 1394 =<strong> Enabled</strong></li>
+	<li>SATA Operation =<strong> AHCI</strong></li>
+	<li>Module Bay Device =<strong> Enabled</strong></li>
+	<li>Flash Cache Module =<strong> Enabled</strong></li>
+	<li><strong>Performance</strong></li>
+	<li>Multi Core Support =<strong> Enabled</strong></li>
+	<li>Dynamic Acceleration =<strong> Enabled</strong></li>
+	<li>SpeedStep Enable =<strong> Enabled</strong></li>
+	<li><strong>Power Management</strong></li>
+	<li>USB Wake Support =<strong> Off</strong></li>
+	<li><strong>POST Behaviour</strong></li>
+	<li>USB Emulation =<strong> Enabled</strong></li>
+</ul>
+<p>When you're finished here, press Esc to exit and choose <strong>Save/Exit.</strong></p>
 
-<ul><li><strong>Maintenance</strong></li>
-
-<li><strong><span> </span></strong>Load Defaults =<strong> Continue</strong></li>
-
-</ul><p>Below is a list of the important settings in the BIOS, which have worked for me, these should be the default settings:</p>
-
-<ul><li><strong>Onboard Devices<span> </span></strong></li>
-
-<li><strong><span><span> </span></span></strong><span>E</span>xternal USB ports =<strong> Enabled</strong></li>
-
-<li><strong><span> </span></strong>Media Card and 1394 =<strong> Enabled</strong></li>
-
-<li><strong><span> </span></strong>SATA Operation =<strong> AHCI</strong></li>
-
-<li><strong><span> </span></strong>Module Bay Device =<strong> Enabled</strong></li>
-
-<li><strong><span> </span></strong>Flash Cache Module =<strong> Enabled</strong></li>
-
-<li><strong>Performance</strong></li>
-
-<li><strong><span> </span></strong>Multi Core Support =<strong> Enabled</strong></li>
-
-<li><strong><span> </span></strong>Dynamic Acceleration =<strong> Enabled</strong></li>
-
-<li><strong><span> </span></strong>SpeedStep Enable =<strong> Enabled</strong></li>
-
-<li><strong>Power Management</strong></li>
-
-<li><strong><span> </span></strong>USB Wake Support =<strong> Off</strong></li>
-
-<li><strong>POST Behaviour</strong></li>
-
-<li><strong><span> </span></strong>USB Emulation =<strong> Enabled</strong></li>
-
-</ul><p>When you&#8217;re finished here, press Esc to exit and choose <strong>Save/Exit.</strong></p>
-
-<p><strong>Boot the installer</strong></p>
-
+<h3>Boot the installer</h3>
 <p>After this is all setup, you can go on and insert the Boot-132 CD that you burned earlier, restart your Inspiron and press F12 for the boot menu, then select your DVD drive to boot. After a moment you should see the Chameleon menu.</p>
-
 <p>Wait until the DVD drive stops spinning to make sure Chameleon has fully loaded, then eject your Boot-132 CD and insert the Snow Leopard DVD.</p>
-
 <p>Press F5 and wait for Chameleon to finish refreshing the available bootable devices.</p>
-
-<p>Select &#8220;<strong>Mac OS X Install DVD</strong>&#8221; and then type the following (this part is actully optional, and depends entirely on your hardware setup. If you&#8217;ve got the same CPU/RAM as me, this will work for you):</p>
-
-<blockquote>
-
+<p>Select &#8220;<strong>Mac OS X Install DVD</strong>&#8221; and then type the following (this part is actully optional, and depends entirely on your hardware setup. If you've got the same CPU/RAM as me, this will work for you):</p>
+<blockquote class="code">
 <p>-v -x -f -legacy</p>
-
 </blockquote>
-
-<p>You will see the text appear in the bottom-left corner of the screen. Once you&#8217;ve typed it, just press Enter, and wait for the DVD to finish loading.</p>
-
-<p>These are boot flags, they tell Chameleon how to boot the Installer. You will also need to use these later, so I&#8217;ll explain what they mean (<a href="http://forum.voodooprojects.org/index.php/topic,767.0.html" target="_blank">chameleon docs</a>):</p>
-
-<blockquote>
-
-<ul><li>-v<span> </span>verbose</li>
-
-<li>-s<span> </span>single user</li>
-
-<li>-x<span> </span>safe mode</li>
-
-<li>-f<span> </span>boot without default configuration files</li>
-
-<li>arch=x86_64<span> </span>force kernel into 64-bit mode</li>
-
-<li>arch=i386<span> </span>force kernel into 32-bit mode</li>
-
-<li>config=&lt;file&gt;<span> </span>specifies where to look for a com.apple.Boot.plist file</li>
-
-<li>cpus=1<span> </span>instructs the kernel to use x CPUs/cores<br/><br/></li>
-
-<li>arch=i386: kernel: 32 bits | kexts: 32 bits | apps: 32/64 bits</li>
-
-<li>arch=i386 -legacy: kernel: 32 bits | kexts: 32 bits | apps: 32 bits</li>
-
-<li>arch=x86_64: kernel: 64 bits | kexts: 64 bits | apps: 32/64 bits</li>
-
-<li>arch=x86_64 -legacy: kernel: 64 bits | kexts: 64 bits | apps: 32 bits </li>
-
-</ul></blockquote>
-
-<p>You will see lots of text scroll past on the screen, don&#8217;t panic if it pauses for a little while.</p>
-
+<p>You will see the text appear in the bottom-left corner of the screen. Once you've typed it, just press Enter, and wait for the DVD to finish loading.</p>
+<p>These are boot flags, they tell Chameleon how to boot the Installer. You will also need to use these later, so I'll explain what they mean (<a href="http://forum.voodooprojects.org/index.php/topic,767.0.html" target="_blank">chameleon docs</a>):</p>
+<blockquote class="code">
+<ul>
+	<li>-verbose</li>
+	<li>-single user</li>
+	<li>-xsafe mode</li>
+	<li>-fboot without default configuration files</li>
+	<li>arch=x86_64force kernel into 64-bit mode</li>
+	<li>arch=i386force kernel into 32-bit mode</li>
+	<li>config=&lt;file&gt;specifies where to look for a com.apple.Boot.plist file</li>
+	<li>cpus=1instructs the kernel to use x CPUs/cores<br/><br/></li>
+	<li>arch=i386: kernel: 32 bits | kexts: 32 bits | apps: 32/64 bits</li>
+	<li>arch=i386 -legacy: kernel: 32 bits | kexts: 32 bits | apps: 32 bits</li>
+	<li>arch=x86_64: kernel: 64 bits | kexts: 64 bits | apps: 32/64 bits</li>
+	<li>arch=x86_64 -legacy: kernel: 64 bits | kexts: 64 bits | apps: 32 bits </li>
+</ul>
+</blockquote>
+<p>You will see lots of text scroll past on the screen, don't panic if it pauses for a little while.</p>
 <p>After a minute or two the Snow Leopard installer should have booted.</p>
 
-<p><strong>Install</strong></p>
+<h3>Install</h3>
+<p>The installer is pretty straightforward, so I don't think I need to go into too much detail here. The important things are the partitioning of your hard disk, and for speed of the install, removing packages.</p>
 
-<p>The installer is pretty straightforward, so I don&#8217;t think I need to go into too much detail here. The important things are the partitioning of your hard disk, and for speed of the install, removing packages.</p>
-
-<p><strong>Partitioning</strong></p>
-
+<h3>Partitioning</h3>
 <p>On the Menu Bar at the top of the screen click <strong>Utilities</strong> and then select <strong>Disk Utility</strong>.</p>
-
 <p>In the window that opens, select your hard disk drive from the left pane, then on the right side click the <strong>Partition</strong> tab.</p>
 
-<p><strong>IMPORTANT &#8212; MAKE SURE YOU HAVE SELECTED THE CORRECT HARD DRIVE, THE NEXT STEPS WILL ERASE ALL DATA FROM THE HARD DRIVE</strong></p>
-
-<p>Under <strong>Volume Scheme:</strong> select &#8216;1 Partition&#8217;, or as many as you would like to have. For each partition, you will need to fill in the <strong>Name:</strong> field on the right, and select a format (<strong>Mac OS Extended (Journaled)</strong> is what you will need for the partition you&#8217;re installing to)</p>
-
+<h3>IMPORTANT &#8212; MAKE SURE YOU HAVE SELECTED THE CORRECT HARD DRIVE, THE NEXT STEPS WILL ERASE ALL DATA FROM THE HARD DRIVE</h3>
+<p>Under <strong>Volume Scheme:</strong> select '1 Partition', or as many as you would like to have. For each partition, you will need to fill in the <strong>Name:</strong> field on the right, and select a format (<strong>Mac OS Extended (Journaled)</strong> is what you will need for the partition you're installing to)</p>
 <p>Click the <strong>Options&#8230;</strong> button at the bottom of the window, and make sure <strong>GUID Partition Table</strong> is selected.</p>
+<p>When you're done here, press the <strong>Apply</strong> button to begin partitioning. You can now close the Disk Utility when you are finished.</p>
 
-<p>When you&#8217;re done here, press the <strong>Apply</strong> button to begin partitioning. You can now close the Disk Utility when you are finished.</p>
-
-<p><strong>Continuing with the installer</strong></p>
-
-<p>After you&#8217;ve finished partitioning, you will be taken back to the <strong>Mac OS X Installer</strong>. Click <strong>Continue</strong>, and then agree to the software license agreement.</p>
-
+<h3>Continuing with the installer</h3>
+<p>After you've finished partitioning, you will be taken back to the <strong>Mac OS X Installer</strong>. Click <strong>Continue</strong>, and then agree to the software license agreement.</p>
 <p>On the next screen, select the hard drive you just formatted and click <strong>Customize</strong>. You can untick all of these extra options, unless you require extra languages/fonts/printer drivers. Not installing these will save loads of time.</p>
-
-<p>When you&#8217;re done deselecting packages you can press <strong>Install</strong>.</p>
-
+<p>When you're done deselecting packages you can press <strong>Install</strong>.</p>
 <p>At this point all you can do is wait, so I suggest getting a coffee or something.</p>
+<p>When the install has finished (and you've hopefully got a nice <strong>Install Succeeded</strong> message on your screen), turn off the Inspiron and put the Boot-132 CD back in to continue with the final part of the install.</p>
 
-<p>When the install has finished (and you&#8217;ve hopefully got a nice <strong>Install Succeeded</strong> message on your screen), turn off the Inspiron and put the Boot-132 CD back in to continue with the final part of the install.</p>
-
-<p><strong>Post-installation configuration and finishing</strong></p>
-
+<h3>Post-installation configuration and finishing</h3>
 <p>When you boot the Boot-132 CD this time, you should see a nice Apple icon, with the name of your install hard drive below it.</p>
-
 <p>Select this boot drive, and type in the following commands to boot:</p>
-
-<blockquote>
-
+<blockquote class="code">
 <p>-v -x</p>
-
 </blockquote>
-
-<p>You&#8217;ll get a screen filled with lines of text for a moment, but eventually you should be greeted by the post-installation screen, where you can set up your profile.</p>
-
+<p>You'll get a screen filled with lines of text for a moment, but eventually you should be greeted by the post-installation screen, where you can set up your profile.</p>
 <p>On the desktop you should see a <strong>SL boot132</strong> CD icon, double click this to view the contents of the CD, and then navigate to the <strong>Post-Install</strong> directory. In <strong>Post-Install</strong> you should find a <strong>Read Me First</strong> file &#8212; this will explain what everything is in this directory.</p>
 
-<p><span>Installing Chameleon</span></p>
-
+<h3>Installing Chameleon</h3>
 <p>First thing we need to do is install the <strong>Chameleon 2 RC3</strong> boot loader, so you can boot the Inspiron without using the Boot-132 CD. Double click the <strong>Chameleon 2 RC3</strong> installer, and enter your password when prompted. </p>
-
 <p>Next, you need to copy the contents of the  <strong>Extra</strong> directory from <strong>Post-Install</strong> to the <strong>Extra</strong> directory on the root of your hard disk. To get to your hard disk, you can either select it on the left side of the <strong>Finder</strong> window that you have open, or in the <strong>Menu Bar</strong> at the top of the screen click <strong>Go</strong> and then <strong>Computer</strong>. </p>
-
 <p>Just paste the files from <strong>Post-Install/Extra</strong> into the <strong>Extra</strong> on your hard disk drive, and select to <strong>Authenticate</strong> when it asks you to.</p>
 
-<p><strong>Installing additional kexts</strong></p>
-
+<h3>Installing additional kexts</h3>
 <p>The majority of your kexts (hardware drivers) are in <strong>/Extra/KextStore</strong>, these are for fixes specific to the Inspiron 1525 hardware. For more general kexts, these will need to be installed to <strong>/System/Library/Extensions</strong>. On the Boot-132 CD, in <strong>Post-Install/Applications</strong> you will find two applications:</p>
+<ol>
+	<li>Kext Helper - use this for installing kexts to /System/Library/Extensions</li>
+	<li>MKextTool - use this for rebuilding the <strong>Extensions.mkext</strong> if you change the kexts in /<strong>Extra/KextStore</strong></li>
+</ol>
+<p>You're going to need to open <strong>Kext Helper</strong> now to install the remaining kexts from <strong>Post-Install/Local Extensions</strong>.</p>
 
-<ol><li>Kext Helper - use this for installing kexts to /System/Library/Extensions</li>
-
-<li>MKextTool - use this for rebuilding the <strong>Extensions.mkext</strong> if you change the kexts in /<strong>Extra/KextStore</strong></li>
-
-</ol><p>You&#8217;re going to need to open <strong>Kext Helper</strong> now to install the remaining kexts from <strong>Post-Install/Local Extensions</strong>.</p>
-
-<p><strong>Extra configuration</strong></p>
-
-<p>If you&#8217;ve got the Dell Wireless (Broadcom-based) Wi-Fi card in your Inspiron, you should find that wireless works already, so you can connect to your wireless network now or plug in an ethernet cable and use the wired network.</p>
-
+<h3>Extra configuration</h3>
+<p>If you've got the Dell Wireless (Broadcom-based) Wi-Fi card in your Inspiron, you should find that wireless works already, so you can connect to your wireless network now or plug in an ethernet cable and use the wired network.</p>
 <p>If the screen colours look a bit weird (mine looked very purple), open <strong>System Preferences</strong> and click <strong>Displays</strong>, click the <strong>Color</strong> tab and then select one of the display profiles from the list. I find that the <strong>Generic RGB Profile</strong> looks the best.</p>
-
 <p>To make sound work, you will need to open <strong>System Preferences</strong> again and go to <strong>Sound</strong>, select the <strong>Output</strong> tab and then from the device list select <strong>Speaker (Fixed)</strong>.</p>
 
-
-
-<p>Update: You can see part 2 of the guide here - <a href="http://blog.omgmog.net/post/1290723507/upgrading-mac-os-x-snow-leopard-on-the-dell-inspiron" target="_blank"><a href="http://blog.omgmog.net/post/1290723507/upgrading-mac-os-x-snow-leopard-on-the-dell-inspiron" target="_blank">http://blog.omgmog.net/post/1290723507/upgrading-mac-os-x-snow-leopard-on-the-dell-inspiron</a></a></p>
-
-<p>I no longer own the Dell Inspiron 1525, and so I&#8217;m no longer supporting this guide.</p>
+<p>Update: You can see part 2 of the guide here - <a href="http://blog.omgmog.net/post/1290723507" target="_blank">http://blog.omgmog.net/post/1290723507</a></p>
+<p>I no longer own the Dell Inspiron 1525, and so I'm no longer supporting this guide.</p>

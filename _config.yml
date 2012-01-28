@@ -1,6 +1,6 @@
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /post/:title 
 
 exclude: [".rbenv-version", "README.md", "Rakefile"]
 auto: true
@@ -66,7 +66,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : blogomgmog
     livefyre :
       site_id : 123
     intensedebate :

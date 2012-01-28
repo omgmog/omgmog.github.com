@@ -69,3 +69,35 @@ body {
 	color:#FFF;
 }
 	
+
+div.latest_post {
+	
+}
+.latest_post h2 {
+	
+}
+.latest_post img.post_cover {
+	
+}
+.latest_post p {
+	
+}
+.latest_post p.post_meta {
+	
+}
+.latest_post p.read_more {
+	
+}
+
+ul.recent_posts {
+	margin:0;
+}
+.recent_posts li {
+	float:left;
+	display: block;
+	width: 250px;
+	margin-bottom:10px;
+}
+.margin_left {
+	margin-left: 20px;
+}
