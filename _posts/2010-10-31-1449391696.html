@@ -1,0 +1,34 @@
+---
+layout: post
+title: Using Greasemonkey scripts with Google Chrome
+---
+
+<p class="postimg"><img height="100" width="490" src="http://dl.dropbox.com/u/19772/chromemonkey.png"/></p>
+
+<p>This isn&#8217;t new news, but it&#8217;s something I&#8217;ve found quite useful.</p>
+
+<p>You can use userscripts created for Firefox/Greasemonkey in Google Chrome. Many of the scripts that you can find over on <a href="http://userscripts.org/" target="_blank">userscripts.org</a> can be used effortlessly by Google Chrome, and once installed can be disabled/uninstalled from the Extensions tab.</p>
+
+<p>The bit that I&#8217;ve found useful is that you can install any userscript in Google Chrome simply by naming giving it the correct information, and naming it in the right way.</p>
+
+<p>The instructions are as follows:</p>
+
+<p>1 - Your script needs the userscript meta information at the top of the file</p>
+
+<blockquote><span>// ==UserScript==<br/>// @name Some Awesome Script<br/></span><span>// @namespace Supporting website/authors website<br/></span><span>// @description Description of the scripts functions<br/></span><span>// @include Url of the website to apply to, wildcard<br/></span><span>// @match The same as @include really<br/></span><span>// @require Additional script/library from site or path<br/></span><span>// ==/UserScript==</span></blockquote>
+
+<p>2 - You need to name the file as *<strong>.user</strong>.js</p>
+
+<blockquote>
+
+<p><span>some-awesome-script_1-0.user.js</span></p>
+
+</blockquote>
+
+<p>3 - Drag the script into your Chrome window, and you will be prompted to install the script.</p>
+
+
+
+<p>Information sources:</p>
+
+<p><a href="http://www.chromium.org/developers/design-documents/user-scripts%20" target="_blank"><a href="http://www.chromium.org/developers/design-documents/user-scripts" target="_blank">http://www.chromium.org/developers/design-documents/user-scripts</a><br/></a><a href="http://www.freeopenbook.com/javascript24/ch18lev1sec3.html" target="_blank"><a href="http://www.freeopenbook.com/javascript24/ch18lev1sec3.html" target="_blank">http://www.freeopenbook.com/javascript24/ch18lev1sec3.html</a></a></p>
