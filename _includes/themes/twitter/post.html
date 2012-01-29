@@ -1,9 +1,9 @@
 <div class="page-header">
   <h1>{{ page.title }}</h1>
 </div>
-{% capture page_year_s %}{{ page.date | date:"%Y" }}{% endcapture %}
-{% assign page_year = page_year_s | plus:0%}
-{% if page_year < '2011' %}
+{% capture post_Y %}{{ page.date | date:"%Y" }}{% endcapture %}
+{% capture now_Y %}{{ site.time | date:"%Y" }}{% endcapture %}
+{% if post_Y < now_Y %}
 <div class="alert-message block-message warning">
   <p><strong>This is an old post!</strong> It might be a good idea to check the <a href="/archive.html">Archives</a> to see if I've posted a revision to this post or subject.</p>
 </div>
@@ -11,8 +11,10 @@
 <div class="row">
   
   <div class="span4">
+  {% capture post_Ym %}{{ page.date | date:"%Y%m" }}{% endcapture %}
+  {% capture now_Ym %}{{ site.time | date:"%Y%m" }}{% endcapture %}
     <h4>Published</h4>
-    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
+    <div class="date"><span>{{ page.date | date_to_long_string }}</span>{% if post_Ym == now_Ym %} <span class="label success">New</span>{% endif %}</div>
     <a href="{{ BASE_PATH }}{{ page.url }}">Permalink</a>
     <div class="pagination">
       <ul>
