@@ -22,7 +22,7 @@ title: Home
         {% if post.cover %}
           <img src="{{ post.cover }}" alt="{{ post.title }}" class="post_cover" width="{% if post.cover_width %}{{ post.cover_width }}{% else %}520px{% endif %}"/>
         {% endif %}
-        <p class="post_meta">{{ post.date | date_to_string }}</p>
+        <p class="post_meta">{{ post.date | date_to_string }} (<a href="{{ BASE_PATH }}{{ post.url }}">Permalink</a>)</p>
         {{ post.content }}
       {% endfor %}
     </div>
