@@ -1,7 +1,13 @@
 <div class="page-header">
   <h1>{{ page.title }}</h1>
 </div>
-
+{% capture page_year_s %}{{ page.date | date:"%Y" }}{% endcapture %}
+{% assign page_year = page_year_s | plus:0%}
+{% if page_year < '2011' %}
+<div class="alert-message block-message warning">
+  <p><strong>This is an old post!</strong> It might be a good idea to check the <a href="/archive.html">Archives</a> to see if I've posted a revision to this post or subject.</p>
+</div>
+{% endif %}
 <div class="row">
   
   <div class="span4">
