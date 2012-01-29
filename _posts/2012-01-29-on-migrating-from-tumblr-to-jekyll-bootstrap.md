@@ -41,6 +41,9 @@ Switching to [Jekyll Bootstrap](http://jekyllbootstrap.com/) and maintaining all
 	This is the easiest part of the whole process, pushing to GitHub. Assuming <code>git</code> is already set up on your system, you just use the following commands:
 	<blockquote class="code">
 		<p>
+			git add &lt;the new files you've created (use 'git status' to see)&gt;
+		</p>
+		<p>
 			git commit -am "A message describing the changes you made"
 		</p>
 		<p>
