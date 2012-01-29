@@ -4,7 +4,7 @@ title: Home
 ---
 {% include JB/setup %}
 <div class="row">
-  <span class="span5">
+  <span class="span4">
     <h3>About</h3>
     <p>Welcome to "blomg" or the "omgmog blog" - I'm still deciding what to call this.</p>
     <p>Previously the blog was powered by <a href="http://www.tumblr.com" target="_blank">Tumblr</a>, and even more recently I was part-way through converting it to <a href="http://octopress.org/" target="_blank">Octopress</a>, but now I've moved to using <a href="http://jekyllbootstrap.com/" target="_blank">Jekyll Bootstrap</a> (<a href="http://jekyllrb.com/" target="_blank">Jekyll</a> + <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>) hosted by <a href="http://pages.github.com" target="_blank">GitHub</a>.</p>
@@ -15,7 +15,7 @@ title: Home
       <li><a href="http://github.com/omgmog">@omgmog on GitHub</a></li>
     </ul>
   </span>
-  <span class="span9">
+  <span class="span10">
     <div class="latest_post">
       {% for post in site.posts limit:1 %}
         <h4>{{ post.title }}</h4>
