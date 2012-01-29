@@ -5,6 +5,7 @@ title: Home
 {% include JB/setup %}
 <div class="row">
   <span class="span4">
+    <div class="sidebar_image"><img src="http://dl.dropbox.com/u/19772/omgmog-laundrette.png" width="160px" /></div>
     <h3>About</h3>
     <p>Welcome to "blomg" or the "omgmog blog" - I'm still deciding what to call this.</p>
     <p>Previously the blog was powered by <a href="http://www.tumblr.com" target="_blank">Tumblr</a>, and even more recently I was part-way through converting it to <a href="http://octopress.org/" target="_blank">Octopress</a>, but now I've moved to using <a href="http://jekyllbootstrap.com/" target="_blank">Jekyll Bootstrap</a> (<a href="http://jekyllrb.com/" target="_blank">Jekyll</a> + <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>) hosted by <a href="http://pages.github.com" target="_blank">GitHub</a>.</p>
@@ -18,7 +19,9 @@ title: Home
   <span class="span10">
     <div class="latest_post">
       {% for post in site.posts limit:1 %}
-        <h4>{{ post.title }}</h4>
+        {% capture post_Ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+        {% capture now_Ym %}{{ site.time | date:"%Y%m" }}{% endcapture %}
+        <h4>{{ post.title }}{% if post_Ym == now_Ym %} <span class="label success">New</span>{% endif %}</h4>
         {% if post.cover %}
           <img src="{{ post.cover }}" alt="{{ post.title }}" class="post_cover" width="{% if post.cover_width %}{{ post.cover_width }}{% else %}520px{% endif %}"/>
         {% endif %}
@@ -30,8 +33,10 @@ title: Home
     <h4>Recently...</h4>
     <ul class="recent_posts">
       {% for post in site.posts limit:4 offset:1 %}
+        {% capture post_Ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+        {% capture now_Ym %}{{ site.time | date:"%Y%m" }}{% endcapture %}
         <li class="{% cycle nil,'margin_left' %}">
-          <span>{{ post.date | date_to_string }}</span><br /><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+          <span>{{ post.date | date_to_string }}</span><br /><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}{% if post_Ym == now_Ym %} <span class="label success">New</span>{% endif %}</a>
         </li>
       {% endfor %}
     </ul>
