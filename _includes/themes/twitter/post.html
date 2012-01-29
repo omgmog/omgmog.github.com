@@ -7,7 +7,7 @@
   <div class="span4">
     <h4>Published</h4>
     <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
-    <a href="{{ BASE_PATH }}{{ post.url }}">Permalink</a>
+    <a href="{{ BASE_PATH }}{{ page.url }}">Permalink</a>
     <div class="pagination">
       <ul>
       {% if page.previous %}
