@@ -23,10 +23,14 @@ title: Home
         {% capture now_Ym %}{{ site.time | date:"%Y%m" }}{% endcapture %}
         <h4>{{ post.title }}{% if post_Ym == now_Ym %} <span class="label success">New</span>{% endif %}</h4>
         {% if post.cover %}
-          <img src="{{ post.cover }}" alt="{{ post.title }}" class="post_cover" width="{% if post.cover_width %}{{ post.cover_width }}{% else %}520px{% endif %}"/>
+          <div class="post_cover">
+            <img src="{{ post.cover }}" alt="{{ post.title }}" width="{% if post.cover_width %}{{ post.cover_width }}{% else %}520px{% endif %}"/>
+          </div>
         {% endif %}
+        <div class="post_content">
         <p class="post_meta">{{ post.date | date_to_string }} (<a href="{{ BASE_PATH }}{{ post.url }}">Permalink</a>)</p>
         {{ post.content }}
+        </div>
       {% endfor %}
     </div>
     <hr />

@@ -29,22 +29,17 @@
         <li class="next disabled"><a>Next &rarr;</a>
       {% endif %}
       </ul>
-    </div>
-  {% unless page.tags == empty %}
-    <h4>Tags</h4>
-    <ul class="tag_box">
-    {% assign tags_list = page.tags %}
-    {% include JB/tags_list %}
-    </ul>
-  {% endunless %}  
+    </div> 
   </div>
   <div class="span10">
   {% if page.cover %}
-    <p class="post_cover">
+    <div class="post_cover">
       <img src="{{ page.cover }}" alt="{{ page.title }}" width="{% if page.cover_width %}{{ page.cover_width }}{% else %}520px{% endif %}"/>
-    </p>
+    </div>
   {% endif %}
+    <div class="post_content">
     {{ content }}
+    </div>
     <hr>
     {% include JB/comments %}
   </div>
