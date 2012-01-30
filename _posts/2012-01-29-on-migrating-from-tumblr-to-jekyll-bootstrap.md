@@ -55,3 +55,31 @@ Switching to [Jekyll Bootstrap](http://jekyllbootstrap.com/) and maintaining all
 After all of that, all that remains is adjust the permalink taxonomy, and creating a custom blog index (such as the one I've made) to display the latest posts.
 
 So far I'm really happy with Jekyll, and for now I'm quite happy with using the Twitter Bootstrap style -- in time I'm sure I'll be tweaking and changing the style a bit to align it with [my main website](http://www.omgmog.net) a bit better.
+
+###### Update:
+
+So a day or two after putting the new blog live, I realised that Google had indexed my old tumblr posts with the following permalink structure:
+
+<blockquote class="code">
+<p>
+http://blog.omgmog.net/post/XXXXX/post-title-as-slug
+</p>
+</blockquote>
+
+but I'm using the shorter version, still valid from the old blog:
+
+<blockquote class="code">
+<p>
+http://blog.omgmog.net/post/XXXXX
+</p>
+</blockquote>
+
+Which will actually be <code>http://blog.omgmog.net/post/post-title-as-slug</code> for new posts created with Jekyll.
+
+A couple of my posts were high-traffic posts according to Google Analytics, so I had to sort out some sort of redirect for these posts so that the old indexed urls would still function, and visitors would find their way to the new posts. I found a Jekyll plugin called [Jekyll Alias Generator](https://github.com/tsmango/jekyll_alias_generator) which works by just adding a new <code>alias: /path/for/alias</code> to the YAML block on posts. The problem with this though is that GitHub hosted pages don't allow you to use plugins with Jekyll, so I couldn't cleanly deploy this by just adding <code>alias</code> to my YAML block and never thinking about it again.
+
+The solution I found for this was to run the local Jekyll server with the <code>rake preview</code> command, so that it would generate the alias pages for each post and put them in the <code>_site</code> directory. I then copied the aliases for the posts I wanted to maintain to a new <code>post</code> folder in the root of my Jekyll repository (mirroring the post structure that I'm using), and then deployed these static HTML-based redirects to GitHub.
+
+I'm not completely happy with this solution as it means I've now got a handful of static html files on GitHub that serve no purpose other than to redirect to new pages, but it works.
+
+I'd like if GitHub would allow plugins in some form in the future, or give us some sort of solution for setting up pattern-based redirects, similar to how you would do with a <code>.htaccess</code> file on an Apache webserver.
