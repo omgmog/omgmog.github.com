@@ -5,7 +5,7 @@ cover: http://f.cl.ly/items/3g1D2w020K111M1L0413/by%20default%202012-01-30%20at%
 cover_width: 
 ---
 {% include JB/setup %}
-<small>NB: This flurry of content might be shortlived, but for now I'm excited to be posting again so shush!</small>
+<strong>NB: This flurry of content might be shortlived, but for now I'm excited to be posting again so shush!</strong>
 
 Jekyll, as it turns out, is a really nice <s>blogging platform</s> parsing engine. One of the nice things about it is the flexibility. In my current Jekyll set up I've added metadata to the [YAML](http://www.yaml.org/) for posts, so that I can optionally define a post cover (or image, if you'd prefer) and a width for the cover.
 
