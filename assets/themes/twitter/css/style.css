@@ -77,14 +77,13 @@ div.latest_post {
 .latest_post h2 {
 	
 }
-.latest_post img.post_cover {
+.latest_post .post_cover img {
 	
 }
 .latest_post p {
 	
 }
 .latest_post p.post_meta {
-	
 }
 .latest_post p.read_more {
 	
@@ -105,7 +104,8 @@ ul.recent_posts {
 footer {
 	border-top:0;
 }
-.sidebar_image {
+.sidebar_image,
+.post_cover {
   float: left;
   padding: 4px;
   margin: 0 0 18px 20px;
@@ -116,7 +116,12 @@ footer {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  clear:both;
 }
-.sidebar_image img {
+.sidebar_image img,
+.post_cover img {
 	vertical-align: middle;
+}
+div.post_content {
+	clear:both;
 }
