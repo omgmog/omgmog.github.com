@@ -5,6 +5,12 @@ header : Post Archive
 group: navigation
 ---
 {% include JB/setup %}
-
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
+<div class="row">
+	<span class="span4">
+    	{% include about_snippet %}
+	</span>
+	<span class="span10">
+		{% assign posts_collate = site.posts %}
+		{% include JB/posts_collate %}
+	</span>
+</div>
