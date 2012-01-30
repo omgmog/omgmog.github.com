@@ -105,7 +105,8 @@ footer {
 	border-top:0;
 }
 .sidebar_image,
-.post_cover {
+.post_cover,
+.post_thumb {
   float: left;
   padding: 4px;
   margin: 0 0 18px 20px;
@@ -118,10 +119,18 @@ footer {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
   clear:both;
 }
+.post_thumb {
+	margin: 0 10px 0 0;
+	padding: 2px;
+}
 .sidebar_image img,
-.post_cover img {
+.post_cover img,
+.post_thumb img {
 	vertical-align: middle;
 }
 div.post_content {
 	clear:both;
+}
+div.month .span10 {
+	margin-bottom: 20px;
 }

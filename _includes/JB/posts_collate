@@ -1,55 +1,41 @@
-{% comment %}<!--
-Collate_posts helper. Collated posts by year and month.
-Usage:
-  1) assign the 'posts_collate' variable to a valid array of posts.
-  2) include JB/posts_collate
-  example:
-    {% assign posts_collate = site.posts %}
-    {% include JB/posts_collate %}
-
-  Ordering:
-    Posts are displayed in reverse chronological order.
-    For normal chronological order:
-      1) Change the for loop to this:
-        => 'for post in site.posts reversed'
-      2) Next make sure to change 'post.previous.date' to:
-        => 'post.next.date'
-        
--->{% endcomment %}
-
-{% if site.JB.posts_collate.provider == "custom" %}
-  {% include custom/posts_collate %}
-{% else %}
   {% for post in posts_collate  %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
     {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
-  
+
+    {% capture post_Ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+    {% capture now_Ym %}{{ site.time | date:"%Y%m" }}{% endcapture %}
+    
     {% if forloop.first %}
       <h2>{{this_year}}</h2>
       <h3>{{this_month}}</h3>
-      <ul>
+      <div class="row month month_latest">
     {% endif %}
-  
-    <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  
+    <span class="span10">
+      {% if post.thumb %}
+      <div class="post_thumb">
+        <a href="{{ BASE_PATH }}{{ post.url }}"><img src="{{ post.thumb }}" width="30px" height="30px" /></a>
+      </div>
+      {% endif %}
+      <span>{{ post.date | date: "%B %e, %Y" }}</span>{% if post_Ym == now_Ym %} <span class="label success">New</span>{% endif %}<br />
+      <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+    </span>
     {% if forloop.last %}
-      </ul>
+      </div>
     {% else %}
       {% if this_year != next_year %}
-        </ul>
+        </div>
         <h2>{{next_year}}</h2>
         <h3>{{next_month}}</h3>
-        <ul>
+        <div class="row month">
       {% else %}    
         {% if this_month != next_month %}
-          </ul>
+          </div>
           <h3>{{next_month}}</h3>
-          <ul>
+          <div class="row month">
         {% endif %}
       {% endif %}
     {% endif %}
   {% endfor %}
-{% endif %}
 {% assign posts_collate = nil %}
