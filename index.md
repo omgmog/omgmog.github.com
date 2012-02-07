@@ -31,7 +31,7 @@ title: Home
       {% for post in site.posts limit:4 offset:1 %}
         {% capture post_Ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
         {% capture now_Ym %}{{ site.time | date:"%Y%m" }}{% endcapture %}
-        <li class="{% cycle nil,'margin_left' %}">
+        <li class="{% cycle nil,'margin_left' %}"{% if forloop.index == 3 %} style="clear:left;"{% endif %}>
           <span>{{ post.date | date_to_string }}</span>{% if post_Ym == now_Ym %} <span class="label success">New</span>{% endif %}<br /><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
         </li>
       {% endfor %}
