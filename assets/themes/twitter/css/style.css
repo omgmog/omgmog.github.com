@@ -134,3 +134,6 @@ div.post_content {
 div.month .span10 {
 	margin-bottom: 20px;
 }
+div.post_content img {
+	max-width: 100%;
+}
