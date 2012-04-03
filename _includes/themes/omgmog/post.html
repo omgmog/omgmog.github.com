@@ -1,0 +1,40 @@
+
+<div class="less-fancy-post-header" style="background-image:url({{ page.large_cover }});">
+  <div class="meta">
+    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
+  </div>
+
+  <div class="page-header">
+      <h1>{{ page.title }}</h1>
+  </div>
+</div>
+
+{% capture post_Y %}{{ page.date | date:"%Y" }}{% endcapture %}
+{% capture now_Y %}{{ site.time | date:"%Y" }}{% endcapture %}
+{% if post_Y < now_Y %}
+  <div class="message">
+    <p><strong>This is an old post!</strong> It might be a good idea to check the <a href="/archive.html">Archive</a> to see if I've posted a revision to this post or subject.</p>
+  </div>
+{% endif %}
+
+<div class="pagination">
+  <ul>
+  {% if page.previous %}
+    <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+  {% else %}
+    <li class="prev disabled"><a>&larr; Previous</a></li>
+  {% endif %}
+  {% if page.next %}
+    <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+  {% else %}
+    <li class="next disabled"><a>Next &rarr;</a></li>
+  {% endif %}
+  </ul>
+</div>
+<div class="content" id="post">
+  {{ content }}
+</div>
+
+<div class="comments">
+  {% include JB/comments %}
+</div>

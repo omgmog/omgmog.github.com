@@ -1,40 +1,48 @@
 ---
 layout: page
-title: Home
+title: Blomg
+tagline: 
+hide_header: true
 ---
 {% include JB/setup %}
-<div class="row">
-  <span class="span4">
-    {% include about_snippet %}
-  </span>
-  <span class="span10">
-    <div class="latest_post">
-      {% for post in site.posts limit:1 %}
-        {% capture post_Ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
-        {% capture now_Ym %}{{ site.time | date:"%Y%m" }}{% endcapture %}
-        {% if post.cover %}
-          <div class="post_cover">
-            <img src="{{ post.cover }}" alt="{{ post.title }}" width="{% if post.cover_width %}{{ post.cover_width }}{% else %}520px{% endif %}"/>
-          </div>
-        {% endif %}
-        <h4>{{ post.title }}</h4>
-        <div class="post_content">
-        <p class="post_meta">{{ post.date | date_to_string }}{% if post_Ym == now_Ym %} <span class="label success">New</span>{% endif %}<br/>
-        <a href="{{ BASE_PATH }}{{ post.url }}">Permalink</a></p>
-        {{ post.content }}
-        </div>
-      {% endfor %}
-    </div>
-    <hr />
-    <h4>Recently...</h4>
-    <ul class="recent_posts">
-      {% for post in site.posts limit:4 offset:1 %}
-        {% capture post_Ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
-        {% capture now_Ym %}{{ site.time | date:"%Y%m" }}{% endcapture %}
-        <li class="{% cycle nil,'margin_left' %}"{% if forloop.index == 3 %} style="clear:left;"{% endif %}>
-          <span>{{ post.date | date_to_string }}</span>{% if post_Ym == now_Ym %} <span class="label success">New</span>{% endif %}<br /><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </span>
+{% for post in site.posts|limit:1 %}
+<div class="fancy-post-header" style="background-image:url({{ post.large_cover }});">
+  <div class="fancy-post-header-inner">
+    <a href="{{ post.url }}" class="pjax">
+      <h3>{{ post.date | date_to_long_string }}</h3>
+      <h1>{{ post.title }}</h1>
+      {% if post.tagline %}<h2>{{ post.tagline }}</h2>{% endif %}
+    </a>
+  </div>
+</div>
+<div class="pagination">
+  <ul>
+  {% if post.previous %}
+    <li class="prev"><a href="{{ BASE_PATH }}{{ post.previous.url }}" title="{{ post.previous.title }}">&larr; Previous</a></li>
+  {% else %}
+    <li class="prev disabled"><a>&larr; Previous</a></li>
+  {% endif %}
+
+  {% if post.next %}
+    <li class="next"><a href="{{ BASE_PATH }}{{ post.next.url }}" title="{{ post.next.title }}">Next &rarr;</a></li>
+  {% else %}
+    <li class="next disabled"><a>Next &rarr;</a></li>
+  {% endif %}
+  </ul>
+</div>
+<div class="content" id="post">
+  {{ post.content }}
+</div>
+{% endfor %}
+<div class="recent_posts">
+	<h2>Recently...</h2>
+	<ul>
+	  {% for post in site.posts limit:6 offset:1 %}
+	    {% capture post_Ym %}{{ post.date | date:"%Y%m" }}{% endcapture %}
+	    {% capture now_Ym %}{{ site.time | date:"%Y%m" }}{% endcapture %}
+	    <li class="{% cycle nil,'margin_left' %}"{% if forloop.index == 3 %} style="clear:left;"{% endif %}>
+	      <span>{{ post.date | date_to_string }}</span>{% if post_Ym == now_Ym %} <span class="new">New</span>{% endif %}<br /><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+	    </li>
+	  {% endfor %}
+	</ul>
 </div>
