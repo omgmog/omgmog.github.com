@@ -1,4 +1,4 @@
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /post/:title 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
