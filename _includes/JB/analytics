@@ -3,10 +3,6 @@
 {% case site.JB.analytics.provider %}
 {% when "google" %}
   {% include JB/analytics-providers/google %}
-{% when "getclicky" %}
-  {% include JB/analytics-providers/getclicky %}
-{% when "custom" %}
-  {% include custom/analytics %}
 {% endcase %}
 
 {% endif %}

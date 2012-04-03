@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Upgrading my Macbook Pro"
-cover: http://f.cl.ly/items/2i141M0L2G2b0D032W3I/Screen%20Shot%202012-03-31%20at%2016.21.46.png
-cover_width: 
-thumb: http://f.cl.ly/items/1l2j1w3f0n3c3J1D1p18/Speedy-Gonzales-icon.png
+large_cover: http://uk.omg.li/FUwj/mac_teardown_ifixit.jpg
 ---
 {% include JB/setup %}
 
@@ -77,3 +75,5 @@ The upgrade costs less than £150 &mdash; the increase in speed/performance is w
 Here are some Geekbench scores comparing before/after the upgrade: [http://browse.geekbench.ca/geekbench2/compare/594952/594951](http://browse.geekbench.ca/geekbench2/compare/594952/594951)
 
 Yes, I've named the new SSD "Gonzales" because it's so speedy!
+
+<cite>Post image courtesy of <a href="http://ifixit.com">iFixit.com</a></cite>
