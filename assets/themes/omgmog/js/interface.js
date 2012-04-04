@@ -1,5 +1,7 @@
 $(function(){
-    $(".page-container").fadeTo('fast',1);
+    $(".page-container").fadeTo('fast',1,function(){
+        $("#disqus_thread").show();
+    });
 	var isMobile = false;
 
 	// Identify if visitor on mobile with lame sniffing to remove parallaxing title
@@ -45,6 +47,7 @@ $(function(){
         console.log('about to load...');
         // tidy up before we load then
         $('iframe, script[src*="disqus"], link[href*="disqus"], script[src*="ga.js"]').remove();
+        $("#disqus_thread").hide();
     })
     .on('pjax:start',function(){
         console.log("loading...");
