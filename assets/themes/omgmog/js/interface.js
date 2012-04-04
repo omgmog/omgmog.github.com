@@ -1,4 +1,5 @@
 $(function(){
+    $(".page-container").fadeTo('fast',1);
 	var isMobile = false;
 
 	// Identify if visitor on mobile with lame sniffing to remove parallaxing title
@@ -27,35 +28,34 @@ $(function(){
             $(".page-container").css('min-height',$(window).height());
         }
     });
-    $("a.pjax").live('click', function(e){
+
+    $(".pagination a").on('click',function(e){
         if($.support.pjax) e.preventDefault();
-        $(".metanav .active").removeClass("active");
-    }).pjax({
-        url:$(this).attr("href"),
-        container:'#post',
-        fragment:'#post'
-    });
-    $("#post")
-    .on('pjax:start', function() { 
-    })
-    .on('pjax:end',   function() { 
-        $('html,body').animate({scrollTop: ($("#post").offset().top - 46)},'slow');   
+        var url = $(this).attr("href")
+        $(".active").removeClass("active");
+        $.pjax({
+            url: url,
+            container: '.page-container',
+            fragment: '.page-container'
+        });
     });
 
-    $(".pagination a").live('click',function(e){
-        if($.support.pjax) e.preventDefault();
-        $(".nav .active").removeClass("active");
-    }).pjax({
-        url: $(this).attr("href"),
-        container:'.page-container',
-        fragment:'.page-container'
-    });
     $(".page-container")
+    .on('pjax:beforeSend',function(){
+        console.log('about to load...');
+        // tidy up before we load then
+        $('iframe, script[src*="disqus"], link[href*="disqus"], script[src*="ga.js"]').remove();
+    })
     .on('pjax:start',function(){
+        console.log("loading...");
         $('html,body').animate({scrollTop: ($("html").offset().top)},0);   
+        $(".page-container").fadeTo('fast',0.5);
     })
     .on('pjax:end',function(){
+        console.log("loaded!");
     });
+
+    console.log("loaded on pageload sucka!");
 });
 
 
