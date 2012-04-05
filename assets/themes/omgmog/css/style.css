@@ -272,6 +272,14 @@ h4 {
 .pagination ul li {
 }
 
+@media all and (max-width: 1090px) {
+	.pagination ul li.prev {
+		margin-left: -510px;
+	}
+	.pagination ul li.next {
+		margin-left: 410px;
+	}
+}
 
 /* small screens */
 @media all and (max-width: 960px) {
@@ -315,7 +323,13 @@ h4 {
 		padding: 0;
 	}
 	.content {
-		padding: 20px;
+		padding: 20px 40px;
+	}
+	.page-header,
+	.meta,
+	.comments,
+	.recent_posts {
+		padding: 0 40px;
 	}
 	.fancy-post-header {
 		height: 200px;
@@ -331,26 +345,17 @@ h4 {
 	.fancy-post-header-inner h1 {
 		font-size: 2em;
 	}
-	.pagination {
-		width: 100%;
-	}
-	.pagination ul {
-		clear:both;
-		overflow:hidden;
-		width: 100%;
-	}
-	.pagination ul li {
-		position: static;
-		left:auto;
-	}
+
 	.pagination ul li.prev {
-		margin:0;
-		float:left;
+		margin-left: -30px;
+		left:0;
 	}
 	.pagination ul li.next {
-		margin:0;
-		float:right;
+		margin-right: -30px;
+		right:0;
+		left: auto;
 	}
+
 }
 .archive h3 {
 	margin-left: 20px;
