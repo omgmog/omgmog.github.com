@@ -21,3 +21,4 @@ analytics :
       tracking_id : 'UA-18982788-1'
 sharing :
   provider : false
+disqus : 'blogomgmog'
