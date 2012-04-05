@@ -31,7 +31,7 @@ $(function(){
         }
     });
 
-    $(".pagination a").on('click',function(e){
+    $(".pagination li:not('.disabled') a").on('click',function(e){
         if($.support.pjax) e.preventDefault();
         var url = $(this).attr("href")
         $(".active").removeClass("active");
