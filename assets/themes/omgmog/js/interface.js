@@ -44,21 +44,14 @@ $(function(){
 
     $(".page-container")
     .on('pjax:beforeSend',function(){
-        console.log('about to load...');
         // tidy up before we load then
         $('iframe, script[src*="disqus"], link[href*="disqus"], script[src*="ga.js"]').remove();
         $("#disqus_thread").hide();
     })
     .on('pjax:start',function(){
-        console.log("loading...");
         $('html,body').animate({scrollTop: ($("html").offset().top)},0);   
         $(".page-container").fadeTo('fast',0.5);
-    })
-    .on('pjax:end',function(){
-        console.log("loaded!");
     });
-
-    console.log("loaded on pageload sucka!");
 });
 
 
