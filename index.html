@@ -6,15 +6,31 @@ hide_header: true
 ---
 {% include JB/setup %}
 {% for post in site.posts|limit:1 %}
-<div class="fancy-post-header" style="background-image:url({{ post.large_cover }});">
-  <div class="fancy-post-header-inner">
-    <a href="{{ post.url }}" class="pjax">
-      <h3>{{ post.date | date_to_long_string }}</h3>
-      <h1>{{ post.title }}</h1>
-      {% if post.tagline %}<h2>{{ post.tagline }}</h2>{% endif %}
-    </a>
+
+{% if post.video_url %}
+  <div class="fancy-video-header">
+    <iframe 
+      class="yt-embed" 
+      src="{{ post.video_url }}?&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;wmode=transparent" 
+      frameborder="0" 
+      allowfullscreen="true"
+      ></iframe><div class="fancy-video-header-inner">
+      <a href="{{ post.url }}" class="pjax">
+        <h3>{{ post.date | date_to_long_string }}</h3>
+        <h1>{{ post.title }}</h1>
+      </a>
+    </div>
   </div>
-</div>
+{% else %}
+  <div class="fancy-post-header" style="background-image:url({{ post.large_cover }});">
+    <div class="fancy-post-header-inner">
+      <a href="{{ post.url }}" class="pjax">
+        <h3>{{ post.date | date_to_long_string }}</h3>
+        <h1>{{ post.title }}</h1>
+      </a>
+    </div>
+  </div>
+{% endif %}
 <div class="pagination">
   <ul>
   {% if post.previous %}

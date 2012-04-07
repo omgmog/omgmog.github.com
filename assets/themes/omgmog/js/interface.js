@@ -45,7 +45,7 @@ $(function(){
     $(".page-container")
     .on('pjax:beforeSend',function(){
         // tidy up before we load then
-        $('iframe, script[src*="disqus"], link[href*="disqus"], script[src*="ga.js"]').remove();
+        $('iframe:not(".yt-embed"), script[src*="disqus"], link[href*="disqus"], script[src*="ga.js"]').remove();
         $("#disqus_thread").hide();
     })
     .on('pjax:start',function(){
