@@ -2,6 +2,7 @@
 layout: post
 title: "Upgrading my Macbook Pro"
 large_cover: http://uk.omg.li/FUwj/mac_teardown_ifixit.jpg
+tags: ["mac", "geekery", "gadgets", "software", "hardware", "projects", "blog", "consumerism"]
 ---
 {% include JB/setup %}
 

@@ -4,6 +4,7 @@ title: "Updates to my 'install all firefox' bash script for Mac OS X"
 cover: http://f.cl.ly/items/3p2t2O3F1b1G0v0b0T3r/install-all-firefox.png
 cover_width: 520px
 thumb: http://cl.ly/CFgj/firefox-folder.png
+tags: ["mac", "shell", "firefox", "geekery", "software", "projects", "github", "blog", "downloads"]
 ---
 {% include JB/setup %}
 

@@ -3,6 +3,7 @@ layout: post
 title: "jQuery UK Conference 2012"
 cover: http://f.cl.ly/items/2q0r1U0s1N0z1G1c1d14/Screen%20Shot%202012-02-11%20at%2013.29.41.png
 cover_width: 
+tags: ["javascript", "jquery", "geekery", "gadgets", "software", "hardware", "projects", "blog", "consumerism"]
 ---
 {% include JB/setup %}
 Yesterday I attended the first [European jQuery conference](http://events.jquery.org/2012/uk/), which was hosted here in Oxford at the Saïd Business School. This was the first big conference I've been to (though I've attended a couple of local 'Geek nights' and 'design jams').

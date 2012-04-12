@@ -4,6 +4,7 @@ title: "Dropbox beta for Android, giving you extra account space"
 cover: http://cl.ly/DsJ5/dropbox500.png
 cover_width: 
 thumb: http://cl.ly/Dtm6/dropboxtmb.png
+tags: ["incoming", "dropbox", "blog", "android", "geekery"]
 ---
 {% include JB/setup %}
 

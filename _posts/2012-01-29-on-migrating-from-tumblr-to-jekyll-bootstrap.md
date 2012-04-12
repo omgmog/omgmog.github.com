@@ -3,6 +3,7 @@ layout: post
 title: "On migrating from Tumblr to Jekyll Bootstrap"
 cover: http://f.cl.ly/items/3o0g0G1p2W3W0O3c2Q1t/Screen%20Shot%202012-01-29%20at%2014.18.05.png
 thumb: http://cl.ly/DkHA/migrate-tmb.jpg
+tags: ["jekyll", "tumblr", "geekery", "software", "projects", "blog", "github"]
 ---
 {% include JB/setup %}
 I've been toying with the idea of moving away from [Tumblr](http://www.tumblr.com) for a long time now, having had my own share of problems with [Tumblr](http://www.tumblr.com) downtime.

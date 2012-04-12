@@ -3,7 +3,7 @@ layout: post
 title: "Moving away from Twitter Bootstrap &mdash; Hello new design!"
 description: ""
 category: 
-tags: []
+tags: ["jekyll", "css", "javascript", "jquery", "geekery", "projects", "software", "blog"]
 large_cover: http://uk.omg.li/FXHp/migration1.jpg
 ---
 {% include JB/setup %}

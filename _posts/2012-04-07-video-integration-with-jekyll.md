@@ -2,7 +2,7 @@
 layout: post
 title: "Video integration with Jekyll"
 category: 
-tags: []
+tags: ["jekyll", "css", "javascript", "jquery", "geekery", "projects", "software", "blog"]
 video_url: http://www.youtube.com/embed/fyY9tb8Rvlk
 ---
 {% include JB/setup %}

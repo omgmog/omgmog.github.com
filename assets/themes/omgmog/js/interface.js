@@ -52,6 +52,42 @@ $(function(){
         $('html,body').animate({scrollTop: ($("html").offset().top)},0);   
         $(".page-container").fadeTo('fast',0.5);
     });
+
+    // sort tags
+    var tags = [];
+    var lis = $("ul.tags_list li");
+    $("ul.tags_list li").each(function(){
+        tags.push($(this).html());
+    });
+    tags.sort();
+    $("ul.tags_list li").each(function(i){
+        $(this).html(tags[i]);
+    });
+
+    // sort lists
+    var list = [];
+    var ids = [];
+    var sections = $("section.tag_posts");
+    $("section.tag_posts").each(function(){
+        list.push($(this).html());
+        ids.push($(this).attr("id"));
+    });
+    list.sort();
+    ids.sort();
+    $("section.tag_posts").each(function(i){
+        $(this).html(list[i]);
+        $(this).removeAttr("id").attr("id",ids[i]);
+    });
+
+
+
+    $("ul.tags_list a").on('click',function(e){
+        e.preventDefault();
+        var hash = $(this).attr('href');
+            hash = hash.split('#');
+            hash = '#'+hash[1];
+        $('html,body').animate({scrollTop:($(hash).offset().top)},0);
+    });
 });
 
 
