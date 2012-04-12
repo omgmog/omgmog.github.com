@@ -1,0 +1,27 @@
+---
+layout: page
+title : Tags
+header : Tags
+group: navigation
+hide_header: true
+---
+{% include JB/setup %}
+<div class="content tags">
+	<ul class="tags_list">
+		{% assign tags_list  = site.tags %}
+		{% include JB/tags_list %}
+		{% assign tags_list = nil %}
+	</ul>
+	{% assign tags = site.tags %}
+	{% for tag in site.tags %}
+	<section class="tag_posts" id="{{ tag[0]|replace:' ','-' }}-ref">
+		<h2>{{ tag[0] }} ({{ tag[1]|size }} posts)</h2>
+		<ul>
+			{% for post in tag[1] %}
+				<li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</section>
+	{% endfor %}
+	{% assign tags = nil %}
+</div>

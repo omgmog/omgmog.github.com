@@ -12,13 +12,7 @@ author :
 production_url : http://blog.omgmog.net
 JB :
   version : 0.2.13
-BASE_PATH : false
-ASSET_PATH : false
-archive_path: /archive.html     
-analytics :
-  provider : google 
-  google : 
-      tracking_id : 'UA-18982788-1'
-sharing :
-  provider : false
-disqus : 'blogomgmog'
+  BASE_PATH : false
+  ASSET_PATH : false
+  archive_path : "/archive.html"
+  tags_path : "/tags.html"

@@ -24,8 +24,15 @@ h1, h2, h3, h4 {
 	font-family: 'Bree Serif', Georgia, serif;
 	font-weight: 400;
 }
+blockquote {
+	font-style: italic;
+	color:#666;
+	font-size: 0.9;
+}
+
 code,
 blockquote.code {
+	font-style: normal;
 	background:#eee;
 	font-size: 0.8em;
 	padding: 2px 5px;
@@ -342,6 +349,57 @@ h4 {
 	vertical-align: 4px;
 	font-weight: bold;
 }
+ul.tags {
+	margin: 0;
+	padding:0;
+	list-style:none;
+	overflow: hidden;
+	position: absolute;
+	right:40px;
+	top:15px;
+	width: 600px;
+}
+ul.tags_list {
+	margin:0 0 20px;
+	padding:0;
+	overflow:hidden;
+	list-style:none;
+}
+ul.tags li,
+ul.tags_list li {
+	float:left;
+	margin-right: 5px;
+	background: rgba(0,0,0,0.2);
+	color:#000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 2px 5px;
+	vertical-align: 4px;
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow:none;
+}
+ul.tags li {
+	float:right;
+	margin: 0 0 2px 5px;
+}
+ul.tags li a {
+	color:#fff;
+}
+ul.tags_list li {
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+	margin: 0 5px 5px 0;
+	background:rgba(0,0,0,0.8);
+	color:#fff;
+	font-size: 1em;
+	padding: 2px 6px;
+}
+section.tag_posts {
+	padding-top: 50px;
+}
+
 div.message {
 	border: 1px solid #fbeed5;
 	background: #fcf8e3;
@@ -391,6 +449,7 @@ div.message p {
 
 /* small screens */
 @media all and (max-width: 960px) {
+
 	body {
 		font-size: 16px;
 	}
