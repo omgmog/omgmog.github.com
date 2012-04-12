@@ -526,4 +526,7 @@ div.message p {
 		width: 100%;
 		height: 300px;
 	}
+	ul.tags {
+		display: none;
+	}
 }
