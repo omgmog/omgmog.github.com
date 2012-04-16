@@ -53,33 +53,10 @@ $(function(){
         $(".page-container").fadeTo('fast',0.5);
     });
 
-    // sort tags
-    var tags = [];
-    var lis = $("ul.tags_list li");
-    $("ul.tags_list li").each(function(){
-        tags.push($(this).html());
-    });
-    tags.sort();
-    $("ul.tags_list li").each(function(i){
-        $(this).html(tags[i]);
-    });
-
-    // sort lists
-    var list = [];
-    var ids = [];
-    var sections = $("section.tag_posts");
-    $("section.tag_posts").each(function(){
-        list.push($(this).html());
-        ids.push($(this).attr("id"));
-    });
-    list.sort();
-    ids.sort();
-    $("section.tag_posts").each(function(i){
-        $(this).html(list[i]);
-        $(this).removeAttr("id").attr("id",ids[i]);
-    });
 
 
+    sortstuff("ul.tags_list li");
+    sortstuff("section.tag_posts","id");
 
     $("ul.tags_list a").on('click',function(e){
         e.preventDefault();
@@ -91,6 +68,29 @@ $(function(){
 });
 
 
+function sortstuff(selector,attribute){
+    var $selector = $(selector);
+    var matches = [];
+    var attrs = [];
+    $selector.each(function(){
+        matches.push($(this).html());
+        if(attribute){
+            attrs.push($(this).attr(attribute));
+        }
+    });
+
+    matches.sort();
+    if(attribute){
+        attrs.sort();
+    }
+
+    $selector.each(function(i){
+        $(this).html(matches[i]);
+        if(attribute){
+            $(this).removeAttr(attribute).attr(attribute,attrs[i]);
+        }
+    });
+}
 function fancy_post_header(){
 	var windowScroll = $(this).scrollTop();
     var scale_amt = windowScroll*0.01;
