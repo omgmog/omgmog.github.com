@@ -63,11 +63,12 @@ task :post do
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
-    post.puts "category: "
+    post.puts "large_cover: "
     post.puts "tags: []"
     post.puts "---"
     post.puts "{% include JB/setup %}"
   end
+  system "subl #{filename}" #launch sublime with new post
 end # task :post
 
 # Usage: rake page name="about.html"
