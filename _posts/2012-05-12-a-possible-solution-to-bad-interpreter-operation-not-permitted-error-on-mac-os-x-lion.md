@@ -3,7 +3,7 @@ layout: post
 title: "A possible solution to 'bad interpreter: operation not permitted' error on Mac OS X Lion"
 description: ""
 large_cover: http://f.cl.ly/items/0k0Q293A452l2i0c3s36/system-failure.jpg
-tags: []
+tags: ["geekery", "mac", "shell", "software"]
 ---
 {% include JB/setup %}
 

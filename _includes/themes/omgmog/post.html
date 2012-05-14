@@ -1,3 +1,14 @@
+{% if page.hasgist %}
+    <script src="{{ ASSET_PATH }}omgmog/js/writeCapture.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.gist').each(function(i) {
+            writeCapture.html(this, decodeURI('%3Cscript src="')+$(this).text()+decodeURI('.js"%3E%3C/script%3E'));
+        });
+    });
+  </script>
+{% endif %}
+
 <div class="less-fancy-post-header" style="background-image:url({{ page.large_cover }});">
   <div class="meta">
     <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
