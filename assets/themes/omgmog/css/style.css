@@ -383,6 +383,10 @@ div.message p {
 #disqus_thread {
     display: none;
 }
+.gisted .gist-me {
+    display:none;
+}
+
 @media all and (max-width:960px) {
     body {
 	    font-size: 16px;
