@@ -164,7 +164,7 @@ h4 {
 }
 .fancy-post-header {
     height: 450px;
-    background-position: center 0;
+    background-position: 50% 0;
 }
 .fancy-post-header, .less-fancy-post-header {
     background: #fff;
