@@ -2,7 +2,7 @@
 layout: post
 title: "Using jQuery to create a custom thumbnail for an embedded video"
 description: ""
-large_cover: http://f.cl.ly/items/0I2S2o0O1O1B0N3r3828/youtube.jpg
+large_cover: http://f.cl.ly/items/343B0O1j0l1x0B1F2H21/youtube.jpg
 tags: ["jquery", "projects", "blog", "software", "javascript", "software"]
 hasgist: true
 ---
