@@ -2,7 +2,7 @@
 layout: post
 title: "Using jQuery to create a custom thumbnail for an embedded video"
 description: ""
-large_cover: 
+large_cover: http://f.cl.ly/items/0I2S2o0O1O1B0N3r3828/youtube.jpg
 tags: ["jquery", "projects", "blog", "software", "javascript", "software"]
 hasgist: true
 ---
@@ -21,3 +21,5 @@ This needs to be used with the following `HTML` structure:
 <div class="gist"><a href="https://gist.github.com/2690199">https://gist.github.com/2690199</a></div>
 
 And there you have it, a custom thumbnail for a YouTube embedded video.
+
+<cite>Cover from <a href="http://artslope.com/wp-content/uploads/2010/07/buttons.jpg">http://artslope.com/wp-content/uploads/2010/07/buttons.jpg</a></cite>
