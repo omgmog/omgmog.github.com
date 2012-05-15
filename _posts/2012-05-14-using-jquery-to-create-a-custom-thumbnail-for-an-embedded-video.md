@@ -4,7 +4,6 @@ title: "Using jQuery to create a custom thumbnail for an embedded video"
 description: ""
 large_cover: http://f.cl.ly/items/343B0O1j0l1x0B1F2H21/youtube.jpg
 tags: ["jquery", "projects", "blog", "software", "javascript", "software"]
-hasgist: true
 ---
 {% include JB/setup %}
 
@@ -15,10 +14,12 @@ I'm aware that YouTube allows [Partners](http://support.google.com/youtube/bin/t
 I Googled around to look for a solution, but most solutions involve adding extra frames to the video at specific intervals, and trimming videos using YouTube once they've been uploaded. Again, not ideal.
 
 I decided to approach this from a more technical angle then, and so I came up with the following jQuery snippet
-<div class="gist"><a href="https://gist.github.com/2690184">https://gist.github.com/2690184</a></div>
+
+<script src="https://gist.github.com/2690184.js"> </script>
 
 This needs to be used with the following `HTML` structure:
-<div class="gist"><a href="https://gist.github.com/2690199">https://gist.github.com/2690199</a></div>
+
+<script src="https://gist.github.com/2690199.js"> </script>
 
 And there you have it, a custom thumbnail for a YouTube embedded video.
 
