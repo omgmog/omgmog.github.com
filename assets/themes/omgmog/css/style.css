@@ -1,9 +1,12 @@
+html {
+    background: #eee url(../img/bg.gif);
+}
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     margin: 0;
     padding: 0;
-    background: #eee url(../img/bg.gif);
+    background: url(../img/shadow.png) 50% 48px no-repeat fixed;
 }
 a, a:visited, a:link, a:active, a:hover {
     color: #73a325;
