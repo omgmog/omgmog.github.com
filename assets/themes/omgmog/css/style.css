@@ -386,6 +386,12 @@ div.message p {
 #disqus_thread {
     display: none;
 }
+#dsq-content .dsq-comment-text p {
+    font-size: 14px;
+}
+.dsq-comment-meta, .dsq-comment-actions {
+    font-size: 12px;
+}
 
 @media all and (max-width:960px) {
     body {
