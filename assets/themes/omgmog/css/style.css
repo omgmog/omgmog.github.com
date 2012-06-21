@@ -270,16 +270,24 @@ h4 {
 .pagination ul li.next {
     margin-left: 410px;
 }
-}.yt-embed {
+}
+.yt-embed {
     width: 960px;
     height: 540px;
     border: 0;
 }
-.archive h3 {
-    margin-left: 20px;
+ul.list_posts {
+    list-style: none;
 }
-.archive ul {
-    margin-left: 60px;
+ul.list_posts li {
+    margin-bottom: 1em;
+}
+ul.list_posts li strong {
+    font-size: 16px;
+}
+ul.list_posts li span {
+    display: block;
+    font-size: 12px;
 }
 #post cite {
     color: #999;
@@ -337,7 +345,8 @@ ul.tags li {
     padding: 2px 5px;
     font-size: 10px;
 }
-ul.tags li, ul.tags_list li {
+ul.tags li, 
+ul.tags_list li {
     background: rgba(0, 0, 0, .2);
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -392,7 +401,20 @@ div.message p {
 .dsq-comment-meta, .dsq-comment-actions {
     font-size: 12px;
 }
+.read_more {
+    text-align: center;
+    background: #f0f0f0;
+    margin: 20px 0 0;
 
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.read_more a {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+}
 @media all and (max-width:960px) {
     body {
 	    font-size: 16px;
