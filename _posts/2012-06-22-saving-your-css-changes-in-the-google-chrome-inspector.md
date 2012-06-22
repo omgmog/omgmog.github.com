@@ -2,7 +2,7 @@
 layout: post
 title: "Saving your CSS changes in the Google Chrome inspector"
 description: ""
-large_cover: 
+large_cover: http://f.cl.ly/items/2V2M0G3y1b2D0G3x2B1S/inspector.png
 tags: ["chrome", "css", "software"]
 ---
 {% include JB/setup %}
