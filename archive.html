@@ -10,17 +10,35 @@ hide_header: true
 	{% assign posts_collate = site.posts %}
 	{% for post in posts_collate  %}	  
 	    {% if forloop.first %}
-      		<ul class="list_posts">
+      		<ul class="archive_tiles">
 	    {% endif %}
-	    <li>
-	    	<a href="{{ BASE_PATH }}{{ post.url }}">
-		    	<strong>{{ post.title }}</strong>
-		    	<span>{{ post.date | date: "%B %d, %Y" }}</span>
-
-		    </a>
+	    <li class="tile">
+	    	{% if post.large_cover %}
+		    	<a href="{{ BASE_PATH }}{{ post.url }}" class="cover">
+		    		<img src="{{ post.large_cover }}" alt="{{ post.title }}" width="480px" />
+		    	</a>
+	    	{% endif %}
+	    	<div class="tile_body">
+		    	<h4>{{ post.date | date: "%B %d, %Y" }}</h4>
+		    	<a href="{{ BASE_PATH }}{{ post.url }}">
+					<h2>{{ post.title }}</h2>
+			    </a>
+			    <p>{{ post.content | strip_html | truncatewords: 25 }}</p>
+			</div>
 		</li>
 	    {% if forloop.last %}
       		</ul>
 	    {% endif %}
 	  {% endfor %}
 </div>
+<script src="{{ BASE_PATH }}/assets/themes/omgmog/js/jquery.masonry.min.js"></script>
+<script>
+	$(window).on("load", function(){
+		$(".archive_tiles").masonry({
+			itemSelector: '.tile',
+			columnWidth: 420,
+			gutterWidth: 40,
+			isFitWidth: true
+		});
+	});
+</script>
