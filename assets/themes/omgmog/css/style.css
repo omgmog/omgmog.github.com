@@ -176,10 +176,6 @@ h4 {
     display: block;
     margin: 1em auto;
 }
-.fancy-post-header {
-    height: 450px;
-    background-position: 50% 0;
-}
 .fancy-post-header, 
 .less-fancy-post-header {
     background: #fff;
@@ -192,7 +188,12 @@ h4 {
     box-shadow: inset 0 0 90px rgba(0, 0, 0, .3);
 }
 .less-fancy-post-header {
-    background-position: 50% 50%}
+    background-position: 50% 50%;
+}
+.fancy-post-header {
+    height: 450px;
+    background-position: 50% 0;
+}
 .fancy-post-header-inner {
     position: absolute;
 }
