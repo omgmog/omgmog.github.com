@@ -17,8 +17,10 @@ $(function(){
 	$header = $(".fancy-post-header");
 	$header_inner = $(".fancy-post-header-inner");
 	$(window).scroll(function() {
-		if(!isMobile && ($(window).width() > 480)){
-        	fancy_post_header();
+        if($('.fancy-post-header:in-viewport').length){
+            if(!isMobile && ($(window).width() > 480)){
+                fancy_post_header();
+            }
         }
     });
 
