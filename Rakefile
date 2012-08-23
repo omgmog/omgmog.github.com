@@ -69,6 +69,7 @@ task :post do
     post.puts "{% include JB/setup %}"
   end
   system "subl #{filename}" #launch sublime with new post
+  system "echo #{filename} > .latestpost"
 end # task :post
 
 # Usage: rake page name="about.html"
