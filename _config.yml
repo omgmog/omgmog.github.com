@@ -1,18 +1,19 @@
-permalink: /post/:title/
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
+safe: true
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+permalink: /post/:title/
 pygments: true
-title : Blomg
 tagline: Thoughts and tech-related words from Max Glenister
+title : Blomg
 author :
-  name : Max Glenister
   email : moglenstar@gmail.com
   github : omgmog
+  name : Max Glenister
   twitter : omgmog
 production_url : http://blog.omgmog.net
 JB :
-  version : 0.2.13
-  BASE_PATH : false
-  ASSET_PATH : false
   archive_path : "/archive.html"
+  ASSET_PATH : false
+  BASE_PATH : false
   tags_path : "/tags.html"
+  version : 0.2.13
