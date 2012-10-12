@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}{% if page.url != '/index.html'%} | {{ site.title }}{% endif %}{% if site.tagline %} | {{ site.tagline }}{% endif %}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+    <meta name="author" content="{{ site.author.name }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="{{ ASSET_PATH }}/img/favicon.png" rel="shortcut icon" />
+    <script src="{{ ASSET_PATH }}/js/jquery.min.js"></script>
+    <script src="{{ ASSET_PATH }}/js/jquery.pjax.js"></script>
+    <script src="{{ ASSET_PATH }}/js/jquery.viewport.min.js"></script>
+    <script src="{{ ASSET_PATH }}/js/jquery_disqus_lazyload.js"></script>
+    <script src="{{ ASSET_PATH }}/js/interface.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li class="{% if page.url == '/index.html'%}active{% endif %}">
+              <a href="{{ HOME_PATH }}">{{ site.title }}</a>
+            </li>
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+          </ul>
+          <ul class="nav metanav">
+            <li>
+              {% if site.author.github %}
+                <a href="http://github.com/{{ site.author.github }}" class="github">Github</a>
+              {% endif %}
+            </li>
+            <li>
+              {% if site.author.twitter%}
+                <a href="http://twitter.com/{{ site.author.twitter }}" class="twitter">Twitter</a>
+              {% endif %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container">
+      {{ content }}
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18982788-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
