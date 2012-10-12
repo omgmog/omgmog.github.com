@@ -3,6 +3,7 @@ layout: post
 title: "UPPLEVA I UPPLOVE it."
 description: ""
 category: 
+large_cover: "http://f.cl.ly/items/2W180U3P292F3Q3K1L38/Image%202012.10.12%2011:23:32.png"
 tags: ["blog", "consumerism", "gadgets", "geekery", "ikea", "hardware"]
 video_url: http://www.youtube.com/embed/0Nm7-EuctOs
 ---
