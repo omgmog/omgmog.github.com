@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Video integration with Jekyll"
-category: 
+category: ""
+large_cover: http://uk.omg.li/K73m/Image%202012.10.12%2011:21:18.png
 tags: ["jekyll", "css", "javascript", "jquery", "geekery", "projects", "software", "blog"]
-video_url: http://www.youtube.com/embed/fyY9tb8Rvlk
 ---
 {% include JB/setup %}
 
@@ -15,7 +15,7 @@ First we need a couple of things
 2. The embed code for the video
 3. A Jekyll theme that supports video embedding
 
-The first two things are easy enough to produce, the video I've recorded/embedded here is testament to that. The third thing is a bit more complicated, but hopefully after reading this post you'll have integrated YouTube videos in your Jekyll blog in no time.
+The first two things are easy enough to produce. The third thing is a bit more complicated, but hopefully after reading this post you'll have integrated YouTube videos in your Jekyll blog in no time.
 
 #### Working with the YouTube embed code
 
@@ -70,4 +70,4 @@ I've included a bunch of additional `url` parameters in the `src` attribute, to 
 
 And that's it. You can put this embed code wherever you'd like in your page template. In [my page template](https://github.com/omgmog/omgmog.github.com/blob/master/_includes/themes/omgmog/post.html) it's at the top of the post, and then I've got regular post stuff below the embedded video -- so I can feature the video along with a nice description or full post.
 
-<cite>If you watched my video all the way through, I commend your interest in how I look before/after shaving!</cite>
+If you'd like to see an example of this in action, check out this post: [UPPLEVA I UPPLOVE it.](/post/uppleva-i-upplove-it/)
