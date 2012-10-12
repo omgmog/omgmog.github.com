@@ -520,6 +520,63 @@ ul.archive_tiles li.tile div.tile_body {
 ul.archive_tiles li.tile p {
     color: #555;
 }
+.photo {
+    position: relative;
+    float: right;
+    z-index: 5;
+    background: #fff;
+    margin-top: 40px;
+    margin-left: 40px;
+
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+
+    -moz-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+.photo img {
+    clear: none;
+    max-width: auto;
+    margin: 0;
+    position: relative;
+    border: 5px solid #fff;
+    border-bottom-width: 15px;
+}
+.photo::before,
+.photo::after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: -2;
+}
+.photo::before {
+    left: -4px;
+    top: -3px;
+    background: #f0f0f0;
+
+    -moz-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+.photo::after {
+    left: -3px;
+    top: -2px;
+    background: #f7f7f7;
+
+    -moz-transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+}
+.photo img,
+.photo::before,
+.photo::after {
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3);
+}
 
 @media all and (max-width:1160px) {
     body {
