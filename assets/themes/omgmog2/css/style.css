@@ -473,6 +473,7 @@ ul.archive_tiles li.tile {
     list-style: none;
     border: 1px solid #dadada;
     float: left;
+    clear: left;
 
     -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1);
@@ -485,6 +486,7 @@ ul.archive_tiles li.tile {
 ul.archive_tiles li.tile:nth-child(2n) {
     margin-left: 35px;
     float: right;
+    clear: right;
 }
 ul.archive_tiles li.tile a.cover {
     text-align: center;
