@@ -12,7 +12,7 @@ html {
     background-size: cover;
 }
 body {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.8);
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     margin: 0;
@@ -155,9 +155,9 @@ h4 {
     background: #fefefe;
     overflow: hidden;
 
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 100px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 100px rgba(0,0,0,0.6);
+    box-shadow: 0 0 100px rgba(0,0,0,0.6);
 }
 .content {
     padding: 40px;
