@@ -12,30 +12,6 @@ $(function(){
         }
     });
 
-    $(".pagination li:not('.disabled') a").on('click',function(e){
-        if($.support.pjax) e.preventDefault();
-        var url = $(this).attr("href")
-        $(".active").removeClass("active");
-        $.pjax({
-            url: url,
-            container: '.page-container',
-            fragment: '.page-container'
-        });
-    });
-
-    $(".page-container")
-    .on('pjax:beforeSend',function(){
-        // tidy up before we load then
-        $('iframe:not(".yt-embed"), script[src*="disqus"], link[href*="disqus"], script[src*="ga.js"]').remove();
-        $("#disqus_thread").hide();
-    })
-    .on('pjax:start',function(){
-        $('html,body').animate({scrollTop: ($("html").offset().top)},0);   
-        $(".page-container").fadeTo('fast',0.5);
-    });
-
-
-
     sortstuff("ul.tags_list li");
     sortstuff("section.tag_posts","id");
 
