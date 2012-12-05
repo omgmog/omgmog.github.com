@@ -1,18 +1,10 @@
 html {
     zoom: 1;
     background-color: #eee;
-    background-image: url(../img/bg.gif);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-image: url(../img/noisy_grid.png);
 }
 body {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.7);
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     margin: 0;
@@ -46,25 +38,21 @@ blockquote {
     color: #666;
     font-size: .9;
 }
-code, blockquote.code {
+code, 
+pre code {
     font-style: normal;
     background: #eee;
-    font-size: .8em;
-    padding: 2px 5px;
-    font-family: monospace;
+    background-image: url(../img/noisy_grid.png);
+    padding: 5px;
+    font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+    font-size: 14px;
+    line-height: 1.5;
     color: #d14;
-
-    -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
-    -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
-
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
+    border: 1px solid #dfdfdf;
 }
-blockquote.code p {
-    margin: 0;
-    padding: 0;
+pre code {
+    padding: 5px 5px 5px 20px;
+    border-left-width: 10px;
 }
 pre code {
     display: block;
@@ -82,7 +70,7 @@ h4 {
     font-size: 1.1em;
 }
 .navbar {
-    background: rgba(255, 255, 255, .9);
+    background-image: url(../img/noisy_grid.png);
     clear: both;
     top: 0;
     overflow: hidden;
@@ -201,42 +189,40 @@ h4 {
     box-shadow: inset 0 0 90px rgba(0, 0, 0, .3);
 }
 .less-fancy-post-header {
-    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     -moz-filter: grayscale(1);
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
 .fancy-post-header {
-    height: 450px;
-    background-position: 50% 0;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    position: relative;
 }
 .fancy-post-header-inner {
+    background: rgba(0,0,0,0.8);
     position: absolute;
-}
-.fancy-post-header-inner, 
-.fancy-video-header-inner {
-    bottom: 0;
-    left: 50%;
-    margin-left: -480px;
-    background: rgba(0, 0, 0, .8);
-    width: 100%
+    bottom: 40px;
+    margin-right: 40px;
 
     -moz-box-shadow: 0 0 90px rgba(0, 0, 0, .3);
     -webkit-box-shadow: 0 0 90px rgba(0, 0, 0, .3);
     box-shadow: 0 0 90px rgba(0, 0, 0, .3);
-
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
 }
 .fancy-video-header-inner {
-    position: relative;
-    margin-top: -5px;
 
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
 }
 .fancy-post-header-inner h1, 
 .fancy-post-header-inner h3, 
@@ -450,16 +436,15 @@ div.message p {
 .read_more {
     text-align: center;
     background: #f0f0f0;
+    background-image: url(../img/noisy_grid.png);
     margin: 20px 0 0;
-
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
+    border: 1px solid #dfdfdf;
 }
 .read_more a {
     display: block;
     padding: 10px;
     font-size: 14px;
+    font-weight: bold;
 }
 ul.archive_tiles {
     margin: 0;
@@ -517,7 +502,7 @@ ul.archive_tiles li.tile h2 {
 }
 ul.archive_tiles li.tile div.tile_body {
     padding: 20px;
-    background: #f0f0f0;
+    background-image: url(../img/noisy_grid.png);
 }
 ul.archive_tiles li.tile p {
     color: #555;
@@ -530,10 +515,6 @@ ul.archive_tiles li.tile p {
     margin-top: 40px;
     margin-left: 40px;
 
-    -moz-border-radius: 1px;
-    -webkit-border-radius: 1px;
-    border-radius: 1px;
-
     -moz-transform: rotate(2deg);
     -webkit-transform: rotate(2deg);
     transform: rotate(2deg);
@@ -542,8 +523,11 @@ ul.archive_tiles li.tile p {
     clear: none;
     max-width: auto;
     margin: 0;
+    width: 210px;
+    height: 220px;
     position: relative;
     border: 5px solid #fff;
+    background: #fff;
     border-bottom-width: 15px;
 }
 .photo::before,
@@ -583,7 +567,7 @@ ul.archive_tiles li.tile p {
 @media all and (max-width:1160px) {
     body {
         font-size: 16px;
-        padding-top: 0;
+        padding: 0 40px;
     }
     .navbar {
         position: relative;
@@ -685,18 +669,14 @@ ul.archive_tiles li.tile p {
     .pagination ul li.prev {
         margin-left: -30px;
         left: 0;
-        background-image: url(../img/arrow_left.png);
     }
     .pagination ul li.prev.disabled {
-        background-image: url(../img/arrow_left_disabled.png);
     }
     .pagination ul li.next {
         margin-right: -30px;
         right: 0;
         left: auto;
-        background-image: url(../img/arrow_right.png);
     }
     .pagination ul li.next.disabled {
-        background-image: url(../img/arrow_right_disabled.png);
     }
 }
