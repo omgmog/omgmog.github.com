@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}{% if page.url != '/index.html'%} | {{ site.title }}{% endif %}{% if site.tagline %} | {{ site.tagline }}{% endif %}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% else %}
+        <meta name="description" content="The personal blog of Max Glenister. Mostly containing tech-related musings, and any other miscellany that Max finds interesting. Powered by Jekyll Bootstrap, and hosted by GitHub Pages." />
+    {% endif %}
     <meta name="author" content="{{ site.author.name }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lt IE 9]>
