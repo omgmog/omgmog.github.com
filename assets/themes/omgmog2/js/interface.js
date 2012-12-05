@@ -1,6 +1,24 @@
 $(function(){
-    $(".page-container").fadeTo('fast',1,function(){
-        $("#disqus_thread").show();
+    // bind left/right for going between posts
+    $(document).keydown(function(e){
+        if (e.keyCode == 37) { 
+            $('.prev a').click();
+        }
+        if(e.keyCode == 39) {
+            $('.next a').click();
+        }
+    });
+    // make left/right arrows follow the mouse on y-axis
+    var arrow_height = $('.pagination ul li').height()/2;
+    $(document).on('mousemove', function(e){
+        var offset = $(document).scrollTop();
+        var actualypos = e.pageY;
+
+        var ypos = (actualypos-offset)-arrow_height;
+
+        if(ypos>47){
+            $('.pagination ul li').css('top',ypos);
+        }
     });
 
     if($(".page-container").height()<$(window).height()){
