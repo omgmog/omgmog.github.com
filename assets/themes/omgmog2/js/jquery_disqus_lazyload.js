@@ -17,6 +17,7 @@ $(function(){
             disqus_data = disqus_div.data(),
             check = function(){
                 if ( !ds_loaded && $(window).scrollTop() + $(window).height() > top ) {
+                    disqus_div.fadeIn();
                     ds_loaded = true;
                     for (var key in disqus_data) {
                         if (key.substr(0,6) == 'disqus') {
