@@ -2,7 +2,6 @@
 layout: post
 title: "Android on your TV with the Mele A2000"
 description: ""
-large_cover: http://f.cl.ly/items/3X022e381g1W1Q2u081b/droid_wallpaper_hd.png
 tags: ["android", "consumerism", "gadgets", "geekery", "hardware"]
 ---
 {% include JB/setup %}

@@ -2,7 +2,6 @@
 layout: post
 title: "Using jQuery to create a custom thumbnail for an embedded video"
 description: ""
-large_cover: http://f.cl.ly/items/343B0O1j0l1x0B1F2H21/youtube.jpg
 tags: ["jquery", "projects", "blog", "software", "javascript", "software"]
 ---
 {% include JB/setup %}
@@ -22,5 +21,3 @@ This needs to be used with the following `HTML` structure:
 <script src="https://gist.github.com/2690199.js"> </script>
 
 And there you have it, a custom thumbnail for a YouTube embedded video.
-
-<cite>Cover from <a href="http://artslope.com/wp-content/uploads/2010/07/buttons.jpg">http://artslope.com/wp-content/uploads/2010/07/buttons.jpg</a></cite>

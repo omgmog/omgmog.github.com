@@ -2,7 +2,6 @@
 layout: post
 title: "Video integration with Jekyll"
 category: ""
-large_cover: http://uk.omg.li/K73m/Image%202012.10.12%2011:21:18.png
 tags: ["jekyll", "css", "javascript", "jquery", "geekery", "projects", "software", "blog"]
 ---
 {% include JB/setup %}

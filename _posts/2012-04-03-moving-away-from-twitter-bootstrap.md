@@ -4,7 +4,6 @@ title: "Moving away from Twitter Bootstrap - Hello new design!"
 description: ""
 category: 
 tags: ["jekyll", "css", "javascript", "jquery", "geekery", "projects", "software", "blog"]
-large_cover: http://uk.omg.li/FXHp/migration1.jpg
 ---
 {% include JB/setup %}
 
@@ -17,5 +16,3 @@ You might notice some fancy effects on the homepage when you scroll, this is acc
 I've also made a forray in to a responsive layout, so if you're viewing this on a screen smaller than 960px wide you will see some slight differences. But it's not that different.
 
 Obviously the fancy stuff is dependant on your browser, but it should atleast look nice for anybody using Internet Explorer.
-
-<cite>Post image courtesy of <a href="http://backyardnaturalist.ca/?page_id=702">The Backyard Naturalist</a></cite>

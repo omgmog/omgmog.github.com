@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="author" content="Marmalade &amp; Jam" />
+        <meta name="description" content="The personal blog of Max Glenister. Mostly containing tech-related musings, and any other miscellany that Max finds interesting. Powered by Jekyll Bootstrap, and hosted by GitHub Pages." />
+        <meta name="keywords" content="" />
+        <title>{{ page.title }}</title>
+        <!--[if lt IE 9]>
+            <script src="assets/html5shiv.js">
+            </script>
+        <![endif]-->
+        <link href="http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/assets/style.css" />
+        <link rel="shortcut icon" href="/assets/favicon.png" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <header id="header">
+                <nav>
+                    <ul>
+                        <li {% if page.url == "/index.html" %}class="active"{% endif %}>
+                            <a href="/">
+                                Blomg
+                            </a>
+                        </li>
+                        <li {% if page.url == "/archive.html" %}class="active"{% endif %}>
+                            <a href="/archive.html">
+                                Archive
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="about-trigger" href="#about">...</a>
+                </nav>
+            </header>
+            <aside id="about">
+                <h1><a href="/">Blomg!</a></h1>
+                <a class="about-trigger" href="#about">&times;</a>
+                <p>
+                    So this is <em>Blomg</em>, the blog of Max Glenister.
+                </p>
+                <p>
+                    The blog mostly contains tech-related musings, and any 
+                    other miscellany that Max finds interesting.
+                </p>
+                <p>
+                    The blog is hosted on <a href="http://pages.github.com/" target="_blank">GitHub Pages</a> and is powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, <a href="sublimetext.com" target="_blank">Sublime Text</a> and <a href="http://en.wikipedia.org/wiki/M" target="_blank">the letter M</a>.
+                </p>
+                <p>
+                    If you'd like to find out more about what Max has been upto, you can do so through the following channels:
+                </p>
+                <ul>
+                    <li>
+                        <a href="http://github.com/omgmog" target="_blank">
+                            omgmog on GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/omgmog" target="_blank">
+                            @omgmog on Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://omgmog.net" target="_blank">
+                            omgmog.net
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://marmaladeandjam.co.uk" target="_blank">
+                            Marmalade &amp; Jam
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <section id="content">
+                {{ content }}
+            </section>
+            <footer id="footer">
+                &copy; 2012 Max Glenister
+            </footer>
+        </div>
+        <script src="/assets/jquery-1.8.2.min.js"></script>
+        <script>
+            $(function(){
+                if(!$('nav .active').length) {
+                    $('nav li:eq(0)').addClass('active');
+                }
+                // bind left/right for going between posts
+                $(document).keydown(function(e){
+                    console.log(e.keyCode);
+                    if (e.keyCode === 37) { 
+                        var url = $('.prev a').attr('href');
+                        window.location = url;
+                    }
+                    if(e.keyCode === 39) {
+                        var url = $('.next a').attr('href');
+                        window.location = url;
+                    }
+                });
+
+                $('.about-trigger').on('click', function(e){
+                    e.preventDefault();
+                    var about = $('#about');
+                    if(about.hasClass('is-in-viewport')){
+                        about.removeClass('is-in-viewport');
+                    }else {
+                        about.addClass('is-in-viewport');
+                    }
+                    
+                });
+            });
+        </script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-18982788-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>

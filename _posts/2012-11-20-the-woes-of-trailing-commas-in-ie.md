@@ -2,7 +2,6 @@
 layout: post
 title: "The woes of trailing commas in IE"
 description: ""
-large_cover: http://uk.omg.li/L2Rs/trollcode.jpg
 tags: ["sublime text", "software", "javascript", "jquery", "internet explorer", "geekery"]
 ---
 {% include JB/setup %}

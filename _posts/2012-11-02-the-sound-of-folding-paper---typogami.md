@@ -2,7 +2,6 @@
 layout: post
 title: "The sound of folding paper &mdash; Typogami"
 description: ""
-large_cover: http://uk.omg.li/Kcae/typogami_main_04_1024x1024.jpeg
 tags: ["downloads", "geekery", "software", "design"]
 ---
 {% include JB/setup %}
@@ -28,5 +27,3 @@ It's a really nice effect, and no doubt it looks good in a range of colours
 ![](http://uk.omg.li/Kdju/typogami_layers_styled_coloured.png)
 
 This font isn't just limited to being used as a multi layer font in Photoshop either, there is an animated version for Adobe After Effects (CS3 and up) that has lovely animated folds and configurable shadows. You can see an example video over at Animography. You can get the fonts for free from the [Animography website](http://animography.net/products/typogami).
-
-<cite>Cover image taken from the Animography Typogami site</cite>

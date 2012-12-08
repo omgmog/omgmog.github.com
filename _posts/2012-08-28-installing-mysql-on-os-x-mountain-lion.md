@@ -2,7 +2,6 @@
 layout: post
 title: "Installing MySQL on OS X Mountain Lion"
 description: ""
-large_cover: http://uk.omg.li/J3hH/dolphinsinspace.jpg
 tags: ["geekery", "incoming", "mac", "projects", "shell", "software"]
 ---
 {% include JB/setup %}

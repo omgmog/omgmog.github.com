@@ -2,7 +2,6 @@
 layout: post
 title: "High fidelity in low fidelity emails"
 description: ""
-large_cover: http://f.cl.ly/items/3X0s083k1Q0m1F1Z031u/cubeworks.jpg
 tags: ["blog", "geekery", "usability"]
 ---
 {% include JB/setup %}
@@ -26,5 +25,3 @@ It looks as if they've used [this application from Style Campaign](http://stylec
 It's an interesting technique, either as a meaningful low-fidelity representation of the missing image, or a subtle easter-egg with a [Teletext](http://en.wikipedia.org/wiki/Teletext)-esque feel to it. Either way, the low-fidelity version resembles the original image somewhat.
 
 The downside to this though is that there's a bunch of meaningless table markup behind that simple low-fidelity image, and the original image is then sliced up to fit these constraints, but it's a HTML email. I'm not surprised to see a couple of tables.
-
-<cite>'Rubik's Hand of God' by Cubeworks</cite>

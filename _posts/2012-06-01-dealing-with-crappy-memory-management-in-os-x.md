@@ -2,7 +2,6 @@
 layout: post
 title: "Dealing with crappy memory management in OS X"
 description: ""
-large_cover: http://f.cl.ly/items/2s3X2B2D3h433D2B3E1g/Untitled-1.jpg
 tags: ["geekery", "hardware", "software", "mac", "shell"]
 ---
 {% include JB/setup %}
