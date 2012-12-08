@@ -2,7 +2,6 @@
 layout: post
 title: "Ubuntu (native) on the Nexus 7"
 description: ""
-large_cover: http://f.cl.ly/items/3c3u2L3P0D3N2X181a0r/ubuntuuu.jpg
 tags: ["android", "blog", "gadgets", "geekery", "software", "mac", "shell", "software"]
 ---
 {% include JB/setup %}

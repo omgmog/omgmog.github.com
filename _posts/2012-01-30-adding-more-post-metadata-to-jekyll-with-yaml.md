@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "Adding more post metadata to Jekyll with YAML"
-cover: http://f.cl.ly/items/3g1D2w020K111M1L0413/by%20default%202012-01-30%20at%2011.38.28.png
-cover_width: 
-thumb: http://cl.ly/Dk9I/yomaml-tmb.jpg
 tags: ["jekyll", "geekery", "software", "projects", "blog", "github"]
 ---
 {% include JB/setup %}

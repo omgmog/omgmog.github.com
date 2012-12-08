@@ -2,7 +2,6 @@
 layout: post
 title: "A simple 'stacked paper sheets' effect with CSS3"
 description: ""
-large_cover: http://f.cl.ly/items/0i3e2G0t3Y0s2Z07362z/paper.jpg
 tags: ["blog", "chrome", "css", "projects", "software"]
 ---
 {% include JB/setup %}

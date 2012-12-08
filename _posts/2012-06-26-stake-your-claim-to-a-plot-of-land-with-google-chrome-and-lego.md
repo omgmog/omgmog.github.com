@@ -2,7 +2,6 @@
 layout: post
 title: "Stake your claim to a plot of land with Google Chrome and LEGO"
 description: ""
-large_cover: http://f.cl.ly/items/0D2t40193B1f073n2m2J/by-default-2012-06-26-at-11.29.18.jpg
 tags: ["chrome", "geekery"]
 ---
 {% include JB/setup %}

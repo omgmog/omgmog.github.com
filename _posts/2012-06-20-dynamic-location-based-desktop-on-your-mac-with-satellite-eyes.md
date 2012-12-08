@@ -2,7 +2,6 @@
 layout: post
 title: "Dynamic location based desktop on your Mac with Satellite Eyes"
 description: ""
-large_cover: http://f.cl.ly/items/3O1p2V3F2y1S283w0v3Z/by%20default%202012-06-20%20at%2010.57.17.png
 tags: ["downloads", "geekery", "mac", "software"]
 ---
 {% include JB/setup %}

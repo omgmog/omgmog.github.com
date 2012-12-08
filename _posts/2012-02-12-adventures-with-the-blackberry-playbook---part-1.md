@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Adventures with the Blackberry Playbook   Part 1"
-cover: 
-cover_width: 
 tags: ["geekery", "gadgets", "software", "hardware", "projects", "blog", "consumerism"]
 ---
 {% include JB/setup %}

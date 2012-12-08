@@ -3,7 +3,6 @@ layout: post
 title: "On scrolling"
 description: ""
 category: 
-large_cover: http://uk.omg.li/FlYO/by%20default%202012-04-12%20at%2016.59.20.png
 tags: ["mac", "usability", "blog", "software"]
 ---
 {% include JB/setup %}

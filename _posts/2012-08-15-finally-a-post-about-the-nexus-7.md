@@ -2,7 +2,6 @@
 layout: post
 title: "Finally, a post about the Nexus 7"
 description: ""
-large_cover: http://f.cl.ly/items/3G1g2Q1O0b133K323K0O/jellybean.jpg
 tags: ["android", "consumerism", "chrome", "dropbox", "gadgets", "hardware", "software"]
 ---
 {% include JB/setup %}
@@ -38,10 +37,10 @@ I find the 7" form-factor to be great, and the weight of the Nexus 7 is really g
 
 I've bought a couple of accessories to use with the Nexus 7, all of which were very cheap and have been really useful:
 
-* **Gel case** - <a href="http://www.amazon.co.uk/gp/product/B008H5F3DO/ref=as_li_tf_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B008H5F3DO&linkCode=as2&tag=blomg-21">Google Nexus 7 Black Gel Case - Includes Table Stand and Screen Protector</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=blomg-21&l=as2&o=2&a=B008H5F3DO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-* **Soft carry case** - <a href="http://www.amazon.co.uk/gp/product/B008GR2MMS/ref=as_li_tf_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B008GR2MMS&linkCode=as2&tag=blomg-21">Google Asus Nexus 7 Sleeve Case with Zip - Black / Red Neoprene</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=blomg-21&l=as2&o=2&a=B008GR2MMS" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-* **Stylus/pen** - <a href="http://www.amazon.co.uk/gp/product/B007FE33DU/ref=as_li_tf_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B007FE33DU&linkCode=as2&tag=blomg-21">Duronic IS10R - Red Capacitive Stylus Pen For Capacitive Screens</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=blomg-21&l=as2&o=2&a=B007FE33DU" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-* **OTG Cable** - <a href="http://www.amazon.co.uk/gp/product/B004TJC1IM/ref=as_li_tf_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B004TJC1IM&linkCode=as2&tag=blomg-21">USG OTG Cable</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=blomg-21&l=as2&o=2&a=B004TJC1IM" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+* **Gel case** - <a href="http://www.amazon.co.uk/gp/product/B008H5F3DO/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=B008H5F3DO&amp;linkCode=as2&amp;tag=blomg-21">Google Nexus 7 Black Gel Case - Includes Table Stand and Screen Protector</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=blomg-21&amp;l=as2&amp;o=2&amp;a=B008H5F3DO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+* **Soft carry case** - <a href="http://www.amazon.co.uk/gp/product/B008GR2MMS/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=B008GR2MMS&amp;linkCode=as2&amp;tag=blomg-21">Google Asus Nexus 7 Sleeve Case with Zip - Black / Red Neoprene</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=blomg-21&amp;l=as2&amp;o=2&amp;a=B008GR2MMS" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+* **Stylus/pen** - <a href="http://www.amazon.co.uk/gp/product/B007FE33DU/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=B007FE33DU&amp;linkCode=as2&amp;tag=blomg-21">Duronic IS10R - Red Capacitive Stylus Pen For Capacitive Screens</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=blomg-21&amp;l=as2&amp;o=2&amp;a=B007FE33DU" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+* **OTG Cable** - <a href="http://www.amazon.co.uk/gp/product/B004TJC1IM/ref=as_li_tf_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=B004TJC1IM&amp;linkCode=as2&amp;tag=blomg-21">USG OTG Cable</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=blomg-21&amp;l=as2&amp;o=2&amp;a=B004TJC1IM" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 # Software
 

@@ -2,7 +2,6 @@
 layout: post
 title: "Making HTML5 input placeholder text behave in Safari"
 description: ""
-large_cover: http://f.cl.ly/items/1P101S1p321y3u3i2s2N/html5placeholder.png
 tags: ["chrome", "css", "firefox", "software", "mac", "usability"]
 ---
 {% include JB/setup %}

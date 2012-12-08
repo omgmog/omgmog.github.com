@@ -2,7 +2,6 @@
 layout: post
 title: "Getting to grips with git log"
 description: ""
-large_cover: http://f.cl.ly/items/2q1M1Z390k0m1N2T191y/taming-git-log.png
 tags: ["geekery", "github", "mac", "shell", "software"]
 ---
 {% include JB/setup %}
