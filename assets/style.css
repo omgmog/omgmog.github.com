@@ -16,7 +16,6 @@ a {
     background: #fefefe;
     color: #7a7a7a;
     margin: 85px auto 0;
-    overflow: hidden;
     padding: 0;
     position: relative;
     text-align: left;
@@ -67,13 +66,13 @@ a {
 }
 aside {
     background-image: url(img/dark_wall.png);
-    background: #272727;
+    background-color: #272727;
     color: #999;
     left: 50%;
     margin-left: 230px;
     padding: 20px 0;
-    position: fixed;
-    top: 125px;
+    position: absolute;
+    top: 40px;
     width: 220px;
     z-index: 2;
 
@@ -227,6 +226,7 @@ article .youtube {
     max-width: 100%;
     clear: both;
     display: block;
+    border: 0;
 }
 article .youtube {
     width: 100%;
@@ -260,19 +260,21 @@ blockquote.code {
 
 .pagination {
     width: 900px;
+    position: absolute;
 }
 .pagination ul {
     width: 900px;
     margin: 0;
     padding: 0;
     list-style: none;
-    position: relative;
+    position: absolute;
 }
 .pagination ul li {
     height: 100px;
     width: 100px;
     z-index: 1000;
     position: fixed;
+    display: block;
     left: 50%;
     top: 50%;
     margin-top: -50px;
