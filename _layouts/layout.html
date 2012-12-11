@@ -7,25 +7,25 @@
         <meta name="keywords" content="" />
         <title>{{ page.title }} | Blomg - The blog of Max Glenister</title>
         <!--[if lt IE 9]>
-            <script src="assets/html5shiv.js">
+            <script src="{{ site.BASE_PATH }}assets/html5shiv.js">
             </script>
         <![endif]-->
         <link href="http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="/assets/style.css" />
-        <link rel="shortcut icon" href="/assets/favicon.png" />
+        <link rel="stylesheet" href="{{ site.BASE_PATH }}assets/style.css" />
+        <link rel="shortcut icon" href="{{ site.BASE_PATH }}assets/favicon.png" />
     </head>
     <body>
         <div id="wrapper">
             <header id="header">
                 <nav>
                     <ul>
-                        <li {% if page.url == "/index.html" %}class="active"{% endif %}>
-                            <a href="/">
+                        <li {% if page.url == "{{ site.BASE_PATH }}index.html" %}class="active"{% endif %}>
+                            <a href="{{ site.BASE_PATH }}">
                                 Blomg
                             </a>
                         </li>
-                        <li {% if page.url == "/archive.html" %}class="active"{% endif %}>
-                            <a href="/archive.html">
+                        <li {% if page.url == "{{ site.BASE_PATH }}archive.html" %}class="active"{% endif %}>
+                            <a href="{{ site.BASE_PATH }}archive.html">
                                 Archive
                             </a>
                         </li>
@@ -34,7 +34,7 @@
                 </nav>
             </header>
             <aside id="about">
-                <h1><a href="/">Blomg!</a></h1>
+                <h1><a href="{{ site.BASE_PATH }}">Blomg!</a></h1>
                 <a class="about-trigger" href="#about">&times;</a>
                 <p>
                     So this is <em>Blomg</em>, the blog of Max Glenister.
@@ -79,7 +79,7 @@
                 &copy; 2012 Max Glenister
             </footer>
         </div>
-        <script src="/assets/jquery-1.8.2.min.js"></script>
+        <script src="{{ site.BASE_PATH }}assets/jquery-1.8.2.min.js"></script>
         <script>
             $(function(){
                 if(!$('nav .active').length) {
