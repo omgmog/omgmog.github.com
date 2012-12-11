@@ -98,6 +98,17 @@
                         window.location = url;
                     }
                 });
+                // make left/right arrows follow the mouse on y-axis
+                $(document).on('mousemove', function(e){
+                    var offset = $(document).scrollTop();
+                    var actualypos = e.pageY;
+
+                    var ypos = (actualypos-offset);
+
+                    if(ypos>120){
+                        $('.pagination ul li').css('top',ypos);
+                    }
+                });
 
                 $('.about-trigger').on('click', function(e){
                     e.preventDefault();
