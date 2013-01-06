@@ -257,51 +257,6 @@ blockquote.code {
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
-
-.pagination {
-    width: 900px;
-    position: absolute;
-}
-.pagination ul {
-    width: 900px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: absolute;
-}
-.pagination ul li {
-    height: 100px;
-    width: 100px;
-    z-index: 1000;
-    position: fixed;
-    display: block;
-    left: 50%;
-    top: 50%;
-    margin-top: -50px;
-    background-position: -10px -10px;
-    background-repeat: no-repeat;
-}
-.pagination ul li.prev {
-    margin-left: -530px;
-    background-image: url(img/arrow_left.png);
-}
-.pagination ul li.prev.disabled {
-    background-image: url(img/arrow_left_disabled.png);
-}
-.pagination ul li.next {
-    margin-left: 450px;
-    background-image: url(img/arrow_right.png);
-}
-.pagination ul li.next.disabled {
-    background-image: url(img/arrow_right_disabled.png);
-}
-.pagination ul li a {
-    display: block;
-    height: 80px;
-    width: 80px;
-    overflow: hidden;
-    text-indent: -999em;
-}
 ul.archive {
     margin: 0 220px 0 0;
     padding: 0;
@@ -317,19 +272,52 @@ ul.archive {
 .about-trigger {
     display: none;
 }
-@media all and (max-width: 960px) {
-    .pagination ul li{
-        left: 0;
-        margin: 0;
-    }
-    .pagination ul li.prev {
-        margin-left: -20px;
-    }
-    .pagination ul li.next {
-        right: 0;
-        left: auto;
-        margin-right: -40px;
-    }
+.pagination ul {
+    margin: 0;
+    padding: 0;
+}
+.pagination li {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.pagination li a {
+    background-color: #73a325;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 1000;
+    top: 45%;
+    width: 100px;
+    height: 32px;
+    color: #fff;
+    line-height: 33px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    -webkit-transition: .2s ease-in;
+    -moz-transition: .2s ease-in;
+    transition: .2s ease-in;
+}
+.pagination li.prev a {
+    left: -100px;
+    text-align: right;
+    padding: 0 32px 0 0;
+    background-image: url(img/arrow_left.png);
+    background-position: right 50%;
+}
+.pagination li.prev a:hover {
+    left: 0;
+}
+.pagination li.next a {
+    right: -100px;
+    text-align: left;
+    padding: 0 0 0 32px;
+    background-image: url(img/arrow_right.png);
+    background-position: left 50%;
+}
+.pagination li.next a:hover {
+    right: 0;
 }
 @media all and (max-width: 960px) {
     #wrapper {
