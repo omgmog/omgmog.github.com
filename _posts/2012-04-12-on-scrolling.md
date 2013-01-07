@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "On scrolling"
-description: ""
-category: 
 tags: ["mac", "usability", "blog", "software"]
 ---
 {% include JB/setup %}

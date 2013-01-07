@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Saving your CSS changes in the Google Chrome inspector"
-description: ""
 tags: ["chrome", "css", "software"]
 ---
 {% include JB/setup %}

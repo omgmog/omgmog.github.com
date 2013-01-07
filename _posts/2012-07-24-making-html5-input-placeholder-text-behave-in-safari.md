@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Making HTML5 input placeholder text behave in Safari"
-description: ""
 tags: ["chrome", "css", "firefox", "software", "mac", "usability"]
 ---
 {% include JB/setup %}

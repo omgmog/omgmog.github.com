@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Finally, a post about the Nexus 7"
-description: ""
 tags: ["android", "consumerism", "chrome", "dropbox", "gadgets", "hardware", "software"]
 ---
 {% include JB/setup %}

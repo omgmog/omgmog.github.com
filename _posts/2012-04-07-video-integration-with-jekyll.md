@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Video integration with Jekyll"
-category: ""
 tags: ["jekyll", "css", "javascript", "jquery", "geekery", "projects", "software", "blog"]
 ---
 {% include JB/setup %}

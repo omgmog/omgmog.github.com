@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Dynamic location based desktop on your Mac with Satellite Eyes"
-description: ""
 tags: ["downloads", "geekery", "mac", "software"]
 ---
 {% include JB/setup %}

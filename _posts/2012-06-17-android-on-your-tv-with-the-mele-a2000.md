@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Android on your TV with the Mele A2000"
-description: ""
 tags: ["android", "consumerism", "gadgets", "geekery", "hardware"]
 ---
 {% include JB/setup %}

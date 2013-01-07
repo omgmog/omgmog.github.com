@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Getting to grips with git log"
-description: ""
 tags: ["geekery", "github", "mac", "shell", "software"]
 ---
 {% include JB/setup %}

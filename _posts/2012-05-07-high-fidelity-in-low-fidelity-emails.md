@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "High fidelity in low fidelity emails"
-description: ""
 tags: ["blog", "geekery", "usability"]
 ---
 {% include JB/setup %}

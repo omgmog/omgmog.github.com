@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Using jQuery to create a custom thumbnail for an embedded video"
-description: ""
 tags: ["jquery", "projects", "blog", "software", "javascript", "software"]
 ---
 {% include JB/setup %}

@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "UPPLEVA I UPPLOVE it."
-description: ""
-category: 
 tags: ["blog", "consumerism", "gadgets", "geekery", "ikea", "hardware"]
 video_url: http://www.youtube.com/embed/0Nm7-EuctOs
 ---
