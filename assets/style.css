@@ -21,22 +21,17 @@ a {
     text-align: left;
     width: 900px;
 
-    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 
-    -moz-transition: box-shadow,margin 0.5s linear;
-    -webkit-transition: box-shadow,margin 0.5s linear;
-    transition: box-shadow,margin 0.5s linear;
-}
-#wrapper:hover {
-    -moz-box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    -moz-transition: margin 0.2s linear;
+    -webkit-transition: margin 0.2s linear;
+    transition: margin 0.2s linear;
 }
 #header, #content, #footer {
     background: #fff;
