@@ -12,7 +12,7 @@ I've done away with [Jekyll Bootstrap](http://jekyllbootstrap.com/) and I'm now 
 The major changes:
 - Removed tagging (or rather the display of tags, I might use them later!)
 - Migrated to [Disqus 2012](http://blog.disqus.com/post/25017922977/the-new-disqus-2012)
-- Removed the post images (they were )
+- Removed the post images
 - Dropped the [PJAX navigation](https://github.com/defunkt/jquery-pjax)
 - Made the design more [responsive with css3 mediaqueries](http://www.w3.org/TR/css3-mediaqueries/)
 
