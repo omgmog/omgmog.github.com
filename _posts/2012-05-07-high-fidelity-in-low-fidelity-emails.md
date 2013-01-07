@@ -3,8 +3,6 @@ layout: post
 title: "High fidelity in low fidelity emails"
 tags: ["blog", "geekery", "usability"]
 ---
-{% include JB/setup %}
-
 Recently it was pointed out to me that [Pizza Express](http://www.pizzaexpress.com/) provide a nice fallback for photos on their picture-heavy emails. Take the following example, from a promotional email they sent out earlier this year:
 
 ![High-quality curves](http://f.cl.ly/items/413Q173i2E1P3i3A0I1d/Screen%20Shot%202012-05-07%20at%2012.27.19.png)

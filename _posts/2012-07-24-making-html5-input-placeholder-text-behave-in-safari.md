@@ -3,8 +3,6 @@ layout: post
 title: "Making HTML5 input placeholder text behave in Safari"
 tags: ["chrome", "css", "firefox", "software", "mac", "usability"]
 ---
-{% include JB/setup %}
-
 Making assumptions during web development is never a good idea -- especially if your assumptions are about the way a new feature will behave across modern browsers. This is an issue because of two things:
 
 1. There are a large number of 'modern' browsers that need to be supported.

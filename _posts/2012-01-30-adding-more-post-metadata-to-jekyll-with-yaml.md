@@ -3,7 +3,6 @@ layout: post
 title: "Adding more post metadata to Jekyll with YAML"
 tags: ["jekyll", "geekery", "software", "projects", "blog", "github"]
 ---
-{% include JB/setup %}
 <strong>NB: This flurry of content might be shortlived, but for now I'm excited to be posting again so shush!</strong>
 
 Jekyll, as it turns out, is a really nice <s>blogging platform</s> parsing engine. One of the nice things about it is the flexibility. In my current Jekyll set up I've added metadata to the [YAML](http://www.yaml.org/) for posts, so that I can optionally define a post cover (or image, if you'd prefer) and a width for the cover.

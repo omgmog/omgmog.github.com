@@ -3,8 +3,6 @@ layout: post
 title: "Dropbox beta for Android, giving you extra account space"
 tags: ["incoming", "dropbox", "blog", "android", "geekery"]
 ---
-{% include JB/setup %}
-
 [Dropbox](http://dropbox.com) announced a new beta program for their Android client. The new Dropbox beta adds an automatic upload from the camera feature. Users of the beta will be rewarded for using the beta, by getting 500mb of additional space added to their Dropbox account for just using the automatic upload, and an additional 500mb for each 500mb of photos uploaded using the automatic upload (up to 5gb of additional space).
 
 The features of the beta are as follows:

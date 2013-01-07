@@ -3,8 +3,6 @@ layout: post
 title: "Adventures with the Blackberry Playbook   Part 1"
 tags: ["geekery", "gadgets", "software", "hardware", "projects", "blog", "consumerism"]
 ---
-{% include JB/setup %}
-
 I recently acquired a Blackberry Playbook, while [attending the jQuery UK conference](/post/jquery-uk-conference-2012/). Having owned a couple of tablets in the past two years (including an [Archos 101it](http://www.archos.com/products/ta/archos_101it/specs.html?country=us&lang=en) and more recently a [HP Touchpad](http://h41112.www4.hp.com/promo/webos/uk/en/tablet/touchpad.html)), I was interested in seeing what RIM have brought to the table, and how the Blackberry OS differs from Android and WebOS.
 
 I found the Archos 101it to not be a nice tablet -- or rather, it provided the most basic Android support, with very little room for improvement by custom ROM makers. Add to this the fact that the hardware wasn't very good, with a terrible touch screen, a really flimsy kick stand and a badly earthed power connection (instead of using the already present micro-USB port), and the slightly-higher-than-justifiable price point -- the whole experience was terrible, and it's easy to see why these early Android tablets had a hard time breaking the market.

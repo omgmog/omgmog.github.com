@@ -3,8 +3,6 @@ layout: post
 title: "The woes of trailing commas in IE"
 tags: ["sublime text", "software", "javascript", "jquery", "internet explorer", "geekery"]
 ---
-{% include JB/setup %}
-
 If you leave a trailing comma in your JavaScript code, you're a terrible person. It's right up there with [omitting semicolons](https://github.com/twitter/bootstrap/issues/3057) as far as I'm concerned.
 
 While fixing some issues on a site in IE7 recently, I was greeted by the familiarly unhelpful error message from Internet Explorer 7 that prompted me to write this. You can see an example below: 

@@ -3,8 +3,6 @@ layout: post
 title: "Using jQuery to create a custom thumbnail for an embedded video"
 tags: ["jquery", "projects", "blog", "software", "javascript", "software"]
 ---
-{% include JB/setup %}
-
 Recently [Jenny](http://twitter.com/jennybroomfield) asked me for a way to embed a YouTube video with a custom thumbnail that would play the video when clicked.
 
 I'm aware that YouTube allows [Partners](http://support.google.com/youtube/bin/topic.py?hl=en&topic=1100428) to use a custom thumbnail for their videos, but standard users are restricted to a selection of random frames from their uploaded video. If you want your YouTube embed to look nice on your site, but are not a Partner, this isn't ideal.

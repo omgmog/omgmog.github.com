@@ -3,8 +3,6 @@ layout: post
 title: "Saving your CSS changes in the Google Chrome inspector"
 tags: ["chrome", "css", "software"]
 ---
-{% include JB/setup %}
-
 In the process of rapid prototyping and trying out new CSS styles I often find myself making changes to styles within the inspector in Google Chrome. This works quite well, but I've always had a process like the following
 
 * Try some CSS changes in the inspector

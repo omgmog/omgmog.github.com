@@ -3,8 +3,6 @@ layout: post
 title: "Installing MySQL on OS X Mountain Lion"
 tags: ["geekery", "incoming", "mac", "projects", "shell", "software"]
 ---
-{% include JB/setup %}
-
 I was having some issues getting MySQL installed on OS X 10.8 Mountain Lion, and then I came across [a useful article](http://madebyhoundstooth.com/blog/install-mysql-on-mountain-lion-with-homebrew/) describing how to do it.
 
 Here's the important information from the article to install MySQL on OS X 10.8 Mountain Lion using Homebrew:

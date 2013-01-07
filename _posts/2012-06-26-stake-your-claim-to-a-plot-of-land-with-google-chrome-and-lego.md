@@ -3,8 +3,6 @@ layout: post
 title: "Stake your claim to a plot of land with Google Chrome and LEGO"
 tags: ["chrome", "geekery"]
 ---
-{% include JB/setup %}
-
 As part of [LEGO Australia's "Festival of play" campaign](http://www.legofestival.com.au/), Google have rolled out a new toy combining two things I love: LEGO and Google Chrome.
 
 ![](http://f.cl.ly/items/3h3F052b1M2v0e2x0T0T/by%20default%202012-06-26%20at%2011.40.30.png)

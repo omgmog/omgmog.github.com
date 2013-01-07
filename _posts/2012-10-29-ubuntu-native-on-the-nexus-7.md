@@ -3,8 +3,6 @@ layout: post
 title: "Ubuntu (native) on the Nexus 7"
 tags: ["android", "blog", "gadgets", "geekery", "software", "mac", "shell", "software"]
 ---
-{% include JB/setup %}
-
 Last week, a Ubuntu native installer for the Nexus 7 was released, along with [instructions on how to install Ubuntu on the Nexus 7](https://wiki.ubuntu.com/Nexus7/Installation). The plan is that the Nexus 7 will be the 'core' device that Canonical will build their tablet version of Ubuntu around. Right now, it's quite experimental -- the interface sees no tweaks for the tablet interface, beyond having an onscreen keyboard available.
 
 The installation instructions I mentioned earlier are explicitly for installing Ubuntu on your Nexus 7 from an existing Ubuntu 12.10 install on your computer. Now, I don't have any Ubuntu installations kicking around, so I can't vouch for how well this process works, but there are plenty of [videos]() [around]() [the internet]().

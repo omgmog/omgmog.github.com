@@ -3,8 +3,6 @@ layout: post
 title: "Dealing with crappy memory management in OS X"
 tags: ["geekery", "hardware", "software", "mac", "shell"]
 ---
-{% include JB/setup %}
-
 Using a lot of memory-intensive programs throughout the day, such as Virtualbox virtual machines, Photoshop and numerous browsers each with a couple of handfuls of tabs, you come to realise how bad the memory management in Mac OS X is.
 
 Take the following screenshot, this is after having closed a bunch of programs because my 2011 iMac (with 12 GB of RAM) was crawling and reporting "11 MB" of free memory.
