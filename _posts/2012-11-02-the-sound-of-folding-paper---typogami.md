@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "The sound of folding paper &mdash; Typogami"
-description: ""
 tags: ["downloads", "geekery", "software", "design"]
 ---
 {% include JB/setup %}

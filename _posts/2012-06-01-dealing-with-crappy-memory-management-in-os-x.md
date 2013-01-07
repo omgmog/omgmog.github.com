@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Dealing with crappy memory management in OS X"
-description: ""
 tags: ["geekery", "hardware", "software", "mac", "shell"]
 ---
 {% include JB/setup %}

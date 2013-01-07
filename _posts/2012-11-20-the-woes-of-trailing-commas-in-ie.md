@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "The woes of trailing commas in IE"
-description: ""
 tags: ["sublime text", "software", "javascript", "jquery", "internet explorer", "geekery"]
 ---
 {% include JB/setup %}

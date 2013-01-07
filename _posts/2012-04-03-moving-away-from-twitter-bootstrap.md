@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Moving away from Twitter Bootstrap - Hello new design!"
-description: ""
-category: 
 tags: ["jekyll", "css", "javascript", "jquery", "geekery", "projects", "software", "blog"]
 ---
 {% include JB/setup %}

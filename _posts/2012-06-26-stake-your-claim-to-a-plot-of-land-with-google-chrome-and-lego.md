@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Stake your claim to a plot of land with Google Chrome and LEGO"
-description: ""
 tags: ["chrome", "geekery"]
 ---
 {% include JB/setup %}

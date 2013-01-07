@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Installing MySQL on OS X Mountain Lion"
-description: ""
 tags: ["geekery", "incoming", "mac", "projects", "shell", "software"]
 ---
 {% include JB/setup %}

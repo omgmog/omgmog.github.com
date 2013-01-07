@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Ubuntu (native) on the Nexus 7"
-description: ""
 tags: ["android", "blog", "gadgets", "geekery", "software", "mac", "shell", "software"]
 ---
 {% include JB/setup %}
