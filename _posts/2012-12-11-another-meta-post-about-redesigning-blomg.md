@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Another meta post about redesigning Blomg"
+tags: ["jekyll", "geekery", "software", "projects", "blog", "github"]
 ---
 <a href="https://github.com/omgmog/omgmog.github.com/commit/b394514e810f923b66f15b73b43c7242c812c05f" target="_blank"><img src="http://uk.omg.li/LWNX/by%20default%202012-12-11%20at%2011.35.45.png" /></a>
 
