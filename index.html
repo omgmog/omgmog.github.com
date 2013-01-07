@@ -12,6 +12,15 @@ title: Home
                 </time>
             </a>
         </header>
+        
+    {% if post.video_url %}
+        <iframe 
+        class="youtube" 
+        src="{{ post.video_url }}?&amp;fmt=18&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;wmode=transparent" 
+        frameborder="0" 
+        allowfullscreen="true"
+        ></iframe>
+    {% endif %}
         {{ post.content }}
     </article>
     <div class="pagination">
