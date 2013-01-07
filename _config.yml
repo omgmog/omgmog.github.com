@@ -4,3 +4,5 @@ debug: false
 permalink: /post/:title
 exclude: ["rakefile", "_config.yml", "addpost.sh", "addpage.sh", ".gitignore"]
 BASE_PATH: "/"
+lsi: false
+pygments: true
