@@ -4,8 +4,6 @@ title: "UPPLEVA I UPPLOVE it."
 tags: ["blog", "consumerism", "gadgets", "geekery", "ikea", "hardware"]
 video_url: http://www.youtube.com/embed/0Nm7-EuctOs
 ---
-{% include JB/setup %}
-
 IKEA just announced a first-world-solution to a [first-world-problem](http://first-world-problems.com/).
 
 UPPLEVA is their new integrated TV/blu-ray/stereo/kitchen sink/furniture solution for the living room. This is what I'd like an Apple powered/branded TV to be like.

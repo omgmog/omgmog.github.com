@@ -3,7 +3,6 @@ layout: post
 title: "jQuery UK Conference 2012"
 tags: ["javascript", "jquery", "geekery", "gadgets", "software", "hardware", "projects", "blog", "consumerism"]
 ---
-{% include JB/setup %}
 Yesterday I attended the first [European jQuery conference](http://events.jquery.org/2012/uk/), which was hosted here in Oxford at the Saïd Business School. This was the first big conference I've been to (though I've attended a couple of local 'Geek nights' and 'design jams').
 
 Upon arriving and collecting my pass, I received a goodie bag, which included:

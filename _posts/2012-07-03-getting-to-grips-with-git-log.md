@@ -3,8 +3,6 @@ layout: post
 title: "Getting to grips with git log"
 tags: ["geekery", "github", "mac", "shell", "software"]
 ---
-{% include JB/setup %}
-
 `git` is a powerful tool. After using it for the past couple of years I'm still finding new/powerful things that can be done with it.
 
 One nice thing is the `git log` command, and the options you can pass to it. Some examples from the docs:

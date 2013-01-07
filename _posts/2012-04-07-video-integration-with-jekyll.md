@@ -3,8 +3,6 @@ layout: post
 title: "Video integration with Jekyll"
 tags: ["jekyll", "css", "javascript", "jquery", "geekery", "projects", "software", "blog"]
 ---
-{% include JB/setup %}
-
 Adding some functionality to Jekyll to allow integration of YouTube videos is a pretty easy task.
 
 First we need a couple of things

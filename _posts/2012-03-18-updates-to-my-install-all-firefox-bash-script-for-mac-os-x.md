@@ -3,8 +3,6 @@ layout: post
 title: "Updates to my 'install all firefox' bash script for Mac OS X"
 tags: ["mac", "shell", "firefox", "geekery", "software", "projects", "github", "blog", "downloads"]
 ---
-{% include JB/setup %}
-
 I wrote briefly about my [install-all-firefox shell script](http://blog.omgmog.net/post/13592744529/) back in December last year. Since then the script has received a complete rewrite, and some new features.
 
 The features of the script at the moment are as follows:

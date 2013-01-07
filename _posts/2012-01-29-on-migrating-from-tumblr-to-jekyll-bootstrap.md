@@ -3,7 +3,6 @@ layout: post
 title: "On migrating from Tumblr to Jekyll Bootstrap"
 tags: ["jekyll", "tumblr", "geekery", "software", "projects", "blog", "github"]
 ---
-{% include JB/setup %}
 I've been toying with the idea of moving away from [Tumblr](http://www.tumblr.com) for a long time now, having had my own share of problems with [Tumblr](http://www.tumblr.com) downtime.
 
 I had made some steps into switching from [Tumblr](http://www.tumblr.com) to Octopress, but the steps to deploy [Octopress](http://octopress.org) meant that I had to compile all of my pages each time I made a change, and then deploy them using <code>rsync</code>.
