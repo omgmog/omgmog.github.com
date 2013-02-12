@@ -235,13 +235,13 @@ article .youtube {
 }
 code,
 blockquote.code {
-    color: #fff;
-    background: #272727;
-    background-image: url(img/dark_wall.png);
-    padding: 1px 5px;
+    color: #444;
+    background: #efefef;
+    padding: 2px 5px;
     font-size: 12px;
     font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
     vertical-align: middle;
+    word-wrap: break-word;
 }
 blockquote.code p,
 blockquote.code li {
