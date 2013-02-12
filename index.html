@@ -23,18 +23,4 @@ title: Home
     {% endif %}
         {{ post.content }}
     </article>
-    <div class="pagination">
-        <ul>
-            {% if post.previous %}
-                <li class="prev">
-                    <a href="{{ BASE_PATH }}{{ post.previous.url }}" title="{{ post.previous.title }}" rel="prev">Prev</a>
-                </li>
-            {% endif %}
-            {% if post.next %}
-                <li class="next">
-                    <a href="{{ BASE_PATH }}{{ post.next.url }}" title="{{ post.next.title }}" rel="next">Next</a>
-                </li>
-            {% endif %}
-        </ul>
-    </div>
 {% endfor %}
