@@ -101,17 +101,6 @@
                 if(!$('nav .active').length) {
                     $('nav li:eq(0)').addClass('active');
                 }
-                // bind left/right for going between posts
-                $(document).keydown(function(e){
-                    if (e.keyCode === 37) { 
-                        var url = $('.prev a').attr('href');
-                        window.location = url;
-                    }
-                    if(e.keyCode === 39) {
-                        var url = $('.next a').attr('href');
-                        window.location = url;
-                    }
-                });
 
                 $('.about-trigger').on('click', function(e){
                     e.preventDefault();
