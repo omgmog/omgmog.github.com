@@ -292,53 +292,6 @@ ul.archive {
 .about-trigger {
     display: none;
 }
-.pagination ul {
-    margin: 0;
-    padding: 0;
-}
-.pagination li {
-    margin: 0;
-    padding: 0;
-    display: block;
-}
-.pagination li a {
-    background-color: #73a325;
-    background-repeat: no-repeat;
-    position: fixed;
-    z-index: 1000;
-    top: 45%;
-    width: 100px;
-    height: 32px;
-    color: #fff;
-    line-height: 33px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-
-    -webkit-transition: .2s ease-in;
-    -moz-transition: .2s ease-in;
-    transition: .2s ease-in;
-}
-.pagination li.prev a {
-    left: -100px;
-    text-align: right;
-    padding: 0 32px 0 0;
-    background-image: url(img/arrow_left.png);
-    background-position: right 50%;
-}
-.pagination li.prev a:hover {
-    left: 0;
-}
-.pagination li.next a {
-    right: -100px;
-    text-align: left;
-    padding: 0 0 0 32px;
-    background-image: url(img/arrow_right.png);
-    background-position: left 50%;
-}
-.pagination li.next a:hover {
-    right: 0;
-}
 @media all and (max-width: 960px) {
     #wrapper {
         width: 100%;
