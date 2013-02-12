@@ -5,15 +5,15 @@ title: Archive
 <ul class="archive">
 {% for post in site.posts %}
     <li>
-        <a href="{{ post.url }}">
-            <header>
+        <header>
+            <a href="{{ post.url }}">
                 <h2>{{ post.title }}</h2>
                 <time>
                     {{ post.date|date_to_long_string }}
                 </time>
-            </header>
-            <p>{{ post.content | strip_html | truncate:200 }}</p>
-        </a>
+            </a>
+        </header>
+        <p>{{ post.content | strip_html | truncate:200 }}</p>
     </li>
 {% endfor %}
 </ul>

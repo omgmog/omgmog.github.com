@@ -1,7 +1,7 @@
 body {
     background-color: #eee;
     background-image: url(img/tiny_grid.png);
-    font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1;
     margin: 0;
@@ -156,7 +156,7 @@ nav > ul > li {
 }
 nav a {
     color: #999;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
     text-decoration: none;
@@ -180,62 +180,43 @@ article p, article ul, article li {
 article header,
 .archive header {
     font-family: 'Bree Serif', serif;
-    color: #fff;
-    background: #272727;
-    background-image: url(img/dark_wall.png);
+    color: #272727;
     position: relative;
-    margin-left: -40px;
     line-height: 1;
-
-    -moz-text-shadow: 0 1px 0 rgba(0,0,0,0.8);
-    -webkit-text-shadow: 0 1px 0 rgba(0,0,0,0.8);
-    text-shadow: 0 1px 0 rgba(0,0,0,0.8);
-
-    -moz-box-shadow: 0 0 30px rgba(0,0,0,0.2), inset 0 0 30px rgba(0,0,0,0.8);
-    -webkit-box-shadow: 0 0 30px rgba(0,0,0,0.2), inset 0 0 30px rgba(0,0,0,0.8);
-    box-shadow: 0 0 30px rgba(0,0,0,0.2), inset 0 0 30px rgba(0,0,0,0.8);
-
-    -moz-border-radius: 0 4px 4px 0;
-    -webkit-border-radius: 0 4px 4px 0;
-    border-radius: 0 4px 4px 0;
+    padding-bottom: 20px;
 }
-article header a {
-    color: #fff;
+article header a
+.archive header a {
+    color: #73a325;
     display: block;
 }
 article h2,
 article h3 {
-    font-size: 16px;
-    color: #555;
+    font-size: 24px;
+    font-weight: normal;
     padding: 0;
     margin: 0;
 }
-article header h2 {
-    font-size: 34px;
-    font-weight: normal;
-    padding: 20px 40px 0;
-    margin: 0;
-    color: #fff;
-}
 .archive h2 {
-    font-size: 18px;
-    line-height: 1;
-    padding: 10px 40px 0;
-    margin: 0;
     display: block;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
 }
 .archive time {
-    padding: 5px 40px 10px;
+    padding: 10px 0 0;
     display: block;
     font-size: 14px;
     color: #aaa;
 }
 .archive p {
     color: #7a7a7a;
+    font-size: 16px;
+    line-height: 1.3;
 }
 article time {
     margin: 0;
-    padding: 10px 40px 20px;
+    padding: 10px 0 0;
     display: block;
     font-size: 16px;
     color: #aaa;
@@ -285,9 +266,6 @@ ul.archive {
 .archive li {
     margin: 0 0 40px;
     padding: 0;
-}
-.archive p {
-    font-size: 14px;
 }
 .about-trigger {
     display: none;
