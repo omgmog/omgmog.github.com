@@ -4,9 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" />
         <meta name="author" content="Max Glenister" />
-        <meta name="description" content="The personal blog of Max Glenister. Mostly containing tech-related musings, and any other miscellany that Max finds interesting. Powered by Jekyll Bootstrap, and hosted by GitHub Pages." />
-        <meta name="keywords" content="" />
-        <title>{{ page.title }} | Blomg - The blog of Max Glenister</title>
+        <meta name="description" content="{{ site.description }}" />
+        <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Feed" href="{{ site.url }}/feed.xml" />
+        <title>{{ page.title }} | {{ site.name }}</title>
         <!--[if lt IE 9]>
             <script src="{{ site.BASE_PATH }}assets/html5shiv.js">
             </script>
