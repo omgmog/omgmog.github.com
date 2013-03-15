@@ -62,7 +62,7 @@ task :post do
     post.puts "---"
     post.puts "#{title.gsub(/-/,' ')}"
   end
-  #system "subl #{filename}" #launch sublime with new post
+  system "subl #{filename}" #launch sublime with new post
   system "echo #{filename} > .latestpost"
 end # task :post
 
