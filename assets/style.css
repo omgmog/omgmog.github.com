@@ -229,6 +229,10 @@ article .youtube {
     width: 100%;
     height: 335px;
 }
+article iframe {
+    border: 0;
+    width: 100%;
+}
 code,
 blockquote.code {
     color: #444;
