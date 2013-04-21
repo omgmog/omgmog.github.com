@@ -4,7 +4,7 @@ title: "jQuery UK 2013 - A tale of beer, colourful cakes and no wifi"
 description: ""
 categories: []
 ---
-Yesterday I attended the second jQuery conference in the UK (the first being last year, which I blogged about <a href="http://blog.omgmog.net/post/jquery-uk-conference-2012/)" target="_blank">here</a>). 
+Yesterday I attended the second jQuery conference in the UK (the first being last year, which I blogged about <a href="http://blog.omgmog.net/post/jquery-uk-conference-2012/" target="_blank">here</a>). 
 
 I failed to get any nice pictures at the event myself, so this blog post uses a collection of crowd-sourced pictures from attendees that shared them via Twitter, Instagram and Flickr.
 
