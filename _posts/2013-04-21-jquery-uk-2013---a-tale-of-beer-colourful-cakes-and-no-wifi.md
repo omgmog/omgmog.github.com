@@ -127,6 +127,8 @@ He gave some features of jQuery 2.0, and some promises:
 
 Besides all of that, he invited (implored, encouraged) everybody to take part in the jQuery community more, by becoming embassadors to the jQuery foundation/etc.
 
+- [Click here to view the slides](http://www.slideshare.net/rworth/j-query2-19610459)
+
 ## Break - retro games!
 During the first break, the retro games consoles from <a href="http://www.replayevents.com/index.shtml" target="_blank">REPLAY</a> were turned on. There was a circle of chairs set up with 4 TVs and 4 consoles in the middle, and there was an additional 5th TV with an n64 close by.
 
@@ -226,7 +228,7 @@ During the lunch break there were lightning talks going on in the main conferenc
 
 Garann talked about using events and jQuery to glue your templates and front-end stuff to your models/controllers.
 
-I didn't pay nearly enough attention during this talk as I was in a post-lunch food daze, so I'm hoping the slides come online!
+- [Click here to view the slides](http://garann.com/slides/fullstack-events/#/)
 
 ### <a href="https://twitter.com/igrigorik" target="_blank">Ilya Grigorik </a> - Wait, Chrome DevTools can do THAT?
 <img class="speaker" src="http://uk.omg.li/OSS2/ilya.jpg" />
@@ -266,6 +268,7 @@ It started with a category theory primer to get everybody up to scratch, and the
 Lastly he went on to talk about Weild, `a tiny object wrapper around the DOM`. You can read more about Weild over at its [GitHub project page](https://github.com/johnbender/wield)
 
 - [Read his related blog post here](http://johnbender.us/2012/02/09/faster-javascript-through-category-theory/)
+- [Click here to view the slides](http://johnbender.us/presentation-faster-js/#/)
 
 ### <a href="https://twitter.com/Joe8Bit" target="_blank">Joe Pettersson</a> - Complex clientside apps and legacy browsers (a story of frustration...)
 <img class="speaker" src="http://uk.omg.li/ORzu/joe.jpg" />
@@ -274,11 +277,14 @@ Joe's talk was about testing across multiple browsers, and how to make the task 
 
 The only bad thing I've got to say about Joe's talk is that he had a heavy emphasis on testing versions of Internet Explorer, but nothing around testing legacy versions of Firefox or particular quirky WebKit versions.
 
+- [Click here to view the slides](https://speakerdeck.com/joepettersson/building-for-legacy-browsers-jquery-uk-2013)
+
 ### <a href="https://twitter.com/JsonScott" target="_blank">Jason Scott</a> - Build an experience... not another framework
 <img class="speaker" src="http://uk.omg.li/OS1o/jason.jpg" />
 
 Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
 
+- [Click here to view the slides](https://docs.google.com/presentation/d/19xrnU6cpyvOus0CYUnb7W7uxz_hl6Dqw-6BOxsVMn2s/edit#slide=id.p20)
 ## jBeery
 John Wards wanted to host a beer festival this year, so he did.
 
