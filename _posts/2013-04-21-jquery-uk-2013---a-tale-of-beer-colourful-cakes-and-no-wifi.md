@@ -285,6 +285,7 @@ The only bad thing I've got to say about Joe's talk is that he had a heavy empha
 Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
 
 - [Click here to view the slides](https://docs.google.com/presentation/d/19xrnU6cpyvOus0CYUnb7W7uxz_hl6Dqw-6BOxsVMn2s/edit#slide=id.p20)
+
 ## jBeery
 John Wards wanted to host a beer festival this year, so he did.
 
