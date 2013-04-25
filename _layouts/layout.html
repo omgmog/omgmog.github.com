@@ -1,118 +1,175 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE; chrome=1" />
-        <meta name="author" content="Max Glenister" />
-        <meta name="description" content="{{ site.description }}" />
-        <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - Feed" href="{{ site.url }}/feed.xml" />
-        <title>{{ page.title }} | {{ site.name }}</title>
-        <!--[if lt IE 9]>
-            <script src="{{ site.BASE_PATH }}assets/html5shiv.js">
-            </script>
-        <![endif]-->
-        <link href="http://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{{ site.BASE_PATH }}assets/style.css" />
-        <link rel="shortcut icon" href="{{ site.BASE_PATH }}assets/favicon.png" />
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <title>
+        {{ page.title }} | {{ site.name }}
+    </title>
+    <meta 
+        name="author" 
+        content="Max Glenister" 
+    />
+    <meta 
+        name="description" 
+        content="{{ site.description }}" 
+    />
+    <link 
+        rel="alternate" 
+        type="application/rss+xml" 
+        title="{{ site.name }} - Feed" 
+        href="{{ site.url }}/feed.xml" 
+    />
 
-        <script type="text/javascript">
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-18982788-1']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
+    <!--[if lt IE 9]>
+        <script src="{{ site.BASE_PATH }}assets/html5shiv.js">
         </script>
-    </head>
-    <body>
-        <div id="wrapper">
-            <header id="header">
-                <nav>
+    <![endif]-->
+    
+    <link 
+        href="http://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" 
+        rel="stylesheet"
+    />
+    <link 
+        rel="stylesheet" 
+        href="{{ site.BASE_PATH }}assets/monokai.css" 
+    />
+    <link 
+        rel="stylesheet" 
+        href="{{ site.BASE_PATH }}assets/style.css" 
+    />
+</head>
+<body>
+    <div class="container-viewport">
+        <div class="viewport-content">
+            <aside class="sidebar-cover">
+                <div class="sidebar-content">
+                    <h1 class="sidebar-heading">
+                        <img 
+                        src="https://en.gravatar.com/userimage/103487/842bb346b3d847abf5db893e4829b1ef.jpg?size=180" 
+                        class="photo-me"
+                        onload="this.style.opacity='1';"
+                        />
+                        <a href="{{ site.BASE_PATH }}">
+                            Blomg
+                        </a>
+                    </h1>
+                    <nav class="main-nav">
+                        <a 
+                            href="{{ site.BASE_PATH }}" 
+                            class="navbtn home{% if page.url == "/index.html" %} active{% endif %}"
+                        >
+                            Home
+                        </a>
+                        <a 
+                            href="{{ site.BASE_PATH }}archive.html"
+                            class="navbtn archive{% if page.url == "/archive.html" %} active{% endif %}"
+                        >
+                            Archive
+                        </a>
+                        {% if page.url == "/index.html" %}
+                            {% for page in site.posts|limit:1 %}
+                                {% assign previouspage = page.previous %}
+                                {% assign nextpage = page.next %}
+                            {% endfor %}
+                        {% else %}
+                            {% assign previouspage = page.previous %}
+                            {% assign nextpage = page.next %}
+                        {% endif %}
+                        <div class="prev-next">
+                            {% if previouspage or nextpage %}
+                                    {% if previouspage %}
+                                    <a 
+                                        href="{{ previouspage.url }}" 
+                                        title="Previous post: {{ previouspage.title }}"
+                                        class="navbtn"
+                                    >
+                                        &lt;
+                                    </a>
+                                    {% else %}
+                                        <span class="navbtn disabled">
+                                            &lt;
+                                        </span>
+                                    {% endif %}
+                                    {% if nextpage %}
+                                    <a 
+                                        href="{{ nextpage.url }}" 
+                                        title="Next post: {{ nextpage.title }}"
+                                        class="navbtn"
+                                    >
+                                        &gt;
+                                    </a>
+                                    {% else %}
+                                        <span class="navbtn disabled">
+                                            &gt;
+                                        </span>
+                                    {% endif %}
+                            {% else %}
+                                <span class="navbtn disabled">
+                                    &lt;
+                                </span>
+                                <span class="navbtn disabled">
+                                    &gt;
+                                </span>
+                            {% endif %}
+                        </div>
+                    </nav>
+                    {% for paragraph in site.description %}
+                        <p>
+                            {{ paragraph }}
+                        </p>
+                    {% endfor %}
+                    <p>
+                        If you'd like to find out more about what Max has been upto, you can do so through the following channels:
+                    </p>
                     <ul>
-                        <li {% if page.url == "/index.html" %}class="active"{% endif %}>
-                            <a href="{{ site.BASE_PATH }}">
-                                Blomg
+                        <li>
+                            <a href="http://github.com/omgmog" target="_blank">
+                                omgmog on GitHub
                             </a>
                         </li>
-                        <li {% if page.url == "/archive.html" %}class="active"{% endif %}>
-                            <a href="{{ site.BASE_PATH }}archive.html">
-                                Archive
+                        <li>
+                            <a href="http://twitter.com/omgmog" target="_blank">
+                                @omgmog on Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://omgmog.net" target="_blank">
+                                omgmog.net
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://marmaladeandjam.co.uk" target="_blank">
+                                Marmalade &amp; Jam
                             </a>
                         </li>
                     </ul>
-                    <a class="about-trigger" href="#about">...</a>
-                </nav>
-            </header>
-            <aside id="about">
-                <a href="{{ site.BASE_PATH }}">
-                    <img src="https://en.gravatar.com/userimage/103487/842bb346b3d847abf5db893e4829b1ef.jpg?size=160" />
-                    <h1>Blomg!</h1>
-                </a>
-                <a class="about-trigger" href="#about">&times;</a>
-                <p>
-                    So this is <em>Blomg</em>, the blog of Max Glenister.
-                </p>
-                <p>
-                    The blog mostly contains tech-related musings, and any 
-                    other miscellany that Max finds interesting.
-                </p>
-                <p>
-                    The blog is hosted on <a href="http://pages.github.com/" target="_blank">GitHub Pages</a> and is powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> and <a href="http://sublimetext.com" target="_blank">Sublime Text</a>.
-                </p>
-                <p>
-                    If you'd like to find out more about what Max has been upto, you can do so through the following channels:
-                </p>
-                <ul>
-                    <li>
-                        <a href="http://github.com/omgmog" target="_blank">
-                            omgmog on GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://twitter.com/omgmog" target="_blank">
-                            @omgmog on Twitter
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://omgmog.net" target="_blank">
-                            omgmog.net
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://marmaladeandjam.co.uk" target="_blank">
-                            Marmalade &amp; Jam
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </aside>
-            <section id="content">
+            <section class="viewport-wrapper">
                 {{ content }}
             </section>
-            <footer id="footer">
-                &copy; 2013 Max Glenister
-            </footer>
         </div>
-        <script src="{{ site.BASE_PATH }}assets/jquery-1.8.2.min.js"></script>
-        <script>
-            $(function(){
-                if(!$('nav .active').length) {
-                    $('nav li:eq(0)').addClass('active');
-                }
+    </div>
+    <script src="{{ site.BASE_PATH}}assets/js/rainbow.min.js"></script>
+    <script src="{{ site.BASE_PATH}}assets/js/rainbow.generic.js"></script>
+    <script src="{{ site.BASE_PATH}}assets/js/rainbow.shell.js"></script>
+    <script src="{{ site.BASE_PATH}}assets/js/rainbow.javascript.js"></script>
+    <script src="{{ site.BASE_PATH}}assets/js/rainbow.html.js"></script>
+    <script src="{{ site.BASE_PATH}}assets/js/rainbow.css.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18982788-1']);
+        _gaq.push(['_trackPageview']);
 
-                $('.about-trigger').on('click', function(e){
-                    e.preventDefault();
-                    var about = $('#about');
-                    if(about.hasClass('is-in-viewport')){
-                        about.removeClass('is-in-viewport');
-                    }else {
-                        about.addClass('is-in-viewport');
-                    }
-                    
-                });
-            });
-        </script>
-    </body>
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
 </html>

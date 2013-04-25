@@ -1,28 +1,30 @@
 ---
 layout: layout
 ---
-<article>
-    <header>
-        <a href="{{ page.url }}">
-            <h2>{{ page.title }}</h2>
-            <time>
-                {{ page.date|date_to_long_string }}
-            </time>
-        </a>
-    </header>
-        
-    {% if page.video_url %}
-        <iframe 
-        class="youtube" 
-        src="{{ page.video_url }}?&amp;fmt=18&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;wmode=transparent" 
-        frameborder="0" 
-        allowfullscreen="true"
-        ></iframe>
+<article class="article">
+    {% capture post_Y %}{{ page.date | date:"%Y" }}{% endcapture %}
+    {% capture now_Y %}{{ site.time | date:"%Y" }}{% endcapture %}
+    {% if post_Y < now_Y %}
+        <div class="warning-message">
+            <p>
+                <strong>This is an old post!</strong><br />
+                It might be a good idea to check the <a href="/archive.html">Archive</a> to see if I've posted a revision to this post or subject.
+            </p>
+        </div>
     {% endif %}
-    
-    {{ content }}
+    <h2 class="article-heading">
+        {{ page.title }}
+    </h2>
+    <div class="article-meta">
+        {{ page.date |  date_to_long_string }}
+    </div>
+    <div class="article-body">
+        {% if page.video_url %}
+            <iframe src="{{ page.video_url }}" width="100%" height="350px"></iframe>
+        {% endif %}
+        {{ content }}
+    </div>
 </article>
-
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -35,4 +37,3 @@ layout: layout
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
