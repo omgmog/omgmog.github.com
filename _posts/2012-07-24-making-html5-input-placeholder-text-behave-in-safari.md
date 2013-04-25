@@ -15,9 +15,11 @@ This issue rears its ugly head in one way or another in my day to day life. Firs
 3. Chrome - \*\*
 4. Opera - \*\*\*
 
-<cite>* Firefox since they changed to a rolling release actually updates every 6 weeks or something, but there's always going to be people using some version between 4.0 and the latest version.<br /></cite>
-<cite>** Chrome has a rolling release, but there are probably people floating around versions prior to 18, and 20 is the latest.<br /></cite>
-<cite>*** Well, nobody uses Opera but I didn't want to leave it out.<br /><br /></cite>
+> \* Firefox since they changed to a rolling release actually updates every 6 weeks or something, but there's always going to be people using some version between 4.0 and the latest version.
+
+> \*\* Chrome has a rolling release, but there are probably people floating around versions prior to 18, and 20 is the latest.
+
+> \*\*\* Well, nobody uses Opera but I didn't want to leave it out.
 
 These browsers all have their own implementations of new CSS/HTML5 features, some work out of the box, some need polyfills ([What is a polyfill?](http://remysharp.com/2010/10/08/what-is-a-polyfill/)), some need vendor-prefixes ([What are vendor-prefixes?](http://peter.sh/experiments/vendor-prefixed-css-property-overview/)).
 
@@ -26,7 +28,8 @@ Back to the context of `placeholder` text in Safari then, I had been developing 
 The issue here is how each browser supports styling of the `placeholder` text. Here's a matrix of the style support:
 
 ![](http://f.cl.ly/items/1P0f2k1I2M2M0e0V1f1S/by%20default%202012-07-24%20at%2012.17.12.png)
-<cite>From <a href="http://blog.ajcw.com/2011/02/styling-the-html5-placeholder/" target="_blank">John Catterfeld's blog: Styling the HTML5 placeholder</a></cite>
+
+> From <a href="http://blog.ajcw.com/2011/02/styling-the-html5-placeholder/" target="_blank">John Catterfeld's blog: Styling the HTML5 placeholder</a>
 
 As you can see we're given little in the way of actually styling `placeholder` text, and to actually style it we need to use vendor-prefixed pseudo selectors:
 
@@ -36,23 +39,24 @@ As you can see we're given little in the way of actually styling `placeholder` t
 
 Now, on to the next issue: Webkit has implemented `placeholder` text 'wrong'. Well, at least it's wrong according to the spec, as the `placeholder` text does not get cleared when you focus the `input` element:
 
-<blockquote>
-	User agents should present this hint to the user, after having stripped line breaks from it, when the element's value is the empty string and/or the control is not focused (e.g. by displaying it inside a blank unfocused control and hiding it otherwise).
-</blockquote>
-<cite>WHATWG - <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#the-placeholder-attribute">the-placeholder-attribute</a><br /><br /></cite>
+
+> User agents should present this hint to the user, after having stripped line breaks from it, when the element's value is the empty string and/or the control is not focused (e.g. by displaying it inside a blank unfocused control and hiding it otherwise).
+
+
+> WHATWG - <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#the-placeholder-attribute">the-placeholder-attribute</a>
 
 Anyway, enough background, on to my problem. First of all, let's see how browsers handle `placeholder` text with and without a `line-height` applied to the `input`:
 
-Firefox
+## Firefox
 ![Screenshot of Firefox](http://f.cl.ly/items/2u393l1y3y3R3o0B2D3o/by%20default%202012-07-24%20at%2011.09.57.png)
 
-Opera
+## Opera
 ![Screenshot of Opera](http://f.cl.ly/items/0q2e3h1m41133U0s0L2a/by%20default%202012-07-24%20at%2014.09.35.png)
 
-Chrome
+## Chrome
 ![Screenshot of Chrome](http://f.cl.ly/items/3Q3O0M3Y3r0q1o030k08/by%20default%202012-07-24%20at%2011.08.57.png)
 
-Safari
+## Safari
 ![Screenshot of Safari](http://f.cl.ly/items/0c2x0X0K2E023g2d3c0c/by%20default%202012-07-24%20at%2011.08.48.png)
 
 You can play with the [jsFiddle](http://jsfiddle.net/wfYFW/) that I made to test this here:

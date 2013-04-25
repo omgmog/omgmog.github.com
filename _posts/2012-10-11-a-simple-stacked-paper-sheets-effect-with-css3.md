@@ -11,50 +11,46 @@ Like the sound of that? read on.
 
 First of all, the HTML markup:
 
-<pre>
-<code class="html">&lt;article>
+<pre><code data-language="html">&lt;article>
     &lt;h2>Article title here&lt;/h2>
     &lt;p>Lorem ipsum dolor sit amet...&lt;/p>
-&lt;/article></code>
-</pre>
+&lt;/article></code></pre>
 
 This is only a fraction of what you might have on the page, but I"m sure you can figure that out. This isn"t limited to just the `article` element either, you can adjust this to use whatever you like. Now, the CSS:
 
-<pre>
-<code class="css">article {
-    <strong>position: relative;</strong>
+<pre><code data-language="css">article {
+    position: relative;
     margin: 100px auto;
     padding: 40px 0;
     width: 720px;
 }
 article::before,
 article::after {
-    <strong>content: "";</strong>
+    content: "";
     width: 710px;
     height: 250px;
-    <strong>position: absolute;</strong>
+    position: absolute;
     left: -2px;
     top: -5px;
-    <strong>z-index: -1;</strong>
-    <strong>-moz-transform: rotate(-2deg);
+    z-index: -1;
+    -moz-transform: rotat
     -webkit-transform: rotate(-2deg);
-    transform: rotate(-2deg);</strong>
+    transform: rotate(-2deg);
 }
 article::after {
     left: 0;
-    <strong>-moz-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
     -webkit-transform: rotate(-1deg);
-    transform: rotate(-1deg);</strong>
+    transform: rotate(-1deg);
 }
 article,
 article::before,
 article::after {
     background: #fff;
-    <strong>-moz-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.2);
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);</strong>
-}</code>
-</pre>
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}</code></pre>
 
 That"s the important stuff anyway, so let"s go over this step by step:
 

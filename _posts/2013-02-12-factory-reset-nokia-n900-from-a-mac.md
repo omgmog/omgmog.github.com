@@ -9,7 +9,7 @@ It was an interesting device though, running Maemo, a derivative of Debian linux
 
 The N900 promised to be a lot better than it was, and the following video made it look like a really nice device:
 
-<iframe width="100%" height="315" src="http://www.youtube.com/embed/GhTtsZATwBQ" frameborder="0">
+<iframe width="100%" height="350" src="http://www.youtube.com/embed/GhTtsZATwBQ" frameborder="0">
     
 </iframe>
 
@@ -27,8 +27,8 @@ However, since OS X Lion this installer hasn't worked completely.
 
 To make it work you need to install the `.pkg` from the `.dmg` and then execute the following commands:
 
-```sudo cp -Rv /private/tmp/pc-connectivity/10.6/* /usr/lib/```<br />
-```sudo cp -v /private/tmp/pc-connectivity-bin/10.6/flasher-3.5 /usr/bin/```
+<pre><code data-language="shell">sudo cp -Rv /private/tmp/pc-connectivity/10.6/* /usr/lib/
+sudo cp -v /private/tmp/pc-connectivity-bin/10.6/flasher-3.5 /usr/bin/</code></pre>
 
 You can find a selection of EMMC images here:
 
@@ -37,7 +37,8 @@ You can find a selection of EMMC images here:
 Now you can use `flasher-3.5` from the terminal to flash an EMMC image:
 
 1. Boot the N900 in to USB mode by holding the `u` key while it turns on
-2. Execute the following: ```sudo flasher-3.5 -f <EMMC.bin> -f -R```
+2. Execute the following:
+    <pre><code data-language="shell">sudo flasher-3.5 -f &lt;EMMC.bin> -f -R</code></pre>
 
 It will take a moment to flash the EMMC image, but it will let you know what it's doing meanwhile. After it's complete your N900 should be reset back to the factory default.
 

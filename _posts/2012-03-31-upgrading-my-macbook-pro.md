@@ -20,18 +20,18 @@ To do this upgrade I had to buy a couple of things:
 - Mushkin Chronos 120gb SSD ~£95 from [here](http://www.aria.co.uk/Products/Components/Solid+State+Drives/Mushkin+Chronos+120GB+2.5%22+SATA-III+Solid+State+Hard+Drive+?productId=45660)
 - 8gb (2x4gb) of Corsair PC3-10666C9 RAM ~£35 from [here](http://www.aria.co.uk/Products/Components/Memory+-+RAM/SODIMM+-+Laptops+%2F+Compact+PC/SODIMM+DDR3/8GB+Corsair+Value+Select+%282x4GB%29+DDR3+PC3-10666C9+1333MHz+1.5v+SODIMM+Memory+-+CMSO8GX3M2A1333C9+?productId=47381)
 
-#### Pre-upgrade system information
+## Pre-upgrade system information
 ![](http://f.cl.ly/items/1p0N3e1I3d1K0o2k0A0k/Screen%20shot%202012-03-30%20at%2018.13.30.png)
 ![](http://f.cl.ly/items/0G2i1g0g080D342U3q2e/Screen%20shot%202012-03-30%20at%2018.14.01.png)
 ![](http://f.cl.ly/items/3Y1g1o1t0p3w3j3U2d1a/Screen%20shot%202012-03-30%20at%2018.14.28.png)
 
-#### Post-upgrade system information
+## Post-upgrade system information
 ![](http://f.cl.ly/items/2p2t1i401O0X2T0L1U0m/Screen%20Shot%202012-03-31%20at%2014.55.49.png)
 ![](http://f.cl.ly/items/0l0T1U0j0R1j1G0r0p1P/Screen%20Shot%202012-03-31%20at%2014.56.23.png)
 ![](http://f.cl.ly/items/2y3S2v31290d2k1b1V3h/Screen%20Shot%202012-03-31%20at%2014.56.27.png)
 
 
-#### Opening up the Macbook Pro
+## Opening up the Macbook Pro
 There are guides all over the place for opening the Macbook Pro. I followed [one from iFixit](http://www.ifixit.com/Device/MacBook_Pro_15%22_Unibody_Early_2011#guideList). The only tools you need are a Torx-6 screwdriver and a small Phillips screwdriver.
 
 Once opened, I had to do the following things:
@@ -47,7 +47,7 @@ The whole thing took about an hour to complete, once it was done I booted the Ma
 
 Besides the hardware installed inside the Mac, I also installed the Superdrive in its new USB enclosure. This was really simple, and it works very nicely.
 
-#### Installing Lion sans-Superdrive
+## Installing Lion sans-Superdrive
 Now, even though I bought an enclosure for the Superdrive I removed, I didn't want to install from a DVD (as I had no blank DVDs free). I set up a Lion install USB stick using [this guide from Lifehacker](http://lifehacker.com/5823096/how-to-burn-your-own-lion-install-dvd-or-flash-drive). It's quite simple:
 
 1. Download Lion on the App Store.
@@ -59,7 +59,7 @@ After the Lion USB installer was created, I booted it by selecting the boot devi
 
 The install took less than 20 minutes, and after booting it prompted me to transfer my old Applications and profiles from my Snow Leopard install on the old HDD.
 
-#### Closing notes
+## Closing notes
 The new SSD is insanely fast. Lion cold boots in less than 10 seconds. Photoshop opens in less than 4 seconds. I'm really amazed by it. Now that I've got 8gb of ram in there, I can use the Mac as I had liked, with oodles of browser tabs, Photoshop, and Sublime Text open.
 
 I changed quite a few factors with this upgrade:

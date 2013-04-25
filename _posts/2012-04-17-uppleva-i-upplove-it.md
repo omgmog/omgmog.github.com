@@ -18,4 +18,4 @@ I can't wait for this to be available in the UK -- though according to the descr
 
 Just one remote control.
 
-Shut up and take my money!
+![Shut up and take my money!](http://uk.omg.li/OUUE/Image%202013.04.23%2020%3A34%3A06.jpeg)
