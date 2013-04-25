@@ -2,18 +2,36 @@
 layout: layout
 title: Archive
 ---
-<ul class="archive">
-{% for post in site.posts %}
-    <li>
-        <header>
+<section class="archive">
+    {% for post in site.posts %}
+        {% unless post.next %}
+        <h2 class="year-heading">
+            {{ post.date | date: '%Y' }}
+        </h2>
+        {% else %}
+            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+            {% if year != nyear %}
+                <h2 class="year-heading">
+                    {{ post.date | date: '%Y' }}
+                </h2>
+            {% endif %}
+        {% endunless %}
+        <article class="article">
             <a href="{{ post.url }}">
-                <h2>{{ post.title }}</h2>
-                <time>
-                    {{ post.date|date_to_long_string }}
-                </time>
+                <h3 class="article-heading">
+                    {{ post.title }}
+                </h3>
+                <div class="article-meta">
+                    {{ post.date |  date_to_long_string }}
+                </div>
+                <div class="article-body">
+                    {{ post.content | strip_html | truncate:300 }} 
+                    {% if post.content | size > 300 %}
+                    <strong>Read more</strong>
+                    {% endif %}
+                </div>
             </a>
-        </header>
-        <p>{{ post.content | strip_html | truncate:200 }}</p>
-    </li>
-{% endfor %}
-</ul>
+        </article>
+    {% endfor %}
+</section>

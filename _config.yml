@@ -8,4 +8,5 @@ lsi: false
 pygments: true
 url: http://blog.omgmog.net
 name: "Blomg - The blog of Max Glenister"
-description: "The personal blog of Max Glenister. Mostly containing tech-related musings, and any other miscellany that Max finds interesting. Powered by Jekyll Bootstrap, and hosted by GitHub Pages."
+description: [
+    "The personal blog of Max Glenister. ", "Mostly containing tech-related musings, and any other miscellany that Max finds interesting. ", "Crafted in SublimeText 2, powered by Jekyll Bootstrap, and hosted by GitHub Pages."]
