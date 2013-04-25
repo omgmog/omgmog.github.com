@@ -9,19 +9,17 @@ The installation instructions I mentioned earlier are explicitly for installing 
 
 The installer just uses `fastboot` under a GUI, so we can get away with doing this from our Mac OS X terminal if we have the `.img` files required. Well, these can be acquired from [this site](http://hwe.ubuntu.com/uds-r/nexus7/), just select the appropriate storage size for your Nexus 7 (8GB or 16GB), and we'll be ready to begin.
 
-### Here be dragons - Warning, this will wipe everything on your Nexus 7!
+## Here be dragons - Warning, this will wipe everything on your Nexus 7!
 
 1. Install fastboot/adb if they're not already installed. You can use this simple script to do this - [https://github.com/teamblueridge/adb-fastboot-install](https://github.com/teamblueridge/adb-fastboot-install)
 2. Connect your Nexus 7 by USB and boot it into fastboot mode (reboot holding `vol -` button)
 3. If you haven't unlocked the bootloader on your Nexus 7 already, run `fastboot oem unlock`
 4. In the terminal, locate your downloaded image files, and execute the following:
 
-<pre>
-<code class="html">  $ fastboot flash boot boot.img
-  $ fastboot erase userdata
-  $ fastboot flash userdata rootfs.img
-  $ fastboot reboot</code>
-</pre>
+<pre><code data-language="html">$ fastboot flash boot boot.img
+$ fastboot erase userdata
+$ fastboot flash userdata rootfs.img
+$ fastboot reboot</code></pre>
 
 After that's all finished, when your Nexus 7 boots it will take a couple of minutes to finalise the Ubuntu installation, so go make yourself some coffee or something. When you return, it should have loaded the Ubuntu Unity desktop. It's usable with just the touch screen, but the experience isn't great. You can join your Wifi network, install LXDE or XFCE or something, and log out and select a different desktop environment.
 
@@ -29,7 +27,7 @@ The password for the user account is `ubuntu`, though this wasn't mentioned anyw
 
 ![](http://f.cl.ly/items/0h1S2r1T2l0o0r1Q0Q17/ubuntu-ss.jpg)
 
-### But what about going back to Android?!
+## But what about going back to Android?!
 
 I didn't keep Ubuntu on my Nexus 7 for very long. It's not currently a great tablet experience, so here are the steps to reload Android on there:
 

@@ -39,6 +39,3 @@ The Mele A2000 comes bundled with a bunch of applications, though mostly Chinese
 The Mele A2000 is a nice piece of hardware, it does what I expected it to do, and for the price it's surprisingly high quality.
 
 I'll be writing a follow-up post to talk about upgrading the Mele A2000 to Android 4.0.3 and the problems I've had with that, as well as the solutions I've got.
-
-
-

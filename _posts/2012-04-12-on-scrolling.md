@@ -12,6 +12,7 @@ Or perhaps you're on a smartphone or tablet, or some other device that allows yo
 While implementing a image scroller/marque/slider recently, I became aware of an important decision about scrolling direction. This is a subject that I'm sure has been discussed extensively before, but it's still an interesting subject. I'll be discussing this based around scrolling within a 'slider' device, and scrolling a page.
 
 First of all a diagram of the problem on the X-axis:
+
 ![A diagram of the scrolling problem on the X-axis](http://uk.omg.li/FlRH/scrolling.png)
 
 **Figure 1** shows the default state, this is before we've interacted with it at all.
@@ -33,9 +34,10 @@ This is comparable to holding a long piece of paper in front of you, and then ra
 If, with my finger on a touch screen, I touch a 'previous' or 'left arrow on a slider, or I make a flicking/swiping gesture to the left, I am expecting the content to move to the left -- in this case, the viewport will appear to move to the right.
 
 Below is a second diagram of the same problem, but this time while scrolling on the Y-axis:
+
 ![A diagram of the scrolling problem on the Y-axis](http://uk.omg.li/FmnB/scrolling2.png)
 
-#### How does this effect the web?
+## How does this effect the web?
 With websites being developed to be device agnostic, in that the user interaction works as well on a PC as it does on an iPhone, while the site may look visually different some consideration should be made in to how we interact with these kind of devices. 
 
 I found it quite funny when Googling for '[scrolling direction](https://www.google.co.uk/search?q=scrolling+direction)', the top results were related to reverting the new default of 'natural scrolling' on OS X Lion.

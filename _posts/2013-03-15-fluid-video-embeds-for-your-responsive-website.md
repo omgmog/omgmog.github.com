@@ -22,7 +22,7 @@ If you can bare to not just use the iframe code YouTube gives you for embedding 
 
 Here's an example:
 
-<pre><code class="css">.emedded-video-wrapper {
+<pre><code data-language="css">.emedded-video-wrapper {
     position: relative;
 
     /* 100% width, so it scales */
@@ -53,7 +53,7 @@ Here's a lookup table for the various standard video aspect ratios:
 
 Taking it one step further, to make this easily reusable, you could create classes for each of the aspect ratios:
 
-<pre><code class="css">.emedded-video-wrapper {
+<pre><code data-language="css">.emedded-video-wrapper {
     position: relative;
 
     width: 100%;
@@ -83,7 +83,7 @@ Taking it one step further, to make this easily reusable, you could create class
 
 And then you'd use the following `HTML`, the only adjustment from the code that YouTube provide is that I've wrapped it in a div, and removed the width/height properties (though it should work fine if you leave them as-is, because the CSS will override them)
 
-<pre><code class="html">&lt;div class="embedded-video-wrapper hd">
+<pre><code data-language="html">&lt;div class="embedded-video-wrapper hd">
     &lt;iframe 
         src="http://www.youtube.com/embed/xEhaVhta7sI" 
         frameborder="0" 

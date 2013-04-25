@@ -5,7 +5,9 @@ tags: ["downloads", "geekery", "mac", "software"]
 ---
 I came across this awesome application today, it sets your wallpaper to a satellite view of your current location. The application features a number of rendering mode, and full support for multiple monitors.
 
-<a href="http://uk.omg.li/HWGj" target="_blank"><img src="http://f.cl.ly/items/121K3s21313o0f270S1l/ss_preview.png" alt="Click for a huge screenshot" /></a>
+<a href="http://uk.omg.li/HWGj" target="_blank">
+    <img src="http://f.cl.ly/items/121K3s21313o0f270S1l/ss_preview.png" alt="Click for a huge screenshot" />
+</a>
 
 > Satellite Eyes is a simple Mac app that automatically changes your desktop wallpaper to the satellite view of where you are, right now.
 >
