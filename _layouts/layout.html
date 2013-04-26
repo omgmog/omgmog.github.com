@@ -43,117 +43,123 @@
     />
 </head>
 <body>
-    <div class="container-viewport">
-        <div class="viewport-content">
-            <aside class="sidebar-cover">
-                <div class="sidebar-content">
-                    <h1 class="sidebar-heading">
-                        <img 
-                        src="https://en.gravatar.com/userimage/103487/842bb346b3d847abf5db893e4829b1ef.jpg?size=180" 
-                        class="photo-me"
-                        onload="this.style.opacity='1';"
-                        />
-                        <a href="{{ site.BASE_PATH }}">
-                            Blomg
-                        </a>
-                    </h1>
-                    <nav class="main-nav">
-                        <a 
-                            href="{{ site.BASE_PATH }}" 
-                            class="navbtn home{% if page.url == "/index.html" %} active{% endif %}"
-                        >
-                            Home
-                        </a>
-                        <a 
-                            href="{{ site.BASE_PATH }}archive.html"
-                            class="navbtn archive{% if page.url == "/archive.html" %} active{% endif %}"
-                        >
-                            Archive
-                        </a>
-                        {% if page.url == "/index.html" %}
-                            {% for page in site.posts|limit:1 %}
-                                {% assign previouspage = page.previous %}
-                                {% assign nextpage = page.next %}
-                            {% endfor %}
-                        {% else %}
+    <div class="wrap">
+        <div class="one_third pull-left sidebar">
+            <aside class="inner">
+                <h1 class="header">
+                    <a href="{{ site.BASE_PATH }}">
+                        <img src="{{ site.BASE_PATH }}assets/max.jpg" class="photo-me" />
+                        Blomg
+                    </a>
+                </h1>
+                <nav class="nav-buttons site-nav pull-left">
+                    <ul>
+                        <li>
+                            <a 
+                                href="{{ site.BASE_PATH }}"
+                                class="navbtn"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="{{ site.BASE_PATH }}archive.html"
+                                class="navbtn"
+                            >
+                                Archive
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="nav-buttons posts-nav pull-right">
+                    {% if page.url == "/index.html" %}
+                        {% for page in site.posts|limit:1 %}
                             {% assign previouspage = page.previous %}
                             {% assign nextpage = page.next %}
-                        {% endif %}
-                        <div class="prev-next">
-                            {% if previouspage or nextpage %}
-                                    {% if previouspage %}
-                                    <a 
-                                        href="{{ previouspage.url }}" 
-                                        title="Previous post: {{ previouspage.title }}"
-                                        class="navbtn"
-                                    >
-                                        &lt;
-                                    </a>
-                                    {% else %}
-                                        <span class="navbtn disabled">
-                                            &lt;
-                                        </span>
-                                    {% endif %}
-                                    {% if nextpage %}
-                                    <a 
-                                        href="{{ nextpage.url }}" 
-                                        title="Next post: {{ nextpage.title }}"
-                                        class="navbtn"
-                                    >
-                                        &gt;
-                                    </a>
-                                    {% else %}
-                                        <span class="navbtn disabled">
-                                            &gt;
-                                        </span>
-                                    {% endif %}
-                            {% else %}
+                        {% endfor %}
+                    {% else %}
+                        {% assign previouspage = page.previous %}
+                        {% assign nextpage = page.next %}
+                    {% endif %}
+                    <ul>
+                    {% if previouspage or nextpage %}
+                        {% if previouspage %}
+                            <li>
+                                <a 
+                                    href="{{ previouspage.url }}" 
+                                    title="Previous post: {{ previouspage.title }}"
+                                    class="navbtn"
+                                >
+                                    &lt;
+                                </a>
+                            </li>
+                        {% else %}
+                            <li>
                                 <span class="navbtn disabled">
                                     &lt;
                                 </span>
+                            </li>
+                        {% endif %}
+                        {% if nextpage %}
+                            <li>
+                                <a 
+                                    href="{{ nextpage.url }}" 
+                                    title="Next post: {{ nextpage.title }}"
+                                    class="navbtn"
+                                >
+                                    &gt;
+                                </a>
+                            </li>
+                        {% else %}
+                            <li>
                                 <span class="navbtn disabled">
                                     &gt;
                                 </span>
-                            {% endif %}
-                        </div>
-                    </nav>
+                            </li>
+                        {% endif %}
+                    {% else %}
+                        <li>
+                            <span class="navbtn disabled">
+                                &lt;
+                            </span>
+                        </li>
+                        <li>
+                            <span class="navbtn disabled">
+                                &gt;
+                            </span>
+                        </li>
+                    {% endif %}
+                </ul>
+                </nav>
+                <article class="about">
                     {% for paragraph in site.description %}
                         <p>
                             {{ paragraph }}
                         </p>
                     {% endfor %}
                     <p>
-                        If you'd like to find out more about what Max has been upto, you can do so through the following channels:
+                        {{ site.descriptionmore }}
                     </p>
                     <ul>
-                        <li>
-                            <a href="http://github.com/omgmog" target="_blank">
-                                omgmog on GitHub
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://twitter.com/omgmog" target="_blank">
-                                @omgmog on Twitter
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://omgmog.net" target="_blank">
-                                omgmog.net
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://marmaladeandjam.co.uk" target="_blank">
-                                Marmalade &amp; Jam
-                            </a>
-                        </li>
+                        {% for site in site.sites %}
+                            <li>
+                                <a href="{{ site.link }}" target="_blank">
+                                    {{ site.text }}
+                                </a>
+                            </li>
+                        {% endfor %}
                     </ul>
-                </div>
+                </article>
             </aside>
-            <section class="viewport-wrapper">
+        </div>
+        <div class="two_third pull-right main">
+            <section class="inner">
                 {{ content }}
             </section>
         </div>
     </div>
+
     <script src="{{ site.BASE_PATH}}assets/js/rainbow.min.js"></script>
     <script src="{{ site.BASE_PATH}}assets/js/rainbow.generic.js"></script>
     <script src="{{ site.BASE_PATH}}assets/js/rainbow.shell.js"></script>
