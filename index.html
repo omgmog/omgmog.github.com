@@ -2,20 +2,6 @@
 layout: layout
 title: Home
 ---
-<section class="homepage">
 {% for post in site.posts|limit:1 %}
-    <article class="article">
-        <a href="{{ post.url }}" class="article-heading-link">
-            <h2 class="article-heading">
-                {{ post.title }}
-            </h2>
-        </a>
-        <div class="article-meta">
-            {{ post.date |  date_to_long_string }}
-        </div>
-        <div class="article-body">
-            {{ post.content }}
-        </div>
-    </article>
+    {% include single_post.html %}
 {% endfor %}
-</section>
