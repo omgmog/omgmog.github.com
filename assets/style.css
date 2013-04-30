@@ -243,8 +243,6 @@ h5 {
 .article-body figure {
     line-height: 0;
     display: inline-block;
-}
-.article-body figure + figure {
     margin-top: 1em;
 }
 .article-body figure img {
