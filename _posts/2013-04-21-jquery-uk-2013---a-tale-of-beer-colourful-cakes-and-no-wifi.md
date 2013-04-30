@@ -90,6 +90,7 @@ Besides welcoming everybody, he was apologetic about the lack of wifi at the ven
 We've been assured that next year there will be wifi!
 
 ### <a href="https://twitter.com/BrendanEich" target="_blank">Brenden Eich </a> - JavaScript the future
+
 <img class="speaker" src="http://uk.omg.li/OSQ2/brendan.jpg" />
 
 Brenden talked about up and coming features of ECMAScript 6 and 7, and how a lot of commonly used JavaScript code patterns are going to be making their way into the spec as features of JavaScript.
@@ -103,6 +104,7 @@ He talked about not wanting to go in the direction of Java with bytecode, as it'
 Also: Firefox OS phones will be out soon!
 
 ### <a href="https://twitter.com/rworth" target="_blank">Richard D. Worth </a> - jQuery 1.9 and 2.0 - Present and Future
+
 <img class="speaker" src="http://uk.omg.li/OR7p/richard.jpg" />
 
 Richard talked about the core features of jQuery, the reasons that they don't bloat the core codebase with feature requests (read: they've got a plugin system dontcha' know?), and the plans for jQuery 2.0 which was just released.
@@ -144,6 +146,7 @@ People were playing Mario Kart 64, Goldeneye 64, Bomberman (SNES), Smash Bros (G
 
 ## Morning - part 2
 ### <a href="https://twitter.com/rem" target="_blank">Remy Sharp </a> - So you know jQuery. Now what?
+
 <img class="speaker" src="http://uk.omg.li/ORV0/remy.jpg" />
 
 Remy Sharp gave an interesting/controversial talk about only using jQuery when it's totally necessary, and sticking to pure JavaScript if you can. 
@@ -156,6 +159,7 @@ That sounds quite obvious, but there was a noticable eureka across the crowd whe
 - [Click here to view the slides](https://speakerdeck.com/rem/i-know-jquery-now-what)
 
 ### <a href="https://twitter.com/ajpiano" target="_blank">Adam J. Sontag </a> - jQuery is a Swiss Army knife (and that's OK!)
+
 <img class="speaker" src="http://uk.omg.li/ORlK/adam.jpg" />
 
 Placing Adam Sontag immediately after Remy was quite interesting, as his talk held a complete opposite perspective.
@@ -169,6 +173,7 @@ He also covered the dangers of using jQuery, or rather using it incorrectly, and
 - [Click here to view the slides](http://ajpiano.com/jquery-is-a-swiss-army-knife/)
 
 ### <a href="https://twitter.com/dougneiner" target="_blank">Doug Neiner </a> - Taking Control with Machina.js
+
 <img class="speaker" src="http://uk.omg.li/OSIO/doug.jpg" />
 
 Doug's talk mostly focussed around plugging <a href="https://github.com/ifandelse/machina.js" target="_blank">machina.js</a>, but I was too hungry to take extensive notes on the talk.
@@ -224,6 +229,7 @@ During the lunch break there were lightning talks going on in the main conferenc
 
 ## Afternoon - part 1
 ### <a href="https://twitter.com/garannm" target="_blank">Garann Means </a> - How to use events to glue full-stack frameworks together
+
 <img class="speaker" src="http://uk.omg.li/ORhl/garann.jpg" />
 
 Garann talked about using events and jQuery to glue your templates and front-end stuff to your models/controllers.
@@ -231,6 +237,7 @@ Garann talked about using events and jQuery to glue your templates and front-end
 - [Click here to view the slides](http://garann.com/slides/fullstack-events/#/)
 
 ### <a href="https://twitter.com/igrigorik" target="_blank">Ilya Grigorik </a> - Wait, Chrome DevTools can do THAT?
+
 <img class="speaker" src="http://uk.omg.li/OSS2/ilya.jpg" />
 
 Ilya's talk was much like Paul Irish's last year, in that it was more about Chrome than about jQuery, but that doesn't mean it wasn't good. He covered the following things:
@@ -259,6 +266,7 @@ He demonstrated how far the remote debugging for Chrome on Android has come alon
 
 ## Afternoon - part 2
 ### <a href="https://twitter.com/johnbender" target="_blank">John Bender</a> - Faster DOM manipulation with category theory and wield
+
 <img class="speaker" src="http://uk.omg.li/OQsa/john.jpg" />
 
 John's talk was focussed on optimising your use of jQuery by using category theory to group methods.
@@ -271,6 +279,7 @@ Lastly he went on to talk about Weild, `a tiny object wrapper around the DOM`. Y
 - [Click here to view the slides](http://johnbender.us/presentation-faster-js/#/)
 
 ### <a href="https://twitter.com/Joe8Bit" target="_blank">Joe Pettersson</a> - Complex clientside apps and legacy browsers (a story of frustration...)
+
 <img class="speaker" src="http://uk.omg.li/ORzu/joe.jpg" />
 
 Joe's talk was about testing across multiple browsers, and how to make the task of doing so a lot less painful. He covered manual testing using virtual machines and some CI testing using using software such as [JENKINS](http://jenkins-ci.org/) and [Selenium](http://docs.seleniumhq.org/).
@@ -280,6 +289,7 @@ The only bad thing I've got to say about Joe's talk is that he had a heavy empha
 - [Click here to view the slides](https://speakerdeck.com/joepettersson/building-for-legacy-browsers-jquery-uk-2013)
 
 ### <a href="https://twitter.com/JsonScott" target="_blank">Jason Scott</a> - Build an experience... not another framework
+
 <img class="speaker" src="http://uk.omg.li/OS1o/jason.jpg" />
 
 Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
