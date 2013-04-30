@@ -23,7 +23,9 @@
     </div>
     <div class="article-body">
         {% if post.video_url and page.url != "/archive.html" %}
-            <iframe src="{{ post.video_url }}" width="100%" height="350px"></iframe>
+            <div class="video-wrapper hd">
+                <iframe src="{{ post.video_url }}" width="100%" height="350px"> </iframe>
+            </div>
         {% endif %}
         {% if page.url == "/index.html" %}
             {{ post.content }}
