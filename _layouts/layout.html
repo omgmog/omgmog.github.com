@@ -43,7 +43,7 @@
     />
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap" id="top">
         <div class="one_third pull-left sidebar">
             <aside class="inner">
                 <h1 class="header">
@@ -69,6 +69,9 @@
                             >
                                 Archive
                             </a>
+                        </li>
+                        <li class="not-desktop">
+                            <a href="#about" class="navbtn about-toggle">?</a>
                         </li>
                     </ul>
                 </nav>
@@ -132,7 +135,7 @@
                     {% endif %}
                 </ul>
                 </nav>
-                <article class="about">
+                <article class="about" id="about">
                     {% for paragraph in site.description %}
                         <p>
                             {{ paragraph }}
@@ -150,6 +153,9 @@
                             </li>
                         {% endfor %}
                     </ul>
+                    <a class="not-desktop hide-about" href="#top">
+                        Hide this
+                    </a>
                 </article>
             </aside>
         </div>

@@ -85,6 +85,11 @@ h5 {
 .inner {
     padding: 1.1em;
 }
+.main .inner {
+    -moz-transition: padding 100ms linear;
+    -webkit-transition: padding 100ms linear;
+    transition: padding 100ms linear;
+}
 .sidebar {
     color: #bbb;
 }
@@ -101,6 +106,9 @@ h5 {
     position: relative;
     z-index: 0;
     font-size: 1em;
+    -moz-transition: margin-top 100ms linear;
+    -webkit-transition: margin-top 100ms linear;
+    transition: margin-top 100ms linear;
 }
 .sidebar .header a {
     font-family: 'lavanderia_regular';
@@ -146,6 +154,10 @@ h5 {
 }
 .posts-nav li {
     margin-left: 0.55em;
+}
+.nav-buttons li:last-child {
+    margin-right: 0;
+    margin-left: 0;
 }
 .nav-buttons .navbtn {
     background: #fff;
@@ -330,7 +342,9 @@ h5 {
 .main .archive-item:hover {
     text-decoration: none;
 }
-
+.not-desktop {
+    display: none;
+}
 @media (max-width: 1200px) and (min-width: 1020px) {
     .wrap {
         width: 100%;
@@ -341,11 +355,11 @@ h5 {
     .sidebar .header a {
         padding-left: 1.2em;
     }
-    .main .inner {
-        padding: 70px 5%;
-    }
 }
-@media (max-width: 1019px) {
+@media (max-width: 1024px) {
+    .not-desktop {
+        display: block;
+    }
     .wrap {
         width: 100%;
     }
@@ -369,11 +383,20 @@ h5 {
     .photo-me {
         margin-top: .1em;
     }
+    .nav-buttons {
+        margin-bottom: 0;
+    }
     .nav-buttons .navbtn {
-        font-size: 1em;
+        font-size: 0.8em;
     }
     .about {
-        display: none;
+        height: 0;
+        overflow: hidden;
+        position: relative;
+
+        -moz-transition: height 100ms linear;
+        -webkit-transition: height 100ms linear;
+        transition: height 100ms linear;
     }
     .main {
         float: none;
@@ -383,9 +406,20 @@ h5 {
     .main .inner {
         padding: 4em 6em;
     }
+    .about:target {
+        height: 400px;
+    }
+    .hide-about {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 }
 @media (max-width: 800px) {
     .main .inner {
         padding: 2em;
+    }
+    .about:target {
+        height: 600px;
     }
 }
