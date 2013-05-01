@@ -100,7 +100,7 @@ h5 {
     color: #fff;
 }
 .sidebar .header {
-    text-align: right;
+    text-align: center;
     padding: 0 0.6em;
     margin: 3.3em 0 1.1em;
     position: relative;
@@ -111,29 +111,22 @@ h5 {
     transition: margin-top 100ms linear;
 }
 .sidebar .header a {
-    font-family: 'lavanderia_regular';
-    text-transform: lowercase;
-    font-weight: 400;
-    font-size: 5em;
+    font-size: 1em;
     color: #fff;
     display: block;
     position: relative;
-    -moz-transform: rotate(-5deg);
-    -webkit-transform: rotate(-5deg);
-    transform: rotate(-5deg);
 }
 .photo-me {
-    width: 1em;
-    position: absolute;
-    margin: 0;
-    left: 0;
-    top: -0.25em;
+    width: 10em;
+    margin: 0 auto 2em;
+
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
-}
-.sidebar .header a:hover {
-    text-decoration: none;
+
+    -moz-box-shadow: 0 0 1.3em rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0 1.3em rgba(0,0,0,0.3);
+    box-shadow: 0 0 1.3em rgba(0,0,0,0.3);
 }
 .nav-buttons {
     position: relative;
@@ -394,19 +387,7 @@ h5 {
         max-width: 100%;
     }
     .sidebar .header {
-        margin: 1.1em 0;
-    }
-    .sidebar .header a {
-        -moz-transform: none;
-        -webkit-transform: none;
-        transform: none;
-        text-align: left;
-        float: left;
-        padding-left: 1.2em;
-        margin-top: -.1em;
-    }
-    .photo-me {
-        margin-top: .1em;
+        margin: 1em 0 0;
     }
     .nav-buttons {
         margin-bottom: 0;
