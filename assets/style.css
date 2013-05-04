@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     letter-spacing: -0.1em;
     padding: 0;
-    margin: 0;
+    margin: 1em 0;
 }
 h1 {
     font-size: 3em;
@@ -281,9 +281,10 @@ h5 {
 
 .article-body h2 {
     font-size: 1.3em;
+    line-height: 1.2;
+    letter-spacing: 0;
     border-bottom: 0.1125em solid #dadada;
     padding-bottom: 0.56em;
-    margin-bottom: 1em;
 }
 .article-body img.speaker {
     float: right;
@@ -325,14 +326,19 @@ h5 {
     border-bottom: 0.1125em solid #dadada;
 }
 .main .archive-item {
-    color: #333;
     padding-bottom: 1.1em;
     margin-bottom: 2.2em;
     border-bottom: 0.1125em solid #fafafa;
     display: block;
 }
+.main .archive-item .article-body {
+    color: #333;
+}
 .main .archive-item:hover {
     text-decoration: none;
+}
+.main .archive-item:hover .article-heading {
+    text-decoration: underline;
 }
 .not-desktop {
     display: none;
