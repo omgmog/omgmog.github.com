@@ -12,6 +12,12 @@ My digital life is so dependent on Google services that it's nice to find some c
 
 So what does the relaunch include?
 
+<div class="video-wrapper hd">
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/XkpjZ7oA_Qg?feature=player_embedded" frameborder="0"> </iframe>
+
+</div>
+
 ## One Android chat client to rule them all
 
 Previously we had Google+ Hangouts and Google Talk on Android, now we've got one single "Hangouts" app.
@@ -49,3 +55,5 @@ Find out more about [Hangouts for Google Chrome](https://chrome.google.com/webst
 Google have also brought Hangouts to iOS, which means there's finally a good "Google Talk" client available there. I don't use any iOS devices, but it does look quite nice.
 
 Find out more about [Hangouts for iOS](https://itunes.apple.com/us/app/hangouts/id643496868?mt=8)
+
+Find out more about the new [Hangouts from Google](http://www.google.com/+/learnmore/hangouts/)
