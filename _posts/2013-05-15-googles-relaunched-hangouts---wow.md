@@ -26,6 +26,10 @@ The video chat integration is really nice and works well, though I've only teste
 
 I often find myself taking photos of things at lunch and then sending them via Gmail to [my better half](http://jennybroomfield.co.uk).. but now I can do all of that from within Hangouts, which means I'm not sending a 2.5mb jpeg, and there's no break in the conversation.
 
+![](http://uk.omg.li/P1CT/share.png)
+
+One final thing worth mentioning is that there is now a share intent for Hangouts, so you can share links and things from your browser/gallery/etc. to Hangouts. That's one feature people have wanted in Google Talk for a long time.
+
 Find out more about [Hangouts on Android](https://play.google.com/store/apps/details?id=com.google.android.talk)
 
 ## Hangouts in Google Chrome, but not in the browser window
