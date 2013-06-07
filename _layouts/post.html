@@ -3,15 +3,42 @@ layout: layout
 ---
 {% assign post = page %}
 {% include single_post.html %}
-<div id="disqus_thread"></div>
+<div id="disqus_thread" class="comments"></div>
 <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'blogomgmog'; // required: replace example with your forum shortname
+    var comments = document.getElementsByClassName('comments')[0],
+        disqusLoaded=false;
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    function loadDisqus() {
+        var disqus_shortname = 'blogomgmog';
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+        disqusLoaded = true;
+    }
+    //Get the offset of an object
+    function findTop(obj) {
+        var curtop = 0;
+        if (obj.offsetParent) {
+            do {
+                curtop += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+            return curtop;
+        }
+    }
+
+    if(window.location.hash.indexOf('#comments') > 0)
+        loadDisqus();
+
+    if(comments) {
+        var commentsOffset = findTop(comments);
+
+        window.onscroll = function() {
+            if(!disqusLoaded && window.pageYOffset > commentsOffset - 1000) {
+                console.log('load comments, NOW!!');
+                loadDisqus();
+            }
+        }
+    }
 </script>
