@@ -4,12 +4,15 @@ title: "jQuery UK 2013 - A tale of beer, colourful cakes and no wifi"
 description: ""
 categories: []
 ---
-Yesterday I attended the second jQuery conference in the UK (the first being last year, which I blogged about <a href="http://blog.omgmog.net/post/jquery-uk-conference-2012/" target="_blank">here</a>). 
+
+_Now updated with videos!_
+
+Yesterday I attended the second jQuery conference in the UK (the first being last year, which I blogged about <a href="http://blog.omgmog.net/post/jquery-uk-conference-2012/" target="_blank">here</a>).
 
 I failed to get any nice pictures at the event myself, so this blog post uses a collection of crowd-sourced pictures from attendees that shared them via Twitter, Instagram and Flickr.
 
 ## The venue
-This year the conference took place at the [King's Centre in Osney Mead](http://www.kingscentre.co.uk/) - a larger venue to cater for there being twice as many attendees as last year. 
+This year the conference took place at the [King's Centre in Osney Mead](http://www.kingscentre.co.uk/) - a larger venue to cater for there being twice as many attendees as last year.
 
 The new venue was just a hop and skip away from the Oxford rail station and the Siad business school (the venue from the previous jQuery conference).
 
@@ -20,7 +23,7 @@ Last year the conference was Oxford themed, with a Radiohead inspired drawing fe
 
 <img src="http://uk.omg.li/OS4T/jquk2012.jpg" alt="jquk 2012" />
 
-This year the theme was Alice's Adventures in Wonderland. 
+This year the theme was Alice's Adventures in Wonderland.
 
 <figure>
 <img src="http://uk.omg.li/ORgb/jabberwocky.jpg" alt="Beware the Jabberwocky!" />
@@ -34,7 +37,7 @@ The route to the venue had the occasional white rabbit feet, and the venue had a
 <figure>
 <img src="http://uk.omg.li/OSC7/whiterabbit.jpg" alt="Follow the white rabbit" />
 <figcaption>
-&copy; <a href="https://twitter.com/elliott_stocks" target="_blank">Elliott Stocks</a>: 
+&copy; <a href="https://twitter.com/elliott_stocks" target="_blank">Elliott Stocks</a>:
 <a href="https://twitter.com/elliott_stocks/status/325150484967075840" target="_blank">Original</a>
 </figcaption>
 </figure>
@@ -42,7 +45,7 @@ The route to the venue had the occasional white rabbit feet, and the venue had a
 <figure>
 <img src="http://uk.omg.li/ORvM/megawocky.jpg" alt="Beware!" />
 <figcaption>
-&copy; <a href="https://twitter.com/4foot30" target="_blank">Gareth Jones</a>: 
+&copy; <a href="https://twitter.com/4foot30" target="_blank">Gareth Jones</a>:
 <a href="https://twitter.com/4foot30/status/325872540184625153/" target="_blank">Original</a>
 </figcaption>
 </figure>
@@ -52,7 +55,7 @@ The t-shirt for this years conference has the same Jabberwocky on the front.
 <figure>
 <img src="http://uk.omg.li/ORVk/t-shirt.jpg" alt="`Twas brillig, and the slithy toves Did gyre and gimble in the wabe: All mimsy were the borogoves, And the mome raths outgrabe." />
 <figcaption>
-&copy; <a href="https://twitter.com/MarianaMota" target="_blank">Mariana Mota</a>: 
+&copy; <a href="https://twitter.com/MarianaMota" target="_blank">Mariana Mota</a>:
 <a href="http://instagram.com/p/YSGRYPDROi/" target="_blank">Original</a>
 </figcaption>
 </figure>
@@ -76,14 +79,14 @@ I was a bit disappointed to find that there were no free mugs this year, given h
 
 There were a bunch of sponsor stands around the main hall, and they all had stickers, t-shirts, leaflets and things to give out.
 
-At 9:30 we all headed through to the main room to start the conference. The room was massive, but suitably sized for the number of attendants. 
+At 9:30 we all headed through to the main room to start the conference. The room was massive, but suitably sized for the number of attendants.
 
 Unfortunately I only managed to grab a seat towards the back of the room, and for the most part my view of the two projectors was either obscured by a pillar, or too far away to be able to read easily. Other than that the sound was very good.
 
 ## Morning - part 1
 ### <a href="https://twitter.com/johnwards" target="_blank">John Wards </a> - Hello!
 
-John Wards from White October introduced the conference. 
+John Wards from White October introduced the conference.
 
 Besides welcoming everybody, he was apologetic about the lack of wifi at the venue, and he explained how he had tried (but failed) to sort out a connection.
 
@@ -93,9 +96,13 @@ We've been assured that next year there will be wifi!
 
 <img class="speaker" src="http://uk.omg.li/OSQ2/brendan.jpg" />
 
+<div class="video-wrapper hd">
+    <iframe src="http://player.vimeo.com/video/66711027?color=333333" width="500" height="281" frameborder="0"> </iframe>
+</div>
+
 Brenden talked about up and coming features of ECMAScript 6 and 7, and how a lot of commonly used JavaScript code patterns are going to be making their way into the spec as features of JavaScript.
 
-He talked about some exciting things that JavaScript is being used for, such as the creation of AAA games. 
+He talked about some exciting things that JavaScript is being used for, such as the creation of AAA games.
 
 He showed a live demo of the Unreal Engine 3 that was recently ported to JavaScript using Web GL and [asm.js](http://asmjs.org/).
 
@@ -137,7 +144,7 @@ During the first break, the retro games consoles from <a href="http://www.replay
 <figure>
 <img src="http://uk.omg.li/ORkT/games.jpg" alt="Geeks and games" />
 <figcaption>
-&copy; <a href="http://twitter.com/imunro" target="_blank">Ian Munro</a>: 
+&copy; <a href="http://twitter.com/imunro" target="_blank">Ian Munro</a>:
 <a href="https://twitter.com/imunro/status/325234919066464256" target="_blank">Original</a>
 </figcaption>
 </figure>
@@ -149,7 +156,11 @@ People were playing Mario Kart 64, Goldeneye 64, Bomberman (SNES), Smash Bros (G
 
 <img class="speaker" src="http://uk.omg.li/ORV0/remy.jpg" />
 
-Remy Sharp gave an interesting/controversial talk about only using jQuery when it's totally necessary, and sticking to pure JavaScript if you can. 
+<div class="video-wrapper hd">
+    <iframe src="http://player.vimeo.com/video/68009123?color=333333" width="500" height="281" frameborder="0"> </iframe>
+</div>
+
+Remy Sharp gave an interesting/controversial talk about only using jQuery when it's totally necessary, and sticking to pure JavaScript if you can.
 
 He demonstrated some great examples of how to achieve some of the core functionality of jQuery with simple JavaScript snippets.
 
@@ -166,7 +177,7 @@ Placing Adam Sontag immediately after Remy was quite interesting, as his talk he
 
 He talked about the good reasons to use jQuery, such as obscuring away complicated cross-platform quirks in JavaScript.
 
-He talked about jQuery just being a tool (or a multitool, pen-knife, etc.). You could use it to help with parts of building your website, but it can't do everything. 
+He talked about jQuery just being a tool (or a multitool, pen-knife, etc.). You could use it to help with parts of building your website, but it can't do everything.
 
 He also covered the dangers of using jQuery, or rather using it incorrectly, and provided some nice tips on how to use jQuery correctly with examples.
 
@@ -175,6 +186,10 @@ He also covered the dangers of using jQuery, or rather using it incorrectly, and
 ### <a href="https://twitter.com/dougneiner" target="_blank">Doug Neiner </a> - Taking Control with Machina.js
 
 <img class="speaker" src="http://uk.omg.li/OSIO/doug.jpg" />
+
+<div class="video-wrapper hd">
+    <iframe src="http://player.vimeo.com/video/67473899?color=333333" width="500" height="281" frameborder="0"> </iframe>
+</div>
 
 Doug's talk mostly focussed around plugging <a href="https://github.com/ifandelse/machina.js" target="_blank">machina.js</a>, but I was too hungry to take extensive notes on the talk.
 
@@ -192,7 +207,7 @@ This month White October are celebrating their 10th birthday. To celebrate they 
 <figure>
 <img src="http://uk.omg.li/OSMC/wocake.jpg" alt="The cake is not a lie!" />
 <figcaption>
-&copy; <a href="http://twitter.com/whiteoctober" target="_blank">White October</a>: 
+&copy; <a href="http://twitter.com/whiteoctober" target="_blank">White October</a>:
 <a href="https://twitter.com/WhiteOctober/status/325187539998748673" target="_blank">Original</a>
 </figcaption>
 </figure>
@@ -208,22 +223,22 @@ During the lunch break there were lightning talks going on in the main conferenc
   * **slides**: [http://www.slideshare.net/oncletom/the-promise-of-j-query-deferred](http://www.slideshare.net/oncletom/the-promise-of-j-query-deferred)
   * **twitter**: [@oncletom](https://twitter.com/oncletom)
   * **website**: [http://cyneticmonkey.com/](http://cyneticmonkey.com/)
-    
+
 - Ben Foxall - Sharing data between browser windows
 
   * **slides**: [http://benjaminbenben.com/win-win.pdf](http://benjaminbenben.com/win-win.pdf)
   * **twitter**: [@benjaminbenben](https://twitter.com/benjaminbenben)
   * **website**: [http://benjaminbenben.com/](http://benjaminbenben.com/)
-    
+
 - Ashley Nolan - Responsive design interaction patterns
 
   * **twitter**: [@dragongraphics](https://twitter.com/dragongraphics)
   * **website**: [http://www.dragongraphics.co.uk/](http://www.dragongraphics.co.uk/)
-    
+
 - Ray Bellis - Wrapping up IndexedDB in a promise based interface as a jQuery plugin
 
   * **twitter**: [@raybellis](https://twitter.com/raybellis)
-    
+
 - James Turner - How to build enterprise-scale web apps
 
 
@@ -240,6 +255,10 @@ Garann talked about using events and jQuery to glue your templates and front-end
 
 <img class="speaker" src="http://uk.omg.li/OSS2/ilya.jpg" />
 
+<div class="video-wrapper hd">
+    <iframe src="http://player.vimeo.com/video/67330007?color=333333" width="500" height="281" frameborder="0"> </iframe>
+</div>
+
 Ilya's talk was much like Paul Irish's last year, in that it was more about Chrome than about jQuery, but that doesn't mean it wasn't good. He covered the following things:
 
 - Remote debugging capabilities (debug your mobile apps on your desktop)
@@ -248,7 +267,7 @@ Ilya's talk was much like Paul Irish's last year, in that it was more about Chro
 - Built-in network monitoring tools: monitor at socket level
 - SourceMaps, pretty print, revision control and autosave
 - Data export and import: HAR, timeline, snapshots
-- Custom extensions, customisable stylesheets, and much more...    
+- Custom extensions, customisable stylesheets, and much more...
 
 He demonstrated how far the remote debugging for Chrome on Android has come along, and some neat ways to use the developer tools.
 
@@ -259,7 +278,7 @@ He demonstrated how far the remote debugging for Chrome on Android has come alon
 <figure>
 <img src="http://uk.omg.li/ORtP/teaparty.jpg" alt="Delicious jam tarts!" />
 <figcaption>
-&copy; <a href="http://twitter.com/bseymour" target="_blank">Ben Seymour</a>: 
+&copy; <a href="http://twitter.com/bseymour" target="_blank">Ben Seymour</a>:
 <a href="http://www.flickr.com/photos/boseymour/8663064455/in/set-72157633280442945/" target="_blank">Original</a>
 </figcaption>
 </figure>
@@ -292,6 +311,10 @@ The only bad thing I've got to say about Joe's talk is that he had a heavy empha
 
 <img class="speaker" src="http://uk.omg.li/OS1o/jason.jpg" />
 
+<div class="video-wrapper hd">
+    <iframe src="http://player.vimeo.com/video/67473673?color=333333" width="500" height="281" frameborder="0"> </iframe>
+</div>
+
 Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
 
 - [Click here to view the slides](https://docs.google.com/presentation/d/19xrnU6cpyvOus0CYUnb7W7uxz_hl6Dqw-6BOxsVMn2s/edit#slide=id.p20)
@@ -311,7 +334,7 @@ There were 7 beers to have, each from either the [Compass brewery](http://compas
 <figure>
 <img src="http://uk.omg.li/OSUP/jbeery.jpg" alt="Drink me!" />
 <figcaption>
-&copy; <a href="http://twitter.com/beckyjtweets" target="_blank">Becky Jennings</a>: 
+&copy; <a href="http://twitter.com/beckyjtweets" target="_blank">Becky Jennings</a>:
 <a href="http://instagram.com/p/YSgYIew29f/" target="_blank">Original</a>
 </figcaption>
 </figure>
