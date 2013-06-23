@@ -1,0 +1,25 @@
+---
+layout: none
+---
+{
+    "encoding": "UTF-8",
+    "version": "1.0",
+    "title": "{{ site.name }}",
+    "description": "{{ site.description }}",
+    "link": "{{ site.url }}",
+    "updated":"{% for post in site.posts limit:1 %}{{ post.date }}{% endfor %}",
+    "author": "{{ site.author }}",
+    "entry": [
+    {% for post in site.posts limit:10 %}
+        {
+            "id": "{{ post.id }}",
+            "published": "{{ post.date }}",
+            "title": "{{ post.title }}",
+            "content": "{{ post.content | uri_escape }}",
+            "summary": "{{ post.content | strip_html | truncate:300 | uri_escape }}",
+            "link": "{{ site.url }}{{ post.url }}",
+            "author": "{{ site.author }}"
+        }{% if forloop.last %}{% else %},{% endif %}
+    {% endfor %}
+    ]
+}
