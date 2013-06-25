@@ -14,12 +14,12 @@ layout: none
         {
             "id": "{{ post.id }}",
             "published": "{{ post.date }}",
-            "title": "{{ post.title }}",
-            "content": "{{ post.content | uri_escape }}",
-            "summary": "{{ post.content | strip_html | truncate:300 | uri_escape }}",
+            "title": "{{ post.title | escape }}",
+            "summary": "{{ post.content | strip_newlines | strip_html | escape | truncate:300 }}",
             "link": "{{ site.url }}{{ post.url }}",
             "author": "{{ site.author }}"
-        }{% if forloop.last %}{% else %},{% endif %}
+        }
+        {% if forloop.last %}{% else %},{% endif %}
     {% endfor %}
     ]
 }
