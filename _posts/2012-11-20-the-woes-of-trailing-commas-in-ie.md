@@ -5,7 +5,7 @@ tags: ["sublime text", "software", "javascript", "jquery", "internet explorer", 
 ---
 If you leave a trailing comma in your JavaScript code, you're a terrible person. It's right up there with [omitting semicolons](https://github.com/twitter/bootstrap/issues/3057) as far as I'm concerned.
 
-While fixing some issues on a site in IE7 recently, I was greeted by the familiarly unhelpful error message from Internet Explorer 7 that prompted me to write this. You can see an example below: 
+While fixing some issues on a site in IE7 recently, I was greeted by the familiarly unhelpful error message from Internet Explorer 7 that prompted me to write this. You can see an example below:
 
 ![A really helpful error message in IE](http://uk.omg.li/L1VJ/by-default-2012-11-20-at-16.27.28.png)
 
@@ -29,9 +29,9 @@ If you had any consideration you would write something more like:
 
 tasty.
 
-You can prevent this problem occuring by using a [linter](http://www.jslint.com/), or you can retroactively go and find the problem-causing lines in your JavaScript using a `RegEx` pattern such as the following: 
+You can prevent this problem occuring by using a [linter](http://www.jslint.com/), or you can retroactively go and find the problem-causing lines in your JavaScript using a `RegEx` pattern such as the following:
 
-<pre><code data-language="javascript">,[\s\n]*[^\[{\w\n\s/\*\"]</code></pre>
+<pre><code data-language="javascript">,[\s\n]*[^\[\{\w\n\s/\*\"\'\$\#\.\`\:\|\!]</code></pre>
 
 Though this is valid according to ECMAScript 5, it's another one of those bodged features in Internet Explorer that happens to behave unlike every other browser, so I think it's best to go for the solution that works for everybody.
 
