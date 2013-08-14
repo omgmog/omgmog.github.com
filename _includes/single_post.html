@@ -6,11 +6,15 @@
     {% else %}
         {% capture post_Y %}{{ post.date | date:"%Y" }}{% endcapture %}
         {% capture now_Y %}{{ site.time | date:"%Y" }}{% endcapture %}
+        {% capture updated_Y %}{{ post.updated | date:"%Y" }}{% endcapture %}
         {% if post_Y < now_Y %}
             <div class="warning-message">
                 <p>
-                    <strong>This is an old post!</strong><br />
-                    It might be a good idea to check the <a href="/archive.html">Archive</a> to see if I've posted a revision to this post or subject.
+                    {% if updated_Y > post_Y %}
+                        This post was updated on {{ post.updated | date:"%d %B %Y" }}.
+                    {% else %}
+                        It might be a good idea to check the <a href="/archive.html">Archive</a> to see if I've posted a revision to this post or subject.
+                    {% endif %}
                 </p>
             </div>
         {% endif %}
@@ -37,7 +41,7 @@
             {{ post.content }}
         {% else %}
             {% if page.url == "/archive.html" %}
-                {{ post.content | strip_html | truncate:300 }} 
+                {{ post.content | strip_html | truncate:300 }}
                 {% if post.content | size > 300 %}
                     <strong>Read more</strong>
                 {% endif %}
