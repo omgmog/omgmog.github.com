@@ -40,7 +40,7 @@ h5{font-size:1;text-transform:uppercase;}
 .nav-buttons .navbtn:active{background-color:#bbb;}
 .navbtn.disabled{opacity:0.5;cursor:not-allowed;}
 .about{clear:both;}
-.main{background:#fff;color:#333;}
+.main{background:#fff;color:#333;min-height:100%;}
 .main .inner{padding:4em 8em;}
 .warning-message{background:#eee;color:#555;padding:0.55em;max-width:35em;margin-bottom:1.1em;border:0.1125em solid #cacaca;font-family:Helvetica, Arial, sans-serif;}
 .warning-message p{margin:0;font-size:0.66em;}
