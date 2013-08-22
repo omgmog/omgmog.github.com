@@ -1,6 +1,7 @@
 auto: true
 safe: true
 debug: false
+future: false
 permalink: /post/:title
 exclude: ["rakefile", "_config.yml", "addpost.sh", "addpage.sh", ".gitignore"]
 BASE_PATH: "/"
