@@ -6,6 +6,8 @@ categories: []
 ---
 If you're a returning visitor to __blomg__ you might notice some changes to the design.
 
+<!-- more -->
+
 The juicy technical details are:
 - It contains __no jQuery__
 - It doesn't use `px` for any of the units of size

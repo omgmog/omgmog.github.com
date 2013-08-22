@@ -5,6 +5,8 @@ tags: ["downloads", "geekery", "mac", "software"]
 ---
 I came across this awesome application today, it sets your wallpaper to a satellite view of your current location. The application features a number of rendering mode, and full support for multiple monitors.
 
+<!-- more -->
+
 <a href="http://uk.omg.li/HWGj" target="_blank">
     <img src="http://f.cl.ly/items/121K3s21313o0f270S1l/ss_preview.png" alt="Click for a huge screenshot" />
 </a>

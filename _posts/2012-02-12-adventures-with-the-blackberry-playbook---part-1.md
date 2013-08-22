@@ -5,13 +5,15 @@ tags: ["geekery", "gadgets", "software", "hardware", "projects", "blog", "consum
 ---
 I recently acquired a Blackberry Playbook, while [attending the jQuery UK conference](/post/jquery-uk-conference-2012/). Having owned a couple of tablets in the past two years (including an [Archos 101it](http://www.archos.com/products/ta/archos_101it/specs.html?country=us&lang=en) and more recently a [HP Touchpad](http://h41112.www4.hp.com/promo/webos/uk/en/tablet/touchpad.html)), I was interested in seeing what RIM have brought to the table, and how the Blackberry OS differs from Android and WebOS.
 
+<!-- more -->
+
 I found the Archos 101it to not be a nice tablet -- or rather, it provided the most basic Android support, with very little room for improvement by custom ROM makers. Add to this the fact that the hardware wasn't very good, with a terrible touch screen, a really flimsy kick stand and a badly earthed power connection (instead of using the already present micro-USB port), and the slightly-higher-than-justifiable price point -- the whole experience was terrible, and it's easy to see why these early Android tablets had a hard time breaking the market.
 
 The HP Touchpad on the other hand has been a nice one. I had the fortune of picking my 32gb HP Touchpad up during the firesale, while most people I know struggled to get hold of one. I wasn't particularly looking for a tablet at the time, but the HP Touchpad soon proved to be useful as an on-the-go internet device while I holidayed in Prague and Vienna last September.
 
-The HP Touchpad comes with WebOS as its platform of choice, which was perfectly fine for me while I didn't have the time to play around with hacking the HP Touchpad, but when I found myself with some free time I started looking to install Android on the tablet. It's fairly straight forward to load Android on the HP Touchpad, both version 2.3 (Gingerbread) and more recently 4.0 (Ice Cream Sandwich). 
+The HP Touchpad comes with WebOS as its platform of choice, which was perfectly fine for me while I didn't have the time to play around with hacking the HP Touchpad, but when I found myself with some free time I started looking to install Android on the tablet. It's fairly straight forward to load Android on the HP Touchpad, both version 2.3 (Gingerbread) and more recently 4.0 (Ice Cream Sandwich).
 
-Now, to the Blackberry Playbook. It would seem this poor tablet is in a tough place -- with Blackberry being renowned for their physical-keyboard driven phones (in my opinion paling in comparison to Android + touchscreen), another contender into the smart-devices market would mean for most people that they've got to manage their app purchases for three or more platforms, with three or more different accounts. 
+Now, to the Blackberry Playbook. It would seem this poor tablet is in a tough place -- with Blackberry being renowned for their physical-keyboard driven phones (in my opinion paling in comparison to Android + touchscreen), another contender into the smart-devices market would mean for most people that they've got to manage their app purchases for three or more platforms, with three or more different accounts.
 
 Having already abandoned my iOS purchases in 2010 (after ditching my iPod Touch), and switching religiously over to Android (for my HTC Desire and momentarily the Archos 101it), with a slight glance in to the world of the WebOS purchases, I'm not prepared to further fragment my purchases by buying apps on the Blackberry 'App World'.
 

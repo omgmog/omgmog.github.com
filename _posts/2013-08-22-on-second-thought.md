@@ -4,6 +4,8 @@ title: "On second thought..."
 ---
 ... Google Hangouts for Chrome needs some work.
 
+<!-- more -->
+
 ![](http://uk.omg.li/QxkE/by%20default%202013-08-22%20at%2011.45.38.png)
 
 ### Problems

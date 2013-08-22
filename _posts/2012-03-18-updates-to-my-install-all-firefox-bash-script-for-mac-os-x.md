@@ -5,6 +5,8 @@ tags: ["mac", "shell", "firefox", "geekery", "software", "projects", "github", "
 ---
 I wrote briefly about my [install-all-firefox shell script](http://blog.omgmog.net/post/13592744529/) back in December last year. Since then the script has received a complete rewrite, and some new features.
 
+<!-- more -->
+
 The features of the script at the moment are as follows:
 
 - checks for latest version of script when launched
@@ -25,7 +27,7 @@ This will download the `firefoxes.sh` launcher part of the script so that you ca
 ## version
 The `version` argument is any of the versions mentioned below (see the [github repo](https://github.com/omgmog/install-all-firefox) for the latest list of supported versions):
 
-<pre><code data-language="generic">2.0.0.20, 3.0.19, 3.5.9, 3.6.28, 4.0.1, 5.0.1, 6.0.1, 7.0.1, 8.0.1, 
+<pre><code data-language="generic">2.0.0.20, 3.0.19, 3.5.9, 3.6.28, 4.0.1, 5.0.1, 6.0.1, 7.0.1, 8.0.1,
 9.0.1, 10.0.2, 11.0, beta, aurora, nightly, ux</code></pre>
 
 Besides these versions, the script support some additional keywords to install sets of versions, these are below:
@@ -36,7 +38,7 @@ Besides these versions, the script support some additional keywords to install s
 The `locale` argument is any of the locales mentioned below:
 
 <pre><code data-language="generic">af, ar, be , bg, ca, cs, da, de, el, en-GB, en-US, es-AR, es-ES, eu, fi,
-fr, fy-NL, ga-IE, he, hu, it, ja-JP-mac, ko, ku, lt, mk, mn, nb-NO, nl, 
+fr, fy-NL, ga-IE, he, hu, it, ja-JP-mac, ko, ku, lt, mk, mn, nb-NO, nl,
 nn-NO, pa-IN, pl, pt-BR, pt-PT, ro, ru, sk, sl, sv-SE, tr, uk, zh-CN, zh-TW</code></pre>
 
 

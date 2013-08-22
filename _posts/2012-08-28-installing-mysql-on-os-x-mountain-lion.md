@@ -5,11 +5,13 @@ tags: ["geekery", "incoming", "mac", "projects", "shell", "software"]
 ---
 I was having some issues getting MySQL installed on OS X 10.8 Mountain Lion, and then I came across [a useful article](http://madebyhoundstooth.com/blog/install-mysql-on-mountain-lion-with-homebrew/) describing how to do it.
 
+<!-- more -->
+
 Here's the important information from the article to install MySQL on OS X 10.8 Mountain Lion using Homebrew:
 
 1. [Install Homebrew](http://mxcl.github.com/homebrew/#selectable)
     <pre><code data-language="shell">$ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"</code></pre>
-    
+
 2. Install MySQL using Homebrew
     <pre><code data-language="shell">$ brew install mysql</code></pre>
 

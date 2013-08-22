@@ -5,6 +5,8 @@ tags: ["javascript", "jquery", "geekery", "gadgets", "software", "hardware", "pr
 ---
 Yesterday I attended the first [European jQuery conference](http://events.jquery.org/2012/uk/), which was hosted here in Oxford at the Saïd Business School. This was the first big conference I've been to (though I've attended a couple of local 'Geek nights' and 'design jams').
 
+<!-- more -->
+
 Upon arriving and collecting my pass, I received a goodie bag, which included:
 
 - 1 White October Coffeescript mug (more on this later)

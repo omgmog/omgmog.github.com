@@ -5,6 +5,8 @@ tags: ["android", "consumerism", "chrome", "dropbox", "gadgets", "hardware", "so
 ---
 I've been putting this post off, and it has been hard. I usually like to declare my love for a new gadget just moments or hours after unboxing it; I've had a lot of tablets over the past couple of years that I've done that with, only to later change my mind, so I thought I'd use the Nexus 7 for a little while and then splooge about how much I love it, here on my blog.
 
+<!-- more -->
+
 First of all: Oh man, oh boy, oh wow, oh geez. [What a nice tablet](http://www.google.co.uk/nexus/#/7)!
 
 Now that that's out of the way, I'm sure that anybody finding their way to my blog, be it through social channels or key words on Google, has read enough Nexus 7 reviews since it launched, so I'm going to breeze through the details of the Nexus 7:
@@ -14,7 +16,7 @@ Now that that's out of the way, I'm sure that anybody finding their way to my bl
 - **Display:** 7" IPS, 1280x800, 216ppi
 - **CPU:** Quad-core Tegra 3
 - **Memory:** 1GB ram, 8GB storage, no external SD slot
-- **Other stuff:** Bluetooth, Wifi, 1.2mp front-facing camera, GPS, NFC, 
+- **Other stuff:** Bluetooth, Wifi, 1.2mp front-facing camera, GPS, NFC,
 - **Android Version:** Android 4.1 Jellybean
 - **Price:** 8GB £159, 16GB £199
 
@@ -28,9 +30,9 @@ The Nexus 7 comes with the newest version of Android - Jellybean - which isn't a
 - Chrome comes as the default browser
 - Gmail has been improved for tablets
 
-## Hardware 
+## Hardware
 
-I find the 7" form-factor to be great, and the weight of the Nexus 7 is really good too. 
+I find the 7" form-factor to be great, and the weight of the Nexus 7 is really good too.
 
 I've bought a couple of accessories to use with the Nexus 7, all of which were very cheap and have been really useful:
 
@@ -41,7 +43,7 @@ I've bought a couple of accessories to use with the Nexus 7, all of which were v
 
 ## Software
 
-Being a long-time Android user, I've already got a whole library of applications that I like to use on Samsung Galaxy S2. All of the applications I'm able to install most of the applications I've previously bought on my Nexus 7. 
+Being a long-time Android user, I've already got a whole library of applications that I like to use on Samsung Galaxy S2. All of the applications I'm able to install most of the applications I've previously bought on my Nexus 7.
 I find myself using the Nexus 7 to consume information more than anything. Here are some apps that I use for that:
 
 - 8Tracks - [Play Store Link](https://play.google.com/store/apps/details?id=com.e8tracks)

@@ -6,6 +6,8 @@ updated: 2013-08-14
 ---
 Scrolling on the web is something that we take for granted when thinking about how users will interact with our website. There are two schools of thought on the subject: one that’s ingrained in how we interact with what we’re seeing on our screen, and the other ingrained in how we interact with the real world.
 
+<!-- more -->
+
 ![](http://uk.omg.li/QpXf/Image%202013.08.14%2016%3A09%3A33.jpeg)
 
 While you’re reading this article, if you’re using a standard computer with a mouse that has a scroll wheel, you’re probably scrolling down to read more of the article. Don’t you find it odd that in order to move the page upwards, you’re scrolling downwards? This is even more apparent if you’re using a laptop with a trackpad, where you move your finger in a downward motion to move the page upward.

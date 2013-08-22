@@ -5,6 +5,8 @@ tags: ["blog", "geekery", "usability"]
 ---
 Recently it was pointed out to me that [Pizza Express](http://www.pizzaexpress.com/) provide a nice fallback for photos on their picture-heavy emails. Take the following example, from a promotional email they sent out earlier this year:
 
+<!-- more -->
+
 ![High-quality curves](http://f.cl.ly/items/413Q173i2E1P3i3A0I1d/Screen%20Shot%202012-05-07%20at%2012.27.19.png)
 
 And the same email with images disabled:
@@ -13,7 +15,7 @@ And the same email with images disabled:
 
 And here's another example:
 
-![with images](http://f.cl.ly/items/2u0u2p3F073s3O0O1i26/Screen%20Shot%202012-05-07%20at%2014.32.25.png) 
+![with images](http://f.cl.ly/items/2u0u2p3F073s3O0O1i26/Screen%20Shot%202012-05-07%20at%2014.32.25.png)
 
 ![sans-images](http://f.cl.ly/items/0Y3B1s1E071K3P0Z3H0k/Screen%20Shot%202012-05-07%20at%2014.31.28.png)
 

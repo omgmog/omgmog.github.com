@@ -7,22 +7,24 @@ tags: ["jekyll", "geekery", "software", "projects", "blog", "github"]
 
 Jekyll, as it turns out, is a really nice <s>blogging platform</s> static site generator. One of the nice things about it is the flexibility. In my current Jekyll set up I've added metadata to the [YAML](http://www.yaml.org/) for posts, so that I can optionally define a post cover (or image, if you'd prefer) and a width for the cover.
 
+<!-- more -->
+
 This can be done easily enough by simply adding new lines to the YAML block at the top of your markdown. The default YAML block is as follows:
 
 <pre><code data-language="generic">---
 layout: post
-title: 
-categories: 
-tags: 
+title:
+categories:
+tags:
 ---</code></pre>
 
 To add your own, you just need to create a <code>key: value</code> line in the block as follows:
 
 <pre><code data-language="generic">---
 layout: post
-title: 
-categories: 
-tags: 
+title:
+categories:
+tags:
 cover: http://path/to/image.png
 cover_width: 520px
 ---</code></pre>

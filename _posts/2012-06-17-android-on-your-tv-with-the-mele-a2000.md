@@ -3,11 +3,13 @@ layout: post
 title: "Android on your TV with the Mele A2000"
 tags: ["android", "consumerism", "gadgets", "geekery", "hardware"]
 ---
-I decided to buy an Android-powered set top box because my Apple TV 1 didn't cut it for playing HD media, and I find it inconvenient to hook my MacBook up to the TV everytime I want to watch some HD media. 
+I decided to buy an Android-powered set top box because my Apple TV 1 didn't cut it for playing HD media, and I find it inconvenient to hook my MacBook up to the TV everytime I want to watch some HD media.
+
+<!-- more -->
 
 ![Picture of Mele A2000](http://f.cl.ly/items/0h3x3q0d1x1X2r0T2D0E/MELE-A2000-7.jpg)
 
-I came across the Mele A2000 on DealExtreme - it's a cheap yet powerful Android box that can play 1080p video without any problem and has access to the Google Play Store. 
+I came across the Mele A2000 on DealExtreme - it's a cheap yet powerful Android box that can play 1080p video without any problem and has access to the Google Play Store.
 
 The specs are as follows:
 
@@ -24,7 +26,7 @@ The specs are as follows:
 
 From the spec, you can see that this is pretty much a small computer, for less than £60 [over at DealExtreme](http://www.dealextreme.com/p/mele-a2000-1080p-android-2-3-network-multi-media-player-w-sata-usb-hdmi-lan-vga-wifi-4gb-131566?item=6).
 
-I expected that the remote would suck so I also ordered a wireless keyboard/trackpad from DealExtreme when I ordered the Mele A2000. Any of the "2.4ghz" keyboard/trackpads that come with a USB dongle should work just fine with the A2000. 
+I expected that the remote would suck so I also ordered a wireless keyboard/trackpad from DealExtreme when I ordered the Mele A2000. Any of the "2.4ghz" keyboard/trackpads that come with a USB dongle should work just fine with the A2000.
 
 ![Wireless keyboard](http://f.cl.ly/items/3I1434140k283z44170z/wireless-rii-mini-keyboard-touchpad-mouse-for-pc-laptop.jpg)
 
@@ -32,9 +34,9 @@ Additionally, Mele also make a "[F10 Air Mouse](http://www.dealextreme.com/p/mel
 
 ![Mele F10 Air Mouse](http://f.cl.ly/items/3b2A301y2p30462P0V1R/Mele-F10-Seneor-Remote-Fly-air-mouse-wilress-mouse-remote-control.jpg)
 
-After a small amount of fiddling (changing the language from Chinese to English, connecting to my home Wifi, changing the output to 1080p) I got the A2000 up and running nicely, and it worked with most files that I threw at it. 
+After a small amount of fiddling (changing the language from Chinese to English, connecting to my home Wifi, changing the output to 1080p) I got the A2000 up and running nicely, and it worked with most files that I threw at it.
 
-The Mele A2000 comes bundled with a bunch of applications, though mostly Chinese, these include some (questionable) video/music streaming applications, and some well know apps such as Tunein Radio. I installed the Android Netflix client from the Play Store, and though it worked well the controls are a bit unintuitative with the bundled remote control. Because it streams at mobile quality, video streams don't look great on a large HDTV. 
+The Mele A2000 comes bundled with a bunch of applications, though mostly Chinese, these include some (questionable) video/music streaming applications, and some well know apps such as Tunein Radio. I installed the Android Netflix client from the Play Store, and though it worked well the controls are a bit unintuitative with the bundled remote control. Because it streams at mobile quality, video streams don't look great on a large HDTV.
 
 The Mele A2000 is a nice piece of hardware, it does what I expected it to do, and for the price it's surprisingly high quality.
 

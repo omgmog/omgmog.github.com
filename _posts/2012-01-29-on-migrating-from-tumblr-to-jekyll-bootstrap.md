@@ -5,6 +5,8 @@ tags: ["jekyll", "tumblr", "geekery", "software", "projects", "blog", "github"]
 ---
 I've been toying with the idea of moving away from [Tumblr](http://www.tumblr.com) for a long time now, having had my own share of problems with [Tumblr](http://www.tumblr.com) downtime.
 
+<!-- more -->
+
 I had made some steps into switching from [Tumblr](http://www.tumblr.com) to Octopress, but the steps to deploy [Octopress](http://octopress.org) meant that I had to compile all of my pages each time I made a change, and then deploy them using <code>rsync</code>.
 
 I'm now using [Jekyll Bootstrap](http://jekyllbootstrap.com/), hosted by [GitHub](http://www.github.com). The steps to deploy are much easier, I just create a new markdown file for a post or page, write content using my text editor, and then deploy to [GitHub](http://www.github.com) using <code>git</code>.

@@ -5,6 +5,8 @@ title: "Factory resetting a Nokia N900 from Mac OS X Mountain Lion"
 
 I had a Nokia N900 when they first came out, this was unfortunately shortly before Android had matured to a usable state, and so I didn't use my Nokia N900 for long.
 
+<!-- more -->
+
 It was an interesting device though, running Maemo, a derivative of Debian linux, it was pretty much a portable Linux computer with a full slide-out QWERTY keyboard.
 
 The N900 promised to be a lot better than it was, and the following video made it look like a really nice device:

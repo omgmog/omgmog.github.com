@@ -11,6 +11,8 @@ First we need a couple of things:
 2. The embed code for the video
 3. A Jekyll theme that supports video embedding
 
+<!-- more -->
+
 The first two things are easy enough to produce. The third thing is a bit more complicated, but hopefully after reading this post you'll have integrated YouTube videos in your Jekyll blog in no time.
 
 ## Working with the YouTube embed code
@@ -18,11 +20,11 @@ The first two things are easy enough to produce. The third thing is a bit more c
 The embed code YouTube gives you contains most of the bits we need, here is an example from the video above:
 
 
-<pre><code data-language="html">&lt;iframe 
-    width="560" 
-    height="315" 
-    src="http://www.youtube.com/embed/fyY9tb8Rvlk" 
-    frameborder="0" 
+<pre><code data-language="html">&lt;iframe
+    width="560"
+    height="315"
+    src="http://www.youtube.com/embed/fyY9tb8Rvlk"
+    frameborder="0"
     allowfullscreen>&lt;/iframe></code></pre>
 
 
@@ -51,10 +53,10 @@ Now, within our page template we will have access to the `page.video_url` proper
 
 <pre><code data-language="generic">{{ "{% if page.video_url "}}%}
     &lt;div class="less-fancy-video-header">
-      &lt;iframe 
-        class="yt-embed" 
-        src="{{ "{{ page.video_url "}}}}?&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;wmode=transparent" 
-        frameborder="0" 
+      &lt;iframe
+        class="yt-embed"
+        src="{{ "{{ page.video_url "}}}}?&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;wmode=transparent"
+        frameborder="0"
         allowfullscreen="true"
         >&lt;/iframe>
     &lt;/div>
