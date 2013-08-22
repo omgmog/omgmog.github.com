@@ -10,6 +10,8 @@ The long-speculated consolidation of Google Talk, Google+ Hangouts, and Google V
 
 My digital life is so dependent on Google services that it's nice to find some cross-platform consolidation.
 
+<!-- more -->
+
 So what does the relaunch include?
 
 <div class="video-wrapper hd">

@@ -6,6 +6,8 @@ Recently I came across an interesting problem, fluidly scaling iframe/embed code
 
 The problem surfaced because I was using a fluid width and a fixed height for my video embed, and so at some screen sizes the video would look fine, and at others it would have some black banding at the edges.
 
+<!-- more -->
+
 ![](http://uk.omg.li/NaZt/by%20default%202013-03-15%20at%2015.52.00.png)
 
 Not very good. So a solution was needed.
@@ -27,7 +29,7 @@ Here's an example:
 
     /* 100% width, so it scales */
     width: 100%;
-    
+
     /* and this is where the magic happens */
     height: 0;
     padding-bottom: 56.25%; /* a magic number! */
@@ -84,9 +86,9 @@ Taking it one step further, to make this easily reusable, you could create class
 And then you'd use the following `HTML`, the only adjustment from the code that YouTube provide is that I've wrapped it in a div, and removed the width/height properties (though it should work fine if you leave them as-is, because the CSS will override them)
 
 <pre><code data-language="html">&lt;div class="embedded-video-wrapper hd">
-    &lt;iframe 
-        src="http://www.youtube.com/embed/xEhaVhta7sI" 
-        frameborder="0" 
+    &lt;iframe
+        src="http://www.youtube.com/embed/xEhaVhta7sI"
+        frameborder="0"
         allowfullscreen
     >&lt;/iframe>
 &lt;/div></code></pre>

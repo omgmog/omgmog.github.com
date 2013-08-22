@@ -5,9 +5,11 @@ tags: ["downloads", "geekery", "software", "design"]
 ---
 I rarely get excited about heavily stylised fonts, but for this I'll make an exception. Typogami is a multi-layer font -- so it's not exactly practical for every day use, but great for use in creating graphics/videos.
 
+<!-- more -->
+
 The font is made up of three "layers", these are "Frontside", "Shadow", and "Backside". Here's how you would use them.
 
-In Photoshop you're going to want a layer of text for each layer of the font, here you can see the "Frontside" in red, "Shadow" in green and "Backside" in blue: 
+In Photoshop you're going to want a layer of text for each layer of the font, here you can see the "Frontside" in red, "Shadow" in green and "Backside" in blue:
 
 ![](http://uk.omg.li/KdNd/typogami_layers.png)
 

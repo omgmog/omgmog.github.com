@@ -5,6 +5,8 @@ tags: ["android", "blog", "gadgets", "geekery", "software", "mac", "shell", "sof
 ---
 Last week, a Ubuntu native installer for the Nexus 7 was released, along with [instructions on how to install Ubuntu on the Nexus 7](https://wiki.ubuntu.com/Nexus7/Installation). The plan is that the Nexus 7 will be the 'core' device that Canonical will build their tablet version of Ubuntu around. Right now, it's quite experimental -- the interface sees no tweaks for the tablet interface, beyond having an onscreen keyboard available.
 
+<!-- more -->
+
 The installation instructions I mentioned earlier are explicitly for installing Ubuntu on your Nexus 7 from an existing Ubuntu 12.10 install on your computer. Now, I don't have any Ubuntu installations kicking around, so I can't vouch for how well this process works, but there are plenty of [videos]() [around]() [the internet]().
 
 The installer just uses `fastboot` under a GUI, so we can get away with doing this from our Mac OS X terminal if we have the `.img` files required. Well, these can be acquired from [this site](http://hwe.ubuntu.com/uds-r/nexus7/), just select the appropriate storage size for your Nexus 7 (8GB or 16GB), and we'll be ready to begin.

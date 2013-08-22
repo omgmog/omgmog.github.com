@@ -5,6 +5,8 @@ tags: ["geekery", "github", "mac", "shell", "software"]
 ---
 `git` is a powerful tool. After using it for the past couple of years I'm still finding new/powerful things that can be done with it.
 
+<!-- more -->
+
 One nice thing is the `git log` command, and the options you can pass to it. Some examples from the docs:
 <cite><a href="http://www.kernel.org/pub/software/scm/git/docs/git-log.html">http://www.kernel.org/pub/software/scm/git/docs/git-log.html</a></cite>
 
@@ -14,7 +16,7 @@ One nice thing is the `git log` command, and the options you can pass to it. Som
 
 `git log --branches --not --remotes=origin` - Shows all commits that are in any of local branches but not in any of remote-tracking branches for origin (what you have that origin doesn’t).
 
-I haven't yet had much use for a lot of the options shown here, but I do have a particular use case: preparing for my Daily Scrum at work. Without giving a history of Agile, a Daily Scrum is a meeting amongst a development team where each team member tells the team what s/he did on the previous work day, and what s/he plans to do today. 
+I haven't yet had much use for a lot of the options shown here, but I do have a particular use case: preparing for my Daily Scrum at work. Without giving a history of Agile, a Daily Scrum is a meeting amongst a development team where each team member tells the team what s/he did on the previous work day, and what s/he plans to do today.
 
 If you're using a ticketing system such as JIRA it's quite easy to get a list of the tickets you've been working on or completed previously, but what about those little tweaks that didn't fit in a specific ticket? I find that the git commit log, when used with [sane/thoughtful commit messages](http://lea.verou.me/2012/04/git-commit-m-everything/) is a good way to get a list of the things that you've done in a given period of time.
 
@@ -22,7 +24,7 @@ So I made an alias/function for my `.bashrc`.
 
 <pre><code data-language="shell"># Usage:
 # workdone [time period] [committer email]
- 
+
 workdone(){
        default="1 day ago"
        email="[your email here]"

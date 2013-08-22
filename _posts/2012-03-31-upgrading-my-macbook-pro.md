@@ -9,6 +9,8 @@ I've had my Macbook Pro for about a year now. It's the [Early-2011 15" bells and
 - RAM: 4gb (2x2gb) DDR3
 - HDD: 750gb
 
+<!-- more -->
+
 At the time of purchasing the Mac this spec was fine, it was a simpler time, Mac OS had good memory management, I could multi-task to my hearts content. And then I upgraded to Lion. Lion doesn't perform well with less than 8gb of RAM available so I didn't stick with Lion for very long.
 
 I've been toying with the idea of upgrading the Mac to have an SSD for the past couple of months, and recently I decided to do this along with upgrading the RAM to 8gb. I opted for removing the internal Superdrive so that I could install the SSD and keep the old HDD as a secondary internal drive.

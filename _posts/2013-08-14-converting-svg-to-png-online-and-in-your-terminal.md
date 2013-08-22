@@ -6,6 +6,8 @@ This post is mostly for my own benefit on the rare occasion that I have to conve
 
 I always spend a large amount of time looking for an online SVG to PNG converter or a terminal one-liner to do this.
 
+<!-- more -->
+
 ![](http://uk.omg.li/Qp0Q/by%20default%202013-08-14%20at%2015.40.29.png)
 
 ### SVG icon resources:

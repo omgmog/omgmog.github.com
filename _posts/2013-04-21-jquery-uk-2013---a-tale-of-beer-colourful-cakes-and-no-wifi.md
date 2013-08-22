@@ -11,6 +11,8 @@ Yesterday I attended the second jQuery conference in the UK (the first being las
 
 I failed to get any nice pictures at the event myself, so this blog post uses a collection of crowd-sourced pictures from attendees that shared them via Twitter, Instagram and Flickr.
 
+<!-- more -->
+
 ## The venue
 This year the conference took place at the [King's Centre in Osney Mead](http://www.kingscentre.co.uk/) - a larger venue to cater for there being twice as many attendees as last year.
 

@@ -5,6 +5,8 @@ tags: ["chrome", "css", "firefox", "software", "mac", "usability"]
 ---
 Making assumptions during web development is never a good idea -- especially if your assumptions are about the way a new feature will behave across modern browsers. This is an issue because of two things:
 
+<!-- more -->
+
 1. There are a large number of 'modern' browsers that need to be supported.
 2. The HTML5 specification isn't fully supported by all of these browsers, or isn't supported in the same way from browser to browser.
 

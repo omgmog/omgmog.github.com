@@ -3,7 +3,9 @@ layout: post
 title: "Saving your CSS changes in the Google Chrome inspector"
 tags: ["chrome", "css", "software"]
 ---
-In the process of rapid prototyping and trying out new CSS styles I often find myself making changes to styles within the inspector in Google Chrome. This works quite well, but I've always had a process like the following
+In the process of rapid prototyping and trying out new CSS styles I often find myself making changes to styles within the inspector in Google Chrome. This works quite well, but I've always had a process like the following:
+
+<!-- more -->
 
 * Try some CSS changes in the inspector
 * Copy the new CSS styles (or even type them!) in to my local stylesheet

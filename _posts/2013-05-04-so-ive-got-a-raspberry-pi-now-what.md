@@ -8,6 +8,8 @@ I was going to title this post "In which I moan about the Raspberry Pi", read on
 
 I've had a Model B Raspberry Pi in my possesion for nearly two months now, and beyond playing with pre-built OS images for it, or setting up an AirPlay server, I've not really put the Pi to much use.
 
+<!-- more -->
+
 <figure>
     <img src="http://uk.omg.li/Ok4N/pi.jpg" />
     <figcaption>
@@ -61,7 +63,7 @@ The Raspberry Pi is touted as a computer for kids to learn to program, and [Scra
 I've been using BerryBoot as a means to running an OS on the Pi since I discovered it, but I found out recently that BerryBoot doesn't utilise the full 512MB of ram available in my Model B Raspberry Pi, so maybe that has contributed to the slowness -- but I can't imagine it's any better for Model A owners (with 256MB of RAM) in that case.
 
 ## What about extra hardware, GPIO, and all that jazz?
-Ah well there's an interesting thought. I've not touched the GPIO in the Raspberry Pi, and from what I've seen that seems to be the stand-out feature of the Pi. 
+Ah well there's an interesting thought. I've not touched the GPIO in the Raspberry Pi, and from what I've seen that seems to be the stand-out feature of the Pi.
 
 But that means investing more money into this, to get a nice break-out board, or an [adafruit kit](http://www.adafruit.com/category/105), which is pretty nice if I want to make applications that can make coloured LEDs blink.
 

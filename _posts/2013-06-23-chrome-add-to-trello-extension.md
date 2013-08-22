@@ -4,6 +4,8 @@ title: "Chrome 'Add to Trello' extension"
 ---
 I attended the third [Refresh Oxford](http://www.refreshoxford.co.uk/) hack day yesterday, hosted at [Incuna](http://www.incuna.com/en/)'s offices in Summertown.
 
+<!-- more -->
+
 People came along with their own [project ideas](https://github.com/refreshoxford/hackday-3), and grouped off to do them, I came along with my idea of creating a Google Chrome extension that lets you add the currently viewed page to a board on Trello.
 
 I was the only front-end developer there, amongst a mixture of Djangonauts and some dust-covered PHP aficionados.
