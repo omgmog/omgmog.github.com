@@ -141,13 +141,8 @@
                 </nav>
                 <article class="about" id="about">
                     {% for paragraph in site.description %}
-                        <p>
-                            {{ paragraph }}
-                        </p>
+                        {{ paragraph | markdownify }}
                     {% endfor %}
-                    <p>
-                        {{ site.descriptionmore }}
-                    </p>
                     <ul>
                         {% for site in site.sites %}
                             <li>

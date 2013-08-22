@@ -10,9 +10,14 @@ pygments: true
 url: http://blog.omgmog.net
 name: "Blomg - The blog of Max Glenister"
 author: "Max Glenister"
-description: [
-    "The personal blog of Max Glenister. ", "Mostly containing tech-related musings, and any other miscellany that Max finds interesting. ", "Crafted in SublimeText 2, powered by Jekyll Bootstrap, and hosted by GitHub Pages."]
-descriptionmore: "If you'd like to find out more about what Max has been upto, you can do so through the following channels:"
+description: |
+    The personal blog of Max Glenister.
+
+    Mostly containing tech-related musings, and any other miscellany that Max finds interesting.
+
+    Crafted in SublimeText 2, powered by Jekyll, and hosted by GitHub Pages.
+
+    If you'd like to find out more about what Max has been upto, you can do so through the following channels:
 sites:
     - link: "http://github.com/omgmog"
       text: "omgmog on GitHub"
