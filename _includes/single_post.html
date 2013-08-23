@@ -47,9 +47,7 @@
         {% else %}
             {% if page.url == "/archive.html" %}
                 {{ post.content | split:"<!-- more -->" | first | strip_html | truncate:300 }}
-                {% if post.content | size > 300 %}
-                    <strong>Read more</strong>
-                {% endif %}
+                <strong class="read-more">Read more</strong>
             {% else %}
                 {{ content }}
                 <hr />
