@@ -10,7 +10,7 @@ Just some examples of how to do things with Bash arrays, and their analogous exa
 
 #### Javascript
 
-<pre><code data-language="shell">var array = ["one","two","three","four","five"];</code>
+<pre><code data-language="javascript">var array = ["one","two","three","four","five"];</code>
 </pre>
 
 #### Bash
@@ -22,7 +22,7 @@ Just some examples of how to do things with Bash arrays, and their analogous exa
 
 #### Javascript
 
-<pre><code data-language="shell">for (var i=0; i&lt;array.length; i++) {
+<pre><code data-language="javascript">for (var i=0; i&lt;array.length; i++) {
     console.log(array[i]);
 }</code>
 </pre>
@@ -40,7 +40,7 @@ done</code>
 
 #### Javascript
 
-<pre><code data-language="shell">array.length; // output: 5</code>
+<pre><code data-language="javascript">array.length; // output: 5</code>
 </pre>
 
 #### Bash
@@ -52,7 +52,7 @@ done</code>
 
 #### Javascript
 
-<pre><code data-language="shell">array[2]; // output: "three"</code>
+<pre><code data-language="javascript">array[2]; // output: "three"</code>
 </pre>
 
 #### Bash
@@ -67,7 +67,7 @@ It's worth noting that in the Javascript example, we specify the `start index` a
 
 #### Javascript
 
-<pre><code data-language="shell">array.slice(1,3); // output: ["two", "three"]</code>
+<pre><code data-language="javascript">array.slice(1,3); // output: ["two", "three"]</code>
 </pre>
 
 #### Bash
@@ -79,7 +79,7 @@ It's worth noting that in the Javascript example, we specify the `start index` a
 
 #### Javascript
 
-<pre><code data-language="shell">array[2].length; // output: 5</code>
+<pre><code data-language="javascript">array[2].length; // output: 5</code>
 </pre>
 
 #### Bash
@@ -91,7 +91,7 @@ It's worth noting that in the Javascript example, we specify the `start index` a
 
 #### Javascript
 
-<pre><code data-language="shell">array[2] = "ten";
+<pre><code data-language="javascript">array[2] = "ten";
 
 array; // output: ["one", "ten", "three", "four", "five"]</code>
 </pre>
@@ -107,7 +107,7 @@ ${array} # output: one ten three four five</code>
 
 #### Javascript
 
-<pre><code data-language="shell">array.push("nine");
+<pre><code data-language="javascript">array.push("nine");
 
 array; // output: ["one", "two", "three", "four", "five", "nine"]</code>
 </pre>
@@ -127,7 +127,7 @@ array[${#array[@]}+1]="nine"</code>
 
 #### Javascript
 
-<pre><code data-language="shell">var array2 = ["apple", "orange", "banana"];
+<pre><code data-language="javascript">var array2 = ["apple", "orange", "banana"];
 
 var new_array = array.concat(array2);
 
