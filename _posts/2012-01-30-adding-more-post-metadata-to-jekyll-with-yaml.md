@@ -11,23 +11,27 @@ Jekyll, as it turns out, is a really nice <s>blogging platform</s> static site g
 
 This can be done easily enough by simply adding new lines to the YAML block at the top of your markdown. The default YAML block is as follows:
 
-<pre><code data-language="generic">---
+{% highlight yaml linenos %}
+---
 layout: post
 title:
 categories:
 tags:
----</code></pre>
+---
+{% endhighlight %}
 
 To add your own, you just need to create a <code>key: value</code> line in the block as follows:
 
-<pre><code data-language="generic">---
+{% highlight yaml linenos %}
+---
 layout: post
 title:
 categories:
 tags:
 cover: http://path/to/image.png
 cover_width: 520px
----</code></pre>
+---
+{% endhighlight %}
 
 These are all accessible within the page templates, as for example `{{ "{{ page.title " }}}}` or `{{ "{{ page.tags " }}}}`, as detailed on the [Jekyll Bootstrap template API page](http://jekyllbootstrap.com/api/template-data-api.html).
 
@@ -41,7 +45,9 @@ Defining these each time we create a post can be a bit of a waste of time though
 
 You can see my modified YAML block from  the `Rakefile` below (note: I don't use the categories or tags in the YAML block, so I have removed these lines):
 
-<pre><code data-language="generic">puts "Creating new post: #&#123;filename}"
+{% highlight ruby linenos %}
+{% raw %}
+puts "Creating new post: #{filename}"
 open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
@@ -49,7 +55,9 @@ open(filename, 'w') do |post|
     post.puts "cover: "
     post.puts "cover_width: "
     post.puts "---"
-    post.puts "&#123;% include JB/setup %}"
-end</code></pre>
+    post.puts "{% include JB/setup %}"
+end
+{% endraw %}
+{% endhighlight %}
 
 Now, next time you run `rake post title="Some new post"` your new post markdown file will contain your custom lines in the YAML block, ready to be used in your post templates.

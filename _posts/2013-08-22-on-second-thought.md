@@ -14,9 +14,7 @@ Is this a feature? Perhaps its a productivity enhancement? Either way it's annoy
 #### It reinstalls itself after you've actively uninstalled it
 
 <div class="video-wrapper hd">
-
-<iframe width="640" height="360" src="http://www.youtube.com/embed/UPw-3e_pzqU?feature=player_embedded" frameborder="0"> </iframe>
-
+    <iframe width="640" height="360" src="http://www.youtube.com/embed/UPw-3e_pzqU?feature=player_embedded" frameborder="0"> </iframe>
 </div>
 
 I mean seriously. I could understand if this was an issue with my Google profile getting out of sync between my various computers, but as of this morning none of my installations of Chrome had Hangouts installed, I updated to Chrome 29 and then Hangouts was magically back in my toolbar.

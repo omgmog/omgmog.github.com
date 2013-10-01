@@ -3,25 +3,27 @@ layout: post
 title: "On migrating from Tumblr to Jekyll Bootstrap"
 tags: ["jekyll", "tumblr", "geekery", "software", "projects", "blog", "github"]
 ---
-I've been toying with the idea of moving away from [Tumblr](http://www.tumblr.com) for a long time now, having had my own share of problems with [Tumblr](http://www.tumblr.com) downtime.
+I've been toying with the idea of moving away from [Tumblr](http://www.tumblr.com) for a long time now, having had my own share of problems with Tumblr downtime.
 
 <!-- more -->
 
-I had made some steps into switching from [Tumblr](http://www.tumblr.com) to Octopress, but the steps to deploy [Octopress](http://octopress.org) meant that I had to compile all of my pages each time I made a change, and then deploy them using <code>rsync</code>.
+I had made some steps into switching from Tumblr to Octopress, but the steps to deploy [Octopress](http://octopress.org) meant that I had to compile all of my pages each time I made a change, and then deploy them using `rsync`.
 
-I'm now using [Jekyll Bootstrap](http://jekyllbootstrap.com/), hosted by [GitHub](http://www.github.com). The steps to deploy are much easier, I just create a new markdown file for a post or page, write content using my text editor, and then deploy to [GitHub](http://www.github.com) using <code>git</code>.
+I'm now using [Jekyll Bootstrap](http://jekyllbootstrap.com/), hosted by [GitHub](http://www.github.com). The steps to deploy are much easier, I just create a new markdown file for a post or page, write content using my text editor, and then deploy to GitHub using `git`.
 
-Switching to [Jekyll Bootstrap](http://jekyllbootstrap.com/) and maintaining all of my old [Tumblr](http://www.tumblr.com) posts and urls has been a smooth process, I'll detail this below:
+Switching to Jekyll Bootstrap and maintaining all of my old Tumblr posts and urls has been a smooth process, I'll detail this below:
 
 ## Setting up a local repository for GitHub pages with Jekyll Bootstrap
 
-This was really simple, the [Jekyll Bootstrap website](http://jekyllbootstrap.com/index.html#start-now) has some simple steps to get you started.
+This was really simple, the Jekyll Bootstrap website has some simple steps to get you started.
 
 ## Importing my old Tumblr posts
 
-This required a little bit of work, as I had to update my local copy of <code>gem</code>, but after I had installed all of the necessary gem bundles, importing from Tumblr was as simple as running a one-line command:
+This required a little bit of work, as I had to update my local copy of `gem`, but after I had installed all of the necessary gem bundles, importing from Tumblr was as simple as running a one-line command:
 
-<pre><code data-language="shell">$ ruby -rubygems -e 'require "jekyll/migrators/tumblr"; Jekyll::Tumblr.process("http://www.your_blog_url.com", true)'</code></pre>
+{% highlight bash linenos %}
+$ ruby -rubygems -e 'require "jekyll/migrators/tumblr"; Jekyll::Tumblr.process("http://www.your_blog_url.com", true)'
+{% endhighlight %}
 
 Migrating from other platforms is detailed on the [Jekyll migrations page](https://github.com/mojombo/jekyll/wiki/blog-migrations) over at GitHub.
 
@@ -39,9 +41,11 @@ After you've set up the `CNAME` file on your repository, you'll also need to cre
 
 This is the easiest part of the whole process, pushing to GitHub. Assuming `git` is already set up on your system, you just use the following commands:
 
-<pre><code data-language="shell">git add (new files)
+{% highlight bash linenos %}
+git add (new files)
 git commit -am "A message describing the changes you made"
-git push</code></pre>
+git push
+{% endhighlight %}
 
 After all of that, all that remains is adjust the permalink taxonomy, and creating a custom blog index (such as the one I've made) to display the latest posts.
 
@@ -51,11 +55,11 @@ So far I'm really happy with Jekyll, and for now I'm quite happy with using the 
 
 So a day or two after putting the new blog live, I realised that Google had indexed my old tumblr posts with the following permalink structure:
 
-<pre><code>http://blog.omgmog.net/post/XXXXX/post-title-as-slug</code></pre>
+`http://blog.omgmog.net/post/XXXXX/post-title-as-slug`
 
 but I'm using the shorter version, still valid from the old blog:
 
-<pre><code>http://blog.omgmog.net/post/XXXXX</code></pre>
+`http://blog.omgmog.net/post/XXXXX`
 
 Which will actually be `http://blog.omgmog.net/post/post-title-as-slug` for new posts created with Jekyll.
 

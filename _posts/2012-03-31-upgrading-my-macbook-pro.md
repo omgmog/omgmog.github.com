@@ -3,7 +3,7 @@ layout: post
 title: "Upgrading my Macbook Pro"
 tags: ["mac", "geekery", "gadgets", "software", "hardware", "projects", "blog", "consumerism"]
 ---
-I've had my Macbook Pro for about a year now. It's the [Early-2011 15" bells and whistles model](http://www.everymac.com/systems/apple/macbook_pro/stats/macbook-pro-core-i7-2.2-15-early-2011-unibody-thunderbolt-specs.html). The spec (the bits we care about, if you can't be bothered to click the link) is as follows:
+I've had my Macbook Pro for about a year now. It's the [Early-2011 15" bells and whistles model](http://www.everymac.com/systems/apple/macbook_pro/stats/macbook-pro-core-i7-2.2-15-early-2011-unibody-thunderbolt-specs.html). The specs (the bits we care about, if you can't be bothered to click the link) are as follows:
 
 - CPU: 2.2ghz Core i7
 - RAM: 4gb (2x2gb) DDR3
@@ -17,10 +17,10 @@ I've been toying with the idea of upgrading the Mac to have an SSD for the past 
 
 To do this upgrade I had to buy a couple of things:
 
-- Superdrive bay to 2.5" HDD adapter ~£6.00 from [here](http://www.suntekstore.co.uk/product-10010809-25_inch_the_second_sata_hdd_ssd_caddy_for_apple_macbook.html)
-- External Superdrive USB enclosure ~£12.00 from [here](http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=320817912050)
-- Mushkin Chronos 120gb SSD ~£95 from [here](http://www.aria.co.uk/Products/Components/Solid+State+Drives/Mushkin+Chronos+120GB+2.5%22+SATA-III+Solid+State+Hard+Drive+?productId=45660)
-- 8gb (2x4gb) of Corsair PC3-10666C9 RAM ~£35 from [here](http://www.aria.co.uk/Products/Components/Memory+-+RAM/SODIMM+-+Laptops+%2F+Compact+PC/SODIMM+DDR3/8GB+Corsair+Value+Select+%282x4GB%29+DDR3+PC3-10666C9+1333MHz+1.5v+SODIMM+Memory+-+CMSO8GX3M2A1333C9+?productId=47381)
+- [Superdrive bay to 2.5" HDD adapter ~£6.00](http://www.suntekstore.co.uk/product-10010809-25_inch_the_second_sata_hdd_ssd_caddy_for_apple_macbook.html)
+- [External Superdrive USB enclosure ~£12.00](http://cgi.ebay.co.uk/ws/eBayISAPI.dll?ViewItem&item=320817912050)
+- [Mushkin Chronos 120gb SSD ~£95](http://www.aria.co.uk/Products/Components/Solid+State+Drives/Mushkin+Chronos+120GB+2.5%22+SATA-III+Solid+State+Hard+Drive+?productId=45660)
+- [8gb (2x4gb) of Corsair PC3-10666C9 RAM ~£35](http://www.aria.co.uk/Products/Components/Memory+-+RAM/SODIMM+-+Laptops+%2F+Compact+PC/SODIMM+DDR3/8GB+Corsair+Value+Select+%282x4GB%29+DDR3+PC3-10666C9+1333MHz+1.5v+SODIMM+Memory+-+CMSO8GX3M2A1333C9+?productId=47381)
 
 ## Pre-upgrade system information
 ![](http://f.cl.ly/items/1p0N3e1I3d1K0o2k0A0k/Screen%20shot%202012-03-30%20at%2018.13.30.png)

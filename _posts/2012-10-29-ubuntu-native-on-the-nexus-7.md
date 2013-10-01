@@ -7,7 +7,7 @@ Last week, a Ubuntu native installer for the Nexus 7 was released, along with [i
 
 <!-- more -->
 
-The installation instructions I mentioned earlier are explicitly for installing Ubuntu on your Nexus 7 from an existing Ubuntu 12.10 install on your computer. Now, I don't have any Ubuntu installations kicking around, so I can't vouch for how well this process works, but there are plenty of [videos]() [around]() [the internet]().
+The installation instructions I mentioned earlier are explicitly for installing Ubuntu on your Nexus 7 from an existing Ubuntu 12.10 install on your computer. Now, I don't have any Ubuntu installations kicking around, so I can't vouch for how well this process works, but there are plenty of videos around the internet already.
 
 The installer just uses `fastboot` under a GUI, so we can get away with doing this from our Mac OS X terminal if we have the `.img` files required. Well, these can be acquired from [this site](http://hwe.ubuntu.com/uds-r/nexus7/), just select the appropriate storage size for your Nexus 7 (8GB or 16GB), and we'll be ready to begin.
 
@@ -18,10 +18,12 @@ The installer just uses `fastboot` under a GUI, so we can get away with doing th
 3. If you haven't unlocked the bootloader on your Nexus 7 already, run `fastboot oem unlock`
 4. In the terminal, locate your downloaded image files, and execute the following:
 
-<pre><code data-language="html">$ fastboot flash boot boot.img
+{% highlight bash linenos %}
+$ fastboot flash boot boot.img
 $ fastboot erase userdata
 $ fastboot flash userdata rootfs.img
-$ fastboot reboot</code></pre>
+$ fastboot reboot
+{% endhighlight %}
 
 After that's all finished, when your Nexus 7 boots it will take a couple of minutes to finalise the Ubuntu installation, so go make yourself some coffee or something. When you return, it should have loaded the Ubuntu Unity desktop. It's usable with just the touch screen, but the experience isn't great. You can join your Wifi network, install LXDE or XFCE or something, and log out and select a different desktop environment.
 

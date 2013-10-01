@@ -13,34 +13,38 @@ I Googled around to look for a solution, but most solutions involve adding extra
 
 I decided to approach this from a more technical angle then, and so I came up with the following jQuery snippet
 
-<pre><code data-language="javascript">$(function(){
+{% highlight javascript linenos %}
+$(function(){
   $('.ytembed:not(.processed)').addClass('processed').each(function() {
     $(this).find('a').click(function(e) {
       e.preventDefault();
       var width = $(this).find('img').width();
       var height = $(this).find('img').height();
       var url = $(this).attr('href');
-      var $iframe = $('&lt;iframe src="'+url+'" width="'+width+'"
+      var $iframe = $('<iframe src="'+url+'" width="'+width+'"
        height="'+height+'" frameborder="0"/>');
       $(this).parent().html($iframe);
     });
   });
-});</code></pre>
+});
+{% endhighlight %}
 
 This needs to be used with the following `HTML` structure:
 
-<pre><code data-language="html">&lt;!-- you need a div with the class 'ytembed' -->
-&lt;div class="ytembed">
-    &lt;!-- put a link with the url + embed options of your video -->
-    &lt;a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ?rel=0&amp;showinfo=0&amp;autohide=1&amp;autoplay=1&amp;wmode=transparent">
-        &lt;!-- and a thumbnail, with the width/height specified -->
-        &lt;img
+{% highlight html linenos %}
+<!-- you need a div with the class 'ytembed' -->
+<div class="ytembed">
+    <!-- put a link with the url + embed options of your video -->
+    <a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ?rel=0&amp;showinfo=0&amp;autohide=1&amp;autoplay=1&amp;wmode=transparent">
+        <!-- and a thumbnail, with the width/height specified -->
+        <img
             width="560"
             height="315"
             src="/path/to/custom_thumbnail.jpg"
             alt="Click to play"
         />
-    &lt;/a>
-&lt;/div></code></pre>
+    </a>
+</div>
+{% endhighlight %}
 
 And there you have it, a custom thumbnail for a YouTube embedded video.

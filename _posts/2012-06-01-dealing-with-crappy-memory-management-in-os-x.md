@@ -17,7 +17,7 @@ What does this mean? Well, to put it simply, when you close an application OS X 
 
 Luckily there is a terminal command that will free up this "Inactive" RAM:
 
-<pre><code data-language="shell">$ purge</code></pre>
+`$ purge`
 
 Now, I'm pretty sure that you need to have the OS X Developer Tools installed to use `purge`, but if you're in the kind of situation that warrants purging your memory, you've probably already got it installed.
 

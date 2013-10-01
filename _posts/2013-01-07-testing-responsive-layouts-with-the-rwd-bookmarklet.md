@@ -16,3 +16,5 @@ To use it's quite simple:
 - Switch between the different screen sizes using the toolbar
 
 You can find the Responsive Design Bookmarklet at [Victor Coulon's website](http://responsive.victorcoulon.fr/)
+
+I've made this in to a Chrome Extension, you can find it here: [RWD Extension for Google Chrome](https://chrome.google.com/webstore/detail/rwd/geajggfcfhgkonghflklajfahmdnplmh)

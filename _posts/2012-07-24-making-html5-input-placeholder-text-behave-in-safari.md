@@ -35,9 +35,10 @@ The issue here is how each browser supports styling of the `placeholder` text. H
 
 As you can see we're given little in the way of actually styling `placeholder` text, and to actually style it we need to use vendor-prefixed pseudo selectors:
 
-`::-webkit-input-placeholder { /* styles for webkit */ }`
-
-`:-moz-placeholder { /* styles for gecko */ }`
+{% highlight css linenos %}
+::-webkit-input-placeholder { /* styles for webkit */ }
+:-moz-placeholder { /* styles for gecko */ }
+{% endhighlight %}
 
 Now, on to the next issue: Webkit has implemented `placeholder` text 'wrong'. Well, at least it's wrong according to the spec, as the `placeholder` text does not get cleared when you focus the `input` element:
 
