@@ -16,7 +16,8 @@ After a bit of Googling, I came across [a forum post with the major part of the 
 
 Unfortunately, the uninstaller script doesn't work as is without the cushy double-clickability of the uninstaller, so I've consolidated it in to the following simple script that just does all of the unregistering and removing of files:
 
-<pre><code data-language="shell">#!/bin/sh
+{% highlight bash linenos %}
+#!/bin/sh
 if [ $UID -ne 0 ]; then
     echo "Script must run as root"
     exit 1
@@ -58,6 +59,7 @@ pkgutil --forget "com.rim.blackberrydesktopmanager.BlackBerryVSP.pkg"
 pkgutil --forget "com.rim.blackberrydesktopmanager.Application.pkg"
 killall BBLaunchAgent.app
 rm -fr /Library/Application\ Support/BlackBerry/
-exit 0</code></pre>
+exit 0
+{% endhighlight %}
 
 [Download from the gist at GitHub](https://gist.github.com/omgmog/5672581)

@@ -29,8 +29,10 @@ However, since OS X Lion this installer hasn't worked completely.
 
 To make it work you need to install the `.pkg` from the `.dmg` and then execute the following commands:
 
-<pre><code data-language="shell">sudo cp -Rv /private/tmp/pc-connectivity/10.6/* /usr/lib/
-sudo cp -v /private/tmp/pc-connectivity-bin/10.6/flasher-3.5 /usr/bin/</code></pre>
+{% highlight bash linenos %}
+sudo cp -Rv /private/tmp/pc-connectivity/10.6/* /usr/lib/
+sudo cp -v /private/tmp/pc-connectivity-bin/10.6/flasher-3.5 /usr/bin/
+{% endhighlight %}
 
 You can find a selection of EMMC images here:
 
@@ -40,7 +42,10 @@ Now you can use `flasher-3.5` from the terminal to flash an EMMC image:
 
 1. Boot the N900 in to USB mode by holding the `u` key while it turns on
 2. Execute the following:
-    <pre><code data-language="shell">sudo flasher-3.5 -f &lt;EMMC.bin> -f -R</code></pre>
+
+{% highlight bash linenos %}
+sudo flasher-3.5 -f <EMMC.bin> -f -R
+{% endhighlight %}
 
 It will take a moment to flash the EMMC image, but it will let you know what it's doing meanwhile. After it's complete your N900 should be reset back to the factory default.
 

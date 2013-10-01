@@ -22,28 +22,30 @@ If you're using a ticketing system such as JIRA it's quite easy to get a list of
 
 So I made an alias/function for my `.bashrc`.
 
-<pre><code data-language="shell"># Usage:
+{% highlight bash linenos %}
+# Usage:
 # workdone [time period] [committer email]
 
 workdone(){
        default="1 day ago"
        email="[your email here]"
        git log --committer=${2:-$email} --pretty=format:"%Cgreen%ar (%h)%n%Creset> %s %b%n" --since="${1:-$default}" --no-merges
-}</code></pre>
+}
+{% endhighlight %}
 
 You can add this to your `.bashrc` to begin using it, and perhaps change out the `[your email here]` to your own email address.
 
 To use it you simply `cd` to the directory of your `git` repository, and then run the following:
 
-<pre><code data-language="shell">workdone</code></pre>
+`workdone`
 
 or
 
-<pre><code data-language="shell">workdone "1 week ago"</code></pre>
+`workdone "1 week ago"`
 
 or
 
-<pre><code data-language="shell">workdone "1 week ago" "somebody@somewhere.com"</code></pre>
+`workdone "1 week ago" "somebody@somewhere.com"`
 
 If you don't specify a time period (in human readable form) it will default to "1 day ago", and likewise if no email is specified at the command line, it will use the email that you've specified in the function.
 

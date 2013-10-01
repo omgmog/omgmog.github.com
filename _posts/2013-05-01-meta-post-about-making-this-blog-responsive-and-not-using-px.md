@@ -27,9 +27,7 @@ I've had some great opportunities to play with stripping away useless fluff, usi
 
 Try resizing your browser, I've added `breakpoints` at `1200px`, `1024px`, and `800px`.
 
-I'm using [Rainbow](http://craig.is/making/rainbows) to make my code snippets look nice, with my own implementation of the Monokai colour scheme.
-
-I've also factored out some re-used bits of code in to Jekyll includes, to reduce code duplication in my templates.
+I've factored out some bits of code into Jekyll template includes, to reduce code duplication in my templates.
 
 So now the main folder structure is like this:
 

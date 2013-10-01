@@ -15,9 +15,7 @@ My digital life is so dependent on Google services that it's nice to find some c
 So what does the relaunch include?
 
 <div class="video-wrapper hd">
-
-<iframe width="640" height="360" src="http://www.youtube.com/embed/XkpjZ7oA_Qg?feature=player_embedded" frameborder="0"> </iframe>
-
+    <iframe width="640" height="360" src="http://www.youtube.com/embed/XkpjZ7oA_Qg?feature=player_embedded" frameborder="0"> </iframe>
 </div>
 
 ## One Android chat client to rule them all

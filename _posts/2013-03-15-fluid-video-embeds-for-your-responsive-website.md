@@ -24,7 +24,8 @@ If you can bare to not just use the iframe code YouTube gives you for embedding 
 
 Here's an example:
 
-<pre><code data-language="css">.emedded-video-wrapper {
+{% highlight css linenos %}
+.emedded-video-wrapper {
     position: relative;
 
     /* 100% width, so it scales */
@@ -44,7 +45,7 @@ Here's an example:
     height: 100%;
     width: 100%;
 }
-</code></pre>
+{% endhighlight %}
 
 You might notice that I've used a `magic number` in there, `56.25%` -- it's not that magic actually.. For a `16:9` aspect ratio video, `9` is `56.25%` of `16`.
 
@@ -55,7 +56,8 @@ Here's a lookup table for the various standard video aspect ratios:
 
 Taking it one step further, to make this easily reusable, you could create classes for each of the aspect ratios:
 
-<pre><code data-language="css">.emedded-video-wrapper {
+{% highlight css linenos %}
+.emedded-video-wrapper {
     position: relative;
 
     width: 100%;
@@ -81,17 +83,19 @@ Taking it one step further, to make this easily reusable, you could create class
 .cinema {
     padding-bottom: 41.84%;
 }
-</code></pre>
+{% endhighlight %}
 
 And then you'd use the following `HTML`, the only adjustment from the code that YouTube provide is that I've wrapped it in a div, and removed the width/height properties (though it should work fine if you leave them as-is, because the CSS will override them)
 
-<pre><code data-language="html">&lt;div class="embedded-video-wrapper hd">
-    &lt;iframe
+{% highlight html linenos %}
+<div class="embedded-video-wrapper hd">
+    <iframe
         src="http://www.youtube.com/embed/xEhaVhta7sI"
         frameborder="0"
         allowfullscreen
-    >&lt;/iframe>
-&lt;/div></code></pre>
+    ></iframe>
+</div>
+{% endhighlight %}
 
 You could give your `.embedded-video-wrapper` any width you like now, and the video height will scale proportionately.
 
