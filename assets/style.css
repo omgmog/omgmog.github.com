@@ -59,11 +59,6 @@ h5{font-size:1;text-transform:uppercase;}
 .article-body figcaption a{color:#333;}
 .article-body figcaption a:hover{color:#444;}
 .article-body blockquote{border-left:0.45em solid #73a325;padding-left:1.1em;margin:1.1em 0;max-width:55em;font-family:Georgia, Cambria, "Times New Roman", Times, serif;font-style:italic;color:#555;}
-.article-body > pre{margin:1.1em 0;}
-.article-body > .gist{font-size: .8em;}
-.article-body > .gist pre{color: #1a1a1a;}
-.article-body p code,
-.article-body li code{background:#26292C;color:#F8F8F2;font-size:0.78em;padding:0.1125em 0.56em;margin:0.1125em 0;}
 .article-body h2{font-size:1.3em;line-height:1.2;letter-spacing:0;border-bottom:0.1125em solid #dadada;padding-bottom:0.56em;}
 .article-body img.speaker{float:right;clear:right;margin:1em 0 1em 1em;width:5.5em;}
 .article-body h2{font-size:1.3em;border-bottom:0.1125em solid #dadada;padding-bottom:0.56em;}
