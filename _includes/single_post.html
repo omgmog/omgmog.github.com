@@ -1,8 +1,8 @@
 <article class="article">
     {% if page.url == "/archive.html" %}
-        <h3 class="article-heading">
+        <h2 class="article-heading">
             {{ post.title }}
-        </h3>
+        </h2>
     {% else %}
         {% capture post_Y %}{{ post.date | date:"%Y" }}{% endcapture %}
         {% capture now_Y %}{{ site.time | date:"%Y" }}{% endcapture %}
@@ -18,7 +18,7 @@
                 </p>
             </div>
         {% endif %}
-        <h1 class="article-heading">
+        <h2 class="article-heading">
             {% if page.url == "/index.html" %}
                 <a href="{{ post.url }}">
                     {{ post.title }}
@@ -26,7 +26,7 @@
             {% else %}
                 {{ post.title }}
             {% endif %}
-        </h1>
+        </h2>
     {% endif %}
     <div class="article-meta">
         {{ post.date |  date_to_long_string }}
