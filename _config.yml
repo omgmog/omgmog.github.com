@@ -6,6 +6,7 @@ exclude: ["rakefile", "_config.yml", "addpost.sh", "addpage.sh", ".gitignore"]
 BASE_PATH: "/"
 lsi: false
 pygments: true
+markdown: redcarpet
 url: http://blog.omgmog.net
 name: "Blomg - The blog of Max Glenister"
 author: "Max Glenister"
