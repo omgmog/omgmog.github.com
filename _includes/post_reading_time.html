@@ -1,0 +1,16 @@
+<script>
+    var text = document.querySelectorAll('.article-body');
+    for(var i=0;i<text.length;i++) {
+        var this_text = text[i].innerText;
+            this_text = this_text.split(' ');
+        var time = (this_text.length / 220) * 60;
+        var timem = Math.floor(time / 60);
+        var times = Math.floor(time - (timem * 60));
+        var rendered_text_element =
+        document.createTextNode(
+            '| '+(timem>0?timem+' minute'+(timem>1?'s ':' '):'')+(times>0?times+' second'+(times>1?'s ':' '):'')+'read'
+            );
+
+        document.querySelectorAll('.article-meta')[i].appendChild(rendered_text_element);
+    }
+</script>
