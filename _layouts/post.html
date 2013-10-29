@@ -36,7 +36,6 @@ layout: layout
 
         window.onscroll = function() {
             if(!disqusLoaded && window.pageYOffset > commentsOffset - 1000) {
-                console.log('load comments, NOW!!');
                 loadDisqus();
             }
         }
