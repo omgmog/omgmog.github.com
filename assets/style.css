@@ -1,14 +1,4 @@
 /* core */
-@font-face {
-    font-family:'norwester';
-    src:url('fonts/norwester.eot');
-    src:url('fonts/norwester.eot?#iefix') format('embedded-opentype'),
-        url('fonts/norwester.woff') format('woff'),
-        url('fonts/norwester.ttf') format('truetype'),
-        url('fonts/norwester.svg#norwester') format('svg');
-    font-weight:normal;
-    font-style:normal;
-}
 *{
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
@@ -18,10 +8,12 @@ body {
     margin:0;
     padding:0;
     background:#fff;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    line-height:1.4;
+    font-weight: 400;
+    font-size: 22px;
+    line-height:1.5;
+    font-family: Georgia, Times, "Times New Roman", serif;
+
+    -webkit-font-smoothing: antialiased;
 }
 a, a:link, a:visited {
     color:#73a325;
@@ -32,20 +24,21 @@ a:hover {
     text-decoration:underline;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: norwester, sans-serif;
-    font-weight:400;
-    line-height:1em;
-    padding:0;
+    font-family: "Helvetica Neue", Helvetica, "pragmatica-web", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height:1.1em;
     margin:1em 0;
+    padding:0;
 }
 h1 {
-    font-size:1.8em;
+    font-size:3.4em;
 }
 h2 {
-    font-size:1.5em;
+    font-size:1.7em;
 }
 h3 {
-    font-size:1.2em;
+    font-size:1.3em;
 }
 h4 {
     font-size:1em;
@@ -63,10 +56,10 @@ h5 {
     overflow:hidden;
 }
 .one_third {
-    width:26.6%;
+    width:24%;
 }
 .two_third {
-    width:73.4%;
+    width:76%;
 }
 .pull-left {
     float:left;
@@ -129,18 +122,16 @@ h5 {
 .sidebar .header > span {
     text-shadow: 0 0 25px rgba(0,0,0,0.5), 0 1px #bbb, 0 2px #bbb, 0 3px #bbb, 0 4px #bbb;
     color: #fff;
-    font-size: 3em;
+    font-size: 2em;
     letter-spacing: .05em;
     display: block;
     text-align: center;
     margin-bottom: 1em;
+    cursor: default;
+
     -moz-transform: rotate(-2deg);
     -webkit-transform: rotate(-2deg);
     transform: rotate(-2deg);
-    cursor: default;
-}
-.sidebar .header > span span {
-    vertical-align: -.05em;
 }
 .nav-buttons {
     position:relative;
@@ -173,7 +164,7 @@ h5 {
     padding:0.5em 0.85em;
     color:#333;
     font-weight:600;
-    font-size:0.66em;
+    font-size:0.5em;
     -moz-transition:background-color 100ms linear;
     -webkit-transition:background-color 100ms linear;
     transition:background-color 100ms linear;
@@ -204,6 +195,7 @@ h5 {
     padding:0.55em;
     margin:0 0 1.1em;
     border-bottom:0.1125em solid #fafafa;
+    color: #999;
 }
 .main .archive-item {
     padding-bottom:1.1em;
@@ -230,7 +222,8 @@ h5 {
     background:#eaeaea;
     color:#555;
     padding:0.55em 0.55em 0;
-    max-width:35em;
+    max-width:100%;
+    display: block;
     margin-bottom:1.1em;
     border:0.1125em solid #e6e6e6;
 }
@@ -252,16 +245,19 @@ h5 {
 .article-meta {
     margin:0 0 0.66em;
     color:#b3b3b2;
-    font-family: norwester;
 }
 .article-body img,
 .article-body figure,
 .article-body iframe {
-    background:#fff;
+    background:#eee;
     text-align: center;
-    display: inline-block;
+    display: block;
     max-width: 80%;
-    margin: 0 10%;
+    margin: 0 auto;
+}
+
+.article-body img {
+    background: transparent;
 }
 .article-body iframe {
     max-width:55em;
@@ -273,11 +269,10 @@ h5 {
 }
 .article-body figure {
     line-height:0;
-    display:inline-block;
     margin-top:1em;
 }
 .article-body figure img {
-    margin:0;
+    margin:0 auto;
     border:0;
     max-width:100%;
 }
@@ -301,7 +296,6 @@ h5 {
     padding-left:1.1em;
     margin:1.1em 0;
     max-width:55em;
-    font-family:Georgia, Cambria, "Times New Roman", Times, serif;
     font-style:italic;
     color:#555;
 }
@@ -385,7 +379,8 @@ p code, li code {
     padding: 0.025em 0.5em;
 }
 .highlight:hover {
-    overflow: scroll;
+    overflow: hidden;
+    overflow-x: scroll;
 }
 .highlight .lineno {
     color: #555;
@@ -569,18 +564,7 @@ p code, li code {
     color: #ae81ff
 }
 /* responsive */
-@media (max-width:1200px) and (min-width:1020px) {
-    .wrap {
-        width:100%;
-    }
-    .sidebar {
-        min-width:270px;
-    }
-    .sidebar .header a {
-        padding-left:1.2em;
-    }
-}
-@media (max-width:1024px) {
+@media (max-width:1200px) {
     .not-desktop {
         display:block;
     }
