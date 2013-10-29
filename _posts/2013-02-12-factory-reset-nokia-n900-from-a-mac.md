@@ -44,7 +44,7 @@ Now you can use `flasher-3.5` from the terminal to flash an EMMC image:
 2. Execute the following:
 
 {% highlight bash linenos %}
-sudo flasher-3.5 -f <EMMC.bin> -f -R
+sudo flasher-3.5 -F <EMMC.bin> -f -R
 {% endhighlight %}
 
 It will take a moment to flash the EMMC image, but it will let you know what it's doing meanwhile. After it's complete your N900 should be reset back to the factory default.
