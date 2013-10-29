@@ -4,13 +4,11 @@ title: "Fluid video embeds for your responsive website"
 ---
 Recently I came across an interesting problem, fluidly scaling iframe/embed code on a responsive design.
 
+![](http://uk.omg.li/SDVZ/Image%202013.10.29%2016%3A13%3A53.png)
+
 The problem surfaced because I was using a fluid width and a fixed height for my video embed, and so at some screen sizes the video would look fine, and at others it would have some black banding at the edges.
 
 <!-- more -->
-
-![](http://uk.omg.li/NaZt/by%20default%202013-03-15%20at%2015.52.00.png)
-
-Not very good. So a solution was needed.
 
 If you can bare to not just use the iframe code YouTube gives you for embedding video, then you can use this solution.
 
@@ -20,7 +18,6 @@ If you can bare to not just use the iframe code YouTube gives you for embedding 
 4. Make the video 100% width and height
 5. Position everything
 
-![](http://uk.omg.li/NaiM/by%20default%202013-03-15%20at%2015.53.50.png)
 
 Here's an example:
 
