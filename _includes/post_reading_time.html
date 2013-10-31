@@ -1,7 +1,7 @@
 <script>
     var text = document.querySelectorAll('.article-body');
     for(var i=0;i<text.length;i++) {
-        var this_text = text[i].innerText;
+        var this_text = text[i].textContent || text[i].innerText;
             this_text = this_text.split(' ');
         var time = (this_text.length / 220) * 60;
         var timem = Math.floor(time / 60);
