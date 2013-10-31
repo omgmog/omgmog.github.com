@@ -30,11 +30,16 @@
     {% endif %}
     <div class="article-meta">
         {{ post.date |  date_to_long_string }}
-        {% if page.url != "/index.html" %}
-            {% if page.url != "/archive.html" %}
-                | <a href="https://github.com/omgmog/omgmog.github.com/blob/master/{{ post.path }}">View on GitHub</a> | <a href="#disqus_thread">Comments</a>
-            {% endif %}
+        {% if page.url != "/archive.html" %}
+            | <a href="https://github.com/omgmog/omgmog.github.com/blob/master/{{ post.path }}">View on GitHub</a>
+            | <a href="{% unless page.url == post.url %}{{ post.url }}{% endunless %}#disqus_thread">Comments</a>
         {% endif %}
+        {% capture words %}
+          {{ post.content | number_of_words | minus: 250 }}
+        {% endcapture %}
+        {% unless words contains "-" %}
+          | {{ words | plus: 250 | divided_by: 180 | append: " minute read" }}
+        {% endunless %}
     </div>
     <div class="article-body">
         {% if post.video_url and page.url != "/archive.html" %}
