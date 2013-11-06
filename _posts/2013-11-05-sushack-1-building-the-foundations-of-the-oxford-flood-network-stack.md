@@ -7,6 +7,8 @@ categories: []
 
 This past weekend I held my first hack day. This is a recollection of why/how SusHack came to be, and how the day went.
 
+<!-- more -->
+
 ### Preface
 
 After the [Refresh Oxford](http://www.refreshoxford.co.uk/) hack day back in June I had a bee in my bonnet about doing something similar. I work 9-5:30 for [2degrees](http://2degreesnetwork.com) ("the sustainable business community") as a front-end developer, and so floated the idea with my colleague [Gil](http://lumbercoder.com/) who is also interested in hack days.
