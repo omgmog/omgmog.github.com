@@ -6,6 +6,8 @@ Besides my day job as a front-end developer at [2degrees](http://2degreesnetwork
 
 When launching Marmalade &amp; Jam, I decided to go with 123-reg as I needed a quick way to get everything up and running, and at the time they seemed like a good deal.
 
+<!-- more -->
+
 I setup a handful of our clients on 123-reg, migrating a couple of our inherited clients over from Bluehost, and immediately found an issue with the mail service that 123-reg provided -- They don't have the capability to let you set a single email address as an inbox and a forwarder.
 
 As I didn't want to have to mess our clients around (having already migrated them to 123-reg) I set the mail up to have one address that acts as a forwarder, and one address as an inbox (which the forwarder would send to, as well as to any other addresses).

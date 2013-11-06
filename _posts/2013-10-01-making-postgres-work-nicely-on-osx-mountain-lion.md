@@ -6,6 +6,8 @@ Postgres on OS X has been a pain in the ass for as long as I have had to use it.
 
 To start with, the version that comes with OS X is old, so I've always had to replace it with a better version.
 
+<!-- more -->
+
 Usually this entails completely eradicating the existing version system-wide, and then installing a newer version using [homebrew](http://brew.sh/). It's not enough to just install postgres using homebrew though, you have to add `launchctl` scripts, recite some ancient enchantments, and sacrifice your first born to get anything to work or to start when the system boots.
 
 For a while, this method was fine, I had all of my postgres databases working fine across all of my virtualenv's, I was happy. Then I made the decision to update things using brew. Big mistake, brew (smartly) installs each version of a program in its own version specific folder. Unfortunately, this means any symbolic links I have to the brewed postgres binaries would be rendered broken if I upgrade postgres, and remove the old version.

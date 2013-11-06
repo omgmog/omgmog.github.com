@@ -6,6 +6,8 @@ categories: []
 ---
 Microsoft Outlook uses a stupid/proprietary format to store mail locally. This is the burden I had to deal with recently while attempting to rescue mail from a friends dying computer.
 
+<!-- more -->
+
 Before I get on to the process, some background and the hurdles encountered so far:
 
 1. The computer dying in the first place
