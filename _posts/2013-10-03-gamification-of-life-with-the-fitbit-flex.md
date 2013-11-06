@@ -6,6 +6,8 @@ categories: []
 ---
 Earlier this year, Jenny got a [Fitbit Zip](http://www.fitbit.com/uk/zip), it's basically a pedometer, but with the added cool-factor that it can synchronise over Bluetoooth with your computer (and some mobile devices), so that you can see statistics about your daily step count, active times of the day, etc. all online.
 
+<!-- more -->
+
 Fitbit also introduces a gamification side to this, allowing you to earn badges for step "milestones" and beating personal bests, and the like.
 
 When she first got the Zip it sat unused in a drawer for a while, so I decided to give it a go. I used it for a couple of weeks, and I found that the gamification made the act of walking more interesting, and made me want to walk during occasions when I would otherwise take the bus, or something.
