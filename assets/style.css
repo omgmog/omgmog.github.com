@@ -616,6 +616,21 @@ p code, li code {
     }
 }
 @media (max-width:800px) {
+    body {
+        font-size: 16px;
+    }
+    h1, .article-heading {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    h3 {
+        font-size: 1.4em;
+    }
+    h4, h5 {
+        font-size: 1.2em;
+    }
     .about:target {
         height:600px;
     }
