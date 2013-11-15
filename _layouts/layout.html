@@ -42,7 +42,7 @@
 </head>
 <body>
     <div class="wrap" id="top">
-        <div class="one_third pull-left sidebar">
+        <div class="navigation-bar">
             <aside class="inner">
                 <nav class="nav-buttons site-nav pull-left">
                     <ul>
@@ -56,10 +56,10 @@
                         </li>
                         <li>
                             <a
-                                href="{{ site.BASE_PATH }}archive.html"
+                                href="{{ site.BASE_PATH }}about.html"
                                 class="navbtn"
                             >
-                                Archive
+                                About
                             </a>
                         </li>
                     </ul>
@@ -75,29 +75,36 @@
                         {% assign nextpage = page.next %}
                     {% endif %}
                     <ul>
-                    {% if previouspage or nextpage %}
-                        {% if previouspage %}
-                            <li>
-                                <a
-                                    href="{{ previouspage.url }}"
-                                    title="Previous post: {{ previouspage.title }}"
-                                    class="navbtn"
-                                >
-                                    &lt;
-                                </a>
-                            </li>
-                        {% else %}
-                            <li>
-                                <span class="navbtn disabled">
-                                    &lt;
-                                </span>
-                            </li>
-                        {% endif %}
                         {% if nextpage %}
                             <li>
                                 <a
                                     href="{{ nextpage.url }}"
-                                    title="Next post: {{ nextpage.title }}"
+                                    title="{{ nextpage.title }}"
+                                    class="navbtn"
+                                >
+                                    &lt;
+                                </a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <span class="navbtn disabled">
+                                    &lt;
+                                </span>
+                            </li>
+                        {% endif %}
+                        <li>
+                            <a
+                                href="{{ site.BASE_PATH }}archive.html"
+                                class="navbtn"
+                            >
+                                Archive
+                            </a>
+                        </li>
+                        {% if previouspage %}
+                            <li>
+                                <a
+                                    href="{{ previouspage.url }}"
+                                    title="{{ previouspage.title }}"
                                     class="navbtn"
                                 >
                                     &gt;
@@ -110,24 +117,11 @@
                                 </span>
                             </li>
                         {% endif %}
-                    {% else %}
-                        <li>
-                            <span class="navbtn disabled">
-                                &lt;
-                            </span>
-                        </li>
-                        <li>
-                            <span class="navbtn disabled">
-                                &gt;
-                            </span>
-                        </li>
-                    {% endif %}
-                </ul>
-                </nav>
                     </ul>
+                </nav>
             </aside>
         </div>
-        <div class="two_third pull-right main">
+        <div class="main">
             <section class="inner">
                 {{ content }}
             </section>
