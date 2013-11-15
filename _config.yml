@@ -8,10 +8,10 @@ lsi: false
 pygments: true
 markdown: redcarpet
 url: http://blog.omgmog.net
-name: "Blomg - The blog of Max Glenister"
+name: "The blog of Max Glenister"
 author: "Max Glenister"
 description: |
-    The blog of Max Glenister.
+    This is the blog of Max Glenister, a front-end developer from Oxford.
 
     Mostly containing tech-related musings, and any other miscellany that Max finds interesting.
 
