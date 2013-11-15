@@ -25,7 +25,7 @@ array=("one" "two" "three" "four" "five")
 #### Javascript
 
 {% highlight javascript linenos %}
-for (var i=0; i&lt;array.length; i++) {
+for (var i=0; i<array.length; i++) {
     console.log(array[i]);
 }
 {% endhighlight %}
@@ -33,7 +33,7 @@ for (var i=0; i&lt;array.length; i++) {
 #### Bash
 
 {% highlight bash linenos %}
-for (( i=0; i&lt;${#array[@]}; i++ ));
+for (( i=0; i<${#array[@]}; i++ ));
 do
     echo ${array[$i]}
 done
