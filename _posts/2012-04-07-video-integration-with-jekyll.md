@@ -63,7 +63,7 @@ Now, within our page template we will have access to the `page.video_url` proper
     <div class="less-fancy-video-header">
       <iframe
         class="yt-embed"
-        src="{{ page.video_url }}?&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;wmode=transparent"
+        src="{{ page.video_url }}?&rel=0&showinfo=0&autohide=1&hd=1&wmode=transparent"
         frameborder="0"
         allowfullscreen="true"
         ></iframe>

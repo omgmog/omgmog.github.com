@@ -35,7 +35,7 @@ This needs to be used with the following `HTML` structure:
 <!-- you need a div with the class 'ytembed' -->
 <div class="ytembed">
     <!-- put a link with the url + embed options of your video -->
-    <a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ?rel=0&amp;showinfo=0&amp;autohide=1&amp;autoplay=1&amp;wmode=transparent">
+    <a href="http://www.youtube.com/watch?v=dQw4w9WgXcQ?rel=0&showinfo=0&autohide=1&autoplay=1&wmode=transparent">
         <!-- and a thumbnail, with the width/height specified -->
         <img
             width="560"
