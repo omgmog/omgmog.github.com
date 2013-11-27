@@ -22,10 +22,10 @@ If you can bare to not just use the iframe code YouTube gives you for embedding 
 Here's an example:
 
 {% highlight css linenos %}
-.emedded-video-wrapper {
+.embedded-video-wrapper {
     position: relative;
 
-    /* 100% width, so it scales */
+    /* Use percentage width, so it scales */
     width: 100%;
 
     /* and this is where the magic happens */
@@ -44,7 +44,7 @@ Here's an example:
 }
 {% endhighlight %}
 
-You might notice that I've used a `magic number` in there, `56.25%` -- it's not that magic actually.. For a `16:9` aspect ratio video, `9` is `56.25%` of `16`.
+You might notice that I've used a `magic number` in there, `56.25%` -- it's not that magic actually.. For a `16:9` aspect ratio video, `9` is `56.25%` of `16`. The key is to remember that the total height of a parent container (the wrapper) is the height plus the vertical padding.
 
 Here's a lookup table for the various standard video aspect ratios:
 - `4:3 : 75%      (SD)`
@@ -71,6 +71,7 @@ Taking it one step further, to make this easily reusable, you could create class
 }
 
 /* aspect ratio classes */
+/* N.B. these ratios assume 100% width, if a smaller width, scale down proportionally */
 .sd {
     padding-bottom: 75%;
 }
