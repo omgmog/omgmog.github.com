@@ -54,7 +54,7 @@ Here's a lookup table for the various standard video aspect ratios:
 Taking it one step further, to make this easily reusable, you could create classes for each of the aspect ratios:
 
 {% highlight css linenos %}
-.emedded-video-wrapper {
+.embedded-video-wrapper {
     position: relative;
 
     width: 100%;
