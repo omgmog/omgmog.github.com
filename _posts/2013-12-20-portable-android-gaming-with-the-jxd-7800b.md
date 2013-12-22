@@ -28,7 +28,7 @@ I received my JXD 7800B from [DinoDirect](http://www.dinodirect.com/s7800-quad-c
 
 DinoDirect even included a plug adapter to use the US plug provided with British outlets, and they threw in an iPhone screen protector as a gift.
 
-Here are some unpacking 
+Here are some unpacking photographs:
 
 ![](http://f.cl.ly/items/471F1s2g3Y3Z3x0o1P3K/IMG_20131222_125152.jpg)
 Exciting, branded packaging from DinoDirect
