@@ -9,7 +9,7 @@ layout: layout
         disqusLoaded=false;
 
     function loadDisqus() {
-        var disqus_shortname = 'blogomgmog';
+        var disqus_shortname = '{{ site.disqus }}';
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
@@ -17,7 +17,6 @@ layout: layout
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         disqusLoaded = true;
     }
-    //Get the offset of an object
     function findTop(obj) {
         var curtop = 0;
         if (obj.offsetParent) {

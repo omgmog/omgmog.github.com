@@ -10,6 +10,7 @@ markdown: redcarpet
 url: http://blog.omgmog.net
 name: "The blog of Max Glenister"
 author: "Max Glenister"
+disqus: "blogomgmog"
 description: |
     This is the blog of Max Glenister, a front-end developer from Oxford.
 
