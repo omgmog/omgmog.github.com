@@ -32,7 +32,7 @@
         {{ post.date |  date_to_long_string }}
         {% if page.url != "/archive.html" %}
             | <a href="https://github.com/omgmog/omgmog.github.com/blob/master/{{ post.path }}">View on GitHub</a>
-            | <a href="{% unless page.url == post.url %}{{ post.url }}{% endunless %}#disqus_thread">Comments</a>
+            | <a href="{% unless page.url == post.url %}{{ post.url }}{% endunless %}/#disqus_thread">Comments</a>
         {% endif %}
         {% capture words %}
           {{ post.content | number_of_words | minus: 250 }}
