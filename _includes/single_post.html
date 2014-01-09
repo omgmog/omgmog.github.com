@@ -4,19 +4,21 @@
             {{ post.title }}
         </h2>
     {% else %}
-        {% capture post_Y %}{{ post.date | date:"%Y" }}{% endcapture %}
-        {% capture now_Y %}{{ site.time | date:"%Y" }}{% endcapture %}
-        {% capture updated_Y %}{{ post.updated | date:"%Y" }}{% endcapture %}
-        {% if post_Y < now_Y %}
-            <div class="warning-message">
-                <p>
-                    {% if updated_Y > post_Y %}
-                        This post was updated on {{ post.updated | date:"%d %B %Y" }}. <a href="https://github.com/omgmog/omgmog.github.com/commits/master/{{ post.path }}">Post history on GitHub</a>
-                    {% else %}
-                        It might be a good idea to check the <a href="/archive.html">Archive</a> to see if I've posted a revision to this post or subject.
-                    {% endif %}
-                </p>
-            </div>
+        {% if page.url != "/index.html" %}
+            {% capture post_Y %}{{ post.date | date:"%Y" }}{% endcapture %}
+            {% capture now_Y %}{{ site.time | date:"%Y" }}{% endcapture %}
+            {% capture updated_Y %}{{ post.updated | date:"%Y" }}{% endcapture %}
+            {% if post_Y < now_Y %}
+                <div class="warning-message">
+                    <p>
+                        {% if updated_Y > post_Y %}
+                            This post was updated on {{ post.updated | date:"%d %B %Y" }}. <a href="https://github.com/omgmog/omgmog.github.com/commits/master/{{ post.path }}">Post history on GitHub</a>
+                        {% else %}
+                            It might be a good idea to check the <a href="/archive.html">Archive</a> to see if I've posted a revision to this post or subject.
+                        {% endif %}
+                    </p>
+                </div>
+            {% endif %}
         {% endif %}
         <h2 class="article-heading">
             {% if page.url == "/index.html" %}
