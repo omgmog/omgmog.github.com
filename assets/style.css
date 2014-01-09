@@ -515,6 +515,9 @@ p code, li code {
 }
 /* responsive */
 @media (max-width:1200px) {
+    body {
+        font-size: 20px;
+    }
     .main {
         width:auto;
         max-width:100%;
@@ -526,11 +529,11 @@ p code, li code {
         margin: 1.1em -6em;
         padding: .2em 6em;
     }
+    .nav-buttons .navbtn {
+        font-size: .6em;
+    }
 }
 @media (max-width:800px) {
-    body {
-        font-size: 16px;
-    }
     h1, .article-heading {
         font-size: 1.8em;
     }
