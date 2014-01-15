@@ -1,67 +1,15 @@
 <article class="article">
-    {% if page.url == "/archive.html" %}
-        <h2 class="article-heading">
-            {{ post.title }}
-        </h2>
-    {% else %}
-        {% if page.url != "/index.html" %}
-            {% capture post_Y %}{{ post.date | date:"%Y" }}{% endcapture %}
-            {% capture now_Y %}{{ site.time | date:"%Y" }}{% endcapture %}
-            {% capture updated_Y %}{{ post.updated | date:"%Y" }}{% endcapture %}
-            {% if post_Y < now_Y %}
-                <div class="warning-message">
-                    <p>
-                        {% if updated_Y > post_Y %}
-                            This post was updated on {{ post.updated | date:"%d %B %Y" }}. <a href="https://github.com/omgmog/omgmog.github.com/commits/master/{{ post.path }}">Post history on GitHub</a>
-                        {% else %}
-                            It might be a good idea to check the <a href="/archive.html">Archive</a> to see if I've posted a revision to this post or subject.
-                        {% endif %}
-                    </p>
-                </div>
-            {% endif %}
-        {% endif %}
-        <h2 class="article-heading">
-            {% if page.url == "/index.html" %}
-                <a href="{{ post.url }}">
-                    {{ post.title }}
-                </a>
-            {% else %}
-                {{ post.title }}
-            {% endif %}
-        </h2>
-    {% endif %}
-    <div class="article-meta">
-        {{ post.date |  date_to_long_string }}
-        {% if page.url != "/archive.html" %}
-            | <a href="https://github.com/omgmog/omgmog.github.com/blob/master/{{ post.path }}">View on GitHub</a>
-            | <a href="{% unless page.url == post.url %}{{ post.url }}/{% endunless %}#disqus_thread">Comments</a>
-        {% endif %}
-        {% capture words %}
-          {{ post.content | number_of_words | minus: 250 }}
-        {% endcapture %}
-        {% unless words contains "-" %}
-          | {{ words | plus: 250 | divided_by: 180 | append: " minute read" }}
-        {% endunless %}
-    </div>
+    {% include old_post_warning.html %}
+    {% include article_metadata.html %}
+
     <div class="article-body">
-        {% if post.video_url and page.url != "/archive.html" %}
-            <div class="video-wrapper hd">
-                <iframe src="{{ post.video_url }}" width="100%" height="350px"> </iframe>
-            </div>
-        {% endif %}
-        {% if page.url == "/index.html" %}
-            {{ post.content }}
-        {% else %}
-            {% if page.url == "/archive.html" %}
-                {{ post.content | split:"<!-- more -->" | first | strip_html | truncate:300 }}
-                <strong class="read-more">Read more</strong>
-            {% else %}
-                {{ content }}
-                <hr />
-                <p>
-                    Notice any issues in this post? You can <a href="https://github.com/omgmog/omgmog.github.com/edit/master/{{ post.path }}">fix it on GitHub</a> or <a href="https://github.com/omgmog/omgmog.github.com/issues/new">let me know</a>.
-                </p>
-            {% endif %}
-        {% endif %}
+        {% assign video_url = post.video_url %}
+        {% include article_video_embed.html %}
+
+        {{ content }}
+        <hr />
+        <p>
+            Notice any issues in this post? You can <a href="https://github.com/omgmog/omgmog.github.com/edit/master/{{ post.path }}">fix it on GitHub</a> or <a href="https://github.com/omgmog/omgmog.github.com/issues/new">let me know</a>.
+        </p>
     </div>
 </article>
