@@ -1,0 +1,134 @@
+
+{% if page.url == "/index.html" or page.url == "/about.html" or page.url == "/archive.html" %}
+    <div class="navigation-bar homepage-navigation-bar">
+        <div class="inner">
+            <h1>
+                BLOMG
+            </h1>
+        </div>
+        <div class="inner">
+            <nav class="nav-buttons site-nav pull-left">
+                <ul>
+                    <li>
+                        <a
+                            href="{{ site.BASE_PATH }}"
+                            class="navbtn"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ site.BASE_PATH }}about.html"
+                            class="navbtn"
+                        >
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="nav-buttons posts-nav pull-right">
+                {% for page in site.posts|limit:1 %}
+                    {% assign previouspage = page.previous %}
+                {% endfor %}
+                <ul>
+                    <li>
+                        <span class="navbtn disabled">
+                            &lt;
+                        </span>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ site.BASE_PATH }}archive.html"
+                            class="navbtn"
+                        >
+                            Archive
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ previouspage.url }}"
+                            title="{{ previouspage.title }}"
+                            class="navbtn"
+                        >
+                            &gt;
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+{% else %}
+    <div class="navigation-bar">
+        <div class="inner">
+            <nav class="nav-buttons site-nav pull-left">
+                <ul>
+                    <li>
+                        <a
+                            href="{{ site.BASE_PATH }}"
+                            class="navbtn"
+                        >
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="{{ site.BASE_PATH }}about.html"
+                            class="navbtn"
+                        >
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="nav-buttons posts-nav pull-right">
+                {% assign previouspage = page.previous %}
+                {% assign nextpage = page.next %}
+                <ul>
+                    {% if nextpage %}
+                        <li>
+                            <a
+                                href="{{ nextpage.url }}"
+                                title="{{ nextpage.title }}"
+                                class="navbtn"
+                            >
+                                &lt;
+                            </a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <span class="navbtn disabled">
+                                &lt;
+                            </span>
+                        </li>
+                    {% endif %}
+                    <li>
+                        <a
+                            href="{{ site.BASE_PATH }}archive.html"
+                            class="navbtn"
+                        >
+                            Archive
+                        </a>
+                    </li>
+                    {% if previouspage %}
+                        <li>
+                            <a
+                                href="{{ previouspage.url }}"
+                                title="{{ previouspage.title }}"
+                                class="navbtn"
+                            >
+                                &gt;
+                            </a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <span class="navbtn disabled">
+                                &gt;
+                            </span>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+{% endif %}
