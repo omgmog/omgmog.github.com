@@ -2,9 +2,43 @@
 layout: layout
 title: Home
 ---
-{% for post in site.posts|limit:1 %}
-    {% include single_post.html %}
+{% for post in site.posts limit:1 %}
+    <article class="article">
+        {% include article_metadata.html %}
+        <div class="article-body">
+            {% if post.video_url %}
+                <div class="video-wrapper hd">
+                    <iframe src="{{ post.video_url }}" width="100%" height="350px"> </iframe>
+                </div>
+            {% endif %}
+            {{ post.content | split:"<!-- more -->" | first | strip_html }}
+        </div>
+    </article>
+    <a href="{{ post.url }}">Read more</a>
 {% endfor %}
+
+<h3>
+    Recent posts
+</h3>
+<ul class="post-archive">
+{% for post in site.posts offset:1 limit:4 %}
+    <li
+        class="post-archive-item"
+    >
+        <a
+            href="{{ post.url }}"
+        >
+            <span class="title">
+                {{ post.title }}
+            </spam>
+
+            <span class="date">
+                {{ post.date | date: '%m/%Y' }}
+            </span>
+        </a>
+    </li>
+{% endfor %}
+</ul>
 
 <script type="text/javascript">
     // comment counts
