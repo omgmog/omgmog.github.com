@@ -5,22 +5,5 @@ title: Archive
 <h2>
     Archive
 </h2>
-<ul class="post-archive">
-{% for post in site.posts %}
-    <li
-        class="post-archive-item"
-    >
-        <a
-            href="{{ post.url }}"
-        >
-            <span class="title">
-                {{ post.title }}
-            </spam>
-
-            <span class="date">
-                {{ post.date | date: '%m/%Y' }}
-            </span>
-        </a>
-    </li>
-{% endfor %}
-</ul>
+{% assign posts = site.posts %}
+{% include archive_list.html %}

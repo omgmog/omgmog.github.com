@@ -1,0 +1,19 @@
+<ul class="post-archive">
+{% for post in posts %}
+    <li
+        class="post-archive-item"
+    >
+        <a
+            href="{{ post.url }}"
+        >
+            <span class="title">
+                {{ post.title }}
+            </spam>
+
+            <span class="date">
+                {{ post.date | date: '%m/%Y' }}
+            </span>
+        </a>
+    </li>
+{% endfor %}
+</ul>
