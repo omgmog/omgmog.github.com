@@ -12,9 +12,9 @@ title: Home
                 </div>
             {% endif %}
             {{ post.content | split:"<!-- more -->" | first | strip_html }}
+            <a href="{{ post.url }}">Read more</a>
         </div>
     </article>
-    <a href="{{ post.url }}">Read more</a>
 {% endfor %}
 
 <h3>
