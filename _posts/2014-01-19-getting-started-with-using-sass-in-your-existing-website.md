@@ -223,7 +223,9 @@ $server->serve();
 ?>
 {% endhighlight %}
 
-Now, make a directory called `stylesheets` and chmod it to `777` so that the s.php script can write to it. Upload your `.scss` files to the stylesheets directory.
+Now, make a directory called `stylesheets` and chmod it to `777`* so that the s.php script can write to it. Upload your `.scss` files to the stylesheets directory.
+
+> \* It's worth mentioning here that a chmod of `777` probably isn't completely necessary, but it's the `#yolo` method I'm using to just ensure that `s.php` can make its cache directory.
 
 You should now have something like the following:
 
