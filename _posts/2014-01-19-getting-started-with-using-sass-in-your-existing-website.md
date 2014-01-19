@@ -173,7 +173,7 @@ Here are some of the Sass mixins that I use:
             @content;
         }
     }
-    @else if $breakpoint == "small" {
+    @else if $breakpoint == "small-screen" {
         @media all and (max-width: 30em)  {
             @content;
         }
