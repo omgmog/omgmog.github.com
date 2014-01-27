@@ -232,11 +232,7 @@ h5 {
 }
 
 .article {
-    margin-bottom:1.1em;
-
-    .article + & {
-        margin-bottom: 3em;
-    }
+    margin-bottom: 3em;
 }
 .article-heading {
     font-size: 2em;
