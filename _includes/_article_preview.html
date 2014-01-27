@@ -1,0 +1,8 @@
+<article class="article">
+    {% include _title.html %}
+    <div class="article-body">
+        {{ post.content | split:"<!-- more -->" | first | strip_html }}
+        <a href="{{ post.url }}">Read more</a>
+    </div>
+    {% include _metadata.html %}
+</article>

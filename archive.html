@@ -2,7 +2,8 @@
 layout: layout
 title: Archive
 ---
-<h2>
-    Archive
 {% assign posts = site.posts %}
-{% include archive_list.html %}
+{% for post in posts %}
+    {% include _article_preview.html %}
+{% endfor %}
+
