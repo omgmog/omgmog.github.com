@@ -3,42 +3,26 @@ layout: layout
 title: Home
 ---
 {% for post in site.posts limit:1 %}
-    <article class="article">
-        {% include article_metadata.html %}
-        <div class="article-body">
-            {% if post.video_url %}
-                <div class="video-wrapper hd">
-                    <iframe src="{{ post.video_url }}" width="100%" height="350px"> </iframe>
-                </div>
-            {% endif %}
-            {{ post.content | split:"<!-- more -->" | first | strip_html }}
-            <a href="{{ post.url }}">Read more</a>
-        </div>
-    </article>
+    {% include _article_preview.html %}
 {% endfor %}
 
 <h3>
     Recent posts
 </h3>
-<ul class="post-archive">
+<ul>
 {% for post in site.posts offset:1 limit:4 %}
-    <li
-        class="post-archive-item"
-    >
+    <li>
         <a
             href="{{ post.url }}"
         >
-            <span class="title">
-                {{ post.title }}
-            </spam>
-
-            <span class="date">
-                {{ post.date | date: '%m/%Y' }}
-            </span>
+            {{ post.title }}
         </a>
     </li>
 {% endfor %}
 </ul>
+<p>
+    You can find more posts in the <a href="/archive.html">Archive</a>.
+</p>
 
 <script type="text/javascript">
     // comment counts

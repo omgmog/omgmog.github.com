@@ -1,12 +1,14 @@
 <article class="article">
     {% include old_post_warning.html %}
-    {% include article_metadata.html %}
+
+    {% include _article_metadata.html %}
 
     <div class="article-body">
         {% assign video_url = post.video_url %}
         {% include article_video_embed.html %}
 
         {{ content }}
+
         <hr />
         <p>
             Notice any issues in this post? You can <a href="https://github.com/omgmog/omgmog.github.com/edit/master/{{ post.path }}">fix it on GitHub</a> or <a href="https://github.com/omgmog/omgmog.github.com/issues/new">let me know</a>.
