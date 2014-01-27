@@ -1,5 +1,3 @@
-safe: true
-debug: true
 permalink: /post/:title
 exclude: ["rakefile", "_config.yml", "addpost.sh", "addpage.sh", ".gitignore"]
 BASE_PATH: "/"
@@ -30,3 +28,6 @@ sites:
 
     - link: "http://marmaladeandjam.co.uk"
       text: "Marmalade &amp; Jam"
+sass:
+    style: compressed
+    compile_in_place: true
