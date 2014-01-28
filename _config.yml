@@ -30,4 +30,4 @@ sites:
       text: "Marmalade &amp; Jam"
 sass:
     style: compressed
-    compile_in_place: true
+    compile_in_place: false
