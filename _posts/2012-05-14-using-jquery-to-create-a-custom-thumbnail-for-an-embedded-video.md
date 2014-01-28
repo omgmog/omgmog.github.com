@@ -2,6 +2,7 @@
 layout: post
 title: "Using jQuery to create a custom thumbnail for an embedded video"
 tags: ["jquery", "projects", "blog", "software", "javascript", "software"]
+updated: 2014-01-28
 ---
 Recently [Jenny](http://jennybroomfield.co.uk) asked me for a way to embed a YouTube video with a custom thumbnail that would play the video when clicked.
 
