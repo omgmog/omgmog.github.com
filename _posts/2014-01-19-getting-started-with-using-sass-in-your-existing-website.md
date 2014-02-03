@@ -52,7 +52,7 @@ If you want to organise your styles, you can do it by breaking them up in to ind
 To use your partial, you can do something like this:
 
 {% highlight scss %}
-@import '_fonts';
+@import 'fonts';
 {% endhighlight %}
 
 As you can see, I omitted the `.scss` when importing. You can import with and without the `.scss`, it's completely up to you.
