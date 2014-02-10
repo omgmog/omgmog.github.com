@@ -56,8 +56,8 @@ cd /home/chronos/user/Downloads
 Then insert your USB stick and download my `install.sh`
 
 ```
-wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/installer.sh
-sh installer.sh "/dev/sda" # where /dev/sda is your USB stick
+wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/install.sh
+sh install.sh "/dev/sda" # where /dev/sda is your USB stick
 ```
 
 The installer will prompt you to press `[enter]` to continue at parts, so that you know what's going on.
