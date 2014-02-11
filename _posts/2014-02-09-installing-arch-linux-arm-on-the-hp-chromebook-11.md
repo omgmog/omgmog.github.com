@@ -13,91 +13,90 @@ Since that post I've not used the Chromebook very much, so with a vacant weekend
 
 ## Enter Arch Linux for ARM.
 
-It's all very well and good installing a `chroot` to use a regular Linux distribution side-by-side with Chrome OS, but I couldn't help feeling like I wasn't getting the best performance out of the device. Not to mention, the volatility of having the `chroot` located on the internal memory of the Chromebook meant it's very easy to accidentally lose the whole setup.
+This guide will take you through installing Arch Linux ARM on a USB stick that can be booted by your HP Chromebook 11. I'll also explain how to go a step further and remove Chrome OS from your HP Chromebook 11 and install Arch Linux ARM directly on the eMMC (internal memory).
 
-Eventually I'd like to remove Chrome OS from the Chromebook altogether, and get a full regular distribution loaded on the Chromebook. For now though, I'll settle on having Arch on a bootable USB stick.
+### Prerequisits
+- HP Chromebook 11
+- USB Stick (2GB should be enough)
+- Some time (an hour or so)
 
-The HP Chromebook 11 is quite similar to the Samsung Chromebook, and the steps to install Arch to a USB stick for the Samsung can be followed pretty much for the HP, with a couple of changes towards the end of the process.
+### Pre-install steps
+First of all, your Chromebook must be in Developer Mode. To do this, either boot while holding `esc` + `refresh` + `power`, or press those three keys while the Chromebook is booted. 
 
-I've put together a script to automate this process on the HP Chromebook 11.
+When the device reboots it will present you with a scary message, where you should then press `ctrl` + `D` to enable Developer mode. It'll take a couple of minutes to download and install the Developer Mode files, but when it's done and it reboots, you can then boot Chrome OS by again pressing `ctrl` + `D` at the boot screen.
 
-## Setting up your Arch ARM USB stick for your HP Chromebook 11
+Next, you need to join your Wifi network, and then you can choose to 'browse as guest' or sign in to your Google profile. If you're going to be installing to the eMMC later, it'll be easier to just browse as guest.
 
-Put your HP Chromebook 11 in to Developer mode
-
-```
-1. Hold esc + refresh during boot
-2. Press ctrl + d when at the warning screen
-
-Your Chromebook will be wiped and developer mode enabled.
-
-Each time you boot, press ctrl + d to bypass the warning.
-```
-
-Enable booting from USB sticks
+When you're logged in to Chrome, press `ctrl` + `alt` + `T` to open the `crosh` terminal. Here you can become root and enable USB booting:
 
 ```
-Enter crosh (ctrl + alt + t)
-
-shell
-sudo su -
-crossystem dev_boot_usb=1 dev_boot_signed_only=0
-reboot
+$ shell
+$ sudo su -
+$ crossystem dev_boot_usb=1 dev_boot_signed_only=0
 ```
 
-Next time you boot, you will need to open Crosh again, become a super user, and put yourself in to a writable directory
+### Using my `install.sh` to install Arch
+Insert your USB stick, and dismiss any of the File Browser windows that open. Now, in your terminal execute the following commands, where `/dev/sda` is your USB stick:
 
 ```
-shell
-sudo su -
-cd /home/chronos/user/Downloads
-```
-
-Then insert your USB stick and download my `install.sh`
-
-```
+cd /home/root
 wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/install.sh
-sh install.sh "/dev/sda" # where /dev/sda is your USB stick
+sh install.sh /dev/sda
 ```
 
-The installer will prompt you to press `[enter]` to continue at parts, so that you know what's going on.
+You'll be prompted through the process, it shouldn't take very long.
 
-When it's all finished, providing nothing complained, you should now have a USB stick with Arch installed on it, that you can boot on your Chromebook. To boot the USB stick, you will need to reboot your Chromebook, and press `ctrl + u` at the warning screen.
+After the `install.sh` has finished creating the USB stick, you can reboot your Chromebook, and then press `ctrl` + `U` at the boot screen to boot from USB.
 
-Once you're there, you can do the following to join your Wifi network:
+Login as `root`, with no password. You can turn on Wifi and connect to your Wifi network using the following:
 
 ```
 wifi-menu mlan0
 ```
 
-And then you can do what you like. If you want to have a GUI and working sound, trackpad, etc. do the following:
+If you want to finish here, I would suggest using my `post-install.sh` to install Mate and lightdm, then get on with enjoying your new Arch install.
 
 ```
+pacman -S wget
 wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/post-install.sh
 sh post-install.sh
 ```
 
-Now, as you don't want to be running everything as `root`, you can add a user with `useradd`, switch to the user then to make `Xorg` use the `Mate` desktop that we installed do the following:
+If you're feeling hardcore, why stop here? Let's install to the eMMC!
+
+### Installing Arch to the eMMC on the Chromebook
+
+Just like with installing to the USB stick, you need to download the `install.sh` and then invoke it, but this time specify `/dev/mmcblk0`
 
 ```
-echo "exec mame-session" > ~/.xinitrc
+pacman -S wget
+wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/install.sh
+sh install.sh /dev/mmcblk0
 ```
 
-Now you can start Xorg with the `startx` command.
+The installer will set up the partitions as before, install Arch, and then configure the Kernel so that your Chromebook can boot in to Arch.
 
-If you want `Xorg` to start automatically when you boot, you can install a login manager such as `lightdm`:
+Regarding the modification of the PKGBUILD for `trousers`:
+
+This is the only package you need to modify. When prompted, press `y` to edit, open in `nano` or your preferred text editor, find the line that reads:
 
 ```
-pacman -S lightdm lightdm-gtk2-greeter
-systemctl enable lightdm
+arch=('i686' 'x86_64')
+```
+
+and replace it with
+
+```
+arch=('armv7h')
 ```
 
 ## Doing real work on the HP Chromebook 11
 
+![](http://f.cl.ly/items/2S23121B043m3W3h440Y/IMG_20140211_130139.jpg)
+
 Now that you've got Arch installed you can start using the Chromebook to do some real work. I use `Geany` as my text editor, have `git`, `ruby`, `gem`, `jekyll` and many other important applications installed.
 
-I authored this blog post from Arch on my Chromebook infact!
-
+I even authored this blog post from Arch on my Chromebook!
 
 Let me know if you have any problems, or if you can improve the process in any way.
 
