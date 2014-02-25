@@ -1,6 +1,6 @@
 permalink: /post/:title
 exclude: ["rakefile", "_config.yml", "addpost.sh", "addpage.sh", ".gitignore"]
-baseurl: "http://blog.omgmog.net"
+baseurl: "http://blog.omgmog.net/"
 lsi: false
 pygments: true
 markdown: redcarpet
