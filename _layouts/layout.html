@@ -13,10 +13,17 @@
         name="author"
         content="{{ site.author }}"
     />
+    {% if page.description %}
+    <meta
+        name="description"
+        content="{{ page.content | split:"<!-- more -->" | first | strip_html }}"
+    />
+    {% else %}
     <meta
         name="description"
         content="{{ site.description }}"
     />
+    {% endif %}
     <link
         rel="alternate"
         type="application/rss+xml"
