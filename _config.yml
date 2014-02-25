@@ -1,20 +1,16 @@
 permalink: /post/:title
 exclude: ["rakefile", "_config.yml", "addpost.sh", "addpage.sh", ".gitignore"]
-BASE_PATH: "/"
+baseurl: "http://blog.omgmog.net"
 lsi: false
 pygments: true
 markdown: redcarpet
-url: http://blog.omgmog.net
 name: "The blog of Max Glenister"
 author: "Max Glenister"
 disqus: "blogomgmog"
 description: |
     This is the blog of Max Glenister, a front-end developer from Oxford.
-
     Mostly containing tech-related musings, and any other miscellany that Max finds interesting.
-
     Crafted in SublimeText 2, powered by Jekyll, and hosted by GitHub Pages.
-
     If you'd like to find out more about what Max has been upto, you can do so through the following channels:
 sites:
     - link: "http://github.com/omgmog"
