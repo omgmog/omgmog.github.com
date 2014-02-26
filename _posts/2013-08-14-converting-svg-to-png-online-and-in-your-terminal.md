@@ -27,6 +27,32 @@ I always spend a large amount of time looking for an online SVG to PNG converter
 
 ### Convert SVG to PNG using your terminal (Mac, Linux):
 - Using librsvg (and rsvg-convert tool) - [http://webadventures.at/2012/04/29/convert-svg-png/](http://webadventures.at/2012/04/29/convert-svg-png/)
+
+First install `librsvg` using `brew`:
+
+{% highlight bash %}
+brew update && brew upgrade
+brew install librsvg
+ln -s /usr/local/bin/rsvg-convert /usr/local/bin/rsvg
+{% endhighlight %}
+
+Then, you can either using rsvg directly, or make a function like the following:
+
+{% highlight bash %}# $ svg2png [file] [width] [height]
+function svg2png {
+    file=$1
+    file_name="${file%.*}"
+    file_ext="${file##*.}"
+    shift
+    width=${1:-"128"}
+    height=${2:-"128"}
+
+    if [ "${file_ext}" != "svg" ]; then
+        printf "\n${file} is not an svg!\n"
+    else
+        rsvg -w $width -h $height "${file}" -o "${file_name}.png"
+    fi
+}{% endhighlight %}
 - Using CairoSVG and Python - [http://cairosvg.org/](http://cairosvg.org/)
 - Using svg2png and PhantomJS/Node.js - [https://npmjs.org/package/svg2png](https://npmjs.org/package/svg2png)
 
