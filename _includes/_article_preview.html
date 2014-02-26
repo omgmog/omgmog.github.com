@@ -1,6 +1,11 @@
 <article class="article">
     {% include _title.html %}
+
     <div class="article-body">
+        {% assign video_url = post.video_url %}
+        {% if video_url | size > 0 %}
+            {% include article_video_embed.html %}
+        {% endif %}
         {{ post.content | split:"<!-- more -->" | first | strip_html }}
         <a href="{{ post.url }}">Read more</a>
     </div>
