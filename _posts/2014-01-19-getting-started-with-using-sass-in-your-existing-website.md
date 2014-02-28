@@ -207,7 +207,7 @@ If your web host supports PHP (most do) you can use SCSSPHP. SCSSPHP is a PHP sc
 
 This is how to set it up:
 
-Grab the latest SCSSPHP files from the [SCSSPHP GitHub repository]([https://github.com/leafo/scssphp](https://github.com/leafo/scssphp).
+Grab the latest SCSSPHP files from the [SCSSPHP GitHub repository](https://github.com/leafo/scssphp).
 
 Upload `scss.inc.php` to your serve somewhere (such as your styles directory).
 
