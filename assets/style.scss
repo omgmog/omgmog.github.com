@@ -235,7 +235,7 @@ h5 {
     margin-bottom: 3em;
 }
 .article-heading {
-    font-size: 2em;
+    font-size: 1.6em;
     color: #333;
     margin: .5em 0;
 
@@ -344,6 +344,7 @@ h5 {
         position:relative;
         width:100%;
         height:0;
+        margin-bottom: 1.1em;
 
         > * {
             position:absolute;
@@ -565,10 +566,10 @@ li code {
 }
 @include breakpoint('small-screen') {
     h1, .article-heading {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     h2 {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
     h3 {
         font-size: 1.4em;
