@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: about.html
 Disallow: tags.html
