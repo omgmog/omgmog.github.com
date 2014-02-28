@@ -2,6 +2,7 @@
 layout: post
 title: "Upgrading my Macbook Pro"
 tags: ["mac", "geekery", "gadgets", "software", "hardware", "projects", "blog", "consumerism"]
+updated: 2014-02-28
 ---
 I've had my Macbook Pro for about a year now. It's the [Early-2011 15" bells and whistles model](http://www.everymac.com/systems/apple/macbook_pro/stats/macbook-pro-core-i7-2.2-15-early-2011-unibody-thunderbolt-specs.html). The specs (the bits we care about, if you can't be bothered to click the link) are as follows:
 
@@ -39,9 +40,7 @@ There are guides all over the place for opening the Macbook Pro. I followed [one
 Once opened, I had to do the following things:
 
 - remove the Superdrive
-- remove the old HDD
-- install the new SSD where the old HDD was
-- install the old HDD in the Superdrive bay adapter
+- install the new SSD in the Superdrive bay adapter
 - install the Superdrive bay adapter in the Superdrive bay
 - install the new RAM
 
