@@ -2,6 +2,13 @@
 layout: layout
 title: About
 ---
+<img
+    src="http://omgmog.net/img/max.jpg"
+    alt="Max Glenister is a front-end developer from Oxford"
+    width="200px"
+    height="200px"
+    class="photo-max about"
+/>
 {% for paragraph in site.description %}
     {{ paragraph | markdownify }}
 {% endfor %}
