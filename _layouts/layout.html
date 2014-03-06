@@ -7,11 +7,11 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
     />
     <title>
-        {{ page.title }} | {{ site.name }}
+        {% if page.description %}{{ page.title }} | {% endif %}{{ site.name }}
     </title>
     <meta
         name="author"
-        content="{{ site.author }}"
+        content="{{ site.author.name }}"
     />
     {% if page.description %}
     <meta
@@ -21,7 +21,7 @@
     {% else %}
     <meta
         name="description"
-        content="{{ site.description }}"
+        content="{{ site.author.bio }}"
     />
     {% endif %}
     <link
@@ -49,12 +49,10 @@
         type="image/png"
         href="{{ site.baseurl }}assets/favicon.png"
     />
-
     <!--[if lt IE 9]>
         <script src="{{ site.baseurl }}assets/html5shiv.js">
         </script>
     <![endif]-->
-
     <link
         rel="stylesheet"
         href="{{ site.baseurl }}assets/style.css"
@@ -74,7 +72,6 @@
             </section>
         </div>
     </div>
-
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-18982788-1']);

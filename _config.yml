@@ -5,23 +5,25 @@ lsi: false
 pygments: true
 markdown: redcarpet
 name: "The blog of Max Glenister"
-author: "Max Glenister"
+author:
+    name: "Max Glenister"
+    bio: "Max Glenister is a front-end developer from Oxford. He writes mostly about front-end development and technology."
 disqus: "blogomgmog"
 description: |
     This is the blog of Max Glenister, a front-end developer from Oxford.
+
     Mostly containing tech-related musings, and any other miscellany that Max finds interesting.
+
     Crafted in SublimeText 2, powered by Jekyll, and hosted by GitHub Pages.
+
     If you'd like to find out more about what Max has been upto, you can do so through the following channels:
 sites:
     - link: "http://github.com/omgmog"
       text: "omgmog on GitHub"
-
     - link: "http://twitter.com/omgmog"
       text: "@omgmog on Twitter"
-
     - link: "http://omgmog.net"
       text: "Max's personal site"
-
     - link: "http://marmaladeandjam.co.uk"
       text: "Marmalade &amp; Jam"
 sass:

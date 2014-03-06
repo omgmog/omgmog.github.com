@@ -5,7 +5,6 @@ title: Home
 {% for post in site.posts limit:1 %}
     {% include _article_preview.html %}
 {% endfor %}
-
 <img
     src="http://omgmog.net/img/max.jpg"
     alt="Max Glenister is a front-end developer from Oxford"
@@ -13,6 +12,9 @@ title: Home
     height="100px"
     class="photo-max"
 />
+<p>
+    {{ site.author.bio }}
+</p>
 <h3>
     Recent posts
 </h3>
@@ -30,7 +32,6 @@ title: Home
 <p>
     You can find more posts in the <a href="/archive.html">Archive</a>.
 </p>
-
 <script type="text/javascript">
     // comment counts
     var disqus_shortname = '{{ site.disqus }}';
