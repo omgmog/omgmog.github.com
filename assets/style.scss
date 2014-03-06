@@ -25,6 +25,12 @@ $sansserif_fonts: Helvetica Neue, Helvetica, Arial, sans-serif;
     -webkit-box-sizing: $type;
     box-sizing: $type;
 }
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
 @mixin breakpoint($breakpoint) {
     @if $breakpoint == "big-screen" {
         @media all and (min-width: 80em) {
@@ -99,6 +105,18 @@ h4 {
 h5 {
     font-size:1em;
     text-transform:uppercase;
+}
+.photo-max {
+    float: left;
+    margin: 0 1em 0 0;
+    @include border-radius(100%);
+
+    &.about {
+        float: none;
+        margin: 0 0 0 -100px;
+        left: 50%;
+        position: relative;
+    }
 }
 
 .wrap {
