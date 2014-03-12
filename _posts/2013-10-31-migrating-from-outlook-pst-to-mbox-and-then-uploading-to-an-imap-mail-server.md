@@ -23,7 +23,7 @@ Okay I thought, I can just restore the (aforementioned) `.pst` file from their o
 
 Nope. As I mentioned, `.pst` files are easily corrupted, and so much as a misplaced bit or byte here or there will mean Outlook will refuse to open the file.
 
-But fret not, Microsoft provide a tool to fix `.pst` files!.. But it's hidden away in the hard drive somewhere -- infact, it's in a different location for each version of Office. I was working with an old computer running Windows XP, and Office 2003, so for me `scanpst.exe` was in `C:\Program Files\Common Files\System\Mapi\1033\SCANPST.EXE`.
+But fret not, Microsoft provide a tool to fix `.pst` files!.. But it's hidden away in the hard drive somewhere -- in fact, it's in a different location for each version of Office. I was working with an old computer running Windows XP, and Office 2003, so for me `scanpst.exe` was in `C:\Program Files\Common Files\System\Mapi\1033\SCANPST.EXE`.
 
 ScanPST takes ages to scan a five-year-old 7000+ email inbox, on an old computer running Windows XP.
 

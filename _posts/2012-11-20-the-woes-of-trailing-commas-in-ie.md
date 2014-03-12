@@ -11,7 +11,7 @@ While fixing some issues on a site in IE7 recently, I was greeted by the familia
 
 ![A really helpful error message in IE](http://uk.omg.li/L1VJ/by-default-2012-11-20-at-16.27.28.png)
 
-What does that tell us? Bugger all infact, unless you've tackled this problem before. It's really unhelpful, but it's caused by having a trailing comma inside an array/object/method, like the following:
+What does that tell us? Bugger all in fact, unless you've tackled this problem before. It's really unhelpful, but it's caused by having a trailing comma inside an array/object/method, like the following:
 
 {% highlight javascript linenos %}
 forms.set_errors(
