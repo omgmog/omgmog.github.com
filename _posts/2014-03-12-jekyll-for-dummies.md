@@ -182,7 +182,7 @@ jekyll serve -w --port [yourport]
 
 #### Creating a new post
 
-To create a new post, you just need to create a `.md` or `.markdown` file in the `_posts/` directory, and name it with a datestamp fullowed by the slug for the post:
+To create a new post, you just need to create a `.md` or `.markdown` file in the `_posts/` directory, and name it with a datestamp followed by the slug for the post:
 
 ``` bash
 touch _posts/2014-03-12-jekyll-for-dummies.md
