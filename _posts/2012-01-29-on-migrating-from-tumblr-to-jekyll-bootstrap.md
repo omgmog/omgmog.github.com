@@ -2,6 +2,7 @@
 layout: post
 title: "On migrating from Tumblr to Jekyll Bootstrap"
 tags: ["jekyll", "tumblr", "geekery", "software", "projects", "blog", "github"]
+updated: 2014-03-17
 ---
 I've been toying with the idea of moving away from [Tumblr](http://www.tumblr.com) for a long time now, having had my own share of problems with Tumblr downtime.
 
@@ -51,7 +52,11 @@ After all of that, all that remains is adjust the permalink taxonomy, and creati
 
 So far I'm really happy with Jekyll, and for now I'm quite happy with using the Twitter Bootstrap style -- in time I'm sure I'll be tweaking and changing the style a bit to align it with [my main website](http://www.omgmog.net) a bit better.
 
-## Update:
+## Update 2:
+
+See my new post about [using `jekyll-redirect-from` with GitHub Pages]({% post_url 2014-03-17-using-jekyll-redirect-from-with-github-pages %}) for automatic handling of redirects.
+
+## Update 1:
 
 So a day or two after putting the new blog live, I realised that Google had indexed my old tumblr posts with the following permalink structure:
 

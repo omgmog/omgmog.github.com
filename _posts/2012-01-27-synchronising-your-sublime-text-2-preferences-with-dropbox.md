@@ -2,6 +2,8 @@
 layout: post
 title: Synchronising your Sublime Text 2 preferences with Dropbox
 tags: ["mac", "geekery", "software", "projects", "dropbox", "sublime text", "downloads"]
+redirect_from:
+ - /post/16582689396/
 ---
 
 I use [Sublime Text 2](http://www.sublimetext.com/2) both at work and at home, and it's hard to manually keep my settings/packages in sync.

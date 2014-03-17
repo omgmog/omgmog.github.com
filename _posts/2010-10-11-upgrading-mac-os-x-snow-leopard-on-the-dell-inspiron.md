@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Upgrading Mac OS X Snow Leopard on the Dell Inspiron 1525 to 10.6.4
-alias: /post/1290723507/upgrading-mac-os-x-snow-leopard-on-the-dell-inspiron
 tags: ["mac", "hackintosh", "geekery", "software", "hardware", "projects"]
+redirect_from:
+ - /post/1290723507/
+ - /post/1290723507/upgrading-mac-os-x-snow-leopard-on-the-dell-inspiron/
 ---
 
 In this part of the guide, I'll be covering upgrading to 10.6.4. You can read the first part of this guide here - [Installing Mac OS X Snow Leopard on the Dell Inspiron 1525](http://blog.omgmog.net/post/1265485126)
