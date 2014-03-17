@@ -1,5 +1,5 @@
 permalink: /post/:title
-exclude: ["_config.yml", ".gitignore"]
+exclude: ["_config.yml", ".gitignore", "README.md"]
 baseurl: "http://blog.omgmog.net/"
 safe: true
 lsi: false
