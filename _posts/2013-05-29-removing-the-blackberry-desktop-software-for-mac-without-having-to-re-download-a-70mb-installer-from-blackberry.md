@@ -2,13 +2,11 @@
 layout: post
 title: "Removing the Blackberry Desktop Software for Mac without having to re-download a 70mb installer from Blackberry"
 ---
-Following up from my [adventures with the Blackberry Playbook](http://blog.omgmog.net/post/adventures-with-the-blackberry-playbook---part-1/) (which I sold soon after that promising post because of its un-rootability), I've realised I still have the Blackberry software installed and it's time to let it go.
+If you happen to have installed the Blackberry Desktop Software and you want to remove it and it's annoying persistant daemons, you might have discovered that this can only be done by downloading the [70mb installer dmg](http://us.blackberry.com/software/desktop/desktop-mac.html), and running the uninstaller.
 
 <!-- more -->
 
 ![](http://uk.omg.li/PI8E/bb-trash.png)
-
-If you happen to have installed the Blackberry Desktop Software and you want to remove it and it's annoying persistant daemons, you might have discovered that this can only be done by downloading the [70mb installer dmg](http://us.blackberry.com/software/desktop/desktop-mac.html), and running the uninstaller.
 
 That's not an issue if you still have the installer dmg from when you errantly found yourself installing the Blackberry Desktop Software, but in my case (and my fastidious `~/Downloads` cleaning habits) I no-longer posessed the installer dmg, and (even though it wouldn't take long) I didn't want to redownload it.
 
