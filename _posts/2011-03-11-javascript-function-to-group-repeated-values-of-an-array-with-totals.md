@@ -6,7 +6,7 @@ redirect_from:
  - "/post/3798198267/"
 ---
 
-Something that took a little while to pull of well while working on the [JS challenge this week]({% post_url 2011-03-07-js-challenge-070311 %}), thought I'd throw it up here as it has its uses practically for grouping like array values with totals:
+Something that took a little while to pull of well while working on the [JS challenge this week](/post/js-challenge-070311/), thought I'd throw it up here as it has its uses practically for grouping like array values with totals:
 
 <!-- more -->
 

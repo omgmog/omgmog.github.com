@@ -3,7 +3,7 @@ layout: post
 title: "Installing Arch Linux ARM on the HP Chromebook 11"
 ---
 
-I concluded in my [previous post]({% post_url 2013-11-09-hands-on-with-the-hp-chromebook-11 %}) about the HP Chromebook 11 that it's a good device for casually browsing the internet, but it's no replacement for a regular laptop or desktop for getting stuff done.
+I concluded in my [previous post](/post/hands-on-with-the-hp-chromebook-11/) about the HP Chromebook 11 that it's a good device for casually browsing the internet, but it's no replacement for a regular laptop or desktop for getting stuff done.
 
 ![](http://f.cl.ly/items/3q1u210U3f0B3t260D0y/IMG_20140210_150652.jpg)
 
@@ -21,7 +21,7 @@ This guide will take you through installing Arch Linux ARM on a USB stick that c
 - Some time (an hour or so)
 
 ### Pre-install steps
-First of all, your Chromebook must be in Developer Mode. To do this, either boot while holding `esc` + `refresh` + `power`, or press those three keys while the Chromebook is booted. 
+First of all, your Chromebook must be in Developer Mode. To do this, either boot while holding `esc` + `refresh` + `power`, or press those three keys while the Chromebook is booted.
 
 When the device reboots it will present you with a scary message, where you should then press `ctrl` + `D` to enable Developer mode. It'll take a couple of minutes to download and install the Developer Mode files, but when it's done and it reboots, you can then boot Chrome OS by again pressing `ctrl` + `D` at the boot screen.
 
