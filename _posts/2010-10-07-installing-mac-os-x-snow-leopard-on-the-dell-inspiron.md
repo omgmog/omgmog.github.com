@@ -210,6 +210,6 @@ If the screen colours look a bit weird (mine looked very purple), open **System 
 
 To make sound work, you will need to open **System Preferences** again and go to **Sound**, select the **Output** tab and then from the device list select **Speaker (Fixed)**.
 
-Update: [You can see part 2 of the guide here](/post/installing-mac-os-x-snow-leopard-on-the-dell-inspiron/)
+Update: [You can see part 2 of the guide here](/post/upgrading-mac-os-x-snow-leopard-on-the-dell-inspiron/)
 
 I no longer own the Dell Inspiron 1525, and so I'm no longer supporting this guide.
