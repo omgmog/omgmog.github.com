@@ -3,7 +3,7 @@ layout: post
 title: Javascript function to group repeated values of an array with totals
 tags: ["javascript", "jquery", "geekery", "software", "projects", "blog"]
 redirect_from:
- - /post/3798198267/
+ - "/post/3798198267/"
 ---
 
 Something that took a little while to pull of well while working on the [JS challenge this week]({% post_url 2011-03-07-js-challenge-070311 %}), thought I'd throw it up here as it has its uses practically for grouping like array values with totals:

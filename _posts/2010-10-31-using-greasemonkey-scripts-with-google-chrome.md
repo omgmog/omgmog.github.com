@@ -3,7 +3,7 @@ layout: post
 title: Using Greasemonkey scripts with Google Chrome
 tags: ["javascript", "jquery", "firefox", "chrome", "geekery", "software", "userscript", "projects", "blog"]
 redirect_from:
- - /post/1449391696/
+ - "/post/1449391696/"
 updated: 2014-03-13
 ---
 
