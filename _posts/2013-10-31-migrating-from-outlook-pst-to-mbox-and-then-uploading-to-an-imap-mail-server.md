@@ -50,7 +50,7 @@ This wasn't a problem for me as it meant I could do the conversion and pushing f
 
 ## Converting Outlook PST file to mbox
 
-These instructions are Mac-oriented, but they should be applicable to any *NIX system
+These instructions are Mac-oriented, but they should be applicable to any \*NIX system
 
 If you've recently upgraded `Xcode`, or haven't yet installed it, you will need to accept the new terms and conditions before this will work
 
