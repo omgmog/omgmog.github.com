@@ -9,7 +9,7 @@ The most notable of these is the support for the `jekyll-redirect-from` plugin.
 
 <!-- more -->
 
-When I first moved from Tumblr over to Jekyll back in 2012, I wrote about the pains of maintaining old URLs. Tumblr uses a permalink structure of `/post/<post-id>/<slug>/`, witht the `<post-id>` being an arbitrary number that means nothing to us in Jekyll.
+When I first moved from Tumblr over to Jekyll [back in 2012](/post/on-migrating-from-tumblr-to-jekyll-bootstrap/), I wrote about the pains of maintaining old URLs. Tumblr uses a permalink structure of `/post/<post-id>/<slug>/`, with the `<post-id>` being an arbitrary number that means nothing to us in Jekyll.
 
 The solution I had arrived at back then was to generate the directory structure using the [Jekyll Alias Generator](https://github.com/tsmango/jekyll_alias_generator) plugin, and then to add the generated redirect pages to my repository.
 
