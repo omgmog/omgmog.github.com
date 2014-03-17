@@ -3,7 +3,7 @@ layout: post
 title: "Updates to my 'install all firefox' bash script for Mac OS X"
 tags: ["mac", "shell", "firefox", "geekery", "software", "projects", "github", "blog", "downloads"]
 ---
-I wrote briefly about my [install-all-firefox shell script]({% post_url 2011-12-01-13592744529 %}) back in December last year. Since then the script has received a complete rewrite, and some new features.
+I wrote briefly about my [install-all-firefox shell script]({% post_url 2011-12-01-bash-script-to-install-all-major-versions-of-firefox-on-osx %}) back in December last year. Since then the script has received a complete rewrite, and some new features.
 
 <!-- more -->
 

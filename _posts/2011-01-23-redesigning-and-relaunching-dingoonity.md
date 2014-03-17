@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Redesigning and relaunching Dingoonity
-alias: /post/2901394035/redesigning-and-relaunching-dingoonity
 tags: ["javascript", "jquery", "css", "php", "geekery", "software", "projects", "dingoonity", "blog"]
+redirect_from:
+ - /post/2901394035/
+ - /post/2901394035/redesigning-and-relaunching-dingoonity/
 ---
 
 Over the weekend I relaunched [Dingoonity.org](http://dingoonity.org). I launched the site back in November 2009, a bit of a rush job as far as the design of the boards was concerned &mdash; it coincided with me getting a full-time web design job at RS Components, so while giving the paid job my 100%, Dingoonity's design got neglected.

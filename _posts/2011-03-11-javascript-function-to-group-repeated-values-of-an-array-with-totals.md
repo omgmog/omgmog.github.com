@@ -2,9 +2,11 @@
 layout: post
 title: Javascript function to group repeated values of an array with totals
 tags: ["javascript", "jquery", "geekery", "software", "projects", "blog"]
+redirect_from:
+ - /post/3798198267/
 ---
 
-Something that took a little while to pull of well while working on the [JS challenge this week]({% post_url 2011-03-07-3707266857 %}), thought I'd throw it up here as it has its uses practically for grouping like array values with totals:
+Something that took a little while to pull of well while working on the [JS challenge this week]({% post_url 2011-03-07-js-challenge-070311 %}), thought I'd throw it up here as it has its uses practically for grouping like array values with totals:
 
 <!-- more -->
 
@@ -28,4 +30,4 @@ console.log(testdata);
 
 This is outputting to the console log for the sake of testing it, but the kind of output you'd expect to see is a multidimensional array.
 
-Should have the rest of my solution to the challenge up tomorrow, with a nice post explaining the tough time [Tomas](http://tmayr.comv) and I have had fighting our urge to reveal code/brainstorm together.
+Should have the rest of my solution to the challenge up tomorrow, with a nice post explaining the tough time [Tomas](http://tmayr.com) and I have had fighting our urge to reveal code/brainstorm together.

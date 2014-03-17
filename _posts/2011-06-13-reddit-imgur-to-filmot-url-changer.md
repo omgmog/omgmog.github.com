@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Reddit imgur to filmot url changer
-alias: /post/6483220482/reddit-imgur-to-filmot-url-changer
 tags: ["javascript", "jquery", "geekery", "software", "projects", "userscript", "chrome", "firefox", "reddit", "blog"]
+redirect_from:
+ - /post/6483220482/
+ - /post/6483220482/reddit-imgur-to-filmot-url-changer/
 ---
 
 Browsing Reddit while at work probably isn't the best thing to do if trying to be productive, but sometimes it's necessary to unwind periodically.

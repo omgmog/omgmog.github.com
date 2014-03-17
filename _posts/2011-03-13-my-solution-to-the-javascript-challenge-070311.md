@@ -2,6 +2,8 @@
 layout: post
 title: My solution to the JavaScript challenge 07/03/11
 tags: ["javascript", "jquery", "geekery", "software", "projects", "blog"]
+redirect_from:
+ - /post/3838724991/
 ---
 
 Okay so this solution is a bit later than I planned, but a busy working week and lack of motivation toward the end kind of got the better of me. Anyway, here's my solution to the challenge. I'm sure [Tomas](http://tmayr.com) will post his up soon.
@@ -19,7 +21,7 @@ Quick overview of the challenge:
 > 5. Bonus: add some kind of effect during processing while re-arranging words
 
 
-You can see the post with the challenge [here]({% post_url 2011-03-07-3707266857 %})
+You can see the post with the challenge [here]({% post_url 2011-03-07-js-challenge-070311 %})
 
 Areas I completed:
 

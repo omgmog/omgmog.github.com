@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Building JavaScript arrays from HTML using regular expressions
-alias: /post/3673593945/building-javascript-arrays-from-html-using-regular
 tags: ["javascript", "jquery", "geekery", "software", "projects", "blog"]
+redirect_from:
+ - /post/3673593945/
+ - /post/3673593945/building-javascript-arrays-from-html-using-regular/
 ---
 
 Bit of idea ping-pong with [Tomas](http://tmayr.com) this evening, to provide a solution to something he is working on. He had some text in a table cell that needed to be split and put into an array, separating each line into two parts.
