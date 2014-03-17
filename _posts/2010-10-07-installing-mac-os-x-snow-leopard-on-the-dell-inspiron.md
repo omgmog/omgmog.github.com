@@ -3,8 +3,8 @@ layout: post
 title: Installing Mac OS X Snow Leopard on the Dell Inspiron 1525
 tags: ["mac", "hackintosh", "geekery", "software", "hardware", "projects"]
 redirect_from:
- - /post/1265485126/
- - /post/1265485126/installing-mac-os-x-snow-leopard-on-the-dell-inspiron/
+ - "/post/1265485126/"
+ - "/post/1265485126/installing-mac-os-x-snow-leopard-on-the-dell-inspiron/"
 ---
 
 _This is an update to my previous guide. I've since changed platform for my site &mdash; and even changed computers &mdash; but there is enough interest in this guide to warrant a re-write, so here we go._

@@ -3,7 +3,7 @@ layout: post
 title: prev/next to left/right arrow key bind userscript
 tags: ["javascript", "jquery", "geekery", "software", "projects", "userscript", "chrome", "firefox", "blog"]
 redirect_from:
- - /post/13629604347/
+ - "/post/13629604347/"
 ---
 
 This is a userscript for Google Chrome (it might work with Firefox/Greasemonkey but I haven't tested). It binds the left/right keys to click on prev/next links.
