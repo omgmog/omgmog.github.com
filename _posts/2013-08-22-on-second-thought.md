@@ -43,6 +43,6 @@ This is how it is in reality:
 
 
 ### Don't get me wrong, I love Hangouts
-I still stand by my post [back when Hangouts was announced]({% post_url 2013-05-15-googles-relaunched-hangouts---wow %}), but they've got to fix the Google Chrome version of Hangouts.
+I still stand by my post [back when Hangouts was announced](/post/googles-relaunched-hangouts---wow/), but they've got to fix the Google Chrome version of Hangouts.
 
 For now, I'm going back to `Messages.app`, as bad as it is, it works.

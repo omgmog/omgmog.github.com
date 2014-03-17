@@ -54,7 +54,7 @@ So far I'm really happy with Jekyll, and for now I'm quite happy with using the 
 
 ## Update 2:
 
-See my new post about [using `jekyll-redirect-from` with GitHub Pages]({% post_url 2014-03-17-using-jekyll-redirect-from-with-github-pages %}) for automatic handling of redirects.
+See my new post about [using `jekyll-redirect-from` with GitHub Pages](/post/using-jekyll-redirect-from-with-github-pages/) for automatic handling of redirects.
 
 ## Update 1:
 

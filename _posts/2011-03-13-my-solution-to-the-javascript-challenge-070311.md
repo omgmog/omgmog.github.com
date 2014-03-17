@@ -21,7 +21,7 @@ Quick overview of the challenge:
 > 5. Bonus: add some kind of effect during processing while re-arranging words
 
 
-You can see the post with the challenge [here]({% post_url 2011-03-07-js-challenge-070311 %})
+You can see the post with the challenge [here](/post/js-challenge-070311/)
 
 Areas I completed:
 

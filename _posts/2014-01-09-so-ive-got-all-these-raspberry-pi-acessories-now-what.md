@@ -3,7 +3,7 @@ layout: post
 title: "So, I've got all of these Raspberry Pi accessories... now what?"
 ---
 
-I wrote [back in May]({% post_url 2013-05-04-so-ive-got-a-raspberry-pi-now-what %}) about having a Raspberry Pi, and very few ideas about what to do with it. Here's an update on the subject.
+I wrote [back in May](/post/so-ive-got-a-raspberry-pi-now-what/) about having a Raspberry Pi, and very few ideas about what to do with it. Here's an update on the subject.
 
 <!-- more -->
 
@@ -22,6 +22,6 @@ Besides using KickStarter, others are independently creating products that compl
 
 ![](http://f.cl.ly/items/0p0O0N110e3627112V1Y/Image%202013.12.10%2019%3A26%3A17.png)
 
-In November I organised a [sustainability-themed hack day]({% post_url 2013-11-05-sushack-1-building-the-foundations-of-the-oxford-flood-network-stack %}) where we used the Raspberry Pi paired with some custom-made sensors over white-spectrum radiowaves to monitor flood water levels and push the sensor data to the internet.
+In November I organised a [sustainability-themed hack day](/post/sushack-1-building-the-foundations-of-the-oxford-flood-network-stack/) where we used the Raspberry Pi paired with some custom-made sensors over white-spectrum radiowaves to monitor flood water levels and push the sensor data to the internet.
 
 I've got plans to do some basic hardware stuff with the Raspberry Pi in the coming weeks, such as powering a couple of motors independently using the GPIO pins on the Pi. I'm sure I'll follow that up on here when it's done. You can see the hardware I'm planning to use [here on Deal Extreme](http://dx.com/p/lmr-mr-basic-educational-electronic-robotics-kit-3-aa-45542).
