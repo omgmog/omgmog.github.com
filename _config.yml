@@ -1,9 +1,12 @@
 permalink: /post/:title
-exclude: ["rakefile", "_config.yml", "addpost.sh", "addpage.sh", ".gitignore"]
+exclude: ["_config.yml", ".gitignore"]
 baseurl: "http://blog.omgmog.net/"
+safe: true
 lsi: false
-pygments: true
+
 markdown: redcarpet
+pygments: true
+
 name: "The blog of Max Glenister"
 author:
     name: "Max Glenister"
