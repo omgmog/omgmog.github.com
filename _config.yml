@@ -3,6 +3,8 @@ exclude: ["_config.yml", ".gitignore", "README.md"]
 baseurl: "http://blog.omgmog.net/"
 safe: true
 lsi: false
+paginate: 5
+paginate_path: "archive/page:num"
 
 markdown: redcarpet
 pygments: true
