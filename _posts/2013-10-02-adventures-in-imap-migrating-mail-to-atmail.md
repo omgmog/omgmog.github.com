@@ -31,7 +31,7 @@ Back to the mail, I decided to move from my own Postfix mail server, to using a 
 
 That process was made a lot easier with the use of [imapcopy](https://code.google.com/p/imapcopy/), which I simply made a bash script to run it through each inbox on the old servers (123-reg and Postfix) to copy them to their new inbox on atmail:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 #!/bin/bash
 
 ./imapCopy.sh imap://user1:pass1@old_mailserver imap://user1:pass1@new_mailserver

@@ -10,13 +10,13 @@ Just some examples of how to do things with Bash arrays, and their analogous exa
 
 #### Javascript
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var array = ["one","two","three","four","five"];
 {% endhighlight %}
 
 #### Bash
 
-{% highlight bash linenos %}
+{% highlight bash %}
 array=("one" "two" "three" "four" "five")
 {% endhighlight %}
 
@@ -24,7 +24,7 @@ array=("one" "two" "three" "four" "five")
 
 #### Javascript
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 for (var i=0; i<array.length; i++) {
     console.log(array[i]);
 }
@@ -32,7 +32,7 @@ for (var i=0; i<array.length; i++) {
 
 #### Bash
 
-{% highlight bash linenos %}
+{% highlight bash %}
 for (( i=0; i<${#array[@]}; i++ ));
 do
     echo ${array[$i]}
@@ -44,13 +44,13 @@ done
 
 #### Javascript
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 array.length; // output: 5
 {% endhighlight %}
 
 #### Bash
 
-{% highlight bash linenos %}
+{% highlight bash %}
 ${#array[@]} # output: 5
 {% endhighlight %}
 
@@ -58,13 +58,13 @@ ${#array[@]} # output: 5
 
 #### Javascript
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 array[2]; // output: "three"
 {% endhighlight %}
 
 #### Bash
 
-{% highlight bash linenos %}
+{% highlight bash %}
 ${array[2]} # output: "three"
 {% endhighlight %}
 
@@ -75,13 +75,13 @@ It's worth noting that in the Javascript example, we specify the `start index` a
 
 #### Javascript
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 array.slice(1,3); // output: ["two", "three"]
 {% endhighlight %}
 
 #### Bash
 
-{% highlight bash linenos %}
+{% highlight bash %}
 ${array[@]:1:3} # output: two three four
 {% endhighlight %}
 
@@ -89,13 +89,13 @@ ${array[@]:1:3} # output: two three four
 
 #### Javascript
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 array[2].length; // output: 5
 {% endhighlight %}
 
 #### Bash
 
-{% highlight bash linenos %}
+{% highlight bash %}
 ${#array[2]} # output: 5
 {% endhighlight %}
 
@@ -103,7 +103,7 @@ ${#array[2]} # output: 5
 
 #### Javascript
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 array[2] = "ten";
 
 array; // output: ["one", "ten", "three", "four", "five"]
@@ -111,7 +111,7 @@ array; // output: ["one", "ten", "three", "four", "five"]
 
 #### Bash
 
-{% highlight bash linenos %}
+{% highlight bash %}
 array[2]="ten"
 
 ${array} # output: one ten three four five
@@ -121,7 +121,7 @@ ${array} # output: one ten three four five
 
 #### Javascript
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 array.push("nine");
 
 array; // output: ["one", "two", "three", "four", "five", "nine"]
@@ -129,7 +129,7 @@ array; // output: ["one", "two", "three", "four", "five", "nine"]
 
 #### Bash
 
-{% highlight bash linenos %}
+{% highlight bash %}
 array=(${array[@]} "nine")
 
 ${array} # output: one two three four five nine
@@ -143,7 +143,7 @@ array[${#array[@]}+1]="nine"
 
 #### Javascript
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var array2 = ["apple", "orange", "banana"];
 
 var new_array = array.concat(array2);
@@ -153,7 +153,7 @@ new_array; // output: ["one", "two", "three", "four", "five", "apple", "orange",
 
 #### Bash
 
-{% highlight bash linenos %}
+{% highlight bash %}
 array2=("apple" "orange" "banana")
 
 new_array=(${array[@]} ${array2[@]})

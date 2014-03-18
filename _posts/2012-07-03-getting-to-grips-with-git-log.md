@@ -22,7 +22,7 @@ If you're using a ticketing system such as JIRA it's quite easy to get a list of
 
 So I made an alias/function for my `.bashrc`.
 
-{% highlight bash linenos %}
+{% highlight bash %}
 # Usage:
 # workdone [time period] [committer email]
 

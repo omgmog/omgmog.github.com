@@ -28,14 +28,14 @@ If you're using an older version of postgres, and you're having trouble with `ps
 
 Temporarily adjust the memory available for postgres
 
-{% highlight bash linenos %}
+{% highlight bash %}
 sudo sysctl -w kern.sysv.shmall=65536
 sudo sysctl -w kern.sysv.shmmax=16777216
 {% endhighlight %}
 
 or, permenantly adjust the memory available for postgres, by editing `/etc/sysctl.conf` and adding the following lines:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 kern.sysv.shmall=65536
 kern.sysv.shmmax=16777216
 {% endhighlight %}

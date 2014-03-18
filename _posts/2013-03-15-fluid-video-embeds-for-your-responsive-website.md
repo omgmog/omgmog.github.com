@@ -21,7 +21,7 @@ If you can bare to not just use the iframe code YouTube gives you for embedding 
 
 Here's an example:
 
-{% highlight css linenos %}
+{% highlight css %}
 .embedded-video-wrapper {
     position: relative;
 
@@ -53,7 +53,7 @@ Here's a lookup table for the various standard video aspect ratios:
 
 Taking it one step further, to make this easily reusable, you could create classes for each of the aspect ratios:
 
-{% highlight css linenos %}
+{% highlight css %}
 .embedded-video-wrapper {
     position: relative;
 
@@ -85,7 +85,7 @@ Taking it one step further, to make this easily reusable, you could create class
 
 And then you'd use the following `HTML`, the only adjustment from the code that YouTube provide is that I've wrapped it in a div, and removed the width/height properties (though it should work fine if you leave them as-is, because the CSS will override them)
 
-{% highlight html linenos %}
+{% highlight html %}
 <div class="embedded-video-wrapper hd">
     <iframe
         src="http://www.youtube.com/embed/xEhaVhta7sI"

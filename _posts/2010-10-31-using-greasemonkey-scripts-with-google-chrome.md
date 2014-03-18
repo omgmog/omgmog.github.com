@@ -19,7 +19,7 @@ The instructions are as follows:
 
 Your script needs the userscript meta information at the top of the file
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 // ==UserScript==
 // @name Some Awesome Script
 // @namespace Supporting website/authors website

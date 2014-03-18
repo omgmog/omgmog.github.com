@@ -11,7 +11,7 @@ Jekyll, as it turns out, is a really nice <s>blogging platform</s> static site g
 
 This can be done easily enough by simply adding new lines to the YAML block at the top of your markdown. The default YAML block is as follows:
 
-{% highlight yaml linenos %}
+{% highlight yaml %}
 ---
 layout: post
 title:
@@ -22,7 +22,7 @@ tags:
 
 To add your own, you just need to create a <code>key: value</code> line in the block as follows:
 
-{% highlight yaml linenos %}
+{% highlight yaml %}
 ---
 layout: post
 title:
@@ -45,7 +45,7 @@ Defining these each time we create a post can be a bit of a waste of time though
 
 You can see my modified YAML block from  the `Rakefile` below (note: I don't use the categories or tags in the YAML block, so I have removed these lines):
 
-{% highlight ruby linenos %}
+{% highlight ruby %}
 {% raw %}
 puts "Creating new post: #{filename}"
 open(filename, 'w') do |post|

@@ -18,7 +18,7 @@ The installer just uses `fastboot` under a GUI, so we can get away with doing th
 3. If you haven't unlocked the bootloader on your Nexus 7 already, run `fastboot oem unlock`
 4. In the terminal, locate your downloaded image files, and execute the following:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 $ fastboot flash boot boot.img
 $ fastboot erase userdata
 $ fastboot flash userdata rootfs.img

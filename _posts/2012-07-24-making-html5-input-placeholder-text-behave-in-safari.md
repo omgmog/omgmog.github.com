@@ -35,7 +35,7 @@ The issue here is how each browser supports styling of the `placeholder` text. H
 
 As you can see we're given little in the way of actually styling `placeholder` text, and to actually style it we need to use vendor-prefixed pseudo selectors:
 
-{% highlight css linenos %}
+{% highlight css %}
 ::-webkit-input-placeholder { /* styles for webkit */ }
 :-moz-placeholder { /* styles for gecko */ }
 {% endhighlight %}
