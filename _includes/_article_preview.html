@@ -1,11 +1,11 @@
 <article class="article">
     {% include _title.html %}
-
     <div class="article-body">
         {% assign video_url = post.video_url %}
         {% include article_video_embed.html %}
-        {{ post.content | split:"<!-- more -->" | first | strip_html }}
-        <a href="{{ post.url }}">Read more</a>
+        <p>
+            {{ post.content | split:"<!-- more -->" | first | strip_html }} <a href="{{ post.url }}">Read more</a>
+        </p>
     </div>
     {% include _metadata.html %}
     <hr />
