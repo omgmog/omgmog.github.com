@@ -112,7 +112,7 @@ Press F5 and wait for Chameleon to finish refreshing the available bootable devi
 
 Select "**Mac OS X Install DVD**" and then type the following (this part is actully optional, and depends entirely on your hardware setup. If you've got the same CPU/RAM as me, this will work for you):
 
-{% highlight bash linenos %}
+{% highlight bash %}
 -v -x -f -legacy
 {% endhighlight %}
 
@@ -177,7 +177,7 @@ When you boot the Boot-132 CD this time, you should see a nice Apple icon, with 
 
 Select this boot drive, and type in the following commands to boot:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 -v -x
 {% endhighlight %}
 

@@ -13,7 +13,7 @@ Bit of idea ping-pong with [Tomas](http://tmayr.com) this evening, to provide a 
 
 This is the snippet we came up with, to build a flat array
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 $(function() {
     var array = $("p.src").html()
         .split(/([0-9]{1})\s([A-Za-z\s]+\s*[0-9°º]*)/);

@@ -20,7 +20,7 @@ The first two things are easy enough to produce. The third thing is a bit more c
 The embed code YouTube gives you contains most of the bits we need, here is an example from the video above:
 
 
-{% highlight html linenos %}
+{% highlight html %}
 <iframe
     width="560"
     height="315"
@@ -36,7 +36,7 @@ We need to break this in to two parts to use it with Jekyll, and set up some new
 
 When you create a new post in Jekyll, you will have the usual YAML block at the top of your file, such as the following:
 
-{% highlight yaml linenos %}
+{% highlight yaml %}
 ---
 layout: post
 title: "Some awesome post"
@@ -45,7 +45,7 @@ title: "Some awesome post"
 
 To begin, we need to add a new line before the last `---` to define a YouTube embed url, which we take from the YouTube embed code. I'm using the `src` from the embed code above in the example below:
 
-{% highlight yaml linenos %}
+{% highlight yaml %}
 ---
 layout: post
 title: "Some awesome post"
@@ -57,7 +57,7 @@ video_url: http://www.youtube.com/embed/fyY9tb8Rvlk
 
 Now, within our page template we will have access to the `page.video_url` property, so we can set up some template logic to render the YouTube video. We will be taking the embed code as above, and changing a few things:
 
-{% highlight jinja linenos %}
+{% highlight jinja %}
 {% raw %}
 {% if page.video_url %}
     <div class="less-fancy-video-header">

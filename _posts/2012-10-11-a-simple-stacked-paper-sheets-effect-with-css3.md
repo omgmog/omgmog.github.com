@@ -13,7 +13,7 @@ Like the sound of that? read on.
 
 First of all, the HTML markup:
 
-{% highlight html linenos %}
+{% highlight html %}
 <article>
     <h2>Article title here</h2>
     <p>Lorem ipsum dolor sit amet...</p>
@@ -22,7 +22,7 @@ First of all, the HTML markup:
 
 This is only a fraction of what you might have on the page, but I"m sure you can figure that out. This isn"t limited to just the `article` element either, you can adjust this to use whatever you like. Now, the CSS:
 
-{% highlight css linenos %}
+{% highlight css %}
 article {
     position: relative;
     margin: 100px auto;

@@ -14,7 +14,7 @@ After a bit of Googling, I came across [a forum post with the major part of the 
 
 Unfortunately, the uninstaller script doesn't work as is without the cushy double-clickability of the uninstaller, so I've consolidated it in to the following simple script that just does all of the unregistering and removing of files:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 #!/bin/sh
 if [ $UID -ne 0 ]; then
     echo "Script must run as root"

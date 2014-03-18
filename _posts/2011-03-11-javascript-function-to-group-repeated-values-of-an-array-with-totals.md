@@ -10,7 +10,7 @@ Something that took a little while to pull of well while working on the [JS chal
 
 <!-- more -->
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var testdata = ['a','a','a','b','b','c','c','c','c','d','d','d','e'];
 var i=0, x, count, item;
 while(i < testdata.length){

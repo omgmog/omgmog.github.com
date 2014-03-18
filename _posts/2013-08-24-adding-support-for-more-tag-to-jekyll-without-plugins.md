@@ -8,7 +8,7 @@ Here's a quick tip for an approach I've started using to split post content at a
 
 Until recently the approach I took to creating a snippet of a post for my [archive](/archive.html) page just trimming the `post.content` to 300 characters in the following way:
 
-{% highlight jinja linenos %}
+{% highlight jinja %}
 {% raw %}
 {{ post.content | strip_html | truncate:300 }}
 {% if post.content | size > 300 %}
@@ -27,7 +27,7 @@ But that won't work as Jekyll runs with `safe: true` on GitHub Pages.
 
 So a solution... Well, Jekyll supports the liquid filters `split` and `first`, so we can do the following:
 
-{% highlight jinja linenos %}
+{% highlight jinja %}
 {% raw %}
 {{ post.content | split:"<!-- more -->" | first | strip_html | truncate:300 }}
 {% if post.content | size > 300 %}
@@ -46,7 +46,7 @@ So how does it work?
 
 The first step is to split the content at the `<!-- more -->` marker using the `split` filter. When we use `split` filter, it turns out `post.content` in to an array with two (or more) parts.
 
-{% highlight jinja linenos %}
+{% highlight jinja %}
 {% raw %}
 {% post.content | split:"<!-- more -->" %}
 {% endraw %}
@@ -54,7 +54,7 @@ The first step is to split the content at the `<!-- more -->` marker using the `
 
 So we go from:
 
-{% highlight jinja linenos %}
+{% highlight jinja %}
 {% raw %}
 post.content =>
 
@@ -68,7 +68,7 @@ In in augue enim. Aenean fringilla accumsan augue, at convallis quam consequat n
 
 To this (an array with two items):
 
-{% highlight jinja linenos %}
+{% highlight jinja %}
 {% raw %}
 post.content =>
 
@@ -79,7 +79,7 @@ post.content =>
 
 Then the second step is to use the `first` filter to just select the part of `post.content` that came before the `<!-- more -->` marker:
 
-{% highlight jinja linenos %}
+{% highlight jinja %}
 {% raw %}
 {% post.content | split:"<!-- more -->" | first %}
 {% endraw %}
@@ -87,7 +87,7 @@ Then the second step is to use the `first` filter to just select the part of `po
 
 Which gives us:
 
-{% highlight jinja linenos %}
+{% highlight jinja %}
 {% raw %}
 post.content =>
 

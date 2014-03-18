@@ -13,7 +13,7 @@ While fixing some issues on a site in IE7 recently, I was greeted by the familia
 
 What does that tell us? Bugger all in fact, unless you've tackled this problem before. It's really unhelpful, but it's caused by having a trailing comma inside an array/object/method, like the following:
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 forms.set_errors(
     $form,
     response.form_errors || [],
@@ -25,7 +25,7 @@ That right there, that's not cool. It'll make Internet Explorer explode.
 
 If you had any consideration you would write something more like:
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 forms.set_errors(
     $form,
     response.form_errors || [],
@@ -37,7 +37,7 @@ tasty.
 
 You can prevent this problem occuring by using a [linter](http://www.jslint.com/), or you can retroactively go and find the problem-causing lines in your JavaScript using a `RegEx` pattern such as the following:
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 ,[\s\n]*[^\[\{\w\n\s/\*\"\'\$\#\.\`\:\|\!]
 {% endhighlight %}
 
