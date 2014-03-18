@@ -1,0 +1,33 @@
+---
+layout: layout
+title: Archive
+redirect_from: /archive.html
+---
+
+{% assign posts = paginator.posts %}
+
+{% for post in posts %}
+    {% include _article_preview.html %}
+{% endfor %}
+
+<div class="archive-navigation">
+{% if paginator.next_page %}
+<div class="nav-next">
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="next">
+        <span class="pager-title">
+            Next page
+        </span>
+    </a>
+</div>
+{% endif %}
+
+{% if paginator.previous_page %}
+<div class="nav-previous">
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="prev">
+        <span class="pager-title">
+            Previous page
+        </span>
+    </a>
+</div>
+{% endif %}
+</div>
