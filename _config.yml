@@ -19,12 +19,10 @@ description: |
 
     Mostly containing tech-related musings, and any other miscellany that Max finds interesting.
 
-    Crafted in SublimeText 2, powered by Jekyll, and hosted by GitHub Pages.
-
     If you'd like to find out more about what Max has been upto, you can do so through the following channels:
 sites:
     - link: "http://github.com/omgmog"
-      text: "omgmog on GitHub"
+      text: "@omgmog on GitHub"
     - link: "http://twitter.com/omgmog"
       text: "@omgmog on Twitter"
     - link: "http://omgmog.net"
