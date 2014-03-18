@@ -3,12 +3,16 @@
 
     {% include _article_metadata.html %}
 
+    <hr />
+
     <div class="article-body">
         {% assign video_url = post.video_url %}
         {% include article_video_embed.html %}
 
         {{ content }}
     </div>
+
+    <hr />
 
     {% include _author_blurb.html %}
 
