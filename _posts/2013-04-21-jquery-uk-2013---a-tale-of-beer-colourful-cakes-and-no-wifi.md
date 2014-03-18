@@ -98,15 +98,15 @@ We've been assured that next year there will be wifi!
 
 <img class="speaker" src="http://uk.omg.li/OSQ2/brendan.jpg" />
 
-<div class="video-wrapper hd">
-    <iframe src="http://player.vimeo.com/video/66711027?color=333333" width="500" height="281" frameborder="0"> </iframe>
-</div>
-
 Brenden talked about up and coming features of ECMAScript 6 and 7, and how a lot of commonly used JavaScript code patterns are going to be making their way into the spec as features of JavaScript.
 
 He talked about some exciting things that JavaScript is being used for, such as the creation of AAA games.
 
 He showed a live demo of the Unreal Engine 3 that was recently ported to JavaScript using Web GL and [asm.js](http://asmjs.org/).
+
+<div class="video-wrapper hd">
+    <iframe src="http://player.vimeo.com/video/66711027?color=333333" width="500" height="281" frameborder="0"> </iframe>
+</div>
 
 He talked about not wanting to go in the direction of Java with bytecode, as it's slow and the JavaScript parser is more efficient. The main goal is for "One JavaScript for humans and computers".
 
@@ -158,13 +158,13 @@ People were playing Mario Kart 64, Goldeneye 64, Bomberman (SNES), Smash Bros (G
 
 <img class="speaker" src="http://uk.omg.li/ORV0/remy.jpg" />
 
-<div class="video-wrapper hd">
-    <iframe src="http://player.vimeo.com/video/68009123?color=333333" width="500" height="281" frameborder="0"> </iframe>
-</div>
-
 Remy Sharp gave an interesting/controversial talk about only using jQuery when it's totally necessary, and sticking to pure JavaScript if you can.
 
 He demonstrated some great examples of how to achieve some of the core functionality of jQuery with simple JavaScript snippets.
+
+<div class="video-wrapper hd">
+    <iframe src="http://player.vimeo.com/video/68009123?color=333333" width="500" height="281" frameborder="0"> </iframe>
+</div>
 
 That sounds quite obvious, but there was a noticable eureka across the crowd when he pointed out that for a quick JavaScript prototype you don't need to throw the whole jQuery library in to select DOM elements when you can just use `querySelectorAll()`, and even map it to `$` to soften the blow.
 
@@ -189,11 +189,11 @@ He also covered the dangers of using jQuery, or rather using it incorrectly, and
 
 <img class="speaker" src="http://uk.omg.li/OSIO/doug.jpg" />
 
+Doug's talk mostly focussed around plugging <a href="https://github.com/ifandelse/machina.js" target="_blank">machina.js</a>, but I was too hungry to take extensive notes on the talk.
+
 <div class="video-wrapper hd">
     <iframe src="http://player.vimeo.com/video/67473899?color=333333" width="500" height="281" frameborder="0"> </iframe>
 </div>
-
-Doug's talk mostly focussed around plugging <a href="https://github.com/ifandelse/machina.js" target="_blank">machina.js</a>, but I was too hungry to take extensive notes on the talk.
 
 The gist of it is that machina.js is a Finite State Machine - "What's a Finite State Machine?" you ask? Ah well.. according to <a href="http://freshbrewedcode.com/jimcowart/2012/03/12/machina-js-finite-state-machines-in-javascript/" target="_blank">Jim Cowart</a>:
 
@@ -257,11 +257,13 @@ Garann talked about using events and jQuery to glue your templates and front-end
 
 <img class="speaker" src="http://uk.omg.li/OSS2/ilya.jpg" />
 
+Ilya's talk was much like Paul Irish's last year, in that it was more about Chrome than about jQuery, but that doesn't mean it wasn't good.
+
 <div class="video-wrapper hd">
     <iframe src="http://player.vimeo.com/video/67330007?color=333333" width="500" height="281" frameborder="0"> </iframe>
 </div>
 
-Ilya's talk was much like Paul Irish's last year, in that it was more about Chrome than about jQuery, but that doesn't mean it wasn't good. He covered the following things:
+He covered the following things:
 
 - Remote debugging capabilities (debug your mobile apps on your desktop)
 - Powerful JavaScript debugger and profiler
@@ -313,11 +315,11 @@ The only bad thing I've got to say about Joe's talk is that he had a heavy empha
 
 <img class="speaker" src="http://uk.omg.li/OS1o/jason.jpg" />
 
+Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
+
 <div class="video-wrapper hd">
     <iframe src="http://player.vimeo.com/video/67473673?color=333333" width="500" height="281" frameborder="0"> </iframe>
 </div>
-
-Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
 
 - [Click here to view the slides](https://docs.google.com/presentation/d/19xrnU6cpyvOus0CYUnb7W7uxz_hl6Dqw-6BOxsVMn2s/edit#slide=id.p20)
 
