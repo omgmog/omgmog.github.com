@@ -90,6 +90,7 @@ a {
 }
 .main {
     width: 100%;
+    position: relative;
     background-color: $color_secondary;
     font-family: $serif_fonts;
     padding: 50px 100px;
@@ -98,10 +99,6 @@ a {
         max-width: 44rem;
         margin: 0 auto;
     }
-}
-.archive-navigation {
-    padding: 50px 0;
-    overflow: hidden;
 }
 
 @include breakpoint("medium") {
@@ -129,6 +126,9 @@ a {
     }
 }
 .article {
+    position: relative;
+    z-index: 10;
+
     .article-heading {
         font-family: $sansserif_fonts;
         font-size: 1.5rem;
@@ -237,15 +237,6 @@ a {
         text-align: center;
     }
 }
-.nav-prev {
-    float: left;
-}
-.nav-next {
-    float: right;
-}
-
-
-
 code {
     padding: 2px 4px;
     font-size: 90%;
@@ -287,4 +278,116 @@ pre {
         margin-top: 0;
         margin-bottom: 0;
     }
+}
+.page-nav {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    overflow: hidden;
+    z-index: 0;
+
+    hr,
+    .nav-title {
+        display: none;
+    }
+}
+@include breakpoint("big") {
+    .page-nav-link {
+        width: 0;
+        text-indent: -999em;
+        display: block;
+        height: 0;
+        border: 2.5rem solid transparent;
+        position: relative;
+        @include transition(.2s, (opacity, border-color), linear);
+        @include opacity(.5);
+
+        &:hover {
+            @include opacity(1);
+        }
+
+        &::after {
+            border: 2.5rem solid transparent;
+            height: 0;
+            content: ' ';
+            position: absolute;
+            display: block;
+            top: -2.5rem;
+            z-index: 100;
+        }
+        &.prev {
+            float: right;
+            border-left-color: $color_link_primary;
+            border-left-width: 2.5rem;
+            border-right-width: 0;
+
+            &:hover {
+                border-left-color: $color_primary;
+            }
+
+            &::after {
+                border-left-color: $color_secondary;
+                border-left-width: 2.5rem;
+                border-right-width: 0;
+                right: 1.5rem;
+            }
+        }
+        &.next {
+            float: left;
+            border-right-color: $color_link_primary;
+            border-right-width: 2.5rem;
+            border-left-width: 0;
+
+            &:hover {
+                border-right-color: $color_primary;
+            }
+
+            &::after {
+                border-right-color: $color_secondary;
+                border-right-width: 2.5rem;
+                border-left-width: 0;
+                left: 1.5rem;
+            }
+        }
+    }
+}
+@include breakpoint("not-big") {
+    .page-nav {
+        position: static;
+        width: 100%;
+
+        hr,
+        .nav-title {
+            display: block;
+        }
+        .page-nav-link {
+            width: 100%;
+            border: 0!important;
+            float: none!important;
+            height: auto;
+            display: block;
+            clear: both;
+        }
+        &.archive-nav {
+            overflow: hidden;
+            padding-bottom: 1em;
+
+            .page-nav-link {
+                display: inline-block;
+                max-width: 50%;
+                clear: none;
+                margin-bottom: 2em;
+            }
+            .next {
+                float: left!important;
+                text-align: left;
+            }
+            .prev {
+                float: right!important;
+                text-align: right;
+            }
+        }
+    }
+
 }
