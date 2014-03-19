@@ -10,24 +10,24 @@ redirect_from: /archive.html
     {% include _article_preview.html %}
 {% endfor %}
 
-<div class="archive-navigation">
-{% if paginator.next_page %}
-<div class="nav-next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="next">
-        <span class="pager-title">
-            Next page
-        </span>
-    </a>
-</div>
-{% endif %}
-
-{% if paginator.previous_page %}
-<div class="nav-previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="prev">
-        <span class="pager-title">
+<div class="page-nav archive-nav">
+    {% if paginator.next_page %}
+        <a
+            href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+            rel="prev"
+            class="page-nav-link prev"
+        >
             Previous page
-        </span>
-    </a>
-</div>
-{% endif %}
+        </a>
+    {% endif %}
+    {% if paginator.previous_page %}
+        <a
+            href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+            rel="next"
+            class="page-nav-link next"
+        >
+            Next page
+        </a>
+    {% endif %}
+    <hr />
 </div>

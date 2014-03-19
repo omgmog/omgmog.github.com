@@ -1,0 +1,32 @@
+{% assign previouspage = post.previous %}
+{% assign nextpage = post.next %}
+{% if previouspage or nextpage %}
+<div class="page-nav">
+    <hr />
+
+    <h2 class="nav-title">
+        More articles
+    </h2>
+
+    {% if previouspage %}
+        <a
+            href="{{ previouspage.url | prepend: site.baseurl | replace: '//', '/' }}"
+            rel="prev"
+            class="page-nav-link prev"
+        >
+            {{ previouspage.title }}
+        </a>
+    {% endif %}
+    {% if nextpage %}
+        <a
+            href="{{ nextpage.url | prepend: site.baseurl | replace: '//', '/' }}"
+            rel="next"
+            class="page-nav-link next"
+        >
+            {{ nextpage.title }}
+        </a>
+    {% endif %}
+
+    <hr />
+</div>
+{% endif %}
