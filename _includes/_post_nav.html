@@ -10,7 +10,7 @@
 
     {% if previouspage %}
         <a
-            href="{{ previouspage.url | prepend: site.baseurl | replace: '//', '/' }}"
+            href="{{ previouspage.url }}"
             rel="prev"
             class="page-nav-link prev"
         >
@@ -19,7 +19,7 @@
     {% endif %}
     {% if nextpage %}
         <a
-            href="{{ nextpage.url | prepend: site.baseurl | replace: '//', '/' }}"
+            href="{{ nextpage.url }}"
             rel="next"
             class="page-nav-link next"
         >
