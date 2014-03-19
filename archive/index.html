@@ -13,7 +13,7 @@ redirect_from: /archive.html
 <div class="page-nav archive-nav">
     {% if paginator.next_page %}
         <a
-            href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+            href="{{ paginator.next_page_path }}"
             rel="prev"
             class="page-nav-link prev"
         >
@@ -22,7 +22,7 @@ redirect_from: /archive.html
     {% endif %}
     {% if paginator.previous_page %}
         <a
-            href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+            href="{{ paginator.previous_page_path }}"
             rel="next"
             class="page-nav-link next"
         >
