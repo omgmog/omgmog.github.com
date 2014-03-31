@@ -305,8 +305,8 @@ pre {
     }
 }
 .page-nav {
-    position: absolute;
-    top: 50px;
+    position: fixed;
+    top: 50%;
     left: 50px;
     right: 50px;
     overflow: hidden;
