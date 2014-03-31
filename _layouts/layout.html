@@ -7,7 +7,7 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
     />
     <title>
-        {% if page.description %}{{ page.title }} | {% endif %}{{ site.name }}
+        {% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}
     </title>
     {% if page.description %}
     <meta
