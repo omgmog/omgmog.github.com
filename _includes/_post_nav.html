@@ -1,20 +1,16 @@
 {% assign previouspage = post.previous %}
 {% assign nextpage = post.next %}
 {% if previouspage or nextpage %}
-<div class="page-nav">
+<div class="page-nav posts-nav">
     <hr />
-
-    <h2 class="nav-title">
-        More articles
-    </h2>
-
     {% if previouspage %}
         <a
             href="{{ previouspage.url }}"
             rel="prev"
             class="page-nav-link prev"
+            title="{{ previouspage.title }}"
         >
-            {{ previouspage.title }}
+            Older post
         </a>
     {% endif %}
     {% if nextpage %}
@@ -22,8 +18,9 @@
             href="{{ nextpage.url }}"
             rel="next"
             class="page-nav-link next"
+            title="{{ nextpage.title }}"
         >
-            {{ nextpage.title }}
+            Newer post
         </a>
     {% endif %}
 
