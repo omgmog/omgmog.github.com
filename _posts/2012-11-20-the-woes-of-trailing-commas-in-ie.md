@@ -7,7 +7,13 @@ If you leave a trailing comma in your JavaScript code, you're a terrible person.
 
 <!-- more -->
 
-While fixing some issues on a site in IE7 recently, I was greeted by the familiarly unhelpful error message from Internet Explorer 7 that prompted me to write this. You can see an example below:
+While fixing some issues on a site in IE7 recently, I was greeted by the familiarly unhelpful error message from Internet Explorer 7 that prompted me to write this.
+
+{% highlight javascript %}
+Error: Expected identifier, string or number
+{% endhighlight %}
+
+You can see an example below:
 
 ![A really helpful error message in IE](http://uk.omg.li/L1VJ/by-default-2012-11-20-at-16.27.28.png)
 
