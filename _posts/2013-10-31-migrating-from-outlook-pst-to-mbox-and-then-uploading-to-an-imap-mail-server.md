@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Migrating from Outlook .pst to mbox and then uploading to an IMAP mail server"
-description: ""
-categories: []
+tags: ["mac", "hackintosh", "tutorial", "tip", "code", "terminal", "software", "development"]
 ---
 Microsoft Outlook uses a stupid/proprietary format to store mail locally. This is the burden I had to deal with recently while attempting to rescue mail from a friends dying computer.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Synchronising your Sublime Text 2 preferences with Dropbox
-tags: ["mac", "geekery", "software", "projects", "dropbox", "sublime text", "downloads"]
+tags: ["mac", "linux", "tip", "tutorial", "terminal", "software"]
 redirect_from:
  - "/post/16582689396/"
 ---

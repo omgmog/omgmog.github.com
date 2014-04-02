@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "So I've got a Raspberry Pi, now what?"
-description: ""
-categories: []
+tags: ["linux", "project", "consumerism", "review", "software", "hardware", "raspberry pi"]
 ---
 I was going to title this post "In which I moan about the Raspberry Pi", read on to find out why.
 

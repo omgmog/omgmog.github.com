@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reddit open imgur links in new window/tab
-tags: ["javascript", "jquery", "geekery", "software", "projects", "userscript", "chrome", "firefox", "reddit", "blog"]
+tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:
  - "/post/7275748354/"
 ---

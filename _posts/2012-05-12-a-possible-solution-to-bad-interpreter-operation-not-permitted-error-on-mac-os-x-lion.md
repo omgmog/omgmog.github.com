@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A possible solution to 'bad interpreter: operation not permitted' error on Mac OS X Lion"
-tags: ["geekery", "mac", "shell", "software"]
+tags: ["mac", "tip", "code", "terminal", "software"]
 ---
 Out of the blue I started having an issue in my Terminal.app on Lion where downloaded scripts/applications wouldn't run. I first noticed this when trying to setup the Android SDK.
 

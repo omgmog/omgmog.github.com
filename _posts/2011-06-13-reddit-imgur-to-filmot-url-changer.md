@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reddit imgur to filmot url changer
-tags: ["javascript", "jquery", "geekery", "software", "projects", "userscript", "chrome", "firefox", "reddit", "blog"]
+tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:
  - "/post/6483220482/"
  - "/post/6483220482/reddit-imgur-to-filmot-url-changer/"
