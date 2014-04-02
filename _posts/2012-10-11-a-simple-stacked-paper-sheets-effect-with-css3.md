@@ -38,7 +38,7 @@ article::after {
     left: -2px;
     top: -5px;
     z-index: -1;
-    -moz-transform: rotat
+    -moz-transform: rotate(-2deg);
     -webkit-transform: rotate(-2deg);
     transform: rotate(-2deg);
 }
