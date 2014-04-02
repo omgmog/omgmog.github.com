@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Installing Arch Linux ARM on the HP Chromebook 11"
+tags: ["linux", "project", "tutorial", "tip", "terminal", "github", "downloads", "chromebook"]
 ---
 
 I concluded in my [previous post](/post/hands-on-with-the-hp-chromebook-11/) about the HP Chromebook 11 that it's a good device for casually browsing the internet, but it's no replacement for a regular laptop or desktop for getting stuff done.

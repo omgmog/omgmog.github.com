@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Redesigning and relaunching Dingoonity
-tags: ["javascript", "jquery", "css", "php", "geekery", "software", "projects", "dingoonity", "blog"]
+tags: ["project", "meta", "development", "code"]
 redirect_from:
  - "/post/2901394035/"
  - "/post/2901394035/redesigning-and-relaunching-dingoonity/"

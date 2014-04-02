@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Imgur Url Changer and pics/funny comment link subreddit remover aka reddit link stuff
-tags: ["javascript", "jquery", "geekery", "software", "projects", "userscript", "chrome", "firefox", "reddit", "blog"]
+tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:
  - "/post/8214317821/"
 ---

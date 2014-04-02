@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Factory resetting a Nokia N900 from Mac OS X Mountain Lion"
+tags: ["mac", "linux", "hackintosh", "tutorial", "tip", "terminal", "downloads", "software", "hardware"]
 ---
 
 I had a Nokia N900 when they first came out, this was unfortunately shortly before Android had matured to a usable state, and so I didn't use my Nokia N900 for long.

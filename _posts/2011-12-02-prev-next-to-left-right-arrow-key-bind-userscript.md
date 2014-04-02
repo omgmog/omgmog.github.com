@@ -1,7 +1,7 @@
 ---
 layout: post
 title: prev/next to left/right arrow key bind userscript
-tags: ["javascript", "jquery", "geekery", "software", "projects", "userscript", "chrome", "firefox", "blog"]
+tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:
  - "/post/13629604347/"
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Fluid video embeds for your responsive website"
+tags: ["project", "tutorial", "tip", "code", "software", "browser", "usability", "development", "rwd"]
 ---
 Recently I came across an interesting problem, fluidly scaling iframe/embed code on a responsive design.
 

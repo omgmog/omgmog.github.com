@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Upgrading my Macbook Pro"
-tags: ["mac", "geekery", "gadgets", "software", "hardware", "projects", "blog", "consumerism"]
+tags: ["mac", "project", "consumerism", "tutorial", "tip", "hardware"]
 updated: 2014-02-28
 ---
 I've had my Macbook Pro for about a year now. It's the [Early-2011 15" bells and whistles model](http://www.everymac.com/systems/apple/macbook_pro/stats/macbook-pro-core-i7-2.2-15-early-2011-unibody-thunderbolt-specs.html). The specs (the bits we care about, if you can't be bothered to click the link) are as follows:

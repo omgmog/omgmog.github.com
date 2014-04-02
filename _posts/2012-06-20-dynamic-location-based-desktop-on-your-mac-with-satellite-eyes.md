@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dynamic location based desktop on your Mac with Satellite Eyes"
-tags: ["downloads", "geekery", "mac", "software"]
+tags: ["downloads", "mac", "software"]
 ---
 I came across this awesome application today, it sets your wallpaper to a satellite view of your current location. The application features a number of rendering mode, and full support for multiple monitors.
 

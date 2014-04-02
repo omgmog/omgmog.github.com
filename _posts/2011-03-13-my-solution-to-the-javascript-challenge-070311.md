@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My solution to the JavaScript challenge 07/03/11
-tags: ["javascript", "jquery", "geekery", "software", "projects", "blog"]
+tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:
  - "/post/3838724991/"
 ---

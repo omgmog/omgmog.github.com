@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Awesome Bash arrays"
+tags: ["mac", "linux", "tip", "tutorial", "terminal", "software", "browser", "development", "javascript"]
 ---
 Just some examples of how to do things with Bash arrays, and their analogous examples in Javascript.
 

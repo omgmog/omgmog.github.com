@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "These tabs they are a changin'"
+tags: ["mac", "review", "tip", "software", "browser"]
 ---
 The latest update to Chrome (25.0.1364.99) seems to have brought some slight tweaks the interface.
 

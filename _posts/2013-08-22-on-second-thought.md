@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "On second thought..."
+tags: ["mac", "android", "review", "software", "browser"]
 ---
 ... Google Hangouts for Chrome needs some work.
 

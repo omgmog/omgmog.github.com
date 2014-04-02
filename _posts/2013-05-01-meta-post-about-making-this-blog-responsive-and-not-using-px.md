@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Meta post about making this blog responsive and not using px"
-description: ""
-categories: []
+tags: ["project", "code", "github", "software", "meta", "usability", "javascript", "jekyll", "development"]
 ---
 If you're a returning visitor to __blomg__ you might notice some changes to the design.
 

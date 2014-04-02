@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building JavaScript arrays from HTML using regular expressions
-tags: ["javascript", "jquery", "geekery", "software", "projects", "blog"]
+tags: ["code", "tip", "tutorial", "browser", "javascript", "development"]
 redirect_from:
  - "/post/3673593945/"
  - "/post/3673593945/building-javascript-arrays-from-html-using-regular/"

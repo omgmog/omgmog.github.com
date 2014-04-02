@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A simple 'stacked paper sheets' effect with CSS3"
-tags: ["blog", "chrome", "css", "projects", "software"]
+tags: ["project", "tutorial", "tip", "code", "software", "browser", "usability", "development"]
 ---
 This is just a short post about an unobtrusive CSS3 effect that I"ve used on some projects lately. Using the `::before` and `::after` CSS pseudo elements and some CSS3 styles you can make a simple HTML element look like a stack of paper sheets.
 
