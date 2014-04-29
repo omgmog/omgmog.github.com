@@ -34,3 +34,11 @@ sass:
     compile_in_place: false
 gems:
     - jekyll-redirect-from
+
+nav_pages:
+    - link: "/"
+      text: "Home"
+    - link: "/about/"
+      text: "About"
+    - link: "/archive/"
+      text: "Archive"
