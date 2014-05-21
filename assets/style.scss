@@ -156,7 +156,8 @@ a {
     }
     .article-body {
         img,
-        figure {
+        figure,
+        > iframe {
             max-width: 100%;
             text-align: center;
             margin: 0 auto 1rem;
