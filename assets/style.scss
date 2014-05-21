@@ -133,6 +133,9 @@ a {
     }
 }
 @include breakpoint("small") {
+    .nav-link[href="/"] {
+        display: none;
+    }
     .main {
         padding: 1.4rem;
     }
@@ -240,6 +243,8 @@ a {
 }
 @include breakpoint("small") {
     .author-blurb {
+        margin: 1rem -1.4rem;
+        padding: 1.4rem;
 
         img {
             position: static;
