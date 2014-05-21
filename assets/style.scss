@@ -68,6 +68,7 @@ a {
 }
 .wrap {
     background-color: $color_tertiary;
+    overflow-x: hidden;
 }
 .header {
     @include box-sizing;
