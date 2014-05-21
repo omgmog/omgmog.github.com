@@ -17,6 +17,7 @@ body {
     font-family: $sansserif_fonts;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    color: #333;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -28,6 +29,16 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 1em;
     }
 }
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    color: $color_primary;
+
+    .article-body & {
+        font-size: 1rem;
+        color: inherit;
+    }
+}
 hr {
     width: 80%;
     height: 0;
@@ -37,93 +48,93 @@ hr {
     clear: both;
     display: block;
 }
+p, li {
+    line-height: 1.5;
+}
 a {
     @include transition(.2s, color, ease-in-out);
 
     &, &:link, &:active {
         color: $color_link_primary;
+        text-decoration: none;
     }
     &:visited {
         opacity: .8;
     }
     &:hover, &:focus {
         color: $color_link_secondary;
+        text-decoration: underline;
     }
 }
 .wrap {
     background-color: $color_tertiary;
-    background-image: url(bg.png);
-    background-position: 50% 0;
-    @include background-size;
 }
 .header {
-    padding: 2rem 1rem;
     @include box-sizing;
-
-    h1 {
-        font-family: Montserrat, $sansserif_fonts;
-        text-shadow:
-            0 0 2.5rem rgba(0,0,0,0.5),
-            0 .1rem darken($color_secondary, 20%),
-            0 .2rem darken($color_secondary, 20%),
-            0 .3rem darken($color_secondary, 20%),
-            0 .4rem darken($color_secondary, 20%);
-        line-height: 1;
-        text-align: center;
-        text-transform: uppercase;
-        color: $color_secondary;
-        font-size: 8rem;
-    }
+    background-image: url(bg_dark.png);
+    background-attachment: fixed;
+    background-position: 0;
 }
-.nav-buttons {
-    margin-top: 4rem;
-    text-align: center;
+.header-inner {
+    text-align: right;
+    padding: 3rem 0 .5rem;
+    max-width: 44rem;
+    margin: 0 auto;
 
-    a {
+    .nav-link, h1 {
         display: inline-block;
         font-size: 1rem;
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
-        margin: 0 1rem;
         color: $color_secondary;
     }
+    .nav-link {
+        margin: 0 0 0 1rem;
+    }
+    h1 {
+        float: left;
+        font-weight: normal;
+        font-size: 2rem;
+        margin-top: -1rem;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+.below {
+    height: 2rem;
+    background-image: url(bg.png);
+    background-attachment: fixed;
+    background-position: 0;
 }
 .main {
     width: 100%;
     position: relative;
     background-color: $color_secondary;
     font-family: $serif_fonts;
-    padding: 50px 100px;
+    padding: 50px 100px 0;
 
     .inner {
         max-width: 44rem;
         margin: 0 auto;
     }
 }
-
-@include breakpoint("medium") {
-    .header {
-        padding: 2rem;
-
-        h1 {
-            font-size: 5rem;
-        }
+@include breakpoint("not-big") {
+    .header-inner {
+        padding: 2rem 1rem .5rem;
     }
+}
+@include breakpoint("medium") {
     .main {
-        padding: 50px;
+        padding: 2.8rem 2.8rem 1.4rem;
     }
 }
 @include breakpoint("small") {
-    .header {
-        padding: 1rem;
-
-        h1 {
-            font-size: 4rem;
-        }
-    }
     .main {
-        padding: 25px;
+        padding: 1.4rem;
     }
 }
 .article {
@@ -136,7 +147,6 @@ a {
         margin: 0 0 1em;
 
         a {
-            text-decoration: none;
             color: $color_primary;
         }
     }
@@ -150,7 +160,6 @@ a {
         p, ul {
             margin: 0;
             margin-bottom: 1rem;
-            font-size: 1rem;
 
             img {
                 margin-bottom: 0;
@@ -213,7 +222,7 @@ a {
     }
 }
 .author-blurb {
-    background-color: #eee;
+    background-image: url(bg_light.png);
     overflow: hidden;
     margin: 1rem -200rem;
     padding: 1rem 200rem;
@@ -250,16 +259,10 @@ a {
 .links {
     clear: both;
     margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
+    margin-bottom: 1rem;
 
     li {
-        float: left;
-        width: 25%;
-        display: inline-block;
-        margin: 0;
-        text-align: center;
+        list-style: disc;
     }
 }
 code {
@@ -288,14 +291,10 @@ pre {
     }
 }
 .warning-message {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #b6edff;
     margin-bottom: 1rem;
     padding: .5em 1em;
-    background: #ecfaff;
     font-family: $sansserif_fonts;
-    @include border-radius(4px);
+    background-image: url(bg_light.png);
 
     p {
         font-size: 80%;
@@ -306,7 +305,7 @@ pre {
 }
 .page-nav {
     position: fixed;
-    top: 50%;
+    top: 20%;
     left: 50px;
     right: 50px;
     z-index: 1000;
@@ -335,7 +334,8 @@ pre {
         @include box-sizing;
         @include transition(.2s);
         background-color: #fff;
-        border: 2px solid $color_quaternary;
+        border: 2px solid;
+        border-color: $color_link_secondary;
         display: inline-block;
         max-width: 10rem;
         padding: .5rem .75rem;
@@ -343,15 +343,12 @@ pre {
         text-decoration: none;
 
         &.next {
-            margin-right: -30px;
         }
         &.prev {
-            margin-left: -30px;
         }
         &:hover {
             color: $color_link_secondary;
-            border-color: $color_link_secondary;
-            margin: 0;
+            border-color: $color_quaternary;
         }
     }
 }
@@ -375,5 +372,11 @@ pre {
             padding-bottom: 1em;
         }
     }
+}
 
+@include breakpoint("small") {
+
+    .links {
+        margin-left: 0;
+    }
 }
