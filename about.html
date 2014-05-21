@@ -5,29 +5,20 @@ permalink: /about/
 redirect_from: /about.html
 ---
 <div class="about-content">
-    <img
-        src="{{ site.baseurl }}assets/max.jpg"
-        alt="Max Glenister is a front-end developer from Oxford"
-        width="200px"
-        height="200px"
-        class="photo-max about"
-    />
     {% for paragraph in site.description %}
         {{ paragraph | markdownify }}
     {% endfor %}
-</div>
-<hr />
 
-<ul class="links">
-    {% for site in site.sites %}
-        <li>
-            <a href="{{ site.link }}" target="_blank">
-                {{ site.text }}
-            </a>
-        </li>
-    {% endfor %}
-</ul>
-<hr />
-<p>
-    See any errors? <a href="https://github.com/omgmog/omgmog.github.com/issues/new">let me know</a>!
-</p>
+    <p>
+        If you'd like to find out more about what Max has been upto, you can do so through the following channels:
+    </p>
+    <ul class="links">
+        {% for site in site.sites %}
+            <li>
+                <a href="{{ site.link }}" target="_blank">
+                    {{ site.text }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

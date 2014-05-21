@@ -2,15 +2,24 @@
 layout: layout
 title: Home
 ---
-{% for post in site.posts limit:1 %}
-    {% include _article_preview.html %}
+
+<h2>
+    Welcome to BLOMG
+</h2>
+
+{% for paragraph in site.description %}
+    {{ paragraph | markdownify }}
 {% endfor %}
-{% include _author_blurb.html %}
+<hr />
+{% for post in site.posts limit:3 %}
+    {% include _article_preview.html %}
+    <hr />
+{% endfor %}
 <h3>
     Recent posts
 </h3>
 <ul>
-{% for post in site.posts offset:1 limit:4 %}
+{% for post in site.posts offset:3 limit:4 %}
     <li>
         <a
             href="{{ post.url }}"
@@ -23,6 +32,7 @@ title: Home
 <p>
     You can find more posts in the <a href="/archive/">Archive</a>.
 </p>
+{% include _author_blurb.html %}
 <script type="text/javascript">
     // comment counts
     var disqus_shortname = '{{ site.disqus }}';

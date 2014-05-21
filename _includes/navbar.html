@@ -1,19 +1,20 @@
 <div class="header">
-    <h1>
-        BLOMG
-    </h1>
-    <nav class="nav-buttons">
+    <nav class="header-inner">
+        <h1>
+            <a href="{{ site.baseurl }}">
+                BL<strong>OMG</strong>
+            </a>
+        </h1>
         {% capture page_link %}{{ page.url | remove: 'index.html' }}{% endcapture %}
         {% for pg in site.nav_pages %}
             <a
                 href="{{ pg.link }}"
-                {% if pg.link == page_link %}
-                    class="active"
-                {% endif %}
+                class="nav-link"
             >
                 {{ pg.text }}
             </a>
         {% endfor %}
     </nav>
+    <div class="below header-below"></div>
 </div>
 
