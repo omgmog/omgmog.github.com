@@ -22,6 +22,11 @@
     -webkit-box-sizing: $type;
     box-sizing: $type;
 }
+@mixin box-shadow($shadow: 0 0 10px rgba(0,0,0,.06)) {
+    -moz-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
 @mixin border-radius($radius) {
     -moz-border-radius: $radius;
     -webkit-border-radius: $radius;
