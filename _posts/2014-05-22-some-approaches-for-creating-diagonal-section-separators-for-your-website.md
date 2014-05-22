@@ -137,10 +137,12 @@ Introducing the power of Sass:
         $w_int: $width/1px;
         $h_int: $height/1px;
         $v_pad: ($height / $width) * 100 + 1;
+        // we must use rgb because the # in hex doesn't work in some browsers
+        $rgb_color: 'rgb(#{red($color)}, #{green($color)}, #{blue($color)})';
 
         padding: #{$v_pad}% 0 0;
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="#{$w_int}" height="#{$h_int}"><polygon points="0,#{$h_int} #{$w_int},0 #{$w_int},#{$h_int}" style="fill:#{$color};stroke:#{$color};stroke-width:0"></polygon></svg>');
         background-position: 50%;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="#{$w_int}" height="#{$h_int}"><polygon points="0,#{$h_int} #{$w_int},0 #{$w_int},#{$h_int}" style="fill:#{$rgb_color};stroke:#{$rgb_color};stroke-width:0"></polygon></svg>');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
@@ -162,5 +164,8 @@ This Sass mixin will let you specify the width/height/color of your diagonal sep
 
 Not bad!
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/GcwQv/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="http://jsfiddle.net/ves2g/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
+This works pretty perfectly in Chrome, but it may have some issues in other browsers. If you can't see the nice diagonal lines in the example above, here is a picture to illustrate how the final result looks:
+
+![](http://i.imgur.com/dKWd4V7.png)
