@@ -281,22 +281,6 @@ pre {
     padding: .5rem 0;
 }
 @import "_pygments";
-.highlight {
-    width: 100%;
-    margin: 0 0 1rem;
-    border: 0;
-
-    pre {
-        width: 100%;
-        display: block;
-        margin: 0;
-        padding: .5rem 1em;
-    }
-    code {
-        white-space: pre-wrap;
-        padding: 0;
-    }
-}
 .warning-message {
     margin-bottom: 1rem;
     padding: .5em 1em;
