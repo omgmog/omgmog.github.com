@@ -136,7 +136,9 @@ Introducing the power of Sass:
     &::after {
         $w_int: $width/1px;
         $h_int: $height/1px;
-        padding: #{((#{$height}/#{$width})*100) + 1}% 0 0;
+        $v_pad: ($height / $width) * 100 + 1;
+
+        padding: #{$v_pad}% 0 0;
         background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="#{$w_int}" height="#{$h_int}"><polygon points="0,#{$h_int} #{$w_int},0 #{$w_int},#{$h_int}" style="fill:#{$color};stroke:#{$color};stroke-width:0"></polygon></svg>');
         background-position: 50%;
         background-repeat: no-repeat;
@@ -160,5 +162,5 @@ This Sass mixin will let you specify the width/height/color of your diagonal sep
 
 Not bad!
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/8ZbSU/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="http://jsfiddle.net/GcwQv/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
