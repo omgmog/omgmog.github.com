@@ -65,3 +65,22 @@
     -webkit-transform: $transforms;
     transform: $transforms;
 }
+@mixin diagonal-background($width, $height, $color) {
+    position: relative;
+    &::after {
+        $w_int: $width/1px;
+        $h_int: $height/1px;
+        $v_pad: ($height / $width) * 100 + 1;
+
+        padding: #{$v_pad}% 0 0;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="#{$w_int}" height="#{$h_int}"><polygon points="0,#{$h_int} #{$w_int},0 #{$w_int},#{$h_int}" style="fill:#{$color};stroke:#{$color};stroke-width:0"></polygon></svg>');
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        content: '';
+    }
+}
