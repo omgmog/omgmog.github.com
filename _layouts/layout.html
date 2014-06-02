@@ -12,7 +12,7 @@
     {% if page.description %}
     <meta
         name="description"
-        content="{{ page.content | split:"<!-- more -->" | first | strip_html }}"
+        content="{{ page.content | markdownify | split:"<!-- more -->" | first | strip_html }}"
     />
     {% else %}
     <meta
