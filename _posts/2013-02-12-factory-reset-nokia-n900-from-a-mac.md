@@ -24,7 +24,9 @@ As it turns out, the Nokia file servers for the utility to flash it, and the fla
 
 I managed to grab a copy of the `flasher-3.5` software for Mac OS `maemo_flasher-3.5_2.5.2.2_i386.dmg` from here:
 
-- [http://skeiron.org/tablets-dev/maemo-dev-env-downloads/](http://skeiron.org/tablets-dev/maemo-dev-env-downloads/).
+- [http://www.jedge.com/n810/flasher/](http://www.jedge.com/n810/flasher/).
+
+
 
 However, since OS X Lion this installer hasn't worked completely.
 
@@ -35,9 +37,8 @@ sudo cp -Rv /private/tmp/pc-connectivity/10.6/* /usr/lib/
 sudo cp -v /private/tmp/pc-connectivity-bin/10.6/flasher-3.5 /usr/bin/
 {% endhighlight %}
 
-You can find a selection of EMMC images here:
+You will have to [Google](https://www.google.co.uk/search?q=RX-51_2009SE_10.2010.13-2.VANILLA_PR_EMMC_MR0_ARM.bin) for the `RX-51_2009SE_10.2010.13-2.VANILLA_PR_EMMC_MR0_ARM.bin` file to flash your EMMC image as the official mirrors no-longer exist.
 
-- [http://skeiron.org/tablets-dev/nokia_N900/](http://skeiron.org/tablets-dev/nokia_N900/)
 
 Now you can use `flasher-3.5` from the terminal to flash an EMMC image:
 
