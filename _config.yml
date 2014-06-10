@@ -7,7 +7,7 @@ paginate: 15
 paginate_path: "archive/page:num"
 
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 
 name: "The blog of Max Glenister"
 author:
