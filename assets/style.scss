@@ -1,23 +1,28 @@
 @import "_variables";
 @import "_mixins";
 
+@mixin add_background($background:"bg.png") {
+    background-image: url($background);
+    background-attachment: fixed;
+    background-position: 0;
+}
 * {
     @include box-sizing;
 }
 html {
-    font-size: 18px;
+    font-size: 22px;
 }
 body {
     margin: 0;
     padding: 0;
-    background-color: $color_secondary;
     font-weight: 400;
     line-height: 1.5;
     overflow-x: hidden;
     font-family: $sansserif_fonts;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    color: #333;
+    color: $color_tertiary;
+    @include add_background;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -56,23 +61,21 @@ a {
 
     &, &:link, &:active {
         color: $color_link_primary;
-        text-decoration: none;
+        text-decoration: underline;
     }
     &:visited {
         opacity: .8;
     }
     &:hover, &:focus {
         color: $color_link_secondary;
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 .wrap {
-    background-color: $color_tertiary;
     overflow-x: hidden;
 }
 .header {
     @include box-sizing;
-    background-image: url(bg_dark.png);
     background-attachment: fixed;
     background-position: 0;
 }
@@ -88,7 +91,7 @@ a {
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
-        color: $color_secondary;
+        color: $color_tertiary;
     }
     .nav-link {
         margin: 0 0 0 1rem;
@@ -106,12 +109,9 @@ a {
     }
 }
 .below {
-    height: 3rem;
-    background-image: url(bg.png);
-    background-attachment: fixed;
-    background-position: 0;
-
+    height: 4rem;
     @include diagonal-background(1200px, 30px, #fff);
+    @include add_background;
 }
 .main {
     width: 100%;
@@ -127,7 +127,7 @@ a {
 }
 @include breakpoint("not-big") {
     .header-inner {
-        padding: 2rem 1rem .5rem;
+        padding: 2rem 0 .5rem;
     }
 }
 @include breakpoint("medium") {
@@ -136,11 +136,18 @@ a {
     }
 }
 @include breakpoint("small") {
-    .nav-link[href="/"] {
-        display: none;
+    .nav-link {
+        font-size: .6rem;
+
+        &[href="/"] {
+            display: none;
+        }
     }
     .main {
         padding: 1.4rem;
+    }
+    .header-inner {
+        padding: 2rem 1.4rem .5rem;
     }
 }
 .article {
@@ -154,6 +161,7 @@ a {
 
         a {
             color: $color_primary;
+            text-decoration: none;
         }
     }
     .article-body {
@@ -229,11 +237,11 @@ a {
     }
 }
 .author-blurb {
-    background-image: url(bg_light.png);
     overflow: hidden;
     margin: 1rem -200rem;
-    padding: 1rem 200rem;
+    padding: 2rem 200rem;
     position: relative;
+    @include add_background;
 
     img {
         top: 50%;
@@ -243,6 +251,9 @@ a {
     p {
         margin: 0;
         margin-left: 7rem;
+    }
+    a {
+        color: $color_tertiary;
     }
 }
 @include breakpoint("small") {
