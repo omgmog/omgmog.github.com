@@ -127,7 +127,7 @@ a {
 }
 @include breakpoint("not-big") {
     .header-inner {
-        padding: 2rem 0 .5rem;
+        padding: 2rem .5rem .5rem;
     }
 }
 @include breakpoint("medium") {
