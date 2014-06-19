@@ -310,8 +310,8 @@ pre {
 .page-nav {
     position: fixed;
     top: 20%;
-    left: 50px;
-    right: 50px;
+    left: 20px;
+    right: 20px;
     z-index: 1000;
 
     hr {
@@ -341,8 +341,9 @@ pre {
         border: 2px solid;
         border-color: $color_link_secondary;
         display: inline-block;
-        max-width: 10rem;
-        padding: .5rem .75rem;
+        max-width: 8rem;
+        font-size: .8rem;
+        padding: .4rem .6rem;
         position: relative;
         text-decoration: none;
 
