@@ -11,6 +11,8 @@
 }
 html {
     font-size: 22px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 body {
     margin: 0;
@@ -82,7 +84,7 @@ a {
 .header-inner {
     text-align: right;
     padding: 3rem 0 .5rem;
-    max-width: 44rem;
+    max-width: 35rem;
     margin: 0 auto;
 
     .nav-link, h1 {
@@ -121,7 +123,7 @@ a {
     padding: 50px 100px 0;
 
     .inner {
-        max-width: 44rem;
+        max-width: 35rem;
         margin: 0 auto;
     }
 }
@@ -237,9 +239,9 @@ a {
     }
 }
 .author-blurb {
-    overflow: hidden;
     margin: 1rem -200rem;
     padding: 2rem 200rem;
+    min-width: 100%;
     position: relative;
     @include add_background;
 
