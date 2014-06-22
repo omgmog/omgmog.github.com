@@ -66,4 +66,8 @@ And there you go. For this to work straight away you'll need to restart the acpi
 $ systemctl restart acpid
 ```
 
-And that's it. Now when you close the lid, you should see that the lights on the back turn off, so you can tell it has suspended.
+And that's it. Now when you close the lid, you should see that the lights on the back turn off, so you can tell it has suspended. To make this permanent you'll need to enable acpid on boot:
+
+```
+$ systemctl enable acpid
+```
