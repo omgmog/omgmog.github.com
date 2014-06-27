@@ -41,7 +41,7 @@ For *real* work, Mac OS with the following:
 - **Screenshot**: [Slingshot](https://itunes.apple.com/gb/app/slingshot/id436819784?mt=12) (Though I previously used CloudApp)
 - **Browser**: [Google Chrome](http://google.com/chrome) mostly, but also [all the Firefoxes](https://github.com/omgmog/install-all-firefox).
 
-Besides these things, I use a lot of things in the terminal. You can see what I find cool by checking out my stars on Github: [https://github.com/stars/omgmog](https://github.com/stars/omgmog).
+Besides these things, I use a lot of things in the terminal. You can see what I find cool by checking out my stars on GitHub: [https://github.com/stars/omgmog](https://github.com/stars/omgmog).
 
 ### What would be your dream setup?
 

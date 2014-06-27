@@ -25,4 +25,4 @@ Currently it installs:
 - Firefox 9.0.1
 - Firefox Aurora (nightly)
 
-If you're interested you can grab the script over at [Github](https://github.com/omgmog/install-all-firefox)
+If you're interested you can grab the script over at [GitHub](https://github.com/omgmog/install-all-firefox)
