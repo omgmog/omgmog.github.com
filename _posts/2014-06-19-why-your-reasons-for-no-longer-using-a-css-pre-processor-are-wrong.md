@@ -62,7 +62,7 @@ If you're using a selector like `body div.something-cool a`, stop that.
 
 Each nesting level should use one selector. If you've got something like the following monstrosity (taken from the article that spurred this post), stop that too!:
 
-{% highlight sass %}
+{% highlight scss %}
 // ...
 .presumably-a-link {
     &.active {
@@ -137,7 +137,7 @@ Yeah I wouldn't want to maintain even 2 variations on that style across my site,
 
 First some mixins, these will be declared once but can be used as often as you like for free!
 
-{% highlight sass %}
+{% highlight scss %}
 @mixin border-radius($radius: 10px) {
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
@@ -160,7 +160,7 @@ First some mixins, these will be declared once but can be used as often as you l
 
 And now we'll use the mixins to apply the vendor-prefixed styles to our class.
 
-{% highlight sass %}
+{% highlight scss %}
 .my-awesome-box {
     @include border-radius;
     @include box-shadow(0 0 20px rgba(0,0,0,.4));
@@ -189,7 +189,7 @@ The article suggested that, as they only use Sass variables for colors, they wer
 
 Here are some examples of how you could use Sass variables:
 
-{% highlight sass %}
+{% highlight scss %}
 // Colors
 $color_accent_base: #3498DB;
 $color_accent_darker_10: darken($color_accent_base, 10%);
