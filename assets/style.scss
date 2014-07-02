@@ -133,6 +133,16 @@ a {
     .inner {
         max-width: 35rem;
         margin: 0 auto;
+
+        &:hover {
+            .article {
+                @include opacity(.5);
+
+                &:hover {
+                    @include opacity(1);
+                }
+            }
+        }
     }
 }
 @include breakpoint("not-big") {
@@ -163,6 +173,7 @@ a {
 .article {
     position: relative;
     z-index: 10;
+    @include transition(.2s);
 
     .article-heading {
         font-size: 1.5rem;
