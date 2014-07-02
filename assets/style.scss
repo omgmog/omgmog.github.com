@@ -111,14 +111,24 @@ a {
 }
 .below {
     height: 4rem;
-    @include diagonal-background(1200px, 30px, #fff);
     @include add_background;
+
+    &.header-below {
+        @include diagonal-background(1200px, 30px, #fff);
+    }
+    &.main-below {
+        @include diagonal-background(1200px, 30px, #fff, true);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 }
 .main {
     width: 100%;
     position: relative;
     background-color: $color_secondary;
-    padding: 50px 100px 0;
+    padding: 50px 0 100px;
 
     .inner {
         max-width: 35rem;
@@ -240,7 +250,6 @@ a {
     padding: 2rem 200rem;
     min-width: 100%;
     position: relative;
-    @include add_background;
 
     img {
         top: 50%;
