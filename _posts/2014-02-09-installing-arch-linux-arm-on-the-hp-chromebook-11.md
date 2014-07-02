@@ -30,20 +30,20 @@ Next, you need to join your Wifi network, and then you can choose to 'browse as 
 
 When you're logged in to Chrome, press `ctrl` + `alt` + `T` to open the `crosh` terminal. Here you can become root and enable USB booting:
 
-```
+{% highlight bash %}
 $ shell
 $ sudo su -
 $ crossystem dev_boot_usb=1 dev_boot_signed_only=0
-```
+{% endhighlight %}
 
 ### Using my `install.sh` to install Arch
 Insert your USB stick, and dismiss any of the File Browser windows that open. Now, in your terminal execute the following commands, where `/dev/sda` is your USB stick:
 
-```
-cd /home/root
-wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/install.sh
-sh install.sh /dev/sda
-```
+{% highlight bash %}
+$ cd /home/root
+$ wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/install.sh
+$ sh install.sh /dev/sda
+{% endhighlight %}
 
 You'll be prompted through the process, it shouldn't take very long.
 
@@ -51,17 +51,17 @@ After the `install.sh` has finished creating the USB stick, you can reboot your 
 
 Login as `root`, with no password. You can turn on Wifi and connect to your Wifi network using the following:
 
-```
-wifi-menu mlan0
-```
+{% highlight bash %}
+$ wifi-menu mlan0
+{% endhighlight %}
 
 If you want to finish here, I would suggest using my `post-install.sh` to install Mate and lightdm, then get on with enjoying your new Arch install.
 
-```
-pacman -S wget
-wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/post-install.sh
-sh post-install.sh
-```
+{% highlight bash %}
+$ pacman -S wget
+$ wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/post-$ install.sh
+$ sh post-install.sh
+{% endhighlight %}
 
 If you're feeling hardcore, why stop here? Let's install to the eMMC!
 
@@ -69,11 +69,11 @@ If you're feeling hardcore, why stop here? Let's install to the eMMC!
 
 Just like with installing to the USB stick, you need to download the `install.sh` and then invoke it, but this time specify `/dev/mmcblk0`
 
-```
-pacman -S wget
-wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/install.sh
-sh install.sh /dev/mmcblk0
-```
+{% highlight bash %}
+$ pacman -S wget
+$ wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/install.sh
+$ sh install.sh /dev/mmcblk0
+{% endhighlight %}
 
 The installer will set up the partitions as before, install Arch, and then configure the Kernel so that your Chromebook can boot in to Arch.
 
@@ -81,15 +81,15 @@ Regarding the modification of the PKGBUILD for `trousers`:
 
 This is the only package you need to modify. When prompted, press `y` to edit, open in `nano` or your preferred text editor, find the line that reads:
 
-```
+{% highlight bash %}
 arch=('i686' 'x86_64')
-```
+{% endhighlight %}
 
 and replace it with
 
-```
+{% highlight bash %}
 arch=('armv7h')
-```
+{% endhighlight %}
 
 ## Doing real work on the HP Chromebook 11
 

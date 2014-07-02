@@ -55,23 +55,23 @@ If you've recently upgraded `Xcode`, or haven't yet installed it, you will need 
 
 {% highlight bash %}
 # Installing Xcode command-line tools if you don't have them (gcc and stuff)
-xcode-select --install
+$ xcode-select --install
 # Accepting terms and conditions for xcode
-sudo xcodebuild -license
+$ sudo xcodebuild -license
 {% endhighlight %}
 
 Install `libpst` using [Homebrew](http://brew.sh/):
 
 {% highlight bash %}
-brew install libpst
+$ brew install libpst
 {% endhighlight %}
 
 Convert your `.pst` to a `mbox`
 
 {% highlight bash %}
-cd <location of your .pst file>
-mkdir mbox
-readpst -o mbox -r <your pst file>.pst
+$ cd <location of your .pst file>
+$ mkdir mbox
+$ readpst -o mbox -r <your pst file>.pst
 {% endhighlight %}
 
 ## Uploading your mbox to your IMAP server
@@ -81,13 +81,13 @@ Download `imap_upload.py` from [http://imap-upload.sourceforge.net/](http://imap
 Upload the folders you want to your `IMAP` server
 
 {% highlight bash %}
-python imap_upload.py --host <imap server address> --box <remote folder> <local mbox>
+$ python imap_upload.py --host <imap server address> --box <remote folder> <local mbox>
 {% endhighlight %}
 
 In my case I did the following:
 
 {% highlight bash %}
-python imap_upload.py --host imap.1and1.co.uk --box Inbox mbox/personal/Inbox/mbox
+$ python imap_upload.py --host imap.1and1.co.uk --box Inbox mbox/personal/Inbox/mbox
 {% endhighlight %}
 
 You will be prompted to log in with your `IMAP` account name and password. If you have any problems, the `imap_upload.py` script also accepts `imap://` urls, and `--port`, etc. You can read more about the options on [http://imap-upload.sourceforge.net/](http://imap-upload.sourceforge.net/), or by running `imap_upload.py --help`.
