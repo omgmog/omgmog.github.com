@@ -43,9 +43,9 @@ After you've set up the `CNAME` file on your repository, you'll also need to cre
 This is the easiest part of the whole process, pushing to GitHub. Assuming `git` is already set up on your system, you just use the following commands:
 
 {% highlight bash %}
-git add (new files)
-git commit -am "A message describing the changes you made"
-git push
+$ git add (new files)
+$ git commit -am "A message describing the changes you made"
+$ git push
 {% endhighlight %}
 
 After all of that, all that remains is adjust the permalink taxonomy, and creating a custom blog index (such as the one I've made) to display the latest posts.

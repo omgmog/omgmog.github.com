@@ -32,9 +32,9 @@ I always spend a large amount of time looking for an online SVG to PNG converter
 First install `librsvg` using `brew`:
 
 {% highlight bash %}
-brew update && brew upgrade
-brew install librsvg
-ln -s /usr/local/bin/rsvg-convert /usr/local/bin/rsvg
+$ brew update && brew upgrade
+$ brew install librsvg
+$ ln -s /usr/local/bin/rsvg-convert /usr/local/bin/rsvg
 {% endhighlight %}
 
 Then, you can either using rsvg directly, or make a function like the following:

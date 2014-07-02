@@ -16,10 +16,10 @@ Again this is to facilitate getting around the filters at work, it removes `/r/p
 
 So for example
 
-[http://www.reddit.com/r/pics/comments/92dd8/test_post_please_ignore/](http://www.reddit.com/r/pics/comments/92dd8/test_post_please_ignore/)
+[http://www.reddit.com/r/pics/comments/92dd8/test\_post\_please\_ignore/](http://www.reddit.com/r/pics/comments/92dd8/test_post_please_ignore/)
 
 becomes
 
-[http://www.reddit.com/comments/92dd8/test_post_please_ignore/](http://www.reddit.com/comments/92dd8/test_post_please_ignore/)
+[http://www.reddit.com/comments/92dd8/test\_post\_please\_ignore/](http://www.reddit.com/comments/92dd8/test_post_please_ignore/)
 
 Simple stuff - [get it here](http://userscripts.org/scripts/review/108575)

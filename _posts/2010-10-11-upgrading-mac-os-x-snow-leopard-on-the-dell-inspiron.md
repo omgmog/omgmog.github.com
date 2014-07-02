@@ -38,9 +38,9 @@ Then copy the com.apple.Boot.plist back to **/Extra/**.
 Delete **IO80211Family.kext** from **/System/Library/Extensions** &mdash; you can do this through the terminal by opening Terminal.app and executing the following commands, and entering your password when prompted:
 
 {% highlight bash %}
-cd /System/Library/Extensions
-sudo rm -rf IO80211Family.kext
-sudo rm -rf SleepEnabler.kext
+$ cd /System/Library/Extensions
+$ sudo rm -rf IO80211Family.kext
+$ sudo rm -rf SleepEnabler.kext
 {% endhighlight %}
 
 After these things are done, and the 10.6.4 combo-update has downloaded, you can start the installer. It will take a little while, so go grab a coffee while it installs. After the installer completes you will need to reboot.
