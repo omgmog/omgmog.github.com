@@ -13,7 +13,7 @@ code {
 }
 .highlight {
     width: 100%;
-    margin: 2rem 0 1rem;
+    margin: 1rem 0;
     border: 0;
     position: relative;
     @include box-shadow(0 .3rem 1rem rgba(0,0,0,.4));
@@ -69,6 +69,8 @@ code {
                         content: 'example.js';
                     }@elseif $lang == 'jinja' {
                         content: 'example.html';
+                    }@elseif $lang == 'yaml' {
+                        content: 'example.yml';
                     }@elseif $lang == 'ruby' {
                         content: 'example.rb';
                     }@else{
