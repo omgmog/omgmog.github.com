@@ -4,7 +4,7 @@ title: More Portable Android Gaming with the GPD G7
 tags: ["consumerism", "review", "android", "software", "hardware"]
 ---
 
-Hot on the heels of my last Android device review I'm back with another device: The [GPD G7 Quad-core from GamePad Digital](http://www.gpd.hk/product/showproduct.php?lang=en&id=46).
+Hot on the heels of my last Android device review I'm back with another device: The [GPD G7 Quad-core from GamePad Digital](http://www.gpd.hk/products.asp?selectclassid=017001&id=1278).
 
 The G7 is very similar to the JXD 7800B, but with a more ergonomic game-controller shape to it.
 
