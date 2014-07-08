@@ -19,7 +19,7 @@ title: Home
     Recent posts
 </h3>
 <ul>
-{% for post in site.posts offset:3 limit:4 %}
+{% for post in site.posts offset:3 limit:5 %}
     <li>
         <a
             href="{{ post.url }}"
@@ -28,6 +28,22 @@ title: Home
         </a>
     </li>
 {% endfor %}
+</ul>
+<h3>
+    Featured posts
+</h3>
+<ul>
+    {% for post in site.posts %}
+        {% if post.featured %}
+            <li>
+                <a
+                    href="{{ post.url }}"
+                >
+                    {{ post.title }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
 </ul>
 <p>
     You can find more posts in the <a href="/archive/">Archive</a>.

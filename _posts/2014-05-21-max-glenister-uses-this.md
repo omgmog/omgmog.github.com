@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Max Glenister Uses This
+featured: true
 ---
 
 This is a Q/A article in the style of "[The Setup](http://usesthis.com/)".
@@ -18,7 +19,7 @@ Lately I've been getting in to [organising](/post/sushack-1-building-the-foundat
 For computers, currently I'm constantly moving between the following:
 
 - 2011 15" Macbook Pro (with [upgraded RAM and SSD](/post/upgrading-my-macbook-pro/))
-- 2011 21.5" iMac (with upgraded RAM) 
+- 2011 21.5" iMac (with upgraded RAM)
 - HP Chromebook 11 ([running Arch Linux](/post/video-installing-arch-linux-arm-on-the-hp-chromebook-11/))
 
 The Macbook is my main machine at home, and the iMac is my main machine at work. The Chromebook is a great size, but lacks the power (as it's ARM-based), but runs Arch Linux just fine and so makes a good home away from home.
