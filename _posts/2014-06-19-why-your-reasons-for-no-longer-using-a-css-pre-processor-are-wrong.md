@@ -88,6 +88,30 @@ Each nesting level should use one selector. If you've got something like the fol
 
 Seriously, that example gives me nightmares and makes me weep a little.
 
+Here's how I would approach something like this, with very little selector complexity:
+
+{% highlight scss %}
+// ...
+.presumably-a-link {
+    .extras {
+        opacity: 0;
+    }
+    .description {
+        opacity: 1;
+        @include transition(opacity .2s linear);
+        // other styles
+    }
+
+    &.active {
+        .extras {
+            opacity: 1;
+        }
+        .description {
+            opacity: 0;
+        }
+    }
+}
+{% endhiglight %}
 
 ### "Vendor Prefixes"
 
