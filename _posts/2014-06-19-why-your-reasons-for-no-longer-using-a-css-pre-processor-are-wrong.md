@@ -111,7 +111,7 @@ Here's how I would approach something like this, with very little selector compl
         }
     }
 }
-{% endhiglight %}
+{% endhighlight %}
 
 ### "Vendor Prefixes"
 
