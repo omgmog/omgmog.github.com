@@ -29,7 +29,7 @@ description: true
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         disqusLoaded = true;
     }
-    function findTop(obj) {
+    function findTop (obj) {
         var curtop = 0;
         if (obj.offsetParent) {
             do {
@@ -39,14 +39,15 @@ description: true
         }
     }
 
-    if(window.location.hash.indexOf('#disqus_thread') > 0)
+    if (window.location.hash.indexOf('#disqus_thread') > 0) {
         loadDisqus();
+    }
 
-    if(comments) {
+    if (comments) {
         var commentsOffset = findTop(comments);
 
-        window.onscroll = function() {
-            if(!disqusLoaded && window.pageYOffset > commentsOffset - 1000) {
+        window.onscroll = function () {
+            if (!disqusLoaded && window.pageYOffset > commentsOffset - 1000) {
                 loadDisqus();
             }
         }
