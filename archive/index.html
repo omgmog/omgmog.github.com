@@ -4,31 +4,30 @@ title: Archive
 redirect_from: /archive.html
 ---
 
-{% assign posts = paginator.posts %}
-
-{% for post in posts %}
+{% assign paginated_posts = paginator.posts %}
+{% for post in paginated_posts %}
     {% include _article_preview.html %}
     <hr />
 {% endfor %}
 
 <div class="page-nav archive-nav">
-    {% if paginator.next_page %}
-        <a
-            href="{{ paginator.next_page_path }}"
-            rel="prev"
-            class="page-nav-link prev"
-        >
-            Older posts
-        </a>
-    {% endif %}
-    {% if paginator.previous_page %}
-        <a
-            href="{{ paginator.previous_page_path }}"
-            rel="next"
-            class="page-nav-link next"
-        >
-            Newer posts
-        </a>
-    {% endif %}
+{% if paginator.next_page %}
+    <a
+        href="{{ paginator.next_page_path }}"
+        rel="prev"
+        class="page-nav-link prev"
+    >
+        Older posts
+    </a>
+{% endif %}
+{% if paginator.previous_page %}
+    <a
+        href="{{ paginator.previous_page_path }}"
+        rel="next"
+        class="page-nav-link next"
+    >
+        Newer posts
+    </a>
+{% endif %}
     <hr />
 </div>
