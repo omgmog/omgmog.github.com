@@ -59,7 +59,7 @@ If you want to finish here, I would suggest using my `post-install.sh` to instal
 
 {% highlight bash %}
 $ pacman -S wget
-$ wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/post-$ install.sh
+$ wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/post-install.sh
 $ sh post-install.sh
 {% endhighlight %}
 
