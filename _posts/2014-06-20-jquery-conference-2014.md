@@ -145,7 +145,7 @@ Yehuda talked about the benefits of convention over configuration, and went in t
 
 Andrew talked about the steps that his team at the Financial Times online have taken to make all of their legacy sites more consistent using a modular approach to asset loading and a component-based interface.
 
-### Divya Manian - Graphical effects you didn’t know browsers could do
+### Divya Manian - Graphical effects you didn't know browsers could do
 
 {% assign video_url = "http://player.vimeo.com/video/97724405" %}
 {% include article_video_embed.html %}

@@ -4,7 +4,7 @@ title: Finally... a review of the GPD G5A Android handheld
 tags: ["consumerism", "review", "android", "software", "hardware"]
 ---
 
-I’ve got another Android gaming handheld to review, the [GPD G5A from GamePad Digital](http://www.gpd.hk/products.asp?selectclassid=017001&id=1279). I’ve had this device for a little while now, and have played with it loads. This device was sent to my directly from GPD back in February, but I’ve been too busy with life to write up a review.
+I've got another Android gaming handheld to review, the [GPD G5A from GamePad Digital](http://www.gpd.hk/products.asp?selectclassid=017001&id=1279). I've had this device for a little while now, and have played with it loads. This device was sent to my directly from GPD back in February, but I've been too busy with life to write up a review.
 
 <!-- more -->
 
@@ -41,7 +41,7 @@ Here are some images that compare the GPD G5A to other devices.
 
 ![](http://i.imgur.com/YChhe6A.png)
 
-All in all, I’m a fan of this device. The size and form-factor are nearly perfect. It’s not small enough to go in your pocket, but it’s nice and comfortable for long gaming sessions.
+All in all, I'm a fan of this device. The size and form-factor are nearly perfect. It's not small enough to go in your pocket, but it's nice and comfortable for long gaming sessions.
 
 The GPD devices board on Dingoonity:
 

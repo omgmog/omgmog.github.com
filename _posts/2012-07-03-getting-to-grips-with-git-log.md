@@ -14,7 +14,7 @@ One nice thing is the `git log` command, and the options you can pass to it. Som
 
 `git log --since="2 weeks ago" -- gitk` - Show the changes during the last two weeks to the file gitk. The "--" is necessary to avoid confusion with the branch named gitk
 
-`git log --branches --not --remotes=origin` - Shows all commits that are in any of local branches but not in any of remote-tracking branches for origin (what you have that origin doesn’t).
+`git log --branches --not --remotes=origin` - Shows all commits that are in any of local branches but not in any of remote-tracking branches for origin (what you have that origin doesn't).
 
 I haven't yet had much use for a lot of the options shown here, but I do have a particular use case: preparing for my Daily Scrum at work. Without giving a history of Agile, a Daily Scrum is a meeting amongst a development team where each team member tells the team what s/he did on the previous work day, and what s/he plans to do today.
 
