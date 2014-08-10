@@ -2,6 +2,7 @@
 layout: post
 title: "Adding support for &lt;!-- more --> tag to Jekyll without plugins"
 tags: ["project", "tutorial", "tip", "code", "software", "usability", "development", "jekyll"]
+updated: 2014-08-10
 ---
 Here's a quick tip for an approach I've started using to split post content at a given point for displaying in an archive page, without using a plugin.
 
@@ -97,3 +98,15 @@ post.content =>
 {% endhighlight %}
 
 I also take the steps to `strip_html` and `trim` the text to 300 characters.
+
+Update:
+You can use [Jekyll's built in "excerpt" feature](http://jekyllrb.com/docs/posts/#post-excerpts) these days, by doing the following:
+
+1. Define your `excerpt_separator` in your `_config.yml`:
+    ```excerpt_separator: "<!-- more -->"```
+2. Update the examples I provided before, to use `post.excerpt`:
+    {% highlight jinja %}
+{% raw %}
+{% post.excerpt %}
+{% endraw %}
+{% endhighlight %}

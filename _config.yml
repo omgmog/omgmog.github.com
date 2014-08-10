@@ -5,6 +5,7 @@ safe: true
 lsi: false
 paginate: 15
 paginate_path: "archive/page:num"
+excerpt_separator: "<!-- more -->"
 
 markdown: redcarpet
 highlighter: pygments
