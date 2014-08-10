@@ -15,7 +15,7 @@ layout: none
             "id": "{{ post.id }}",
             "published": "{{ post.date }}",
             "title": "{{ post.title | strip_html | escape }}",
-            "summary": "{{ post.excerpt | strip_html | escape | strip_newlines }}",
+            "summary": "{{ post.excerpt | strip_html | strip_newlines }}",
             "link": "{{ site.baseurl }}{{ post.url }}",
             "author": "{{ site.author.name }}"
         }
