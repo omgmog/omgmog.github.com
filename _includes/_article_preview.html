@@ -4,7 +4,7 @@
         {% assign video_url = post.video_url %}
         {% include article_video_embed.html %}
         <p>
-            {{ post.excerpt }} <a href="{{ post.url }}">Read more</a>
+            {{ post.excerpt | strip_html }} <a href="{{ post.url }}">Read more</a>
         </p>
     </div>
     {% include _metadata.html %}
