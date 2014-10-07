@@ -5,6 +5,7 @@ permalink: /about/
 redirect_from: /about.html
 ---
 <div class="about-content">
+    {% include _author_picture.html %}
     {% for paragraph in site.description %}
         {{ paragraph | markdownify }}
     {% endfor %}
