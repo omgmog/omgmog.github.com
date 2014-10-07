@@ -250,10 +250,22 @@ a {
     margin-right: 1rem;
     @include border-radius(100%);
 }
+.about-content {
+    .photo-max {
+        width: 80px;
+        height: 80px;
+        margin-top: 1rem;
+    }
+}
 @include breakpoint("small") {
     .photo-max {
         float: none;
         margin: 0 auto 1rem;
+    }
+    .about-content {
+        .photo-max {
+            display: none;
+        }
     }
 }
 .author-blurb {
@@ -402,4 +414,7 @@ pre {
     .links {
         margin-left: 0;
     }
+}
+.twitter-timeline {
+    min-width: 100%!important;
 }
