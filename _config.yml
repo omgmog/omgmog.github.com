@@ -16,16 +16,14 @@ author:
     bio: "Max Glenister is a front-end developer from Oxford. He writes mostly about front-end development and technology."
 disqus: "blogomgmog"
 description: |
-    This is the blog of Max Glenister, a front-end developer from Oxford.
-
-    Mostly containing tech-related musings, and any other miscellany that Max finds interesting.
+    Hello, I'm Max Glenister, a front-end developer from Oxford, and this is my blog. It mostly contains tech-related musings, and any other miscellany that I find interesting.
 sites:
     - link: "http://github.com/omgmog"
-      text: "@omgmog on GitHub"
+      text: "GitHub"
     - link: "http://twitter.com/omgmog"
-      text: "@omgmog on Twitter"
+      text: "Twitter"
     - link: "http://omgmog.net"
-      text: "Max's personal site"
+      text: "My personal site"
     - link: "http://marmaladeandjam.co.uk"
       text: "Marmalade &amp; Jam"
 sass:
