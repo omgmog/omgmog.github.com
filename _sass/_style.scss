@@ -1,11 +1,6 @@
 @import "_variables";
 @import "_mixins";
 
-@mixin add_background($background:"bg.png") {
-    background-image: url($background);
-    background-attachment: fixed;
-    background-position: 0;
-}
 * {
     @include box-sizing;
 }
@@ -29,19 +24,19 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    @include rem(font-size, 1rem);
 
     .article-body & {
-        margin-bottom: 1em;
+        @include rem(margin-bottom, 1rem);
     }
 }
 h2 {
-    font-size: 1.5rem;
+    @include rem(font-size, 1.5rem);
     margin-bottom: 1em;
     color: $color_primary;
 
     .article-body & {
-        font-size: 1rem;
+        @include rem(font-size, 1rem);
         color: inherit;
     }
 }
@@ -82,26 +77,26 @@ a {
 }
 .header-inner {
     text-align: right;
-    padding: 3rem 0 .5rem;
-    max-width: 35rem;
+    @include rem(padding, 3rem 0);
+    @include rem(max-width, $max_width);
     margin: 0 auto;
 
     .nav-link, h1 {
         display: inline-block;
-        font-size: 1rem;
+        @include rem(font-size, 1rem);
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
         color: $color_tertiary;
     }
     .nav-link {
-        margin: 0 0 0 1rem;
+        @include rem(margin, 0 0 0 1rem);
     }
     h1 {
         float: left;
         font-weight: normal;
-        font-size: 2rem;
-        margin-top: -1rem;
+        @include rem(font-size, 2rem);
+        @include rem(margin-top, -1rem);
 
         a {
             color: inherit;
@@ -109,29 +104,14 @@ a {
         }
     }
 }
-.below {
-    height: 4rem;
-    @include add_background;
-
-    &.header-below {
-        @include diagonal-background(1200px, 30px, #fff);
-    }
-    &.main-below {
-        @include diagonal-background(1200px, 30px, #fff, true);
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-}
 .main {
     width: 100%;
     position: relative;
     background-color: $color_secondary;
-    padding: 50px 0 100px;
+    @include rem(padding, 2.7rem 0 5.4rem);
 
     .inner {
-        max-width: 35rem;
+        @include rem(max-width, $max_width);
         margin: 0 auto;
 
         &:hover {
@@ -147,27 +127,27 @@ a {
 }
 @include breakpoint("not-big") {
     .header-inner {
-        padding: 2rem .5rem .5rem;
+        @include rem(padding, 2rem .5rem .5rem);
     }
 }
 @include breakpoint("medium") {
     .main {
-        padding: 2.8rem 2.8rem 1.4rem;
+        @include rem(padding, 2.8rem 2.8rem 1.4rem);
     }
 }
 @include breakpoint("small") {
     .nav-link {
-        font-size: .6rem;
+        @include rem(font-size, .6rem);
 
         &[href="/"] {
             display: none;
         }
     }
     .main {
-        padding: 1.4rem;
+        @include rem(padding, 1.4rem);
     }
     .header-inner {
-        padding: 2rem 1.4rem .5rem;
+        @include rem(padding, 2rem 1.4rem .5rem);
     }
 }
 .article {
@@ -176,8 +156,8 @@ a {
     @include transition(.2s);
 
     .article-heading {
-        font-size: 1.5rem;
-        margin: 0 0 1em;
+        @include rem(font-size, 1.5rem);
+        @include rem(margin, 0 0 1rem);
 
         a {
             color: $color_primary;
@@ -190,11 +170,11 @@ a {
         > iframe {
             max-width: 100%;
             text-align: center;
-            margin: 0 auto 1rem;
+            @include rem(margin, 0 auto 1rem);
         }
         p, ul {
             margin: 0;
-            margin-bottom: 1rem;
+            @include rem(margin-bottom, 1rem);
 
             img {
                 margin-bottom: 0;
@@ -210,9 +190,9 @@ a {
             }
         }
         blockquote {
-            margin-bottom: 1rem;
+            @include rem(margin-bottom, 1rem);
             border-left: 1em solid rgba(0,0,0,.05);
-            padding-left: 1rem;
+            @include rem(padding-left, 1rem);
             margin-left: 0;
             p {
                 font-style: italic;
@@ -221,13 +201,13 @@ a {
         }
         .speaker {
             float: right;
-            margin: 0 0 1rem 1rem;
+            @include rem(margin, 0 0 1rem 1rem);
         }
     }
 }
 .video-wrapper {
     width: 100%;
-    margin: 0 0 1rem;
+    @include rem(margin, 0 0 1rem);
     height: 0;
     padding: 0 0 56.25%;
     position: relative;
@@ -247,20 +227,20 @@ a {
 .photo-max {
     margin: 0 auto;
     float: left;
-    margin-right: 1rem;
+    @include rem(margin-right, 1rem);
     @include border-radius(100%);
 }
 .about-content {
     .photo-max {
         width: 80px;
         height: 80px;
-        margin-top: 1rem;
+        @include rem(margin-top, 1rem);
     }
 }
 @include breakpoint("small") {
     .photo-max {
         float: none;
-        margin: 0 auto 1rem;
+        @include rem(margin, 0 auto 1rem);
     }
     .about-content {
         .photo-max {
@@ -269,8 +249,8 @@ a {
     }
 }
 .author-blurb {
-    margin: 1rem -200rem;
-    padding: 2rem 200rem;
+    @include rem(margin, 1rem -200rem);
+    @include rem(padding, 2rem 200rem);
     min-width: 100%;
     position: relative;
 
@@ -281,7 +261,7 @@ a {
     }
     p {
         margin: 0;
-        margin-left: 7rem;
+        @include rem(margin-left, 7rem);
     }
     a {
         color: $color_tertiary;
@@ -289,16 +269,16 @@ a {
 }
 @include breakpoint("small") {
     .author-blurb {
-        margin: 1rem -1.4rem;
-        padding: 1.4rem;
+        @include rem(margin, 1rem -1.4rem);
+        @include rem(padding, 1.4rem);
 
         img {
             position: static;
             margin: 0 auto;
-            width: 100px;
+            @include rem(width, 5.5rem);
         }
         p {
-            margin: 1rem 0;
+            @include rem(margin, 1rem 0);
         }
     }
 }
@@ -310,7 +290,7 @@ a {
 .links {
     clear: both;
     margin: 0;
-    margin-bottom: 1rem;
+    @include rem(margin-bottom, 1rem);
 
     li {
         list-style: disc;
@@ -322,11 +302,11 @@ code {
     white-space: nowrap;
 }
 pre {
-    padding: .5rem 0;
+    @include rem(padding, 5rem 0);
 }
 @import "_pygments";
 .warning-message {
-    margin-bottom: 1rem;
+    @include rem(padding, 1rem);
     padding: .5em 1em;
     background-image: url(bg_light.png);
 
@@ -340,8 +320,8 @@ pre {
 .page-nav {
     position: fixed;
     top: 20%;
-    left: 20px;
-    right: 20px;
+    @include rem(left, 1rem);
+    @include rem(right, 1rem);
     z-index: 1000;
 
     hr {
@@ -371,9 +351,9 @@ pre {
         border: 2px solid;
         border-color: $color_link_secondary;
         display: inline-block;
-        max-width: 8rem;
-        font-size: .8rem;
-        padding: .4rem .6rem;
+        @include rem(max-width, 8rem);
+        @include rem(font-size, .8rem);
+        @include rem(padding, .4rem .6rem);
         position: relative;
         text-decoration: none;
 
