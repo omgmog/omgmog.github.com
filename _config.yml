@@ -28,7 +28,6 @@ sites:
       text: "Marmalade &amp; Jam"
 sass:
     style: compressed
-    compile_in_place: false
 gems:
     - jekyll-redirect-from
 

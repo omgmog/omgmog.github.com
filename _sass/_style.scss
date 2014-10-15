@@ -1,0 +1,420 @@
+@import "_variables";
+@import "_mixins";
+
+@mixin add_background($background:"bg.png") {
+    background-image: url($background);
+    background-attachment: fixed;
+    background-position: 0;
+}
+* {
+    @include box-sizing;
+}
+html {
+    font-size: 18px;
+    font-family: $sansserif_fonts;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: $color_tertiary;
+    @include add_background;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+
+    .article-body & {
+        margin-bottom: 1em;
+    }
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    color: $color_primary;
+
+    .article-body & {
+        font-size: 1rem;
+        color: inherit;
+    }
+}
+hr {
+    width: 80%;
+    height: 0;
+    border: 0 solid $color_secondary;
+    border-top: 2px solid $color_quaternary;
+    margin: 2rem 10%;
+    clear: both;
+    display: block;
+}
+p, li {
+    line-height: 1.5;
+}
+a {
+    @include transition(.2s, color, ease-in-out);
+
+    &, &:link, &:active {
+        color: $color_link_primary;
+        text-decoration: underline;
+    }
+    &:visited {
+        opacity: .8;
+    }
+    &:hover, &:focus {
+        color: $color_link_secondary;
+        text-decoration: none;
+    }
+}
+.wrap {
+    overflow-x: hidden;
+}
+.header {
+    @include box-sizing;
+    background-attachment: fixed;
+    background-position: 0;
+}
+.header-inner {
+    text-align: right;
+    padding: 3rem 0 .5rem;
+    max-width: 35rem;
+    margin: 0 auto;
+
+    .nav-link, h1 {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color_tertiary;
+    }
+    .nav-link {
+        margin: 0 0 0 1rem;
+    }
+    h1 {
+        float: left;
+        font-weight: normal;
+        font-size: 2rem;
+        margin-top: -1rem;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+.below {
+    height: 4rem;
+    @include add_background;
+
+    &.header-below {
+        @include diagonal-background(1200px, 30px, #fff);
+    }
+    &.main-below {
+        @include diagonal-background(1200px, 30px, #fff, true);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+.main {
+    width: 100%;
+    position: relative;
+    background-color: $color_secondary;
+    padding: 50px 0 100px;
+
+    .inner {
+        max-width: 35rem;
+        margin: 0 auto;
+
+        &:hover {
+            .article {
+                @include opacity(.5);
+
+                &:hover {
+                    @include opacity(1);
+                }
+            }
+        }
+    }
+}
+@include breakpoint("not-big") {
+    .header-inner {
+        padding: 2rem .5rem .5rem;
+    }
+}
+@include breakpoint("medium") {
+    .main {
+        padding: 2.8rem 2.8rem 1.4rem;
+    }
+}
+@include breakpoint("small") {
+    .nav-link {
+        font-size: .6rem;
+
+        &[href="/"] {
+            display: none;
+        }
+    }
+    .main {
+        padding: 1.4rem;
+    }
+    .header-inner {
+        padding: 2rem 1.4rem .5rem;
+    }
+}
+.article {
+    position: relative;
+    z-index: 10;
+    @include transition(.2s);
+
+    .article-heading {
+        font-size: 1.5rem;
+        margin: 0 0 1em;
+
+        a {
+            color: $color_primary;
+            text-decoration: none;
+        }
+    }
+    .article-body {
+        img,
+        figure,
+        > iframe {
+            max-width: 100%;
+            text-align: center;
+            margin: 0 auto 1rem;
+        }
+        p, ul {
+            margin: 0;
+            margin-bottom: 1rem;
+
+            img {
+                margin-bottom: 0;
+                display: inherit;
+            }
+        }
+        figure {
+            img {
+                margin-bottom: 0;
+            }
+            figcaption {
+                font-size: 80%;
+            }
+        }
+        blockquote {
+            margin-bottom: 1rem;
+            border-left: 1em solid rgba(0,0,0,.05);
+            padding-left: 1rem;
+            margin-left: 0;
+            p {
+                font-style: italic;
+                color: lighten($color_primary, 10%);
+            }
+        }
+        .speaker {
+            float: right;
+            margin: 0 0 1rem 1rem;
+        }
+    }
+}
+.video-wrapper {
+    width: 100%;
+    margin: 0 0 1rem;
+    height: 0;
+    padding: 0 0 56.25%;
+    position: relative;
+    overflow: hidden;
+
+    * {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
+    }
+}
+.photo-max {
+    margin: 0 auto;
+    float: left;
+    margin-right: 1rem;
+    @include border-radius(100%);
+}
+.about-content {
+    .photo-max {
+        width: 80px;
+        height: 80px;
+        margin-top: 1rem;
+    }
+}
+@include breakpoint("small") {
+    .photo-max {
+        float: none;
+        margin: 0 auto 1rem;
+    }
+    .about-content {
+        .photo-max {
+            display: none;
+        }
+    }
+}
+.author-blurb {
+    margin: 1rem -200rem;
+    padding: 2rem 200rem;
+    min-width: 100%;
+    position: relative;
+
+    img {
+        top: 50%;
+        position: absolute;
+        margin-top: -50px;
+    }
+    p {
+        margin: 0;
+        margin-left: 7rem;
+    }
+    a {
+        color: $color_tertiary;
+    }
+}
+@include breakpoint("small") {
+    .author-blurb {
+        margin: 1rem -1.4rem;
+        padding: 1.4rem;
+
+        img {
+            position: static;
+            margin: 0 auto;
+            width: 100px;
+        }
+        p {
+            margin: 1rem 0;
+        }
+    }
+}
+.about-content {
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.links {
+    clear: both;
+    margin: 0;
+    margin-bottom: 1rem;
+
+    li {
+        list-style: disc;
+    }
+}
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    white-space: nowrap;
+}
+pre {
+    padding: .5rem 0;
+}
+@import "_pygments";
+.warning-message {
+    margin-bottom: 1rem;
+    padding: .5em 1em;
+    background-image: url(bg_light.png);
+
+    p {
+        font-size: 80%;
+        color: rgba(0,0,0,.7);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+.page-nav {
+    position: fixed;
+    top: 20%;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    hr {
+        display: none;
+    }
+
+    .page-nav-link {
+        &.prev {
+            float: left;
+            text-align: left;
+        }
+        &.next {
+            float: right;
+            text-align: right;
+        }
+    }
+}
+@include breakpoint("big") {
+    .page-nav {
+        height: 0;
+    }
+    .page-nav-link {
+        @include border-radius(2rem);
+        @include box-sizing;
+        @include transition(.2s);
+        background-color: #fff;
+        border: 2px solid;
+        border-color: $color_link_secondary;
+        display: inline-block;
+        max-width: 8rem;
+        font-size: .8rem;
+        padding: .4rem .6rem;
+        position: relative;
+        text-decoration: none;
+
+        &.next {
+        }
+        &.prev {
+        }
+        &:hover {
+            color: $color_link_secondary;
+            border-color: $color_quaternary;
+        }
+    }
+}
+@include breakpoint("not-big") {
+    .page-nav {
+        position: static;
+        width: 100%;
+
+        hr {
+            display: block;
+        }
+        .page-nav-link {
+            border: 0!important;
+            display: inline-block;
+            max-width: 50%;
+            clear: none;
+            margin-bottom: 2em;
+        }
+        &.archive-nav {
+            overflow: hidden;
+            padding-bottom: 1em;
+        }
+    }
+}
+
+@include breakpoint("small") {
+
+    .links {
+        margin-left: 0;
+    }
+}
+.twitter-timeline {
+    min-width: 100%!important;
+}
