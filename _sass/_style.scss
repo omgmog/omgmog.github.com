@@ -19,7 +19,7 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     color: $color_tertiary;
-    @include add_background;
+    background-color: #fff;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -72,14 +72,23 @@ a {
 }
 .header {
     @include box-sizing;
-    background-attachment: fixed;
-    background-position: 0;
+    background-color: #2a2a2a;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-image: url(bg.png);
 }
 .header-inner {
     text-align: right;
     @include rem(padding, 3rem 0);
     @include rem(max-width, $max_width);
     margin: 0 auto;
+
+    a, a:link, a:visited {
+        color: #fafafa;
+    }
+    a:hover {
+        color: $color_link_secondary;
+    }
 
     .nav-link, h1 {
         display: inline-block;
@@ -357,10 +366,6 @@ pre {
         position: relative;
         text-decoration: none;
 
-        &.next {
-        }
-        &.prev {
-        }
         &:hover {
             color: $color_link_secondary;
             border-color: $color_quaternary;
