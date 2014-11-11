@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Better link underlines with Sass"
-description: ""
-categories: []
+tags: ["software", "tip", "development", "browser", "sass", "meta"]
 ---
 
 ![](http://i.imgur.com/mSVkI40.png)
