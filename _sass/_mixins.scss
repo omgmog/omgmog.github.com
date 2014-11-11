@@ -121,7 +121,7 @@
         .15em 0 $color,
         -.15em 0 $color;
 }
-@mixin linkUnderlines($background, $color) {
+@mixin linkUnderlines($background, $color, $color_hover) {
     color: $color;
     text-decoration: none;
     @include textShadowToCropUnderline($background);
@@ -157,5 +157,13 @@
     *:before,
     *:after {
         text-shadow: none;
+    }
+
+    &:hover {
+        color: $color_hover;
+        background-image:
+            linear-gradient($background, $background),
+            linear-gradient($background, $background),
+            linear-gradient($color_hover, $color_hover);
     }
 }

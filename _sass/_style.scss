@@ -140,7 +140,11 @@ a {
         }
 
         a {
-            @include linkUnderlines($color_secondary, $color_link_primary);
+            @include linkUnderlines(
+                $color_secondary,
+                $color_link_primary,
+                $color_link_secondary
+            );
         }
     }
 }
