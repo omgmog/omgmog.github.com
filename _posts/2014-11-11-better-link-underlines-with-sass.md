@@ -64,9 +64,9 @@ $selectionColor: #b4d5fe;
         linear-gradient($background, $background),
         linear-gradient($color, $color);
     background-size:
-        .05em .0625em,
-        .05em .0625em,
-        .0625em .0625em;
+        .05em 1px,
+        .05em 1px,
+        1px 1px;
     background-repeat:
         no-repeat,
         no-repeat,
