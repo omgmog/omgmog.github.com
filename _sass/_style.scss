@@ -4,6 +4,12 @@
 * {
     @include box-sizing;
 }
+::selection {
+    background-color: $color_highlight;
+}
+::-moz-selection {
+    background-color: $color_highlight;
+}
 html {
     font-size: 18px;
     font-family: $sansserif_fonts;
@@ -132,6 +138,10 @@ a {
                 }
             }
         }
+
+        a {
+            @include linkUnderlines($color_secondary, $color_link_primary);
+        }
     }
 }
 @include breakpoint("not-big") {
@@ -171,6 +181,7 @@ a {
         a {
             color: $color_primary;
             text-decoration: none;
+            background: none!important;
         }
     }
     .article-body {

@@ -104,3 +104,58 @@
     #{$property}: $rem;
   }
 }
+@mixin textShadowToCropUnderline($color) {
+    text-shadow:
+        .03em 0 $color,
+        -.03em 0 $color,
+        0 .03em $color,
+        0 -.03em $color,
+
+        .06em 0 $color,
+        -.06em 0 $color,
+        .09em 0 $color,
+        -.09em 0 $color,
+
+        .12em 0 $color,
+        -.12em 0 $color,
+        .15em 0 $color,
+        -.15em 0 $color;
+}
+@mixin linkUnderlines($background, $color) {
+    color: $color;
+    text-decoration: none;
+    @include textShadowToCropUnderline($background);
+
+    background-image:
+        linear-gradient($background, $background),
+        linear-gradient($background, $background),
+        linear-gradient($color, $color);
+    background-size:
+        .05em .0625em,
+        .05em .0625em,
+        .0625em .0625em;
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        repeat-x;
+    background-position:
+        0% 90%,
+        100% 90%,
+        0% 90%;
+
+    &::selection {
+        @include textShadowToCropUnderline($color_highlight);
+        background-color: $color_highlight;
+    }
+    &::-moz-selection {
+        @include textShadowToCropUnderline($color_highlight);
+        background-color: $color_highlight;
+    }
+    &:before,
+    &:after,
+    *,
+    *:before,
+    *:after {
+        text-shadow: none;
+    }
+}
