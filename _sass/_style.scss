@@ -372,6 +372,7 @@ pre {
         @include box-sizing;
         @include transition(.2s);
         background-color: #fff;
+        background-image: none!important;
         border: 2px solid;
         border-color: $color_link_secondary;
         display: inline-block;
