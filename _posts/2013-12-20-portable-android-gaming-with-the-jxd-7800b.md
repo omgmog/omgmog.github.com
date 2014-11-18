@@ -25,7 +25,7 @@ Since 2011 the Android portables from JXD have been improving to keep up with th
 So the specs look great, but the device, like the previous JXD Android devices, resembles the offspring of a Nexus 7 and a PSP.
 
 ## Unpacking the JXD 7800B
-I received my JXD 7800B from [DinoDirect](http://www.dinodirect.com/s7800-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p36270352.html), it arrived very fast and came well packaged. 
+I received my JXD 7800B from [DinoDirect](http://www.dinodirect.com/s7800b-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p42169462.html), it arrived very fast and came well packaged. 
 
 DinoDirect even included a plug adapter to use the US plug provided with British outlets, and they threw in an iPhone screen protector as a gift.
 
@@ -95,4 +95,4 @@ Links to newest firmware and relevant threads on Dingoonity Boards here:
 
 Buy the JXD 7800B from DinoDirect here: 
 
-- [http://www.dinodirect.com/s7800-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p36270352.html](http://www.dinodirect.com/s7800-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p36270352.html)
+- [http://www.dinodirect.com/s7800b-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p42169462.html](http://www.dinodirect.com/s7800b-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p42169462.html)
