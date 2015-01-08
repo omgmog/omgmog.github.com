@@ -7,7 +7,6 @@ redirect_from: /archive.html
 {% assign paginated_posts = paginator.posts %}
 {% for post in paginated_posts %}
     {% include _article_preview.html %}
-    <hr />
 {% endfor %}
 
 {% if paginator.next_page %}
