@@ -25,7 +25,7 @@ sites:
     - link: "http://omgmog.net"
       text: "My personal site"
     - link: "http://marmaladeandjam.co.uk"
-      text: "Marmalade &amp; Jam"
+      text: "My web design company"
 sass:
     style: compressed
 gems:
