@@ -18,70 +18,89 @@ html {
 }
 body {
     margin: 0;
-    padding: 0;
+    @include rem(padding, 0 0 10rem);
     font-weight: 400;
     line-height: 1.5;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     color: $color_tertiary;
-    background-color: #fff;
+    background-color: $color_secondary;
+    text-align: center;
+}
+@include breakpoint('small') {
+    body {
+        @include rem(padding, 1rem);
+    }
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, hr, p img, figure img, .comments {
+    @include rem(max-width, $max_width);
+    width: 100%;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol, hr, img, .comments {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    @include rem(margin-bottom, 1rem);
+    text-align: left;
+    line-height: 1;
 }
 h1, h2, h3, h4, h5, h6 {
-    margin: 0;
     padding: 0;
     @include rem(font-size, 1rem);
-
-    .article-body & {
-        @include rem(margin-bottom, 1rem);
-    }
+}
+h1 {
+    @include rem(font-size, 2rem);
 }
 h2 {
     @include rem(font-size, 1.5rem);
-    margin-bottom: 1em;
+    @include rem(margin, 2rem auto);
     color: $color_primary;
-
-    .article-body & {
-        @include rem(font-size, 1rem);
-        color: inherit;
-    }
-}
-hr {
-    width: 80%;
-    height: 0;
-    border: 0 solid $color_secondary;
-    border-top: 2px solid $color_quaternary;
-    margin: 2rem 10%;
-    clear: both;
-    display: block;
 }
 p, li {
     line-height: 1.5;
+}
+hr {
+    height: 0;
+    width: 80%;
+    border: transparent;
+    border-top: 2px solid $color_quaternary;
+    @include rem(margin, 2rem auto);
+    clear: both;
+    display: block;
+}
+iframe {
+    width: 100%;
+    border: 0;
+    @include rem(height, 20rem);
+    @include rem(max-width, $max_width);
+    @include rem(margin, 0 auto 1rem);
+}
+article {
+    iframe {
+        @include box-shadow(0 .3rem 1rem rgba(0,0,0,.4));
+    }
 }
 a {
     @include transition(.2s, color, ease-in-out);
 
     &, &:link, &:active {
         color: $color_link_primary;
-        text-decoration: underline;
+        text-decoration: none;
     }
     &:visited {
         opacity: .8;
     }
     &:hover, &:focus {
         color: $color_link_secondary;
-        text-decoration: none;
+        text-decoration: underline;
     }
 }
-.wrap {
-    overflow-x: hidden;
-}
-.header {
+header {
+    display: block;
     @include box-sizing;
-    background-color: #2a2a2a;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-image: url(bg.png);
+    background-color: $color_tertiary;
+    @include rem(margin-bottom, 2rem);
 }
 .header-inner {
     text-align: right;
@@ -89,333 +108,48 @@ a {
     @include rem(max-width, $max_width);
     margin: 0 auto;
 
-    a, a:link, a:visited {
-        color: #fafafa;
-    }
-    a:hover {
-        color: $color_link_secondary;
-    }
-
-    .nav-link, h1 {
+    a {
         display: inline-block;
         @include rem(font-size, 1rem);
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
-        color: $color_tertiary;
-    }
-    .nav-link {
         @include rem(margin, 0 0 0 1rem);
-    }
-    h1 {
-        float: left;
-        font-weight: normal;
-        @include rem(font-size, 2rem);
-        @include rem(margin-top, -1rem);
+        color: $color_secondary;
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-    }
-}
-.main {
-    width: 100%;
-    position: relative;
-    background-color: $color_secondary;
-    @include rem(padding, 2.7rem 0 5.4rem);
-
-    .inner {
-        @include rem(max-width, $max_width);
-        margin: 0 auto;
-
-        &:hover {
-            .article {
-                @include opacity(.5);
-
-                &:hover {
-                    @include opacity(1);
-                }
-            }
-        }
-
-        a {
-            @include linkUnderlines(
-                $color_secondary,
-                $color_link_primary,
-                $color_link_secondary
-            );
-        }
-    }
-}
-@include breakpoint("not-big") {
-    .header-inner {
-        @include rem(padding, 2rem .5rem .5rem);
-    }
-}
-@include breakpoint("medium") {
-    .main {
-        @include rem(padding, 2.8rem 2.8rem 1.4rem);
-    }
-}
-@include breakpoint("small") {
-    .nav-link {
-        @include rem(font-size, .6rem);
-
-        &[href="/"] {
-            display: none;
-        }
-    }
-    .main {
-        @include rem(padding, 1.4rem);
-    }
-    .header-inner {
-        @include rem(padding, 2rem 1.4rem .5rem);
-    }
-}
-.article {
-    position: relative;
-    z-index: 10;
-    @include transition(.2s);
-
-    .article-heading {
-        @include rem(font-size, 1.5rem);
-        @include rem(margin, 0 0 1rem);
-
-        a {
-            color: $color_primary;
-            text-decoration: none;
-            background: none!important;
-        }
-    }
-    .article-body {
-        img,
-        figure,
-        > iframe {
-            max-width: 100%;
-            text-align: center;
-            @include rem(margin, 0 auto 1rem);
-        }
-        p, ul {
-            margin: 0;
-            @include rem(margin-bottom, 1rem);
-
-            img {
-                margin-bottom: 0;
-                display: inherit;
-            }
-        }
-        figure {
-            img {
-                margin-bottom: 0;
-            }
-            figcaption {
-                font-size: 80%;
-            }
-        }
-        blockquote {
-            @include rem(margin-bottom, 1rem);
-            border-left: 1em solid rgba(0,0,0,.05);
-            @include rem(padding-left, 1rem);
+        &:first-child {
+            float: left;
             margin-left: 0;
-            p {
-                font-style: italic;
-                color: lighten($color_primary, 10%);
-            }
         }
-        .speaker {
-            float: right;
-            @include rem(margin, 0 0 1rem 1rem);
-        }
-    }
-}
-.video-wrapper {
-    width: 100%;
-    @include rem(margin, 0 0 1rem);
-    height: 0;
-    padding: 0 0 56.25%;
-    position: relative;
-    overflow: hidden;
-
-    * {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-        width: 100%;
-        border: 0;
-    }
-}
-.photo-max {
-    margin: 0 auto;
-    float: left;
-    @include rem(margin-right, 1rem);
-    @include border-radius(100%);
-}
-.about-content {
-    .photo-max {
-        width: 80px;
-        height: 80px;
-        @include rem(margin-top, 1rem);
     }
 }
 @include breakpoint("small") {
-    .photo-max {
-        float: none;
-        @include rem(margin, 0 auto 1rem);
+    header {
+        @include rem(margin, -1rem -1rem 2rem);
     }
-    .about-content {
-        .photo-max {
+    .header-inner {
+        @include rem(padding, 3rem 1rem);
+        [href="/"] {
             display: none;
         }
     }
 }
-.author-blurb {
-    @include rem(margin, 1rem -200rem);
-    @include rem(padding, 2rem 200rem);
-    min-width: 100%;
-    position: relative;
-
-    img {
-        top: 50%;
-        position: absolute;
-        margin-top: -50px;
-    }
-    p {
-        margin: 0;
-        @include rem(margin-left, 7rem);
-    }
-    a {
-        color: $color_tertiary;
-    }
-}
-@include breakpoint("small") {
-    .author-blurb {
-        @include rem(margin, 1rem -1.4rem);
-        @include rem(padding, 1.4rem);
-
-        img {
-            position: static;
-            margin: 0 auto;
-            @include rem(width, 5.5rem);
-        }
-        p {
-            @include rem(margin, 1rem 0);
-        }
-    }
-}
-.about-content {
-    display: block;
-    clear: both;
-    overflow: hidden;
-}
-.links {
-    clear: both;
-    margin: 0;
-    @include rem(margin-bottom, 1rem);
-
-    li {
-        list-style: disc;
-    }
-}
-code {
-    padding: 2px 4px;
-    font-size: 90%;
-    white-space: nowrap;
-}
-pre {
-    @include rem(padding, 5rem 0);
-}
-@import "_pygments";
 .warning-message {
-    @include rem(padding, 1rem);
-    padding: .5em 1em;
+    @include rem(padding, 2rem 0);
+    @include rem(margin, -2rem auto 2rem);
     background-image: url(bg_light.png);
 
     p {
-        font-size: 80%;
         color: rgba(0,0,0,.7);
         margin-top: 0;
         margin-bottom: 0;
     }
 }
-.page-nav {
+.top {
     position: fixed;
-    top: 20%;
-    @include rem(left, 1rem);
     @include rem(right, 1rem);
-    z-index: 1000;
-
-    hr {
-        display: none;
-    }
-
-    .page-nav-link {
-        &.prev {
-            float: left;
-            text-align: left;
-        }
-        &.next {
-            float: right;
-            text-align: right;
-        }
-    }
-}
-@include breakpoint("big") {
-    .page-nav {
-        height: 0;
-    }
-    .page-nav-link {
-        @include border-radius(2rem);
-        @include box-sizing;
-        @include transition(.2s);
-        background-color: #fff;
-        background-image: none!important;
-        border: 2px solid;
-        border-color: $color_link_secondary;
-        display: inline-block;
-        @include rem(max-width, 8rem);
-        @include rem(font-size, .8rem);
-        @include rem(padding, .4rem .6rem);
-        position: relative;
-        text-decoration: none;
-
-        &:hover {
-            color: $color_link_secondary;
-            border-color: $color_quaternary;
-        }
-    }
-}
-@include breakpoint("not-big") {
-    .page-nav {
-        position: static;
-        width: 100%;
-
-        hr {
-            display: block;
-        }
-        .page-nav-link {
-            border: 0!important;
-            display: inline-block;
-            max-width: 50%;
-            clear: none;
-            margin-bottom: 2em;
-        }
-        &.archive-nav {
-            overflow: hidden;
-            padding-bottom: 1em;
-        }
-    }
-}
-
-@include breakpoint("small") {
-
-    .links {
-        margin-left: 0;
-    }
-}
-.twitter-timeline {
-    min-width: 100%!important;
+    @include rem(bottom, 1rem);
+    color: $color_quaternary;
+    text-transform: uppercase;
+    font-weight: bold;
 }

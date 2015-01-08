@@ -1,16 +1,14 @@
-<article class="article">
+<article>
     {% include _old_post_warning.html %}
 
     {% include _article_metadata.html %}
 
     <hr />
 
-    <div class="article-body">
-        {% assign video_url = post.video_url %}
-        {% include article_video_embed.html %}
+    {% assign video_url = post.video_url %}
+    {% include article_video_embed.html %}
 
-        {{ content }}
-    </div>
+    {{ content }}
 
     <hr />
 
