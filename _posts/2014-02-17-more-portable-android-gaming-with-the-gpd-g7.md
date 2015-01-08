@@ -2,6 +2,7 @@
 layout: post
 title: More Portable Android Gaming with the GPD G7
 tags: ["consumerism", "review", "android", "software", "hardware"]
+categories: 'hardware-review'
 ---
 
 Hot on the heels of my last Android device review I'm back with another device: The [GPD G7 Quad-core from GamePad Digital](http://www.gpd.hk/products.asp?selectclassid=017001&id=1278).

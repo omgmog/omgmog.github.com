@@ -38,3 +38,5 @@ nav_pages:
       text: "About"
     - link: "/archive/"
       text: "Archive"
+    - link: "/reviews/"
+      text: "Reviews"

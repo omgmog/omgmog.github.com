@@ -2,20 +2,21 @@
 layout: post
 title: Portable Android gaming with the JXD 7800B
 tags: ["consumerism", "review", "android", "software", "hardware"]
+categories: 'hardware-review'
 ---
 
 It has been a while since I've had a new portable console to play with (and I'm still waiting for my GCW to arrive!), so let's ease back in to this stuff with an Android-powered console from JinXang Digital (JXD): The JXD 7800B.
 
 <!-- more -->
 
-JXD have been on the Android-powered portables scene for a while now, starting with their [JXD 7100](http://jxd.hk/products.asp?id=604&selectclassid=009006) back in 2011, they're a bit nicer than most other Android devices out of China, and they even have built in hardware controls too! 
+JXD have been on the Android-powered portables scene for a while now, starting with their [JXD 7100](http://jxd.hk/products.asp?id=604&selectclassid=009006) back in 2011, they're a bit nicer than most other Android devices out of China, and they even have built in hardware controls too!
 
 Since 2011 the Android portables from JXD have been improving to keep up with the rest of the Android devices on the market, and now the [JXD 7800B](http://www.jxd.hk/products.asp?id=639&selectclassid=009006) has a spec that's comparable to most modern tablets.
 
 ![](http://f.cl.ly/items/1B1h3Y2N0J3L112u0Z0r/jxd7800b.jpg)
 
 ## Specification
-- **CPU:** RockChip 3188, Quad Core, 1.6GHz (cortex A9 CPU, ARM mali400 mp4 GPU) 
+- **CPU:** RockChip 3188, Quad Core, 1.6GHz (cortex A9 CPU, ARM mali400 mp4 GPU)
 - **Memory:** 2GB DDR3
 - **Storage:** 8GB internal, microSD up to 32GB
 - **Screen:** 7" IPS LCD, 1280x800
@@ -25,7 +26,7 @@ Since 2011 the Android portables from JXD have been improving to keep up with th
 So the specs look great, but the device, like the previous JXD Android devices, resembles the offspring of a Nexus 7 and a PSP.
 
 ## Unpacking the JXD 7800B
-I received my JXD 7800B from [DinoDirect](http://www.dinodirect.com/s7800b-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p42169462.html), it arrived very fast and came well packaged. 
+I received my JXD 7800B from [DinoDirect](http://www.dinodirect.com/s7800b-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p42169462.html), it arrived very fast and came well packaged.
 
 DinoDirect even included a plug adapter to use the US plug provided with British outlets, and they threw in an iPhone screen protector as a gift.
 
@@ -81,18 +82,18 @@ The hardware controls on the JXD 7800B do feel quite sturdy, and having a cross-
 
 Compared to some of the other non-premium Android tablets I've used in the past, the JXD 7800B is really nice. If you're in the market for a new portable console, I'd suggest looking at the JXD 7800B. There are plenty of great Android games available from the Play store, and emulators for lots of classic games.
 
-A detailed review/comparison of the JXD 7800B over on Dingoo Scene here: 
+A detailed review/comparison of the JXD 7800B over on Dingoo Scene here:
 
 - [http://dingoo-scene.blogspot.co.uk/2013/11/the-dingoo-scene-jxd-s7800b-rockchip_11.html](http://dingoo-scene.blogspot.co.uk/2013/11/the-dingoo-scene-jxd-s7800b-rockchip_11.html)
 
-More information about the JXD 7800B on the Dingoonity Wiki here: 
+More information about the JXD 7800B on the Dingoonity Wiki here:
 
 - [http://wiki.dingoonity.org/index.php?title=Other_Devices:JXD_S7800B](http://wiki.dingoonity.org/index.php?title=Other_Devices:JXD_S7800B)
 
-Links to newest firmware and relevant threads on Dingoonity Boards here: 
+Links to newest firmware and relevant threads on Dingoonity Boards here:
 
 - [http://boards.dingoonity.org/jxd-devices/jxd-s7800b-dingoonity-threads-guide/](http://boards.dingoonity.org/jxd-devices/jxd-s7800b-dingoonity-threads-guide/)
 
-Buy the JXD 7800B from DinoDirect here: 
+Buy the JXD 7800B from DinoDirect here:
 
 - [http://www.dinodirect.com/s7800b-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p42169462.html](http://www.dinodirect.com/s7800b-quad-core-7inch-ips-rk3188-2g-8-game-android-4-2-hdmi-3d-p42169462.html)

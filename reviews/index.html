@@ -1,0 +1,11 @@
+---
+layout: layout
+title: Reviews
+---
+
+{% assign posts = site.posts %}
+{% for post in posts %}
+    {% if post.categories contains 'hardware-review' %}
+        {% include _article_preview.html %}
+    {% endif %}
+{% endfor %}
