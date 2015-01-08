@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        content="width=device-width, initial-scale=1"
     />
     <title>
         {% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}
@@ -54,15 +54,12 @@
         href="{{ site.baseurl }}/assets/style.css"
     />
 </head>
-<body>
-    <div class="wrap" id="top">
-        {% include navbar.html %}
-        <div class="main">
-            <div class="inner">
-                {{ content }}
-            </div>
-        </div>
-    </div>
+<body id="top">
+    {% include navbar.html %}
+
+    {{ content }}
+
+    <a href="#top" class="top" title="Go to the top of page">&#9650;</a>
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-18982788-1']);

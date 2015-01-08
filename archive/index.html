@@ -10,24 +10,24 @@ redirect_from: /archive.html
     <hr />
 {% endfor %}
 
-<div class="page-nav archive-nav">
 {% if paginator.next_page %}
     <a
         href="{{ paginator.next_page_path }}"
         rel="prev"
-        class="page-nav-link prev"
     >
-        Older posts
+        &#9664; Older posts
     </a>
+    {% if paginator.previous_page %}
+        <br />
+        <br />
+    {% endif %}
 {% endif %}
 {% if paginator.previous_page %}
     <a
         href="{{ paginator.previous_page_path }}"
         rel="next"
-        class="page-nav-link next"
     >
-        Newer posts
+        Newer posts &#9654;
     </a>
 {% endif %}
     <hr />
-</div>

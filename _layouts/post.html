@@ -6,13 +6,43 @@ description: true
 
 {% include single_post.html %}
 
+<h3>
+    About the author
+</h3>
 {% include _author_blurb.html %}
 
 <p>
     Notice any issues in this post? You can <a href="https://github.com/omgmog/omgmog.github.com/edit/master/{{ post.path }}">fix it on GitHub</a> or <a href="https://github.com/omgmog/omgmog.github.com/issues/new">let me know</a>.
 </p>
 
-{% include _post_nav.html %}
+{% assign previouspage = post.previous %}
+{% assign nextpage = post.next %}
+{% if previouspage or nextpage %}
+    <hr />
+    {% if previouspage %}
+        <a
+            href="{{ previouspage.url }}"
+            rel="prev"
+            title="Go to {{ previouspage.title }}"
+        >
+            &#9664; {{ previouspage.title }}
+        </a>
+        {% if nextpage %}
+            <br />
+            <br />
+        {% endif %}
+    {% endif %}
+    {% if nextpage %}
+        <a
+            href="{{ nextpage.url }}"
+            rel="next"
+            title="Go to {{ nextpage.title }}"
+        >
+            {{ nextpage.title }} &#9654;
+        </a>
+    {% endif %}
+    <hr />
+{% endif %}
 
 <div id="disqus_thread" class="comments"></div>
 
