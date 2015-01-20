@@ -16,9 +16,9 @@ This is something I've been playing with a bit lately, so I dove in to the `CSS`
 
 ## An explanation of the styles
 
-The Material Design shadows are actually comprised of two shadows on each element, as you can see below. This example shows the `z-height: 5` shadow, with the bottom shadow on the left, and the top shadow on the right:
+The Material Design shadows are actually comprised of two shadows on each element, as you can see below. This example shows the `z-height: 5` shadow. First the 'top shadow', then the 'bottom shadow', then the effect caused by composing them together:
 
-![Example of z5 shadow](http://i.imgur.com/Z6hZarq.png)
+![Example of z5 shadow](http://i.imgur.com/fCeLGoe.png)
 
 You'd use something like this to create the `z-height: 5` shadow effect using `CSS`:
 
