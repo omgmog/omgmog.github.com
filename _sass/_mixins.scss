@@ -3,12 +3,14 @@
     -ms-filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
     filter: alpha(opacity=#{round($opacity * 100)});
 }
+
 @mixin transition($duration, $property: all, $timing-function: linear) {
     -moz-transition: $property $duration $timing-function;
     -webkit-transition: $property $duration $timing-function;
     -o-transition: $property $duration $timing-function;
     transition: $property $duration $timing-function;
 }
+
 @mixin user-select($appearance: none) {
     -webkit-touch-callout: $appearance;
     -webkit-user-select: $appearance;
@@ -17,49 +19,58 @@
     -ms-user-select: $appearance;
     user-select: $appearance;
 }
+
 @mixin box-sizing($type: border-box) {
     -moz-box-sizing: $type;
     -webkit-box-sizing: $type;
     box-sizing: $type;
 }
-@mixin box-shadow($shadow: 0 0 10px rgba(0,0,0,.06)) {
+
+@mixin box-shadow($shadow: 0 0 10px rgba(0, 0, 0, 0.06)) {
     -moz-box-shadow: $shadow;
     -webkit-box-shadow: $shadow;
     box-shadow: $shadow;
 }
+
 @mixin border-radius($radius) {
     -moz-border-radius: $radius;
     -webkit-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
 }
+
 @mixin breakpoint($breakpoint) {
     @if $breakpoint == "big" {
         @media (min-width: 1024px) {
             @content;
         }
     }
+
     @else if $breakpoint == "not-big" {
         @media (max-width: 1023px) {
             @content;
         }
     }
+
     @else if $breakpoint == "medium" {
         @media (min-width: 768px) and (max-width: 1023px) {
             @content;
         }
     }
+
     @else if $breakpoint == "small" {
         @media (max-width: 768px) {
             @content;
         }
     }
 }
+
 @mixin background-size($type: 100% cover) {
     -moz-background-size: $type;
     -webkit-background-size: $type;
     background-size: $type;
 }
+
 @mixin transform($transforms) {
     -moz-transform: $transforms;
     -webkit-transform: $transforms;
@@ -67,90 +78,68 @@
 }
 
 @function parseInt($n) {
-  @return $n / ($n * 0 + 1);
+    @return $n / ($n * 0 + 1);
 }
 
 @mixin rem($property, $values) {
-  $px : ();
-  $rem: ();
+    $px: ();
+    $rem: ();
 
-  @each $value in $values {
+    @each $value in $values {
+        @if $value == 0 or $value == auto {
+            $px: append($px, $value);
+            $rem: append($rem, $value);
+        }
 
-    @if $value == 0 or $value == auto {
-      $px : append($px , $value);
-      $rem: append($rem, $value);
+        @else {
+            $unit: unit($value);
+            $val: parseInt($value);
+
+            @if $unit == "px" {
+                $px: append($px, $value);
+                $rem: append($rem, $val / 10 + rem);
+            }
+
+            @if $unit == "rem" {
+                $px: append($px, $val * 10 + px);
+                $rem: append($rem, $value);
+            }
+        }
+    }
+
+    @if $px == $rem {
+        #{$property}: $px;
     }
 
     @else {
-      $unit: unit($value);
-      $val: parseInt($value);
-
-      @if $unit == "px" {
-        $px : append($px,  $value);
-        $rem: append($rem, ($val / 10 + rem));
-      }
-
-      @if $unit == "rem" {
-        $px : append($px,  ($val * 10 + px));
-        $rem: append($rem, $value);
-      }
+        #{$property}: $px;
+        #{$property}: $rem;
     }
-  }
-
-  @if $px == $rem {
-    #{$property}: $px;
-  } @else {
-    #{$property}: $px;
-    #{$property}: $rem;
-  }
 }
+
 @mixin textShadowToCropUnderline($color) {
-    text-shadow:
-        .03em 0 $color,
-        -.03em 0 $color,
-        0 .03em $color,
-        0 -.03em $color,
-
-        .06em 0 $color,
-        -.06em 0 $color,
-        .09em 0 $color,
-        -.09em 0 $color,
-
-        .12em 0 $color,
-        -.12em 0 $color,
-        .15em 0 $color,
-        -.15em 0 $color;
+    text-shadow: 0.03em 0 $color, -0.03em 0 $color, 0 0.03em $color, 0 -0.03em $color, 0.06em 0 $color, -0.06em 0 $color, 0.09em 0 $color, -0.09em 0 $color, 0.12em 0 $color, -0.12em 0 $color, 0.15em 0 $color, -0.15em 0 $color;
 }
+
 @mixin linkUnderlines($background, $color, $color_hover) {
     color: $color;
     text-decoration: none;
     @include textShadowToCropUnderline($background);
-
-    background-image:
-        linear-gradient($background, $background),
-        linear-gradient($background, $background),
-        linear-gradient($color, $color);
-    background-size:
-        .05em 1px,
-        .05em 1px,
-        1px 1px;
-    background-repeat:
-        no-repeat,
-        no-repeat,
-        repeat-x;
-    background-position:
-        0% 90%,
-        100% 90%,
-        0% 90%;
+    background-image: linear-gradient($background, $background), linear-gradient($background, $background), linear-gradient($color, $color);
+    background-size: .05em 1px, .05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-position: 0% 90%, 100% 90%, 0% 90%;
 
     &::selection {
         @include textShadowToCropUnderline($color_highlight);
         background-color: $color_highlight;
     }
+
     &::-moz-selection {
         @include textShadowToCropUnderline($color_highlight);
         background-color: $color_highlight;
     }
+
     &:before,
     &:after,
     *,
@@ -161,9 +150,6 @@
 
     &:hover {
         color: $color_hover;
-        background-image:
-            linear-gradient($background, $background),
-            linear-gradient($background, $background),
-            linear-gradient($color_hover, $color_hover);
+        background-image: linear-gradient($background, $background), linear-gradient($background, $background), linear-gradient($color_hover, $color_hover);
     }
 }
