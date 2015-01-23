@@ -90,6 +90,16 @@ iframe {
     @include rem(max-width, $max_width);
     @include rem(margin, 0 auto 1rem);
 }
+
+.adsbygoogle {
+    iframe {
+        height: 90px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
 article {
     iframe {
         @include box-shadow(0 0.3rem 1rem rgba(0, 0, 0, 0.4));
