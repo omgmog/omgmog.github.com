@@ -50,7 +50,7 @@ $ git push
 
 After all of that, all that remains is adjust the permalink taxonomy, and creating a custom blog index (such as the one I've made) to display the latest posts.
 
-So far I'm really happy with Jekyll, and for now I'm quite happy with using the Twitter Bootstrap style -- in time I'm sure I'll be tweaking and changing the style a bit to align it with [my main website](http://www.omgmog.net) a bit better.
+So far I'm really happy with Jekyll, and for now I'm quite happy with using the Twitter Bootstrap style -- in time I'm sure I'll be tweaking and changing the style a bit to align it with [my main website](https://omgmog.net) a bit better.
 
 ## Update 2:
 
