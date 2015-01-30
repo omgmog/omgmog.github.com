@@ -24,7 +24,7 @@ title: Home
 {% for post in site.posts | offset:3 limit:5 %}
     <li>
         <a
-            href="{{ post.url }}"
+            href="{{ site.baseurl }}{{ post.url }}"
         >
             {{ post.title }}
         </a>
@@ -40,7 +40,7 @@ title: Home
 {% for post in featured_posts %}
     <li>
         <a
-            href="{{ post.url }}"
+            href="{{ site.baseurl }}{{ post.url }}"
         >
             {{ post.title }}
         </a>

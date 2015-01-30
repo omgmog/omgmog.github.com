@@ -21,7 +21,7 @@ description: true
     <hr />
     {% if previouspage %}
         <a
-            href="{{ previouspage.url }}"
+            href="{{ site.baseurl }}{{ previouspage.url }}"
             rel="prev"
             title="Go to {{ previouspage.title }}"
         >
@@ -34,7 +34,7 @@ description: true
     {% endif %}
     {% if nextpage %}
         <a
-            href="{{ nextpage.url }}"
+            href="{{ site.baseurl }}{{ nextpage.url }}"
             rel="next"
             title="Go to {{ nextpage.title }}"
         >
