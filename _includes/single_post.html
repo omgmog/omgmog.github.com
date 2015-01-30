@@ -19,7 +19,7 @@
     {% for post in site.posts limit:5 %}
         <li>
             <a
-                href="{{ post.url }}"
+                href="{{ site.baseurl }}{{ post.url }}"
             >
                 {{ post.title }}
             </a>
@@ -34,7 +34,7 @@
             {% if post.featured %}
                 <li>
                     <a
-                        href="{{ post.url }}"
+                        href="{{ site.baseurl }}{{ post.url }}"
                     >
                         {{ post.title }}
                     </a>

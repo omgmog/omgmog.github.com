@@ -8,7 +8,7 @@
         {% capture page_link %}{{ page.url | remove: 'index.html' }}{% endcapture %}
         {% for pg in site.nav_pages %}
             <a
-                href="{{ pg.link }}"
+                href="{{ site.baseurl }}{{ pg.link }}"
             >
                 {{ pg.text }}
             </a>
