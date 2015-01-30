@@ -1,3 +1,3 @@
 {% if video_url %}
-<iframe src="{{ video_url }}" width="100%" height="350"> </iframe>
+<iframe src="{{ video_url|replace:'http:',''|replace:'https:','' }}" width="100%" height="350"> </iframe>
 {% endif %}
