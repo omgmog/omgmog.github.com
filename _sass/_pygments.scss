@@ -8,7 +8,7 @@ code {
 }
 
 pre {
-    @include rem(padding, 5rem 0);
+    padding: 5rem 0;
 }
 
 code, .highlight code, .highlight pre {
@@ -318,8 +318,8 @@ code {
 
 .highlight {
     width: 100%;
-    @include rem(max-width, $max_width);
-    @include rem(margin, 1rem auto);
+    max-width: $max_width;
+    margin: 1rem auto;
     text-align: left;
     border: 0;
     position: relative;
@@ -370,6 +370,7 @@ code {
             &.#{$lang},
 
             &.language-#{$lang} {
+
                 &::before {
                     @if $lang == "apache" {
                         content: '.example';
