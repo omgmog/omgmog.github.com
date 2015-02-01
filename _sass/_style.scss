@@ -22,7 +22,7 @@ html {
 
 body {
     margin: 0;
-    @include rem(padding, 0 0 10rem);
+    padding: 0 0 10rem;
     font-weight: 400;
     line-height: 1.5;
     overflow-x: hidden;
@@ -35,13 +35,13 @@ body {
 
 @include breakpoint("small") {
     body {
-        @include rem(padding, 1rem);
+        padding: 1rem;
     }
 }
 
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, hr, p img, figure img, .comments {
-    @include rem(max-width, $max_width);
+    max-width: $max_width;
     width: 100%;
 }
 
@@ -49,23 +49,23 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr, img, .comments {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    @include rem(margin-bottom, 1rem);
+    margin-bottom: 1rem;
     text-align: left;
     line-height: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
-    @include rem(font-size, 1rem);
+    font-size: 1rem;
 }
 
 h1 {
-    @include rem(font-size, 2rem);
+    font-size: 2rem;
 }
 
 h2 {
-    @include rem(font-size, 1.5rem);
-    @include rem(margin, 2rem auto);
+    font-size: 1.5rem;
+    margin: 2rem auto;
     color: $color_primary;
 }
 
@@ -78,7 +78,7 @@ hr {
     width: 80%;
     border: transparent;
     border-top: 2px solid $color_quaternary;
-    @include rem(margin, 2rem auto);
+    margin: 2rem auto;
     clear: both;
     display: block;
 }
@@ -86,9 +86,9 @@ hr {
 iframe {
     width: 100%;
     border: 0;
-    @include rem(height, 20rem);
-    @include rem(max-width, $max_width);
-    @include rem(margin, 0 auto 1rem);
+    height: 20rem;
+    max-width: $max_width;
+    margin: 0 auto 1rem;
 }
 
 .adsbygoogle {
@@ -128,22 +128,22 @@ header {
     display: block;
     @include box-sizing;
     background-color: $color_tertiary;
-    @include rem(margin-bottom, 2rem);
+    margin-bottom: 2rem;
 }
 
 .header-inner {
     text-align: right;
-    @include rem(padding, 3rem 0);
-    @include rem(max-width, $max_width);
+    padding: 3rem 0;
+    max-width: $max_width;
     margin: 0 auto;
 
     a {
         display: inline-block;
-        @include rem(font-size, 1rem);
+        font-size: 1rem;
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
-        @include rem(margin, 0 0 0 1rem);
+        margin: 0 0 0 1rem;
         color: $color_secondary;
 
         &:first-child {
@@ -155,11 +155,11 @@ header {
 
 @include breakpoint("small") {
     header {
-        @include rem(margin, -1rem -1rem 2rem);
+        margin: -1rem -1rem 2rem;
     }
 
     .header-inner {
-        @include rem(padding, 3rem 1rem);
+        padding: 3rem 1rem;
 
         [href="/"] {
             display: none;
@@ -169,8 +169,8 @@ header {
 
 
 .warning-message {
-    @include rem(padding, 2rem 0);
-    @include rem(margin, -2rem auto 2rem);
+    padding: 2rem 0;
+    margin: -2rem auto 2rem;
     background-image: url(bg_light.png);
 
     p {
@@ -182,8 +182,8 @@ header {
 
 .top {
     position: fixed;
-    @include rem(right, 1rem);
-    @include rem(bottom, 1rem);
+    right: 1rem;
+    bottom: 1rem;
     color: $color_quaternary;
     text-transform: uppercase;
     font-weight: bold;
