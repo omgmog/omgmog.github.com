@@ -83,6 +83,20 @@ hr {
     display: block;
 }
 
+blockquote {
+    border-left: 0.5rem solid $color_quaternary;
+    max-width: $max_width;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+
+    p {
+        font-style: italic;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+        max-width: 100%;
+    }
+}
+
 iframe {
     width: 100%;
     border: 0;
