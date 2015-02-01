@@ -161,7 +161,8 @@ header {
     .header-inner {
         padding: 3rem 1rem;
 
-        [href="/"] {
+        [href="/"],
+        [href="//blog.omgmog.net/"] {
             display: none;
         }
     }
