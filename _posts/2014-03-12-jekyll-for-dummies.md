@@ -37,7 +37,7 @@ If up until now you've only worked on websites by editing your files locally and
 
 From Wikipedia: [http://en.wikipedia.org/wiki/Git_(software)](http://en.wikipedia.org/wiki/Git_%28software%29)
 
-> Git /ɡɪt/ is a distributed revision control and source code management (SCM) system with an emphasis on speed.
+> Git is a distributed revision control and source code management system with an emphasis on speed.
 
 The key things to pick up from that are that it's "distributed" and "revision control", this means that you can have multiple people working remotely on the same files, and then when they have finished making their changes and they push them to GitHub, they will be mergeable with conflicts being easily resolveable.
 
