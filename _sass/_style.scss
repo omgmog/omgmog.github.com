@@ -54,6 +54,19 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr, img, .comments {
     line-height: 1;
 }
 
+p {
+    > img {
+        margin-bottom: -.5em;
+    }
+}
+
+.speaker {
+    width: 100px;
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
     font-size: 1rem;
@@ -95,14 +108,25 @@ blockquote {
         padding-left: 1rem;
         max-width: 100%;
     }
+
+    ul, ol, p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 iframe {
     width: 100%;
     border: 0;
-    height: 20rem;
+    height: 24rem;
     max-width: $max_width;
     margin: 0 auto 1rem;
+}
+
+.video-wrapper {
+    clear: both;
+    display: block;
 }
 
 .adsbygoogle {
