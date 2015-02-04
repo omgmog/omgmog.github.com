@@ -4,7 +4,7 @@ title: "Better link underlines with Sass"
 tags: ["software", "tip", "development", "browser", "sass", "meta"]
 ---
 
-![](http://i.imgur.com/mSVkI40.png)
+![]({{ site.baseurl }}/images/mSVkI40.png)
 
 There has been some talk lately about how iOS 8 has started to handle typography descenders when text is underlined. They've done away with the usual overlapping line intersect in favour of a more aesthetically pleasing line crop.
 
@@ -13,7 +13,7 @@ There has been some talk lately about how iOS 8 has started to handle typography
 
 You can see the differences of these two methods below:
 
-![](http://i.imgur.com/9o1Y2RU.png)
+![]({{ site.baseurl }}/images/9o1Y2RU.png)
 
 That's great for the particular apps on iOS 8 on iPhones that use the new descenders, but what about everybody else?
 
@@ -23,11 +23,11 @@ The solution uses a combination of background linear gradients and text shadows 
 
 Without the effect:
 
-![](http://i.imgur.com/9nitT8Q.png)
+![]({{ site.baseurl }}/images/9nitT8Q.png)
 
 With the effect:
 
-![](http://i.imgur.com/Syx7s6c.png)
+![]({{ site.baseurl }}/images/Syx7s6c.png)
 
 I've re-created their mixin using Sass, so now you can use it in your projects:
 

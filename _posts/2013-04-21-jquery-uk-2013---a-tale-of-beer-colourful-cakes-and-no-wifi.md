@@ -4,8 +4,6 @@ title: "jQuery UK 2013 - A tale of beer, colourful cakes and no wifi"
 tags: ["consumerism", "review", "conference", "javascript"]
 ---
 
-_Now updated with videos!_
-
 Yesterday I attended the second jQuery conference in the UK (the first being last year, which I blogged about [here](/post/jquery-uk-conference-2012/)).
 
 I failed to get any nice pictures at the event myself, so this blog post uses a collection of crowd-sourced pictures from attendees that shared them via Twitter, Instagram and Flickr.
@@ -13,6 +11,7 @@ I failed to get any nice pictures at the event myself, so this blog post uses a 
 <!-- more -->
 
 ## The venue
+
 This year the conference took place at the [King's Centre in Osney Mead](http://www.kingscentre.co.uk/) - a larger venue to cater for there being twice as many attendees as last year.
 
 The new venue was just a hop and skip away from the Oxford rail station and the Siad business school (the venue from the previous jQuery conference).
@@ -20,57 +19,43 @@ The new venue was just a hop and skip away from the Oxford rail station and the 
 Getting to the venue was easy, as (besides the fact that I've lived in Oxford my whole life) the route from the rail station to the venue was dotted with white rabbit feet painted on the ground.
 
 ## The theme
+
 Last year the conference was Oxford themed, with a Radiohead inspired drawing featuring as the main artwork and t-shirt design.
 
-<img src="http://uk.omg.li/OS4T/jquk2012.jpg" alt="jquk 2012" />
+![]({{ site.baseurl }}/images/jquk2012.jpg)
 
 This year the theme was Alice's Adventures in Wonderland.
 
-<figure>
-<img src="http://uk.omg.li/ORgb/jabberwocky.jpg" alt="Beware the Jabberwocky!" />
-<figcaption>
-&copy; <a href="http://twitter.com/bseymour" target="_blank">Ben Seymour</a>: <a href="http://www.flickr.com/photos/boseymour/8663063817/" target="_blank">Original</a>
-</figcaption>
-</figure>
+![]({{ site.baseurl }}/images/jabberwocky.jpg)
+
+>&copy; [Ben Seymour](http://twitter.com/bseymour): [Original](http://www.flickr.com/photos/boseymour/8663063817/)
 
 The route to the venue had the occasional white rabbit feet, and the venue had a massive Jabberwocky front and centre.
 
-<figure>
-<img src="http://uk.omg.li/OSC7/whiterabbit.jpg" alt="Follow the white rabbit" />
-<figcaption>
-&copy; <a href="https://twitter.com/elliott_stocks" target="_blank">Elliott Stocks</a>:
-<a href="https://twitter.com/elliott_stocks/status/325150484967075840" target="_blank">Original</a>
-</figcaption>
-</figure>
+![]({{ site.baseurl }}/images/whiterabbit.jpg)
 
-<figure>
-<img src="http://uk.omg.li/ORvM/megawocky.jpg" alt="Beware!" />
-<figcaption>
-&copy; <a href="https://twitter.com/4foot30" target="_blank">Gareth Jones</a>:
-<a href="https://twitter.com/4foot30/status/325872540184625153/" target="_blank">Original</a>
-</figcaption>
-</figure>
+>&copy; [Elliott Stocks](https://twitter.com/elliott_stocks): [Original](https://twitter.com/elliott_stocks/status/325150484967075840)
+
+![]({{ site.baseurl }}/images/megawocky.jpg)
+
+>&copy; [Gareth Jones](https://twitter.com/4foot30): [Original](https://twitter.com/4foot30/status/325872540184625153/)
 
 The t-shirt for this years conference has the same Jabberwocky on the front.
 
-<figure>
-<img src="http://uk.omg.li/ORVk/t-shirt.jpg" alt="`Twas brillig, and the slithy toves Did gyre and gimble in the wabe: All mimsy were the borogoves, And the mome raths outgrabe." />
-<figcaption>
-&copy; <a href="https://twitter.com/MarianaMota" target="_blank">Mariana Mota</a>:
-<a href="http://instagram.com/p/YSGRYPDROi/" target="_blank">Original</a>
-</figcaption>
-</figure>
+![]({{ site.baseurl }}/images/t-shirt.jpg)
 
-The artwork was created by <a href="http://www.sophieklevenow.com/" target="_blank">Sophie Klevenow</a> who also did the artwork last year.
+>&copy; [Mariana Mota](https://twitter.com/MarianaMota): [Original](http://instagram.com/p/YSGRYPDROi/)
+
+The artwork was created by [Sophie Klevenow](http://www.sophieklevenow.com/) who also did the artwork last year.
 
 ## Arrival
+
 I arrived at the venue a little earlier than planned, but the White October staff were on hand to point me in the right direction to collect my pass and delegate bag, and then to collect my t-shirt. The passes this year resemble a deck of cards.
 
-<figure>
-    <img src="http://uk.omg.li/ORBR/pass.jpg" alt="A deck of cards for a pass" />
-</figure>
+![]({{ site.baseurl }}/images/pass.jpg)
 
 The delegate bag wasn't spectacular this year, it contained the following:
+
 - a "jQuery conference" sticker
 - a "Football Radar" pen
 - a football stress ball
@@ -85,6 +70,7 @@ At 9:30 we all headed through to the main room to start the conference. The room
 Unfortunately I only managed to grab a seat towards the back of the room, and for the most part my view of the two projectors was either obscured by a pillar, or too far away to be able to read easily. Other than that the sound was very good.
 
 ## Morning - part 1
+
 ### <a href="https://twitter.com/johnwards" target="_blank">John Wards </a> - Hello!
 
 John Wards from White October introduced the conference.
@@ -93,9 +79,9 @@ Besides welcoming everybody, he was apologetic about the lack of wifi at the ven
 
 We've been assured that next year there will be wifi!
 
-### <a href="https://twitter.com/BrendanEich" target="_blank">Brenden Eich </a> - JavaScript the future
+<img class="speaker" src="{{ site.baseurl }}/images/brendan.jpg" />
 
-<img class="speaker" src="http://uk.omg.li/OSQ2/brendan.jpg" />
+### <a href="https://twitter.com/BrendanEich" target="_blank">Brenden Eich </a> - JavaScript the future
 
 Brenden talked about up and coming features of ECMAScript 6 and 7, and how a lot of commonly used JavaScript code patterns are going to be making their way into the spec as features of JavaScript.
 
@@ -103,21 +89,20 @@ He talked about some exciting things that JavaScript is being used for, such as 
 
 He showed a live demo of the Unreal Engine 3 that was recently ported to JavaScript using Web GL and [asm.js](http://asmjs.org/).
 
-<div class="video-wrapper hd">
-    <iframe src="http://player.vimeo.com/video/66711027?color=333333" width="500" height="281" frameborder="0"> </iframe>
-</div>
+<div class="video-wrapper hd"><iframe src="http://player.vimeo.com/video/66711027?color=333333" width="500" height="281" frameborder="0"> </iframe></div>
 
 He talked about not wanting to go in the direction of Java with bytecode, as it's slow and the JavaScript parser is more efficient. The main goal is for "One JavaScript for humans and computers".
 
 Also: Firefox OS phones will be out soon!
 
-### <a href="https://twitter.com/rworth" target="_blank">Richard D. Worth </a> - jQuery 1.9 and 2.0 - Present and Future
+<img class="speaker" src="{{ site.baseurl }}/images/richard.jpg" />
 
-<img class="speaker" src="http://uk.omg.li/OR7p/richard.jpg" />
+### <a href="https://twitter.com/rworth" target="_blank">Richard D. Worth </a> - jQuery 1.9 and 2.0 - Present and Future
 
 Richard talked about the core features of jQuery, the reasons that they don't bloat the core codebase with feature requests (read: they've got a plugin system dontcha' know?), and the plans for jQuery 2.0 which was just released.
 
 He provided some interesting statistics:
+
 - Around 50% of all sites use jQuery.
 - 91\.2% of all sites that use JavaScript use jQuery.
 
@@ -126,12 +111,14 @@ The conclusion of those statistics was that 9/10 front-end developers use jQuery
 He gave some features of jQuery 2.0, and some promises:
 
 #### Features
+
 - Jquery 2.0 will drop support for IE 6, 7, 8.
 - The codebase will be 12% smaller because of that
 - It's perfect for working with new/modern environments, such as mobile.
 - It's modular. You can enable/disable core features easily to make your jQuery library even smaller.
 
 #### Promises
+
 - The 1.x branch of jQuery will continue to be supported
 - jQuery 2.0 and 1.10 onwards will support the same API, so you could conditionally load 1.x for older IEs, and 2.x for everyone else and have no issues.
 
@@ -140,22 +127,19 @@ Besides all of that, he invited (implored, encouraged) everybody to take part in
 - [Click here to view the slides](http://www.slideshare.net/rworth/j-query2-19610459)
 
 ## Break - retro games!
+
 During the first break, the retro games consoles from <a href="http://www.replayevents.com/index.shtml" target="_blank">REPLAY</a> were turned on. There was a circle of chairs set up with 4 TVs and 4 consoles in the middle, and there was an additional 5th TV with an n64 close by.
 
-<figure>
-<img src="http://uk.omg.li/ORkT/games.jpg" alt="Geeks and games" />
-<figcaption>
-&copy; <a href="http://twitter.com/imunro" target="_blank">Ian Munro</a>:
-<a href="https://twitter.com/imunro/status/325234919066464256" target="_blank">Original</a>
-</figcaption>
-</figure>
+![]({{ site.baseurl }}/images/games.jpg)
+>&copy; [Ian Munro](http://twitter.com/imunro: [Original](https://twitter.com/imunro/status/325234919066464256)
 
 People were playing Mario Kart 64, Goldeneye 64, Bomberman (SNES), Smash Bros (GC) and many other games. I had a few rounds of Goldeneye and decided ultimately that I've not improved at the game in the past 15 years.
 
 ## Morning - part 2
-### <a href="https://twitter.com/rem" target="_blank">Remy Sharp </a> - So you know jQuery. Now what?
 
-<img class="speaker" src="http://uk.omg.li/ORV0/remy.jpg" />
+<img class="speaker" src="{{ site.baseurl }}/images/remy.jpg" />
+
+### <a href="https://twitter.com/rem" target="_blank">Remy Sharp </a> - So you know jQuery. Now what?
 
 Remy Sharp gave an interesting/controversial talk about only using jQuery when it's totally necessary, and sticking to pure JavaScript if you can.
 
@@ -170,9 +154,9 @@ That sounds quite obvious, but there was a noticable eureka across the crowd whe
 - [Blog post which is basically the same as his talk](http://remysharp.com/2013/04/19/i-know-jquery-now-what/)
 - [Click here to view the slides](https://speakerdeck.com/rem/i-know-jquery-now-what)
 
-### <a href="https://twitter.com/ajpiano" target="_blank">Adam J. Sontag </a> - jQuery is a Swiss Army knife (and that's OK!)
+<img class="speaker" src="{{ site.baseurl }}/images/adam.jpg" />
 
-<img class="speaker" src="http://uk.omg.li/ORlK/adam.jpg" />
+### <a href="https://twitter.com/ajpiano" target="_blank">Adam J. Sontag </a> - jQuery is a Swiss Army knife (and that's OK!)
 
 Placing Adam Sontag immediately after Remy was quite interesting, as his talk held a complete opposite perspective.
 
@@ -184,9 +168,9 @@ He also covered the dangers of using jQuery, or rather using it incorrectly, and
 
 - [Click here to view the slides](http://ajpiano.com/jquery-is-a-swiss-army-knife/)
 
-### <a href="https://twitter.com/dougneiner" target="_blank">Doug Neiner </a> - Taking Control with Machina.js
+<img class="speaker" src="{{ site.baseurl }}/images/doug.jpg" />
 
-<img class="speaker" src="http://uk.omg.li/OSIO/doug.jpg" />
+### <a href="https://twitter.com/dougneiner" target="_blank">Doug Neiner </a> - Taking Control with Machina.js
 
 Doug's talk mostly focussed around plugging <a href="https://github.com/ifandelse/machina.js" target="_blank">machina.js</a>, but I was too hungry to take extensive notes on the talk.
 
@@ -205,13 +189,8 @@ Doug had a nice demo with a light that changed colour to indicate the state of t
 ## Lunch
 This month White October are celebrating their 10th birthday. To celebrate they had a big green cake with blinking LEDs and icing circuitry. They also had a whole load of tasty cupcakes.
 
-<figure>
-<img src="http://uk.omg.li/OSMC/wocake.jpg" alt="The cake is not a lie!" />
-<figcaption>
-&copy; <a href="http://twitter.com/whiteoctober" target="_blank">White October</a>:
-<a href="https://twitter.com/WhiteOctober/status/325187539998748673" target="_blank">Original</a>
-</figcaption>
-</figure>
+![]({{ site.baseurl }}/images/wocake.jpg)
+>&copy; [White October](http://twitter.com/whiteoctober): [Original](https://twitter.com/WhiteOctober/status/325187539998748673)
 
 As the conference had an Alice's Adventures in Wonderland theme, it would have been nice if there were "Eat me" labels on the cupcakes!
 
@@ -244,17 +223,18 @@ During the lunch break there were lightning talks going on in the main conferenc
 
 
 ## Afternoon - part 1
-### <a href="https://twitter.com/garannm" target="_blank">Garann Means </a> - How to use events to glue full-stack frameworks together
 
-<img class="speaker" src="http://uk.omg.li/ORhl/garann.jpg" />
+<img class="speaker" src="{{ site.baseurl }}/images/garann.jpg" />
+
+### <a href="https://twitter.com/garannm" target="_blank">Garann Means </a> - How to use events to glue full-stack frameworks together
 
 Garann talked about using events and jQuery to glue your templates and front-end stuff to your models/controllers.
 
 - [Click here to view the slides](http://garann.com/slides/fullstack-events/#/)
 
-### <a href="https://twitter.com/igrigorik" target="_blank">Ilya Grigorik </a> - Wait, Chrome DevTools can do THAT?
+<img class="speaker" src="{{ site.baseurl }}/images/ilya.jpg" />
 
-<img class="speaker" src="http://uk.omg.li/OSS2/ilya.jpg" />
+### <a href="https://twitter.com/igrigorik" target="_blank">Ilya Grigorik </a> - Wait, Chrome DevTools can do THAT?
 
 Ilya's talk was much like Paul Irish's last year, in that it was more about Chrome than about jQuery, but that doesn't mean it wasn't good.
 
@@ -278,18 +258,15 @@ He demonstrated how far the remote debugging for Chrome on Android has come alon
 
 ## Break - mad as a hatter
 
-<figure>
-<img src="http://uk.omg.li/ORtP/teaparty.jpg" alt="Delicious jam tarts!" />
-<figcaption>
-&copy; <a href="http://twitter.com/bseymour" target="_blank">Ben Seymour</a>:
-<a href="http://www.flickr.com/photos/boseymour/8663064455/in/set-72157633280442945/" target="_blank">Original</a>
-</figcaption>
-</figure>
+![]({{ site.baseurl }}/images/teaparty.jpg)
+>&copy; [Ben Seymour](http://twitter.com/bseymour): [Original]
+
+
+<img class="speaker" src="{{ site.baseurl }}/images/john.jpg" />
 
 ## Afternoon - part 2
-### <a href="https://twitter.com/johnbender" target="_blank">John Bender</a> - Faster DOM manipulation with category theory and wield
 
-<img class="speaker" src="http://uk.omg.li/OQsa/john.jpg" />
+### <a href="https://twitter.com/johnbender" target="_blank">John Bender</a> - Faster DOM manipulation with category theory and wield
 
 John's talk was focussed on optimising your use of jQuery by using category theory to group methods.
 
@@ -300,9 +277,9 @@ Lastly he went on to talk about Weild, `a tiny object wrapper around the DOM`. Y
 - [Read his related blog post here](http://johnbender.us/2012/02/09/faster-javascript-through-category-theory/)
 - [Click here to view the slides](http://johnbender.us/presentation-faster-js/#/)
 
-### <a href="https://twitter.com/Joe8Bit" target="_blank">Joe Pettersson</a> - Complex clientside apps and legacy browsers (a story of frustration...)
+<img class="speaker" src="{{ site.baseurl }}/images/joe.jpg" />
 
-<img class="speaker" src="http://uk.omg.li/ORzu/joe.jpg" />
+### <a href="https://twitter.com/Joe8Bit" target="_blank">Joe Pettersson</a> - Complex clientside apps and legacy browsers (a story of frustration...)
 
 Joe's talk was about testing across multiple browsers, and how to make the task of doing so a lot less painful. He covered manual testing using virtual machines and some CI testing using using software such as [JENKINS](http://jenkins-ci.org/) and [Selenium](http://docs.seleniumhq.org/).
 
@@ -310,9 +287,9 @@ The only bad thing I've got to say about Joe's talk is that he had a heavy empha
 
 - [Click here to view the slides](https://speakerdeck.com/joepettersson/building-for-legacy-browsers-jquery-uk-2013)
 
-### <a href="https://twitter.com/JsonScott" target="_blank">Jason Scott</a> - Build an experience... not another framework
+<img class="speaker" src="{{ site.baseurl }}/images/jason.jpg" />
 
-<img class="speaker" src="http://uk.omg.li/OS1o/jason.jpg" />
+### <a href="https://twitter.com/JsonScott" target="_blank">Jason Scott</a> - Build an experience... not another framework
 
 Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
 
@@ -323,9 +300,11 @@ Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk
 - [Click here to view the slides](https://docs.google.com/presentation/d/19xrnU6cpyvOus0CYUnb7W7uxz_hl6Dqw-6BOxsVMn2s/edit#slide=id.p20)
 
 ## jBeery
+
 John Wards wanted to host a beer festival this year, so he did.
 
 There were 7 beers to have, each from either the [Compass brewery](http://compassbrewery.com/) or [Oxfordshire Ales brewery](http://www.oxfordshireales.com/).
+
 - **Compass**: Isis Pale (sponsored by BlackBerry)
 - **Oxfordshire Ales**: Blenheim (sponsored by Booking.com)
 - **Oxfordshire Ales**: Triple 'B' (sponsored by Cloudant)
@@ -334,16 +313,12 @@ There were 7 beers to have, each from either the [Compass brewery](http://compas
 - **Oxfordshire Ales**: Marshmellow (sponsored by White October)
 - **Compass**: The King's Shipment (sponsored by White October)
 
-<figure>
-<img src="http://uk.omg.li/OSUP/jbeery.jpg" alt="Drink me!" />
-<figcaption>
-&copy; <a href="http://twitter.com/beckyjtweets" target="_blank">Becky Jennings</a>:
-<a href="http://instagram.com/p/YSgYIew29f/" target="_blank">Original</a>
-</figcaption>
-</figure>
+![]({{ site.baseurl }}/images/jbeery.jpg)
+>&copy; [Becky Jennings](http://twitter.com/beckyjtweets): [Original](http://instagram.com/p/YSgYIew29f/)
 
 ## Interesting links/things/take-aways from the conference
-- [Machina.js]()
+
+- [Machina.js](http://machina-js.org/)
 - Themes for the Chrome Devtools - [devthemez.com](http://devthemez.com)
 - Using audits in the Chrome DevTools - [Video here](http://www.youtube.com/watch?v=Qsv6NjnWFLI)
 - Pagespeed Insights by Google - [Download the extension here](https://chrome.google.com/webstore/detail/pagespeed-insights-by-goo/gplegfbjlmmehdoakndmohflojccocli?hl=en)

@@ -11,17 +11,17 @@ A different sort of review today, the [Mars G01 Game Pad from Tronsmart](http://
 
 <!-- more -->
 
-![](http://i.imgur.com/PtqMFrY.jpg)
+![]({{ site.baseurl }}/images/PtqMFrY.jpg)
 
 I've reviewed a couple of Android-based games consoles previously, all of which had game controls built in to the devices themselves, but what are you to do if you want that same awesome controller experience on your regular Android smartphone or tablet?
 
 ## What's in the box?
 
-![](http://i.imgur.com/0Ga1fM8.png)
+![]({{ site.baseurl }}/images/0Ga1fM8.png)
 
 The box contains the Mars G01, a receiver, USB OTG cable and USB to Micro-USB cable, and the usual broken-English manual that you can throw in the bin, or read for a small amount of entertainment (I'll go in to this later).
 
-![](http://i.imgur.com/cMVEMLC.jpg)
+![]({{ site.baseurl }}/images/cMVEMLC.jpg)
 
 ### Hands on with the Tronsmart Mars G01
 
@@ -35,13 +35,13 @@ It features the following inputs:
 - 2 shoulder "bumper" buttons
 - 2 triggers
 
-![](http://i.imgur.com/WxvndVO.jpg)
+![]({{ site.baseurl }}/images/WxvndVO.jpg)
 
 Overall the Mars G01 feels quite sturdy, and the buttons are nice and springy. The `A`/`B`/`X`/`Y` buttons feel quite slippery and occasionally the `A` button sticks, but other than that it feels great.
 
 On the back side of the Mars G01, there is just a single Micro-USB port, for charging the `600mAh` battery contained within.
 
-![](http://i.imgur.com/rSsI187.jpg)
+![]({{ site.baseurl }}/images/rSsI187.jpg)
 
 ### Plug and play
 

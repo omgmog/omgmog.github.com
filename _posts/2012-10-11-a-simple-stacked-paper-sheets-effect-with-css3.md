@@ -9,7 +9,7 @@ This is just a short post about an unobtrusive CSS3 effect that I"ve used on som
 
 Like the sound of that? read on.
 
-![The end product](http://f.cl.ly/items/3i1b3a2t2f3I0M2N161O/by%20default%202012-10-11%20at%2014.30.45.png)
+![The end product]({{ site.baseurl }}/images/by%20default%202012-10-11%20at%2014.30.45.png)
 
 First of all, the HTML markup:
 

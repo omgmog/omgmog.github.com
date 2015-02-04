@@ -7,7 +7,7 @@ tags: ["mac", "android", "review", "software", "browser"]
 
 <!-- more -->
 
-![](http://uk.omg.li/QxkE/by%20default%202013-08-22%20at%2011.45.38.png)
+![]({{ site.baseurl }}/images/by%20default%202013-08-22%20at%2011.45.38.png)
 
 ### Problems
 #### It keeps randomly uninstalling itself
@@ -21,18 +21,18 @@ Is this a feature? Perhaps its a productivity enhancement? Either way it's annoy
 I mean seriously. I could understand if this was an issue with my Google profile getting out of sync between my various computers, but as of this morning none of my installations of Chrome had Hangouts installed, I updated to Chrome 29 and then Hangouts was magically back in my toolbar.
 
 #### It uses a lot of resources over time
-![](http://uk.omg.li/Qxo0/by%20default%202013-08-22%20at%2011.17.54.png)
+![]({{ site.baseurl }}/images/by%20default%202013-08-22%20at%2011.17.54.png)
 
 I've experienced Chrome slow-downs due to Hangouts, running out of RAM (though Mountain Lion is probably to blame in this case), and generally the Hangout windows being slow/unresponsive until they're reloaded.
 
 #### It has some major interaction/integration issues
 This is how Google promote the desktop windows of Google Hangouts for Chrome:
 
-![](http://uk.omg.li/Qxyz/Image%202013.08.22%2011%3A23%3A40.jpeg)
+![]({{ site.baseurl }}/images/Image%202013.08.22%2011%3A23%3A40.jpeg)
 
 This is how it is in reality:
 
-![](http://uk.omg.li/Qxrp/by%20default%202013-08-22%20at%2011.32.16.png)
+![]({{ site.baseurl }}/images/by%20default%202013-08-22%20at%2011.32.16.png)
 
 #### The biggest problems:
 - New windows are invasive, they popup in front of whatever you're doing

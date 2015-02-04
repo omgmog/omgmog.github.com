@@ -12,7 +12,7 @@ The gist of the article goes like this:
 
 > I hired a freelance developer at a low rate and expected them to implement my PSD exactly as I made it look in Photoshop, but they couldn't handle that. I'm so outraged with the lack of attention to detail of front-end developers.
 
-![](http://f.cl.ly/items/0c3k0U3l2M0b1p0c2g3C/cott1.jpg)
+![]({{ site.baseurl }}/images/cott1.jpg)
 
 
 ### The blame isn't always in the hands of the front-end developer

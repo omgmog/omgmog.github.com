@@ -29,7 +29,7 @@ After that's all finished, when your Nexus 7 boots it will take a couple of minu
 
 The password for the user account is `ubuntu`, though this wasn't mentioned anywhere
 
-![](http://f.cl.ly/items/0h1S2r1T2l0o0r1Q0Q17/ubuntu-ss.jpg)
+![]({{ site.baseurl }}/images/ubuntu-ss.jpg)
 
 ## But what about going back to Android?!
 
