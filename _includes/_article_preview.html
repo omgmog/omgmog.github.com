@@ -1,7 +1,5 @@
 <article>
     {% include _title.html %}
-    {% assign video_url = post.video_url %}
-    {% include article_video_embed.html %}
     <p>
         {{ post.excerpt | strip_html }} <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
     </p>
