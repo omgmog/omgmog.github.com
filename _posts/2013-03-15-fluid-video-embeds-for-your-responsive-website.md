@@ -5,7 +5,7 @@ tags: ["project", "tutorial", "tip", "code", "software", "browser", "usability",
 ---
 Recently I came across an interesting problem, fluidly scaling iframe/embed code on a responsive design.
 
-![](http://uk.omg.li/SDVZ/Image%202013.10.29%2016%3A13%3A53.png)
+![]({{ site.baseurl }}/images/responsive.png)
 
 The problem surfaced because I was using a fluid width and a fixed height for my video embed, and so at some screen sizes the video would look fine, and at others it would have some black banding at the edges.
 

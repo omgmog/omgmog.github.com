@@ -27,6 +27,6 @@ There are some features that I was unable to bring over from the old SMF install
 
 If you're interested in seeing the difference of the board from before, to now, here are a couple of full-page screenshots comparing the old and new:
 
-[![](http://dl.dropbox.com/u/19772/Dingoonity---Index-OLD-thumb.png)](http://dl.dropbox.com/u/19772/Dingoonity%20-%20Index%20OLD.png)
+[![]({{ site.baseurl }}/images/Dingoonity---Index-OLD-thumb.png)]({{ site.baseurl }}/images/Dingoonity%20-%20Index%20OLD.png)
 
-[![](http://dl.dropbox.com/u/19772/Dingoonity---Index-NEW-thumb.png)](http://dl.dropbox.com/u/19772/Dingoonity%20-%20Index%20NEW.png)
+[![]({{ site.baseurl }}/images/Dingoonity---Index-NEW-thumb.png)]({{ site.baseurl }}/images/Dingoonity%20-%20Index%20NEW.png)

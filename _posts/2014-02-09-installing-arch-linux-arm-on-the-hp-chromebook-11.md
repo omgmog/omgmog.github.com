@@ -6,7 +6,7 @@ tags: ["linux", "project", "tutorial", "tip", "terminal", "github", "downloads",
 
 I concluded in my [previous post](/post/hands-on-with-the-hp-chromebook-11/) about the HP Chromebook 11 that it's a good device for casually browsing the internet, but it's no replacement for a regular laptop or desktop for getting stuff done.
 
-![](http://f.cl.ly/items/3q1u210U3f0B3t260D0y/IMG_20140210_150652.jpg)
+![]({{ site.baseurl }}/images/IMG_20140210_150652.jpg)
 
 Since that post I've not used the Chromebook very much, so with a vacant weekend I've decided to blow the dust off of the Chromebook and try to squeeze some more functionality out of it.
 
@@ -93,7 +93,7 @@ arch=('armv7h')
 
 ## Doing real work on the HP Chromebook 11
 
-![](http://f.cl.ly/items/2S23121B043m3W3h440Y/IMG_20140211_130139.jpg)
+![]({{ site.baseurl }}/images/IMG_20140211_130139.jpg)
 
 Now that you've got Arch installed you can start using the Chromebook to do some real work. I use `Geany` as my text editor, have `git`, `ruby`, `gem`, `jekyll` and many other important applications installed.
 

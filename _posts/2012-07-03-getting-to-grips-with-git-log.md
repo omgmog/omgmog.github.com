@@ -49,4 +49,4 @@ or
 
 If you don't specify a time period (in human readable form) it will default to "1 day ago", and likewise if no email is specified at the command line, it will use the email that you've specified in the function.
 
-![](http://f.cl.ly/items/3r2d3R13003p3q1n1j2O/by%20default%202012-07-03%20at%2016.35.07.png)
+![]({{ site.baseurl }}/images/by%20default%202012-07-03%20at%2016.35.07.png)

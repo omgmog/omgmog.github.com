@@ -10,7 +10,7 @@ Somebody over on [Designer News](https://news.layervault.com/) asked how to re-c
 
 This is something I've been playing with a bit lately, so I dove in to the `CSS` from the [Polymer Project documentation](https://www.polymer-project.org/docs/elements/material.html#shadow-effect), found the `z-height` styles, and then whipped up a `.psd` to demonstrate how to achieve the effect:
 
-![Preview of psd](http://i.imgur.com/pEevcJ5.png)
+![Preview of psd]({{ site.baseurl }}/images/pEevcJ5.png)
 
 [Download the PSD](https://www.dropbox.com/s/vjupzyizfiinko2/material-z-height.psd?dl=0)
 
@@ -18,7 +18,7 @@ This is something I've been playing with a bit lately, so I dove in to the `CSS`
 
 The Material Design shadows are actually comprised of two shadows on each element, as you can see below. This example shows the `z-height: 5` shadow. First the 'top shadow', then the 'bottom shadow', then the effect caused by composing them together:
 
-![Example of z5 shadow](http://i.imgur.com/fCeLGoe.png)
+![Example of z5 shadow]({{ site.baseurl }}/images/fCeLGoe.png)
 
 You'd use something like this to create the `z-height: 5` shadow effect using `CSS`:
 
@@ -33,7 +33,7 @@ You'd use something like this to create the `z-height: 5` shadow effect using `C
 
 And in Photoshop... bottom on the left, top on the right:
 
-![Settings in Photoshop](http://i.imgur.com/ruwAkDd.png)
+![Settings in Photoshop]({{ site.baseurl }}/images/ruwAkDd.png)
 
 
 Here are all of the drop shadow layer effect settings for each `z-height` level:

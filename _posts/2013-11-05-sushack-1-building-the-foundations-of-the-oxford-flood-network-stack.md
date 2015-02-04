@@ -14,7 +14,7 @@ After the [Refresh Oxford](http://www.refreshoxford.co.uk/) hack day back in Jun
 
 ### Conception
 
-![](http://f.cl.ly/items/3h3a3I2s260O1C2q3R1s/Image%202013.11.05%2022%3A06%3A48.png)
+![]({{ site.baseurl }}/images/Image%202013.11.05%2022%3A06%3A48.png)
 
 As we're working in the area of sustainable business, it made sense to have a sustainability themed hack day, so "SusHack" was born towards the end of August. I spoke to the folks who organised Refresh to get some tips on organising the hack day, and then figured out what I needed. In short:
 
@@ -47,10 +47,10 @@ To start with we recorded all of the submitted project ideas on a flipchart, and
 
 There were 14 attendees (11 of which were taking part in the hacking, 3 were helping with the running of the day and playing Minecraft!), and a lot of components to making the Oxford Flood Network stuff work, so we split in to teams based on parts of the stack:
 
-- Sensor firmware to talk to the Raspberry Pi over `GPIO/LLAP` 
-- Pi firmware to communicate with the sensor service over `MQTT` 
-- Sensor service to store the sensor data and make it available to the "front-end" application with `CouchDB/JSON` 
-- Front-end application to handle processing of the sensor data, and present it using `Flask` along with a `Leaflet.js` powered Google Map in the browser. 
+- Sensor firmware to talk to the Raspberry Pi over `GPIO/LLAP`
+- Pi firmware to communicate with the sensor service over `MQTT`
+- Sensor service to store the sensor data and make it available to the "front-end" application with `CouchDB/JSON`
+- Front-end application to handle processing of the sensor data, and present it using `Flask` along with a `Leaflet.js` powered Google Map in the browser.
 
 We worked from about 11:00am until 7:00pm (with breaks for burritos and pizza) and by that point had the full stack up and running, and were able to demonstrate in real time that the sensor readings affected the front-end web application.
 

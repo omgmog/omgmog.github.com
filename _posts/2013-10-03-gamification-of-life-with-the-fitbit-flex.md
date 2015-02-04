@@ -17,20 +17,20 @@ After a while I decided to buy my own fitbit.
 
 I thought the Zip was cool, but it's the low-budget end of the products that Fitbit sell, so I had a look at their other current products:
 
-![Comparison of fitbits](http://uk.omg.li/Rksc/by%20default%202013-10-03%20at%2014.27.53.png)
+![Comparison of fitbits]({{ site.baseurl }}/images/by%20default%202013-10-03%20at%2014.27.53.png)
 
 After mulling over the features of each device, I settled on the [Fitbit Flex](http://www.fitbit.com/uk/flex).
 
-![Picture of my new Flex](http://uk.omg.li/RkmF/Image%202013.10.03%2014%3A33%3A24.jpeg)
+![Picture of my new Flex]({{ site.baseurl }}/images/Image%202013.10.03%2014%3A33%3A24.jpeg)
 
 The Flex is worn like a watch. It would be cool if it functioned as a watch as well, but sadly it doesn't. It does, however, function as a vibrating alarm, which I'm sure will be an interesting/discrete way to be woken up (maybe I'll update this post with more on that later).
 
 Unlike the Zip, the Flex doesn't have a LCD display, rather it has 5 white LEDs that blink in a particular way to tell you what it's doing. When you double-tap the Flex the LEDs come to life to indicate your progress towards the days goal of 10,000 steps (1 LED for 20%, 2 for 40%, 3 for 60% and so on). When the Flex is syncing (with your compatible bluetooth-enabled mobile device, or to PC/Mac via the dongle), the first and fifth LEDs light up together.
 
-![ooo LEDs](http://uk.omg.li/Rl2D/Image%202013.10.03%2014%3A45%3A39.jpeg)
+![ooo LEDs]({{ site.baseurl }}/images/Image%202013.10.03%2014%3A45%3A39.jpeg)
 
 It's [painfully simple](https://help.fitbit.com/customer/portal/articles/918527-understanding-your-flex-tracker-s-display), and very nice.
 
 One thing that I like about Fitbit is the online dashboard you get, which shows you the breakdown of your activity through the day, calorie usage (and consumption if you can be bothered to track your food and activities), and distance travelled through the day.
 
-![Your typical inactive developer day](http://uk.omg.li/Rkd2/by%20default%202013-10-03%20at%2014.41.02.png)
+![Your typical inactive developer day]({{ site.baseurl }}/images/by%20default%202013-10-03%20at%2014.41.02.png)

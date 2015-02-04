@@ -11,7 +11,7 @@ I've had a Model B Raspberry Pi in my possesion for nearly two months now, and b
 <!-- more -->
 
 <figure>
-    <img src="http://uk.omg.li/Ok4N/pi.jpg" />
+    <img src="{{ site.baseurl }}/images/pi.jpg" />
     <figcaption>
         Yes, that's my actual Raspberry Pi, what a beauty.
     </figcaption>
@@ -49,7 +49,7 @@ These are all end-user type uses of the Raspberry Pi though, I'd like to do some
 
 ## The Raspberry Pi can do a lot of things, but it can't do them with any sort of speed.
 
-![](http://uk.omg.li/OkTg/Image%202013.05.04%2016%3A30%3A17.png)
+![]({{ site.baseurl }}/images/Image%202013.05.04%2016%3A30%3A17.png)
 
 The Raspberry Pi is not a fast machine. The spec of the Model B are as follows:
 - CPU: ARM1176JZF-S (armv6k) 700 MHz

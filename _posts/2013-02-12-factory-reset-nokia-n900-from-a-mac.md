@@ -13,7 +13,7 @@ It was an interesting device though, running Maemo, a derivative of Debian linux
 The N900 promised to be a lot better than it was, and the following video made it look like a really nice device:
 
 <div class="video-wrapper hd">
-    <iframe width="100%" height="350" src="http://www.youtube.com/embed/GhTtsZATwBQ" frameborder="0"> </iframe>
+    <iframe width="100%" height="350" src="http://www.youtube.com/embed/gR0bv55KocA" frameborder="0"> </iframe>
 </div>
 
 My N900 was relegated to a drawer for the best part of the past 2.5 years while I've had a HTC Desire and Samsung Galaxy S2 since then.

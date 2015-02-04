@@ -17,12 +17,7 @@ The juicy technical details are:
 
 I've had some great opportunities to play with stripping away useless fluff, using some fancy `css3` (such as `:target`!), and planning the page structure so that the layout translates well to mobile responsively.
 
-<figure>
-    <img src="http://uk.omg.li/OfxH/responsive.png" />
-    <figcaption>
-        Responsive and responsible!
-    </figcaption>
-</figure>
+![]({{ site.baseurl }}/images/responsive.png)
 
 Try resizing your browser, I've added `breakpoints` at `1200px`, `1024px`, and `800px`.
 
@@ -31,16 +26,13 @@ I've factored out some bits of code into Jekyll template includes, to reduce cod
 So now the main folder structure is like this:
 
 - [\_includes](https://github.com/omgmog/omgmog.github.com/tree/master/_includes)
-
-   + [single_post.html](https://github.com/omgmog/omgmog.github.com/blob/master/_includes/single_post.html)
+  - [single_post.html](https://github.com/omgmog/omgmog.github.com/blob/master/_includes/single_post.html)
 - [\_layouts](https://github.com/omgmog/omgmog.github.com/tree/master/_layouts)
-
-   + [layout.html](https://github.com/omgmog/omgmog.github.com/blob/master/_layouts/layout.html)
-   + [post.html](https://github.com/omgmog/omgmog.github.com/blob/master/_layouts/post.html)
+  - [layout.html](https://github.com/omgmog/omgmog.github.com/blob/master/_layouts/layout.html)
+  - [post.html](https://github.com/omgmog/omgmog.github.com/blob/master/_layouts/post.html)
 - [archive.html](https://github.com/omgmog/omgmog.github.com/blob/master/archive.html)
 - [index.html](https://github.com/omgmog/omgmog.github.com/blob/master/index.html)
 - [feed.xml](https://github.com/omgmog/omgmog.github.com/blob/master/feed.xml)
-
 
 I've also spent some time going through all of the old posts on here, many of which were still using some messy `HTML` from way back when the blog was hosted on Tumblr, and bringing them up to scratch to use `Markdown`, and deleting some that were no longer useful.
 
