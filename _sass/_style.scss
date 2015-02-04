@@ -55,6 +55,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, hr, img, .comments {
 }
 
 p {
+    overflow: hidden;
+
     > img {
         margin-bottom: -.5em;
     }
@@ -230,4 +232,11 @@ header {
     color: $color_quaternary;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.thumb {
+    float: right;
+    margin-left: 1rem;
+    width: 200px;
+    height: 200px;
 }
