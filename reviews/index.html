@@ -1,21 +1,25 @@
 ---
 layout: layout
 title: Reviews
+features: ["hide_recent_reviews"]
 ---
-
-{% assign posts = site.posts %}
-{% for post in posts %}
-    {% if post.categories contains 'hardware-review' %}
-        {% include _review_preview.html %}
-    {% endif %}
-{% endfor %}
-
-<h2>
-    Send me your gadgets!
-</h2>
-<p>
-    I enjoy technology and I love nothing more than receiving new gadgets. If I'm not buying a new toy to play with, I'm reading about the latest <em>thing</em> somewhere.
-</p>
-<p>
-    I've had the opportunity to review some great gadgets, and I'm always looking forward to reviewing the newest and best. If you'd like me to write a review, <a href="https://omgmog.net/#contact">get in touch</a>.
-</p>
+<div class="inner">
+    <h2>
+        Send me your gadgets!
+    </h2>
+    <p>
+        I enjoy technology and I love nothing more than receiving new gadgets. If I'm not buying a new toy to play with, I'm reading about the latest <em>thing</em> somewhere.
+    </p>
+    <p>
+        I've had the opportunity to review some great gadgets, and I'm always looking forward to reviewing the newest and best. If you'd like me to write a review, <a href="https://omgmog.net/#contact">get in touch</a>.
+    </p>
+</div>
+<div class="inner">
+    {% assign posts = site.posts %}
+    {% for post in posts %}
+        {% if post.categories contains 'hardware-review' %}
+            {% include _review_preview.html %}
+        {% endif %}
+    {% endfor %}
+</div>
+{% include pagination.html %}

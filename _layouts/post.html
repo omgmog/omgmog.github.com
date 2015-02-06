@@ -3,51 +3,22 @@ layout: layout
 description: true
 ---
 {% assign post = page %}
-
-{% include single_post.html %}
-
-<h3>
-    About the author
-</h3>
-{% include _author_blurb.html %}
-
-<p>
-    Notice any issues in this post? You can <a href="https://github.com/omgmog/omgmog.github.com/edit/master/{{ post.path }}">fix it on GitHub</a> or <a href="https://github.com/omgmog/omgmog.github.com/issues/new">let me know</a>.
-</p>
-
-{% assign previouspage = post.previous %}
-{% assign nextpage = post.next %}
-{% if previouspage or nextpage %}
+{% include _old_post_warning.html %}
+<div class="inner">
+    {% include single_post.html class="post" %}
     <hr />
-    {% if previouspage %}
-        <a
-            href="{{ site.baseurl }}{{ previouspage.url }}"
-            rel="prev"
-            title="Go to {{ previouspage.title }}"
-        >
-            &#9664; {{ previouspage.title }}
-        </a>
-        {% if nextpage %}
-            <br />
-            <br />
-        {% endif %}
-    {% endif %}
-    {% if nextpage %}
-        <a
-            href="{{ site.baseurl }}{{ nextpage.url }}"
-            rel="next"
-            title="Go to {{ nextpage.title }}"
-        >
-            {{ nextpage.title }} &#9654;
-        </a>
-    {% endif %}
-{% endif %}
-<hr />
+    <p>
+        Notice any issues in this post? You can <a href="https://github.com/omgmog/omgmog.github.com/edit/master/{{ post.path }}">fix it on GitHub</a> or <a href="https://github.com/omgmog/omgmog.github.com/issues/new">let me know</a>.
+    </p>
+</div>
 
-{% include _adsense.html %}
-<hr />
+    {% include _adsense.html %}
 
-<div id="disqus_thread" class="comments"></div>
+{% include pagination.html %}
+
+<div class="inner">
+    <div id="disqus_thread" class="comments"></div>
+</div>
 
 <script type="text/javascript">
     var comments = document.getElementsByClassName('comments')[0],

@@ -1,45 +1,7 @@
-<article>
-    {% include _old_post_warning.html %}
-
+<article class="{{ include.class }}">
     {% include _article_metadata.html %}
-
     <hr />
-
     {% assign video_url = post.video_url %}
     {% include article_video_embed.html %}
-
     {{ content }}
-
-    <hr />
-
-    <h3>
-        Recent posts
-    </h3>
-    <ul>
-    {% for post in site.posts limit:5 %}
-        <li>
-            <a
-                href="{{ site.baseurl }}{{ post.url }}"
-            >
-                {{ post.title }}
-            </a>
-        </li>
-    {% endfor %}
-    </ul>
-    <h3>
-        Featured posts
-    </h3>
-    <ul>
-        {% for post in site.posts %}
-            {% if post.featured %}
-                <li>
-                    <a
-                        href="{{ site.baseurl }}{{ post.url }}"
-                    >
-                        {{ post.title }}
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
 </article>

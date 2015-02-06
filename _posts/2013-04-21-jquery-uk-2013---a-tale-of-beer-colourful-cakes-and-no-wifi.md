@@ -79,7 +79,7 @@ Besides welcoming everybody, he was apologetic about the lack of wifi at the ven
 
 We've been assured that next year there will be wifi!
 
-<img class="speaker" src="{{ site.baseurl }}/images/brendan.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/brendan.jpg" />
 
 ### <a href="https://twitter.com/BrendanEich" target="_blank">Brenden Eich </a> - JavaScript the future
 
@@ -95,7 +95,7 @@ He talked about not wanting to go in the direction of Java with bytecode, as it'
 
 Also: Firefox OS phones will be out soon!
 
-<img class="speaker" src="{{ site.baseurl }}/images/richard.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/richard.jpg" />
 
 ### <a href="https://twitter.com/rworth" target="_blank">Richard D. Worth </a> - jQuery 1.9 and 2.0 - Present and Future
 
@@ -137,7 +137,7 @@ People were playing Mario Kart 64, Goldeneye 64, Bomberman (SNES), Smash Bros (G
 
 ## Morning - part 2
 
-<img class="speaker" src="{{ site.baseurl }}/images/remy.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/remy.jpg" />
 
 ### <a href="https://twitter.com/rem" target="_blank">Remy Sharp </a> - So you know jQuery. Now what?
 
@@ -154,7 +154,7 @@ That sounds quite obvious, but there was a noticable eureka across the crowd whe
 - [Blog post which is basically the same as his talk](http://remysharp.com/2013/04/19/i-know-jquery-now-what/)
 - [Click here to view the slides](https://speakerdeck.com/rem/i-know-jquery-now-what)
 
-<img class="speaker" src="{{ site.baseurl }}/images/adam.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/adam.jpg" />
 
 ### <a href="https://twitter.com/ajpiano" target="_blank">Adam J. Sontag </a> - jQuery is a Swiss Army knife (and that's OK!)
 
@@ -168,7 +168,7 @@ He also covered the dangers of using jQuery, or rather using it incorrectly, and
 
 - [Click here to view the slides](http://ajpiano.com/jquery-is-a-swiss-army-knife/)
 
-<img class="speaker" src="{{ site.baseurl }}/images/doug.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/doug.jpg" />
 
 ### <a href="https://twitter.com/dougneiner" target="_blank">Doug Neiner </a> - Taking Control with Machina.js
 
@@ -224,7 +224,7 @@ During the lunch break there were lightning talks going on in the main conferenc
 
 ## Afternoon - part 1
 
-<img class="speaker" src="{{ site.baseurl }}/images/garann.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/garann.jpg" />
 
 ### <a href="https://twitter.com/garannm" target="_blank">Garann Means </a> - How to use events to glue full-stack frameworks together
 
@@ -232,7 +232,7 @@ Garann talked about using events and jQuery to glue your templates and front-end
 
 - [Click here to view the slides](http://garann.com/slides/fullstack-events/#/)
 
-<img class="speaker" src="{{ site.baseurl }}/images/ilya.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/ilya.jpg" />
 
 ### <a href="https://twitter.com/igrigorik" target="_blank">Ilya Grigorik </a> - Wait, Chrome DevTools can do THAT?
 
@@ -262,7 +262,7 @@ He demonstrated how far the remote debugging for Chrome on Android has come alon
 >&copy; [Ben Seymour](http://twitter.com/bseymour): [Original]
 
 
-<img class="speaker" src="{{ site.baseurl }}/images/john.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/john.jpg" />
 
 ## Afternoon - part 2
 
@@ -277,7 +277,7 @@ Lastly he went on to talk about Weild, `a tiny object wrapper around the DOM`. Y
 - [Read his related blog post here](http://johnbender.us/2012/02/09/faster-javascript-through-category-theory/)
 - [Click here to view the slides](http://johnbender.us/presentation-faster-js/#/)
 
-<img class="speaker" src="{{ site.baseurl }}/images/joe.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/joe.jpg" />
 
 ### <a href="https://twitter.com/Joe8Bit" target="_blank">Joe Pettersson</a> - Complex clientside apps and legacy browsers (a story of frustration...)
 
@@ -287,7 +287,7 @@ The only bad thing I've got to say about Joe's talk is that he had a heavy empha
 
 - [Click here to view the slides](https://speakerdeck.com/joepettersson/building-for-legacy-browsers-jquery-uk-2013)
 
-<img class="speaker" src="{{ site.baseurl }}/images/jason.jpg" />
+<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/jason.jpg" />
 
 ### <a href="https://twitter.com/JsonScott" target="_blank">Jason Scott</a> - Build an experience... not another framework
 

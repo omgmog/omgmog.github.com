@@ -1,0 +1,15 @@
+<div class="inner hide-mobile">
+    <h3>
+        Recent reviews
+    </h3>
+    <ul>
+    {% assign post_counter = 0 %}
+    {% assign max_posts = 5 %}
+    {% for post in site.posts %}
+        {% if post.categories contains 'hardware-review' and post_counter < max_posts %}
+            {% include _simple_article_item.html %}
+            {% assign post_counter = post_counter | plus:1 %}
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>
