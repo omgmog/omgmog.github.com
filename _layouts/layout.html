@@ -55,11 +55,37 @@
     />
 </head>
 <body id="top">
-    {% include navbar.html %}
+    <div class="container">
+        <header class="parent">
+            {% include navbar.html %}
+        </header>
+        <div class="parent">
+            <section class="grid-8 grid-mobile-12">
+                {{ content }}
+            </section>
+            <aside class="grid-4 grid-mobile-12">
+                {% if page.features contains "hide_about" %}
+                {% else %}
+                    {% include sidebar_about.html %}
+                {% endif %}
 
-    {{ content }}
+                {% include pagination.html %}
 
-    <a href="#top" class="top" title="Go to the top of page">&#9650;</a>
+                {% if page.features contains "hide_featured_posts" %}
+                {% else %}
+                    {% include sidebar_featured_posts.html %}
+                {% endif %}
+                {% if page.features contains "hide_recent_posts" %}
+                {% else %}
+                    {% include sidebar_recent_posts.html %}
+                {% endif %}
+                {% if page.features contains "hide_recent_reviews" %}
+                {% else %}
+                    {% include sidebar_recent_reviews.html %}
+                {% endif %}
+            </aside>
+        </div>
+    </div>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

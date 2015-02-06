@@ -1,0 +1,12 @@
+<div class="inner hide-mobile">
+    <h3>
+        Featured posts
+    </h3>
+    <ul>
+        {% for post in site.posts %}
+            {% if post.featured %}
+                {% include _simple_article_item.html %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

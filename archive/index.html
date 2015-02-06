@@ -2,31 +2,12 @@
 layout: layout
 title: Archive
 redirect_from: /archive.html
+features: ["hide_recent_posts"]
 ---
-
-{% assign paginated_posts = paginator.posts %}
-{% for post in paginated_posts %}
-    {% include _article_preview.html %}
-{% endfor %}
-
-{% if paginator.next_page %}
-    <a
-        href="{{ paginator.next_page_path }}"
-        rel="prev"
-    >
-        &#9664; Older posts
-    </a>
-    {% if paginator.previous_page %}
-        <br />
-        <br />
-    {% endif %}
-{% endif %}
-{% if paginator.previous_page %}
-    <a
-        href="{{ paginator.previous_page_path }}"
-        rel="next"
-    >
-        Newer posts &#9654;
-    </a>
-{% endif %}
-    <hr />
+<div class="inner">
+    {% assign paginated_posts = paginator.posts %}
+    {% for post in paginated_posts %}
+        {% include _article_preview.html %}
+    {% endfor %}
+</div>
+{% include pagination.html %}

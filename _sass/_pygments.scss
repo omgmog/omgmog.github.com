@@ -1,4 +1,3 @@
-@import "_variables";
 @import "_mixins";
 
 code {
@@ -16,7 +15,7 @@ code, .highlight code, .highlight pre {
 }
 
 .highlight .hll {
-    background-color: $color_tertiary;
+    background-color: #222;
 }
 
 .highlight .c {
@@ -25,7 +24,7 @@ code, .highlight code, .highlight pre {
 
 .highlight .err {
     color: #e37170;
-    background-color: $color_tertiary;
+    background-color: #222;
 }
 
 .highlight .g {
@@ -311,19 +310,18 @@ code {
     pre,
     span {
         background-image: none;
-        background-color: $color_tertiary;
+        background-color: #222;
         border: 0;
     }
 }
 
 .highlight {
     width: 100%;
-    max-width: $max_width;
-    margin: 1rem auto;
+    margin: 0 0 1.5rem;
     text-align: left;
     border: 0;
     position: relative;
-    background-color: $color_tertiary;
+    background-color: #222;
     @include box-shadow(0 0.3rem 1rem rgba(0, 0, 0, 0.4));
     @include border-radius(0.3rem 0.3rem 0 0);
 
@@ -349,7 +347,6 @@ code {
             border-right-color: #a5a5a5;
             border-top-color: #cbcbcb;
             color: #474747;
-            font-family: $sansserif_fonts;
             font-size: .7rem;
             font-weight: normal;
             height: 1.4rem;

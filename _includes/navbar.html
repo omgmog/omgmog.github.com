@@ -1,18 +1,16 @@
-<header>
-    <nav class="header-inner">
-        <a href="{{ site.baseurl }}">
-            <h1>
-                Blomg
-            </h1>
-        </a>
-        {% capture page_link %}{{ page.url | remove: 'index.html' }}{% endcapture %}
+<nav class="grid-12">
+    <a href="{{ site.baseurl }}" class="pull-left">
+        <h1>
+            Blomg
+        </h1>
+    </a>
+    {% capture page_link %}{{ page.url | remove: 'index.html' }}{% endcapture %}
+    <div class="pull-right">
         {% for pg in site.nav_pages %}
             <a
                 href="{{ site.baseurl }}{{ pg.link }}"
-            >
-                {{ pg.text }}
-            </a>
+            >{{ pg.text }}</a>
         {% endfor %}
-    </nav>
-</header>
+    </div>
+</nav>
 

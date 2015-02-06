@@ -1,3 +1,5 @@
+{% if post.categories contains 'hardware-review' %}
+{% else %}
 {% capture site_date_1_year %}{{ site.time | date:"%Y" | minus:1 }}{% endcapture %}
 {% capture site_date_2_year %}{{ site.time | date:"%Y" | minus:2 }}{% endcapture %}
 {% capture site_date_3_year %}{{ site.time | date:"%Y" | minus:3 }}{% endcapture %}
@@ -5,7 +7,7 @@
 {% capture updated_date %}{{ post.updated | date:"%Y" }}{% endcapture %}
 
 {% if post_date_year < site_date_1_year %}
-    <div class="warning-message">
+    <div class="inner warning-message">
         {% if post_date_year < site_date_2_year or updated_date > post_date_year %}
             <p>
                 {% if post_date_year < site_date_2_year %}
@@ -25,4 +27,5 @@
             Take a look in the <a href="/archive/">Archive</a> to see if I've written a newer post on the subject.
         </p>
     </div>
+{% endif %}
 {% endif %}
