@@ -73,8 +73,8 @@ Anyway, enough background, on to my problem. First of all, let's see how browser
 
 You can play with the [jsFiddle](http://jsfiddle.net/wfYFW/) that I made to test this here:
 
-
-<div class="video-wrapper hd"><iframe src="//jsfiddle.net/wfYFW/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"> </iframe></div>
+{% assign iframe_url = "http://jsfiddle.net/wfYFW/embedded/result/" %}
+{% include iframe_embed.html %}
 
 
 I wrote this blog post after I found the cause for the issue I was having in Safari, so I've prepared these screenshots with the solution in place. As you can see, Safari messes up the alignment of `placeholder` text if you've set `line-height` on the `input` element. I believe this is a bug, because the `input` respects the line-height declaration as soon as you begin typing (and the `placeholder` text is cleared).

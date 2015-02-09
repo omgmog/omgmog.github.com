@@ -36,9 +36,8 @@ The Chromebook 11 weighs in at 1.04kg, so it's very light, and the 11" form fact
 
 As with any new gadget, the videos that are used to announce the Chromebook 11 make it look really fun, and possible to use the Chromebook in any situation.
 
-<div class="video-wrapper hd">
-    <iframe width="100%" height="350" src="http://www.youtube.com/embed/gOyIA8EK2R0" frameborder="0"> </iframe>
-</div>
+{% assign iframe_url = "https://www.youtube.com/embed/gOyIA8EK2R0" %}
+{% include iframe_embed.html %}
 
 The first reality smack-in-the-face is that you need a WiFi connection to do anything with the Chromebook.
 

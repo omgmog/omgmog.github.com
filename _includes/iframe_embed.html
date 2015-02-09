@@ -1,0 +1,3 @@
+{% if iframe_url %}
+<iframe src="{{ iframe_url|replace:'http:',''|replace:'https:','' }}" width="100%" height="350"> </iframe>
+{% endif %}

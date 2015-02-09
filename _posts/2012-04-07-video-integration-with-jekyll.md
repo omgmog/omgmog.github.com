@@ -49,21 +49,21 @@ To begin, we need to add a new line before the last `---` to define a YouTube em
 ---
 layout: post
 title: "Some awesome post"
-video_url: https://www.youtube.com/embed/fyY9tb8Rvlk
+iframe_url: https://www.youtube.com/embed/fyY9tb8Rvlk
 ---
 {% endhighlight %}
 
 ## Tweaking the embed code
 
-Now, within our page template we will have access to the `page.video_url` property, so we can set up some template logic to render the YouTube video. We will be taking the embed code as above, and changing a few things:
+Now, within our page template we will have access to the `page.iframe_url` property, so we can set up some template logic to render the YouTube video. We will be taking the embed code as above, and changing a few things:
 
 {% highlight jinja %}
 {% raw %}
-{% if page.video_url %}
+{% if page.iframe_url %}
     <div class="less-fancy-video-header">
       <iframe
         class="yt-embed"
-        src="{{ page.video_url }}?&rel=0&showinfo=0&autohide=1&hd=1&wmode=transparent"
+        src="{{ page.iframe_url }}?&rel=0&showinfo=0&autohide=1&hd=1&wmode=transparent"
         frameborder="0"
         allowfullscreen="true"
         ></iframe>
@@ -72,7 +72,7 @@ Now, within our page template we will have access to the `page.video_url` proper
 {% endraw %}
 {% endhighlight %}
 
-First we have a conditional block around this whole snippet, to check that we've specified a `page.video_url` in our YAML front matter. Then we've got pretty much the regular YouTube embed code, but I've got some extra markup around this, and some small differences to the iframe attributes.
+First we have a conditional block around this whole snippet, to check that we've specified a `page.iframe_url` in our YAML front matter. Then we've got pretty much the regular YouTube embed code, but I've got some extra markup around this, and some small differences to the iframe attributes.
 
 I've included a bunch of additional `url` parameters in the `src` attribute, to hide various bits of the embedded video, but this is all purely optional. The most important parameter here is probably the `wmode` parameter, if you set this to `transparent` you can aleviate any issues with embedded YouTube video appearing over absolutely positioned elements on your page.
 
