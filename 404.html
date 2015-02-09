@@ -1,6 +1,14 @@
 ---
 layout: layout
 title: Page not found
+features: ["hide_recent_posts", "hide_recent_reviews"]
 ---
 
-I couldn't find that page! Try looking in the <a href="{{ site.baseurl }}/archive/">Archive</a>, or go <a href="{{ site.baseurl }}">Home</a>.
+<div class="inner">
+    <p>
+        I couldn't find that page! Try looking in the <a href="{{ site.baseurl }}/archive/">Archive</a>, or go <a href="{{ site.baseurl }}">Home</a>.
+    </p>
+</div>
+
+{% include sidebar_recent_posts.html %}
+{% include sidebar_recent_reviews.html %}
