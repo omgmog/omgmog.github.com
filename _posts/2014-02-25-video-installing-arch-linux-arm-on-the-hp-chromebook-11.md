@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Video: Installing Arch Linux ARM on the HP Chromebook 11"
-video_url: http://www.youtube.com/embed/j0IbMDxYjfo
+video_url: https://www.youtube.com/embed/j0IbMDxYjfo
 tags: ["linux", "project", "tutorial", "tip", "terminal", "github", "downloads", "chromebook", "video"]
 ---
 

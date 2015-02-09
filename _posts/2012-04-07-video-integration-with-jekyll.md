@@ -24,7 +24,7 @@ The embed code YouTube gives you contains most of the bits we need, here is an e
 <iframe
     width="560"
     height="315"
-    src="http://www.youtube.com/embed/fyY9tb8Rvlk"
+    src="https://www.youtube.com/embed/fyY9tb8Rvlk"
     frameborder="0"
     allowfullscreen></iframe>
 {% endhighlight %}
@@ -49,7 +49,7 @@ To begin, we need to add a new line before the last `---` to define a YouTube em
 ---
 layout: post
 title: "Some awesome post"
-video_url: http://www.youtube.com/embed/fyY9tb8Rvlk
+video_url: https://www.youtube.com/embed/fyY9tb8Rvlk
 ---
 {% endhighlight %}
 

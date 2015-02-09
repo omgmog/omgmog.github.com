@@ -18,9 +18,9 @@ disqus: "blogomgmog"
 description: |
     Hello, I'm Max Glenister, a front-end developer from Oxford, and this is my blog. It mostly contains tech-related musings, and any other miscellany that I find interesting.
 sites:
-    - link: "http://github.com/omgmog"
+    - link: "https://github.com/omgmog"
       text: "GitHub"
-    - link: "http://twitter.com/omgmog"
+    - link: "https://twitter.com/omgmog"
       text: "Twitter"
     - link: "https://omgmog.net"
       text: "My personal site"
