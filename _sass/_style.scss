@@ -247,28 +247,28 @@ aside {
         text-transform: uppercase;
         font-size: 1.5rem;
     }
+}
 
-    ul {
-        padding-left: 0;
-        list-style: none;
-    }
+.posts-list {
+    padding-left: 0;
+    list-style: none;
 
     li {
         margin-bottom: .5rem;
 
+        .title,
+        .date {
+            display: block;
+        }
+
+        .date {
+            text-transform: uppercase;
+            color: #777;
+            font-size: .8rem;
+        }
+
         &:last-child {
             margin-bottom: 0;
         }
-    }
-
-    .title,
-    .date {
-        display: block;
-    }
-
-    .date {
-        text-transform: uppercase;
-        color: #777;
-        font-size: .8rem;
     }
 }
