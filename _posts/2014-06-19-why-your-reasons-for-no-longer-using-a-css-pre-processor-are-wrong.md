@@ -59,8 +59,8 @@ Sass contains lots of cool features to minimise duplication, and complexity. I s
 
 If you're using a selector like `body div.something-cool a`, stop that.
 
-{% assign video_url="https://www.youtube.com/v/M8reIa71Bpw" %}
-{% include article_video_embed.html %}
+{% assign iframe_url="https://www.youtube.com/v/M8reIa71Bpw" %}
+{% include iframe_embed.html %}
 
 Each nesting level should use one selector. If you've got something like the following monstrosity (taken from the article that spurred this post), stop that too!:
 

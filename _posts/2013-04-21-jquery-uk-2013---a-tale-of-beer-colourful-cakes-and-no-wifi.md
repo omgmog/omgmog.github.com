@@ -89,7 +89,8 @@ He talked about some exciting things that JavaScript is being used for, such as 
 
 He showed a live demo of the Unreal Engine 3 that was recently ported to JavaScript using Web GL and [asm.js](http://asmjs.org/).
 
-<div class="video-wrapper hd"><iframe src="http://player.vimeo.com/video/66711027?color=333333" width="500" height="281" frameborder="0"> </iframe></div>
+{% assign iframe_url = "https://player.vimeo.com/video/66711027" %}
+{% include iframe_embed.html %}
 
 He talked about not wanting to go in the direction of Java with bytecode, as it's slow and the JavaScript parser is more efficient. The main goal is for "One JavaScript for humans and computers".
 
@@ -145,9 +146,8 @@ Remy Sharp gave an interesting/controversial talk about only using jQuery when i
 
 He demonstrated some great examples of how to achieve some of the core functionality of jQuery with simple JavaScript snippets.
 
-<div class="video-wrapper hd">
-    <iframe src="http://player.vimeo.com/video/68009123?color=333333" width="500" height="281" frameborder="0"> </iframe>
-</div>
+{% assign iframe_url = "https://player.vimeo.com/video/68009123" %}
+{% include iframe_embed.html %}
 
 That sounds quite obvious, but there was a noticable eureka across the crowd when he pointed out that for a quick JavaScript prototype you don't need to throw the whole jQuery library in to select DOM elements when you can just use `querySelectorAll()`, and even map it to `$` to soften the blow.
 
@@ -174,9 +174,8 @@ He also covered the dangers of using jQuery, or rather using it incorrectly, and
 
 Doug's talk mostly focussed around plugging <a href="https://github.com/ifandelse/machina.js" target="_blank">machina.js</a>, but I was too hungry to take extensive notes on the talk.
 
-<div class="video-wrapper hd">
-    <iframe src="http://player.vimeo.com/video/67473899?color=333333" width="500" height="281" frameborder="0"> </iframe>
-</div>
+{% assign iframe_url = "https://player.vimeo.com/video/67473899" %}
+{% include iframe_embed.html %}
 
 The gist of it is that machina.js is a Finite State Machine - "What's a Finite State Machine?" you ask? Ah well.. according to <a href="http://freshbrewedcode.com/jimcowart/2012/03/12/machina-js-finite-state-machines-in-javascript/" target="_blank">Jim Cowart</a>:
 
@@ -238,9 +237,8 @@ Garann talked about using events and jQuery to glue your templates and front-end
 
 Ilya's talk was much like Paul Irish's last year, in that it was more about Chrome than about jQuery, but that doesn't mean it wasn't good.
 
-<div class="video-wrapper hd">
-    <iframe src="http://player.vimeo.com/video/67330007?color=333333" width="500" height="281" frameborder="0"> </iframe>
-</div>
+{% assign iframe_url = "https://player.vimeo.com/video/67330007" %}
+{% include iframe_embed.html %}
 
 He covered the following things:
 
@@ -293,9 +291,8 @@ The only bad thing I've got to say about Joe's talk is that he had a heavy empha
 
 Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
 
-<div class="video-wrapper hd">
-    <iframe src="http://player.vimeo.com/video/67473673?color=333333" width="500" height="281" frameborder="0"> </iframe>
-</div>
+{% assign iframe_url = "https://player.vimeo.com/video/67473673" %}
+{% include iframe_embed.html %}
 
 - [Click here to view the slides](https://docs.google.com/presentation/d/19xrnU6cpyvOus0CYUnb7W7uxz_hl6Dqw-6BOxsVMn2s/edit#slide=id.p20)
 

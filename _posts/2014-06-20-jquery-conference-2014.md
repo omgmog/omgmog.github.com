@@ -48,8 +48,8 @@ There plenty of stands in the main hall giving out stickers and other goodies. A
 
 Loot in hand I was appropriately placated until the conference started.
 
-{% assign video_url = "https://www.youtube.com/v/R4CVi4zfcGM" %}
-{% include article_video_embed.html %}
+{% assign iframe_url = "https://www.youtube.com/v/R4CVi4zfcGM" %}
+{% include iframe_embed.html %}
 
 ### John Wards - Hello!
 
@@ -57,8 +57,8 @@ John opened the conference again, and re-assured us that there were 4 ADSL lines
 
 ### Adam J. Sontag - The State of jQuery
 
-{% assign video_url = "https://player.vimeo.com/video/97723665" %}
-{% include article_video_embed.html %}
+{% assign iframe_url = "https://player.vimeo.com/video/97723665" %}
+{% include iframe_embed.html %}
 
 Adam's talk started out a bit like Richard D. Worth's talk last year, covering the plans for jQuery.
 
@@ -87,8 +87,8 @@ Feature detects are now lazy, so they only happen when they need to, ensuring th
 
 ### Jen Simmons - A Love Letter to HTML
 
-{% assign video_url = "https://player.vimeo.com/video/97723667" %}
-{% include article_video_embed.html %}
+{% assign iframe_url = "https://player.vimeo.com/video/97723667" %}
+{% include iframe_embed.html %}
 
 Jen covered a history of HTML, starting with the conception of Hypertext in the 60s, all the way through to the HTML we know and love today. She highlighted the subtle differences between some of the original contending protocols for "the web", and the qualities of the World Wide Web that ultimately won and is what we use today. These qualities are:
 
@@ -106,8 +106,8 @@ Jen covered a history of HTML, starting with the conception of Hypertext in the 
 
 ### Paul Lewis - Building for the future
 
-{% assign video_url = "https://player.vimeo.com/video/97723669" %}
-{% include article_video_embed.html %}
+{% assign iframe_url = "https://player.vimeo.com/video/97723669" %}
+{% include iframe_embed.html %}
 
 Paul covered some of the constraints that we have to deal with to make websites that will work well in the future, covering the multitude of devices and contexts in which our users will use our websites.
 
@@ -124,8 +124,8 @@ Pauls's slides are available online here: [http://speakerdeck.com/paullewis/buil
 
 ### Lea Verou - The Chroma Zone: Engineering color on the web
 
-{% assign video_url = "https://player.vimeo.com/video/97723672" %}
-{% include article_video_embed.html %}
+{% assign iframe_url = "https://player.vimeo.com/video/97723672" %}
+{% include iframe_embed.html %}
 
 Lea covered the technology behind rendering a single pixel on a screen, how subpixels work, the different kinds of subpixel display, and different methods of anti-aliasing.
 
@@ -133,29 +133,29 @@ Lea's slides are available online here: [http://leaverou.github.io/chroma-zone](
 
 ### Yehuda Katz - Building multi-screen web apps with Ember.js
 
-{% assign video_url = "https://player.vimeo.com/video/97723671" %}
-{% include article_video_embed.html %}
+{% assign iframe_url = "https://player.vimeo.com/video/97723671" %}
+{% include iframe_embed.html %}
 
 Yehuda talked about the benefits of convention over configuration, and went in to a pretty intense session using [Ember.js](http://emberjs.com/) to demonstrate how simple it can be to create a multi-screen web app using the GitHub API and Ember.js
 
 ### Andrew Betts - Components and modules for front-end sanity at scale
 
-{% assign video_url = "https://player.vimeo.com/video/97724404" %}
-{% include article_video_embed.html %}
+{% assign iframe_url = "https://player.vimeo.com/video/97724404" %}
+{% include iframe_embed.html %}
 
 Andrew talked about the steps that his team at the Financial Times online have taken to make all of their legacy sites more consistent using a modular approach to asset loading and a component-based interface.
 
 ### Divya Manian - Graphical effects you didn't know browsers could do
 
-{% assign video_url = "https://player.vimeo.com/video/97724405" %}
-{% include article_video_embed.html %}
+{% assign iframe_url = "https://player.vimeo.com/video/97724405" %}
+{% include iframe_embed.html %}
 
 Divya showcased some cool new features coming to browsers, such as masking elements, blending modes and transforms.
 
 ### Andrew Nesbitt & Francis Gulotta - The Rise of JavaScript Hardware Hacking
 
-{% assign video_url = "https://player.vimeo.com/video/97724406" %}
-{% include article_video_embed.html %}
+{% assign iframe_url = "https://player.vimeo.com/video/97724406" %}
+{% include iframe_embed.html %}
 
 Andrew and Francis demonstrated some awesome ways to bring hardware and APIs together to make cool things. The video speaks louder than words, so I'd recommend watching it through.
 
