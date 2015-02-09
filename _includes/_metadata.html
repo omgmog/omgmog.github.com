@@ -1,5 +1,5 @@
 <p class="metadata">
-    {{ post.date | date_to_long_string }}
+    By {{ site.author.name }} on {{ post.date | date_to_long_string }}
     | <a href="https://github.com/omgmog/omgmog.github.com/blob/master/{{ post.path }}">View on GitHub</a>
     | <a href="{% unless page.url == post.url %}{{ post.url }}/{% endunless %}#disqus_thread">Comments</a>
 
