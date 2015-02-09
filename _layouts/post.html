@@ -3,7 +3,7 @@ layout: layout
 description: true
 ---
 {% assign post = page %}
-{% include _old_post_warning.html %}
+
 <div class="inner">
     {% include single_post.html class="post" %}
     <hr />
@@ -12,7 +12,9 @@ description: true
     </p>
 </div>
 
-    {% include _adsense.html %}
+{% include _old_post_warning.html %}
+
+{% include _adsense.html %}
 
 {% include pagination.html %}
 
