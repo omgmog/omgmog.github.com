@@ -36,7 +36,7 @@ To use the plugin you have to do a couple of things
 
   ``` yaml
   redirect_from:
-   - "/post/some-old-slug"
+   - "/post/some-old-slug/"
   ```
 
 And that's it.
