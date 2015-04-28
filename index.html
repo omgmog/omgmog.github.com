@@ -11,7 +11,7 @@ features: ["hide_recent_posts"]
         {{ paragraph | markdownify }}
     {% endfor %}
 </div>
-<div class="inner">
+<div class="inner listing">
     {% for post in site.posts | limit:10 %}
         {% include _article_preview.html %}
     {% endfor %}
