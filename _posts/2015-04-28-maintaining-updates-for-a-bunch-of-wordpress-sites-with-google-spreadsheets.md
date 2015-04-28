@@ -16,7 +16,7 @@ Create a sheet with your domain names
 In the second column, you'll want a formula that uses `ImportXML()` to grab the `/feed/` for each domain, and then use `REGEXEXTRACT()` to extract the version number:
 
 ```
-=REGEXEXTRACT(ImportXML(CONCATENATE($A27,"/feed/"), "//generator"),"\?v=(.*)$")
+=REGEXEXTRACT(ImportXML(CONCATENATE($A2,"/feed/"), "//generator"),"\?v=(.*)$")
 ```
 
 This will give us, for example `4.2.1` from the `<generator>` field in the `/feed/`.
