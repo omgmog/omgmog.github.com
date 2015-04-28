@@ -4,7 +4,7 @@ title: Archive
 redirect_from: /archive.html
 features: ["hide_recent_posts"]
 ---
-<div class="inner">
+<div class="inner listing">
     {% assign paginated_posts = paginator.posts %}
     {% for post in paginated_posts %}
         {% include _article_preview.html %}
