@@ -176,11 +176,6 @@ header {
 
     .pull-right {
         padding-top: .5rem;
-
-        a {
-            margin-left: 1rem;
-            font-size: 1.6rem;
-        }
     }
 
     @include gridle_state("mobile") {
@@ -192,11 +187,24 @@ header {
             float: none;
             text-align: center;
             padding-top: 0;
+        }
+    }
+}
 
-            a {
-                margin: 0 .5rem;
-                font-size: 1rem;
-            }
+nav {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    a {
+        margin-left: 1rem;
+        font-size: 1.6rem;
+    }
+
+    @include gridle_state("mobile") {
+        a {
+            margin: 0 .5rem;
+            font-size: 1rem;
         }
     }
 }
