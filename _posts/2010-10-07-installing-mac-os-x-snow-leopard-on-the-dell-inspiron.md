@@ -48,7 +48,7 @@ A good install will take less than an hour, but you'll most likely want to tweak
 
 ## Backup your files
 
-his is the most important step I guess. This install will wipe everything from the internal hard disk drive inside your Inspiron, so make sure you've backed up anything that you want to keep before continuing.
+This is the most important step I guess. This install will wipe everything from the internal hard disk drive inside your Inspiron, so make sure you've backed up anything that you want to keep before continuing.
 
 Most Inspirons come with a hard disk smaller than 500GB, so you could easily pick up a 500GB or greater sized external hard disk, and backup all of your stuff to that.
 
