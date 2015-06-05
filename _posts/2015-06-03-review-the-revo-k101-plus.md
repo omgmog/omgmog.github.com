@@ -86,15 +86,14 @@ I'll talk more about that supposed screen resolution later.
 
 ![]({{ site.baseurl }}/images/k101/2.jpg)
 
-1. Revo K101 Plus
-2. K-card + Micro SD
-3. USB Power adapter
-4. Headphones
-5. Wrist strap
-6. Carry pouch
-7. USB Cable
-8. UK Power adapter
-9. Micro SD reader
+1. Revo K101 Plus and K-card, Micro SD
+2. USB Power adapter
+3. Headphones
+4. Wrist strap
+5. Carry pouch
+6. USB Cable
+7. UK Power adapter
+8. Micro SD reader
 
 Pretty standard stuff. The accessories are the sort you could pick up for about £1/each from DealExtreme - unfortunately the Micro SD reader didn't work for me!
 
