@@ -1,4 +1,5 @@
-@import "_mixins";
+@import "mixins";
+@import "variables";
 
 * {
     @include box-sizing;
@@ -148,6 +149,16 @@ h5 {
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
     text-align: left;
+}
+
+blockquote {
+    border-left: 3px solid $color_highlight;
+    margin-left: 0;
+    padding-left: 1rem;
+
+    p {
+        font-style: italic;
+    }
 }
 
 .article-heading {
