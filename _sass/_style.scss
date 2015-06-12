@@ -6,15 +6,13 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
 }
 
 body {
-    background: #263238;
-    background-image: url(triangles.png);
-    background-size: 100% auto;
-    background-attachment: fixed;
+    background: #fafafa;
+    color: #534a4b
 }
 
 a {
@@ -22,14 +20,10 @@ a {
 }
 
 .inner {
-    background: #fff;
-    color: #555;
-    padding: 30px;
+    padding: 1rem;
     margin-bottom: 30px;
     clear: both;
     text-align: center;
-    @include box-shadow(0 27px 24px 0 rgba(#000, 0.2), 0 40px 77px 0 rgba(#000, 0.22));
-    border-top: 10px solid #B0BEC5;
 
     a {
         &,
@@ -46,10 +40,9 @@ a {
 .navigation {
     border: 0;
     padding: 0;
-    background: #B0BEC5;
 
     a {
-        color: #fff;
+        color: #534a4b;
         height: 88px;
         background-position: 50% 0;
         background-repeat: no-repeat;
@@ -63,17 +56,15 @@ a {
         }
 
         &.pull-left {
-            // prev
             background-image: url(arrow-left.png);
         }
 
         &.pull-right {
-            // next
             background-image: url(arrow-right.png);
         }
 
         &:hover {
-            background-color: rgba(#fff, 0.2);
+            background-color: rgba(#534a4b, 0.2);
             background-position: 50% -88px;
         }
     }
@@ -174,14 +165,16 @@ blockquote {
     .article-heading {
         font-size: 2rem;
     }
+    .thumb-100 {
+        margin-bottom: 1rem;
+    }
 }
 
 header {
     padding: 40px 0;
-    text-shadow: 0 5px 10px rgba(#000, 0.2);
 
     a {
-        color: #fff;
+        color: #534a4b;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
@@ -209,7 +202,7 @@ header {
 }
 
 nav {
-    color: #fff;
+    color: #534a4b;
     text-transform: uppercase;
     letter-spacing: 1px;
 
