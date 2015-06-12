@@ -2,24 +2,4 @@
     By {{ site.author.name }} on {{ post.date | date_to_long_string }}
     | <a href="https://github.com/omgmog/omgmog.github.com/blob/master/{{ post.path }}">View on GitHub</a>
     | <a href="{% unless page.url == post.url %}{{ post.url }}/{% endunless %}#disqus_thread">Comments</a>
-
-    {% assign rt = post.content | number_of_words | append:'.0' | divided_by:180 | append:'' %}
-    {% assign rtm = rt | split:'.' | first %}
-    {% assign rtm_int = rtm | append:'.0' | divided_by:100 | times:100 %}
-    {% assign rtf = rt | split:'.' | last | truncate:5 | remove:'.' %}
-    {% assign rts_int = rtf | append:'.0' | divided_by:100 | times:60 | divided_by:1 | append:'' | split:'.' | first | append:'.0' | divided_by:100 | times:100 | append:'' | split:'.' | first | append:0 | divided_by:10 %}
-    {% comment %}
-        Round minutes up if seconds are greater than 30
-    {% endcomment %}
-    {% if rts_int >= 30 %}
-        {% assign rtm_out = rtm_int | plus:1 | append:'' | split:'.' | first %}
-    {% else %}
-        {% assign rtm_out = rtm_int | append:'' | split:'.' | first %}
-    {% endif %}
-    {% comment %}
-        If it's worth specifying a reading time, do it
-    {% endcomment %}
-    {% if rtm_int > 0 %}
-        | {{ rtm_out }} minute{% if rtm_int > 1 %}s{% endif %} read
-    {% endif %}
 </p>
