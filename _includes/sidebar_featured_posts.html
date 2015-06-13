@@ -2,10 +2,6 @@
     <h3>
         Featured posts
     </h3>
-    <ul class="posts-list">
-    {% assign featured_posts = (site.posts | where:'featured','true') %}
-    {% for post in featured_posts limit:5 %}
-        {% include _simple_article_item.html %}
-    {% endfor %}
+    <ul class="posts-list featured-posts">
     </ul>
 </div>

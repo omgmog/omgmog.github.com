@@ -2,10 +2,6 @@
     <h3>
         Recent posts
     </h3>
-    <ul class="posts-list">
-    {% assign recent_posts = site.posts %}
-    {% for post in recent_posts limit:5 %}
-        {% include _simple_article_item.html %}
-    {% endfor %}
+    <ul class="posts-list recent-posts">
     </ul>
 </div>
