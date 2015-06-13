@@ -1,12 +1,10 @@
 ---
 layout: layout
 title: Archive
-redirect_from: /archive.html
 features: ["hide_recent_posts"]
 ---
 <div class="inner listing">
-    {% assign paginated_posts = paginator.posts %}
-    {% for post in paginated_posts %}
+    {% for post in paginator.posts %}
         {% include _article_preview.html %}
     {% endfor %}
 </div>

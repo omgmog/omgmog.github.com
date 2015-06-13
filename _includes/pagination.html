@@ -1,30 +1,3 @@
-{% assign post = page %}
-{% assign previouspage = post.previous %}
-{% assign nextpage = post.next %}
-{% if previouspage or nextpage %}
-<div class="inner parent navigation">
-    {% if previouspage %}
-        <a
-            href="{{ site.baseurl }}{{ previouspage.url }}"
-            rel="prev"
-            title="{{ previouspage.title }}"
-            class="pull-left grid-6"
-        >
-            <span>&#9664; Previous</span>
-        </a>
-    {% endif %}
-    {% if nextpage %}
-        <a
-            href="{{ site.baseurl }}{{ nextpage.url }}"
-            rel="next"
-            title="{{ nextpage.title }}"
-            class="pull-right grid-6"
-        >
-            <span>Next &#9654;</span>
-        </a>
-    {% endif %}
-</div>
-{% endif %}
 {% if paginator.next_page or paginator.previous_page %}
 <div class="inner parent navigation">
     {% if paginator.next_page %}

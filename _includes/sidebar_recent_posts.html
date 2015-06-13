@@ -3,13 +3,9 @@
         Recent posts
     </h3>
     <ul class="posts-list">
-    {% assign post_counter = 0 %}
-    {% assign max_posts = 5 %}
-    {% for post in site.posts %}
-        {% if post.categories == empty and post_counter < max_posts %}
-            {% include _simple_article_item.html %}
-            {% assign post_counter = post_counter | plus:1 %}
-        {% endif %}
+    {% assign recent_posts = site.posts %}
+    {% for post in recent_posts limit:5 %}
+        {% include _simple_article_item.html %}
     {% endfor %}
     </ul>
 </div>

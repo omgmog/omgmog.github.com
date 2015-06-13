@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Max Glenister Uses This
-featured: true
+featured: "true"
 updated: 2015-04-27
 ---
 

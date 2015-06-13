@@ -1,31 +1,20 @@
-{% if post.categories contains 'hardware-review' %}
-{% else %}
+{% unless post.category == 'hardware-review' %}
 {% capture site_date_1_year %}{{ site.time | date:"%Y" | minus:1 }}{% endcapture %}
-{% capture site_date_2_year %}{{ site.time | date:"%Y" | minus:2 }}{% endcapture %}
-{% capture site_date_3_year %}{{ site.time | date:"%Y" | minus:3 }}{% endcapture %}
 {% capture post_date_year %}{{ post.date | date:"%Y" }}{% endcapture %}
 {% capture updated_date %}{{ post.updated | date:"%Y" }}{% endcapture %}
 
 {% if post_date_year < site_date_1_year %}
     <div class="inner warning-message">
-        {% if post_date_year < site_date_2_year or updated_date > post_date_year %}
-            <p>
-                {% if post_date_year < site_date_2_year %}
-                    {% if post_date_year < site_date_3_year %}
-                        This post was written way back in {{ post_date_year }}. There's a chance that it's no-longer correct, or it has been superseded by a newer post. I commend you for making it this far through my archive!
-                    {% else %}
-                        This post is kind of old... I wrote it back in {{ post_date_year }}.
-                    {% endif %}
-                {% endif %}
+        <p>
+            This post was written way back in {{ post_date_year }}. There's a chance that it's no-longer correct, or it has been superseded by a newer post. I commend you for making it this far through my archive!
 
-                {% if updated_date > post_date_year %}
-                    I made some updates to this post on {{ post.updated | date:"%d %B %Y" }}. You can look at the <a href="https://github.com/omgmog/omgmog.github.com/commits/master/{{ post.path }}">edit history</a> on GitHub.
-                {% endif %}
-            </p>
-        {% endif %}
+            {% if updated_date > post_date_year %}
+                I made some updates to this post on {{ post.updated | date:"%d %B %Y" }}. You can look at the <a href="https://github.com/omgmog/omgmog.github.com/commits/master/{{ post.path }}">edit history</a> on GitHub.
+            {% endif %}
+        </p>
         <p>
             Take a look in the <a href="/archive/">Archive</a> to see if I've written a newer post on the subject.
         </p>
     </div>
 {% endif %}
-{% endif %}
+{% endunless %}

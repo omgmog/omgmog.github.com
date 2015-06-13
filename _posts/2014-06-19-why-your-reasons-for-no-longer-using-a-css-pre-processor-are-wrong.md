@@ -2,7 +2,7 @@
 layout: post
 title: "Why your reasons for no-longer using a CSS pre-processor are wrong, and you're wrong, and you should feel bad."
 tags: ["software", "tip", "development", "browser", "sass", "meta"]
-featured: true
+featured: "true"
 ---
 
 I read an article recently that explained why a web design agency had stopped using CSS pre-processing as part of their development process, as a means to "optimise [their] internal workflow".

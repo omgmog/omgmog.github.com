@@ -15,11 +15,9 @@ features: ["hide_recent_reviews"]
     </p>
 </div>
 <div class="inner listing">
-    {% assign posts = site.posts %}
-    {% for post in posts %}
-        {% if post.categories contains 'hardware-review' %}
-            {% include _review_preview.html %}
-        {% endif %}
+    {% assign reviews = (site.posts|where:'category','hardware-review') %}
+    {% for post in reviews %}
+        {% include _review_preview.html %}
     {% endfor %}
 </div>
 {% include pagination.html %}

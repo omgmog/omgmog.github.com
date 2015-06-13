@@ -3,10 +3,9 @@
         Featured posts
     </h3>
     <ul class="posts-list">
-        {% for post in site.posts %}
-            {% if post.featured %}
-                {% include _simple_article_item.html %}
-            {% endif %}
-        {% endfor %}
+    {% assign featured_posts = (site.posts | where:'featured','true') %}
+    {% for post in featured_posts limit:5 %}
+        {% include _simple_article_item.html %}
+    {% endfor %}
     </ul>
 </div>
