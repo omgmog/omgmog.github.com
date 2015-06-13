@@ -6,6 +6,7 @@ lsi: false
 paginate: 15
 paginate_path: "archive/page:num"
 excerpt_separator: "<!-- more -->"
+keep_files: ["images/","assets/","CNAME","robots.txt"]
 
 markdown: redcarpet
 highlighter: pygments

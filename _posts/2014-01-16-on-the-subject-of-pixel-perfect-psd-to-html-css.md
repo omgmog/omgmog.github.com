@@ -2,7 +2,7 @@
 layout: post
 title: On the subject of "Pixel-perfect PSD to HTML/CSS"
 tags: ["software", "tip", "development", "browser", "sass", "meta"]
-featured: true
+featured: "true"
 ---
 I read an [article](http://blog.teamtreehouse.com/pixel-perfect-front-end-development-matters) on the subject of implementing a PSD design of a website perfectly in HTML/CSS, and without wanting to spend my time writing a lengthy response in the comment form of a blog for it to disappear in to the depths of a blog that I don't visit very regularly, I figured I'd write my thoughts up as a blog post.
 

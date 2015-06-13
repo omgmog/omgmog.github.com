@@ -2,7 +2,7 @@
 layout: post
 title: "Hands on with the HP Chromebook 11"
 tags: ["linux", "consumerism", "review", "software", "hardware", "chromebook"]
-categories: 'hardware-review'
+category: 'hardware-review'
 thumbnail: hp_thumb.jpg
 ---
 

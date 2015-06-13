@@ -18,7 +18,7 @@
             "link": "{{ site.baseurl }}{{ post.url }}",
             "author": "{{ site.author.name }}"
         }
-        {% if forloop.last %}{% else %},{% endif %}
+        {% unless forloop.last %},{% endunless %}
     {% endfor %}
     ]
 }

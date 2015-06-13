@@ -58,32 +58,36 @@
 <body id="top">
     <div class="container">
         <header class="parent">
-            {% include header.html %}
+            <nav class="grid-12">
+                <a href="{{ site.baseurl }}" class="pull-left">
+                    <h1>
+                        Blomg
+                    </h1>
+                </a>
+                <div class="pull-right">
+                    {% for pg in site.nav_pages %}
+                        <a href="{{ site.baseurl }}{{ pg.link }}">{{ pg.text }}</a>
+                    {% endfor %}
+                </div>
+            </nav>
         </header>
         <div class="parent">
             <section class="grid-8 grid-mobile-12">
                 {{ content }}
             </section>
             <aside class="grid-4 grid-mobile-12">
-                {% if page.features contains "hide_about" %}
-                {% else %}
+                {% unless page.features contains "hide_about" %}
                     {% include sidebar_about.html %}
-                {% endif %}
-
-                {% include pagination.html %}
-
-                {% if page.features contains "hide_featured_posts" %}
-                {% else %}
+                {% endunless %}
+                {% unless page.features contains "hide_featured_posts" %}
                     {% include sidebar_featured_posts.html %}
-                {% endif %}
-                {% if page.features contains "hide_recent_posts" %}
-                {% else %}
+                {% endunless %}
+                {% unless page.features contains "hide_recent_posts" %}
                     {% include sidebar_recent_posts.html %}
-                {% endif %}
-                {% if page.features contains "hide_recent_reviews" %}
-                {% else %}
+                {% endunless %}
+                {% unless page.features contains "hide_recent_reviews" %}
                     {% include sidebar_recent_reviews.html %}
-                {% endif %}
+                {% endunless %}
             </aside>
         </div>
     </div>
