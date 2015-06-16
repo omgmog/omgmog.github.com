@@ -2,6 +2,7 @@
 layout: post
 title: "Creating 'Material Design' shadows in Photoshop"
 tags: ["project", "design", "software", "hardware", "hackday", "development"]
+updated: 2015-06-16
 ---
 
 Somebody over on [Designer News](https://news.layervault.com/) asked how to re-create the various `z-height` shadow effects from [Google's Material Design](http://www.google.co.uk/design/spec/material-design/introduction.html) in Photoshop.
@@ -23,11 +24,10 @@ The Material Design shadows are actually comprised of two shadows on each elemen
 You'd use something like this to create the `z-height: 5` shadow effect using `CSS`:
 
 ```css
-.paper-shadow-bottom-z-5 {
-    box-shadow: 0 27px 24px 0 rgba(255,0,0,.2)
-}
-.paper-shadow-top-z-5 {
-    box-shadow: 0 40px 77px 0 rgba(255,0,0,.22)
+.paper-shadow-z-5 {
+    box-shadow: 
+        0 40px 77px 0 rgba(0,0,0,.22), 
+        0 27px 24px 0 rgba(0,0,0,.2);
 }
 ```
 
@@ -35,71 +35,14 @@ And in Photoshop... bottom on the left, top on the right:
 
 ![Settings in Photoshop]({{ site.baseurl }}/images/ruwAkDd.png)
 
+### Updated for Adobe Photoshop CC 2015
 
-Here are all of the drop shadow layer effect settings for each `z-height` level:
+Today Adobe Photoshop CC 2015 was released, with support for multiple (up to 10) instances of each layer style per layer. This coupled with the ability to 'Copy CSS' for a layer means that we can do this a lot more easily.
 
-#### Z-height 1
-##### Top shadow
-- opacity: 16%
-- angle: 90°
-- distance: 2px
-- size: 10px
+Here's a preview of the same effect, but using the new functionality:
 
-##### Bottom shadow
-- opacity: 26%
-- angle: 90°
-- distance: 2px
-- size: 5px
+![](https://dl.dropboxusercontent.com/u/19772/material-z-height-cc2015.png)
 
-#### Z-height 2
-##### Top shadow
-- opacity: 19%
-- angle: 90°
-- distance: 6px
-- size: 20px
+Here is an updated version of the PSD that will only work in CC2015+:
 
-##### Bottom shadow
-- opacity: 20%
-- angle: 90°
-- distance: 8px
-- size: 17px
-
-#### Z-height 3
-##### Top shadow
-- opacity: 19%
-- angle: 90°
-- distance: 17px
-- size: 50px
-
-##### Bottom shadow
-- opacity: 24%
-- angle: 90°
-- distance: 12px
-- size: 15px
-
-#### Z-height 4
-##### Top shadow
-- opacity: 21%
-- angle: 90°
-- distance: 25px
-- size: 55px
-
-##### Bottom shadow
-- opacity: 22%
-- angle: 90°
-- distance: 18px
-- size: 28px
-
-#### Z-height 5
-##### Top shadow
-- opacity: 22%
-- angle: 90°
-- distance: 40px
-- size: 70px
-
-##### Bottom shadow
-- opacity: 20%
-- angle: 90°
-- distance: 27px
-- size: 24px
-
+[Download the PSD for CC2015](https://dl.dropboxusercontent.com/u/19772/material-z-height-cc2015.psd)
