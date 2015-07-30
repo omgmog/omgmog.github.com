@@ -1,7 +1,6 @@
 ---
 layout: layout
 title: Home
-features: ["hide_recent_posts"]
 ---
 <div class="inner">
     <h2>
@@ -12,7 +11,7 @@ features: ["hide_recent_posts"]
     {% endfor %}
 </div>
 <div class="inner listing">
-    {% for post in site.posts limit:10 %}
+    {% for post in site.posts limit:5 %}
         {% include _article_preview.html %}
     {% endfor %}
     <p>
