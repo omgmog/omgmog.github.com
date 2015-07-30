@@ -16,6 +16,7 @@
 @include gridle_register_default_states;
 
 @include gridle_register_state(ipad-landscape, (query: "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)", gutter-width: 0));
+@include gridle_register_state(tablet, (query: "only screen and (max-width: 1200px)", gutter-width: 0));
 
 // Generate classes :
 @include gridle_generate_classes;
@@ -23,19 +24,19 @@
 @include gridle_register_default_mobile_first_states;
 
 @include gridle_generate_custom_class(("center", "%-", "%state")) {
-    text-align: center;
+  text-align: center;
 }
 
 
 @include gridle_generate_custom_class(("pull-left", "%-", "%state")) {
-    text-align: left;
-    float: left;
+  text-align: left;
+  float: left;
 }
 
 
 @include gridle_generate_custom_class(("pull-right", "%-", "%state")) {
-    text-align: right;
-    float: right;
+  text-align: right;
+  float: right;
 }
 
 
@@ -44,6 +45,6 @@
 
 // Max size :
 .container {
-    margin: 0 auto;
-    max-width: 1140px;
+  margin: 0 auto;
+  max-width: 800px;
 }

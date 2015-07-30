@@ -72,23 +72,9 @@
             </nav>
         </header>
         <div class="parent">
-            <section class="grid-8 grid-mobile-12">
+            <section class="grid-12">
                 {{ content }}
             </section>
-            <aside class="grid-4 grid-mobile-12">
-                {% unless page.features contains "hide_about" %}
-                    {% include sidebar_about.html %}
-                {% endunless %}
-                {% unless page.features contains "hide_featured_posts" %}
-                    {% include sidebar_featured_posts.html %}
-                {% endunless %}
-                {% unless page.features contains "hide_recent_posts" %}
-                    {% include sidebar_recent_posts.html %}
-                {% endunless %}
-                {% unless page.features contains "hide_recent_reviews" %}
-                    {% include sidebar_recent_reviews.html %}
-                {% endunless %}
-            </aside>
         </div>
     </div>
 

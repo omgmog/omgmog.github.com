@@ -1,11 +1,11 @@
 ---
 layout: layout
 title: Archive
-features: ["hide_recent_posts"]
 ---
 <div class="inner listing">
     {% for post in paginator.posts %}
         {% include _article_preview.html %}
     {% endfor %}
 </div>
+
 {% include pagination.html %}

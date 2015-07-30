@@ -3,7 +3,6 @@ layout: layout
 title: About
 permalink: /about/
 redirect_from: /about.html
-features: ["hide_about", "hide_recent_posts", "hide_recent_reviews"]
 ---
 <div class="inner">
     <img
@@ -33,4 +32,7 @@ features: ["hide_about", "hide_recent_posts", "hide_recent_reviews"]
         </li>
     {% endfor %}
     </ul>
+
+    {% include recent_posts.html %}
+    {% include recent_reviews.html %}
 </div>

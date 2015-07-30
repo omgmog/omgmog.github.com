@@ -1,7 +1,6 @@
 ---
 layout: layout
 title: Reviews
-features: ["hide_recent_reviews"]
 ---
 <div class="inner">
     <h2>
@@ -14,6 +13,7 @@ features: ["hide_recent_reviews"]
         I've had the opportunity to review some great gadgets, and I'm always looking forward to reviewing the newest and best. If you'd like me to write a review, <a href="https://omgmog.net/#contact">get in touch</a>.
     </p>
 </div>
+
 <div class="inner listing">
     {% assign reviews = (site.posts|where:'category','hardware-review') %}
     {% for post in reviews %}
