@@ -43,7 +43,7 @@ a {
 
   a {
     color: #534a4b;
-    height: 88px;
+    height: 5.5rem;
     background-position: 50% 0;
     background-repeat: no-repeat;
 
@@ -51,8 +51,8 @@ a {
       overflow: hidden;
       display: block;
       text-indent: -99em;
-      width: 0px;
-      height: 0px;
+      width: 0;
+      height: 0;
     }
 
     &.pull-left {
@@ -162,6 +162,7 @@ blockquote {
   border-left: 3px solid $color_highlight;
   margin-left: 0;
   padding-left: 1rem;
+  font-size: 1.2rem;
 
   p {
     font-style: italic;
@@ -224,7 +225,7 @@ nav {
 
   a {
     margin-left: 1rem;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   @include gridle_state("mobile") {
