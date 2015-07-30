@@ -8,7 +8,7 @@ I've recently been doing a lot of working designing an icon font that works well
 
 <!-- more -->
 
-<img src="{{ site.baseurl }}/images/Screen-Shot-2015-07-30-at-14.27.05.png" alt="" class="center massive">
+<img src="{{ site.baseurl }}/images/Screen-Shot-2015-07-30-at-14.27.05.png" alt="" class="center">
 
 ## Process
 
