@@ -1,0 +1,8 @@
+{% assign images = post.content | split:"<img " %}
+{% for image in images %}
+  {% if image contains 'src=' %}
+    {% assign imageMarkup = image | split:">" | first %}
+    <img {{ imageMarkup }}>
+    {% break %}
+  {% endif %}
+{% endfor %}
