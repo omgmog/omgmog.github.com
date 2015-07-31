@@ -8,7 +8,8 @@ tags: ["mac", "linux", "tip", "tutorial", "code", "terminal", "software", "githu
 <!-- more -->
 
 One nice thing is the `git log` command, and the options you can pass to it. Some examples from the docs:
-<cite><a href="http://www.kernel.org/pub/software/scm/git/docs/git-log.html">http://www.kernel.org/pub/software/scm/git/docs/git-log.html</a></cite>
+
+[http://www.kernel.org/pub/software/scm/git/docs/git-log.html](http://www.kernel.org/pub/software/scm/git/docs/git-log.html){:target="_blank"}
 
 `git log --no-merges` - Show the whole commit history, but skip any merges
 
@@ -27,9 +28,9 @@ So I made an alias/function for my `.bashrc`.
 # workdone [time period] [committer email]
 
 workdone(){
-       default="1 day ago"
-       email="[your email here]"
-       git log --committer=${2:-$email} --pretty=format:"%Cgreen%ar (%h)%n%Creset> %s %b%n" --since="${1:-$default}" --no-merges
+  default="1 day ago"
+  email="[your email here]"
+  git log --committer=${2:-$email} --pretty=format:"%Cgreen%ar (%h)%n%Creset> %s %b%n" --since="${1:-$default}" --no-merges
 }
 {% endhighlight %}
 
