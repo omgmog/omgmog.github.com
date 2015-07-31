@@ -11,12 +11,7 @@ I've had a Model B Raspberry Pi in my possesion for nearly two months now, and b
 
 <!-- more -->
 
-<figure>
-    <img src="{{ site.baseurl }}/images/pi.jpg" />
-    <figcaption>
-        Yes, that's my actual Raspberry Pi, what a beauty.
-    </figcaption>
-</figure>
+{% include figure.html src="pi.jpg" caption="Yes, that's my actual Raspberry Pi, what a beauty." %}
 
 ## Why did I buy the Raspberry Pi?
 Well I'm a sucker for buying new gadgets, and the Raspberry Pi has a price point that's hard to refuse. Mine actually ended up costing about 3-4 times as much as just buying a Pi would cost, as I opted in for the ["bells and whistles" package from Maplin](http://maplin.co.uk/raspberry-piandreg-board-and-starter-kit-652805) that includes:
