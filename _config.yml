@@ -8,7 +8,7 @@ paginate_path: "archive/page:num"
 excerpt_separator: "<!-- more -->"
 keep_files: ["images/","assets/","CNAME","robots.txt"]
 
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 name: "The blog of Max Glenister"
