@@ -71,7 +71,7 @@ Unfortunately I only managed to grab a seat towards the back of the room, and fo
 
 ## Morning - part 1
 
-### <a href="https://twitter.com/johnwards" target="_blank">John Wards </a> - Hello!
+### [John Wards ](https://twitter.com/johnwards){:target="_blank"} - Hello!
 
 John Wards from White October introduced the conference.
 
@@ -79,9 +79,9 @@ Besides welcoming everybody, he was apologetic about the lack of wifi at the ven
 
 We've been assured that next year there will be wifi!
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/brendan.jpg" />
+![]({{ site.baseurl }}/images/brendan.jpg){:.thumb-100 .pull-right}
 
-### <a href="https://twitter.com/BrendanEich" target="_blank">Brenden Eich </a> - JavaScript the future
+### [Brenden Eich ](https://twitter.com/BrendanEich){:target="_blank"} - JavaScript the future
 
 Brenden talked about up and coming features of ECMAScript 6 and 7, and how a lot of commonly used JavaScript code patterns are going to be making their way into the spec as features of JavaScript.
 
@@ -96,16 +96,16 @@ He talked about not wanting to go in the direction of Java with bytecode, as it'
 
 Also: Firefox OS phones will be out soon!
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/richard.jpg" />
+![]({{ site.baseurl }}/images/richard.jpg){:.thumb-100 .pull-right}
 
-### <a href="https://twitter.com/rworth" target="_blank">Richard D. Worth </a> - jQuery 1.9 and 2.0 - Present and Future
+### [Richard D. Worth ](https://twitter.com/rworth){:target="_blank"} - jQuery 1.9 and 2.0 - Present and Future
 
 Richard talked about the core features of jQuery, the reasons that they don't bloat the core codebase with feature requests (read: they've got a plugin system dontcha' know?), and the plans for jQuery 2.0 which was just released.
 
 He provided some interesting statistics:
 
 - Around 50% of all sites use jQuery.
-- 91\.2% of all sites that use JavaScript use jQuery.
+- 91.2% of all sites that use JavaScript use jQuery.
 
 The conclusion of those statistics was that 9/10 front-end developers use jQuery.. which isn't bad given the selection of JavaScript libraries out there that do a similar job.
 
@@ -129,7 +129,7 @@ Besides all of that, he invited (implored, encouraged) everybody to take part in
 
 ## Break - retro games!
 
-During the first break, the retro games consoles from <a href="http://www.replayevents.com/index.shtml" target="_blank">REPLAY</a> were turned on. There was a circle of chairs set up with 4 TVs and 4 consoles in the middle, and there was an additional 5th TV with an n64 close by.
+During the first break, the retro games consoles from [REPLAY](http://www.replayevents.com/index.shtml){:target="_blank"} were turned on. There was a circle of chairs set up with 4 TVs and 4 consoles in the middle, and there was an additional 5th TV with an n64 close by.
 
 ![]({{ site.baseurl }}/images/games.jpg)
 >&copy; [Ian Munro](http://twitter.com/imunro: [Original](https://twitter.com/imunro/status/325234919066464256)
@@ -138,9 +138,9 @@ People were playing Mario Kart 64, Goldeneye 64, Bomberman (SNES), Smash Bros (G
 
 ## Morning - part 2
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/remy.jpg" />
+![]({{ site.baseurl }}/images/remy.jpg){:.thumb-100 .pull-right}
 
-### <a href="https://twitter.com/rem" target="_blank">Remy Sharp </a> - So you know jQuery. Now what?
+### [Remy Sharp ](https://twitter.com/rem){:target="_blank"} - So you know jQuery. Now what?
 
 Remy Sharp gave an interesting/controversial talk about only using jQuery when it's totally necessary, and sticking to pure JavaScript if you can.
 
@@ -154,9 +154,9 @@ That sounds quite obvious, but there was a noticable eureka across the crowd whe
 - [Blog post which is basically the same as his talk](http://remysharp.com/2013/04/19/i-know-jquery-now-what/)
 - [Click here to view the slides](https://speakerdeck.com/rem/i-know-jquery-now-what)
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/adam.jpg" />
+![]({{ site.baseurl }}/images/adam.jpg){:.thumb-100 .pull-right}
 
-### <a href="https://twitter.com/ajpiano" target="_blank">Adam J. Sontag </a> - jQuery is a Swiss Army knife (and that's OK!)
+### [Adam J. Sontag ](https://twitter.com/ajpiano){:target="_blank"} - jQuery is a Swiss Army knife (and that's OK!)
 
 Placing Adam Sontag immediately after Remy was quite interesting, as his talk held a complete opposite perspective.
 
@@ -168,16 +168,16 @@ He also covered the dangers of using jQuery, or rather using it incorrectly, and
 
 - [Click here to view the slides](http://ajpiano.com/jquery-is-a-swiss-army-knife/)
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/doug.jpg" />
+![]({{ site.baseurl }}/images/doug.jpg){:.thumb-100 .pull-right}
 
-### <a href="https://twitter.com/dougneiner" target="_blank">Doug Neiner </a> - Taking Control with Machina.js
+### [Doug Neiner ](https://twitter.com/dougneiner){:target="_blank"} - Taking Control with Machina.js
 
-Doug's talk mostly focussed around plugging <a href="https://github.com/ifandelse/machina.js" target="_blank">machina.js</a>, but I was too hungry to take extensive notes on the talk.
+Doug's talk mostly focussed around plugging [machina.js](https://github.com/ifandelse/machina.js){:target="_blank"}, but I was too hungry to take extensive notes on the talk.
 
 {% assign iframe_url = "https://player.vimeo.com/video/67473899" %}
 {% include iframe_embed.html %}
 
-The gist of it is that machina.js is a Finite State Machine - "What's a Finite State Machine?" you ask? Ah well.. according to <a href="http://freshbrewedcode.com/jimcowart/2012/03/12/machina-js-finite-state-machines-in-javascript/" target="_blank">Jim Cowart</a>:
+The gist of it is that machina.js is a Finite State Machine - "What's a Finite State Machine?" you ask? Ah well.. according to [Jim Cowart](http://freshbrewedcode.com/jimcowart/2012/03/12/machina-js-finite-state-machines-in-javascript/){:target="_blank"}:
 
 > A finite state machine is an architectural model which can exist in only one of a finite number of states at a given time – and thus it responds differently to the same input depending on the state in which it is currently in.
 
@@ -223,17 +223,17 @@ During the lunch break there were lightning talks going on in the main conferenc
 
 ## Afternoon - part 1
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/garann.jpg" />
+![]({{ site.baseurl }}/images/garann.jpg){:.thumb-100 .pull-right}
 
-### <a href="https://twitter.com/garannm" target="_blank">Garann Means </a> - How to use events to glue full-stack frameworks together
+### [Garann Means ](https://twitter.com/garannm){:target="_blank"} - How to use events to glue full-stack frameworks together
 
 Garann talked about using events and jQuery to glue your templates and front-end stuff to your models/controllers.
 
 - [Click here to view the slides](http://garann.com/slides/fullstack-events/#/)
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/ilya.jpg" />
+![]({{ site.baseurl }}/images/ilya.jpg){:.thumb-100 .pull-right}
 
-### <a href="https://twitter.com/igrigorik" target="_blank">Ilya Grigorik </a> - Wait, Chrome DevTools can do THAT?
+### [Ilya Grigorik ](https://twitter.com/igrigorik){:target="_blank"} - Wait, Chrome DevTools can do THAT?
 
 Ilya's talk was much like Paul Irish's last year, in that it was more about Chrome than about jQuery, but that doesn't mean it wasn't good.
 
@@ -260,11 +260,11 @@ He demonstrated how far the remote debugging for Chrome on Android has come alon
 >&copy; [Ben Seymour](http://twitter.com/bseymour): [Original]
 
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/john.jpg" />
+![]({{ site.baseurl }}/images/john.jpg){:.thumb-100 .pull-right}
 
 ## Afternoon - part 2
 
-### <a href="https://twitter.com/johnbender" target="_blank">John Bender</a> - Faster DOM manipulation with category theory and wield
+### [John Bender](https://twitter.com/johnbender){:target="_blank"} - Faster DOM manipulation with category theory and wield
 
 John's talk was focussed on optimising your use of jQuery by using category theory to group methods.
 
@@ -275,9 +275,9 @@ Lastly he went on to talk about Weild, `a tiny object wrapper around the DOM`. Y
 - [Read his related blog post here](http://johnbender.us/2012/02/09/faster-javascript-through-category-theory/)
 - [Click here to view the slides](http://johnbender.us/presentation-faster-js/#/)
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/joe.jpg" />
+![]({{ site.baseurl }}/images/joe.jpg){:.thumb-100 .pull-right}
 
-### <a href="https://twitter.com/Joe8Bit" target="_blank">Joe Pettersson</a> - Complex clientside apps and legacy browsers (a story of frustration...)
+### [Joe Pettersson](https://twitter.com/Joe8Bit){:target="_blank"} - Complex clientside apps and legacy browsers (a story of frustration...)
 
 Joe's talk was about testing across multiple browsers, and how to make the task of doing so a lot less painful. He covered manual testing using virtual machines and some CI testing using using software such as [JENKINS](http://jenkins-ci.org/) and [Selenium](http://docs.seleniumhq.org/).
 
@@ -285,9 +285,9 @@ The only bad thing I've got to say about Joe's talk is that he had a heavy empha
 
 - [Click here to view the slides](https://speakerdeck.com/joepettersson/building-for-legacy-browsers-jquery-uk-2013)
 
-<img class="thumb-100 pull-right" src="{{ site.baseurl }}/images/jason.jpg" />
+![]({{ site.baseurl }}/images/jason.jpg){:.thumb-100 .pull-right}
 
-### <a href="https://twitter.com/JsonScott" target="_blank">Jason Scott</a> - Build an experience... not another framework
+### [Jason Scott](https://twitter.com/JsonScott){:target="_blank"} - Build an experience... not another framework
 
 Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
 
