@@ -69,7 +69,7 @@ With Sketch I create a document containing a number of "Artboards" for each icon
 
 ![]({{ site.baseurl }}/images/Screen Shot 2015-07-30 at 13.20.48.png){: .center .massive}
 
-I'm not going to explain how to draw your icons, but you can find a pretty good tutorials for using Sketch here: http://www.sketchappsources.com/tutorials-tips.html
+I'm not going to explain how to draw your icons, but you can find a pretty good tutorials for using Sketch here: [http://www.sketchappsources.com/tutorials-tips.html](http://www.sketchappsources.com/tutorials-tips.html)
 
 It's worth noting that, for the sake of an icon font you will need to draw everything in monochrome. So no crazy path styles, or border effects.
 
@@ -80,7 +80,7 @@ With each of your icons drawn in sketch, you have a couple of options for easily
 1. Use slices to create slice regions for each icon in your .sketch file, and then export all of these as SVG
 2. Use artboards and export all of these as SVG
 
-Here's a pretty good overview of how to use Sketch's "Export" feature: http://webdesign.tutsplus.com/tutorials/understanding-sketchs-export-options--cms-22207
+Here's a pretty good overview of how to use Sketch's "Export" feature: [http://webdesign.tutsplus.com/tutorials/understanding-sketchs-export-options--cms-22207](http://webdesign.tutsplus.com/tutorials/understanding-sketchs-export-options--cms-22207)
 
 ## Generate the icon font
 
