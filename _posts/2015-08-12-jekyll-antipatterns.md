@@ -40,7 +40,7 @@ Proper method:
 {% endraw %}
 {% endhighlight %}
 
-## Limiting the number of filtered results presented
+## Limiting the number of filtered results presented
 
 It's tempting to write a for loop in Jekyll as you would in any other language: incrementing a counter until a limit is reached, and then exiting the loop.
 
