@@ -2,7 +2,9 @@
 {% for image in images %}
   {% if image contains 'src=' %}
     {% assign imageMarkup = image | split:">" | first %}
-    <img {{ imageMarkup }}>
+    <a href="{{ site.baseurl }}{{ post.url }}">
+    <img {{ imageMarkup|replace:"center massive","" }}>
+    </a>
     {% break %}
   {% endif %}
 {% endfor %}
