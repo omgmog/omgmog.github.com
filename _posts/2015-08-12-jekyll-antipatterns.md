@@ -66,7 +66,7 @@ Proper method:
 {% highlight liquid %}
 {% raw %}
 {% assign featured_posts = (site.posts|where:"featured","true") %}
-{% for posts in featured_posts limit:5 %}
+{% for post in featured_posts limit:5 %}
     {{ post.title }}
 {% endfor %}
 {% endraw %}
