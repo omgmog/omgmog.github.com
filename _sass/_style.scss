@@ -282,11 +282,48 @@ img {
   &.rounded {
     border-radius: 50%;
   }
+  &.shadow {
+    @include box-shadow(0 0.3rem 1rem rgba(0, 0, 0, 0.4));
+  }
 }
 
 p {
+  &.center {
+    text-align: center;
+  }
   img {
     margin-bottom: 0;
+  }
+}
+table {
+  width: 120%;
+  margin: 1.5rem auto;
+  margin-left: -10%;
+  box-sizing: border-box;
+  border-bottom: 1px solid $color_quaternary;
+  @include box-shadow(0 0.3rem 1rem rgba(0, 0, 0, 0.4));
+
+  tr {
+    &:nth-child(odd) {
+      background: rgba(#fff, .8);
+    }§
+    &:first-child {
+      border-bottom: 2px solid $color_quaternary;
+    }
+
+    td {
+      padding: 5px;
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+}
+@include gridle_state("tablet") {
+  table {
+    width: 100%;
+    margin-left: auto;
   }
 }
 
