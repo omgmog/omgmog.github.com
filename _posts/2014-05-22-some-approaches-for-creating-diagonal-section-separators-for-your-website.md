@@ -69,13 +69,13 @@ For this image then, we need the height of the element to be 7%. You can't just 
 Lastly we need to position the `.diagonal-background` element absolutely at the bottom of the parent element.
 
 {% highlight css %}
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+position: absolute;
 {% endhighlight %}
 
-{% assign iframe_url = "http://jsfiddle.net/U7vMH/embedded/result" %}
+{% assign iframe_url = "https://jsfiddle.net/U7vMH/embedded/result" %}
 {% include iframe_embed.html %}
 
 ### Approach #3: Using SVG for a background image that scales _well_
@@ -94,7 +94,7 @@ SVG or "[scalable vector graphics](http://en.wikipedia.org/wiki/Scalable_Vector_
 
 There's an added bonus here, as SVG is scalable, you can create an even smaller starting image (100x6 for example) which will mean that the SVG is 35% (403 bytes vs 1183 bytes) of the size of the PNG used earlier. See the example:
 
-{% assign iframe_url = "http://jsfiddle.net/3zt98/embedded/result" %}
+{% assign iframe_url = "https://jsfiddle.net/3zt98/embedded/result" %}
 {% include iframe_embed.html %}
 
 ### Approach #4: Improving this by using CSS pseudo elements
@@ -165,7 +165,7 @@ This Sass mixin will let you specify the width/height/color of your diagonal sep
 
 Not bad!
 
-{% assign iframe_url = "http://jsfiddle.net/ves2g/embedded/result" %}
+{% assign iframe_url = "https://jsfiddle.net/ves2g/embedded/result" %}
 {% include iframe_embed.html %}
 
 This works pretty perfectly in Chrome, but it may have some issues in other browsers. If you can't see the nice diagonal lines in the example above, here is a picture to illustrate how the final result looks:
