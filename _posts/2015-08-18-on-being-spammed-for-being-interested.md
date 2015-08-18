@@ -31,7 +31,7 @@ It's worth noting the structure and language of the emails. A bit chatty, hey th
 
 Well I can only assume this email isn't very personal, and is in fact very much automated. So how might they have achieved this?
 
-Well I mentioned the `/users/:username` API endpoint on GitHub earlier. Besides that, the GitHub API has a bunch of other endpoints, such as `/repo/:reponame/stargazers` (or in English, a list of all the people who have starred a repository.)
+Well I mentioned the `/users/:username` API endpoint on GitHub earlier. Besides that, the GitHub API has a bunch of other endpoints, such as `/repos/:username/:reponame/stargazers` (or in English, a list of all the people who have starred a repository.)
 
 Even the most unsavvy techie could find a repository for a project that has a lot of stargazers that they want to approach, and then it's simple to get a list of all of the stargazers. Let's take a repository of mine, [Install all Firefox](https://github.com/omgmog/install-all-firefox), which has a humble 215 stars:
 
