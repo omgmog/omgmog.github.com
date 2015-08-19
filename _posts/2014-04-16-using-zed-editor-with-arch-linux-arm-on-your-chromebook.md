@@ -13,13 +13,13 @@ Enter [Zed](http://github.com/zedapp/zed).
 
 Zed is an editor that is available both as a Chrome App, and as a standalone application. The standalone version is only available for Windows, Mac, and Linux 32/64bit.
 
-I'm running Chromium on my Arch Linux install on the Chromebook, so I've installed Zed as a Chrome App, and it works very nicely. 
+I'm running Chromium on my Arch Linux install on the Chromebook, so I've installed Zed as a Chrome App, and it works very nicely.
 
 It's not very convenient to have to launch Chromium and then find the app launcher for Zed though, so I created a launcher directly for Zed in the following way:
 
-```
+{% highlight bash %}
 $ chromium --app-id=pfmjnmeipppmcebplngmhfkleiinphhp
-```
+{% endhighlight %}
 
 Where the `app-id` is the id of Zed Chrome App.
 

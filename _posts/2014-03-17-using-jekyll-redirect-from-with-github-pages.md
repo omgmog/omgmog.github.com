@@ -22,22 +22,23 @@ To use the plugin you have to do a couple of things
 
 1. Install the gem locally so you can make sure it works on your local Jekyll
 
-  ``` bash
-  gem install jekyll-redirect-from
-  ```
+{% highlight bash %}
+gem install jekyll-redirect-from
+{% endhighlight %}
 
 2. Enable the gem in your `_config.yml` (not using a `_plugin/` like you might expect)
 
-  ``` yaml
-  gems:
+{% highlight yaml %}
+gems:
   - jekyll-redirect-from
-  ```
+{% endhighlight %}
+
 3. Add `redirect_from: [list or single url]` to your post frontmatter
 
-  ``` yaml
-  redirect_from:
-   - "/post/some-old-slug/"
-  ```
+{% highlight yaml %}
+redirect_from:
+  - "/post/some-old-slug/"
+{% endhighlight %}
 
 And that's it.
 

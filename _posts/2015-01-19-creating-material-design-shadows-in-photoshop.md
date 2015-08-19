@@ -23,13 +23,13 @@ The Material Design shadows are actually comprised of two shadows on each elemen
 
 You'd use something like this to create the `z-height: 5` shadow effect using `CSS`:
 
-```css
+{% highlight css %}
 .paper-shadow-z-5 {
-    box-shadow: 
-        0 40px 77px 0 rgba(0,0,0,.22), 
+    box-shadow:
+        0 40px 77px 0 rgba(0,0,0,.22),
         0 27px 24px 0 rgba(0,0,0,.2);
 }
-```
+{% endhighlight %}
 
 And in Photoshop... bottom on the left, top on the right:
 
