@@ -74,7 +74,7 @@
               >
             {% endif %}
           {% endif %}
-            {% if node.external == "true" %}
+            {% if node.external contains 'true' %}
               <a href="{{ node.link }}">{{ node.title }}</a>
             {% else %}
                 <a href="{{ site.baseurl }}{{ node.link }}">{{ node.title }}</a>
