@@ -1,13 +1,18 @@
-$color_primary: #444;
-$color_secondary: #fff;
-$color_tertiary: #2a2a2a;
-$color_quaternary: #eee;
+$heightHeader: 3rem;
+$widthSite: 900px;
+$widthContent: 100%;
 
-$color_link_primary: #6792a6;
-$color_link_secondary: #86bfd9;
 
-$color_highlight: lighten($color_link_secondary, 20%);
+$iron: #dadbdf;
+$regentGrey: #808c99;
+$oxfordBlue: #015799;
+$paleSky: #6b717f;
 
-$sansserif_fonts: Helvetica Neue, Helvetica, Arial, sans-serif;
+$colorBackgroundHeader: darken($paleSky, 30);
+$colorForegroundHeader: #fff;
+$colorBackgroundBody: lighten($iron, 20);
 
-$max_width: 42rem;
+$colorBackgroundContent: transparent;
+$colorForegroundContent: darken($paleSky, 15);
+
+$colorBorder: lighten($regentGrey, 30);

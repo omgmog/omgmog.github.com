@@ -1,6 +1,6 @@
 <article>
-  {% include _article_metadata.html %}
   {% include _post_image.html %}
+  {% include _article_metadata.html %}
   <p>
     {{ post.excerpt | strip_html }} <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
   </p>

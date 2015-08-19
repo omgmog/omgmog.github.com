@@ -4,7 +4,7 @@
     "encoding": "UTF-8",
     "version": "1.0",
     "title": "{{ site.name }}",
-    "description": "{{ site.bio }}",
+    "description": "{{ site.author.bio }}",
     "link": "{{ site.baseurl }}",
     "updated":"{% for post in site.posts limit:1 %}{{ post.date }}{% endfor %}",
     "author": "{{ site.author.name }}",

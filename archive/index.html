@@ -2,10 +2,9 @@
 layout: layout
 title: Archive
 ---
-<div class="inner listing">
-    {% for post in paginator.posts %}
-        {% include _article_preview.html %}
-    {% endfor %}
-</div>
+{% for post in paginator.posts %}
+    {% include _article_preview.html %}
+{% endfor %}
+
 
 {% include pagination.html %}
