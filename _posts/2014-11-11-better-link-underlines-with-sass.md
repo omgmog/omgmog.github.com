@@ -37,63 +37,63 @@ $selectionColor: #b4d5fe;
 
 // this mixin is used to add the outline to the text
 @mixin textShadowToCropUnderline($color) {
-    text-shadow:
-        .03em 0 $color,
-        -.03em 0 $color,
-        0 .03em $color,
-        0 -.03em $color,
+  text-shadow:
+    .03em 0 $color,
+    -.03em 0 $color,
+    0 .03em $color,
+    0 -.03em $color,
 
-        .06em 0 $color,
-        -.06em 0 $color,
-        .09em 0 $color,
-        -.09em 0 $color,
+    .06em 0 $color,
+    -.06em 0 $color,
+    .09em 0 $color,
+    -.09em 0 $color,
 
-        .12em 0 $color,
-        -.12em 0 $color,
-        .15em 0 $color,
-        -.15em 0 $color;
+    .12em 0 $color,
+    -.12em 0 $color,
+    .15em 0 $color,
+    -.15em 0 $color;
 }
 // this puts it all together
 @mixin linkUnderlines($background, $color) {
+  color: $color;
+  text-decoration: none;
+  @include textShadowToCropUnderline($background);
+
+  background-image:
+    linear-gradient($background, $background),
+    linear-gradient($background, $background),
+    linear-gradient($color, $color);
+  background-size:
+    .05em 1px,
+    .05em 1px,
+    1px 1px;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    repeat-x;
+  background-position:
+    0% 90%,
+    100% 90%,
+    0% 90%;
+
+  &::selection {
+    @include textShadowToCropUnderline($selectionColor);
+    background-color: $selectionColor;
+  }
+  &::-moz-selection {
+    @include textShadowToCropUnderline($selectionColor);
+    background-color: $selectionColor;
+  }
+  &:before,
+  &:after,
+  *,
+  *:before,
+  *:after {
+    text-shadow: none;
+  }
+  &:visited {
     color: $color;
-    text-decoration: none;
-    @include textShadowToCropUnderline($background);
-
-    background-image:
-        linear-gradient($background, $background),
-        linear-gradient($background, $background),
-        linear-gradient($color, $color);
-    background-size:
-        .05em 1px,
-        .05em 1px,
-        1px 1px;
-    background-repeat:
-        no-repeat,
-        no-repeat,
-        repeat-x;
-    background-position:
-        0% 90%,
-        100% 90%,
-        0% 90%;
-
-    &::selection {
-        @include textShadowToCropUnderline($selectionColor);
-        background-color: $selectionColor;
-    }
-    &::-moz-selection {
-        @include textShadowToCropUnderline($selectionColor);
-        background-color: $selectionColor;
-    }
-    &:before,
-    &:after,
-    *,
-    *:before,
-    *:after {
-        text-shadow: none;
-    }
-    &:visited {
-        color: $color;
-    }
+  }
 }
 {% endhighlight %}
 
@@ -101,7 +101,7 @@ You can use this mixin quite easily be either invoking it on your site-wide `a` 
 
 {% highlight sass %}
 .content a {
-    @include linkUnderlines(#fff, #00f);
+  @include linkUnderlines(#fff, #00f);
 }
 {% endhighlight %}
 
