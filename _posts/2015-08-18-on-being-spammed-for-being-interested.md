@@ -25,7 +25,7 @@ Lately I've been directly receiving emails relating to a repository I had starre
 
 Here are two example emails I recieved, both directly linked to a single project repository I had starred:
 
-![]({{ site.baseurl }}/images/Screen Shot 2015-08-18 at 13.44.01.png){: .center .massive}
+![]({{ site.baseurl }}/images/Screen Shot 2015-08-18 at 13.44.01.png){: .center .massive .shadow}
 
 It's worth noting the structure and language of the emails. A bit chatty, hey they used the phrase "hacking on", but hey these are two unrelated people, presumably from two unrelated projects, talking about two competing pieces of software. What gives?
 
