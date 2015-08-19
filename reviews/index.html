@@ -1,22 +1,18 @@
 ---
 layout: layout
 title: Reviews
+highlight: reviews
 ---
-<div class="inner">
-    <h2>
-        Send me your gadgets!
-    </h2>
-    <p>
-        I enjoy technology and I love nothing more than receiving new gadgets. If I'm not buying a new toy to play with, I'm reading about the latest <em>thing</em> somewhere.
-    </p>
-    <p>
-        I've had the opportunity to review some great gadgets, and I'm always looking forward to reviewing the newest and best. If you'd like me to write a review, <a href="https://omgmog.net/#contact">get in touch</a>.
-    </p>
-</div>
-
-<div class="inner listing">
-    {% assign reviews = (site.posts|where:'category','hardware-review') %}
-    {% for post in reviews %}
-        {% include _review_preview.html %}
-    {% endfor %}
-</div>
+<h2>
+    Send me your gadgets!
+</h2>
+<p>
+    I enjoy technology and I love nothing more than receiving new gadgets. If I'm not buying a new toy to play with, I'm reading about the latest <em>thing</em> somewhere.
+</p>
+<p>
+    I've had the opportunity to review some great gadgets, and I'm always looking forward to reviewing the newest and best. If you'd like me to write a review, <a href="https://omgmog.net/#contact">get in touch</a>.
+</p>
+{% assign reviews = (site.posts|where:'category','hardware-review') %}
+{% for post in reviews %}
+    {% include _review_preview.html %}
+{% endfor %}
