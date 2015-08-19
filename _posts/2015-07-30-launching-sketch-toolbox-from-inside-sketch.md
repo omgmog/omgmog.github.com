@@ -12,7 +12,8 @@ I'm using a tool called [Sketch Toolbox](http://sketchtoolbox.com/) to manage pl
 
 To get a smoother connection between Sketch and Sketch Toolbox, I've come up with the following technique.
 
-![]({{ site.baseurl }}/images/sketch-to-sketch-toolbox.png){: .center}
+{: .center}
+![]({{ site.baseurl }}/images/sketch-to-sketch-toolbox.png)
 
 ## 1. Create an Automator Service to launch Sketch Toolbox from inside Sketch
 
@@ -24,7 +25,8 @@ To get a smoother connection between Sketch and Sketch Toolbox, I've come up wit
 6. Set 'Launch Application' to 'Sketch Toolbox'
 7. Save this service as 'Sketch Toolbox'
 
-![]({{ site.baseurl }}/images/Screen Shot 2015-07-30 at 15.31.30.png){: .center}
+{: .center}
+![]({{ site.baseurl }}/images/Screen Shot 2015-07-30 at 15.31.30.png)
 
 ## 2. Create an application keyboard shortcut for Sketch to trigger the service
 
@@ -35,6 +37,7 @@ To get a smoother connection between Sketch and Sketch Toolbox, I've come up wit
 5. Enter the name you used for your service in 'Menu Title' (e.g. 'Sketch Toolbox')
 6. Set the keyboard shortcut you would like, I used `cmd` + `shift` + `,`
 
-![]({{ site.baseurl }}/images/Screen Shot 2015-07-30 at 15.31.58.png){: .center}
+{: .center}
+![]({{ site.baseurl }}/images/Screen Shot 2015-07-30 at 15.31.58.png)
 
 Now if you go to Sketch, and press the keyboard shortcut you configured, Sketch Toolbox will launch.
