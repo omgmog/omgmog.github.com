@@ -4,35 +4,19 @@ title: About
 permalink: /about/
 redirect_from: /about.html
 ---
-<div class="inner">
-    <img
-        src="{{ site.baseurl }}/assets/max.jpg"
-        alt="A photo of Max Glenister, a front-end developer from Oxford"
-        width="200"
-        height="200"
-        class="thumb-200 center rounded"
-    />
+<p>
+    If you'd like to find out more about what I've been up to, you can do so through the following links:
+</p>
 
-    {% for paragraph in site.description %}
-        {{ paragraph | markdownify }}
-    {% endfor %}
+<ul class="links">
+{% for site in site.sites %}
+    <li>
+        <a href="{{ site.link }}" target="_blank">
+            {{ site.text }}
+        </a>
+    </li>
+{% endfor %}
+</ul>
 
-    <hr />
-
-    <p>
-        If you'd like to find out more about what I've been up to, you can do so through the following links:
-    </p>
-
-    <ul class="links">
-    {% for site in site.sites %}
-        <li>
-            <a href="{{ site.link }}" target="_blank">
-                {{ site.text }}
-            </a>
-        </li>
-    {% endfor %}
-    </ul>
-
-    {% include recent_posts.html %}
-    {% include recent_reviews.html %}
-</div>
+{% include recent_posts.html %}
+{% include recent_reviews.html %}

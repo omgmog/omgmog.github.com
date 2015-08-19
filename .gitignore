@@ -1,6 +1,7 @@
-_site/*
-_theme_packages/*
-.sass-cache/*
+_site
+_theme_packages
+.sass-cache
+node_modules
 *.scssc
 
 Thumbs.db

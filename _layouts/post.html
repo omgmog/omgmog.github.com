@@ -1,16 +1,17 @@
 ---
 layout: layout
 description: true
+highlight: articles
 ---
 {% assign post = page %}
 
-<div class="inner">
-    {% include single_post.html class="post" %}
-    <hr />
-    <p>
-        Notice any issues in this post? You can <a href="https://github.com/omgmog/omgmog.github.com/edit/master/{{ post.path }}">fix it on GitHub</a> or <a href="https://github.com/omgmog/omgmog.github.com/issues/new">let me know</a>.
-    </p>
-</div>
+{% include single_post.html class="post" %}
+
+<hr />
+
+<p>
+    Notice any issues in this post? You can <a href="https://github.com/omgmog/omgmog.github.com/edit/master/{{ post.path }}">fix it</a> or <a href="https://github.com/omgmog/omgmog.github.com/issues/new">raise an issue</a> on GitHub.
+</p>
 
 {% include _old_post_warning.html %}
 
@@ -18,9 +19,8 @@ description: true
 
 {% include _adsense.html %}
 
-<div class="inner">
-    <div id="disqus_thread" class="comments"></div>
-</div>
+<div id="disqus_thread" class="comments"></div>
+
 
 <script type="text/javascript">
     var comments = document.getElementsByClassName('comments')[0],
@@ -56,6 +56,6 @@ description: true
             if (!disqusLoaded && window.pageYOffset > commentsOffset - 1000) {
                 loadDisqus();
             }
-        }
+        };
     }
 </script>

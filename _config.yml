@@ -1,43 +1,36 @@
 permalink: /post/:title
-exclude: ["_config.yml", ".gitignore", "README.md"]
+exclude: ["_config.yml", ".gitignore", "README.md", "node_modules"]
 baseurl: "//blog.omgmog.net"
 safe: true
 lsi: false
 paginate: 15
 paginate_path: "archive/page:num"
 excerpt_separator: "<!-- more -->"
-keep_files: ["images/","assets/","CNAME","robots.txt"]
+keep_files: ["images/","thumbs/","assets/","CNAME","robots.txt"]
 
 markdown: kramdown
 highlighter: pygments
 
 name: "The blog of Max Glenister"
+
 author:
     name: "Max Glenister"
     bio: "Max Glenister is a front-end developer from Oxford. He writes mostly about front-end development and technology."
 disqus: "blogomgmog"
-description: |
-    Hello, I'm Max Glenister, a front-end developer from Oxford, and this is my blog. It mostly contains tech-related musings, and any other miscellany that I find interesting.
-sites:
-    - link: "https://github.com/omgmog"
-      text: "GitHub"
-    - link: "https://twitter.com/omgmog"
-      text: "Twitter"
-    - link: "https://omgmog.net"
-      text: "My personal site"
-    - link: "http://marmaladeandjam.co.uk"
-      text: "My web design company"
+
 sass:
     style: compressed
+
 gems:
     - jekyll-redirect-from
 
-nav_pages:
-    - link: "/"
-      text: "Home"
-    - link: "/about/"
-      text: "About"
-    - link: "/archive/"
-      text: "Archive"
-    - link: "/reviews/"
-      text: "Reviews"
+menu:
+  - link: "https://omgmog.net"
+    title: "About"
+    external: true
+  - link: "/"
+    title: "Articles"
+    highlight: articles
+  - link: "/reviews/"
+    title: "Reviews"
+    highlight: reviews
