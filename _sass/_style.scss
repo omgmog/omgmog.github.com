@@ -160,8 +160,9 @@ article {
     @include border-radius(.3rem);
   }
   iframe,
-  img.shadow {
-    @include box-shadow(0 0.3rem 1rem rgba(0, 0, 0, 0.4));
+  img.shadow,
+  .highlight {
+    @include box-shadow(0 0 2.5rem 0 rgba(0,0,0,0.15));
   }
   blockquote {
     border-left: 4px solid $colorBorder;
