@@ -10,7 +10,7 @@ gulp.task("default", function () {
         width: 200,
         height: 200,
         crop: true,
-        upscale: false,
+        upscale: true,
         imageMagick: true
       }),
       os.cpus().length
