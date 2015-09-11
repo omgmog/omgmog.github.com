@@ -35,4 +35,7 @@ Thankfully, I've had [Bartender](http://www.macbartender.com/) to help since the
 
 Today I came across [mac2imgur](https://github.com/mileswd/mac2imgur), it's functionally identical to Slingshot (in that it watches for screenshots and uploads them, before then copying the URL to your clipboard), free, open source, and it even features a nice white icon for the black Yosemite menu bar.
 
+{:.center}
+![]({{ site.baseurl }}/images/Is this meta or what.gif)
+
 So I'm done with Slingshot -- viva mac2imgur!
