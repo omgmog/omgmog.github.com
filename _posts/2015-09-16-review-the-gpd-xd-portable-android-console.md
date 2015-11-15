@@ -144,3 +144,8 @@ With each new Android device that comes from China, there seems to be improvemen
 You can find lots of video reviews of the GPD XD over in the ["GPD XD Videos" thread on Dingoonity](http://boards.dingoonity.org/gpd-devices/gpd-xd-youtube-video-(not-in-english)).
 
 You can buy the GPD XD from Geekbuying's online store here: [http://www.geekbuying.com/item/GPD-XD-5-Inch-Android4-4-Gamepad-2GB-16GB-RK3288-Quad-Core-1-8GHz-Handled-Game-Console-H-IPS-1280-768-Game-Tablet-PC---Black-347650.html](http://www.geekbuying.com/item/GPD-XD-5-Inch-Android4-4-Gamepad-2GB-16GB-RK3288-Quad-Core-1-8GHz-Handled-Game-Console-H-IPS-1280-768-Game-Tablet-PC---Black-347650.html)
+
+And use the following codes for discounts from Geekbuying:
+
+- $10 off GPD XD 16GB: **FYHPAGWL**
+- $10 off GPD XD 32GB: **YGCJEULD**

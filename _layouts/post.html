@@ -44,8 +44,9 @@ highlight: articles
             return curtop;
         }
     }
-
-    if (window.location.hash.indexOf('#disqus_thread') > 0) {
+    var visitingCommentsDirectly = window.location.hash.indexOf('#disqus_thread') > 0;
+    var pageIsShorterThanWindow = document.body.offsetHeight < window.innerHeight;
+    if ( visitingCommentsDirectly || pageIsShorterThanWindow ) {
         loadDisqus();
     }
 
