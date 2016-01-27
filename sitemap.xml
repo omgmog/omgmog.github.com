@@ -9,7 +9,7 @@
 {% for post in site.posts %}
     <url>
         <loc>
-            https:{{ site.baseurl }}{{ post.url }}
+            {{ site.baseurl }}{{ post.url }}
         </loc>
         <lastmod>
             {{ post.date | date_to_xmlschema }}
