@@ -25,7 +25,7 @@
 {% for page in site.pages %}
     <url>
         <loc>
-            https:{{ site.baseurl }}{{ page.url }}
+            {{ site.baseurl }}{{ page.url }}
         </loc>
         <lastmod>
             {{ site.time | date_to_xmlschema }}
