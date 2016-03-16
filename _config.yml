@@ -1,5 +1,5 @@
 permalink: /post/:title/
-exclude: ["_config.yml", ".gitignore", "README.md", "node_modules"]
+exclude: ["_config.yml", ".gitignore", "README.md", "node_modules", "Gemfile", "Gemfile.lock"]
 baseurl: "https://blog.omgmog.net"
 safe: true
 paginate: 15
