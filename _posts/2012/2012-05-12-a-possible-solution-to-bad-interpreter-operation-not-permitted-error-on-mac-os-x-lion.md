@@ -9,9 +9,9 @@ Out of the blue I started having an issue in my Terminal.app on Lion where downl
 
 The problem looks like this:
 
-{% highlight bash %}
+```bash
 $ ./android: /bin/sh: bad interpreter: Operation not permitted
-{% endhighlight %}
+```
 
 After a bit of Google-fu, and a bunch of Apple Support Community threads that ended in people arguing about whether or not TextEdit caused this issue, I found a cause and a solution.
 
@@ -19,14 +19,14 @@ It turns out that for some reason, on Mac OS X Lion 10.7.3 apple is storing a `c
 
 Anyway, there is a solution:
 
-{% highlight bash %}
+```bash
 $ xattr -rd com.apple.quarantine [directory containing the executables]
-{% endhighlight %}
+```
 
 So, for me with the Android SDK, I ran the following:
 
-{% highlight bash %}
+```bash
 $ xattr -rd com.apple.quarantine /android-sdk/
-{% endhighlight %}
+```
 
 This command deletes the `com.apple.quarantine` metadata files, allowing you to execute the executables.

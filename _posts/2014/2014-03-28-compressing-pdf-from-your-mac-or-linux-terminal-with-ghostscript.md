@@ -15,31 +15,31 @@ The method I'm using requires `ghostscript`. Ghostscript is a high quality, high
 
 If you're using a Mac, you can install `ghostscript` using `brew`:
 
-{% highlight bash %}
+```bash
 brew install ghostscript
-{% endhighlight %}
+```
 
 If you're using Linux you can install `ghostscript` from `aptitude`, or your package manager of choice [[2]](https://gist.github.com/leomelzer/3949356).
 
 Now, you can use `ghostscript` to compress your PDF file for the web:
 
-{% highlight bash %}
+```bash
 gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/screen -dCompatibilityLevel=1.4 -sOutputFile=output.pdf input.pdf
-{% endhighlight %}
+```
 
 That's not exactly a memorable command, so I've made a function that you can add to your `~/.bash_profile` to allow you to easily compress PDF files from your terminal:
 
-{% highlight bash %}
+```bash
 # Usage: compresspdf [input file] [output file] [screen*|ebook|printer|prepress]
 compresspdf() {
     gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile=$2 $1
 }
-{% endhighlight %}
+```
 
 Now you can simply run the following command:
 
-{% highlight bash %}
+```bash
 compresspdf Massive.pdf Small.pdf
-{% endhighlight %}
+```
 
 Using this command I managed to compress an A3 size PDF (originally around 9MB) down to just under 1MB, which is perfect for the web.

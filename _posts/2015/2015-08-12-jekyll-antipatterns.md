@@ -19,26 +19,22 @@ Thankfully, Jekyll added the `where` filter in [version 2.0.0](https://github.co
 
 Antipattern:
 
-{% highlight liquid %}
-{% raw %}
-{% for post in site.posts %}
+```liquid
+{% raw %}{% for post in site.posts %}
     {% if post.featured == "true" %}
         {{ post.title }}
     {% endif %}
-{% endfor %}
-{% endraw %}
-{% endhighlight %}
+{% endfor %}{% endraw %}
+```
 
 Proper method:
 
-{% highlight liquid %}
-{% raw %}
-{% assign featured_posts = (site.posts|where:"featured","true") %}
+```liquid
+{% raw %}{% assign featured_posts = (site.posts|where:"featured","true") %}
 {% for post in featured_posts %}
     {{ post.title }}
-{% endfor %}
-{% endraw %}
-{% endhighlight %}
+{% endfor %}{% endraw %}
+```
 
 ## Limiting the number of filtered results presented
 
@@ -48,29 +44,25 @@ If you find yourself doing this, take a moment and consider if you really need t
 
 Antipattern:
 
-{% highlight liquid %}
-{% raw %}
-{% assign count = 0 %}
+```liquid
+{% raw %}{% assign count = 0 %}
 {% assign max = 5 %}
 {% for post in site.posts %}
     {% if post.featured == "true" and count < max %}
         {{ post.title }}
         {% capture count %}{{ count | plus:1 }}{% endcapture %}
     {% endif %}
-{% endfor %}
-{% endraw %}
-{% endhighlight %}
+{% endfor %}{% endraw %}
+```
 
 Proper method:
 
-{% highlight liquid %}
-{% raw %}
-{% assign featured_posts = (site.posts|where:"featured","true") %}
+```liquid
+{% raw %}{% assign featured_posts = (site.posts|where:"featured","true") %}
 {% for post in featured_posts limit:5 %}
     {{ post.title }}
-{% endfor %}
-{% endraw %}
-{% endhighlight %}
+{% endfor %}{% endraw %}
+```
 
 ## Using if/else construct to negate a test
 
@@ -80,25 +72,21 @@ Perhaps not obviously, Jekyll has the `{% raw %}{% unless %}{% endraw %}` tag. T
 
 Antipattern:
 
-{% highlight liquid %}
-{% raw %}
-{% if page.sidebar contains "hide_about" %}
+```liquid
+{% raw %}{% if page.sidebar contains "hide_about" %}
     {# Nothing #}
 {% else %}
     {# About block #}
-{% endif %}
-{% endraw %}
-{% endhighlight %}
+{% endif %}{% endraw %}
+```
 
 Proper method:
 
-{% highlight liquid %}
-{% raw %}
-{% unless page.sidebar contains "hide_about" %}
+```liquid
+{% raw %}{% unless page.sidebar contains "hide_about" %}
     {# About block #}
-{% endunless %}
-{% endraw %}
-{% endhighlight %}
+{% endunless %}{% endraw %}
+```
 
 ## Using an old version of Jekyll/Ruby
 
@@ -110,36 +98,36 @@ Now, this MacBook is fairly new, I've only had it for about 5 months, but before
 
 So on my MacBook I did a couple of tests to see what I'm using:
 
-{% highlight bash %}
+```bash
 ➜ ruby -v
 ruby 1.9.3p551 (2014-11-13 revision 48407) [x86_64-darwin14.1.1]
 ➜ gem -v
 2.4.6
 ➜ jekyll -v
 jekyll 2.5.3
-{% endhighlight %}
+```
 
 One thing my shell script does is it installs a specific version of Ruby (1.9.3). Not because I have any real reason to use a specific version, just because when I created my script that was the latest version. At the time of writing this, the current stable version is Ruby 2.2.2.
 
 Presumably the latest versions of `gem` and `jekyll` that will run with Ruby 1.9.3 are the versions I have installed there, so I upgraded Ruby using `rvm`, and then upgraded `gem` and reinstalled `jekyll`:
 
-{% highlight bash %}
+```bash
 ➜ rvm install 2.2.2
 ➜ rvm use 2.2.2
 ➜ gem update
 ➜ gem install jekyll
-{% endhighlight %}
+```
 
 A quick test shows that I'm now running some newer versions of these programs:
 
-{% highlight bash %}
+```bash
 ➜ ruby -v
 ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
 ➜ gem -v
 2.4.8
 ➜ jekyll -v
 jekyll 2.5.3
-{% endhighlight %}
+```
 
 Now when I'm running Jekyll and it generates pages, it only takes 2-3 seconds as on my iMac, rather than 20 seconds.
 

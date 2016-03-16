@@ -14,7 +14,7 @@ I Googled around to look for a solution, but most solutions involve adding extra
 
 I decided to approach this from a more technical angle then, and so I came up with the following `jQuery` snippet
 
-{% highlight javascript %}
+```javascript
 $(function () {
     $('.ytembed:not(.processed)').each(function () {
         var $embed = $(this),
@@ -36,11 +36,11 @@ $(function () {
         });
     });
 });
-{% endhighlight %}
+```
 
 This needs to be used with the following `HTML` structure:
 
-{% highlight html %}
+```html
 <!-- you need a div with the class 'ytembed' -->
 <div class="ytembed">
     <!-- put a link with the url of your video embed -->
@@ -54,6 +54,6 @@ This needs to be used with the following `HTML` structure:
         />
     </a>
 </div>
-{% endhighlight %}
+```
 
 And there you have it, a custom thumbnail for a YouTube embedded video.

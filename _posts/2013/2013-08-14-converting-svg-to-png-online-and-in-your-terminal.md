@@ -31,15 +31,16 @@ I always spend a large amount of time looking for an online SVG to PNG converter
 
 First install `librsvg` using `brew`:
 
-{% highlight bash %}
+```bash
 $ brew update && brew upgrade
 $ brew install librsvg
 $ ln -s /usr/local/bin/rsvg-convert /usr/local/bin/rsvg
-{% endhighlight %}
+```
 
 Then, you can either using rsvg directly, or make a function like the following:
 
-{% highlight bash %}# $ svg2png [file] [width] [height]
+```bash
+# svg2png [file] [width] [height]
 function svg2png {
     file=$1
     file_name="${file%.*}"
@@ -53,7 +54,8 @@ function svg2png {
     else
         rsvg -w $width -h $height "${file}" -o "${file_name}.png"
     fi
-}{% endhighlight %}
+}
+```
 - Using CairoSVG and Python - [http://cairosvg.org/](http://cairosvg.org/)
 - Using svg2png and PhantomJS/Node.js - [https://npmjs.org/package/svg2png](https://npmjs.org/package/svg2png)
 

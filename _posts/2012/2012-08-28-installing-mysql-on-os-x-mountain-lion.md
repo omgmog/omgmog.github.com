@@ -11,40 +11,40 @@ Here's the important information from the article to install MySQL on OS X 10.8 
 
 [Install Homebrew](http://mxcl.github.com/homebrew/#selectable)
 
-{% highlight bash %}
+```bash
 $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-{% endhighlight %}
+```
 
 Install MySQL using Homebrew
 
-{% highlight bash %}
+```bash
 $ brew install mysql
-{% endhighlight %}
+```
 
 Add MySQL to your LaunchAgents, so it can launch on startup
 
-{% highlight bash %}
+```bash
 $ mkdir -p ~/Library/LaunchAgents
 $ cp /usr/local/Cellar/mysql/5.5.27/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents/
 $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
-{% endhighlight %}
+```
 
 Unset `TMPDIR` (as this isn't set to /tmp for non-root users) and install the
 MySQL system tables
-{% highlight bash %}
+```bash
 $ unset TMPDIR
 $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
-{% endhighlight %}
+```
 
 Set the `root` password for MySQL
 
-{% highlight bash %}
+```bash
 $ /usr/local/Cellar/mysql/5.5.27/bin/mysqladmin -u root password 'YOUR_NEW_PASSWORD'
-{% endhighlight %}
+```
 
 And lastly, start MySQL
 
-{% highlight bash %}
+```bash
 $ mysql.server start
-{% endhighlight %}
+```
 

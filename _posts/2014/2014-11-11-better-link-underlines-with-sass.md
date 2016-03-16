@@ -31,7 +31,7 @@ With the effect:
 
 I've re-created their mixin using Sass, so now you can use it in your projects:
 
-{% highlight sass %}
+```sass
 // set this to whichever text selection color you use
 $selectionColor: #b4d5fe;
 
@@ -95,15 +95,15 @@ $selectionColor: #b4d5fe;
     color: $color;
   }
 }
-{% endhighlight %}
+```
 
 You can use this mixin quite easily be either invoking it on your site-wide `a` styles, or targetting your `a`'s in a specific part of your styles:
 
-{% highlight sass %}
+```sass
 .content a {
   @include linkUnderlines(#fff, #00f);
 }
-{% endhighlight %}
+```
 
 The effect does have some caveats however, but they're not major:
 

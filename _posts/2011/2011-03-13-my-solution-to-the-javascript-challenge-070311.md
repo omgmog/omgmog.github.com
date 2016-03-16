@@ -40,9 +40,9 @@ I started this with some really basic functions to apply sorts on arrays, and re
 
 I decided then to complete each of the tasks by writing new [prototypes](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/prototype) for the array object, so I could make a new array using the data from the original array with transformations, something like:
 
-{% highlight javascript %}
+```javascript
 var newArray = oldArray.someAwesomePrototype();
-{% endhighlight %}
+```
 
 This made it easy to have reusable functions, which are independent of the data in the array.
 

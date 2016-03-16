@@ -18,12 +18,12 @@ The installer just uses `fastboot` under a GUI, so we can get away with doing th
 3. If you haven't unlocked the bootloader on your Nexus 7 already, run `fastboot oem unlock`
 4. In the terminal, locate your downloaded image files, and execute the following:
 
-{% highlight bash %}
+```bash
 $ fastboot flash boot boot.img
 $ fastboot erase userdata
 $ fastboot flash userdata rootfs.img
 $ fastboot reboot
-{% endhighlight %}
+```
 
 After that's all finished, when your Nexus 7 boots it will take a couple of minutes to finalise the Ubuntu installation, so go make yourself some coffee or something. When you return, it should have loaded the Ubuntu Unity desktop. It's usable with just the touch screen, but the experience isn't great. You can join your Wifi network, install LXDE or XFCE or something, and log out and select a different desktop environment.
 

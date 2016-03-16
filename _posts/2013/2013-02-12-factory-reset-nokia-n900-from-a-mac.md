@@ -31,10 +31,10 @@ However, since OS X Lion this installer hasn't worked completely.
 
 To make it work you need to install the `.pkg` from the `.dmg` and then execute the following commands:
 
-{% highlight bash %}
+```bash
 sudo cp -Rv /private/tmp/pc-connectivity/10.6/* /usr/lib/
 sudo cp -v /private/tmp/pc-connectivity-bin/10.6/flasher-3.5 /usr/bin/
-{% endhighlight %}
+```
 
 You will have to [Google](https://www.google.co.uk/search?q=RX-51_2009SE_10.2010.13-2.VANILLA_PR_EMMC_MR0_ARM.bin) for the `RX-51_2009SE_10.2010.13-2.VANILLA_PR_EMMC_MR0_ARM.bin` file to flash your EMMC image as the official mirrors no-longer exist.
 
@@ -44,9 +44,9 @@ Now you can use `flasher-3.5` from the terminal to flash an EMMC image:
 1. Boot the N900 in to USB mode by holding the `u` key while it turns on
 2. Execute the following:
 
-{% highlight bash %}
+```bash
 sudo flasher-3.5 -F <EMMC.bin> -f -R
-{% endhighlight %}
+```
 
 It will take a moment to flash the EMMC image, but it will let you know what it's doing meanwhile. After it's complete your N900 should be reset back to the factory default.
 

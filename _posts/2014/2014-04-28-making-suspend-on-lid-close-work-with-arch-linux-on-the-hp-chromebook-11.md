@@ -13,19 +13,19 @@ The steps for what I wanted to achieve are actually a bit different to his guide
 
 Install `acpid` and `pm-utils`
 
-{% highlight bash %}
+```bash
 $ sudo pacman -S acpid pm-utils
-{% endhighlight %}
+```
 
 Edit /etc/acpi/handler.sh
 
-{% highlight bash %}
+```bash
 $ nano /etc/acpi/handler.sh
-{% endhighlight %}
+```
 
 Find the `button/lid` case
 
-{% highlight bash %}
+```bash
 button/lid)
 case "$3" in
     close)
@@ -39,11 +39,11 @@ case "$3" in
         ;;
 esac
 ;;
-{% endhighlight %}
+```
 
 Add the `pm-suspend` command inside the close case
 
-{% highlight bash %}
+```bash
 button/lid)
 case "$3" in
     close)
@@ -58,16 +58,16 @@ case "$3" in
         ;;
 esac
 ;;
-{% endhighlight %}
+```
 
 And there you go. For this to work straight away you'll need to restart the acpi service:
 
-{% highlight bash %}
+```bash
 $ systemctl restart acpid
-{% endhighlight %}
+```
 
 And that's it. Now when you close the lid, you should see that the lights on the back turn off, so you can tell it has suspended. To make this permanent you'll need to enable acpid on boot:
 
-{% highlight bash %}
+```bash
 $ systemctl enable acpid
-{% endhighlight %}
+```

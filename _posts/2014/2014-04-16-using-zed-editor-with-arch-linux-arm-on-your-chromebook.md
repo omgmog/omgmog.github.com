@@ -17,9 +17,9 @@ I'm running Chromium on my Arch Linux install on the Chromebook, so I've install
 
 It's not very convenient to have to launch Chromium and then find the app launcher for Zed though, so I created a launcher directly for Zed in the following way:
 
-{% highlight bash %}
+```bash
 $ chromium --app-id=pfmjnmeipppmcebplngmhfkleiinphhp
-{% endhighlight %}
+```
 
 Where the `app-id` is the id of Zed Chrome App.
 

@@ -142,7 +142,7 @@ article {
       @include border-radius(.3rem);
     }
   }
-  .highlight,
+  .highlighter-rouge,
   img.massive,
   iframe,
   blockquote {
@@ -156,7 +156,7 @@ article {
   }
   iframe,
   img.shadow,
-  .highlight {
+  .highlighter-rouge {
     @include box-shadow(0 0 2.5rem 0 rgba(0,0,0,0.15));
   }
   blockquote {

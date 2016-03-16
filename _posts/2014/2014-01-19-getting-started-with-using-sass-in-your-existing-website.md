@@ -16,34 +16,34 @@ As I mentioned, Sass brings a bunch of features to the table to make authoring y
 
 ### Variables
 
-{% highlight scss %}
+```scss
 $primary_link_color: #6792a6;
 $font_stack: Helvetica, Arial, sans-serif;
 $font_base_size: 16px;
 $column_width: 60px;
 $site_width: 12 * $column_width;
-{% endhighlight %}
+```
 
 ### Calculations
 
 As you may have noticed above, you can use calculations in variables; You can also use them inline. Calculations can use standard math operators like `+`, `-`, `*`, `/`, and `%`.
 
-{% highlight scss %}
+```scss
 $site_width: 960px;
 $column_width: $site_width / 12;
 
 aside {
     width: $column_width * 2;
 }
-{% endhighlight %}
+```
 
 Output:
 
-{% highlight css %}
+```css
 aside {
     width: 160px;
 }
-{% endhighlight %}
+```
 
 
 ### Partials
@@ -52,9 +52,9 @@ If you want to organise your styles, you can do it by breaking them up in to ind
 
 To use your partial, you can do something like this:
 
-{% highlight scss %}
+```scss
 @import 'fonts';
-{% endhighlight %}
+```
 
 As you can see, I omitted the `.scss` when importing. You can import with and without the `.scss`, it's completely up to you.
 
@@ -68,67 +68,67 @@ You can provide default values for parameters to make them optional.
 
 Declaring a mixin:
 
-{% highlight scss %}
+```scss
 @mixin some-mixin($parameter_one, $parameter_two: #f0f) {
     color: $parameter_one;
     background-color: $parameter_two;
 }
-{% endhighlight %}
+```
 
 Using a mixin:
 
-{% highlight scss %}
+```scss
 body {
     @include some-mixin(#f00);
 }
-{% endhighlight %}
+```
 
 Output:
 
-{% highlight css %}
+```css
 body {
     color: #f00;
     background-color: #f0f;
 }
-{% endhighlight %}
+```
 
 Here are some of the Sass mixins that I use:
 
 #### Border-radius
 
-{% highlight scss %}
+```scss
 @mixin border-radius($radius) {
     -moz-border-radius: $radius;
     -webkit-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
 }
-{% endhighlight %}
+```
 
 #### Box-shadow
 
-{% highlight scss %}
+```scss
 @mixin box-shadow($shadow) {
     -moz-box-shadow: $shadow;
     -webkit-box-shadow: $shadow;
     box-shadow: $shadow;
 }
-{% endhighlight %}
+```
 
 #### Transitions
 
-{% highlight scss %}
+```scss
 @mixin transition($duration, $property: all, $timing-function: linear) {
     -moz-transition: $property $duration $timing-function;
     -webkit-transition: $property $duration $timing-function;
     -o-transition: $property $duration $timing-function;
     transition: $property $duration $timing-function;
 }
-{% endhighlight %}
+```
 
 #### Keyframes
 
-{% highlight scss %}
+```scss
 @mixin keyframes($name) {
     @-webkit-keyframes #{$name} {
         @content;
@@ -143,21 +143,21 @@ Here are some of the Sass mixins that I use:
         @content;
     }
 }
-{% endhighlight %}
+```
 
 #### Animation
 
-{% highlight scss %}
+```scss
 @mixin animation($name, $duration: 1s, $easing: linear, $direction: forwards) {
     -webkit-animation: $name $duration $easing $direction;
     -moz-animation: $name $duration $easing $direction;
     animation: $name $duration $easing $direction;
 }
-{% endhighlight %}
+```
 
 #### Media queries
 
-{% highlight scss %}
+```scss
 @mixin breakpoint($breakpoint) {
     @if $breakpoint == "big-screen" {
         @media all and (min-width: 80em) {
@@ -185,7 +185,7 @@ Here are some of the Sass mixins that I use:
         }
     }
 }
-{% endhighlight %}
+```
 
 ### Deploying your Sass
 
@@ -214,7 +214,7 @@ Upload `scss.inc.php` to your serve somewhere (such as your styles directory).
 
 Create a new file in the same directory called `s.php`, and put the following inside it:
 
-{% highlight php %}
+```php
 <?php
 require "scss.inc.php";
 $scss = new scssc();
@@ -222,40 +222,40 @@ $scss->setFormatter("scss_formatter_compressed");
 $server = new scss_server("stylesheets", null, $scss);
 $server->serve();
 ?>
-{% endhighlight %}
+```
 
 Now, make a directory called `stylesheets` and make it so that the s.php script can write to it. Upload your `.scss` files to the stylesheets directory.
 
 You should now have something like the following:
 
-{% highlight bash %}
+```bash
 css/
     s.php
     scss.inc.php
     stylesheets/
         style.scss
-{% endhighlight %}
+```
 
 Now, instead of linking to your `.css` files in your `HTML`, you link to the `s.php` script, and specify the `.scss` file to load:
 
-{% highlight html %}
+```html
 <link rel="stylesheet" href="css/s.php/style.scss" />
-{% endhighlight %}
+```
 
 That's it really, now if you make changes to your `.scss` file, `s.php` will generate `CSS` automatically and cache it.
 
 You could take it one step further and use `.htaccess` to hide the `s.php` part of the url like this:
 
-{% highlight apache %}
+```apache
 Options +FollowSymLinks
 
 RewriteEngine On
 RewriteBase /
 RewriteRule ^css/(.*)\.css$ /css/s.php/$1.scss [R=301,L]
-{% endhighlight %}
+```
 
 Then you can just link to your `CSS` as usual, like the following example for `style.scss`:
 
-{% highlight html %}
+```html
 <link rel="stylesheet" href="css/style.css" />
-{% endhighlight %}
+```

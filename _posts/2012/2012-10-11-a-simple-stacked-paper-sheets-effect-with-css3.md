@@ -13,16 +13,16 @@ Like the sound of that? read on.
 
 First of all, the HTML markup:
 
-{% highlight html %}
+```html
 <article>
     <h2>Article title here</h2>
     <p>Lorem ipsum dolor sit amet...</p>
 </article>
-{% endhighlight %}
+```
 
 This is only a fraction of what you might have on the page, but I"m sure you can figure that out. This isn"t limited to just the `article` element either, you can adjust this to use whatever you like. Now, the CSS:
 
-{% highlight css %}
+```css
 article {
     position: relative;
     margin: 100px auto;
@@ -56,7 +56,7 @@ article::after {
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
 }
-{% endhighlight %}
+```
 
 That"s the important stuff anyway, so let"s go over this step by step:
 
