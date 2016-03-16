@@ -1,10 +1,10 @@
-permalink: /post/:title
+permalink: /post/:title/
 exclude: ["_config.yml", ".gitignore", "README.md", "node_modules"]
 baseurl: "https://blog.omgmog.net"
 safe: true
 lsi: false
 paginate: 15
-paginate_path: "archive/page:num"
+paginate_path: "archive/page:num/"
 excerpt_separator: "<!-- more -->"
 keep_files: ["images/","thumbs/","assets/","CNAME","robots.txt"]
 
