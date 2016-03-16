@@ -23,7 +23,7 @@ If you're using a ticketing system such as JIRA it's quite easy to get a list of
 
 So I made an alias/function for my `.bashrc`.
 
-{% highlight bash %}
+```bash
 # Usage:
 # workdone [time period] [committer email]
 
@@ -32,7 +32,7 @@ workdone(){
   email="[your email here]"
   git log --committer=${2:-$email} --pretty=format:"%Cgreen%ar (%h)%n%Creset> %s %b%n" --since="${1:-$default}" --no-merges
 }
-{% endhighlight %}
+```
 
 You can add this to your `.bashrc` to begin using it, and perhaps change out the `[your email here]` to your own email address.
 

@@ -83,13 +83,13 @@ After that's done, and the Chromebook has wiped and rebooted itself, you can use
 - Download `crouton` from [https://github.com/dnschneid/crouton](https://github.com/dnschneid/crouton)
 - Open the terminal (`ctrl`+`alt`+`t`)
 - `cd` to your downloads directory and run the `crouton` script:
-{% highlight bash %}
+```bash
 $ cd ~/Downloads
 # this will output the help text
 $ sh -e ./crouton
 # this will install ubuntu 12.04 with xfce4
 $ sh -e ./crouton -t xfce
-{% endhighlight %}
+```
 
 After that's all done, you should be able to get in to your Linux chroot by typing `sudo startxfce4` (or whatever the installer tells you to do).
 

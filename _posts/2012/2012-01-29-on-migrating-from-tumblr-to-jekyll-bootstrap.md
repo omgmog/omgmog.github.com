@@ -22,9 +22,9 @@ This was really simple, the Jekyll Bootstrap website has some simple steps to ge
 
 This required a little bit of work, as I had to update my local copy of `gem`, but after I had installed all of the necessary gem bundles, importing from Tumblr was as simple as running a one-line command:
 
-{% highlight bash %}
+```bash
 $ ruby -rubygems -e 'require "jekyll/migrators/tumblr"; Jekyll::Tumblr.process("http://www.your_blog_url.com", true)'
-{% endhighlight %}
+```
 
 Migrating from other platforms is detailed on the [Jekyll migrations page](https://github.com/mojombo/jekyll/wiki/blog-migrations) over at GitHub.
 
@@ -42,11 +42,11 @@ After you've set up the `CNAME` file on your repository, you'll also need to cre
 
 This is the easiest part of the whole process, pushing to GitHub. Assuming `git` is already set up on your system, you just use the following commands:
 
-{% highlight bash %}
+```bash
 $ git add (new files)
 $ git commit -am "A message describing the changes you made"
 $ git push
-{% endhighlight %}
+```
 
 After all of that, all that remains is adjust the permalink taxonomy, and creating a custom blog index (such as the one I've made) to display the latest posts.
 

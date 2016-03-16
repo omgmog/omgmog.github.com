@@ -10,7 +10,7 @@ Something that took a little while to pull of well while working on the [JS chal
 
 <!-- more -->
 
-{% highlight javascript %}
+```javascript
 var testdata = ['a','a','a','b','b','c','c','c','c','d','d','d','e'];
 var i=0, x, count, item;
 while(i < testdata.length){
@@ -26,7 +26,7 @@ while(i < testdata.length){
     ++i;
 }
 console.log(testdata);
-{% endhighlight %}
+```
 
 This is outputting to the console log for the sake of testing it, but the kind of output you'd expect to see is a multidimensional array.
 

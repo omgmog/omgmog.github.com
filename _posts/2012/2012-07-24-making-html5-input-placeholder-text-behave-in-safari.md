@@ -28,7 +28,7 @@ The issue here is how each browser supports styling of the `placeholder` text. H
 
 As you can see we're given little in the way of actually styling `placeholder` text.
 
-{% highlight scss %}
+```scss
 ::-webkit-input-placeholder {
     // styles
 }
@@ -43,7 +43,7 @@ As you can see we're given little in the way of actually styling `placeholder` t
     // Firefox 18-
     // styles
 }
-{% endhighlight %}
+```
 
 These are the selectors you should use to actually style placeholder text.
 

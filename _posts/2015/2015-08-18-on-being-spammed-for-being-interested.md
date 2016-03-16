@@ -11,10 +11,10 @@ Git as a protocol requires that you associate a name and email address with your
 
 > The first thing you should do when you install Git is to set your user name and e-mail address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:
 
-{% highlight bash %}
+```bash
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
-{% endhighlight %}
+```
 
 I star a lot of things on GitHub -- it's a nice feature, being able to save things for later, or show your support for a project by giving them a star. Ultimately the popularity of a project on GitHub is determined by it's userbase, and for that, it's stars.
 
@@ -35,17 +35,17 @@ Well I mentioned the `/users/:username` API endpoint on GitHub earlier. Besides 
 
 Even the most unsavvy techie could find a repository for a project that has a lot of stargazers that they want to approach, and then it's simple to get a list of all of the stargazers. Let's take a repository of mine, [Install all Firefox](https://github.com/omgmog/install-all-firefox), which has a humble 215 stars:
 
-{% highlight bash %}
+```bash
 $ curl -s https://api.github.com/repos/omgmog/install-all-firefox/stargazers | grep login | awk '{gsub("\"","",$2); gsub("\,","",$2);print $2}' > stargazers.txt
-{% endhighlight %}
+```
 
 This gives us a nice textfile with the usernames of all of the people who have starred this repository.
 
 Next, we can loop through this text file and glean more profile information about each user:
 
-{% highlight bash %}
+```bash
 $ while read line; do curl -s "https://api.github.com/users/${line}" | grep email | awk '{gsub("\"","",$2); gsub("\,","",$2);print $2}'; done < stargazers.txt
-{% endhighlight %}
+```
 
 A bunch of the users have their wit about themselves, and have their emails anonymised, so for them we just get `null`, but for everybody else we get their real email address that they've associated with their account.
 

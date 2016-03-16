@@ -9,9 +9,9 @@ If you leave a trailing comma in your JavaScript code, you're a terrible person.
 
 While fixing some issues on a site in IE7 recently, I was greeted by the familiarly unhelpful error message from Internet Explorer 7 that prompted me to write this.
 
-{% highlight javascript %}
+```javascript
 Error: Expected identifier, string or number
-{% endhighlight %}
+```
 
 You can see an example below:
 
@@ -19,33 +19,33 @@ You can see an example below:
 
 What does that tell us? Bugger all in fact, unless you've tackled this problem before. It's really unhelpful, but it's caused by having a trailing comma inside an array/object/method, like the following:
 
-{% highlight javascript %}
+```javascript
 forms.set_errors(
     $form,
     response.form_errors || [],
     response.field_errors,
 );
-{% endhighlight %}
+```
 
 That right there, that's not cool. It'll make Internet Explorer explode.
 
 If you had any consideration you would write something more like:
 
-{% highlight javascript %}
+```javascript
 forms.set_errors(
     $form,
     response.form_errors || [],
     response.field_errors
 );
-{% endhighlight %}
+```
 
 tasty.
 
 You can prevent this problem occuring by using a [linter](http://www.jslint.com/), or you can retroactively go and find the problem-causing lines in your JavaScript using a `RegEx` pattern such as the following:
 
-{% highlight javascript %}
+```javascript
 ,[\s\n]*[^\[\{\w\n\s/\*\"\'\$\#\.\`\:\|\!]
-{% endhighlight %}
+```
 
 Though this is valid according to ECMAScript 5, it's another one of those bodged features in Internet Explorer that happens to behave unlike every other browser, so I think it's best to go for the solution that works for everybody.
 

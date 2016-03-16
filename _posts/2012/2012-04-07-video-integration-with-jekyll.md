@@ -20,14 +20,14 @@ The first two things are easy enough to produce. The third thing is a bit more c
 The embed code YouTube gives you contains most of the bits we need, here is an example from the video above:
 
 
-{% highlight html %}
+```html
 <iframe
     width="560"
     height="315"
     src="https://www.youtube.com/embed/fyY9tb8Rvlk"
     frameborder="0"
     allowfullscreen></iframe>
-{% endhighlight %}
+```
 
 
 We need to break this in to two parts to use it with Jekyll, and set up some new [YAML front matter](/post/adding-more-post-metadata-to-jekyll-with-yaml/) to make the inclusion of videos simple.
@@ -36,30 +36,29 @@ We need to break this in to two parts to use it with Jekyll, and set up some new
 
 When you create a new post in Jekyll, you will have the usual YAML block at the top of your file, such as the following:
 
-{% highlight yaml %}
+```yaml
 ---
 layout: post
 title: "Some awesome post"
 ---
-{% endhighlight %}
+```
 
 To begin, we need to add a new line before the last `---` to define a YouTube embed url, which we take from the YouTube embed code. I'm using the `src` from the embed code above in the example below:
 
-{% highlight yaml %}
+```yaml
 ---
 layout: post
 title: "Some awesome post"
 iframe_url: https://www.youtube.com/embed/fyY9tb8Rvlk
 ---
-{% endhighlight %}
+```
 
 ## Tweaking the embed code
 
 Now, within our page template we will have access to the `page.iframe_url` property, so we can set up some template logic to render the YouTube video. We will be taking the embed code as above, and changing a few things:
 
-{% highlight jinja %}
-{% raw %}
-{% if page.iframe_url %}
+```liquid
+{% raw %}{% if page.iframe_url %}
     <div class="less-fancy-video-header">
       <iframe
         class="yt-embed"
@@ -68,9 +67,8 @@ Now, within our page template we will have access to the `page.iframe_url` prope
         allowfullscreen="true"
         ></iframe>
     </div>
-{% endif %}
-{% endraw %}
-{% endhighlight %}
+{% endif %}{% endraw %}
+```
 
 First we have a conditional block around this whole snippet, to check that we've specified a `page.iframe_url` in our YAML front matter. Then we've got pretty much the regular YouTube embed code, but I've got some extra markup around this, and some small differences to the iframe attributes.
 

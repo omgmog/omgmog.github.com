@@ -26,13 +26,13 @@ The background works fine in the first example, but as soon as your element exce
 
 You can use `background-size` to make a background fill the element it's applied to, this works quite nicely for creating fluid/scalable backgrounds, and fixes our scaling problem. Used in combination with a small amount of maths, it can be quite powerful!
 
-{% highlight html %}
+```html
 <div class="diagonal-background">
     <!-- this is an empty element -->
 </div>
-{% endhighlight %}
+```
 
-{% highlight css %}
+```css
 .diagonal-background {
     width: 100%;
     height: 0;
@@ -42,7 +42,7 @@ You can use `background-size` to make a background fill the element it's applied
     background-position: 50%;
     background-repeat: no-repeat;
 }
-{% endhighlight %}
+```
 
 To make a background image that will scale to the dimensions of the element it's applied to you need to give the background a `background-size` of `cover`, and then calculate the height needed to display the full image without cutting anything off.
 
@@ -56,7 +56,7 @@ This dimensions of the image are 1000 x 60 px. To work out the height as a perce
 
 For this image then, we need the height of the element to be 7%. You can't just apply this using the `height` property though, as that will make the height 7% of the parent of the element, so we set the height to 0 and give the element a top padding of 7%:
 
-{% highlight css %}
+```css
 .diagonal-background {
     height: 0;
     padding: 7% 0 0;
@@ -64,16 +64,16 @@ For this image then, we need the height of the element to be 7%. You can't just 
     background-image: url(diagonal-bg.png);
     ...
 }
-{% endhighlight %}
+```
 
 Lastly we need to position the `.diagonal-background` element absolutely at the bottom of the parent element.
 
-{% highlight css %}
+```css
 left: 0;
 right: 0;
 bottom: 0;
 position: absolute;
-{% endhighlight %}
+```
 
 {% assign iframe_url = "https://jsfiddle.net/U7vMH/embedded/result" %}
 {% include iframe_embed.html %}
@@ -103,25 +103,25 @@ Now you've got working diagonal backgrounds, but it's not ideal as you've got to
 
 Change the selector from
 
-{% highlight css %}
+```css
 .diagonal-background {
     ...
-{% endhighlight %}
+```
 
 to
 
-{% highlight css %}
+```css
 .section::after {
     ...
-{% endhighlight %}
+```
 
 And then as it's a pseudo element, you need to give it the `content` property:
 
-{% highlight css %}
+```css
 .section::after {
     content: '';
     ...
-{% endhighlight %}
+```
 
 
 ### Approach #4: Using the power of Sass mixins
@@ -131,7 +131,7 @@ If you're planning to use multiple different diagonal separator backgrounds, it 
 
 Introducing the power of Sass:
 
-{% highlight scss %}
+```scss
 @mixin diagonal-background($width, $height, $color) {
     position: relative;
     &::after {
@@ -153,15 +153,15 @@ Introducing the power of Sass:
         content: '';
     }
 }
-{% endhighlight %}
+```
 
 This Sass mixin will let you specify the width/height/color of your diagonal separator background, and then it will generate an SVG and apply it using a pseudo element as I've described above.
 
-{% highlight scss %}
+```scss
 .section {
     @include diagonal-background(1000px, 60px, #2ECC71);
 }
-{% endhighlight %}
+```
 
 Not bad!
 

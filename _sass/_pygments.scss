@@ -8,7 +8,9 @@ pre {
     padding: 5rem 0;
 }
 
-code, .highlight code, .highlight pre {
+code,
+.highlighter-rouge code,
+.highlighter-rouge pre {
     color: #fdce93;
 }
 
@@ -297,22 +299,27 @@ code, .highlight code, .highlight pre {
     color: #8cd0d3;
 }
 
-code {
+code,
+code.highlighter-rouge {
     color: #555;
     border: 1px solid #eee;
+    margin-left: 0;
+    background: #fefefe;
+    box-shadow: none;
 }
 
-.highlight {
-    code,
-    pre,
-    span {
-        background-image: none;
-        background-color: #404040;
-        border: 0;
+.highlighter-rouge {
+    pre {
+        code,
+        span {
+            background-image: none;
+            background-color: #404040;
+            border: 0;
+        }
     }
 }
 
-.highlight {
+.highlighter-rouge {
     width: 100%;
     margin: 0 0 1rem;
     text-align: left;

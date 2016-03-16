@@ -19,7 +19,7 @@ The instructions are as follows:
 
 Your script needs the userscript meta information at the top of the file
 
-{% highlight javascript %}
+```javascript
 // ==UserScript==
 // @name Some Awesome Script
 // @namespace Supporting website/authors website
@@ -28,7 +28,7 @@ Your script needs the userscript meta information at the top of the file
 // @match The same as @include really
 // @require Additional script/library from site or path
 // ==/UserScript==
-{% endhighlight %}
+```
 
 You need to name the file something like `some-awesome-script_1-0.user.js`
 
