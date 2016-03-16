@@ -23,6 +23,9 @@ sass:
 
 gems:
     - jekyll-redirect-from
+    - jekyll-paginate
+whitelist:
+    - jekyll-paginate
 
 menu:
   - link: "https://omgmog.net"
