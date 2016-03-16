@@ -62,24 +62,13 @@
       <a href="https://omgmog.net" class="site-title"><h1>Max Glenister</h1></a>
       <nav class="main-navigation" role="main">
         {% for node in site.menu %}
-          {% if page.category contains 'hardware-review' and node.link == '/reviews/' %}
-            <div class="active">
-          {% else %}
-            {% if page.category contains 'hardware-review' %}
-              <div>
-            {% else %}
-              <div
-              {% if node.highlight and (node.highlight == page.highlight) %}
-                class="active"
-              {% endif %}
-              >
-            {% endif %}
-          {% endif %}
+          <div>
             {% if node.external %}
-              <a href="{{ node.link }}">{{ node.title }}</a>
+              <a href="{{ node.link }}">
             {% else %}
-                <a href="{{ site.baseurl }}{{ node.link }}">{{ node.title }}</a>
+              <a href="{{ site.baseurl }}{{ node.link }}">
             {% endif %}
+            {{ node.title }}</a>
           </div>
         {% endfor %}
       </nav>
