@@ -33,7 +33,5 @@ menu:
     external: true
   - link: "/"
     title: "Articles"
-    highlight: articles
   - link: "/reviews/"
     title: "Reviews"
-    highlight: reviews
