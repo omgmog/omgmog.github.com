@@ -31,7 +31,7 @@ With the effect:
 
 I've re-created their mixin using Sass, so now you can use it in your projects:
 
-```sass
+```scss
 // set this to whichever text selection color you use
 $selectionColor: #b4d5fe;
 
@@ -99,7 +99,7 @@ $selectionColor: #b4d5fe;
 
 You can use this mixin quite easily be either invoking it on your site-wide `a` styles, or targetting your `a`'s in a specific part of your styles:
 
-```sass
+```scss
 .content a {
   @include linkUnderlines(#fff, #00f);
 }
