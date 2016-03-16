@@ -9,7 +9,7 @@ excerpt_separator: "<!-- more -->"
 keep_files: ["images/","thumbs/","assets/","CNAME","robots.txt"]
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 name: "The blog of Max Glenister"
 
