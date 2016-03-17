@@ -228,7 +228,7 @@ Now, make a directory called `stylesheets` and make it so that the s.php script 
 
 You should now have something like the following:
 
-```bash
+```
 css/
     s.php
     scss.inc.php
@@ -246,9 +246,8 @@ That's it really, now if you make changes to your `.scss` file, `s.php` will gen
 
 You could take it one step further and use `.htaccess` to hide the `s.php` part of the url like this:
 
-```apache
+```conf
 Options +FollowSymLinks
-
 RewriteEngine On
 RewriteBase /
 RewriteRule ^css/(.*)\.css$ /css/s.php/$1.scss [R=301,L]
