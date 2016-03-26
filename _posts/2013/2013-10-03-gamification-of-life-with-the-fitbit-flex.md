@@ -17,6 +17,7 @@ After a while I decided to buy my own fitbit.
 
 I thought the Zip was cool, but it's the low-budget end of the products that Fitbit sell, so I had a look at their other current products:
 
+{:.center}
 ![Comparison of fitbits]({{ site.baseurl }}/images/by%20default%202013-10-03%20at%2014.27.53.png)
 
 After mulling over the features of each device, I settled on the [Fitbit Flex](http://www.fitbit.com/uk/flex).

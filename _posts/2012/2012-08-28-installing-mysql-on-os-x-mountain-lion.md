@@ -31,6 +31,7 @@ $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
 Unset `TMPDIR` (as this isn't set to /tmp for non-root users) and install the
 MySQL system tables
+
 ```bash
 $ unset TMPDIR
 $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
