@@ -36,7 +36,7 @@ The Chromebook 11 weighs in at 1.04kg, so it's very light, and the 11" form fact
 
 As with any new gadget, the videos that are used to announce the Chromebook 11 make it look really fun, and possible to use the Chromebook in any situation.
 
-{% assign iframe_url = "https://www.youtube.com/embed/gOyIA8EK2R0" %}
+{% assign iframe_url = "https://www.youtube.com/embed/xArQDa1j634" %}
 {% include iframe_embed.html %}
 
 The first reality smack-in-the-face is that you need a WiFi connection to do anything with the Chromebook.
@@ -83,6 +83,7 @@ After that's done, and the Chromebook has wiped and rebooted itself, you can use
 - Download `crouton` from [https://github.com/dnschneid/crouton](https://github.com/dnschneid/crouton)
 - Open the terminal (`ctrl`+`alt`+`t`)
 - `cd` to your downloads directory and run the `crouton` script:
+
 ```bash
 $ cd ~/Downloads
 # this will output the help text

@@ -12,10 +12,10 @@ Just some examples of how to do things with Bash arrays, and their analogous exa
 #### Javascript
 
 ```javascript
-var array = ["one","two","three","four","five"];
+var array = ["one","two","three","four","five"]
 ```
 
-#### Bash
+#### Bash
 
 ```bash
 array=("one" "two" "three" "four" "five")
@@ -39,7 +39,6 @@ do
     echo ${array[$i]}
 done
 ```
-
 
 ### Getting the length of an array
 
