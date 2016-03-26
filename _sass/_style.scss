@@ -8,7 +8,7 @@ html {
 }
 body {
   text-align: center;
-  background-color: $colorBackgroundBody;
+  background-color: $colorBackgroundHeader;
 }
 
 a {
@@ -34,19 +34,15 @@ a {
 }
 
 .header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
   height: $heightHeader;
   background-color: $colorBackgroundHeader;
   color: $colorForegroundHeader;
-  z-index: 100;
+  position: relative;
 
   .inner {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0;
     width: $widthSite;
     text-align: left;
   }
@@ -100,11 +96,11 @@ a {
   max-width: 100%;
   text-align: left;
   position: relative;
+  background-color: $colorBackgroundContent;
 }
 .content {
-  width: $widthContent;
-  margin-top: $heightHeader;
-  background-color: $colorBackgroundContent;
+  width: $widthContent - 20;
+  margin: auto;
   color: $colorForegroundContent;
 
   .inner {
@@ -118,52 +114,59 @@ hr {
   height: 1px;
   background: $colorBorder;
   clear: both;
-  margin: 1rem 0;
+  margin: 2rem -10%;
 }
 
 .center {
   text-align: center;
 }
 article {
-  hr:last-child {
-    margin-top: 2rem;
-  }
-
   p,
   li {
-    line-height: 160%;
+    line-height: 1.4;
   }
   img {
     max-width: 100%;
     height: auto;
-
-    &.massive {
-      max-width: initial;
-      @include border-radius(.3rem);
-    }
-  }
-  .highlighter-rouge,
-  img.massive,
-  iframe,
-  blockquote {
-    width: 104%;
-    margin-left: -2%;
   }
   iframe {
     border: 0;
-    min-height: 26rem;
-    @include border-radius(.3rem);
-  }
-  iframe,
-  img.shadow,
-  .highlighter-rouge {
-    @include box-shadow(0 0 2.5rem 0 rgba(0,0,0,0.15));
   }
   blockquote {
     border-left: 4px solid $colorBorder;
     padding-left: 1rem;
     font-style: italic;
-    font-size: 110%;
+    font-size: 120%;
+    width: 100%;
+    margin-left: 0;
+    color: $regentGrey;
+  }
+  *.massive {
+    width: 138.9%;
+    max-width: initial;
+    margin-left: -19.33%;
+  }
+  div.highlighter-rouge {
+    @extend *.massive;
+  }
+  *.shadow {
+    @include box-shadow(0 0 2.5rem 0 rgba(0,0,0,0.15));
+  }
+  *.iframe {
+    height: 0;
+    line-height: 0;
+    padding-top: 70%;
+    overflow: hidden;
+    position: relative;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+    }
   }
 }
 .post-thumbnail {
@@ -212,6 +215,9 @@ article {
       line-height: $heightHeader;
       font-weight: 400;
     }
+  }
+  .content {
+    width: $widthContent;
   }
 }
 .pull-left {
