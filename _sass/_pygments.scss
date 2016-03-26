@@ -326,87 +326,17 @@ code.highlighter-rouge {
     border: 0;
     position: relative;
     background-color: #404040;
-    @include border-radius(0.3rem);
 
     pre {
         width: 100%;
         display: block;
         margin: 0;
-        padding: 2rem 1em .5rem;
-        @include border-radius(0.3rem);
+        padding: 1rem 13.5%;
+        overflow: hidden;
     }
 
     code {
         white-space: pre-wrap;
         padding: 0;
-
-        &::before {
-            content: 'example';
-            @include border-radius(0.3rem 0.3rem 0 0);
-            @include box-sizing;
-            color: #fff;
-            font-size: .75rem;
-            font-weight: normal;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            height: 1.4rem;
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            line-height: 1.8;
-            margin-bottom: 0;
-            text-align: center;
-            width: 100%;
-            background: #333;
-        }
-        &::after {
-            width: 8px;
-            height: 8px;
-            border-radius: 100%;
-            content: '';
-            position: absolute;
-            left: 8px;
-            top: 8px;
-            background-color: $iron;
-            box-shadow: 16px 0 0 $iron, 32px 0 0 $iron;
-        }
-        $langs: apache, bash, cfg, css, html, javascript, jinja, php, ruby, sass, scss, yaml, xml;
-
-        @each $lang in $langs {
-            &.#{$lang},
-
-            &.language-#{$lang} {
-
-                &::before {
-                    @if $lang == "apache" {
-                        content: '.example';
-                    }
-
-                    @else if $lang == "bash" {
-                        content: 'example.sh';
-                    }
-
-                    @else if $lang == "javascript" {
-                        content: 'example.js';
-                    }
-
-                    @else if $lang == "jinja" {
-                        content: 'example.html';
-                    }
-
-                    @else if $lang == "yaml" {
-                        content: 'example.yml';
-                    }
-
-                    @else if $lang == "ruby" {
-                        content: 'example.rb';
-                    }
-
-                    @else {
-                        content: "example.#{$lang}";
-                    }
-                }
-            }
-        }
     }
 }
