@@ -19,7 +19,7 @@ Lately I've been getting in to [organising](/post/sushack-1-building-the-foundat
 
 For computers, currently I'm constantly moving between the following:
 
-- 2015 13" Retina MacBook Pro (Previously a 2011 15" MBP with [upgraded RAM and SSD](/post/upgrading-my-MacBook-pro/))
+- 2015 13" Retina MacBook Pro (Previously a 2011 15" MBP with [upgraded RAM and SSD](/post/upgrading-my-macbook-pro/))
 - Late 2013 27" iMac
 - HP Chromebook 11 ([running Arch Linux](/post/video-installing-arch-linux-arm-on-the-hp-chromebook-11/))
 
