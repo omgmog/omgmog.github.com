@@ -46,3 +46,9 @@ Here's a preview of the same effect, but using the new functionality:
 Here is an updated version of the PSD that will only work in CC2015+:
 
 [Download the PSD for CC2015](https://dl.dropboxusercontent.com/u/19772/material-z-height-cc2015.psd)
+
+### Update 2
+
+For even easier use you can just [import this CC Library](http://adobe.ly/1QYDXAC) and apply the layer styles with one-click. – via [dbox](http://www.twitter.com/dbox)
+
+Use Sass? [Try this handy mixin](http://codepen.io/dbox/pen/RawBEW) – via [dbox](http://www.twitter.com/dbox)
