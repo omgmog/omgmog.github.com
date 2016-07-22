@@ -2,7 +2,7 @@
 'use strict';
 
 const cache = {
-    version: '0.0.1'
+    version: '0.0.2'
 };
 
 self.addEventListener('fetch', event => {
@@ -31,7 +31,6 @@ self.addEventListener('install', event => {
                 '/',
                 '/assets/pygments.css',
                 '/assets/style.css',
-                '/assets/main.js',
                 '/offline.html'
             ]))
     );
