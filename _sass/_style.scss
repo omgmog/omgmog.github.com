@@ -168,6 +168,16 @@ article {
       height: 100%;
     }
   }
+  &.latest {
+    font-size: 1.4em;
+
+    hr {
+      margin-top: 5rem;
+    }
+    .metadata {
+      display: none;
+    }
+  }
 }
 .post-thumbnail {
   width: 11rem;
