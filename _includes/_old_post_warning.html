@@ -9,7 +9,7 @@
             This post was written way back in {{ post_date_year }}. There's a chance that it's no-longer correct, or it has been superseded by a newer post. I commend you for making it this far through my archive!
 
             {% if updated_date > post_date_year %}
-                I made some updates to this post on {{ post.updated | date:"%d %B %Y" }}. You can look at the <a href="https://github.com/omgmog/omgmog.github.com/commits/master/{{ post.path }}">edit history</a> on GitHub.
+                I made some updates to this post on {{ post.updated | date:"%d %B %Y" }}. You can look at the <a href="{{ site.github.repository_url }}/commits/master/{{ post.path }}">edit history</a> on GitHub.
             {% endif %}
         </p>
         <p>
