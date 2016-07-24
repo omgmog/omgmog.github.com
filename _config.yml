@@ -6,6 +6,7 @@ paginate: 15
 paginate_path: "archive/page:num/"
 excerpt_separator: "<!-- more -->"
 keep_files: ["images/","thumbs/","assets/","CNAME","robots.txt"]
+repository: omgmog/omgmog.github.com
 
 markdown: kramdown
 kramdown:
