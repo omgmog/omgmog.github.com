@@ -1,8 +1,10 @@
+---
+---
 /*global self: true, caches: true */
 'use strict';
 
 const cache = {
-    version: '0.0.2'
+    version: '{% if site.github %}{{site.github.build_revision}}{% endif %}'
 };
 
 self.addEventListener('fetch', event => {
