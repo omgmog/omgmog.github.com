@@ -8,6 +8,7 @@ html {
 }
 body {
   text-align: center;
+  background-color: $colorBackgroundHeader;
 }
 
 a {
@@ -34,6 +35,8 @@ a {
 
 .header {
   height: $heightHeader;
+  background-color: $colorBackgroundHeader;
+  color: $colorForegroundHeader;
   position: relative;
 
   .inner {
@@ -77,6 +80,7 @@ a {
       display: block;
       padding: 1em .5em;
       line-height: 1;
+      color: inherit;
       border: 0;
 
       &:active,
@@ -92,6 +96,7 @@ a {
   max-width: 100%;
   text-align: left;
   position: relative;
+  background-color: $colorBackgroundContent;
 }
 .content {
   width: $widthContent - 20;

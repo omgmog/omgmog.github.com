@@ -48,7 +48,10 @@
     <meta name="theme-color" content="#25272c">
     <meta name="google-site-verification" content="ETbuPNX54E0uDqFZwqcZNJXJYStn7oV0HSmnNKUkrr4" />
     <!--[if lt IE 9]><script src="{{ site.baseurl }}/assets/html5shiv.js"></script><![endif]-->
-    <style>body { background-color: #25272c; } .header a { color: #fff; } .wrapper { background: #fff; }</style>
+    <link
+      rel="stylesheet"
+      href="{{ site.baseurl }}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}"
+    />
 </head>
 <body id="top">
   <header class="header">
@@ -70,10 +73,6 @@
       </div>
     </section>
   </div>
-  <link
-    rel="stylesheet"
-    href="{{ site.baseurl }}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}"
-  />
   <link
     rel="stylesheet"
     href="{{ site.baseurl }}/assets/pygments.css"
