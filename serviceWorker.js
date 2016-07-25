@@ -30,7 +30,6 @@ self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(cache.version)
             .then(cache => cache.addAll([
-                '/',
                 '/assets/pygments.css',
                 '/assets/style.css',
                 '/offline.html'
