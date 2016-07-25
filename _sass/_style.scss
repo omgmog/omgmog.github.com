@@ -228,6 +228,12 @@ article {
   }
   .content {
     width: $widthContent;
+    overflow-x: hidden;
+
+    *.massive {
+      max-width: 120%;
+      margin-left: -10%;
+    }
   }
 }
 .pull-left {
