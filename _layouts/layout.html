@@ -57,12 +57,7 @@
       <nav class="main-navigation" role="main">
         {% for node in site.menu %}
           <div>
-            {% if node.external %}
-              <a href="{{ node.link }}">
-            {% else %}
-              <a href="{{ site.baseurl }}{{ node.link }}">
-            {% endif %}
-            {{ node.title }}</a>
+            <a href="{% unless node.external %}{{ site.baseurl }}{% endunless %}{{ node.link }}">{{ node.title }}</a>
           </div>
         {% endfor %}
       </nav>
