@@ -3,58 +3,51 @@
 <head>
     <meta charset="utf-8">
     <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
     />
     <title>
-        {% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}
+      {% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}
     </title>
     {% if page.description %}
     <meta
-        name="description"
-        content="{{ page.excerpt | strip_html }}"
+      name="description"
+      content="{{ page.excerpt | strip_html }}"
     />
     {% else %}
     <meta
-        name="description"
-        content="{{ site.author.bio }}"
+      name="description"
+      content="{{ site.author.bio }}"
     />
     {% endif %}
     <link
-        rel="alternate"
-        type="application/rss+xml"
-        title="{{ site.name }} - RSS Feed"
-        href="{{ site.baseurl }}/feed.xml"
+      rel="alternate"
+      type="application/rss+xml"
+      title="{{ site.name }} - RSS Feed"
+      href="{{ site.baseurl }}/feed.xml"
     />
     <link
-        rel="alternate"
-        type="application/json"
-        title="{{ site.name }} - JSON Feed"
-        href="{{ site.baseurl }}/feed.json"
+      rel="alternate"
+      type="application/json"
+      title="{{ site.name }} - JSON Feed"
+      href="{{ site.baseurl }}/feed.json"
     />
     <link
-        rel="canonical"
-        href="{{ site.baseurl }}"
+      rel="canonical"
+      href="{{ site.baseurl }}"
     />
     <link
-        rel="author"
-        href="https://plus.google.com/+MaxGlenister/posts"
+      rel="author"
+      href="https://plus.google.com/+MaxGlenister/posts"
     />
     <link
-        rel="icon"
-        type="image/png"
-        href="{{ site.baseurl }}/assets/favicon.png"
-    />
-    <!--[if lt IE 9]>
-        <script src="{{ site.baseurl }}/assets/html5shiv.js">
-        </script>
-    <![endif]-->
-    <link
-        rel="stylesheet"
-        href="{{ site.baseurl }}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}"
+      rel="icon"
+      type="image/png"
+      href="{{ site.baseurl }}/assets/favicon.png"
     />
     <meta name="theme-color" content="#25272c">
     <meta name="google-site-verification" content="ETbuPNX54E0uDqFZwqcZNJXJYStn7oV0HSmnNKUkrr4" />
+    <!--[if lt IE 9]><script src="{{ site.baseurl }}/assets/html5shiv.js"></script><![endif]-->
     <style>body { background-color: #25272c; } .header a { color: #fff; } .wrapper { background: #fff; }</style>
 </head>
 <body id="top">
@@ -83,8 +76,12 @@
     </section>
   </div>
   <link
-      rel="stylesheet"
-      href="{{ site.baseurl }}/assets/pygments.css"
+    rel="stylesheet"
+    href="{{ site.baseurl }}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}"
+  />
+  <link
+    rel="stylesheet"
+    href="{{ site.baseurl }}/assets/pygments.css"
   />
   {% if jekyll.environment == "production" %}
   <script>
