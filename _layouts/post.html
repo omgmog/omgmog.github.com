@@ -9,28 +9,28 @@ description: true
 <hr />
 
 <p>
-    Notice any issues in this post? You can <a href="{{ site.github.repository_url }}/edit/master/{{ post.path }}">fix it</a> or <a href="{{ site.github.issues_url }}/new">raise an issue</a> on GitHub.
+  Notice any issues in this post? You can <a href="{{ site.github.repository_url }}/edit/master/{{ post.path }}">fix it</a> or <a href="{{ site.github.issues_url }}/new">raise an issue</a> on GitHub.
 </p>
 
 {% include _old_post_warning.html %}
 
 <div class="hide-mobile">
-    <h3>
-        Featured articles
-    </h3>
-    <ul class="posts-list featured-posts">
-    {% assign featured_posts = (site.posts | where:'featured','true') %}
-    {% for post in featured_posts limit:5 %}
-        <li>
-          <a
-            href="{{ site.baseurl }}{{ post.url }}"
-            title="Published on {{ post.date | date_to_long_string }}"
-          >
-            {{ post.title | strip_html | escape }}
-          </a>
-        </li>
-    {% endfor %}
-    </ul>
+  <h3>
+    Featured articles
+  </h3>
+  <ul class="posts-list featured-posts">
+  {% assign featured_posts = (site.posts | where:'featured','true') %}
+  {% for post in featured_posts limit:5 %}
+    <li>
+      <a
+        href="{{ site.baseurl }}{{ post.url }}"
+        title="Published on {{ post.date | date_to_long_string }}"
+      >
+      {{ post.title | strip_html | escape }}
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
 </div>
 
 
@@ -40,42 +40,42 @@ description: true
 
 
 <script type="text/javascript">
-    var comments = document.getElementsByClassName('comments')[0],
-        disqusLoaded=false;
+  var comments = document.getElementsByClassName('comments')[0],
+  disqusLoaded=false;
 
-    function loadDisqus() {
-        var disqus_shortname = '{{ site.disqus }}';
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        disqusLoaded = true;
+  function loadDisqus() {
+    var disqus_shortname = '{{ site.disqus }}';
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    disqusLoaded = true;
+  }
+  function findTop (obj) {
+    var curtop = 0;
+    if (obj.offsetParent) {
+      do {
+        curtop += obj.offsetTop;
+      } while (obj = obj.offsetParent);
+      return curtop;
     }
-    function findTop (obj) {
-        var curtop = 0;
-        if (obj.offsetParent) {
-            do {
-                curtop += obj.offsetTop;
-            } while (obj = obj.offsetParent);
-            return curtop;
-        }
-    }
-    var visitingCommentsDirectly = window.location.hash.indexOf('#disqus_thread') > 0;
-    var pageIsShorterThanWindow = document.body.offsetHeight < window.innerHeight;
-    if ( visitingCommentsDirectly || pageIsShorterThanWindow ) {
+  }
+  var visitingCommentsDirectly = window.location.hash.indexOf('#disqus_thread') > 0;
+  var pageIsShorterThanWindow = document.body.offsetHeight < window.innerHeight;
+  if ( visitingCommentsDirectly || pageIsShorterThanWindow ) {
+    loadDisqus();
+  }
+
+  if (comments) {
+    var commentsOffset = findTop(comments);
+
+    window.onscroll = function () {
+      if (!disqusLoaded && window.pageYOffset > commentsOffset - 1000) {
         loadDisqus();
-    }
-
-    if (comments) {
-        var commentsOffset = findTop(comments);
-
-        window.onscroll = function () {
-            if (!disqusLoaded && window.pageYOffset > commentsOffset - 1000) {
-                loadDisqus();
-            }
-        };
-    }
+      }
+    };
+  }
 </script>
 <link
   rel="stylesheet"
