@@ -1,9 +1,9 @@
 <article class="{{ include.class }}">
-    {% include _article_metadata.html %}
-    <hr />
-    {% if post.iframe_url %}
-        {% assign iframe_url = post.iframe_url %}
-        {% include iframe_embed.html %}
-    {% endif %}
-    {{ content }}
+  {% include _article_metadata.html %}
+  <hr>
+  {% if post.iframe_url %}
+    {% assign iframe_url = post.iframe_url %}
+    {% include iframe_embed.html %}
+  {% endif %}
+  {{ content }}
 </article>
