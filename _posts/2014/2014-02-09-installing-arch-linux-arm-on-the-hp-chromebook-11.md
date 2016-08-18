@@ -41,7 +41,7 @@ Insert your USB stick, and dismiss any of the File Browser windows that open. No
 
 ```bash
 $ cd /home/root
-$ wget https://raw2.github.com/omgmog/archarm-usb-hp-chromebook-11/master/install.sh
+$ wget https://raw.githubusercontent.com/omgmog/archarm-usb-hp-chromebook-11/master/install.sh
 $ sh install.sh /dev/sda
 ```
 
