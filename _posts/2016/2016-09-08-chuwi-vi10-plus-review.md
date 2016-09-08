@@ -7,11 +7,11 @@ layout: post
 
 ![]({{ site.baseurl }}/images/2016-09-08/chuwivi10plus.png)
 
-I've been on the hunt for a 10" tablet for a couple of months now. Besides Google's Pixel C, there isn't much choice in this area (ignoring the iPad). There are a bunch of options for cheep Atom-based Android/Windows tablets on Gearbest/Aliexpress/etc. I decided to buy a [Chuwi Vi10 Plus on Gearbest](http://www.gearbest.com/tablet-pcs/pp_413825.html). For less than £120 what could I lose?
+I've been on the hunt for a 10" tablet for a couple of months now. Besides Google's Pixel C, there isn't much choice in this area (ignoring the iPad). There are a bunch of options for cheap Atom-based Android/Windows tablets on Gearbest/Aliexpress/etc. I decided to buy a [Chuwi Vi10 Plus on Gearbest](http://www.gearbest.com/tablet-pcs/pp_413825.html). For less than £120 what could I lose?
 
 <!-- more -->
 
-First things first, the specs:
+First thing's first, the specs:
 
 - CPU: Intel Atom "Cherry Trail" x5 Z8300 - 1.44GHz-1.84GHz ([Intel Ark link](http://ark.intel.com/products/87383/Intel-Atom-x5-Z8300-Processor-2M-Cache-up-to-1_84-GHz?q=Z8300))
 - RAM: 2GB
