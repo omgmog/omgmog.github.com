@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Finally, a post about the Nexus 7"
 tags: ["consumerism", "review", "hardware", "android"]
 category: 'hardware-review'

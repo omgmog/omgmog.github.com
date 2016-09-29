@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Factory resetting a Nokia N900 from Mac OS X Mountain Lion"
 tags: ["mac", "linux", "hackintosh", "tutorial", "tip", "terminal", "downloads", "software", "hardware"]
 ---

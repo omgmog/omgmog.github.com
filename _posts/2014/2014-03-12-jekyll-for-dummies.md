@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Jekyll for dummies
 tags: ["mac", "linux", "project", "tutorial", "tip", "code", "terminal", "github", "development", "jekyll"]
 ---
@@ -193,7 +193,7 @@ Then when you edit that file, you'll need to make sure it has frontmatter at the
 
 ```yaml
 ---
-layout: post
+
 title: Jekyll for dummies
 tags: ["wow","such","tags"]
 ---

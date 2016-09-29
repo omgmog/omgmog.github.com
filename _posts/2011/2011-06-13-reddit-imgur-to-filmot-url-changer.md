@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Reddit imgur to filmot url changer
 tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:

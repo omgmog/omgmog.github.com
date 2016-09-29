@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Making HTML5 input placeholder text behave in Safari"
 tags: ["mac", "tutorial", "tip", "code", "software", "browser", "usability", "development"]
 ---

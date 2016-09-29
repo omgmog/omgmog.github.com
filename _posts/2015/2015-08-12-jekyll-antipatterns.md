@@ -1,6 +1,6 @@
 ---
 title: Jekyll Antipatterns
-layout: post
+
 ---
 
 ![]({{ site.baseurl }}/images/jekyllantipatterns.jpg){: .center .massive}

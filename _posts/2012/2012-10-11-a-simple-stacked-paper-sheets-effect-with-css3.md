@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "A simple 'stacked paper sheets' effect with CSS3"
 tags: ["project", "tutorial", "tip", "code", "software", "browser", "usability", "development"]
 ---

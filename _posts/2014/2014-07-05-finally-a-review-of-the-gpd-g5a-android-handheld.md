@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Finally... a review of the GPD G5A Android handheld
 tags: ["consumerism", "review", "android", "software", "hardware"]
 category: 'hardware-review'

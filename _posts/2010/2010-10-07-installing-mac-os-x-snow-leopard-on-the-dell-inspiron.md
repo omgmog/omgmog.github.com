@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Installing Mac OS X Snow Leopard on the Dell Inspiron 1525
 tags: ["mac", "hackintosh", "project", "tutorial", "tip", "software"]
 redirect_from:

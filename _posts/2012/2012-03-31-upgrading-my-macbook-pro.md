@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Upgrading my Macbook Pro"
 tags: ["mac", "project", "consumerism", "tutorial", "tip", "hardware"]
 updated: 2014-02-28

@@ -1,6 +1,6 @@
 ---
 title: Launching Sketch Toolbox from inside Sketch
-layout: post
+
 tags: ["project", "tutorial", "software", "development", "sketch"]
 ---
 

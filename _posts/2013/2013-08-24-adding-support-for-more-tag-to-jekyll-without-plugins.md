@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Adding support for &lt;!-- more --> tag to Jekyll without plugins"
 tags: ["project", "tutorial", "tip", "code", "software", "usability", "development", "jekyll"]
 updated: 2014-08-10

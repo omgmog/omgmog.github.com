@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Reddit open imgur links in new window/tab
 tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:

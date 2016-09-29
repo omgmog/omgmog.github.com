@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "On second thought..."
 tags: ["mac", "android", "review", "software", "browser"]
 ---

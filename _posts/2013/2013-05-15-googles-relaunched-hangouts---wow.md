@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Google's relaunched Hangouts -- Wow."
 tags: ["mac", "android", "review", "software", "browser"]
 ---

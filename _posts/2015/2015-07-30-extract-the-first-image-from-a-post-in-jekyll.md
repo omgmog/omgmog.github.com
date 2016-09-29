@@ -1,6 +1,6 @@
 ---
 title: Extract the first image from a post in Jekyll
-layout: post
+
 tags: ["project", "tutorial", "software", "development", "jekyll"]
 ---
 

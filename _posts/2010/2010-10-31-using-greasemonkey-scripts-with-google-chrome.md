@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Using Greasemonkey scripts with Google Chrome
 tags: ["tutorial", "tip", "code", "software", "browser", "javascript"]
 redirect_from:

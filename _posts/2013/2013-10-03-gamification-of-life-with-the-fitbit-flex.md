@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Gamification of life with the Fitbit Flex"
 tags: ["mac", "consumerism", "review", "software", "hardware", "android"]
 ---

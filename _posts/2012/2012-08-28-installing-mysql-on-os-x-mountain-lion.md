@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Installing MySQL on OS X Mountain Lion"
 tags: ["mac", "hackintosh", "tutorial", "tip", "code", "terminal", "software", "development"]
 ---

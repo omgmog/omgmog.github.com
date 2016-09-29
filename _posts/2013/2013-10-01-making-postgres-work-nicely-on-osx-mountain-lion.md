@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Making Postgres work nicely on OS X Mountain Lion"
 tags: ["mac", "hackintosh", "tutorial", "tip", "code", "terminal", "software", "development"]
 ---

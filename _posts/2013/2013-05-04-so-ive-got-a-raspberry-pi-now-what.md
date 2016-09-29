@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "So I've got a Raspberry Pi, now what?"
 tags: ["linux", "project", "consumerism", "review", "software", "hardware", "raspberry pi"]
 category: 'hardware-review'

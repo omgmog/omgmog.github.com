@@ -1,6 +1,6 @@
 ---
 title: Getting started with using Sass in your existing website
-layout: post
+
 tags: ["project", "tutorial", "tip", "software", "terminal", "development", "sass"]
 featured: "true"
 ---

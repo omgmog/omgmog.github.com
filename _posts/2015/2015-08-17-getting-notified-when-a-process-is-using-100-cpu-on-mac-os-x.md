@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Getting Notified when a process is using 100% CPU on Mac OS X
 ---
 

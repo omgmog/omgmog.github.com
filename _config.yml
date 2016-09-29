@@ -35,3 +35,16 @@ menu:
     title: "Articles"
   - link: "/reviews/"
     title: "Reviews"
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: post
+  -
+    scope:
+      type: "pages"
+    values:
+      layout: layout
+

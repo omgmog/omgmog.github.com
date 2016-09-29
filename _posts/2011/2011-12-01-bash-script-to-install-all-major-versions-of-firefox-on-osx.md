@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Bash script to install all major versions of Firefox on OS X
 tags: ["mac", "project", "code", "terminal", "software", "browser", "downloads", "github", "development"]
 redirect_from:

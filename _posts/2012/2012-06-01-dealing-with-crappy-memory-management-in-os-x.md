@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Dealing with crappy memory management in OS X"
 tags: ["mac", "hackintosh", "tutorial", "tip", "terminal", "software"]
 ---

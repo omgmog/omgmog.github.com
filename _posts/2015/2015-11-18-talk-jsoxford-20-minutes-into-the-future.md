@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "20 Minutes into the Future with Google Cardboard and JavaScript"
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Testing responsive layouts with the RWD bookmarklet"
 iframe_url: https://www.youtube.com/embed/mueOjgvNM04
 tags: ["tutorial", "tip", "video", "software", "browser", "usability", "rwd", "development", "downloads"]

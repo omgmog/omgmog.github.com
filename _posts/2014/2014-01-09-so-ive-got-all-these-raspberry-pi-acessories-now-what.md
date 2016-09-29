@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "So, I've got all of these Raspberry Pi accessories... now what?"
 tags: ["linux", "consumerism", "review", "hackday", "raspberry pi", "development", "hardware", "software", "project"]
 ---

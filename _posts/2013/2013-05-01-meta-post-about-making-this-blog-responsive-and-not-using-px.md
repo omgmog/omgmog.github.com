@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Meta post about making this blog responsive and not using px"
 tags: ["project", "code", "github", "software", "meta", "usability", "javascript", "jekyll", "development"]
 ---

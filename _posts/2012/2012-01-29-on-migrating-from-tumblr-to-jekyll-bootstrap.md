@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "On migrating from Tumblr to Jekyll Bootstrap"
 tags: ["project", "tip", "tutorial", "software", "terminal", "github", "development", "jekyll", "meta"]
 updated: 2014-03-17

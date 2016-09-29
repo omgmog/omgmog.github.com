@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Installing Arch Linux ARM on the HP Chromebook 11"
 tags: ["linux", "project", "tutorial", "tip", "terminal", "github", "downloads", "chromebook"]
 ---

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Chrome 'Add to Trello' extension"
 tags: ["mac", "code", "browser", "software", "github", "hackday", "development", "downloads", "javascript"]
 ---

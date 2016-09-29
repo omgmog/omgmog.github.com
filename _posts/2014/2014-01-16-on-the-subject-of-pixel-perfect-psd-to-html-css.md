@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: On the subject of "Pixel-perfect PSD to HTML/CSS"
 tags: ["software", "tip", "development", "browser", "sass", "meta"]
 featured: "true"

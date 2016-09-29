@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Saving your CSS changes in the Google Chrome inspector"
 tags: ["browser", "tip", "tutorial", "software", "development"]
 updated: 2013-03-13

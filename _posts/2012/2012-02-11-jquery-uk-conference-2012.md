@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "jQuery UK Conference 2012"
 tags: ["consumerism", "conference", "javascript", "review"]
 ---

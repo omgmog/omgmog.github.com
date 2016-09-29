@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Upgrading Mac OS X Snow Leopard on the Dell Inspiron 1525 to 10.6.4
 tags: ["mac", "hackintosh", "project", "tutorial", "tip", "software"]
 redirect_from:

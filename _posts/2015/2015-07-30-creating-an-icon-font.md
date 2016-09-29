@@ -1,6 +1,6 @@
 ---
 title: Creating an icon font
-layout: post
+
 tags: ["project", "tutorial", "software", "development"]
 ---
 

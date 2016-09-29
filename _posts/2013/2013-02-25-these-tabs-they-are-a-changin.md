@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "These tabs they are a changin'"
 tags: ["mac", "review", "tip", "software", "browser"]
 ---

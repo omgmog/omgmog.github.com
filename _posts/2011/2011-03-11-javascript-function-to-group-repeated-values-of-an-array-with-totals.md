@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Javascript function to group repeated values of an array with totals
 tags: ["code", "tip", "tutorial", "browser", "javascript", "development"]
 redirect_from:

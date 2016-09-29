@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "A possible solution to 'bad interpreter: operation not permitted' error on Mac OS X Lion"
 tags: ["mac", "tip", "code", "terminal", "software"]
 ---

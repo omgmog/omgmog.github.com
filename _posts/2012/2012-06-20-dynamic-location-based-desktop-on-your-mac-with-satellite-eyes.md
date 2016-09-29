@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Dynamic location based desktop on your Mac with Satellite Eyes"
 tags: ["downloads", "mac", "software"]
 ---
