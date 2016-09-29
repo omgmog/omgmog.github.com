@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "The woes of trailing commas in IE"
 tags: ["tutorial", "tip", "software", "code", "development", "browser", "javascript"]
 ---

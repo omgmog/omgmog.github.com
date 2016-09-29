@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "High fidelity in low fidelity emails"
 tags: ["usability", "software", "review"]
 ---

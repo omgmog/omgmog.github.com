@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: My face and words in print
 tags: ["project", "tutorial", "software", "development", "sass"]
 ---

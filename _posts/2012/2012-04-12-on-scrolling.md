@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "On scrolling"
 tags: ["mac", "usability", "software", "browser"]
 updated: 2013-08-14

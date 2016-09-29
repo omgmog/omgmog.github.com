@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Awesome Bash arrays"
 tags: ["mac", "linux", "tip", "tutorial", "terminal", "software", "browser", "development", "javascript"]
 ---

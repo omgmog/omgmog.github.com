@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: More Portable Android Gaming with the GPD G7
 tags: ["consumerism", "review", "android", "software", "hardware"]
 category: 'hardware-review'

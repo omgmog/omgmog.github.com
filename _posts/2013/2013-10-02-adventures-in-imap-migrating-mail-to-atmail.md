@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Adventures in IMAP: Migrating lots of mail to Atmail"
 tags: ["mac", "hackintosh", "linux", "tutorial", "tip", "code", "terminal", "software", "development"]
 ---

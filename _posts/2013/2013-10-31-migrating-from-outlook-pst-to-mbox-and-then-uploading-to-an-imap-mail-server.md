@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Migrating from Outlook .pst to mbox and then uploading to an IMAP mail server"
 tags: ["mac", "hackintosh", "tutorial", "tip", "code", "terminal", "software", "development"]
 ---

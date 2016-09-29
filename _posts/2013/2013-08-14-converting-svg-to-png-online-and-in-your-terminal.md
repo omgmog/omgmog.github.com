@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Converting SVG to PNG online and in your terminal"
 tags: ["mac", "linux", "tutorial", "tip", "terminal", "software"]
 ---

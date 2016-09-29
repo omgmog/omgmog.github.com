@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Some approaches for creating diagonal section separators for your website
 ---
 

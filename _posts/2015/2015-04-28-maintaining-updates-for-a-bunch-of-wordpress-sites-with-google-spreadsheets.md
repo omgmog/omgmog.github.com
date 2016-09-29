@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Maintaining updates for a bunch of WordPress sites with Google Spreadsheets
 ---
 

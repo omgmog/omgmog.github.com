@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "jQuery UK 2013 - A tale of beer, colourful cakes and no wifi"
 tags: ["consumerism", "review", "conference", "javascript"]
 ---

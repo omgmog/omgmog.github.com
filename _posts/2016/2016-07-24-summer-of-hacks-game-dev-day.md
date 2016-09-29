@@ -1,6 +1,6 @@
 ---
 title: "Summer of Hacks: Game Dev Day"
-layout: post
+
 ---
 
 As part of the JS Oxford-organised [Summer of Hacks](http://summerofhacks.io), I co-organised the "Game Dev Day" hack day in Oxford. This is the second time I've held an event during the Summer of Hacks (the previous event being [SusHack #3](http://sushack.co.uk/) last year!).

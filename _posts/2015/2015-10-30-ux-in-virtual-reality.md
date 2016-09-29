@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: UX in Virtual Reality
 ---
 

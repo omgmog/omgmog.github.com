@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Using the Zed editor with Arch Linux ARM on your Chromebook
 ---
 

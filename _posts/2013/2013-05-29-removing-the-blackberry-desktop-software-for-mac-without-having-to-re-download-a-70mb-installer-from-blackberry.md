@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Removing the Blackberry Desktop Software for Mac without having to re-download a 70mb installer from Blackberry"
 tags: ["mac", "hackintosh", "tutorial", "tip", "terminal", "software"]
 ---

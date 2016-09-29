@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Getting to grips with git log"
 tags: ["mac", "linux", "tip", "tutorial", "code", "terminal", "software", "github", "development"]
 ---

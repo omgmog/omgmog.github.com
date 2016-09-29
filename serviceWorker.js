@@ -1,4 +1,5 @@
 ---
+layout: # no layout
 ---
 /*global self: true, caches: true */
 'use strict';

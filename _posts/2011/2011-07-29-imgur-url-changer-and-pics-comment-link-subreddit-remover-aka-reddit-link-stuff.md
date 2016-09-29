@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Imgur Url Changer and pics/funny comment link subreddit remover aka reddit link stuff
 tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Building JavaScript arrays from HTML using regular expressions
 tags: ["code", "tip", "tutorial", "browser", "javascript", "development"]
 redirect_from:

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Why your reasons for no-longer using a CSS pre-processor are wrong, and you're wrong, and you should feel bad."
 tags: ["software", "tip", "development", "browser", "sass", "meta"]
 featured: "true"

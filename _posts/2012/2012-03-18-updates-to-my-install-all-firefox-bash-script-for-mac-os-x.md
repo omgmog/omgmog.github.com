@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Updates to my 'install all firefox' bash script for Mac OS X"
 tags: ["mac", "project", "code", "terminal", "software", "browser", "downloads", "github", "development"]
 ---

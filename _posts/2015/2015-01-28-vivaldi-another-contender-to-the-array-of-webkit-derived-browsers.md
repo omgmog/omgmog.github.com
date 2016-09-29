@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Vivaldi: Another contender to the array of Webkit-derived browsers"
 tags: ["software", "development"]
 ---

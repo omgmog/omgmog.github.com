@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Max Glenister Uses This
 featured: "true"
 updated: 2015-08-19

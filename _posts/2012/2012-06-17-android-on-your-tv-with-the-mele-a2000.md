@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Android on your TV with the Mele A2000"
 tags: ["android", "consumerism", "review"]
 category: 'hardware-review'

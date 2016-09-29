@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Redesigning and relaunching Dingoonity
 tags: ["project", "meta", "development", "code"]
 redirect_from:

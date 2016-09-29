@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Ubuntu (native) on the Nexus 7"
 tags: ["linux", "review", "android", "code", "terminal", "software"]
 ---

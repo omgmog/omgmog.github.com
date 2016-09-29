@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "SusHack #1: Building the foundations of the Oxford Flood Network Stack"
 tags: ["project", "conference", "software", "hardware", "hackday", "development"]
 ---

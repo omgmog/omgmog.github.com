@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Better link underlines with Sass"
 tags: ["software", "tip", "development", "browser", "sass", "meta"]
 ---

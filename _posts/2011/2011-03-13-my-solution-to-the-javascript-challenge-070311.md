@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: My solution to the JavaScript challenge 07/03/11
 tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:

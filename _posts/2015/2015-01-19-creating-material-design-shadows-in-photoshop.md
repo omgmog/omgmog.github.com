@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Creating 'Material Design' shadows in Photoshop"
 tags: ["project", "design", "software", "hardware", "hackday", "development"]
 updated: 2015-06-16

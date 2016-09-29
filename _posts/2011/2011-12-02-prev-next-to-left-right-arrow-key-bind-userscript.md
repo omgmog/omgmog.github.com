@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: prev/next to left/right arrow key bind userscript
 tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
 redirect_from:

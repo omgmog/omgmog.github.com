@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Video integration with Jekyll"
 tags: ["project", "tutorial", "tip", "code", "software", "github", "development", "jekyll"]
 ---
@@ -38,7 +38,7 @@ When you create a new post in Jekyll, you will have the usual YAML block at the 
 
 ```yaml
 ---
-layout: post
+
 title: "Some awesome post"
 ---
 ```
@@ -47,7 +47,7 @@ To begin, we need to add a new line before the last `---` to define a YouTube em
 
 ```yaml
 ---
-layout: post
+
 title: "Some awesome post"
 iframe_url: https://www.youtube.com/embed/fyY9tb8Rvlk
 ---

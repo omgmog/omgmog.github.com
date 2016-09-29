@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Downgrading Nexus 5 from Android 6.0 to Android 5.1.1"
 tags: ["android", "software",]
 ---

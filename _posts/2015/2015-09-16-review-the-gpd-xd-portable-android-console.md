@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Review: The GPD XD Portable Android Console"
 tags: ["consumerism", "review", "android", "software", "hardware"]
 category: 'hardware-review'

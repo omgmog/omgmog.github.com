@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Fluid video embeds for your responsive website"
 tags: ["project", "tutorial", "tip", "code", "software", "browser", "usability", "development", "rwd"]
 ---

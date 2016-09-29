@@ -1,6 +1,6 @@
 ---
 title: Using "jekyll-redirect-from" with GitHub Pages
-layout: post
+
 tags: ["linux", "project", "tutorial", "tip", "terminal", "github", "downloads", "chromebook"]
 ---
 

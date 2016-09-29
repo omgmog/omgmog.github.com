@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Review: The Revo K101 Plus"
 tags: ["consumerism", "review", "nintendo", "software", "hardware"]
 category: 'hardware-review'

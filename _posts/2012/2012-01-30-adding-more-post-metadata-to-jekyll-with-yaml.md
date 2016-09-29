@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: "Adding more post metadata to Jekyll with YAML"
 tags: ["project", "tutorial", "tip", "code", "software", "meta", "development", "jekyll"]
 ---
@@ -13,7 +13,7 @@ This can be done easily enough by simply adding new lines to the YAML block at t
 
 ```yaml
 ---
-layout: post
+
 title:
 categories:
 tags:
@@ -24,7 +24,7 @@ To add your own, you just need to create a <code>key: value</code> line in the b
 
 ```yaml
 ---
-layout: post
+
 title:
 categories:
 tags:

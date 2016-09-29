@@ -1,6 +1,6 @@
 ---
 title: Getting to know @for, @each and @while in Sass
-layout: post
+
 ---
 
 I use Sass every day, both professionally and in my side projects. One thing that never seems to stick in my mind though is the correct way to use `@for`, `@each` or `@while`.

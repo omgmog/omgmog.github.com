@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: jQuery Conference 2014
 ---
 Another year, another jQuery UK conference. I wrote previously about the jQuery UK conferences that I attended in [2012](/post/jquery-uk-conference-2012/) and [2013](/post/jquery-uk-2013---a-tale-of-beer-colourful-cakes-and-no-wifi/), now I've finally gotten around to writing up my notes from the 2014 conference.
