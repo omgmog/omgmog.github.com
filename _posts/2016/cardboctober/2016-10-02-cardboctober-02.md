@@ -9,7 +9,7 @@ As you look at each ghost in the circle surrounding you the ghost will cover the
 <!-- more -->
 
 {: .center}
-![](http://i.giphy.com/l3vRnrkrMySW1m4dG.gif)
+![]({{ site.baseurl }}/images/2016-10-02/giphy.gif)
 
 This is really basic, and uses Three's built-in `THREE.Raycaster`. You can imagine a raycaster as a laser beam shining from your eye to the point that you're looking at.
 
