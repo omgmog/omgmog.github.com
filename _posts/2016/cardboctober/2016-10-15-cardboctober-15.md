@@ -2,6 +2,8 @@
 title: "15: The Hierarchy of Needs in Quick Google Cardboard Hacks"
 ---
 
+_This week I’m going to be writing about some of the UX challenges encountered while creating Cardboctober hacks._
+
 In VR experiences it’s important to consider the needs of the person using what you’ve created. We can look at the [Hierarchy of Needs in Virtual Reality](https://medium.com/@beaucronin/the-hierarchy-of-needs-in-virtual-reality-development-4333a4833acc) that Beau Cronin adapted from Maslow’s Hierarchy of Needs<!-- more -->:
 
 {:.center}
