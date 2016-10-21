@@ -1,5 +1,5 @@
 ---
-title: "19: Which way is North?"
+title: "19: Which way is North? Part 1"
 ---
 
 When developing for Google Cardboard VR with JavaScript we're depending on the browser's support of device orientation to know which way the user is looking. You can't guarantee the user is always looking in the direction you've oriented your scene.
@@ -28,4 +28,4 @@ I'm using Three.js' DeviceOrientationControls.js plugin to provide my device ori
 controls.updateAlphaOffsetAngle( angle );
 ```
 
-I'll be creating a device to allow this method to be called from within an experience later in Cardboctober, and adding it as part of my `core.js` library.
+Tomorrow I'll look at creating a device to allow the `alphaOffsetAngle` to be easily set by the user.
