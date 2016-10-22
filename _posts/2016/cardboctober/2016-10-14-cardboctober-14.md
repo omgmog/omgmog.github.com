@@ -94,5 +94,6 @@ Here are the things we've made this week:
 
 ### Day 14
 - This post (Max)
+- [Seascape](https://cardboctober.xyz/pete/14/) (Pete)
 
 So that's it for Week 2. Next week I'm going to be working on posts about UX and design patterns rather than creating substantial hacks as I'll be away on holiday.
