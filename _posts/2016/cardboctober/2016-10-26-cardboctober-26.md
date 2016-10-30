@@ -1,5 +1,5 @@
 ---
-title: "24: "
+title: "26: Rotating Pieces"
 ---
 
 For today's Cardboctober we're still working with Tetris. The task today is to make the pieces rotate.
