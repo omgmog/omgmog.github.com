@@ -80,4 +80,5 @@ Here are the Cardboctober Week 3 hacks:
 
 ### Day 21
 - This post (Max)
+- [UX Improvements](https://medium.com/@peterjwest/web-vr-ux-and-fullscreen-on-ios-762192c38102) (Pete)
 
