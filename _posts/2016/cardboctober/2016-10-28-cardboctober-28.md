@@ -76,5 +76,3 @@ So now that I've got that written down somewhere, I can continue with my big re-
 ### Day 28
 - This post (Max)
 - [Beer](https://cardboctober.xyz/pete/28/) (Pete)
-
-{% include cardboctober.html %}
