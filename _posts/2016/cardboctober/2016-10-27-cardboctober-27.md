@@ -35,6 +35,6 @@ There's a lot going on there, and some MAGIC, and it's not going to scale, but i
 
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-27/giphy.gif)
+![]({{ site.baseurl }}/images/2016-10/27/giphy.gif)
 
 I'm not completely happy with this, so you may have noticed the poop emoji (💩) all over the place. I'll _definitely_ throw this away with the re-write I'm working on, but it's nice to explore the idea.

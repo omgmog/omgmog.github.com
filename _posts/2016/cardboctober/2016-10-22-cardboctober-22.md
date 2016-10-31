@@ -10,7 +10,7 @@ We're starting the final (full) week of Cardboctober now, so I thought I'd do a 
 I'm going to be making a Tetromino game in VR. Each day this week I'll cover an aspect of building the game, and then hopefully at the end of the week we'll have a full game to play.
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-22/tetrominoes.png)
+![]({{ site.baseurl }}/images/2016-10/22/tetrominoes.png)
 
 I've built Tetromino games before in some capacity -- I spent some time a couple of months ago building one using Python. Here are some great resources for working out how the game works:
 
