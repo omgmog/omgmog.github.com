@@ -1,5 +1,7 @@
 ---
 title: "10: HTML5 Video"
+cardboctober: true
+has_hack: true
 ---
 
 Today we're looking at HTML5 video -- well not in the traditional sense. We're looking at using the `<video>` element to create a texture and then applying it to an object in our 3D scene.
@@ -284,6 +286,3 @@ And we're done. You might want to mess with the intensity of the lights, or play
 ## A note about the delay in publishing this write-up
 
 So this write-up (though dated 10/10/16) was actually published on 11/10/16. I decided to refactor most of my `core.js` library while working on day 10's hack and it took a little longer than I had planned.
-
-
-{% include cardboctober.html %}

@@ -1,5 +1,7 @@
 ---
 title: "08: Playing sounds"
+cardboctober: true
+has_hack: true
 ---
 
 Kicking off Cardboctober week 2 (in which I'll be talking about using various Web APIs) today we're looking at audio. Or more specifically how to get audio in to your VR things.
@@ -131,5 +133,3 @@ s.button.children[1].ongazelong = function () {
 ```
 
 Now, there are a few more nuances for making the button/sound interaction perfect, but it's a bit convoluted. You can take a look at [08/demo.js](https://github.com/cardboctober/max/blob/master/08/demo.js) to see the full example.
-
-{% include cardboctober.html %}

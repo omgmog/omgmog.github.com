@@ -1,5 +1,7 @@
 ---
 title: "01: Basic VR"
+cardboctober: true
+has_hack: true
 ---
 
 Kicking off Cardboctober I've decided to go with something very simple.
@@ -18,5 +20,3 @@ Not a lot actually, it's just a spinning/bouncing red cube. If you view it throu
 ![]({{ site.baseurl }}/images/2016-10-01/giphy.gif)
 
 Some caveats you'll find with this very primitive 3D scene are that you can't actually move from the fixed position that I've stuck the camera in, and the whole scene is oriented based on Cardinal North, so if you're facing in the wrong direction you might not see the cube.
-
-{% include cardboctober.html %}

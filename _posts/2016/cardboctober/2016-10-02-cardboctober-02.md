@@ -1,5 +1,7 @@
 ---
 title: "02: Raycaster based look interaction"
+cardboctober: true
+has_hack: true
 ---
 
 For today's Cardboctober hack I'm doing some basic look interaction.
@@ -17,5 +19,3 @@ This is really basic, and uses Three's built-in `THREE.Raycaster`. You can imagi
 ![]({{ site.baseurl }}/images/2016-10-02/raycasting.png)
 
 In this hack I'm grabbing the first object that the raycaster hits and then changing the material.
-
-{% include cardboctober.html %}

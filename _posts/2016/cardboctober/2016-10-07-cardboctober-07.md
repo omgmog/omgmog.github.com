@@ -1,5 +1,6 @@
 ---
 title: "07: Cardboard hardware (cardware?)"
+cardboctober: true
 ---
 
 Today's hack (and each Friday for the rest of October) is going to be hardware rather than software themed. If you get all the way to the end of the post I'll even throw in a recap of the week so far. _This is totally not a cop-out._

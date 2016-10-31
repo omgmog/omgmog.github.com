@@ -1,5 +1,7 @@
 ---
 title: "26: Rotating Pieces"
+cardboctober: true
+has_hack: true
 ---
 
 For today's Cardboctober we're still working with Tetris. The task today is to make the pieces rotate.
@@ -85,6 +87,3 @@ The last thing is binding this to a key, so we just update our key event listene
 ![]({{ site.baseurl }}/images/2016-10-26/giphy.gif)
 
 So that's it for piece rotation. I feel like I might be painting myself in to a corner more and more with each day of this, so we'll see what happens tomorrow!
-
-
-{% include cardboctober.html %}

@@ -1,5 +1,7 @@
 ---
 title: "05: Loading external models"
+cardboctober: true
+has_hack: true
 ---
 
 Using a couple of Three.js plugins you can load external models in to your scene. The plugins are:
@@ -90,5 +92,3 @@ To get around this, I added the model as a child of an `Object3D` and then posit
 Now I'm able to raycast the transparent cube rather than the model.
 
 I'm using `vreticle.js` again to handle raycasting, and [Howler.js](https://howlerjs.com/) for loading/playing sounds.
-
-{% include cardboctober.html %}

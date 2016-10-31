@@ -1,5 +1,7 @@
 ---
 title: "09: Speech recognition"
+cardboctober: true
+has_hack: true
 ---
 
 Today's hack is using the `speechRecognition` API. How can this be useful in Google Cardboard VR? It can add another level of input to our limited arsenal. So let's take a closer look at that.
@@ -106,6 +108,3 @@ Very simple. So that's where we're at with todays hack. It'll only work in Chrom
 ![]({{ site.baseurl }}/images/2016-10-09/giphy.gif)
 
 Now ofcourse there is a bit more to this than just implementing `speechRecognition` and some functions to handle the transcript created by the `onresult` event handler. You'll need to come up with a way to inform the user of the available speech commands, indicate the current state (listening or not), and provide feedback for unrecognised commands.
-
-
-{% include cardboctober.html %}

@@ -33,7 +33,9 @@ menu:
     external: true
   - link: "/"
     title: "Articles"
-  - link: "/reviews/"
+  - link: "/cardboctober"
+    title: "Cardboctober"
+  - link: "/reviews"
     title: "Reviews"
 
 defaults:

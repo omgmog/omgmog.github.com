@@ -1,5 +1,7 @@
 ---
 title: Cardboctober
+cardboctober: true
+show_in_posts: true
 ---
 
 Throughout October [Ben](https://twitter.com/benjaminbenben) and I are working on a project called [Cardboctober](https://cardboctober.xyz). The challenge is hacking on something new every day using Google Cardboard.

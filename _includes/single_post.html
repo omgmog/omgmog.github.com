@@ -6,4 +6,8 @@
     {% include iframe_embed.html %}
   {% endif %}
   {{ content }}
+  {% if post.cardboctober %}
+    {% capture cardboctober_footer %}{% include cardboctober.html %}{% endcapture %}
+    {{ cardboctober_footer | markdownify }}
+  {% endif %}
 </article>

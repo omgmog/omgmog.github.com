@@ -1,5 +1,7 @@
 ---
 title: "04: Skyboxes and generating meshes"
+cardboctober: true
+has_hack: true
 ---
 
 ## Skyboxes
@@ -137,5 +139,3 @@ After you've got your shape meshes generating, you can then do anything you like
 
 {:.center}
 ![]({{ site.baseurl }}/images/2016-10-04/giphy.gif)
-
-{% include cardboctober.html %}

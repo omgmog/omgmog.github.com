@@ -1,5 +1,6 @@
 ---
 title: "16: Getting in and out of Fullscreen"
+cardboctober: true
 ---
 
 Today we’re looking at the task of getting in and out of Fullscreen. Fullscreen helps maintain an immersive experience.

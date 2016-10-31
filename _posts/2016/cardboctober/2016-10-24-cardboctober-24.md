@@ -1,5 +1,7 @@
 ---
 title: "24: Basic Game Board"
+cardboctober: true
+has_hack: true
 ---
 
 For today's hack we're going to start putting the teVRis game board together. We've already looked at positioning objects in a circle around the camera, but that doesn't solve the whole problem.
@@ -78,5 +80,3 @@ And that's it for today, tomorrow we'll look at creating some actual Tetrominoes
 
 {:.center}
 ![]({{ site.baseurl }}/images/2016-10-24/giphy.gif)
-
-{% include cardboctober.html %}

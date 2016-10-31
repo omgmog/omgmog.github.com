@@ -1,5 +1,6 @@
 ---
 title: "18: Moving around in VR"
+cardboctober: true
 ---
 
 Unless your VR experience is a roller coaster or some other sort of rail-based experience, you shouldn't take movement control away from the user. Lack of movement control can cause VR sickness.

@@ -1,5 +1,6 @@
 ---
 title: "19: Which way is North? Part 1"
+cardboctober: true
 ---
 
 When developing for Google Cardboard VR with JavaScript we're depending on the browser's support of device orientation to know which way the user is looking. You can't guarantee the user is always looking in the direction you've oriented your scene.

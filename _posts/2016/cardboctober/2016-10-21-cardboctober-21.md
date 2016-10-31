@@ -1,5 +1,6 @@
 ---
 title: "21: One size doesn't fit all"
+cardboctober: true
 ---
 
 An important factor in whether VR works for you or not is how well the hardware fits -- both in terms of fitting your head shape and being aligned with your eyes. For today's post I'll be looking at some of the things that affect the fit of Google Cardboard headsets.
