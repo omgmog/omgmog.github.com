@@ -57,3 +57,8 @@ var createFullScreenControl = function() {
 ```
 
 It’s a good idea to start your regular render loop after you’ve entered fullscreen as the button will block interaction for the most part.
+
+### Update:
+
+I realised 2 weeks later that I didn't really mention getting out of fullscreen. On your Android device you'll be able to hit the 'back' button, which is a good enough solution without us having to create a new device!
+

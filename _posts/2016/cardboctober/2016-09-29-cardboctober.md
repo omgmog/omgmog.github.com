@@ -1,5 +1,5 @@
 ---
-title: Cardboctober
+title: Announcing Cardboctober
 cardboctober: true
 show_in_posts: true
 ---
