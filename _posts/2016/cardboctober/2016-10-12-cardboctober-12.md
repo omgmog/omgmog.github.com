@@ -9,7 +9,7 @@ Today's hack was going to be built around the `gamepad` API -- but I utterly fai
 <!-- more -->
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-12/giphy.gif)
+![]({{ site.baseurl }}/images/2016-10/12/giphy.gif)
 
 Today's game is quite simple and quite bodged together. I stole the raycaster-based movement from [Pete's day 11 hack](https://cardboctober.xyz/pete/11/) to make it possible to move around the "level".
 

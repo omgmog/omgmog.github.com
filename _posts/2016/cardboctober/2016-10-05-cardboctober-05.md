@@ -50,7 +50,7 @@ modelsToLoad.forEach(function (model, i) {
 ```
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-05/giphy.gif)
+![]({{ site.baseurl }}/images/2016-10/05/giphy.gif)
 
 ## These aren't the droids you're looking for
 
@@ -87,7 +87,7 @@ To get around this, I added the model as a child of an `Object3D` and then posit
 ```
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-05/cubes.png)
+![]({{ site.baseurl }}/images/2016-10/05/cubes.png)
 
 Now I'm able to raycast the transparent cube rather than the model.
 

@@ -18,22 +18,22 @@ I keep hitting walls (_hoho!_.. alright I'll stop.) with off-by-one errors, and 
 The tetris board is a 2-dimensional array that is 10 cells wide and 22 cells tall. Though it's 22 cells tall, we only actually use 20 of them as the playable area (with 2 used for buffering the top of a shape without being out of bounds).
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-28/board.png)
+![]({{ site.baseurl }}/images/2016-10/28/board.png)
 
 There are 7 different types of piece in a traditional tetris game: I, T, L, J, Z, S and O. Here is how each of them look in the default rotation:
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-28/pieces.png)
+![]({{ site.baseurl }}/images/2016-10/28/pieces.png)
 
 The marked square in the middle of each piece is the point that the piece will be rotated around.
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-28/piece-rotation.png)
+![]({{ site.baseurl }}/images/2016-10/28/piece-rotation.png)
 
 When spawning, a random piece with a random rotation is placed at the top of the board. This piece is positioned so that the marked square is at the top/center of the board:
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-28/spawn.png)
+![]({{ site.baseurl }}/images/2016-10/28/spawn.png)
 
 The piece can be moved along the x-axis by the player. The piece will automatically drop 1 block at an interval along the y-axis, but can also be manually moved downwards on the y-axis.
 
@@ -44,7 +44,7 @@ If the piece collides with a filled square on the board, it should be merged wit
 If the piece reaches the bottom row of the board, it should be merged with the board.
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10-28/piece-collide.png)
+![]({{ site.baseurl }}/images/2016-10/28/piece-collide.png)
 
 So now that I've got that written down somewhere, I can continue with my big re-write and hopefully have something working by the end of Cardboctober!
 
