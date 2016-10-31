@@ -1,5 +1,6 @@
 ---
 title: "28: Planning Revisited"
+cardboctober: true
 ---
 
 I thought it'd be weird to drop a hardware post in this week as I've not finished the Tevris game yet, so this week's post will continue the Tetris theme and then there will be a Cardboctober Week 4 round-up at the end.

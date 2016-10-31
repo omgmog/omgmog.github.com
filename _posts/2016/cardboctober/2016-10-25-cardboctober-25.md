@@ -1,5 +1,7 @@
 ---
 title: "25: Creating and Moving Pieces"
+cardboctober: true
+has_hack: true
 ---
 
 Today we're going to be looking at creating Tetromino pieces and moving them around the board.
@@ -40,5 +42,3 @@ For the sake of simplifying things today, I've gone back to a flat game board. I
 
 {:.center}
 ![]({{ site.baseurl }}/images/2016-10-25/giphy.gif)
-
-{% include cardboctober.html %}

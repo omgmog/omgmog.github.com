@@ -1,5 +1,7 @@
 ---
 title: "03: Even better gazed based look interaction"
+cardboctober: true
+has_hack: true
 ---
 
 Improving on yesterday's [Raycaster based look interaction](/post/cardboctober-02), I've improved the raycasting experience.
@@ -77,5 +79,3 @@ var animateRenderer = function() {
 };
 animateRenderer();
 ```
-
-{% include cardboctober.html %}

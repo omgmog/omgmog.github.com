@@ -1,5 +1,7 @@
 ---
 title: "27: Moving with gaze"
+cardboctober: true
+has_hack: true
 ---
 
 Today's hack is more an aside while I'm focussing on _yet another_ Tevris rewrite.
@@ -36,5 +38,3 @@ There's a lot going on there, and some MAGIC, and it's not going to scale, but i
 ![]({{ site.baseurl }}/images/2016-10-27/giphy.gif)
 
 I'm not completely happy with this, so you may have noticed the poop emoji (💩) all over the place. I'll _definitely_ throw this away with the re-write I'm working on, but it's nice to explore the idea.
-
-{% include cardboctober.html %}

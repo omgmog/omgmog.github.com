@@ -1,5 +1,6 @@
 ---
 title: "17: Displaying Pertinent Information"
+cardboctober: true
 ---
 
 Some Cardboard experiences might require pertinent information to always be visible to the user. As we’re working with a stereoscopic and not particularly high resolution screen this raises a couple of challenges.

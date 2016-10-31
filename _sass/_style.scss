@@ -168,19 +168,6 @@ article {
       height: 100%;
     }
   }
-  &.latest {
-    font-size: 1.4em;
-
-    hr {
-      margin-top: 5rem;
-    }
-    .metadata {
-      display: none;
-    }
-    .article-heading {
-      font-size: 3.35rem;
-    }
-  }
 }
 .post-thumbnail {
   width: 11rem;
@@ -227,6 +214,22 @@ article {
       bottom: 0;
       line-height: $heightHeader;
       font-weight: 400;
+    }
+  }
+  .main-navigation {
+    position: absolute;
+    right: .5rem;
+
+    div {
+      font-size: .9rem;
+
+      a {
+        padding: 1.2em .25em;
+      }
+    }
+
+    div:nth-child(1) {
+      display: none;
     }
   }
   .content {

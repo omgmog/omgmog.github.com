@@ -1,5 +1,6 @@
 ---
 title: "15: The Hierarchy of Needs in Quick Google Cardboard Hacks"
+cardboctober: true
 ---
 
 _This week I’m going to be writing about some of the UX challenges encountered while creating Cardboctober hacks._

@@ -1,5 +1,6 @@
 ---
 title: "22: Putting it all together"
+cardboctober: true
 ---
 
 We're starting the final (full) week of Cardboctober now, so I thought I'd do a week-long project to pull together some of the ideas from Cardboctober.

@@ -2,11 +2,28 @@
 title: Articles
 ---
 
-{% for post in site.posts limit:15 %}
-  {% assign index = forloop.index0 %}
-  {% include _article_preview.html %}
+{% comment %}
+  This is now more complex than I'd like
+{% endcomment %}
+
+{% assign post_limit = 15 %}
+{% assign post_count = 0 %}
+{% for post in site.posts %}
+  {% if post_count < post_limit %}
+    {% if post.cardboctober %}
+      {% if post.show_in_posts %}
+        {% include _article_preview.html %}
+
+        {% assign post_count = post_count|plus:1 %}
+      {% endif %}
+    {% else %}
+      {% include _article_preview.html %}
+
+      {% assign post_count = post_count|plus:1 %}
+    {% endif %}
+  {% endif %}
 {% endfor %}
 
 <p>
-  You can find more posts in the <a href="{{ site.baseurl }}/archive/page2/">Archive</a>.
+  You can find more posts in the <a href="{{ site.baseurl }}/archive/">Archive</a>.
 </p>

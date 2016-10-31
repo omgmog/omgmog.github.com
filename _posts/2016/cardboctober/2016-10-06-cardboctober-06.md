@@ -1,5 +1,7 @@
 ---
 title: "06: VR Pairs Game"
+cardboctober: true
+has_hack: true
 ---
 
 Todays hack is intended more as an activity to pull together various bits from the first week of Cardboctober and make a game. So here we go, it's a "pairs" game.
@@ -149,5 +151,3 @@ I also added in the "Start" button at the start of the game, because I found tha
 
 {:.center}
 ![]({{ site.baseurl }}/images/2016-10-06/giphy.gif)
-
-{% include cardboctober.html %}

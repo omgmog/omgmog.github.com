@@ -1,5 +1,7 @@
 ---
 title: "13: AAAAH! More Zombies"
+cardboctober: true
+has_hack: true
 ---
 
 For today's hack I'm revisiting [yesterday's zombie game](/post/cardboctober-12) again. With a full re-write to un-bodge the implementation.
@@ -23,5 +25,3 @@ And a couple of things that didn't make it in to the re-write:
 This time I'm using a separate 2D layer (some HTML!) outside of the renderer for the red damage overlay and the "You are dead" message.
 
 I think this hack needs a couple more hours of attention before it's really fun, but it's getting there.
-
-{% include cardboctober.html %}

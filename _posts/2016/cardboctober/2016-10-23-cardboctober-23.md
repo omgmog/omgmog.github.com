@@ -1,5 +1,7 @@
 ---
 title: "23: Planning Tetrominoes in VR"
+cardboctober: true
+has_hack: true
 ---
 
 I outlined the plan for the week yesterday: To make a tetromino game. So here's how we're going to do that.
@@ -51,5 +53,3 @@ My first thought is to project the game board around the player in a circle. Pos
 You can see the output of this in [Cardboctober 04: Skyboxes and generating meshes](/post/cardboctober-04/) - I even did some preleminary Tetromino generation. So we've got the starting point for our game then, we just need to add _all of the game logic_.
 
 Tomorrow we'll look at generating the Tetromino shapes and putting them in to this game board.
-
-{% include cardboctober.html %}

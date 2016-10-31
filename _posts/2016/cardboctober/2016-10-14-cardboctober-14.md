@@ -1,5 +1,6 @@
 ---
 title: "14: Debugging your Cardboard with Chrome"
+cardboctober: true
 ---
 
 Today I'm going to be talking about how I test and debug while working on this Cardboctober hacks. If you make it to the end I'll have a recap of Week 2 of Cardboctober.

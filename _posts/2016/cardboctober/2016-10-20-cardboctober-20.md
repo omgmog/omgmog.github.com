@@ -1,5 +1,6 @@
 ---
 title: "20: Which way is North? Part 2"
+cardboctober: true
 ---
 
 In [yesterday's post](/post/cardboctober-19) I talked about the problem of using Cardinal North with device orientation, and how Three.js' Device Orientation Camera provides a utility function for setting the `alphaOffsetAngle`, today we're going to cover building a device to use this function.
