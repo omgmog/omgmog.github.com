@@ -9,6 +9,7 @@ description: true
   Notice any issues in this post? You can <a href="{{ site.github.repository_url }}/edit/master/{{ post.path }}">fix it</a> or <a href="{{ site.github.issues_url }}/new">raise an issue</a> on GitHub.
 </p>
 {% include _old_post_warning.html %}
+{% unless post.collection == 'reviews' or post.collection == 'cardboctober' %}
 <div class="hide-mobile">
   <h3>
   Featured articles
@@ -22,5 +23,6 @@ description: true
     {% endfor %}
   </ul>
 </div>
+{% endunless %}
 {% include _adsense.html %}
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/pygments.css" />

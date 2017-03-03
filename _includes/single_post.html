@@ -8,7 +8,7 @@
 
   {{ content }}
 
-  {% if post.cardboctober %}
+  {% if post.collection == 'cardboctober' %}
     {% capture cardboctober_footer %}{% include cardboctober.html %}{% endcapture %}
     {{ cardboctober_footer | markdownify }}
   {% endif %}
