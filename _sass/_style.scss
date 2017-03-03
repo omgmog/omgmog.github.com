@@ -1,27 +1,24 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   font-size: 18px;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
 body {
   text-align: center;
   background-color: $colorBackgroundHeader;
 }
 
 a {
-  color:  $oxfordBlue;
+  color: $oxfordBlue;
   text-decoration: none;
-  border-bottom: 1px dashed  $oxfordBlue;
+  border-bottom: 1px dashed $oxfordBlue;
   cursor: pointer;
-  transition:
-    border-color .2s cubic-bezier(0.4,0,0.2,1),
-    color .2s cubic-bezier(0.4,0,0.2,1),
-    background-color .2s cubic-bezier(0.4,0,0.2,1)
-  ;
-
+  transition: border-color .2s cubic-bezier(0.4, 0, 0.2, 1), color .2s cubic-bezier(0.4, 0, 0.2, 1), background-color .2s cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     border-bottom-color: $iron;
   }
@@ -38,7 +35,6 @@ a {
   background-color: $colorBackgroundHeader;
   color: $colorForegroundHeader;
   position: relative;
-
   .inner {
     max-width: 100%;
     margin: 0 auto;
@@ -55,7 +51,6 @@ a {
   float: left;
   line-height: 1;
   font-size: 1.5rem;
-
   h1 {
     margin: 0;
     font-size: 1em;
@@ -63,26 +58,23 @@ a {
     padding: .5em;
     font-weight: 400;
   }
-
   &:active,
   &:focus {
     background: transparent;
   }
 }
+
 .main-navigation {
   float: right;
-
   div {
     display: inline-block;
     font-size: 1rem;
-
     a {
       display: block;
       padding: 1em .5em;
       line-height: 1;
       color: inherit;
       border: 0;
-
       &:active,
       &:focus {
         background-color: transparent;
@@ -90,6 +82,7 @@ a {
     }
   }
 }
+
 .wrapper {
   width: $widthSite;
   margin: 0 auto;
@@ -98,11 +91,11 @@ a {
   position: relative;
   background-color: $colorBackgroundContent;
 }
+
 .content {
   width: $widthContent - 20;
   margin: auto;
   color: $colorForegroundContent;
-
   .inner {
     padding: 2rem;
   }
@@ -120,6 +113,7 @@ hr {
 .center {
   text-align: center;
 }
+
 article {
   p,
   li {
@@ -150,7 +144,7 @@ article {
     @extend *.massive;
   }
   *.shadow {
-    @include box-shadow(0 0 2.5rem 0 rgba(0,0,0,0.15));
+    @include box-shadow(0 0 2.5rem 0 rgba(0, 0, 0, 0.15));
   }
   *.iframe {
     height: 0;
@@ -158,7 +152,6 @@ article {
     padding-top: 70%;
     overflow: hidden;
     position: relative;
-
     iframe {
       position: absolute;
       top: 0;
@@ -169,6 +162,7 @@ article {
     }
   }
 }
+
 .post-thumbnail {
   width: 11rem;
   height: 11rem;
@@ -180,12 +174,14 @@ article {
   margin-left: 1rem;
   border: 0;
 }
+
 .article-heading {
   font-size: 2.2rem;
   font-weight: 400;
   margin-bottom: 0;
   color: $colorForegroundContent;
 }
+
 @include breakpoint("small") {
   .post-thumbnail {
     float: none;
@@ -203,7 +199,6 @@ article {
     text-indent: -999em;
     position: relative;
     margin-right: 0;
-
     &::before {
       content: 'M';
       text-indent: 0;
@@ -219,15 +214,12 @@ article {
   .main-navigation {
     position: absolute;
     right: .5rem;
-
     div {
       font-size: .9rem;
-
       a {
         padding: 1.2em .25em;
       }
     }
-
     div:nth-child(1) {
       display: none;
     }
@@ -235,16 +227,17 @@ article {
   .content {
     width: $widthContent;
     overflow-x: hidden;
-
     *.massive {
       max-width: 120%;
       margin-left: -10%;
     }
   }
 }
+
 .pull-left {
   float: left;
 }
+
 .pull-right {
   float: right;
 }
