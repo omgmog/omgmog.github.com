@@ -15,7 +15,7 @@ Error: Expected identifier, string or number
 
 You can see an example below:
 
-![A really helpful error message in IE]({{ site.baseurl }}/images/by-default-2012-11-20-at-16.27.28.png)
+![A really helpful error message in IE]({{ site.url }}/images/by-default-2012-11-20-at-16.27.28.png)
 
 What does that tell us? Bugger all in fact, unless you've tackled this problem before. It's really unhelpful, but it's caused by having a trailing comma inside an array/object/method, like the following:
 

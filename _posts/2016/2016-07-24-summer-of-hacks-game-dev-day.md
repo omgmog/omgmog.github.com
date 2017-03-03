@@ -10,7 +10,7 @@ As part of the JS Oxford-organised [Summer of Hacks](http://summerofhacks.io), I
 The hack day didn't have any specific theme, but Pete and I were encouraging people to use either [Phaser.js](http://phaser.io/) for creating 2D games, or [A-Frame](https://aframe.io/) for easily working with Three.js and making VR games.
 
 {: .center}
-![]({{ site.baseurl }}/images/gdd/gdd.png){:.massive}
+![]({{ site.url }}/images/gdd/gdd.png){:.massive}
 
 ## The gamedevday.club website
 
@@ -35,7 +35,7 @@ I used [Deckset](http://decksetapp.com) to create a set of slides as a quick int
 I also distilled some of the key concepts of A-Frame down in to this micro-site: [https://blog.omgmog.net/gdd-aframe-guide/](https://blog.omgmog.net/gdd-aframe-guide/). You can find the source for that site [here](https://github.com/omgmog/gdd-aframe-guide).
 
 {: .center}
-![]({{ site.baseurl }}/images/gdd/IMG_20160723_111304.jpg){:.massive}
+![]({{ site.url }}/images/gdd/IMG_20160723_111304.jpg){:.massive}
 
 These are some of the projects that were created during Game Dev Day:
 

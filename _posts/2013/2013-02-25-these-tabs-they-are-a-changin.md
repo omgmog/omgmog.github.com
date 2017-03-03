@@ -11,7 +11,7 @@ The tab bar has seen some tweaks to the spacing of the close button, as well as 
 
 The omnibar has lost a couple of pixels of weight, and over-all the whole interface is a lot more flat/smooth now.
 
-![]({{ site.baseurl }}/images/chrome-tabs.gif)
+![]({{ site.url }}/images/chrome-tabs.gif)
 
 Very subtle changes, but very effective.
 

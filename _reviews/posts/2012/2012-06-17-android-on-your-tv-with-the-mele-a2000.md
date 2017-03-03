@@ -9,7 +9,7 @@ I decided to buy an Android-powered set top box because my Apple TV 1 didn't cut
 
 <!-- more -->
 
-![Picture of Mele A2000]({{ site.baseurl }}/images/MELE-A2000-7.jpg)
+![Picture of Mele A2000]({{ site.url }}/images/MELE-A2000-7.jpg)
 
 I came across the Mele A2000 on DealExtreme - it's a cheap yet powerful Android box that can play 1080p video without any problem and has access to the Google Play Store.
 
@@ -24,17 +24,17 @@ The specs are as follows:
 - **Network:** Wifi, LAN
 - **Controller:** One basic remote (with expected Android buttons + extra mapping)
 
-![Back of Mele A2000]({{ site.baseurl }}/images/back.jpg)
+![Back of Mele A2000]({{ site.url }}/images/back.jpg)
 
 From the spec, you can see that this is pretty much a small computer, for less than £60 [over at DealExtreme](http://www.dealextreme.com/p/mele-a2000-1080p-android-2-3-network-multi-media-player-w-sata-usb-hdmi-lan-vga-wifi-4gb-131566?item=6).
 
 I expected that the remote would suck so I also ordered a wireless keyboard/trackpad from DealExtreme when I ordered the Mele A2000. Any of the "2.4ghz" keyboard/trackpads that come with a USB dongle should work just fine with the A2000.
 
-![Wireless keyboard]({{ site.baseurl }}/images/wireless-rii-mini-keyboard-touchpad-mouse-for-pc-laptop.jpg)
+![Wireless keyboard]({{ site.url }}/images/wireless-rii-mini-keyboard-touchpad-mouse-for-pc-laptop.jpg)
 
 Additionally, Mele also make a "[F10 Air Mouse](http://www.dealextreme.com/p/mele-f10-fly-mouse-3-in-1-2-4ghz-wireless-air-mouse-keyboard-remote-control-black-128312)", which looks to be like these other keyboard/trackpad devices, but with a remote on the back side. Controlling Android with a mouse or trackpad is a lot easier, and luckily Android supports a mouse cursor just as if you were touching the screen.
 
-![Mele F10 Air Mouse]({{ site.baseurl }}/images/Mele-F10-Seneor-Remote-Fly-air-mouse-wilress-mouse-remote-control.jpg)
+![Mele F10 Air Mouse]({{ site.url }}/images/Mele-F10-Seneor-Remote-Fly-air-mouse-wilress-mouse-remote-control.jpg)
 
 After a small amount of fiddling (changing the language from Chinese to English, connecting to my home Wifi, changing the output to 1080p) I got the A2000 up and running nicely, and it worked with most files that I threw at it.
 

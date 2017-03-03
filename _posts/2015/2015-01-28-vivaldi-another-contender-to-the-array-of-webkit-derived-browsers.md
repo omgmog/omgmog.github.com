@@ -10,7 +10,7 @@ I managed to put off trying it out for a couple of days, due to my being too bus
 
 <!-- more -->
 
-![]({{ site.baseurl }}/images/GjwGUS9.png)
+![]({{ site.url }}/images/GjwGUS9.png)
 
 The announcement was met with some derision...
 
@@ -27,11 +27,11 @@ Vivaldi is using [Blink](http://www.chromium.org/blink) at it's core, but in you
 
 This lack of native UI is particularly disjointing, as it means the browser window doesn't look like other applications on OS X, and doesn't "feel" right.
 
-![]({{ site.baseurl }}/images/TLmxOXh.png)
+![]({{ site.url }}/images/TLmxOXh.png)
 
 Visiting a couple of different sites in Vivaldi, you'll notice that the interface is more of a chameleon than anything, taking on the prominent colour from the favicon of the page you're viewing to style the toolbar and active tab.
 
-![]({{ site.baseurl }}/images/lfINVku.png)
+![]({{ site.url }}/images/lfINVku.png)
 
 It would be interesting if this could support the [`<meta name="theme-color" />` tag](https://github.com/whatwg/meta-theme-color) in the future, to allow developers to set a specific colour for the interface.
 
@@ -39,6 +39,6 @@ As a front-end developer, it's a pain to have another variation of a browser in 
 
 Right now it's using Blink (`537.36`), so it should be identical in rendering to Chrome, and I hope it doesn't deviate too far from Chrome in the future!
 
-![]({{ site.baseurl }}/images/w0wHaSo.png)
+![]({{ site.url }}/images/w0wHaSo.png)
 
 This is just a "Technology preview", and as such it lacks a lot of features, but it's nice to see that this is being worked on!

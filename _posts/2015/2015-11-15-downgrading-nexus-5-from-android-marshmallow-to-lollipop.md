@@ -9,7 +9,7 @@ I jumped on Android 6.0 Marshmallow as soon as the developer images were availab
 <!-- more -->
 
 {:.center}
-![]({{ site.baseurl }}/images/nexus5downgrade.png){:.massive}
+![]({{ site.url }}/images/nexus5downgrade.png){:.massive}
 
 So I've decided to downgrade back to 5.1.1, here's how the process goes:
 

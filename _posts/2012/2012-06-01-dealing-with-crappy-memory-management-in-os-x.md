@@ -9,7 +9,7 @@ Using a lot of memory-intensive programs throughout the day, such as Virtualbox 
 
 Take the following screenshot, this is after having closed a bunch of programs because my 2011 iMac (with 12 GB of RAM) was crawling and reporting "11 MB" of free memory.
 
-![These are not the MegaBytes of RAM you are looking for]({{ site.baseurl }}/images/by%20default%202012-06-01%20at%2016.39.56.png)
+![These are not the MegaBytes of RAM you are looking for]({{ site.url }}/images/by%20default%202012-06-01%20at%2016.39.56.png)
 
 OS X is being stupid -- or rather, it's probably trying to be quite smart, but it's failing to be smart, so it's being stupid. I've got 12 GB of RAM, and OS X is gasping for some RAM, but it has half of it set as "Inactive".
 
@@ -23,6 +23,6 @@ Now, I'm pretty sure that you need to have the OS X Developer Tools installed to
 
 The result after running `purge`?
 
-![That's more like it!]({{ site.baseurl }}/images/by%20default%202012-06-01%20at%2016.42.44.png)
+![That's more like it!]({{ site.url }}/images/by%20default%202012-06-01%20at%2016.42.44.png)
 
 Wonderful.

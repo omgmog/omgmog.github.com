@@ -42,4 +42,4 @@ document.addEventListener('keydown', function (e) {
 For the sake of simplifying things today, I've gone back to a flat game board. I'll re-introduce the curve tomorrow!
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/25/giphy.gif)
+![]({{ site.url }}/images/2016-10/25/giphy.gif)

@@ -9,7 +9,7 @@ These are based on my experience of organising SusHack in 2013 and 2014. For mor
 
 <!-- more -->
 
-![]({{ site.baseurl }}/images/eo73n.jpg)
+![]({{ site.url }}/images/eo73n.jpg)
 
 ## Overview
 

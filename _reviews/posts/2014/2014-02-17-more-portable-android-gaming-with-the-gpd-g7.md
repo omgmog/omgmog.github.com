@@ -12,9 +12,9 @@ The G7 is very similar to the JXD 7800B, but with a more ergonomic game-controll
 
 <!-- more -->
 
-![]({{ site.baseurl }}/images/fullshot.jpg)
+![]({{ site.url }}/images/fullshot.jpg)
 
-![]({{ site.baseurl }}/images/shoulder-buttons.jpg)
+![]({{ site.url }}/images/shoulder-buttons.jpg)
 
 
 [Geekbuying](http://www.geekbuying.com) generously supplied me with a GPD G7 to review. I've got the "[GPD G7 RK3188 1.6GHz 7 inch GamePad Android 4.2 Quad Core Capacitive Touch Screen 1024*600 1GB/8GB Tablet PC](http://www.geekbuying.com/item/GPD-G7-RK3188-1-6GHz-7-inch-GamePad-Android-4-2-Quad-Core-Capacitive-Touch-Screen-1024-600-1GB-8GB-Tablet-PC-324409.html)".
@@ -43,19 +43,19 @@ So how does the GPD G7 compare to other devices? take a look:
 
 #### Google Nexus 7 (2012 model)
 
-![]({{ site.baseurl }}/images/g7vsnexus7.jpg)
+![]({{ site.url }}/images/g7vsnexus7.jpg)
 
 #### Sony PS3 controller
 
-![]({{ site.baseurl }}/images/g7vsps3controller.jpg)
+![]({{ site.url }}/images/g7vsps3controller.jpg)
 
 #### Nintendo DSi
 
-![]({{ site.baseurl }}/images/g7vsdsi.jpg)
+![]({{ site.url }}/images/g7vsdsi.jpg)
 
 #### Dingoo A320
 
-![]({{ site.baseurl }}/images/g7vsdingoo.jpg)
+![]({{ site.url }}/images/g7vsdingoo.jpg)
 
 As you can see, it's another large device. The size and weight are as follows:
 
@@ -66,7 +66,7 @@ As you can see, it's another large device. The size and weight are as follows:
 
 Again, as I'm now used to with these Chinese Android handhelds, it doesn't charge via the included micro-USB port, but it has it's own dedicated DC jack.
 
-![]({{ site.baseurl }}/images/ports.jpg)
+![]({{ site.url }}/images/ports.jpg)
 
 The G7 came with an EU plug, with an adapter to US bundled in the box, and an adapter to UK bundled in the packaging from Geekbuying -- so at the moment I'm charging with a precarious stack of plug adapters.
 
@@ -74,7 +74,7 @@ Hopefully the manufacturers of these handhelds will realise that using a proprie
 
 There are two front-facing speakers, they sound pretty good with the games I've played on the GPD G7. I was worried that their location meant that my hands would cover them as I played games, but it's actually no problem.
 
-![]({{ site.baseurl }}/images/speaker.jpg)
+![]({{ site.url }}/images/speaker.jpg)
 
 The battery lasted for a couple of hours, so it's perfect to take on long car journeys or flights, or wherever.
 

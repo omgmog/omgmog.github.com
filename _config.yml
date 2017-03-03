@@ -1,6 +1,6 @@
 permalink: /post/:title/
 exclude: ["_config.yml", ".gitignore", "README.md", "node_modules", "gulpfile.js"]
-baseurl: "https://blog.omgmog.net"
+url: "https://blog.omgmog.net"
 safe: true
 paginate: 15
 paginate_path: "archive/page:num/"

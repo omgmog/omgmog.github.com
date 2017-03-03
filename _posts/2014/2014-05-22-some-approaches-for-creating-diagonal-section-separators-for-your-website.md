@@ -18,7 +18,7 @@ This is the first approach that you might try when trying to achieve this effect
 
 When it comes to scaling though you'll have some problems, take the following example. First a fixed width, and then a fluid %-based width:
 
-![]({{ site.baseurl }}/images/Ca2hBff.png)
+![]({{ site.url }}/images/Ca2hBff.png)
 
 The background works fine in the first example, but as soon as your element exceeds the width of the image you're going to have a bad time.
 
@@ -48,7 +48,7 @@ To make a background image that will scale to the dimensions of the element it's
 
 Here is the image:
 
-![]({{ site.baseurl }}/images/ZR0qEPI.png)
+![]({{ site.url }}/images/ZR0qEPI.png)
 
 This dimensions of the image are 1000 x 60 px. To work out the height as a percentage of the width, you can use the following:
 
@@ -84,11 +84,11 @@ If you spend any time looking at the diagonal background, or if you're using a r
 
 Fuzzy PNG:
 
-![]({{ site.baseurl }}/images/HbmCtVP.png)
+![]({{ site.url }}/images/HbmCtVP.png)
 
 Crisp SVG:
 
-![]({{ site.baseurl }}/images/g249Exx.png)
+![]({{ site.url }}/images/g249Exx.png)
 
 SVG or "[scalable vector graphics](http://en.wikipedia.org/wiki/Scalable_Vector_Graphics)", means that the image is a vector (rather than a raster) and is designed to scale. You can scale an SVG to any size without losing any quality. SVG is supported in all modern browsers (even IE9+) [http://caniuse.com/svg](http://caniuse.com/svg).
 
@@ -170,4 +170,4 @@ Not bad!
 
 This works pretty perfectly in Chrome, but it may have some issues in other browsers. If you can't see the nice diagonal lines in the example above, here is a picture to illustrate how the final result looks:
 
-![]({{ site.baseurl }}/images/dKWd4V7.png)
+![]({{ site.url }}/images/dKWd4V7.png)

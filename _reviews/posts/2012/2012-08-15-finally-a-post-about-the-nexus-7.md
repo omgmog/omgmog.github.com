@@ -13,7 +13,7 @@ First of all: Oh man, oh boy, oh wow, oh geez. [What a nice tablet](http://www.g
 
 Now that that's out of the way, I'm sure that anybody finding their way to my blog, be it through social channels or key words on Google, has read enough Nexus 7 reviews since it launched, so I'm going to breeze through the details of the Nexus 7:
 
-![Nexus 7]({{ site.baseurl }}/images/n7.jpg)
+![Nexus 7]({{ site.url }}/images/n7.jpg)
 
 - **Display:** 7" IPS, 1280x800, 216ppi
 - **CPU:** Quad-core Tegra 3

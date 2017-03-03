@@ -16,7 +16,7 @@ Anyway, this quote was to be included alongside a "Power up CSS preprocessor" fe
 
 I haven't bought a magazine in a long time, but to have my words printed is a pretty nice thing, so naturally I bought a physical (and even digital) copy of Web Designer Magazine the moment this issue was published.
 
-![]({{ site.baseurl }}/images/2015-06-11/1.jpg)
+![]({{ site.url }}/images/2015-06-11/1.jpg)
 
 Imagine my surprise when I found that my face covers 1/3 of a page at the start of the feature.
 

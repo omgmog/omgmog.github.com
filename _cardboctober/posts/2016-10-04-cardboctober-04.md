@@ -17,7 +17,7 @@ I'm using the textured cube approach. For this approach, our skybox texture has 
 <!-- more -->
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/04/skybox-images.png)
+![]({{ site.url }}/images/2016-10/04/skybox-images.png)
 
 We then apply each of these to a face of the skybox:
 
@@ -48,7 +48,7 @@ function createSkyMaterial( path ) {
 ```
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/04/skybox-layout.png)
+![]({{ site.url }}/images/2016-10/04/skybox-layout.png)
 
 As we're going to be inside the skybox, we turn the skybox inside out by negatively scaling it on one of its axis:
 
@@ -58,7 +58,7 @@ scene.add( mesh );
 ```
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/04/giphy-skybox.gif)
+![]({{ site.url }}/images/2016-10/04/giphy-skybox.gif)
 
 And then boom, we've got a skybox.
 
@@ -139,4 +139,4 @@ var renderShape = function (type, scale) {
 After you've got your shape meshes generating, you can then do anything you like with them. For todays hack I arranged them in a circle around the camera.
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/04/giphy.gif)
+![]({{ site.url }}/images/2016-10/04/giphy.gif)

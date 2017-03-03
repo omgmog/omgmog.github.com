@@ -4,7 +4,7 @@ permalink: "404.html"
 ---
 
 <p>
-    I couldn't find that page! Try looking in the <a href="{{ site.baseurl }}/archive/">Archive</a>.
+    I couldn't find that page! Try looking in the <a href="{{ site.url }}/archive/">Archive</a>.
 </p>
 
 <h3>
@@ -15,7 +15,7 @@ permalink: "404.html"
 {% for post in featured_posts limit:5 %}
     <li>
       <a
-        href="{{ site.baseurl }}{{ post.url }}"
+        href="{{ site.url }}{{ post.url }}"
         title="Published on {{ post.date | date_to_long_string }}"
       >
         {{ post.title | strip_html | escape }}
@@ -32,7 +32,7 @@ permalink: "404.html"
 {% for post in recent_posts limit:5 %}
     <li>
       <a
-        href="{{ site.baseurl }}{{ post.url }}"
+        href="{{ site.url }}{{ post.url }}"
         title="Published on {{ post.date | date_to_long_string }}"
       >
         {{ post.title | strip_html | escape }}
@@ -49,7 +49,7 @@ permalink: "404.html"
 {% for post in reviews limit:5 %}
     <li>
       <a
-        href="{{ site.baseurl }}{{ post.url }}"
+        href="{{ site.url }}{{ post.url }}"
         title="Published on {{ post.date | date_to_long_string }}"
       >
         {{ post.title | strip_html | escape }}

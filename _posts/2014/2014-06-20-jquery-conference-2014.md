@@ -10,7 +10,7 @@ Another year, another jQuery UK conference. I wrote previously about the jQuery 
 
 We were back at the [King's Centre](http://www.kingscentre.co.uk/) in Osney Mead again this year. It's a great venue, perfectly located near to the Oxford Rail Station, and capable of catering to a conference as big as jQuery.
 
-![]({{ site.baseurl }}/images/7frmBHu.png)
+![]({{ site.url }}/images/7frmBHu.png)
 
 From the Rail Station to the venue, White October staff held signs to direct people, and this year the route featured orange J's painted along the path.
 
@@ -18,11 +18,11 @@ From the Rail Station to the venue, White October staff held signs to direct peo
 
 I'm not sure what the theme was this year, the site and all of the artwork was based around creating the 'J' from 'jQuery' using different materials: cake, ketchup, sand, mustard, LEGO &mdash; but that's about it. No heavy emphasis on a theme like last years Alice's Adventures in Wonderland, or Radiohead the year before.
 
-![]({{ site.baseurl }}/images/pa1R39r.jpg)
+![]({{ site.url }}/images/pa1R39r.jpg)
 
 Theme confusion aside, the T-shirt design featuring the aforementioned materials is very nice.
 
-![]({{ site.baseurl }}/images/DFgydEr.png)
+![]({{ site.url }}/images/DFgydEr.png)
 
 ### Arrival
 

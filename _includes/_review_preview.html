@@ -1,10 +1,10 @@
 <article>
-  <a href="{{ site.baseurl }}{{ post.url }}" class="post-thumbnail">
-    <img src="{{ site.baseurl }}/thumbs/{{ post.thumbnail }}" />
+  <a href="{{ site.url }}{{ post.url }}" class="post-thumbnail">
+    <img src="{{ site.url }}/thumbs/{{ post.thumbnail }}" />
   </a>
   {% include _title.html %}
   <p>
-    {{ post.excerpt | strip_html }} <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+    {{ post.excerpt | strip_html }} <a href="{{ site.url }}{{ post.url }}">Read more</a>
   </p>
   <hr>
 </article>

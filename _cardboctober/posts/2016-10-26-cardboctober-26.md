@@ -85,6 +85,6 @@ The last thing is binding this to a key, so we just update our key event listene
 ```
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/26/giphy.gif)
+![]({{ site.url }}/images/2016-10/26/giphy.gif)
 
 So that's it for piece rotation. I feel like I might be painting myself in to a corner more and more with each day of this, so we'll see what happens tomorrow!

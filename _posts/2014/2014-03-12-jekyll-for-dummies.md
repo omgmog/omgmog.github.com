@@ -6,7 +6,7 @@ tags: ["mac", "linux", "project", "tutorial", "tip", "code", "terminal", "github
 
 2014 has been [heralded](http://www.typeandgrids.com/blog/goodbye-wordpress-2014-will-be-the-year-of-flat-file-cmses) as "the year of flat-file websites". This blog in fact uses [Jekyll](http://jekyllrb.com) to generate the very blog post you are reading.
 
-![Obligatory "for dummies" picture]({{ site.baseurl }}/images/homeheroslide2.png)
+![Obligatory "for dummies" picture]({{ site.url }}/images/homeheroslide2.png)
 
 I've been using Jekyll in some form since [early 2012](https://github.com/omgmog/omgmog.github.com/commit/5d83bfbdf28895fd604ae811699cc3175cd7e1ad), and for me it works perfectly as a means to publish content.
 
@@ -65,7 +65,7 @@ You can get started with creating GitHub Pages over at [http://pages.github.com/
 
 ### Jekyll
 
-![The Jekyll logo]({{ site.baseurl }}/images/jekyll.png)
+![The Jekyll logo]({{ site.url }}/images/jekyll.png)
 
 Back to Jekyll. Jekyll is not a CMS, it's a "static site generator" -- that means it takes content and templates and generates a static site.
 
