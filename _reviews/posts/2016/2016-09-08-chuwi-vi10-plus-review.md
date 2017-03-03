@@ -1,8 +1,7 @@
 ---
 title: "Windows 10 tablet on the cheap: The Chuwi Vi10 Plus"
-category: 'hardware-review'
+redirect_from: /post/chuwi-vi10-plus-review/
 thumbnail: chuwivi10plus_thumb.jpg
-
 ---
 
 ![]({{ site.baseurl }}/images/2016-09-08/chuwivi10plus.png)

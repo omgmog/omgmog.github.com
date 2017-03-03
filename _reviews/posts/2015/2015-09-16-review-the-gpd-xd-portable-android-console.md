@@ -2,7 +2,7 @@
 
 title: "Review: The GPD XD Portable Android Console"
 tags: ["consumerism", "review", "android", "software", "hardware"]
-category: 'hardware-review'
+redirect_from: /post/review-the-gpd-xd-portable-android-console/
 thumbnail: gpdxd_thumb.jpg
 ---
 

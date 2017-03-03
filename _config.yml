@@ -54,12 +54,20 @@ defaults:
       layout: post
   -
     scope:
+      type: "reviews"
+    values:
+      layout: post
+  -
+    scope:
       type: "pages"
     values:
       layout: layout
 
 collections:
   cardboctober:
+    output: true
+    permalink: /:collection/:title/
+  reviews:
     output: true
     permalink: /:collection/:title/
 

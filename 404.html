@@ -45,7 +45,7 @@ permalink: "404.html"
     Recent reviews
 </h3>
 <ul class="posts-list">
-{% assign reviews = (site.posts | where:'category','hardware-review') %}
+{% assign reviews = site.reviews | reverse %}
 {% for post in reviews limit:5 %}
     <li>
       <a
