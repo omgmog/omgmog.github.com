@@ -1,109 +1,85 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
     {% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}
   </title>
   {% if page.description %}
-  <meta
-    name="description"
-    content="{{ page.excerpt | strip_html }}"
-  />
+  <meta name="description" content="{{ page.excerpt | strip_html }}" />
   {% else %}
-  <meta
-    name="description"
-    content="{{ site.author.bio }}"
-  />
+  <meta name="description" content="{{ site.author.bio }}" />
   {% endif %}
-  <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="{{ site.name }} - RSS Feed"
-    href="{{ site.baseurl }}/feed.xml"
-  />
-  <link
-    rel="alternate"
-    type="application/json"
-    title="{{ site.name }} - JSON Feed"
-    href="{{ site.baseurl }}/feed.json"
-  />
-  <link
-    rel="canonical"
-    href="{{ site.baseurl }}"
-  />
-  <link
-    rel="author"
-    href="https://plus.google.com/+MaxGlenister/posts"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    href="{{ site.baseurl }}/assets/favicon.png"
-  />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - RSS Feed" href="{{ site.baseurl }}/feed.xml" />
+  <link rel="alternate" type="application/json" title="{{ site.name }} - JSON Feed" href="{{ site.baseurl }}/feed.json" />
+  <link rel="canonical" href="{{ site.baseurl }}" />
+  <link rel="author" href="https://plus.google.com/+MaxGlenister/posts" />
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon.png" />
   <meta name="theme-color" content="#25272c">
   <meta name="google-site-verification" content="ETbuPNX54E0uDqFZwqcZNJXJYStn7oV0HSmnNKUkrr4" />
   <!--[if lt IE 9]><script src="{{ site.baseurl }}/assets/html5shiv.js"></script><![endif]-->
-  <link
-    rel="stylesheet"
-    href="{{ site.baseurl }}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}"
-  />
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}" />
 </head>
+
 <body id="top">
   <header class="header">
-  <div class="inner">
-    <a href="https://omgmog.net" class="site-title"><h1>Max Glenister</h1></a>
-    <nav class="main-navigation" role="main">
-    {% for node in site.menu %}
-      <div>
-      <a href="{% unless node.external %}{{ site.baseurl }}{% endunless %}{{ node.link }}">{{ node.title }}</a>
-      </div>
-    {% endfor %}
-    </nav>
-  </div>
+    <div class="inner">
+      <a href="https://omgmog.net" class="site-title"><h1>Max Glenister</h1></a>
+      <nav class="main-navigation" role="main">
+        {% for node in site.menu %}
+        <div>
+          <a href="{% unless node.external %}{{ site.baseurl }}{% endunless %}{{ node.link }}">{{ node.title }}</a>
+        </div>
+        {% endfor %}
+      </nav>
+    </div>
   </header>
   <div class="wrapper">
-  <section class="content">
-    <div class="inner">
-    {{ content }}
-    </div>
-  </section>
+    <section class="content">
+      <div class="inner">
+        {{ content }}
+      </div>
+    </section>
   </div>
   {% if jekyll.environment == "production" %}
   <!-- Piwik -->
-<script type="text/javascript">
+  <script type="text/javascript">
   var _paq = _paq || [];
   // tracker methods like "setCustomDimension" should be called before "trackPageView"
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="//marmjam.co/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    var u = "//marmjam.co/piwik/";
+    _paq.push(['setTrackerUrl', u + 'piwik.php']);
     _paq.push(['setSiteId', '2']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    var d = document,
+      g = d.createElement('script'),
+      s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript';
+    g.async = true;
+    g.defer = true;
+    g.src = u + 'piwik.js';
+    s.parentNode.insertBefore(g, s);
   })();
-</script>
-<!-- End Piwik Code -->
+  </script>
+  <!-- End Piwik Code -->
   <script>
   if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/serviceWorker.js', {
-    scope: '/'
+      scope: '/'
     });
   }
   </script>
   {% endif %}
   <script type="application/ld+json">
   {
-    "@context" : "http://schema.org",
-    "@type" : "Person",
-    "name" : "Max Glenister",
-    "url" : "https://blog.omgmog.net",
-    "sameAs" : [
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Max Glenister",
+    "url": "https://blog.omgmog.net",
+    "sameAs": [
       "https://www.facebook.com/moglenstar",
       "https://www.linkedin.com/in/omgmog",
       "https://www.twitter.com/omgmog",
@@ -113,4 +89,5 @@
   }
   </script>
 </body>
+
 </html>
