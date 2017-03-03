@@ -13,7 +13,7 @@ CSS pre-processors aren't for everyone, but what I found particularly grating ab
 
 You can [read the full article here](http://dwaiter.com/blog/7/why-we-no-longer-use-sass-or-less/), but the gist of their article is outlined with the headings below, along with a refutation to each point of their conjecture.
 
-![]({{ site.baseurl }}/images/531T40T.png)
+![]({{ site.url }}/images/531T40T.png)
 
 
 ### "Pre-processing takes time."
@@ -36,7 +36,7 @@ If you're not comfortable in the terminal, there are a whole bunch of GUI altern
 
 So at this point, authoring SCSS is as straight forward as authoring CSS is. You can still use LiveReload with this as the generated CSS will be different each time you change your SCSS, and so LiveReload will detect a change. Unless you're using a computer with a 'Turbo' button on the front of the tower, there should be no problem with speed.
 
-![Will this button speed up your development process?]({{ site.baseurl }}/images/cPPUP8v.png)
+![Will this button speed up your development process?]({{ site.url }}/images/cPPUP8v.png)
 
 
 ### "Nested Code"

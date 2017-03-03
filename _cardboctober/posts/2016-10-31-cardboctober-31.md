@@ -10,12 +10,12 @@ Today is the last day of Cardboctober! And less surprisingly, it's also Hallowee
 <!-- more -->
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/31/giphy.gif)
+![]({{ site.url }}/images/2016-10/31/giphy.gif)
 
 The spider is simply made of some `SphereGeometry` and `CylinderGeometry` meshes, that have been scaled/rotated:
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/31/spider.png)
+![]({{ site.url }}/images/2016-10/31/spider.png)
 
 To make the fog effect, I'm using Three's `THREE.Fog()`:
 

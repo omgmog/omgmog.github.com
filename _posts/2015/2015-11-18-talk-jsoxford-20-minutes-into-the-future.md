@@ -8,7 +8,7 @@ I gave this talk at [JS Oxford in November 2015](http://jsoxford.com/2015/Javasc
 <!-- more -->
 
 {:.center}
-![]({{ site.baseurl }}/images/jsoxford.jpg){:.massive}
+![]({{ site.url }}/images/jsoxford.jpg){:.massive}
 
 You can view the [slides online here](https://blog.omgmog.net/talk-jsoxford-20-minutes-into-the-future/), navigate the slides by clicking.
 
@@ -18,7 +18,7 @@ You can view the [slides online here](https://blog.omgmog.net/talk-jsoxford-20-m
 I wrote the slideshow framework from scratch for the talk, using [marked.js](https://github.com/chjj/marked), [three.js](https://github.com/mrdoob/three.js/) and some custom JavaScript.
 
 {:.center}
-![]({{ site.baseurl }}/images/jscardxyz.png){:.massive}
+![]({{ site.url }}/images/jscardxyz.png){:.massive}
 
 To accompany the talk I also created some demos, these can be viewed online on [jscard.xyz](https://jscard.xyz). These are best viewed in Chrome on an Android device, but should work alright in Chrome on Mac/Windows too.
 
@@ -33,4 +33,4 @@ To present the demos live, using an actual device, I used the Chrome extension/A
 
 Besides thinking about how to create Google Cardboard experiences using JavaScript, I've also been collecting resources about the UI/UX of VR, which I've put together as a useful list.
 
-You can find out more about the [UI/UX in VR list here]({{ site.baseurl }}/post/ux-in-virtual-reality/).
+You can find out more about the [UI/UX in VR list here]({{ site.url }}/post/ux-in-virtual-reality/).

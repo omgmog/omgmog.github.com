@@ -11,14 +11,14 @@ In [yesterday's post](/post/cardboctober-19) I talked about the problem of using
 We're going to create a device that let's you change the orientation offset for the camera, so we can move the scene-relative North. This isn't something that you're likely to need to use a lot, so it doesn't need to be accessible from within VR-mode.
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/20/safe-areas.png)
+![]({{ site.url }}/images/2016-10/20/safe-areas.png)
 
 You can see in the diagram above two "safe areas", these are unlikely to be visible while using Cardboard, so either are a good place to put the device. I'm going to use the bottom safe area.
 
 The device should show the position of our "North" as well as the current rotation. I created a couple of images that will help with this:
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/20/images.png)
+![]({{ site.url }}/images/2016-10/20/images.png)
 
 Now to make them actually rotate. I'll create the following markup for the device and inject it with JavaScript:
 
@@ -62,7 +62,7 @@ And the following styles for the device:
 ```
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/20/rotation.gif)
+![]({{ site.url }}/images/2016-10/20/rotation.gif)
 
 We actually create/inject all of the markup and styles using JavaScript, but what you see there is the end result.
 

@@ -45,7 +45,7 @@ These are all end-user type uses of the Raspberry Pi though, I'd like to do some
 
 ## The Raspberry Pi can do a lot of things, but it can't do them with any sort of speed.
 
-![]({{ site.baseurl }}/images/Image%202013.05.04%2016%3A30%3A17.png)
+![]({{ site.url }}/images/Image%202013.05.04%2016%3A30%3A17.png)
 
 The Raspberry Pi is not a fast machine. The spec of the Model B are as follows:
 - CPU: ARM1176JZF-S (armv6k) 700 MHz

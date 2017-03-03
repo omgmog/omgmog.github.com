@@ -10,7 +10,7 @@ Kicking off Cardboctober week 2 (in which I'll be talking about using various We
 <!-- more -->
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/08/giphy.gif)
+![]({{ site.url }}/images/2016-10/08/giphy.gif)
 
 First we build a basic scene containing some "buttons" and "speakers". These are quite simple meshes, made with combinations of `BoxGeometry` and `CylinderGeometry`.
 
@@ -116,7 +116,7 @@ s.button.children[1].ongazelong = function () {
 You'll notice I'm referring to `s.button.children[1]`, this is because `s.button` is actually targetting the parent `THREE.Object3D` rather than the `THREE.CylinderGeometry` button mesh itself.
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/08/buttonstructure.png)
+![]({{ site.url }}/images/2016-10/08/buttonstructure.png)
 
 Alright, now we've got sound playing each time you `ongazelong` at a button. But it's not great! Howler comes with built-in support for spatial audio. We can tell it to spatially position the sound so that it sounds like it's coming from a speaker:
 

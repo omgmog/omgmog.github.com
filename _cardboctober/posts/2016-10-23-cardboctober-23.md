@@ -14,7 +14,7 @@ I've decided to call this "_teVRis_", because who doesn't like a word/acronym ma
 First things first we need to think about how we can transition a game mechanic from two dimensions to three.
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/23/tetris-vs-tevris.png)
+![]({{ site.url }}/images/2016-10/23/tetris-vs-tevris.png)
 
 My first thought is to project the game board around the player in a circle. Positioning things on a circle is quite straight-forward with a bit of maths and two axis (x and z):
 

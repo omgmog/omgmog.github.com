@@ -13,7 +13,7 @@ This is probably one of the most glaring problems you'll encounter when you fina
 For me this happened while presenting some demos as part of my "[20 Minutes into the Future with Google Cardboard and JavaScript](/post/talk-jsoxford-20-minutes-into-the-future/)" in 2015.
 
 {:.center}
-![]({{ site.baseurl }}/images/2016-10/19/presenting.png)
+![]({{ site.url }}/images/2016-10/19/presenting.png)
 
 The problem is that I didn't account for the direction I would be presenting in when I created the demos. All of my demos were created with the default orientation of cardinal North, but the stage I was presenting from was facing South.
 

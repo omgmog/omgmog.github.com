@@ -7,7 +7,7 @@ tags: ["mac", "android", "review", "software", "browser"]
 
 <!-- more -->
 
-![]({{ site.baseurl }}/images/by%20default%202013-08-22%20at%2011.45.38.png)
+![]({{ site.url }}/images/by%20default%202013-08-22%20at%2011.45.38.png)
 
 ### Problems
 
@@ -24,7 +24,7 @@ I mean seriously. I could understand if this was an issue with my Google profile
 
 #### It uses a lot of resources over time
 
-![]({{ site.baseurl }}/images/by%20default%202013-08-22%20at%2011.17.54.png)
+![]({{ site.url }}/images/by%20default%202013-08-22%20at%2011.17.54.png)
 
 I've experienced Chrome slow-downs due to Hangouts, running out of RAM (though Mountain Lion is probably to blame in this case), and generally the Hangout windows being slow/unresponsive until they're reloaded.
 
@@ -32,11 +32,11 @@ I've experienced Chrome slow-downs due to Hangouts, running out of RAM (though M
 
 This is how Google promote the desktop windows of Google Hangouts for Chrome:
 
-![]({{ site.baseurl }}/images/Image%202013.08.22%2011%3A23%3A40.jpeg)
+![]({{ site.url }}/images/Image%202013.08.22%2011%3A23%3A40.jpeg)
 
 This is how it is in reality:
 
-![]({{ site.baseurl }}/images/by%20default%202013-08-22%20at%2011.32.16.png)
+![]({{ site.url }}/images/by%20default%202013-08-22%20at%2011.32.16.png)
 
 #### The biggest problems:
 
