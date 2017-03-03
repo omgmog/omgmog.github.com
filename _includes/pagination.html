@@ -1,22 +1,12 @@
 {% if paginator.next_page or paginator.previous_page %}
 <div class="pagination">
   {% if paginator.next_page %}
-    <a
-      href="{{ paginator.next_page_path }}"
-      rel="prev"
-      class="pull-left"
-      title="Older posts"
-    >
+    <a href="{{ paginator.next_page_path }}" rel="prev" class="pull-left" title="Older posts">
       <span>&#9664; Older posts</span>
     </a>
   {% endif %}
   {% if paginator.previous_page %}
-    <a
-      href="{{ paginator.previous_page_path }}"
-      rel="next"
-      class="pull-right"
-      title="Newer posts"
-    >
+    <a href="{{ paginator.previous_page_path }}" rel="next" class="pull-right" title="Newer posts">
       <span>Newer posts &#9654;</span>
     </a>
   {% endif %}
