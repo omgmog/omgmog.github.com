@@ -1,4 +1,4 @@
-{% unless post.category == 'hardware-review' %}
+{% unless post.collection == 'reviews' or post.collection == 'cardboctober' %}
   {% capture site_date_1_year %}{{ site.time | date:"%Y" | minus:1 }}{% endcapture %}
   {% capture post_date_year %}{{ post.date | date:"%Y" }}{% endcapture %}
   {% capture updated_date %}{{ post.updated | date:"%Y" }}{% endcapture %}

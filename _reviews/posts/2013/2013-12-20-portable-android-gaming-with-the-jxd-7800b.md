@@ -2,7 +2,7 @@
 
 title: Portable Android gaming with the JXD 7800B
 tags: ["consumerism", "review", "android", "software", "hardware"]
-category: 'hardware-review'
+redirect_from: /post/portable-android-gaming-with-the-jxd-7800b/
 thumbnail: jxd7800b_thumb.jpg
 ---
 

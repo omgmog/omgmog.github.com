@@ -2,7 +2,7 @@
 
 title: "Review: The Revo K101 Plus"
 tags: ["consumerism", "review", "nintendo", "software", "hardware"]
-category: 'hardware-review'
+redirect_from: /post/review-the-revo-k101-plus/
 thumbnail: k101_thumb.png
 ---
 
