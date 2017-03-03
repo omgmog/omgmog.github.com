@@ -23,9 +23,12 @@ disqus: "blogomgmog"
 sass:
     style: compressed
 
-gems: [jekyll-redirect-from,jekyll-paginate]
+gems:
+  - jekyll-redirect-from
+  - jekyll-paginate
 whitelist:
-    - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-paginate
 
 menu:
   - link: "https://omgmog.net"
@@ -46,7 +49,17 @@ defaults:
       layout: post
   -
     scope:
+      type: "cardboctober"
+    values:
+      layout: post
+  -
+    scope:
       type: "pages"
     values:
       layout: layout
+
+collections:
+  cardboctober:
+    output: true
+    permalink: /:collection/:title/
 

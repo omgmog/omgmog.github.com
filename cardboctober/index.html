@@ -6,7 +6,7 @@ title: Cardboctober
 <p>Throughout October 2016 I created something for Google Cardboard each day. Below you'll find all of the associated blog content for Cardboctober.</p>
 <hr>
 
-{% assign _posts = (site.posts|where:'cardboctober','true'|sort:'date') %}
+{% assign _posts = site.cardboctober %}
 {% for post in _posts %}
   {% include _article_preview.html %}
 {% endfor %}
