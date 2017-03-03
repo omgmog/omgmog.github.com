@@ -36,47 +36,6 @@ description: true
 
 {% include _adsense.html %}
 
-<div id="disqus_thread" class="comments"></div>
-
-
-<script type="text/javascript">
-  var comments = document.getElementsByClassName('comments')[0],
-  disqusLoaded=false;
-
-  function loadDisqus() {
-    var disqus_shortname = '{{ site.disqus }}';
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    disqusLoaded = true;
-  }
-  function findTop (obj) {
-    var curtop = 0;
-    if (obj.offsetParent) {
-      do {
-        curtop += obj.offsetTop;
-      } while (obj = obj.offsetParent);
-      return curtop;
-    }
-  }
-  var visitingCommentsDirectly = window.location.hash.indexOf('#disqus_thread') > 0;
-  var pageIsShorterThanWindow = document.body.offsetHeight < window.innerHeight;
-  if ( visitingCommentsDirectly || pageIsShorterThanWindow ) {
-    loadDisqus();
-  }
-
-  if (comments) {
-    var commentsOffset = findTop(comments);
-
-    window.onscroll = function () {
-      if (!disqusLoaded && window.pageYOffset > commentsOffset - 1000) {
-        loadDisqus();
-      }
-    };
-  }
-</script>
 <link
   rel="stylesheet"
   href="{{ site.baseurl }}/assets/pygments.css"
