@@ -112,7 +112,7 @@ Press F5 and wait for Chameleon to finish refreshing the available bootable devi
 
 Select "**Mac OS X Install DVD**" and then type the following (this part is actully optional, and depends entirely on your hardware setup. If you've got the same CPU/RAM as me, this will work for you):
 
-```bash
+```
 -v -x -f -legacy
 ```
 
@@ -120,7 +120,7 @@ You will see the text appear in the bottom-left corner of the screen. Once you'v
 
 These are boot flags, they tell Chameleon how to boot the Installer. You will also need to use these later, so I'll explain what they mean ([chameleon docs](http://forum.voodooprojects.org/index.php/topic,767.0.html)):
 
-```bash
+```
 -verbose
 -single user
 -xsafe mode
@@ -177,7 +177,7 @@ When you boot the Boot-132 CD this time, you should see a nice Apple icon, with 
 
 Select this boot drive, and type in the following commands to boot:
 
-```bash
+```
 -v -x
 ```
 
