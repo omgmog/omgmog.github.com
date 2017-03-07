@@ -14,7 +14,7 @@ After the [Refresh Oxford](http://www.refreshoxford.co.uk/) hack day back in Jun
 
 ### Conception
 
-![]({{ site.url }}/images/Image%202013.11.05%2022%3A06%3A48.png)
+![]({{ site.url }}/images/Image%202013.11.05%2022_06_48.png)
 
 As we're working in the area of sustainable business, it made sense to have a sustainability themed hack day, so "SusHack" was born towards the end of August. I spoke to the folks who organised Refresh to get some tips on organising the hack day, and then figured out what I needed. In short:
 
