@@ -29,14 +29,14 @@ If you're using an older version of postgres, and you're having trouble with `ps
 
 Temporarily adjust the memory available for postgres
 
-```bash
+```
 $ sudo sysctl -w kern.sysv.shmall=65536
 $ sudo sysctl -w kern.sysv.shmmax=16777216
 ```
 
 or, permenantly adjust the memory available for postgres, by editing `/etc/sysctl.conf` and adding the following lines:
 
-```cfg
+```
 kern.sysv.shmall=65536
 kern.sysv.shmmax=16777216
 ```

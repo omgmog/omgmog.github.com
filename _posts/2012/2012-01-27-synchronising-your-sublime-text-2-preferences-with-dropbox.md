@@ -14,14 +14,14 @@ I decided to use [Dropbox](http://db.tt/rQKT8rQ) to keep my packages/preferences
 
 ## Mac OS (and Linux)
 
-```bash
-$ ln -sfF "~/Dropbox/Application Settings/Sublime Text 2/Packages/" "~/Library/Application Support/Sublime Text 2/Packages"
+```
+ln -sfF "~/Dropbox/Application Settings/Sublime Text 2/Packages/" "~/Library/Application Support/Sublime Text 2/Packages"
 ```
 
 This command will create a symbolic link of the Packages directory stored in my Dropbox in the Sublime Text 2 directory, meaning that any computer I set up in this way will use the same settings/packages.
 
 ## Windows
 
-```bat
-> mklink /D "C:\Users\Max\AppData\Roaming\Sublime Text 2\Packages" "C:\Users\Max\Dropbox\Application Settings\Sublime Text 2\Packages"
+```
+mklink /D "C:\Users\Max\AppData\Roaming\Sublime Text 2\Packages" "C:\Users\Max\Dropbox\Application Settings\Sublime Text 2\Packages"
 ```
