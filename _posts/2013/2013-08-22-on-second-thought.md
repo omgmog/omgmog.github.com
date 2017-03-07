@@ -32,7 +32,7 @@ I've experienced Chrome slow-downs due to Hangouts, running out of RAM (though M
 
 This is how Google promote the desktop windows of Google Hangouts for Chrome:
 
-![]({{ site.url }}/images/Image%202013.08.22%2011%3A23%3A40.jpeg)
+![]({{ site.url }}/images/Image%202013.08.22%2011_23_40.jpeg)
 
 This is how it is in reality:
 
