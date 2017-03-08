@@ -84,7 +84,6 @@ The last thing is binding this to a key, so we just update our key event listene
   //...
 ```
 
-{:.center}
-![]({{ site.url }}/images/2016-10/26/giphy.gif)
+{% include figure.html src="2016-10/26/giphy.gif" %}{:.massive.center}
 
 So that's it for piece rotation. I feel like I might be painting myself in to a corner more and more with each day of this, so we'll see what happens tomorrow!

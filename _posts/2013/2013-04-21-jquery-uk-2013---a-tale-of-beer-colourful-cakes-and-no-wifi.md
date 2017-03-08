@@ -22,29 +22,29 @@ Getting to the venue was easy, as (besides the fact that I've lived in Oxford my
 
 Last year the conference was Oxford themed, with a Radiohead inspired drawing featuring as the main artwork and t-shirt design.
 
-![]({{ site.url }}/images/jquk2012.jpg)
+{% include figure.html src="jquk2012.jpg" %}{:.massive.center}
 
 This year the theme was Alice's Adventures in Wonderland.
 
-![]({{ site.url }}/images/jabberwocky.jpg)
+{% include figure.html src="jabberwocky.jpg" %}{:.massive.center}
 
->&copy; [Ben Seymour](http://twitter.com/bseymour): [Original](http://www.flickr.com/photos/boseymour/8663063817/)
+<sub>&copy; [Ben Seymour](http://twitter.com/bseymour): [Original](http://www.flickr.com/photos/boseymour/8663063817/)</sub>
 
 The route to the venue had the occasional white rabbit feet, and the venue had a massive Jabberwocky front and centre.
 
-![]({{ site.url }}/images/whiterabbit.jpg)
+{% include figure.html src="whiterabbit.jpg" %}{:.massive.center}
 
->&copy; [Elliott Stocks](https://twitter.com/elliott_stocks): [Original](https://twitter.com/elliott_stocks/status/325150484967075840)
+<sub>&copy; [Elliott Stocks](https://twitter.com/elliott_stocks): [Original](https://twitter.com/elliott_stocks/status/325150484967075840)</sub>
 
-![]({{ site.url }}/images/megawocky.jpg)
+{% include figure.html src="megawocky.jpg" %}{:.massive.center}
 
->&copy; [Gareth Jones](https://twitter.com/4foot30): [Original](https://twitter.com/4foot30/status/325872540184625153/)
+<sub>&copy; [Gareth Jones](https://twitter.com/4foot30): [Original](https://twitter.com/4foot30/status/325872540184625153/)</sub>
 
 The t-shirt for this years conference has the same Jabberwocky on the front.
 
-![]({{ site.url }}/images/t-shirt.jpg)
+{% include figure.html src="t-shirt.jpg" %}{:.massive.center}
 
->&copy; [Mariana Mota](https://twitter.com/MarianaMota): [Original](http://instagram.com/p/YSGRYPDROi/)
+<sub>&copy; [Mariana Mota](https://twitter.com/MarianaMota): [Original](http://instagram.com/p/YSGRYPDROi/)</sub>
 
 The artwork was created by [Sophie Klevenow](http://www.sophieklevenow.com/) who also did the artwork last year.
 
@@ -52,7 +52,7 @@ The artwork was created by [Sophie Klevenow](http://www.sophieklevenow.com/) who
 
 I arrived at the venue a little earlier than planned, but the White October staff were on hand to point me in the right direction to collect my pass and delegate bag, and then to collect my t-shirt. The passes this year resemble a deck of cards.
 
-![]({{ site.url }}/images/pass.jpg)
+{% include figure.html src="pass.jpg" %}{:.massive.center}
 
 The delegate bag wasn't spectacular this year, it contained the following:
 
@@ -79,8 +79,6 @@ Besides welcoming everybody, he was apologetic about the lack of wifi at the ven
 
 We've been assured that next year there will be wifi!
 
-![]({{ site.url }}/images/brendan.jpg){:.thumb-100 .pull-right}
-
 ### [Brenden Eich ](https://twitter.com/BrendanEich){:target="_blank"} - JavaScript the future
 
 Brenden talked about up and coming features of ECMAScript 6 and 7, and how a lot of commonly used JavaScript code patterns are going to be making their way into the spec as features of JavaScript.
@@ -95,8 +93,6 @@ He showed a live demo of the Unreal Engine 3 that was recently ported to JavaScr
 He talked about not wanting to go in the direction of Java with bytecode, as it's slow and the JavaScript parser is more efficient. The main goal is for "One JavaScript for humans and computers".
 
 Also: Firefox OS phones will be out soon!
-
-![]({{ site.url }}/images/richard.jpg){:.thumb-100 .pull-right}
 
 ### [Richard D. Worth ](https://twitter.com/rworth){:target="_blank"} - jQuery 1.9 and 2.0 - Present and Future
 
@@ -131,14 +127,12 @@ Besides all of that, he invited (implored, encouraged) everybody to take part in
 
 During the first break, the retro games consoles from [REPLAY](http://www.replayevents.com/index.shtml){:target="_blank"} were turned on. There was a circle of chairs set up with 4 TVs and 4 consoles in the middle, and there was an additional 5th TV with an n64 close by.
 
-![]({{ site.url }}/images/games.jpg)
->&copy; [Ian Munro](http://twitter.com/imunro: [Original](https://twitter.com/imunro/status/325234919066464256)
+{% include figure.html src="games.jpg" %}{:.massive}
+<sub>&copy; [Ian Munro](http://twitter.com/imunro): [Original](https://twitter.com/imunro/status/325234919066464256)</sub>
 
 People were playing Mario Kart 64, Goldeneye 64, Bomberman (SNES), Smash Bros (GC) and many other games. I had a few rounds of Goldeneye and decided ultimately that I've not improved at the game in the past 15 years.
 
 ## Morning - part 2
-
-![]({{ site.url }}/images/remy.jpg){:.thumb-100 .pull-right}
 
 ### [Remy Sharp ](https://twitter.com/rem){:target="_blank"} - So you know jQuery. Now what?
 
@@ -154,8 +148,6 @@ That sounds quite obvious, but there was a noticable eureka across the crowd whe
 - [Blog post which is basically the same as his talk](http://remysharp.com/2013/04/19/i-know-jquery-now-what/)
 - [Click here to view the slides](https://speakerdeck.com/rem/i-know-jquery-now-what)
 
-![]({{ site.url }}/images/adam.jpg){:.thumb-100 .pull-right}
-
 ### [Adam J. Sontag ](https://twitter.com/ajpiano){:target="_blank"} - jQuery is a Swiss Army knife (and that's OK!)
 
 Placing Adam Sontag immediately after Remy was quite interesting, as his talk held a complete opposite perspective.
@@ -167,8 +159,6 @@ He talked about jQuery just being a tool (or a multitool, pen-knife, etc.). You 
 He also covered the dangers of using jQuery, or rather using it incorrectly, and provided some nice tips on how to use jQuery correctly with examples.
 
 - [Click here to view the slides](http://ajpiano.com/jquery-is-a-swiss-army-knife/)
-
-![]({{ site.url }}/images/doug.jpg){:.thumb-100 .pull-right}
 
 ### [Doug Neiner ](https://twitter.com/dougneiner){:target="_blank"} - Taking Control with Machina.js
 
@@ -188,8 +178,8 @@ Doug had a nice demo with a light that changed colour to indicate the state of t
 ## Lunch
 This month White October are celebrating their 10th birthday. To celebrate they had a big green cake with blinking LEDs and icing circuitry. They also had a whole load of tasty cupcakes.
 
-![]({{ site.url }}/images/wocake.jpg)
->&copy; [White October](http://twitter.com/whiteoctober): [Original](https://twitter.com/WhiteOctober/status/325187539998748673)
+{% include figure.html src="wocake.jpg" %}{:.massive}
+<sub>&copy; [White October](http://twitter.com/whiteoctober): [Original](https://twitter.com/WhiteOctober/status/325187539998748673)</sub>
 
 As the conference had an Alice's Adventures in Wonderland theme, it would have been nice if there were "Eat me" labels on the cupcakes!
 
@@ -223,15 +213,11 @@ During the lunch break there were lightning talks going on in the main conferenc
 
 ## Afternoon - part 1
 
-![]({{ site.url }}/images/garann.jpg){:.thumb-100 .pull-right}
-
 ### [Garann Means ](https://twitter.com/garannm){:target="_blank"} - How to use events to glue full-stack frameworks together
 
 Garann talked about using events and jQuery to glue your templates and front-end stuff to your models/controllers.
 
 - [Click here to view the slides](http://garann.com/slides/fullstack-events/#/)
-
-![]({{ site.url }}/images/ilya.jpg){:.thumb-100 .pull-right}
 
 ### [Ilya Grigorik ](https://twitter.com/igrigorik){:target="_blank"} - Wait, Chrome DevTools can do THAT?
 
@@ -256,11 +242,9 @@ He demonstrated how far the remote debugging for Chrome on Android has come alon
 
 ## Break - mad as a hatter
 
-![]({{ site.url }}/images/teaparty.jpg)
->&copy; [Ben Seymour](http://twitter.com/bseymour): [Original]
+{% include figure.html src="teaparty.jpg" %}{:.massive}
 
-
-![]({{ site.url }}/images/john.jpg){:.thumb-100 .pull-right}
+<sub>&copy; [Ben Seymour](http://twitter.com/bseymour) </sub>
 
 ## Afternoon - part 2
 
@@ -275,8 +259,6 @@ Lastly he went on to talk about Weild, `a tiny object wrapper around the DOM`. Y
 - [Read his related blog post here](http://johnbender.us/2012/02/09/faster-javascript-through-category-theory/)
 - [Click here to view the slides](http://johnbender.us/presentation-faster-js/#/)
 
-![]({{ site.url }}/images/joe.jpg){:.thumb-100 .pull-right}
-
 ### [Joe Pettersson](https://twitter.com/Joe8Bit){:target="_blank"} - Complex clientside apps and legacy browsers (a story of frustration...)
 
 Joe's talk was about testing across multiple browsers, and how to make the task of doing so a lot less painful. He covered manual testing using virtual machines and some CI testing using using software such as [JENKINS](http://jenkins-ci.org/) and [Selenium](http://docs.seleniumhq.org/).
@@ -284,8 +266,6 @@ Joe's talk was about testing across multiple browsers, and how to make the task 
 The only bad thing I've got to say about Joe's talk is that he had a heavy emphasis on testing versions of Internet Explorer, but nothing around testing legacy versions of Firefox or particular quirky WebKit versions.
 
 - [Click here to view the slides](https://speakerdeck.com/joepettersson/building-for-legacy-browsers-jquery-uk-2013)
-
-![]({{ site.url }}/images/jason.jpg){:.thumb-100 .pull-right}
 
 ### [Jason Scott](https://twitter.com/JsonScott){:target="_blank"} - Build an experience... not another framework
 
@@ -310,8 +290,9 @@ There were 7 beers to have, each from either the [Compass brewery](http://compas
 - **Oxfordshire Ales**: Marshmellow (sponsored by White October)
 - **Compass**: The King's Shipment (sponsored by White October)
 
-![]({{ site.url }}/images/jbeery.jpg)
->&copy; [Becky Jennings](http://twitter.com/beckyjtweets): [Original](http://instagram.com/p/YSgYIew29f/)
+{% include figure.html src="jbeery.jpg" %}{:.massive}
+
+<sub>&copy; [Becky Jennings](http://twitter.com/beckyjtweets): [Original](http://instagram.com/p/YSgYIew29f/)</sub>
 
 ## Interesting links/things/take-aways from the conference
 

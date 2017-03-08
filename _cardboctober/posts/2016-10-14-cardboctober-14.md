@@ -12,8 +12,7 @@ Today I'm going to be talking about how I test and debug while working on this C
 
 Typically I build a Three.js scene using a boilerplate/skeleton that I've made. It gives me the boring stuff such as the basic HTML structure of the page, loads all of the JavaScript dependencies that I'm using, and includes my `core.js`.
 
-{:.center}
-![]({{ site.url }}/images/2016-10/14/core.jpg)
+{% include figure.html src="2016-10/14/core.jpg" %}{:.massive.center}
 
 I've talked a bit about my `core.js` in previous Cardboctober posts. This is just a small set of functions I've created to achieve common tasks such as:
 
@@ -32,22 +31,19 @@ I'm using Google Chrome for everything -- it's Developer Tools are great, and th
 
 Before I take my code over to a real device though, I tend to use Chrome's device emulation and sensor emulation to set things up.
 
-{:.center}
-![]({{ site.url }}/images/2016-10/14/devices.png)
+{% include figure.html src="2016-10/14/devices.png" %}{:.massive.center}
 
 This can be accessed by opening Developer Tools (`cmd`+`alt`+`J` on Mac) and then clicking the little device icon (`cmd`+`shift`+`M` on Mac).
 
 To access the sensor/orientation emulation, open the Drawer in Dev Tools (Press `Esc` if it's not already visible) and then from the menu, select Sensors.
 
-{:.center}
-![]({{ site.url }}/images/2016-10/14/sensors.png)
+{% include figure.html src="2016-10/14/sensors.png" %}{:.massive.center}
 
 When I'm happy with how it's looking in Chrome on my Mac, or if I get bored and want to try it _for reals_ I'll move over to my Nexus 5x. I do a lot of debugging and play testing using my phone and various types of Google Cardboard. If I'm messing with something particularly fiddly or hard to debug, I'll connect my phone to my Mac by USB and remote debug it.
 
 To access the remote debugging, open Developer Tools and then click the little three-dots menu (aside: what are we calling that these days? kebab menu?), go to "More tools" and then "Inspect devices..."
 
-{:.center}
-![]({{ site.url }}/images/2016-10/14/remote-debug.png)
+{% include figure.html src="2016-10/14/remote-debug.png" %}{:.massive.center}
 
 From here you can access a regular JavaScript console for Chrome running on your phone, and even see what is being rendered.
 
@@ -55,7 +51,7 @@ From here you can access a regular JavaScript console for Chrome running on your
 
 I've not been too focused on supporting anything other than Chrome for the Cardboctober hacks, and that's fine. The idea of these hacks is that they're quick and dirty -- and what's dirtier than that? If they work in Safari on an iPhone that's a bonus.
 
-## Recap of Cardboctober Week 1
+## Recap of Cardboctober Week 2
 
 The second week of Cardboctober has been a long one. I think the initial honeymoon period has passed, so now the novelty of doing something daily has turned in to a bit of a chore. But that's fine.
 

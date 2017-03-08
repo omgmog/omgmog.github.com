@@ -11,8 +11,7 @@ For today's hack I've decided to make a VR beat sequencer. Nothing says inclusiv
 
 I actually made a 2d Beatmaker a month ago. You can play with it [here](https://blog.omgmog.net/beatmaker) and view the source [here](https://github.com/omgmog/beatmaker). So for today's hack I'm pretty much taking that an adding an extra dimension.
 
-{:.center}
-![]({{ site.url }}/images/2016-10/11/giphy.gif)
+{% include figure.html src="2016-10/11/giphy.gif" %}{:.massive.center}
 
 I created the board by looping over a list of the sounds to create rows in the sequencer, and then created a cell in each row for each "tick". My sequencer has 16 ticks per sound.
 

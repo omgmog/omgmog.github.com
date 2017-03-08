@@ -9,8 +9,6 @@ These are based on my experience of organising SusHack in 2013 and 2014. For mor
 
 <!-- more -->
 
-![]({{ site.url }}/images/eo73n.jpg)
-
 ## Overview
 
 - What is the cause/purpose of your hack day?

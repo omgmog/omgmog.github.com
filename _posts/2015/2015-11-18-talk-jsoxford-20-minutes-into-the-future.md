@@ -7,8 +7,7 @@ I gave this talk at [JS Oxford in November 2015](http://jsoxford.com/2015/Javasc
 
 <!-- more -->
 
-{:.center}
-![]({{ site.url }}/images/jsoxford.jpg){:.massive}
+{% include figure.html src="jsoxford.jpg" %}{:.massive.center}
 
 You can view the [slides online here](https://blog.omgmog.net/talk-jsoxford-20-minutes-into-the-future/), navigate the slides by clicking.
 
@@ -17,8 +16,7 @@ You can view the [slides online here](https://blog.omgmog.net/talk-jsoxford-20-m
 
 I wrote the slideshow framework from scratch for the talk, using [marked.js](https://github.com/chjj/marked), [three.js](https://github.com/mrdoob/three.js/) and some custom JavaScript.
 
-{:.center}
-![]({{ site.url }}/images/jscardxyz.png){:.massive}
+{% include figure.html src="jscardxyz.png" %}{:.massive.center}
 
 To accompany the talk I also created some demos, these can be viewed online on [jscard.xyz](https://jscard.xyz). These are best viewed in Chrome on an Android device, but should work alright in Chrome on Mac/Windows too.
 

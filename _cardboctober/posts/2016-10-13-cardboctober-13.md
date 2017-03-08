@@ -9,8 +9,7 @@ For today's hack I'm revisiting [yesterday's zombie game](/post/cardboctober-12)
 
 <!-- more -->
 
-{:.center}
-![]({{ site.url }}/images/2016-10/13/giphy.gif)
+{% include figure.html src="2016-10/13/giphy.gif" %}{:.massive.center}
 
 There are a couple of things I've changed in the re-write:
 

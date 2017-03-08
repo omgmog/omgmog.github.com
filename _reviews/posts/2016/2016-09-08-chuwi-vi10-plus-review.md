@@ -4,7 +4,7 @@ redirect_from: /post/chuwi-vi10-plus-review/
 thumbnail: chuwivi10plus_thumb.jpg
 ---
 
-![]({{ site.url }}/images/2016-09-08/chuwivi10plus.png)
+{% include figure.html src="2016-09-08/chuwivi10plus.png" %}{:.massive}
 
 I've been on the hunt for a 10" tablet for a couple of months now. Besides Google's Pixel C, there isn't much choice in this area (ignoring the iPad). There are a bunch of options for cheap Atom-based Android/Windows tablets on Gearbest/Aliexpress/etc. I decided to buy a [Chuwi Vi10 Plus on Gearbest](http://www.gearbest.com/tablet-pcs/pp_413825.html). For less than £120 what could I lose?
 
@@ -29,7 +29,7 @@ Besides the Chuwi Vi10 Plus, I also bought their [Keyboard Case](http://www.gear
 
 The keyboard case connects via [Pogo Pin](https://en.wikipedia.org/wiki/Pogo_pin) connector and some strong magnets. It's good for working with the Chuwi Vi10 Plus on a desk, small table, or even your lap.
 
-![]({{ site.url }}/images/2016-09-08/chuwikeyboard.png)
+{% include figure.html src="2016-09-08/chuwikeyboard.png" %}{:.massive}
 
 ## Remixing the OS
 
@@ -89,22 +89,14 @@ Here are a couple of reviews and videos:
 {% assign iframe_url = "https://www.youtube.com/embed/fGSa1hhzbNo" %}
 {% include iframe_embed.html %}
 
-<br>
-
 {% assign iframe_url = "https://www.youtube.com/embed/D6D_AAnfSoY" %}
 {% include iframe_embed.html %}
-
-<br>
 
 {% assign iframe_url = "https://www.youtube.com/embed/cwRGrueyW4o" %}
 {% include iframe_embed.html %}
 
-<br>
-
 {% assign iframe_url = "https://www.youtube.com/embed/GBeqcxfpLGI" %}
 {% include iframe_embed.html %}
-
-<br>
 
 {% assign iframe_url = "https://www.youtube.com/embed/kj33FpYG3N0" %}
 {% include iframe_embed.html %}

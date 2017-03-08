@@ -9,7 +9,7 @@ I always spend a large amount of time looking for an online SVG to PNG converter
 
 <!-- more -->
 
-![]({{ site.url }}/images/by%20default%202013-08-14%20at%2015.40.29.png)
+{% include figure.html src="by%20default%202013-08-14%20at%2015.40.29.png" %}{:.massive.center}
 
 ### SVG icon resources:
 

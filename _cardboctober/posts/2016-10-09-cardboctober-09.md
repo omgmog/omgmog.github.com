@@ -105,7 +105,6 @@ var handleTranscript = function(transcript) {
 
 Very simple. So that's where we're at with todays hack. It'll only work in Chrome, and it might crash your browser as it's an experimental API, but it's pretty cool.
 
-{:.center}
-![]({{ site.url }}/images/2016-10/09/giphy.gif)
+{% include figure.html src="2016-10/09/giphy.gif" %}{:.massive.center}
 
 Now ofcourse there is a bit more to this than just implementing `speechRecognition` and some functions to handle the transcript created by the `onresult` event handler. You'll need to come up with a way to inform the user of the available speech commands, indicate the current state (listening or not), and provide feedback for unrecognised commands.

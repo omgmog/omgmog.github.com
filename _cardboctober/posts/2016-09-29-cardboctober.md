@@ -8,15 +8,13 @@ Throughout October [Ben](https://twitter.com/benjaminbenben) and I are working o
 
 <!-- more -->
 
-{: .center.massive}
-![]({{ site.url }}/images/2016-09-29/cardboctober.jpg)
+{% include figure.html src="2016-09-29/cardboctober.jpg" %}{:.massive}
 
 This will most likely involve a lot of JavaScript and Three.js, but it could even include "offline" hacks such as modifications to Google Cardboard.
 
 I've got a huge list of ideas -- well, I've got enough ideas to cover the first 10 or so days of October, but after that the quality is probably going to go down hill.
 
-{: .center}
-![]({{ site.url }}/images/2016-09-29/cardboctober.png)
+{% include figure.html src="2016-09-29/cardboctober.png" %}{:.massive}
 
 I'll try to blog in a short-medium form here for each of my hacks.
 

@@ -12,7 +12,7 @@ Here's a useful trick I've come up with, to maintain a list of WordPress install
 Create a sheet with your domain names
 
 {: .center}
-![]({{ site.url }}/images/Screen%20Shot%202015-04-28%20at%2011.55.13.png)
+{% include figure.html src="Screen%20Shot%202015-04-28%20at%2011.55.13.png" %}{:.massive.center}
 
 In the second column, you'll want a formula that uses `ImportXML()` to grab the `/feed/` for each domain, and then use `REGEXEXTRACT()` to extract the version number:
 

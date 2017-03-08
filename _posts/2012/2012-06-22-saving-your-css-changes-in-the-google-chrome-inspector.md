@@ -19,20 +19,21 @@ It turns out this has been available in Webkit for nearly 18 months! You can rea
 
 ## A quick primer on how to export CSS changes from the inspector
 
-- Make your changes
+Make your changes
 
-  ![]({{ site.url }}/images/by%20default%202014-03-14%20at%2016.06.11.png)
+{% include figure.html src="by%20default%202014-03-14%20at%2016.06.11.png" %}{:.massive.center}
 
-- Click the 'Sources' tab in the inspector
-- Find the CSS file that you made changes to (notice it now has an asterisk next to it)
+Click the 'Sources' tab in the inspector
 
-  ![]({{ site.url }}/images/by%20default%202014-03-14%20at%2016.07.10.png)
+Find the CSS file that you made changes to (notice it now has an asterisk next to it)
 
-- Right click in the file, and choose "Local modifications..."
+{% include figure.html src="by%20default%202014-03-14%20at%2016.07.10.png" %}{:.massive.center}
+
+Right click in the file, and choose "Local modifications..."
   You can now see a list of the changes you've made
 
-  ![]({{ site.url }}/images/by%20default%202014-03-14%20at%2016.08.06.png)
+{% include figure.html src="by%20default%202014-03-14%20at%2016.08.06.png" %}{:.massive.center}
 
-- Right click in the file again, and choose "Save as..."
+Right click in the file again, and choose "Save as..."
 
-  ![]({{ site.url }}/images/by%20default%202014-03-14%20at%2016.08.42.png)
+{% include figure.html src="by%20default%202014-03-14%20at%2016.08.42.png" %}{:.massive.center}

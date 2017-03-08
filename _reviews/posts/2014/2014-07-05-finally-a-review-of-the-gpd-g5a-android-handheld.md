@@ -10,11 +10,12 @@ I've got another Android gaming handheld to review, the [GPD G5A from GamePad Di
 
 <!-- more -->
 
+{:.center.massive}
 ![Image of the GPD G5A]({{ site.url }}/images/zFLcLJn.png)
 
 Apart from the obvious difference in screen size (5” vs 7” on the GPD G7), really the only difference in spec is the battery capacity.
 
-![]({{ site.url }}/images/czXHVpz.png)
+{% include figure.html src="czXHVpz.png" %}{:.massive}
 
 - **CPU:** RockChip 3188, Quad Core, 1.6GHz (cortex A9 CPU, ARM mali400 mp4 GPU)
 - **Memory:** 1GB DDR3
@@ -27,9 +28,9 @@ As with all devices of this nature it comes with a number of bundled games and e
 
 Unlike the G7, the volume, start and select buttons have been moved down to the bottom edge. This makes them easier to reach with your thumbs. and makes the front of the G5A a lot less cluttered.
 
-![]({{ site.url }}/images/uc1qcFQ.png)
+{% include figure.html src="uc1qcFQ.png" %}{:.massive}
 
-![]({{ site.url }}/images/FIpXnIF.png)
+{% include figure.html src="FIpXnIF.png" %}{:.massive}
 
 The GPD G5A comes with another different-sized DC charger which is quite frustrating, but it can be charged (or at least powered) via the USB port.
 
@@ -37,11 +38,11 @@ The battery lasted about three hours of constant play.
 
 Here are some images that compare the GPD G5A to other devices.
 
-![]({{ site.url }}/images/N48rI35.png)
+{% include figure.html src="N48rI35.png" %}{:.massive}
 
-![]({{ site.url }}/images/MC1rZvM.png)
+{% include figure.html src="MC1rZvM.png" %}{:.massive}
 
-![]({{ site.url }}/images/YChhe6A.png)
+{% include figure.html src="YChhe6A.png" %}{:.massive}
 
 All in all, I'm a fan of this device. The size and form-factor are nearly perfect. It's not small enough to go in your pocket, but it's nice and comfortable for long gaming sessions.
 

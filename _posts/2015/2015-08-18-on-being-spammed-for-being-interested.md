@@ -18,14 +18,13 @@ $ git config --global user.email johndoe@example.com
 
 I star a lot of things on GitHub -- it's a nice feature, being able to save things for later, or show your support for a project by giving them a star. Ultimately the popularity of a project on GitHub is determined by it's userbase, and for that, it's stars.
 
-{:.center}
-![]({{ site.url }}/images/octocat_sad.gif){: .center}{:style="width:264px"}
+{% include figure.html src="octocat_sad.gif" %}{:.massive.center}
 
 Lately I've been directly receiving emails relating to a repository I had starred on GitHub. Though I'm all for new/related things being brought to my attention, I find impersonal direct contact like this to be very invasive.
 
 Here are two example emails I recieved, both directly linked to a single project repository I had starred:
 
-![]({{ site.url }}/images/Screen Shot 2015-08-18 at 13.44.01.png){: .center .massive .shadow}
+{% include figure.html src="Screen Shot 2015-08-18 at 13.44.01.png" %}{:.massive.center}
 
 It's worth noting the structure and language of the emails. A bit chatty, hey they used the phrase "hacking on", but hey these are two unrelated people, presumably from two unrelated projects, talking about two competing pieces of software. What gives?
 

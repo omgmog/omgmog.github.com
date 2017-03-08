@@ -22,7 +22,7 @@ Back to the context of `placeholder` text in Safari then, I had been developing 
 
 The issue here is how each browser supports styling of the `placeholder` text. Here's a matrix of the style support:
 
-![]({{ site.url }}/images/by%20default%202012-07-24%20at%2012.17.12.png)
+{% include figure.html src="by%20default%202012-07-24%20at%2012.17.12.png" %}{:.massive.center}
 
 (From [John Catterfeld's blog: Styling the HTML5 placeholder](http://blog.ajcw.com/2011/02/styling-the-html5-placeholder/))
 
@@ -57,19 +57,19 @@ Anyway, enough background, on to my problem. First of all, let's see how browser
 
 ## Firefox
 
-![Screenshot of Firefox]({{ site.url }}/images/by%20default%202012-07-24%20at%2011.09.57.png)
+{% include figure.html src="by%20default%202012-07-24%20at%2011.09.57.png" %}{:.massive.center}
 
 ## Opera
 
-![Screenshot of Opera]({{ site.url }}/images/by%20default%202012-07-24%20at%2014.09.35.png)
+{% include figure.html src="by%20default%202012-07-24%20at%2014.09.35.png" %}{:.massive.center}
 
 ## Chrome
 
-![Screenshot of Chrome]({{ site.url }}/images/by%20default%202012-07-24%20at%2011.08.57.png)
+{% include figure.html src="by%20default%202012-07-24%20at%2011.08.57.png" %}{:.massive.center}
 
 ## Safari
 
-![Screenshot of Safari]({{ site.url }}/images/by%20default%202012-07-24%20at%2011.08.48.png)
+{% include figure.html src="by%20default%202012-07-24%20at%2011.08.48.png" %}{:.massive.center}
 
 You can play with the [jsFiddle](http://jsfiddle.net/wfYFW/) that I made to test this here:
 

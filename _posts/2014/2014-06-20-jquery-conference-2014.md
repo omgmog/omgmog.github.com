@@ -10,7 +10,7 @@ Another year, another jQuery UK conference. I wrote previously about the jQuery 
 
 We were back at the [King's Centre](http://www.kingscentre.co.uk/) in Osney Mead again this year. It's a great venue, perfectly located near to the Oxford Rail Station, and capable of catering to a conference as big as jQuery.
 
-![]({{ site.url }}/images/7frmBHu.png)
+{% include figure.html src="7frmBHu.png" %}{:.massive}
 
 From the Rail Station to the venue, White October staff held signs to direct people, and this year the route featured orange J's painted along the path.
 
@@ -18,11 +18,11 @@ From the Rail Station to the venue, White October staff held signs to direct peo
 
 I'm not sure what the theme was this year, the site and all of the artwork was based around creating the 'J' from 'jQuery' using different materials: cake, ketchup, sand, mustard, LEGO &mdash; but that's about it. No heavy emphasis on a theme like last years Alice's Adventures in Wonderland, or Radiohead the year before.
 
-![]({{ site.url }}/images/pa1R39r.jpg)
+{% include figure.html src="pa1R39r.jpg" %}{:.massive.center}
 
 Theme confusion aside, the T-shirt design featuring the aforementioned materials is very nice.
 
-![]({{ site.url }}/images/DFgydEr.png)
+{% include figure.html src="DFgydEr.png" %}{:.massive.center}
 
 ### Arrival
 
@@ -160,4 +160,4 @@ Divya showcased some cool new features coming to browsers, such as masking eleme
 Andrew and Francis demonstrated some awesome ways to bring hardware and APIs together to make cool things. The video speaks louder than words, so I'd recommend watching it through.
 
 
-> [Pictures](https://www.flickr.com/photos/16120271@N03/sets/72157644753482543) used with permission from [Pete Newnham](http://blarg.co.uk/) ([@wrakky on Twitter](http://twitter.com/wrakky)).
+<sub>[Pictures](https://www.flickr.com/photos/16120271@N03/sets/72157644753482543) used with permission from [Pete Newnham](http://blarg.co.uk/) ([@wrakky on Twitter](http://twitter.com/wrakky)).</sub>
