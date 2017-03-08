@@ -3,13 +3,11 @@
   {% capture post_date_year %}{{ post.date | date:"%Y" }}{% endcapture %}
   {% capture updated_date %}{{ post.updated | date:"%Y" }}{% endcapture %}
   {% if post_date_year < site_date_1_year %}
-    <div class="warning-message">
       <p>
         This post was written way back in {{ post_date_year }}. There's a chance that it's no-longer correct, or it has been superseded by a newer post. I commend you for making it this far through my archive! {% if updated_date > post_date_year %} I made some updates to this post on {{ post.updated | date:"%d %B %Y" }}. You can look at the <a href="{{ site.github.repository_url }}/commits/master/{{ post.path }}">edit history</a> on GitHub. {% endif %}
       </p>
       <p>
         Take a look in the <a href="/archive/">Archive</a> to see if I've written a newer post on the subject.
       </p>
-    </div>
   {% endif %}
 {% endunless %}

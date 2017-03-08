@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,6 +11,22 @@
   {% else %}
   <meta name="description" content="{{ site.author.bio }}" />
   {% endif %}
+  <!-- opengraph -->
+  <meta property="og:title" content="{% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/favicon.png">
+
+  
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@omgmog">
+  <meta name="twitter:title" content="{% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.excerpt | strip_html }}{% else %}{{ site.author.bio }}{% endif %}">
+  <meta name="twitter:image" content="{{ site.url }}/assets/favicon.png">
+
+
+  <!-- other -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - RSS Feed" href="{{ site.url }}/feed.xml" />
   <link rel="alternate" type="application/json" title="{{ site.name }} - JSON Feed" href="{{ site.url }}/feed.json" />
   <link rel="canonical" href="{{ site.url }}" />
@@ -19,30 +34,23 @@
   <link rel="icon" type="image/png" href="{{ site.url }}/assets/favicon.png" />
   <meta name="theme-color" content="#25272c">
   <meta name="google-site-verification" content="ETbuPNX54E0uDqFZwqcZNJXJYStn7oV0HSmnNKUkrr4" />
-  <!--[if lt IE 9]><script src="{{ site.url }}/assets/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif|Lekton|Muli">
   <link rel="stylesheet" href="{{ site.url }}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}" />
 </head>
-
-<body id="top">
+<body>
   <header class="header">
     <div class="inner">
-      <a href="https://omgmog.net" class="site-title"><h1>Max Glenister</h1></a>
-      <nav class="main-navigation" role="main">
+      <h1><a href="https://omgmog.net">Max Glenister</a></h1>
+      <nav role="main">
         {% for node in site.menu %}
-        <div>
           <a href="{% unless node.external %}{{ site.url }}{% endunless %}{{ node.link }}">{{ node.title }}</a>
-        </div>
         {% endfor %}
       </nav>
     </div>
   </header>
-  <div class="wrapper">
-    <section class="content">
-      <div class="inner">
-        {{ content }}
-      </div>
-    </section>
-  </div>
+  <main id="top">
+  {{ content }} 
+  </main>
   {% if jekyll.environment == "production" %}
   <!-- Piwik -->
   <script type="text/javascript">
@@ -89,5 +97,4 @@
   }
   </script>
 </body>
-
 </html>

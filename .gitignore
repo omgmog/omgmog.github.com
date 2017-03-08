@@ -12,3 +12,4 @@ Thumbs.db
 .rbenv-version
 .rvmrc
 .zedstate
+Gemfile.lock
