@@ -11,8 +11,7 @@ I'm using a library called [vreticle.js](https://github.com/neuman/vreticle), th
 
 <!-- more -->
 
-{: .center}
-![]({{ site.url }}/images/2016-10/03/giphy.gif)
+{% include figure.html src="2016-10/03/giphy.gif" %}{:.massive.center}
 
 Now when interacting with each ghost, you have the following gaze-based events:
 

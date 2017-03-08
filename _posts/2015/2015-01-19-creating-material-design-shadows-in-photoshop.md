@@ -11,7 +11,7 @@ Somebody over on [Designer News](https://news.layervault.com/) asked how to re-c
 
 This is something I've been playing with a bit lately, so I dove in to the `CSS` from the [Polymer Project documentation](https://www.polymer-project.org/docs/elements/material.html#shadow-effect), found the `z-height` styles, and then whipped up a `.psd` to demonstrate how to achieve the effect:
 
-![Preview of psd]({{ site.url }}/images/pEevcJ5.png)
+{% include figure.html src="pEevcJ5.png" %}{:.massive.center}
 
 [Download the PSD](https://www.dropbox.com/s/vjupzyizfiinko2/material-z-height.psd?dl=0)
 
@@ -19,7 +19,7 @@ This is something I've been playing with a bit lately, so I dove in to the `CSS`
 
 The Material Design shadows are actually comprised of two shadows on each element, as you can see below. This example shows the `z-height: 5` shadow. First the 'top shadow', then the 'bottom shadow', then the effect caused by composing them together:
 
-![Example of z5 shadow]({{ site.url }}/images/fCeLGoe.png)
+{% include figure.html src="fCeLGoe.png" %}{:.massive.center}
 
 You'd use something like this to create the `z-height: 5` shadow effect using `CSS`:
 
@@ -33,7 +33,7 @@ You'd use something like this to create the `z-height: 5` shadow effect using `C
 
 And in Photoshop... bottom on the left, top on the right:
 
-![Settings in Photoshop]({{ site.url }}/images/ruwAkDd.png)
+{% include figure.html src="ruwAkDd.png" %}{:.massive.center}
 
 ### Updated for Adobe Photoshop CC 2015
 
@@ -41,7 +41,7 @@ Today Adobe Photoshop CC 2015 was released, with support for multiple (up to 10)
 
 Here's a preview of the same effect, but using the new functionality:
 
-![](https://dl.dropboxusercontent.com/u/19772/material-z-height-cc2015.png)
+{% include figure.html src="material-z-height-cc2015.png" %}{:.massive.center}
 
 Here is an updated version of the PSD that will only work in CC2015+:
 
@@ -49,6 +49,7 @@ Here is an updated version of the PSD that will only work in CC2015+:
 
 ### Update 2
 
-For even easier use you can just [import this CC Library](http://adobe.ly/1QYDXAC) and apply the layer styles with one-click. – via [dbox](http://www.twitter.com/dbox)
+[dbox](https://twitter.com/dbox) has created a CC Library and SCSS mixin to make things a little easier:
 
-Use Sass? [Try this handy mixin](http://codepen.io/dbox/pen/RawBEW) – via [dbox](http://www.twitter.com/dbox)
+- [Material Shadows CC Library](http://adobe.ly/1QYDXAC)
+- [Material Shadows SCSS mixin](http://codepen.io/dbox/pen/RawBEW)

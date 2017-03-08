@@ -3,7 +3,7 @@
 title: "Meta post about making this blog responsive and not using px"
 tags: ["project", "code", "github", "software", "meta", "usability", "javascript", "jekyll", "development"]
 ---
-If you're a returning visitor to __blomg__ you might notice some changes to the design.
+If you're a returning visitor to _blomg_ you might notice some changes to the design.
 
 <!-- more -->
 
@@ -17,7 +17,7 @@ The juicy technical details are:
 
 I've had some great opportunities to play with stripping away useless fluff, using some fancy `css3` (such as `:target`!), and planning the page structure so that the layout translates well to mobile responsively.
 
-![]({{ site.url }}/images/responsive.png)
+{% include figure.html src="responsive.png" %}{:.massive.center}
 
 Try resizing your browser, I've added `breakpoints` at `1200px`, `1024px`, and `800px`.
 

@@ -11,8 +11,6 @@ I've had a Model B Raspberry Pi in my possesion for nearly two months now, and b
 
 <!-- more -->
 
-{% include figure.html src="pi.jpg" caption="Yes, that's my actual Raspberry Pi, what a beauty." %}
-
 ## Why did I buy the Raspberry Pi?
 Well I'm a sucker for buying new gadgets, and the Raspberry Pi has a price point that's hard to refuse. Mine actually ended up costing about 3-4 times as much as just buying a Pi would cost, as I opted in for the ["bells and whistles" package from Maplin](http://maplin.co.uk/raspberry-piandreg-board-and-starter-kit-652805) that includes:
 
@@ -45,7 +43,7 @@ These are all end-user type uses of the Raspberry Pi though, I'd like to do some
 
 ## The Raspberry Pi can do a lot of things, but it can't do them with any sort of speed.
 
-![]({{ site.url }}/images/Image%202013.05.04%2016%3A30%3A17.png)
+{% include figure.html src="Image%202013.05.04%2016_30_17.png" %}{:.massive.center}
 
 The Raspberry Pi is not a fast machine. The spec of the Model B are as follows:
 - CPU: ARM1176JZF-S (armv6k) 700 MHz

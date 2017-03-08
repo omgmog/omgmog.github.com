@@ -3,7 +3,7 @@
 title: UX in Virtual Reality
 ---
 
-![]({{ site.url }}/images/maxcardboard.jpg){:.center.massive}
+{% include figure.html src="maxcardboard.jpg" %}{:.massive.center}
 
 I've been trying to find resources on the subject of User Experience and User Interface design in Virtual Reality a lot lately, as I'm thinking about Google Cardboard, and preparing demos for a talk about using JavaScript to build Google Cardboard experiences.
 

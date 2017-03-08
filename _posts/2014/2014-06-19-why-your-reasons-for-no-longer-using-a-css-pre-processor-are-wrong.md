@@ -13,7 +13,7 @@ CSS pre-processors aren't for everyone, but what I found particularly grating ab
 
 You can [read the full article here](http://dwaiter.com/blog/7/why-we-no-longer-use-sass-or-less/), but the gist of their article is outlined with the headings below, along with a refutation to each point of their conjecture.
 
-![]({{ site.url }}/images/531T40T.png)
+{% include figure.html src="531T40T.png" %}{:.massive.center}
 
 
 ### "Pre-processing takes time."

@@ -9,8 +9,7 @@ Today we're looking at HTML5 video -- well not in the traditional sense. We're l
 
 <!-- more -->
 
-{:.center}
-![]({{ site.url }}/images/2016-10/10/giphy.gif)
+{% include figure.html src="2016-10/10/giphy.gif" %}{:.massive.center}
 
 I'm using the trailer for the CC-Licensed "[Big Buck Bunny](https://peach.blender.org/)" movie for my video.
 
@@ -40,8 +39,7 @@ chairObject.add(chairBack);
 
 I've not given the full exhaustive source for creating a chair there, but you can see how I do it in full in [10/demo.js#L40-L97](https://github.com/cardboctober/max/blob/master/10/demo.js#L40-L97).
 
-{:.center}
-![]({{ site.url }}/images/2016-10/10/chair.png)
+{% include figure.html src="2016-10/10/chair.png" %}{:.massive.center}
 
 
 We can define the layout of the chairs as a multidimenstional array, with `0` meaning no chair and `1` meaning a chair:
@@ -87,8 +85,7 @@ chairArrangement.forEach(function(row, i) { // for each row
 });
 ```
 
-{:.center}
-![]({{ site.url }}/images/2016-10/10/chairs.png)
+{% include figure.html src="2016-10/10/chairs.png" %}{:.massive.center}
 
 Now that we've made a bunch of chairs, wouldn't it be cool to randomly position the camera in one on each load? It's quite simple to do, just take the `chair.position` and use it to set the `camera.position` (with some minor tweaking)
 
@@ -148,8 +145,7 @@ screen.position.set(0, 20, -50);
 scene.add(screen);
 ```
 
-{:.center}
-![]({{ site.url }}/images/2016-10/10/screen.png)
+{% include figure.html src="2016-10/10/screen.png" %}{:.massive.center}
 
 
 And now that we have a screen, we can load a video. For this we're going to create a `video` element, with a number of `source` element children that specify the various formats to use.

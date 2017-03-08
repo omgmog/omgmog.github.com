@@ -12,8 +12,7 @@ This device was generously provided by [Geekbuying](http://www.geekbuying.com/),
 
 <!-- more -->
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/gpd-xd-front-side.jpg){:.massive}
+{% include figure.html src="gpd-xd/gpd-xd-front-side.jpg" %}{:.massive}
 
 (For anybody with sharp eyes, yes I've got a new orange/red rug too!)
 
@@ -40,31 +39,25 @@ Besides these features, the GPD XD has a mini-HDMI port, a headphone jack and mi
 
 A clamshell form-factor for an Android portable is a first for me, and to be honest it makes sense. I’ve experienced cracked screens or broken controller nubs on other consoles in the past, but with the clamshell I’m hoping this won’t be an issue.
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/gpd-xd-back.jpg){:.massive}
+{% include figure.html src="gpd-xd/gpd-xd-back.jpg" %}{:.massive}
 
 The 6000mAh battery is a very nice feature, with this I’ve seen over 8 hours of screen-on time, while playing native Android games, emulating various systems, and streaming video.
 
 Here’s how it compares to some other devices that I’ve got at hand
 
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/gpd-xd-vs-3ds.jpg){:.massive}
+{% include figure.html src="gpd-xd/gpd-xd-vs-3ds.jpg" %}{:.massive}
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/gpd-xd-vs-dsi.jpg){:.massive}
+{% include figure.html src="gpd-xd/gpd-xd-vs-dsi.jpg" %}{:.massive}
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/gpd-xd-vs-gcw.jpg){:.massive}
+{% include figure.html src="gpd-xd/gpd-xd-vs-gcw.jpg" %}{:.massive}
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/gpd-xd-vs-dingoo.jpg){:.massive}
+{% include figure.html src="gpd-xd/gpd-xd-vs-dingoo.jpg" %}{:.massive}
 
 
 ## Software
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/Screenshot_2015-09-17-04-17-31.png){:.massive}
+{% include figure.html src="gpd-xd/Screenshot_2015-09-17-04-17-31.png" %}{:.massive}
 
 This is an Android device, it comes with Android 4.4.4 in a very similar setup to the other Android consoles from GPD. It features the full Google Play services, so you can legitimately purchase/install any games with your Google account, or you can use any of the alternate app stores that come bundled on the GPD XD to download and play emulated games:
 
@@ -76,19 +69,16 @@ This is an Android device, it comes with Android 4.4.4 in a very similar setup t
 
 The GPD XD uses a launcher in the “Metro” style of Windows 8, however alternate launchers can be installed if you want a bit more control over the layout and categorisation of your games and applications.
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/Screenshot_2015-09-17-04-25-36.png){:.massive}
+{% include figure.html src="gpd-xd/Screenshot_2015-09-17-04-25-36.png" %}{:.massive}
 
 I'm using Smart Launcher on my GPD XD, it provides a lot more control and looks a lot nicer!
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/1443029116056.png){:.massive}
-![]({{ site.url }}/images/gpd-xd/1443029124192.png){:.massive}
+{% include figure.html src="gpd-xd/1443029116056.png" %}{:.massive}
+{% include figure.html src="gpd-xd/1443029124192.png" %}{:.massive}
 
 My GPD XD came with firmware version 2.4.0 (using GPD’s firmware numbering system), which had some issues such as not booting after a reboot. Since then, there have been a couple of newer firmwares released, bringing us to version 3.3.3 at the time of writing this review.
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/Screenshot_2015-09-17-04-25-48.png){:.massive}
+{% include figure.html src="gpd-xd/Screenshot_2015-09-17-04-25-48.png" %}{:.massive}
 
 Unfortunately, GPD do not provide a change log with their firmware releases, so it’s hard to see what has been changed in each release. Initially the firmware updates were hosted on the (incredibly slow to the West) Baidu Pan file host, but after some feedback from the community, they’re starting to put them up on other more accessible file hosts.
 
@@ -118,8 +108,7 @@ As the GPD XD features a mini-HDMI port, I've played games and vidoes through my
 
 As I mentioned in the specs above, the GPD XD features a full gamepad built in the device. In the software this can be configured to be recognised as either a PS3 sixaxis controller, or an Xbox 360 controller -- to maximise the compatibility across all games and emulators.
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/gpd-xd-closeup.jpg){:.massive}
+{% include figure.html src="gpd-xd/gpd-xd-closeup.jpg" %}{:.massive}
 
 The gamepad hardware is nice, with joystick “nubs” similar to those on the 3DS and PSPgo. The joysticks have a rubber texture to them, preventing your thumbs from slipping.
 
@@ -127,8 +116,7 @@ The d-pad is quite spongy, which might make it hard when playing combo-heavy gam
 
 The shoulder buttons are very clicky, and the position of the L2/R2 buttons is quite uncomfortable as they’ve been positioned to the side of the L1/R1 buttons, rather than below them.
 
-{:.center}
-![]({{ site.url }}/images/gpd-xd/gpd-xd-front-top.jpg){:.massive}
+{% include figure.html src="gpd-xd/gpd-xd-front-top.jpg" %}{:.massive}
 
 As the GPD XD is running Android, and features a capacitive touch screen, you can always switch to using touch-based controls where they’re supported, or you could use the built-in gamepad settings (accessible from a hardware key) to configure the control bindings.
 
@@ -144,8 +132,3 @@ With each new Android device that comes from China, there seems to be improvemen
 You can find lots of video reviews of the GPD XD over in the ["GPD XD Videos" thread on Dingoonity](http://boards.dingoonity.org/gpd-devices/gpd-xd-youtube-video-(not-in-english)).
 
 You can buy the GPD XD from Geekbuying's online store here: [http://www.geekbuying.com/item/GPD-XD-5-Inch-Android4-4-Gamepad-2GB-16GB-RK3288-Quad-Core-1-8GHz-Handled-Game-Console-H-IPS-1280-768-Game-Tablet-PC---Black-347650.html](http://www.geekbuying.com/item/GPD-XD-5-Inch-Android4-4-Gamepad-2GB-16GB-RK3288-Quad-Core-1-8GHz-Handled-Game-Console-H-IPS-1280-768-Game-Tablet-PC---Black-347650.html)
-
-And use the following codes for discounts from Geekbuying:
-
-- $10 off GPD XD 16GB: **FYHPAGWL**
-- $10 off GPD XD 32GB: **YGCJEULD**

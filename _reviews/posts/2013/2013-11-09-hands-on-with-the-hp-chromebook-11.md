@@ -12,7 +12,7 @@ I bought a [HP Chromebook 11](http://www.google.com/intl/en/chrome/devices/hp-ch
 
 ## The HP Chromebook 11
 
-![]({{ site.url }}/images/Image%202013.11.09%2012%3A02%3A22.jpeg)
+{% include figure.html src="Image%202013.11.09%2012_02_22.jpeg" %}{:.massive.center}
 
 This is the latest in the range of Chromebooks to be released. Finally the Chromebooks are getting to the point where they're cheap enough to buy as a second or third computer, and they don't look or feel cheap.
 
@@ -30,7 +30,7 @@ This is quite a similar spec to most Android tablets these days, except that it 
 
 The Chromebook 11 weighs in at 1.04kg, so it's very light, and the 11" form factor means it's not too large to carry around, or just throw in to your bag on your way out.
 
-![]({{ site.url }}/images/Screen%20Shot%202013-11-09%20at%2016.42.17.png)
+{% include figure.html src="Screen%20Shot%202013-11-09%20at%2016.42.17.png" %}{:.massive.center}
 
 ## Using the Chromebook in real life
 

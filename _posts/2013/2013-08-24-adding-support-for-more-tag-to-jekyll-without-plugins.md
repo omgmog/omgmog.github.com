@@ -19,7 +19,7 @@ Until recently the approach I took to creating a snippet of a post for my [archi
 
 This worked well at first, but when I wrote posts that had very little text before a block of code at the start of the post, the post snippets didn't look very good:
 
-![]({{ site.url }}/images/by%20default%202013-08-23%20at%2015.33.41.png)
+{% include figure.html src="by%20default%202013-08-23%20at%2015.33.41.png" %}{:.massive}
 
 There are plugins to allow you to specify where to cut off the content for an excerpt, such as [this plugin](https://gist.github.com/stympy/986665).
 
@@ -36,7 +36,7 @@ So a solution... Well, Jekyll supports the liquid filters `split` and `first`, s
 
 And then if we include a `<!-- more -->` in our post at the point that we want to split, we'll get the post to cut off the content at that point.
 
-![]({{ site.url }}/images/by%20default%202013-08-23%20at%2015.45.23.png)
+{% include figure.html src="by%20default%202013-08-23%20at%2015.45.23.png" %}{:.massive.center}
 
 So how does it work?
 
