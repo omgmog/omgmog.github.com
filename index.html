@@ -1,13 +1,8 @@
 ---
 title: Articles
 ---
-{% assign post_limit = 15 %}
-{% assign post_count = 0 %}
-{% for post in site.posts %}
-  {% if post_count < post_limit %}
-    {% include _article_preview.html %}
-    {% assign post_count = post_count|plus:1 %}
-  {% endif %}
+{% for post in site.posts limit:5 %}
+	{% include _article_preview.html %}
 {% endfor %}
 <p>
   You can find more posts in the <a href="{{ site.url }}/archive/">Archive</a>.
