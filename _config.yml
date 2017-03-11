@@ -38,8 +38,6 @@ menu:
     title: "Articles"
   - link: "/cardboctober"
     title: "Cardboctober"
-  - link: "/reviews"
-    title: "Reviews"
 
 defaults:
   -
