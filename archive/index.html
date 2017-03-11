@@ -1,8 +1,14 @@
 ---
 title: Archive
 ---
+{% if paginator.page == 1 %}
+  <h2>{{ page.title }}</h2>
+  <p>This is the archive of my articles. If you would like to see some of the product revies I've written, check out my <a href="/reviews">Reviews archive</a>.</p>
+  <hr>
+{% endif %}
+
 {% for post in paginator.posts %}
-    {% include _article_preview.html %}
+  {% include _article_preview.html %}
 {% endfor %}
 
 {% include pagination.html %}
