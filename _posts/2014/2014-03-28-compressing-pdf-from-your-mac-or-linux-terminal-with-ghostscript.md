@@ -32,14 +32,14 @@ That's not exactly a memorable command, so I've made a function that you can add
 ```bash
 # Usage: compresspdf [input file] [output file] [screen*|ebook|printer|prepress]
 compresspdf() {
-    gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile=$2 $1
+    gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/${3:-"screen"} -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
 }
 ```
 
 Now you can simply run the following command:
 
 ```bash
-compresspdf Massive.pdf Small.pdf
+compresspdf "Massive.pdf" "Small.pdf"
 ```
 
 Using this command I managed to compress an A3 size PDF (originally around 9MB) down to just under 1MB, which is perfect for the web.
