@@ -48,7 +48,7 @@ There plenty of stands in the main hall giving out stickers and other goodies. A
 
 Loot in hand I was appropriately placated until the conference started.
 
-{% assign iframe_url = "https://www.youtube.com/v/R4CVi4zfcGM" %}
+{% assign iframe_url = "https://www.youtube.com/embed/R4CVi4zfcGM" %}
 {% include iframe_embed.html %}
 
 ### John Wards - Hello!
