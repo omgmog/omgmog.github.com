@@ -178,7 +178,7 @@ hr {
   background-color: rgba(100,100,100,.1);
   border: 0;
   margin: 2.5rem 0;
-  height: 1px;
+  height: 3px;
   box-sizing: content-box;
 }
 
@@ -187,10 +187,10 @@ blockquote {
   padding: 1rem 2rem;
   font-family: Droid Serif, serif;
   display: block;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #25272c;
-  border-left: 1px solid rgba(100,100,100,.1);
+  border-left: 3px solid rgba(100,100,100,.1);
 }
 
 iframe {
@@ -236,14 +236,25 @@ iframe {
   }
 }
 
+.massive.supermassive {
+  width: 120%;
+  margin: 2rem 0 2rem -10%;
+}
+
 .massive.center {
   text-align: center;
   background-color: transparent;
-  
+
   img {
     width: auto;
     height: auto;
   }
+}
+
+figcaption {
+  margin-top: 1em!important;
+  font-size: .8em;
+  font-style: italic;
 }
 
 
