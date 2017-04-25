@@ -11,7 +11,7 @@ In this review I'm going to be looking at the design, formfactor and hardware of
 
 {% include figure.html src="2017-04/gpd-pocket/gpd.jpg" %}{:.massive.center}
 
-[GPD](http://www.gpd.hk/) kindly provided an early release of the GPD Pocket for me to review. This is a “T1 Prototype” in their own terms but should pretty reflect the final state of the GPD Pocket as it will go to retail.
+[GPD](http://www.gpd.hk/) kindly provided an early release of the GPD Pocket for me to review. This is a “T1 Prototype” in their own terms but should pretty much reflect the final state of the GPD Pocket as it will go to retail.
 
 From the [GPD Pocket Indiegogo campaign](https://www.indiegogo.com/projects/gpd-pocket-7-0-umpc-laptop-ubuntu-or-win-10-os-laptop--2):
 
@@ -251,7 +251,7 @@ Using MPC-HC I tested some sample 4k and 2k mkv/mp4 files. These seemed to play 
 
 #### Book reading
 
-The screen brightness and contrast are nice for reading books and comics that haven't got tiny text. Rotating the device to read in _portrait_ mode works nicely aswell. As I mentioned earlier the screen is actually a portrait screen rotated in software 270 degrees.
+The screen brightness and contrast are nice for reading books and comics that haven't got tiny text. Rotating the device to read in _portrait_ mode works nicely as well. As I mentioned earlier the screen is actually a portrait screen rotated in software 270 degrees.
 
 #### Development
 
