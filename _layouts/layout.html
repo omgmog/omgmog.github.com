@@ -15,7 +15,7 @@
   <meta property="og:title" content="{% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.author.bio }}{% endif %}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:url" content="{{ site.url }}{% unless page.url == '/index.html' %}{{ page.url }}{% endunless %}">
   <meta property="og:image" content="{{ site.url }}/assets/favicon.png">
 
 
@@ -30,7 +30,7 @@
   <!-- other -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - RSS Feed" href="{{ site.url }}/feed.xml" />
   <link rel="alternate" type="application/json" title="{{ site.name }} - JSON Feed" href="{{ site.url }}/feed.json" />
-  <link rel="canonical" href="{{ site.url }}" />
+  <link rel="canonical" href="{{ site.url }}{% unless page.url == '/index.html' %}{{ page.url }}{% endunless %}" />
   <link rel="author" href="https://plus.google.com/+MaxGlenister/posts" />
   <link rel="icon" type="image/png" href="{{ site.url }}/assets/favicon.png" />
   <meta name="theme-color" content="#25272c">
