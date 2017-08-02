@@ -6,13 +6,14 @@
   <title>
     {% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}
   </title>
-  {% if page.description %}
-  <meta name="description" content="{{ page.excerpt | strip_html }}" />
+  {% if page.excerpt %}
+  <meta name="description" content="{{ page.excerpt | strip_html | strip }}" />
   {% else %}
   <meta name="description" content="{{ site.author.bio }}" />
   {% endif %}
   <!-- opengraph -->
   <meta property="og:title" content="{% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.author.bio }}{% endif %}">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:image" content="{{ site.url }}/assets/favicon.png">
@@ -22,7 +23,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@omgmog">
   <meta name="twitter:title" content="{% if paginator %}Page {{ paginator.page }} of {{ paginator.total_pages }} | {% endif %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.excerpt | strip_html }}{% else %}{{ site.author.bio }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.author.bio }}{% endif %}">
   <meta name="twitter:image" content="{{ site.url }}/assets/favicon.png">
 
 
