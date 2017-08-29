@@ -12,7 +12,7 @@ title: Articles
 
 <h3>Latest Review</h3>
 {% assign reviews = site.reviews | reverse%}
-{% for post in reviews limit:1 %}
+{% for post in reviews limit:2 %}
   {% include _review_preview.html %}
 {% endfor %}
 <p>
