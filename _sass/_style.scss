@@ -174,18 +174,26 @@ blockquote {
   margin-bottom: 2rem;
   margin-left: -1rem;
   width: calc(100% + 2rem);
-
-  @media screen and (min-width: 1200px) {
-    width: 100vw;
-    margin-left: -11.5vw;
-    padding-left: 11.5vw;
-  }
+  font-size: 1rem;
 
   p {
     max-width: 70%;
     color: #555;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1em;
+    margin: 0;
+
+    & + p {
+      margin-top: 1em;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100vw;
+
+    p {
+      max-width: 800px;
+    }
   }
 }
 
@@ -207,16 +215,132 @@ blockquote {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  body {
-    width: 60%;
-    max-width: 800px;
-    margin-left: 10%;
+.pull-comment {
+  blockquote {
+    position: relative;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    font-size: .7rem;
+
+    &::before {
+      content: '// note';
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1rem;
+      position: absolute;
+      opacity: .1;
+      left: 2rem;
+      top: 1rem;
+      line-height: 1;
+    }
+
+    p {
+      max-width: 100%;
+    }
   }
 }
+
+// Media queries
 
 @media screen and (max-width: 600px) {
   .header {
     flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    width: 60vw;
+    max-width: 800px;
+    margin-left: 10vw;
+  }
+  $arrowSize: 2rem;
+
+  .pull-comment {
+    position: relative;
+    width: 100vw;
+    margin-left: -11.5vw;
+
+    > blockquote {
+      position: absolute;
+      max-width: 28vw;
+      left: 70vw!important;
+      bottom: 0;
+      transform: translateY(50%);
+      margin: 0;
+
+      &::after {
+        content: '';
+        left: -#{$arrowSize};
+        top: 50%;
+        position: absolute;
+        margin-top: -#{$arrowSize / 2};
+        height: 0;
+        width: 0;
+        border: #{$arrowSize / 2} solid transparent;
+        border-right-color: rgba(#dadbdf, .2);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  // Super wide screens...
+  html {
+    font-size: 20px;
+  }
+  body {
+    width: 800px;
+    margin-left: 100px;
+  }
+
+  blockquote {
+    margin-left: calc(-100px - 1rem);
+    padding-left: calc(100px + 1rem);
+  }
+  .pull-comment {
+    margin-left: -100px;
+
+    > blockquote {
+      left: 1000px!important;
+      max-width: 100%!important;
+      width: 400px;
+    }
+  }
+}
+
+
+
+.rating {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .title, 
+  .number {
+    font-size: .6em;
+    line-height: 1;
+  }
+
+  .stars-outer,
+  .stars-inner {
+    background-size: contain;
+    background-position: 0 50%;
+    height: 1em;
+  }
+  .stars-outer {
+    background-image: url(star.svg);
+    width: 5em;
+    margin: 0 .5em;
+    flex-shrink: 0;
+  }
+
+  .stars-inner {
+    width: 0;
+    background-image: url(star-filled.svg);
   }
 }

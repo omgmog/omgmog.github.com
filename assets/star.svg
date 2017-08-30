@@ -1,0 +1,5 @@
+---
+layout: null
+---
+
+{% include star.svg fill="#ddd" %}
