@@ -7,7 +7,7 @@ Today I'm reviewing the DPVR E3. This is a Virtual Reality headset with a high r
 
 <!-- more -->
 
-[Geekbuying](http://geekbuying.com) have kindly provided me with this DPVR E3 unit to review. You can find a link to purchase the headset from Geekbuying at the end of this review.
+[Geekbuying](https://goo.gl/YvSb5b) have kindly provided me with this DPVR E3 unit to review. You can find a link to purchase the headset from Geekbuying at the end of this review.
 
 ### TL;DR
 
@@ -203,4 +203,4 @@ If the price could be reduced I think this could be the perfect headset for a _t
 
 {% include stars.html stars="3.5" %}
 
-You can buy the DPVR E3 from Geekbuying today here: [DPVR E3 on Geekbuying](http://www.geekbuying.com/item/Deepoon-E3-5-7-Inches-2-5K-AMOLED-Display-3D-VR-Headset-for-PC-377920.html)
+You can buy the DPVR E3 from Geekbuying today here: [DPVR E3 on Geekbuying](https://goo.gl/br6Sp1)
