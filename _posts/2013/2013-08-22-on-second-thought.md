@@ -1,7 +1,12 @@
 ---
-
-title: "On second thought..."
-tags: ["mac", "android", "review", "software", "browser"]
+title: On second thought...
+tags:
+  - mac
+  - android
+  - review
+  - software
+  - browser
+comments_issue: 94
 ---
 ... Google Hangouts for Chrome needs some work.
 

@@ -1,7 +1,10 @@
 ---
-
-title: "High fidelity in low fidelity emails"
-tags: ["usability", "software", "review"]
+title: High fidelity in low fidelity emails
+tags:
+  - usability
+  - software
+  - review
+comments_issue: 89
 ---
 Recently it was pointed out to me that [Pizza Express](http://www.pizzaexpress.com/) provide a nice fallback for photos on their picture-heavy emails. Take the following example, from a promotional email they sent out earlier this year:
 

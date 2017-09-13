@@ -1,7 +1,9 @@
 ---
-
-title: "Vivaldi: Another contender to the array of Webkit-derived browsers"
-tags: ["software", "development"]
+title: 'Vivaldi: Another contender to the array of Webkit-derived browsers'
+tags:
+  - software
+  - development
+comments_issue: 87
 ---
 
 Earlier this week a new browser called "Vivaldi" sprung up across many of my early-morning technology news feeds.

@@ -1,7 +1,13 @@
 ---
-
-title: "Converting SVG to PNG online and in your terminal"
-tags: ["mac", "linux", "tutorial", "tip", "terminal", "software"]
+title: Converting SVG to PNG online and in your terminal
+tags:
+  - mac
+  - linux
+  - tutorial
+  - tip
+  - terminal
+  - software
+comments_issue: 96
 ---
 This post is mostly for my own benefit on the rare occasion that I have to convert SVG files to PNG.
 

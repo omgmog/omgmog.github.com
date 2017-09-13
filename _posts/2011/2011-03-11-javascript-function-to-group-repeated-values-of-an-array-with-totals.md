@@ -1,9 +1,15 @@
 ---
-
 title: Javascript function to group repeated values of an array with totals
-tags: ["code", "tip", "tutorial", "browser", "javascript", "development"]
+tags:
+  - code
+  - tip
+  - tutorial
+  - browser
+  - javascript
+  - development
 redirect_from:
- - "/post/3798198267/"
+  - /post/3798198267/
+comments_issue: 98
 ---
 
 Something that took a little while to pull of well while working on the [JS challenge this week](/post/js-challenge-070311/), thought I'd throw it up here as it has its uses practically for grouping like array values with totals:
