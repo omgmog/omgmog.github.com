@@ -1,7 +1,16 @@
 ---
-
-title: "Adventures in IMAP: Migrating lots of mail to Atmail"
-tags: ["mac", "hackintosh", "linux", "tutorial", "tip", "code", "terminal", "software", "development"]
+comments_issue: 76
+title: 'Adventures in IMAP: Migrating lots of mail to Atmail'
+tags:
+  - mac
+  - hackintosh
+  - linux
+  - tutorial
+  - tip
+  - code
+  - terminal
+  - software
+  - development
 ---
 Besides my day job as a front-end developer at [2degrees](http://2degreesnetwork.com), I run my own web design company with my partner, called [Marmalade &amp; Jam](http://marmaladeandjam.co.uk).
 

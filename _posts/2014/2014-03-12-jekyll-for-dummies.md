@@ -1,7 +1,17 @@
 ---
-
+comments_issue: 53
 title: Jekyll for dummies
-tags: ["mac", "linux", "project", "tutorial", "tip", "code", "terminal", "github", "development", "jekyll"]
+tags:
+  - mac
+  - linux
+  - project
+  - tutorial
+  - tip
+  - code
+  - terminal
+  - github
+  - development
+  - jekyll
 ---
 
 2014 has been [heralded](http://www.typeandgrids.com/blog/goodbye-wordpress-2014-will-be-the-year-of-flat-file-cmses) as "the year of flat-file websites". This blog in fact uses [Jekyll](http://jekyllrb.com) to generate the very blog post you are reading.

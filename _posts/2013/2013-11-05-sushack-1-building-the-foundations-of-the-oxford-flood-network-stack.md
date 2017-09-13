@@ -1,7 +1,13 @@
 ---
-
-title: "SusHack #1: Building the foundations of the Oxford Flood Network Stack"
-tags: ["project", "conference", "software", "hardware", "hackday", "development"]
+comments_issue: 17
+title: 'SusHack #1: Building the foundations of the Oxford Flood Network Stack'
+tags:
+  - project
+  - conference
+  - software
+  - hardware
+  - hackday
+  - development
 ---
 
 This past weekend I held my first hack day. This is a recollection of why/how SusHack came to be, and how the day went.

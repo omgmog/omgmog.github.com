@@ -1,7 +1,12 @@
 ---
 title: Launching Sketch Toolbox from inside Sketch
-
-tags: ["project", "tutorial", "software", "development", "sketch"]
+comments_issue: 55
+tags:
+  - project
+  - tutorial
+  - software
+  - development
+  - sketch
 ---
 
 I've been making use of [Sketch](http://bohemiancoding.com/sketch/) a lot lately. One of the coolest features of Sketch is it's plugin support.

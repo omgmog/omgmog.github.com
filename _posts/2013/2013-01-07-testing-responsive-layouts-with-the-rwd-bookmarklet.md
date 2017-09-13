@@ -1,8 +1,17 @@
 ---
-
-title: "Testing responsive layouts with the RWD bookmarklet"
-iframe_url: https://www.youtube.com/embed/mueOjgvNM04
-tags: ["tutorial", "tip", "video", "software", "browser", "usability", "rwd", "development", "downloads"]
+comments_issue: 64
+title: Testing responsive layouts with the RWD bookmarklet
+iframe_url: 'https://www.youtube.com/embed/mueOjgvNM04'
+tags:
+  - tutorial
+  - tip
+  - video
+  - software
+  - browser
+  - usability
+  - rwd
+  - development
+  - downloads
 ---
 
 Lately I've been doing some work with responsive CSS and media queries. This bookmarklet has been very useful. It allows you to switch between four different browser widths (for iPad and iPhone in portrait/landscape orientations).

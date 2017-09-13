@@ -1,7 +1,14 @@
 ---
-
-title: "The woes of trailing commas in IE"
-tags: ["tutorial", "tip", "software", "code", "development", "browser", "javascript"]
+comments_issue: 20
+title: The woes of trailing commas in IE
+tags:
+  - tutorial
+  - tip
+  - software
+  - code
+  - development
+  - browser
+  - javascript
 ---
 If you leave a trailing comma in your JavaScript code, you're a terrible person. It's right up there with [omitting semicolons](https://github.com/twitter/bootstrap/issues/3057) as far as I'm concerned.
 

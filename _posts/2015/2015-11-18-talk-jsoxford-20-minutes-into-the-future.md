@@ -1,6 +1,6 @@
 ---
-
-title: "20 Minutes into the Future with Google Cardboard and JavaScript"
+comments_issue: 51
+title: 20 Minutes into the Future with Google Cardboard and JavaScript
 ---
 
 I gave this talk at [JS Oxford in November 2015](http://jsoxford.com/2015/Javascript-Story-Time/). The talk is about using JavaScript and various web APIs to create Google Cardboard experiences.

@@ -1,6 +1,6 @@
 ---
 title: Upgrading to El Capitan with an old installer
-
+comments_issue: 72
 ---
 
 I upgrade my Macbook to El Capitan as soon as I could, and have had very few issues with the release. On my iMac at work though, I've been putting off the upgrade since last October -- due to time constraints and not wanting to mess anything in my dev environment up.

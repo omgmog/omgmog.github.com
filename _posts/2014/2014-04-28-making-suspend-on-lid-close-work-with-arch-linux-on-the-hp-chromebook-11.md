@@ -1,5 +1,5 @@
 ---
-
+comments_issue: 44
 title: Making suspend on lid-close work with Arch Linux on the HP Chromebook 11
 ---
 

@@ -1,7 +1,9 @@
 ---
-
-title: "Downgrading Nexus 5 from Android 6.0 to Android 5.1.1"
-tags: ["android", "software",]
+comments_issue: 48
+title: Downgrading Nexus 5 from Android 6.0 to Android 5.1.1
+tags:
+  - android
+  - software
 ---
 
 I jumped on Android 6.0 Marshmallow as soon as the developer images were available to flash, and to be honest as far as "major releases" go, it was pretty underwhelming. A lot of the new features aren't things I need, and I've found myself running in to a bug with device orientation in Chrome (only!) not working.

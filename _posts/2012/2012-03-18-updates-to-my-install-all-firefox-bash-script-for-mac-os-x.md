@@ -1,7 +1,16 @@
 ---
-
-title: "Updates to my 'install all firefox' bash script for Mac OS X"
-tags: ["mac", "project", "code", "terminal", "software", "browser", "downloads", "github", "development"]
+comments_issue: 42
+title: Updates to my 'install all firefox' bash script for Mac OS X
+tags:
+  - mac
+  - project
+  - code
+  - terminal
+  - software
+  - browser
+  - downloads
+  - github
+  - development
 ---
 I wrote briefly about my [install-all-firefox shell script](/post/bash-script-to-install-all-major-versions-of-firefox-on-osx/) back in December last year. Since then the script has received a complete rewrite, and some new features.
 

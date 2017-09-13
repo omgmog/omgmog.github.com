@@ -1,7 +1,16 @@
 ---
-
-title: "Chrome 'Add to Trello' extension"
-tags: ["mac", "code", "browser", "software", "github", "hackday", "development", "downloads", "javascript"]
+comments_issue: 15
+title: Chrome 'Add to Trello' extension
+tags:
+  - mac
+  - code
+  - browser
+  - software
+  - github
+  - hackday
+  - development
+  - downloads
+  - javascript
 ---
 I attended the third [Refresh Oxford](http://www.refreshoxford.co.uk/) hack day yesterday, hosted at [Incuna](http://www.incuna.com/en/)'s offices in Summertown.
 

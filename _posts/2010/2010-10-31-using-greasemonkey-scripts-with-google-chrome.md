@@ -1,10 +1,16 @@
 ---
-
+comments_issue: 21
 title: Using Greasemonkey scripts with Google Chrome
-tags: ["tutorial", "tip", "code", "software", "browser", "javascript"]
+tags:
+  - tutorial
+  - tip
+  - code
+  - software
+  - browser
+  - javascript
 redirect_from:
- - "/post/1449391696/"
-updated: 2014-03-13
+  - /post/1449391696/
+updated: 2014-03-13T00:00:00.000Z
 ---
 
 This isn't new news, but it's something I've found quite useful.

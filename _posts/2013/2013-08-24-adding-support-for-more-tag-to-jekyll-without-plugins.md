@@ -1,8 +1,16 @@
 ---
-
-title: "Adding support for &lt;!-- more --> tag to Jekyll without plugins"
-tags: ["project", "tutorial", "tip", "code", "software", "usability", "development", "jekyll"]
-updated: 2014-08-10
+comments_issue: 70
+title: Adding support for &lt;!-- more --> tag to Jekyll without plugins
+tags:
+  - project
+  - tutorial
+  - tip
+  - code
+  - software
+  - usability
+  - development
+  - jekyll
+updated: 2014-08-10T00:00:00.000Z
 ---
 Here's a quick tip for an approach I've started using to split post content at a given point for displaying in an archive page, without using a plugin.
 

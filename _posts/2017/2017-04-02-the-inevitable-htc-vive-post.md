@@ -1,5 +1,6 @@
 ---
 title: The inevitable HTC Vive post
+comments_issue: 29
 ---
 
 I bought an HTC Vive last November (a week before the Black Friday sales, doh!) and have spent the time since trying to get the most out of it. So here are some highlights, thoughts and other musings about the HTC Vive.
