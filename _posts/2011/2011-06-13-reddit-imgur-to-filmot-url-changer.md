@@ -1,10 +1,17 @@
 ---
-
+comments_issue: 74
 title: Reddit imgur to filmot url changer
-tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
+tags:
+  - code
+  - tip
+  - tutorial
+  - browser
+  - javascript
+  - development
+  - project
 redirect_from:
- - "/post/6483220482/"
- - "/post/6483220482/reddit-imgur-to-filmot-url-changer/"
+  - /post/6483220482/
+  - /post/6483220482/reddit-imgur-to-filmot-url-changer/
 ---
 
 Browsing Reddit while at work probably isn't the best thing to do if trying to be productive, but sometimes it's necessary to unwind periodically.

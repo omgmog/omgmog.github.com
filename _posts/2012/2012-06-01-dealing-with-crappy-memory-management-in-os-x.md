@@ -1,7 +1,13 @@
 ---
-
-title: "Dealing with crappy memory management in OS X"
-tags: ["mac", "hackintosh", "tutorial", "tip", "terminal", "software"]
+comments_issue: 36
+title: Dealing with crappy memory management in OS X
+tags:
+  - mac
+  - hackintosh
+  - tutorial
+  - tip
+  - terminal
+  - software
 ---
 Using a lot of memory-intensive programs throughout the day, such as Virtualbox virtual machines, Photoshop and numerous browsers each with a couple of handfuls of tabs, you come to realise how bad the memory management in Mac OS X is.
 

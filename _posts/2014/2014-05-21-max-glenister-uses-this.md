@@ -1,8 +1,8 @@
 ---
-
+comments_issue: 65
 title: Max Glenister Uses This
-featured: "true"
-updated: 2015-08-19
+featured: 'true'
+updated: 2015-08-19T00:00:00.000Z
 ---
 
 This is a Q/A article in the style of "[The Setup](http://usesthis.com/)".

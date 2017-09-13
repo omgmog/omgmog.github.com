@@ -1,7 +1,16 @@
 ---
-
-title: "Getting to grips with git log"
-tags: ["mac", "linux", "tip", "tutorial", "code", "terminal", "software", "github", "development"]
+comments_issue: 33
+title: Getting to grips with git log
+tags:
+  - mac
+  - linux
+  - tip
+  - tutorial
+  - code
+  - terminal
+  - software
+  - github
+  - development
 ---
 `git` is a powerful tool. After using it for the past couple of years I'm still finding new/powerful things that can be done with it.
 

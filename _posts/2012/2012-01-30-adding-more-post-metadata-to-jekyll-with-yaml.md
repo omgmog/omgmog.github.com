@@ -1,7 +1,15 @@
 ---
-
-title: "Adding more post metadata to Jekyll with YAML"
-tags: ["project", "tutorial", "tip", "code", "software", "meta", "development", "jekyll"]
+comments_issue: 79
+title: Adding more post metadata to Jekyll with YAML
+tags:
+  - project
+  - tutorial
+  - tip
+  - code
+  - software
+  - meta
+  - development
+  - jekyll
 ---
 <strong>NB: This flurry of content might be shortlived, but for now I'm excited to be posting again so shush!</strong>
 

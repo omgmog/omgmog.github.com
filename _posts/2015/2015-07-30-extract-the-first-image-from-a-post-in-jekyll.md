@@ -1,7 +1,12 @@
 ---
 title: Extract the first image from a post in Jekyll
-
-tags: ["project", "tutorial", "software", "development", "jekyll"]
+comments_issue: 81
+tags:
+  - project
+  - tutorial
+  - software
+  - development
+  - jekyll
 ---
 
 I decided that I want to show an image next to posts in my "article list" type pages in Jekyll.

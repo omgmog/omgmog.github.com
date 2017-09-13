@@ -1,5 +1,5 @@
 ---
-
+comments_issue: 77
 title: Maintaining updates for a bunch of WordPress sites with Google Spreadsheets
 ---
 

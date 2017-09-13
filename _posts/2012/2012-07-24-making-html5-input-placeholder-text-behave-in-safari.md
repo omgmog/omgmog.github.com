@@ -1,7 +1,15 @@
 ---
-
-title: "Making HTML5 input placeholder text behave in Safari"
-tags: ["mac", "tutorial", "tip", "code", "software", "browser", "usability", "development"]
+comments_issue: 80
+title: Making HTML5 input placeholder text behave in Safari
+tags:
+  - mac
+  - tutorial
+  - tip
+  - code
+  - software
+  - browser
+  - usability
+  - development
 ---
 Making assumptions during web development is never a good idea -- especially if your assumptions are about the way a new feature will behave across modern browsers. This is an issue because of two things:
 

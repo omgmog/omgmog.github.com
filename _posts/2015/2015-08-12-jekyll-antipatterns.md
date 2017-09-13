@@ -1,6 +1,6 @@
 ---
 title: Jekyll Antipatterns
-
+comments_issue: 27
 ---
 
 {% include figure.html src="jekyllantipatterns.jpg" %}{:.massive.center}

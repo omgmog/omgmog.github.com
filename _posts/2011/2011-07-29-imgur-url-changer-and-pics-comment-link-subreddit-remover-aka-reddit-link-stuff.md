@@ -1,9 +1,18 @@
 ---
-
-title: Imgur Url Changer and pics/funny comment link subreddit remover aka reddit link stuff
-tags: ["code", "tip", "tutorial", "browser", "javascript", "development", "project"]
+comments_issue: 30
+title: >-
+  Imgur Url Changer and pics/funny comment link subreddit remover aka reddit
+  link stuff
+tags:
+  - code
+  - tip
+  - tutorial
+  - browser
+  - javascript
+  - development
+  - project
 redirect_from:
- - "/post/8214317821/"
+  - /post/8214317821/
 ---
 
 I know, it sure is a catchy name!
