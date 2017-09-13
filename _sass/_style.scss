@@ -120,14 +120,15 @@ article {
     }
   }
 
-  footer {
-    background-color: rgba(#dadbdf, .2);
-    padding: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: -1rem;
+  .notice {
     width: calc(100% + 2rem);
+    margin-left: -1rem;
   }
+
+}
+.notice {
+  background-color: rgba(#dadbdf, .2);
+  padding: 2rem;
 }
 
 .header {
@@ -320,7 +321,7 @@ blockquote {
   justify-content: center;
   align-items: center;
 
-  .title, 
+  .title,
   .number {
     font-size: .6em;
     line-height: 1;
