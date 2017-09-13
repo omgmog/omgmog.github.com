@@ -1,7 +1,11 @@
 ---
-
-title: "jQuery UK 2013 - A tale of beer, colourful cakes and no wifi"
-tags: ["consumerism", "review", "conference", "javascript"]
+title: 'jQuery UK 2013 - A tale of beer, colourful cakes and no wifi'
+tags:
+  - consumerism
+  - review
+  - conference
+  - javascript
+comments_issue: 100
 ---
 
 Yesterday I attended the second jQuery conference in the UK (the first being last year, which I blogged about [here](/post/jquery-uk-conference-2012/)).
