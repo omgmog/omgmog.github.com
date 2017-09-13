@@ -1,0 +1,47 @@
+---
+---
+
+#comments {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  + .notice {
+    text-align: center;
+  }
+}
+.comment {
+  position: relative;
+  font-size: .8em;
+  margin: 0;
+  padding: 0;
+  padding-left: 3rem;
+
+  + .comment {
+    margin-top: 1rem;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    width: 3rem;
+    height: auto;
+    top: 2rem;
+    box-sizing: border-box;
+    background-color: rgba(#dadbdf, .2);
+  }
+  .author {
+    margin: 0 0 .5rem;
+  }
+  &-body {
+    background-color: rgba(#dadbdf, .2);
+    padding: 1rem;
+
+    p {
+      margin: 0;
+      + p {
+        margin-top: 1em;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{% if post.comments_issue %}
+  <link rel="stylesheet" href="{{ site.url }}/assets/comments.css">
+  <h3>Comments</h3>
+  <ol id="comments" data-issue="{{ post.comments_issue }}"></ol>
+  <p class="notice">
+  <span class="no-comments">There are no comments yet!</span>
+  <span class="comments-open">
+    You can comment through <a href="{{ site.github.issues_url }}/{{ post.comments_issue }}">Github issues</a>.
+  </span>
+  <span class="comments-closed" style="display:none">Comments are closed.</span>
+  </p>
+
+  <script type="text/template" id="comment-template">
+    <li class="comment">
+      <img src="%avatar%" alt="%author%'s avatar" class="avatar">
+      <h4 class="author">%author%</h4>
+      <div class="comment-body">
+        %body%
+      </div>
+    </li>
+  </script>
+  <script src="{{ site.url }}/assets/marked.js"></script>
+  <script src="{{ site.url }}/assets/comments.js"></script>
+{% endif %}

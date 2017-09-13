@@ -33,7 +33,8 @@ code {
   font-family: Fira Mono, monospace;
   font-weight: 300;
 
-  &.highlighter-rouge {
+  &.highlighter-rouge,
+  .comment & {
     padding: 0 .25rem;
     margin: 0;
     color: #383838;
