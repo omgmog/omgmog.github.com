@@ -13,9 +13,7 @@ I recently decided to change the opening direction of the door in my home office
 
 It wasn't until I'd finished changing the door over that I realised that the location of the light switch was now inconvenient as it now sits behind the door when the door is open.
 
-So what am I to do? Put up with having to be mildly inconvenienced on the occasion that I want to turn the light in the office on or off? -- I work from home, so I'm mostly in here during the day and as it's summer right now it's pretty bright most of the time.
-
-I decided this would be a great use for some automation. I didn't fancy messing around with relay switches and hooking directly in to the 240v power lines, so I figured I should go for something non-intrusive.
+So what am I to do? Put up with having to be mildly inconvenienced on the occasion that I want to turn the light in the office on or off? No! I decided this would be a great use for some automation. I didn't fancy messing around with relay switches and hooking directly in to the 240v power lines, so I figured I should go for something non-intrusive.
 
 I've seen lots of examples of people using Arduino, a servo and some custom made parts to turn their light switches on and off by physically effecting the switch of the light switch.
 
@@ -61,7 +59,7 @@ My original plan for mounting the NodeMCU board was to screw through some M2 scr
 
 This worked pretty well, but having to hold the servo in place with _Gorilla tape_ wasn't ideal for a permenant installation.
 
-Because of the servo mounting failure I went back to TinkerCAD and tried to improve this a bit, utilising the screw mounting holes on the servo. I had problems with I again hit a problem with the servo mounts breaking as I installed the servo, so decided to attach one screw and add more Gorilla tape until I get around to printing another design.
+Because of the servo mounting failure I went back to TinkerCAD and tried to improve this a bit, utilising the screw mounting holes on the servo. I again hit a problem with the servo mounts breaking as I installed the servo, so decided to attach one screw and add more Gorilla tape until I get around to printing another design.
 
 ### Hooking up to the cloud -- _Blynk_ and you'll miss it!
 
