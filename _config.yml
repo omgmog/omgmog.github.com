@@ -36,8 +36,9 @@ menu:
     external: true
   - link: "/"
     title: "Articles"
-  - link: "/cardboctober"
-    title: "Cardboctober"
+  - link: "https://omgmog.net/things.html"
+    title: "Things"
+    external: true
 
 defaults:
   -
