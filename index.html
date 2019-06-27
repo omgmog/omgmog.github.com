@@ -2,19 +2,10 @@
 title: Articles
 ---
 
-<h3>Latest Article</h3>
-{% for post in site.posts limit:1 %}
+<h3>Latest Posts</h3>
+{% for post in site.posts limit:5 %}
   {% include _article_preview.html %}
 {% endfor %}
 <p>
-  See more articles in the <a href="{{ site.url }}/archive/">Article Archive</a>.
-</p>
-
-<h3>Latest Review</h3>
-{% assign reviews = site.reviews | reverse%}
-{% for post in reviews limit:1 %}
-  {% include _review_preview.html %}
-{% endfor %}
-<p>
-  See more reviews in the <a href="{{ site.url }}/reviews/">Reviews Archive</a>.
+  Find more posts in the <a href="{{ site.url }}/archive/">Archive</a>.
 </p>
