@@ -6,52 +6,8 @@ permalink: "404.html"
 <p>Try looking in the <a href="{{ site.url }}/archive/">Archive</a>.</p>
 
 <h3>
-  Recent articles
+  Recent posts
 </h3>
-<ul class="posts-list">
-{% assign recent_posts = site.posts %}
-{% for post in recent_posts limit:5 %}
-  <li>
-    <a
-    href="{{ site.url }}{{ post.url }}"
-    title="Published on {{ post.date | date_to_long_string }}"
-    >
-    {{ post.title | strip_html | escape }}
-    </a>
-  </li>
+{% for post in site.posts limit:10 %}
+  {% include _article_preview.html %}
 {% endfor %}
-</ul>
-
-<h3>
-  Featured articles
-</h3>
-<ul class="posts-list featured-posts">
-{% assign featured_posts = (site.posts | where:'featured','true') %}
-{% for post in featured_posts limit:5 %}
-  <li>
-    <a
-    href="{{ site.url }}{{ post.url }}"
-    title="Published on {{ post.date | date_to_long_string }}"
-    >
-    {{ post.title | strip_html | escape }}
-    </a>
-  </li>
-{% endfor %}
-</ul>
-
-<h3>
-  Recent reviews
-</h3>
-<ul class="posts-list">
-{% assign reviews = site.reviews | reverse %}
-{% for post in reviews limit:5 %}
-  <li>
-    <a
-    href="{{ site.url }}{{ post.url }}"
-    title="Published on {{ post.date | date_to_long_string }}"
-    >
-    {{ post.title | strip_html | escape }}
-    </a>
-  </li>
-{% endfor %}
-</ul>
