@@ -343,3 +343,12 @@ blockquote {
     background-image: url(star-filled.svg);
   }
 }
+
+.post-bio {
+  img {
+    float: right;
+    max-width: 8rem;
+    height: auto;
+    margin-left: 1rem;
+  }
+}

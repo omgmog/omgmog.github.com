@@ -2,6 +2,7 @@
 title: Articles
 ---
 
+{% include _post_author.html %}
 <h3>Latest Posts</h3>
 {% for post in site.posts limit:5 %}
   {% include _article_preview.html %}

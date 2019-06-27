@@ -1,3 +1,3 @@
 <p>
-  {{ post.date | date_to_long_string }} &bull; <a href="{{ site.github.repository_url }}/blob/master/{{ post.path }}">Source on GitHub</a> &bull; <a href="https://twitter.com/share?text={{ post.title | cgi_escape }}&amp;url={{ site.url}}{{ post.url }}&amp;via=omgmog" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false;">Share on Twitter</a>
+  <time class="dt-published" datetime="{{post.date}}">{{ post.date | date_to_long_string }}</time> &bull; <a href="{{ site.github.repository_url }}/blob/master/{{ post.path }}">Source on GitHub</a> &bull; <a href="https://twitter.com/share?text={{ post.title | cgi_escape }}&amp;url={{ site.url}}{{ post.url }}&amp;via=omgmog" onclick="window.open(this.href,'twitter-share','width=550,height=235');return false;">Share on Twitter</a>
 </p>

@@ -4,7 +4,8 @@
     {% assign iframe_url = post.iframe_url %}
     {% include iframe_embed.html %}
   {% endif %}
-  {{ content }}
+  <div class="e-content">{{ content }}</div>
   {% include _article_footer.html %}
 </article>
+{% include _post_author.html show_title="true" %}
 {% include _comments.html %}
