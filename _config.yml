@@ -23,7 +23,7 @@ disqus: "blogomgmog"
 sass:
     style: compressed
 
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-paginate
 whitelist:
