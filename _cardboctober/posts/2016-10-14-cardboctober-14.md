@@ -21,7 +21,7 @@ I've talked a bit about my `core.js` in previous Cardboctober posts. This is jus
 - Setting up the control method based on where you're viewing the demo (PC or Mobile)
 - Creating a device to enter fullscreen
 
-I created the majority of `core.js` a year ago for my earlier foray in to Google Cardboard development with JavaScript: [jscard.xyz](https://jscard.xyz). It has moved on quite a bit since then, on Cardboctober [day 10](https://github.com/cardboctober/max/commit/eddb03a8a0304a8ce43847567e343b5964b0a545) I spent a lot of time refactoring the `core.js` and moving more of the Three.js boilerplate code over to it, to simplify/clarify the `demo.js` for each day.
+I created the majority of `core.js` a year ago for my earlier foray in to Google Cardboard development with JavaScript: [blog.omgmog.net/jscard.xyz](https://blog.omgmog.net/jscard.xyz). It has moved on quite a bit since then, on Cardboctober [day 10](https://github.com/cardboctober/max/commit/eddb03a8a0304a8ce43847567e343b5964b0a545) I spent a lot of time refactoring the `core.js` and moving more of the Three.js boilerplate code over to it, to simplify/clarify the `demo.js` for each day.
 
 Moving all of this repeated functionality out to a core set of functions ensures that I have a consistent starting point each day and any problems I'm experiencing can be narrowed down to just the code for the day's `demo.js`.
 

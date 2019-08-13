@@ -7,7 +7,7 @@ redirect_from:
 
 Kicking off Cardboctober I've decided to go with something very simple.
 
-This is actually pretty much one of the [JSCard](https://jscard.xyz) demos that I created last November for my [20 Minutes into the Future with Google Cardboard and JavaScript](/post/talk-jsoxford-20-minutes-into-the-future/) talk.
+This is actually pretty much one of the [JSCard](https://blog.omgmog.net/jscard.xyz) demos that I created last November for my [20 Minutes into the Future with Google Cardboard and JavaScript](/post/talk-jsoxford-20-minutes-into-the-future/) talk.
 
 <!-- more -->
 

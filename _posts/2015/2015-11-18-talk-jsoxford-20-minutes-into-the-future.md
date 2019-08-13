@@ -18,7 +18,7 @@ I wrote the slideshow framework from scratch for the talk, using [marked.js](htt
 
 {% include figure.html src="jscardxyz.png" %}{:.massive.center}
 
-To accompany the talk I also created some demos, these can be viewed online on [jscard.xyz](https://jscard.xyz). These are best viewed in Chrome on an Android device, but should work alright in Chrome on Mac/Windows too.
+To accompany the talk I also created some demos, these can be viewed online on [blog.omgmog.net/jscard.xyz](https://blog.omgmog.net/jscard.xyz). These are best viewed in Chrome on an Android device, but should work alright in Chrome on Mac/Windows too.
 
 You can view the source for the slides and demos [here on Github](https://github.com/omgmog/talk-jsoxford-20-minutes-into-the-future).
 
