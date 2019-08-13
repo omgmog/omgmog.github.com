@@ -44,7 +44,7 @@
         {% for node in site.menu %}
           <a 
             href="{% unless node.external %}{{ site.url }}{% endunless %}{{ node.link }}"
-            {% if site.active %}class="active"{% endif %}
+            {% if node.active %}class="active"{% endif %}
           >{{ node.title }}</a>
         {% endfor %}
       </nav>

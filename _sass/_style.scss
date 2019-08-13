@@ -151,6 +151,11 @@ article {
 
     a {
       margin-left: .5em;
+
+      &.active {
+        border-bottom-width: .2rem;
+        border-bottom-color: #01579A;
+      }
     }
   }
 }
