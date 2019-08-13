@@ -61,8 +61,10 @@ a {
   color: inherit;
   text-decoration: none;
   border-bottom: .1rem solid #dadbdf;
+  transition: border-bottom-width .025s;
 
   &:hover {
+    border-bottom-width: .2rem;
     border-bottom-color: #01579A;
   }
 }
@@ -170,7 +172,7 @@ article {
 
 blockquote {
   background-color: rgba(#dadbdf, .2);
-  padding: 1rem 2rem;
+  padding: 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: -1rem;
@@ -178,7 +180,6 @@ blockquote {
   font-size: 1rem;
 
   p {
-    max-width: 70%;
     color: #555;
     font-style: italic;
     font-size: 1em;
@@ -186,14 +187,6 @@ blockquote {
 
     & + p {
       margin-top: 1em;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 100vw;
-
-    p {
-      max-width: 800px;
     }
   }
 }
@@ -227,9 +220,9 @@ blockquote {
       content: '// note';
       text-transform: uppercase;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 0.9rem;
       position: absolute;
-      opacity: .1;
+      opacity: .3;
       left: 2rem;
       top: 1rem;
       line-height: 1;
@@ -250,60 +243,10 @@ blockquote {
 }
 @media screen and (min-width: 1200px) {
   body {
-    width: 60vw;
-    max-width: 800px;
-    margin-left: 10vw;
-  }
-  $arrowSize: 2rem;
-
-  .pull-comment {
-    position: relative;
-    width: 100vw;
-    margin-left: -11.5vw;
-
-    > blockquote {
-      position: absolute;
-      max-width: 28vw;
-      left: 70vw!important;
-      bottom: 0;
-      transform: translateY(50%);
-      margin: 0;
-
-      &::after {
-        content: '';
-        left: -#{$arrowSize};
-        top: 50%;
-        position: absolute;
-        margin-top: -#{$arrowSize / 2};
-        height: 0;
-        width: 0;
-        border: #{$arrowSize / 2} solid transparent;
-        border-right-color: rgba(#dadbdf, .2);
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  // Super wide screens...
-  body {
-    width: 60%;
-    max-width: 800px;
-    margin-left: 10%;
-  }
-
-  blockquote {
-    margin-left: calc(-100px - 1rem);
-    padding-left: calc(100px + 1rem);
-  }
-  .pull-comment {
-    margin-left: -100px;
-
-    > blockquote {
-      left: 1000px!important;
-      max-width: 100%!important;
-      width: 400px;
-    }
+    width: 80%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

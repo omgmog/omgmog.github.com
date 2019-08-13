@@ -23,7 +23,7 @@ disqus: "blogomgmog"
 sass:
     style: compressed
 
-plugins:
+gems:
   - jekyll-redirect-from
   - jekyll-paginate
 whitelist:
@@ -36,6 +36,7 @@ menu:
     external: true
   - link: "/"
     title: "Articles"
+    active: true
   - link: "https://omgmog.net/things.html"
     title: "Things"
     external: true

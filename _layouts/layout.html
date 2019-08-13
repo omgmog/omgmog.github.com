@@ -42,7 +42,10 @@
       <h1><a href="https://omgmog.net">Max Glenister</a></h1>
       <nav role="main">
         {% for node in site.menu %}
-          <a href="{% unless node.external %}{{ site.url }}{% endunless %}{{ node.link }}">{{ node.title }}</a>
+          <a 
+            href="{% unless node.external %}{{ site.url }}{% endunless %}{{ node.link }}"
+            {% if site.active %}class="active"{% endif %}
+          >{{ node.title }}</a>
         {% endfor %}
       </nav>
   </header>
