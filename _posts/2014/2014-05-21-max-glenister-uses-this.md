@@ -13,7 +13,7 @@ This is a Q/A article in the style of "[The Setup](http://usesthis.com/)".
 
 I'm Max Glenister, a front-end developer, tinkerer and retro-game fanatic. I spend my days working as the UX Front-end developer at [Aris](http://www.aristx.com), and my evenings flittering between moonlighting as half of [Marmalade & Jam](http://www.marmaladeandjam.co.uk), or playing with the newest toy/gadget that I've got my hands on.
 
-Lately I've been getting in to [organising](/post/sushack-1-building-the-foundations-of-the-oxford-flood-network-stack/) [hackdays](http://sushack.co.uk), [building an arcade table in to a coffee table](http://imgur.com/a/Zf3BC) (still WIP!) and [installing Arch Linux on the HP Chromebook 11](/post/installing-arch-linux-arm-on-the-hp-chromebook-11/).
+Lately I've been getting in to [organising](/post/sushack-1-building-the-foundations-of-the-oxford-flood-network-stack/) [hackdays](https://sushack.github.io), [building an arcade table in to a coffee table](http://imgur.com/a/Zf3BC) (still WIP!) and [installing Arch Linux on the HP Chromebook 11](/post/installing-arch-linux-arm-on-the-hp-chromebook-11/).
 
 ### What hardware do you use?
 

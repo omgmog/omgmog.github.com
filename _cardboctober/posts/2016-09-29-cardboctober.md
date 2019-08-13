@@ -4,7 +4,7 @@ redirect_from:
   - /post/cardoctober/
 ---
 
-Throughout October [Ben](https://twitter.com/benjaminbenben) and I are working on a project called [Cardboctober](https://cardboctober.xyz). The challenge is hacking on something new every day using Google Cardboard.
+Throughout October [Ben](https://twitter.com/benjaminbenben) and I are working on a project called [Cardboctober](https://cardboctober.github.io). The challenge is hacking on something new every day using Google Cardboard.
 
 <!-- more -->
 
@@ -18,4 +18,4 @@ I've got a huge list of ideas -- well, I've got enough ideas to cover the first 
 
 I'll try to blog in a short-medium form here for each of my hacks.
 
-Check out the [Cardboctober website](https://cardboctober.xyz) each day to see the latest thing that has been made.
+Check out the [Cardboctober website](https://cardboctober.github.io) each day to see the latest thing that has been made.

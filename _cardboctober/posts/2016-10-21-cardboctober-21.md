@@ -54,28 +54,28 @@ Here are the Cardboctober Week 3 hacks:
 
 ### Day 15
 - [The Hierarchy of Needs in Quick Google Cardboard Hacks](https://blog.omgmog.net/post/cardboctober-15/) (Max)
-- [Fishies](https://cardboctober.xyz/pete/15/) (Pete)
+- [Fishies](https://cardboctober.github.io/pete/15/) (Pete)
 
 ### Day 16
 - [Getting in and out of Fullscreen](https://blog.omgmog.net/post/cardboctober-16/) (Max)
-- [Meetup data II](https://cardboctober.xyz/ben/16/) (Ben)
-- [Controller](https://cardboctober.xyz/pete/16/) (Pete)
+- [Meetup data II](https://cardboctober.github.io/ben/16/) (Ben)
+- [Controller](https://cardboctober.github.io/pete/16/) (Pete)
 
 ### Day 17
 - [Displaying Pertinent Information](https://blog.omgmog.net/post/cardboctober-17/) (Max)
-- [Whack a mole](https://cardboctober.xyz/pete/17/) (Pete)
+- [Whack a mole](https://cardboctober.github.io/pete/17/) (Pete)
 
 ### Day 18
 - [Moving around in VR](https://blog.omgmog.net/post/cardboctober-18/) (Max)
-- [Mirror](https://cardboctober.xyz/pete/18/) (Pete)
+- [Mirror](https://cardboctober.github.io/pete/18/) (Pete)
 
 ### Day 19
 - [Which way is North? Part 1](https://blog.omgmog.net/post/cardboctober-19/) (Max)
-- [Trees](https://cardboctober.xyz/pete/19/) (Pete)
+- [Trees](https://cardboctober.github.io/pete/19/) (Pete)
 
 ### Day 20
 - [Which way is North? Part 2](https://blog.omgmog.net/post/cardboctober-20/) (Max)
-- [Shout](https://cardboctober.xyz/pete/20/) (Pete)
+- [Shout](https://cardboctober.github.io/pete/20/) (Pete)
 
 ### Day 21
 - This post (Max)

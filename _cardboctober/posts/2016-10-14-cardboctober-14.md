@@ -62,36 +62,36 @@ This week also saw some more interest on social media.
 Here are the things we've made this week:
 
 ### Day 08
-- [Playing Sounds](https://cardboctober.xyz/max/08/) (Max)
-- [Triangle](https://cardboctober.xyz/ben/08/) (Ben)
-- [Smoke sphere](https://cardboctober.xyz/pete/08/) (Pete)
+- [Playing Sounds](https://cardboctober.github.io/max/08/) (Max)
+- [Triangle](https://cardboctober.github.io/ben/08/) (Ben)
+- [Smoke sphere](https://cardboctober.github.io/pete/08/) (Pete)
 
 ### Day 09
-- [Speech Recognition](https://cardboctober.xyz/max/09/) (Max)
-- [Floor](https://cardboctober.xyz/ben/09/) (Ben)
-- [Jetpack](https://cardboctober.xyz/pete/09/) (Pete)
+- [Speech Recognition](https://cardboctober.github.io/max/09/) (Max)
+- [Floor](https://cardboctober.github.io/ben/09/) (Ben)
+- [Jetpack](https://cardboctober.github.io/pete/09/) (Pete)
 
 ### Day 10
-- [HTML5 Video](https://cardboctober.xyz/max/10/) (Max)
-- [Circles](https://cardboctober.xyz/ben/10/) (Ben)
-- [Island](https://cardboctober.xyz/pete/10/) (Pete)
+- [HTML5 Video](https://cardboctober.github.io/max/10/) (Max)
+- [Circles](https://cardboctober.github.io/ben/10/) (Ben)
+- [Island](https://cardboctober.github.io/pete/10/) (Pete)
 
 ### Day 11
-- [Webaudio Beat Sequencer](https://cardboctober.xyz/max/11/) (Max)
-- [Bubbles](https://cardboctober.xyz/ben/11/) (Ben)
-- [Blink](https://cardboctober.xyz/pete/11/) (Pete)
+- [Webaudio Beat Sequencer](https://cardboctober.github.io/max/11/) (Max)
+- [Bubbles](https://cardboctober.github.io/ben/11/) (Ben)
+- [Blink](https://cardboctober.github.io/pete/11/) (Pete)
 
 ### Day 12
-- [AAAAH! Zombies](https://cardboctober.xyz/max/12/) (Max)
-- [Attendee graph](https://cardboctober.xyz/ben/12/) (Ben)
-- [720](https://cardboctober.xyz/pete/12/) (Pete)
+- [AAAAH! Zombies](https://cardboctober.github.io/max/12/) (Max)
+- [Attendee graph](https://cardboctober.github.io/ben/12/) (Ben)
+- [720](https://cardboctober.github.io/pete/12/) (Pete)
 
 ### Day 13
-- [AAAAH! More Zombies](https://cardboctober.xyz/max/13/) (Max)
-- [Cat](https://cardboctober.xyz/pete/13/) (Pete)
+- [AAAAH! More Zombies](https://cardboctober.github.io/max/13/) (Max)
+- [Cat](https://cardboctober.github.io/pete/13/) (Pete)
 
 ### Day 14
 - This post (Max)
-- [Seascape](https://cardboctober.xyz/pete/14/) (Pete)
+- [Seascape](https://cardboctober.github.io/pete/14/) (Pete)
 
 So that's it for Week 2. Next week I'm going to be working on posts about UX and design patterns rather than creating substantial hacks as I'll be away on holiday.

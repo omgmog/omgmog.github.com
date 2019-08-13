@@ -11,7 +11,7 @@ comments_issue: 88
 ---
 
 
-These are based on my experience of organising SusHack in 2013 and 2014. For more information about SusHack, check out [http://www.sushack.co.uk](http://www.sushack.co.uk)
+These are based on my experience of organising SusHack in 2013 and 2014. For more information about SusHack, check out [https://sushack.github.io](https://sushack.github.io)
 
 <!-- more -->
 

@@ -55,40 +55,40 @@ I'm finding that VR thoughts and discussions are taking over every waking moment
 This week we've seen the following:
 
 ### Day 01
-- [Basic VR](https://cardboctober.xyz/max/01/) (Max)
-- [Cube](https://cardboctober.xyz/ben/01/) (Ben)
-- [Gears](https://cardboctober.xyz/pete/01/) (Pete)
+- [Basic VR](https://cardboctober.github.io/max/01/) (Max)
+- [Cube](https://cardboctober.github.io/ben/01/) (Ben)
+- [Gears](https://cardboctober.github.io/pete/01/) (Pete)
 
 ### Day 02
-- [Raycaster based look interaction](https://cardboctober.xyz/max/02/) (Max)
-- [Moving grid thing](https://cardboctober.xyz/ben/02/) (Ben)
-- [Earthrise](https://cardboctober.xyz/pete/02/) (Pete)
-- [Put the kettle on](https://cardboctober.xyz/binhums/2016-10-02/) (Ben H)
+- [Raycaster based look interaction](https://cardboctober.github.io/max/02/) (Max)
+- [Moving grid thing](https://cardboctober.github.io/ben/02/) (Ben)
+- [Earthrise](https://cardboctober.github.io/pete/02/) (Pete)
+- [Put the kettle on](https://cardboctober.github.io/binhums/2016-10-02/) (Ben H)
 
 ### Day 03
-- [Even better gazed based look interaction](https://cardboctober.xyz/max/03/) (Max)
-- [Ribbon](https://cardboctober.xyz/ben/03/) (Ben)
-- [Bounce](https://cardboctober.xyz/pete/03/) (Pete)
+- [Even better gazed based look interaction](https://cardboctober.github.io/max/03/) (Max)
+- [Ribbon](https://cardboctober.github.io/ben/03/) (Ben)
+- [Bounce](https://cardboctober.github.io/pete/03/) (Pete)
 
 ### Day 04
-- [Skyboxes and generating meshes](https://cardboctober.xyz/max/04/) (Max)
-- [Grid](https://cardboctober.xyz/ben/04/) (Ben)
-- [Moonwalk](https://cardboctober.xyz/pete/04/) (Pete)
+- [Skyboxes and generating meshes](https://cardboctober.github.io/max/04/) (Max)
+- [Grid](https://cardboctober.github.io/ben/04/) (Ben)
+- [Moonwalk](https://cardboctober.github.io/pete/04/) (Pete)
 
 ### Day 05
-- [Loading external models](https://cardboctober.xyz/max/05/) (Max)
-- [Cubes](https://cardboctober.xyz/ben/05/) (Ben)
-- [Deep impact](https://cardboctober.xyz/pete/05/) (Pete)
+- [Loading external models](https://cardboctober.github.io/max/05/) (Max)
+- [Cubes](https://cardboctober.github.io/ben/05/) (Ben)
+- [Deep impact](https://cardboctober.github.io/pete/05/) (Pete)
 
 ### Day 06
-- [VR Pairs Game](https://cardboctober.xyz/max/06/) (Max)
-- [Drifting Mesh](https://cardboctober.xyz/ben/06/) (Ben)
-- [Archery practice](https://cardboctober.xyz/pete/06/) (Pete)
+- [VR Pairs Game](https://cardboctober.github.io/max/06/) (Max)
+- [Drifting Mesh](https://cardboctober.github.io/ben/06/) (Ben)
+- [Archery practice](https://cardboctober.github.io/pete/06/) (Pete)
 
 ### Day 07
 - This post (Max)
-- [Space & Time Mesh](https://cardboctober.xyz/ben/07/) (Ben)
-- [Orbitals](https://cardboctober.xyz/pete/07/) (Pete)
+- [Space & Time Mesh](https://cardboctober.github.io/ben/07/) (Ben)
+- [Orbitals](https://cardboctober.github.io/pete/07/) (Pete)
 
 First of all I want to say this is a huge amount of content creation (let alone the added fact that I've been doing a technical write-up each day too!). It has been really interesting to see the different ways that Ben, Pete and I are approaching "quick VR hacks" too.
 

@@ -11,7 +11,7 @@ Today's hack was going to be built around the `gamepad` API -- but I utterly fai
 
 {% include figure.html src="2016-10/12/giphy.gif" %}{:.massive.center}
 
-Today's game is quite simple and quite bodged together. I stole the raycaster-based movement from [Pete's day 11 hack](https://cardboctober.xyz/pete/11/) to make it possible to move around the "level".
+Today's game is quite simple and quite bodged together. I stole the raycaster-based movement from [Pete's day 11 hack](https://cardboctober.github.io/pete/11/) to make it possible to move around the "level".
 
 When you hit "Start" a hoard of zombies start moving towards you. You can move around to avoid them and if you stare at a zombie while touching the screen (or holding the button) you have a (high) chance of killing them.
 

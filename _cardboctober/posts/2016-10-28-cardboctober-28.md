@@ -52,24 +52,24 @@ So now that I've got that written down somewhere, I can continue with my big re-
 
 ### Day 23
 - [Planning Tetrominoes in VR](https://blog.omgmog.net/post/cardboctober-23/) (Max)
-- [iOS North](https://cardboctober.xyz/pete/23/) (Pete)
+- [iOS North](https://cardboctober.github.io/pete/23/) (Pete)
 
 ### Day 24
 - [Basic Game Board](https://blog.omgmog.net/post/cardboctober-24/) (Max)
-- [Bullet time](https://cardboctober.xyz/pete/24/) (Pete)
+- [Bullet time](https://cardboctober.github.io/pete/24/) (Pete)
 
 ### Day 25
 - [Creating and Moving Pieces](https://blog.omgmog.net/post/cardboctober-25/) (Max)
-- [Smart device pairing](https://cardboctober.xyz/pete/25/) (Pete)
+- [Smart device pairing](https://cardboctober.github.io/pete/25/) (Pete)
 
 ### Day 26
 - [Rotating Pieces](https://blog.omgmog.net/post/cardboctober-26/) (Max)
-- [Laser battle](https://cardboctober.xyz/pete/26/) (Pete)
+- [Laser battle](https://cardboctober.github.io/pete/26/) (Pete)
 
 ### Day 27
 - [Moving with gaze 💩](https://blog.omgmog.net/post/cardboctober-27/) (Max)
-- [Hairy ball](https://cardboctober.xyz/pete/27/) (Pete)
+- [Hairy ball](https://cardboctober.github.io/pete/27/) (Pete)
 
 ### Day 28
 - This post (Max)
-- [Beer](https://cardboctober.xyz/pete/28/) (Pete)
+- [Beer](https://cardboctober.github.io/pete/28/) (Pete)

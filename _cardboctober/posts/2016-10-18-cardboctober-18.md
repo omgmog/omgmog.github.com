@@ -24,13 +24,13 @@ A movement device that is becoming more prevalent in VR is teleportation. If you
 
 The user is projects a circle or marker to where they want to move to, and then they are teleported there.
 
-In my day 12 hack -- [AAAAH! Zombies](https://cardboctober.xyz/max/12/) -- I used retical-based teleportation. I actually stole this from [Pete's earlier day 11 hack: Blink](https://cardboctober.xyz/pete/11/).
+In my day 12 hack -- [AAAAH! Zombies](https://cardboctober.github.io/max/12/) -- I used retical-based teleportation. I actually stole this from [Pete's earlier day 11 hack: Blink](https://cardboctober.github.io/pete/11/).
 
 {% include figure.html src="2016-10/18/blink.png" %}{:.massive.center}
 
 ### Voice control
 
-I played around with this in [day 09's hack: Speech Recognition](https://cardboctober.xyz/max/09/) to move a ball around, but it could easily be adapted to moving the user around. Simple commands such as "move forward 10" or "move left 5", much like the old Television series "Knightmare" where the team command their blind team-mate around with commands
+I played around with this in [day 09's hack: Speech Recognition](https://cardboctober.github.io/max/09/) to move a ball around, but it could easily be adapted to moving the user around. Simple commands such as "move forward 10" or "move left 5", much like the old Television series "Knightmare" where the team command their blind team-mate around with commands
 
 {% include figure.html src="2016-10/18/knightmare.jpg" %}{:.massive.center}
 
