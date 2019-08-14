@@ -2,7 +2,6 @@
 title: Articles
 ---
 
-{% include _post_author.html %}
 <h3>Latest Posts</h3>
 {% for post in site.posts limit:5 %}
   {% include _article_preview.html %}
@@ -10,3 +9,5 @@ title: Articles
 <p>
   Find more posts in the <a href="{{ site.url }}/archive/">Archive</a>.
 </p>
+
+{% include _post_author.html show_title="true" %}
