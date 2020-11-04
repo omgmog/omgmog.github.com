@@ -34,7 +34,7 @@
   <link rel="icon" type="image/png" href="https://omgmog.net/faceicon.png" />
   <meta name="theme-color" content="#25272c">
   <meta name="google-site-verification" content="ETbuPNX54E0uDqFZwqcZNJXJYStn7oV0HSmnNKUkrr4" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Open+Sans|Fira+Mono">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans|Fira+Mono">
   <link rel="stylesheet" href="{{ site.url }}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}" />
 </head>
 <body>
@@ -44,7 +44,6 @@
         {% for node in site.menu %}
           <a 
             href="{% unless node.external %}{{ site.url }}{% endunless %}{{ node.link }}"
-            {% if node.active %}class="active"{% endif %}
           >{{ node.title }}</a>
         {% endfor %}
       </nav>

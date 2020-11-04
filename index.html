@@ -2,12 +2,15 @@
 title: Articles
 ---
 
+{% include _post_author.html show_title="true" %}
+
 <h3>Latest Posts</h3>
-{% for post in site.posts limit:5 %}
+
+{% for post in site.posts limit:10 %}
   {% include _article_preview.html %}
 {% endfor %}
-<p>
-  Find more posts in <a href="{{ site.url }}/archive/">Blog Archive</a>, <a href="{{ site.url }}/reviews/">Reviews</a> and <a href="{{ site.url }}/cardboctober/">Cardboctober 2016</a>.
-</p>
 
-{% include _post_author.html show_title="true" %}
+<h3>Looking for more?</h3>
+<p>
+  You can find more posts in <a href="{{ site.url }}/archive/">Blog Archive</a>, <a href="{{ site.url }}/reviews/">Reviews</a> or <a href="{{ site.url }}/cardboctober/">Cardboctober 2016</a>.
+</p>

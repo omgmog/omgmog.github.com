@@ -7,14 +7,15 @@ pre {
   word-wrap: break-word;
 }
 .highlighter-rouge {
-  font-size: .8rem;
+  font-size: .8em;
   color:#fdce93;
   background-color:#3f3f3f;
   width: calc(100% + 2rem);
   margin-left: -1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   padding: 1rem;
-  border-radius: .25rem;
 
   .highlight {
     color:#fdce93;
@@ -24,6 +25,10 @@ pre {
   pre {
     margin: 0;
   }
+}
+div.highlighter-rouge {
+  font-size: .8rem;
+
 }
 code {
   font-family: Fira Mono, monospace;
@@ -35,5 +40,6 @@ code {
     margin: 0;
     color: #383838;
     background-color: #f8f8f8;
+    word-break: break-all;
   }
 }

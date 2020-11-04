@@ -18,12 +18,15 @@ name: "The blog of Max Glenister"
 author:
     name: "Max Glenister"
     bio: "Max Glenister is a front-end developer from Oxford. He writes mostly about front-end development and technology."
-disqus: "blogomgmog"
 
 sass:
     style: compressed
 
+# Does this really need to be specified three times?
 gems:
+  - jekyll-redirect-from
+  - jekyll-paginate
+plugins:
   - jekyll-redirect-from
   - jekyll-paginate
 whitelist:
@@ -31,12 +34,10 @@ whitelist:
   - jekyll-paginate
 
 menu:
-  - link: "https://omgmog.net"
-    title: "About"
-    external: true
   - link: "/"
     title: "Articles"
-    active: true
+  - link: "/reviews/"
+    title: "Reviews"
 
 defaults:
   -
