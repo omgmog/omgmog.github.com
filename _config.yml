@@ -37,9 +37,6 @@ menu:
   - link: "/"
     title: "Articles"
     active: true
-  - link: "https://omgmog.net/things.html"
-    title: "Things"
-    external: true
 
 defaults:
   -
