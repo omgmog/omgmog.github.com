@@ -39,6 +39,7 @@
 
     p {
       margin: 0;
+      word-break: break-all;
       + p {
         margin-top: 1em;
       }
