@@ -22,13 +22,15 @@ author:
 sass:
     style: compressed
 
-# Does this really need to be specified three times?
+# Jekyll < 3.5.0
 gems:
   - jekyll-redirect-from
   - jekyll-paginate
+# Jekyll 3.5.0+
 plugins:
   - jekyll-redirect-from
   - jekyll-paginate
+# Jekyll in safe mode
 whitelist:
   - jekyll-redirect-from
   - jekyll-paginate
