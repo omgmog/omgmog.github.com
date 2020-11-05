@@ -164,6 +164,27 @@ article {
     }
   }
 
+  &.with-thumbnail {
+
+    > header {
+      padding-right: 7rem;
+      position: relative;
+    }
+    
+    > p {
+      margin-right: 7rem;
+    }
+
+    .post-thumbnail {
+      filter: grayscale(90%);
+      height: auto;
+      max-width: 6rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
   .notice {
     width: calc(100% + 2rem);
     margin-left: -1rem;
@@ -203,18 +224,6 @@ article {
     a + a {
       margin-left: 1rem;
     }
-  }
-}
-
-.post-thumbnail {
-  float: right;
-  border: 0;
-  margin-left: 1rem;
-
-  img {
-    filter: grayscale(100%);
-    height: auto;
-    max-width: 6rem;
   }
 }
 .center {
