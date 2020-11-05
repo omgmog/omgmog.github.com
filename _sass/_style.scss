@@ -309,45 +309,6 @@ blockquote {
   }
 }
 
-// Media queries
-
-@media screen and (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
-    padding: 0;
-
-    nav {
-      width: 100%;
-    }
-  }
-}
-@media screen and (min-width: 1200px) {
-  body {
-    width: 80%;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-
-    main {
-      position: relative;
-    
-      &:after {
-        content: '';
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczJyBoZWlnaHQ9JzMnPjxjaXJjbGUgY3g9JzIuNScgY3k9JzIuNScgcj0nLjUnIGZpbGw9JyMyNDJhNDknLz48L3N2Zz4=);
-        background-repeat: repeat;
-        background-position: bottom right;
-        background-size: 4px 4px;
-        position: absolute;
-        z-index: -1;
-        left: .5rem;
-        right: -.5rem;
-        top: .5rem;
-        bottom: -.5rem;
-      }
-    }
-  }
-}
 
 
 
@@ -387,10 +348,65 @@ blockquote {
 }
 
 .post-bio {
+  display: flex;
+  align-items: center;
+
   img {
-    float: right;
-    max-width: 8rem;
+    max-width: 100%;
     height: auto;
-    margin-left: 1rem;
+    order: 1;
+    flex-basis: 12rem;
+    transform: scaleX(-1); // because I'm too lazy to flip the image in Photoshop
+  }
+
+  > div {
+    flex: 1;
+  }
+}
+
+// Media queries
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+
+    nav {
+      width: 100%;
+    }
+  }
+  .post-bio {
+    flex-direction: column;
+
+    img {
+      order: 0;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    width: 80%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+
+    main {
+      position: relative;
+    
+      &:after {
+        content: '';
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczJyBoZWlnaHQ9JzMnPjxjaXJjbGUgY3g9JzIuNScgY3k9JzIuNScgcj0nLjUnIGZpbGw9JyMyNDJhNDknLz48L3N2Zz4=);
+        background-repeat: repeat;
+        background-position: bottom right;
+        background-size: 4px 4px;
+        position: absolute;
+        z-index: -1;
+        left: .5rem;
+        right: -.5rem;
+        top: .5rem;
+        bottom: -.5rem;
+      }
+    }
   }
 }
