@@ -47,15 +47,27 @@ main {
     > h3 {
     display: flex;
     text-transform: uppercase;
+    align-items: center;
+    margin-bottom: 2rem;
 
-    &::after{
+    &::before {
       content: '';
       height: .1rem;
       flex: 1;
       background-color: #dadbdf;
-      transform: translateY(.75em);
+      margin-right: .5em;
+    }
+
+    &::after {
+      content: '';
+      height: .1rem;
+      flex: 1;
+      background-color: #dadbdf;
       margin-left: .5em;
     }
+  }
+  > article ~ h3 {
+    margin-top: 3rem;
   }
   > p + h3 {
     margin-top: 4rem;
@@ -253,6 +265,9 @@ blockquote {
 
 .pagination {
   display: flex;
+  border-top: .1rem solid #dadbdf;
+  padding-top: 2rem;
+  margin-top: 2rem;
 
   a {
     flex: 1;
