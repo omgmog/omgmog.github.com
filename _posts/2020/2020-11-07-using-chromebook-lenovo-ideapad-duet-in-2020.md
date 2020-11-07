@@ -1,5 +1,6 @@
 ---
 title: Using a Chromebook in 2020
+comments_issue: 105
 ---
 
 I've just got hold of a [Lenovo Ideapad Duet 2-in-1 Chromebook/tablet](https://www.lenovo.com/gb/en/laptops/lenovo/student-chromebooks/Lenovo-CT-X636/p/ZZICZCTCT1X). ChromeOS seems to have come quite a long way since I last used the HP Chromebook 11 back in 2013. 
