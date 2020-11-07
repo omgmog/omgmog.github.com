@@ -5,8 +5,13 @@ title: Posts
 {% include _post_author.html show_title="true" %}
 
 <h3>Latest Posts</h3>
-
 {% for post in site.posts limit:10 %}
+  {% include _article_preview.html %}
+{% endfor %}
+
+<h3>Latest Reviews</h3>
+{% assign reviews = site.reviews | reverse %}
+{% for post in reviews limit:3 %}
   {% include _article_preview.html %}
 {% endfor %}
 
