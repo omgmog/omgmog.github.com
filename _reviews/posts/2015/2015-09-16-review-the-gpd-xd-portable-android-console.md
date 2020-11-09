@@ -3,7 +3,6 @@
 title: "Review: The GPD XD Portable Android Console"
 tags: ["consumerism", "review", "android", "software", "hardware"]
 redirect_from: /post/review-the-gpd-xd-portable-android-console/
-thumbnail: gpdxd_thumb.jpg
 ---
 
 I’m back with another Android console out of China from GPD, the GPD XD. I've had the GPD XD for a couple of weeks now, and to be honest I've been unable to put it down! In short it's a great device for portable gaming, and it also handles my media needs with ease.

@@ -3,7 +3,6 @@
 title: "Finally, a post about the Nexus 7"
 tags: ["consumerism", "review", "hardware", "android"]
 redirect_from: /post/finally-a-post-about-the-nexus-7/
-thumbnail: n7_thumb.jpg
 ---
 I've been putting this post off, and it has been hard. I usually like to declare my love for a new gadget just moments or hours after unboxing it; I've had a lot of tablets over the past couple of years that I've done that with, only to later change my mind, so I thought I'd use the Nexus 7 for a little while and then splooge about how much I love it, here on my blog.
 

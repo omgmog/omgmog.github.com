@@ -3,7 +3,6 @@
 title: "Review: The Revo K101 Plus"
 tags: ["consumerism", "review", "nintendo", "software", "hardware"]
 redirect_from: /post/review-the-revo-k101-plus/
-thumbnail: k101_thumb.png
 ---
 
 Today I'm refreshed to be reviewing a console that doesn't try to cram too much in to the form factor, but instead tried to focus on doing one thing well.
