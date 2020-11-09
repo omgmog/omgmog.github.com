@@ -1,6 +1,6 @@
-<article {% if post.thumbnail %}class="with-thumbnail"{% endif %}>
+<article>
   <header>
-    {% include _title.html showthumbnail=true %}
+    {% include _title.html %}
   </header>
   <p>
     {{ post.excerpt | strip_html }} <a href="{{ site.url }}{{ post.url }}">Read more</a>

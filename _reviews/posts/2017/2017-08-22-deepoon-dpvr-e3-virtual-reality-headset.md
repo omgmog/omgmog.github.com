@@ -1,6 +1,5 @@
 ---
 title: "Deepoon DPVR E3 Virtual Reality Headset"
-thumbnail: dpvre3.png
 ---
 
 Today I'm reviewing the DPVR E3. This is a Virtual Reality headset with a high resolution display, comfortable straps and an experience that's similar to the Oculus Rift.

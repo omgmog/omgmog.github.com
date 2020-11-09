@@ -3,7 +3,6 @@
 title: "So I've got a Raspberry Pi, now what?"
 tags: ["linux", "project", "consumerism", "review", "software", "hardware", "raspberry pi"]
 redirect_from: /post/so-ive-got-a-raspberry-pi-now-what/
-thumbnail: pi_thumb.jpg
 ---
 I was going to title this post "In which I moan about the Raspberry Pi", read on to find out why.
 
