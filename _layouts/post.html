@@ -3,5 +3,17 @@ layout: layout
 ---
 {% assign post = page %}
 {% include single_post.html class="post h-entry" %}
+{% include _post_author.html show_title="true" %}
+
+{% if post.comments_issue %}
+{% include _comments.html issue_id=post.comments_issue %}
+{% endif %}
+
+{% if jekyll.environment == "production" %}
 {% include _adsense.html %}
+{% endif %}
+
+{% if post.content contains '<code' %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono">
 <link rel="stylesheet" href="{{ site.url }}/assets/pygments.css" />
+{% endif %}
