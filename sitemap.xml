@@ -23,6 +23,38 @@ layout: # no layout
         </priority>
     </url>
 {% endfor %}
+{% for post in site.reviews %}
+    <url>
+        <loc>
+            {{ site.url }}{{ post.url }}
+        </loc>
+        <lastmod>
+            {{ post.date | date_to_xmlschema }}
+        </lastmod>
+        <changefreq>
+            weekly
+        </changefreq>
+        <priority>
+            1.0
+        </priority>
+    </url>
+{% endfor %}
+{% for post in site.cardboctober %}
+    <url>
+        <loc>
+            {{ site.url }}{{ post.url }}
+        </loc>
+        <lastmod>
+            {{ post.date | date_to_xmlschema }}
+        </lastmod>
+        <changefreq>
+            monthly
+        </changefreq>
+        <priority>
+            1.0
+        </priority>
+    </url>
+{% endfor %}
 {% for page in site.pages %}
     <url>
         <loc>
