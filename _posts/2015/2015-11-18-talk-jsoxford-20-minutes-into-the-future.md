@@ -9,7 +9,7 @@ I gave this talk at [JS Oxford in November 2015](http://jsoxford.com/2015/Javasc
 
 {% include figure.html src="jsoxford.jpg" %}{:.massive.center}
 
-You can view the [slides online here](https://blog.omgmog.net/talk-jsoxford-20-minutes-into-the-future/), navigate the slides by clicking.
+You can view the [slides online here](https://blog.omgmog.net/talk-20-minutes-into-the-future/talk.html), navigate the slides by clicking or with your arrow keys.
 
 {% assign iframe_url = "https://www.youtube.com/embed/Ogn_cQ6F338" %}
 {% include iframe_embed.html %}
@@ -19,8 +19,6 @@ I wrote the slideshow framework from scratch for the talk, using [marked.js](htt
 {% include figure.html src="jscardxyz.png" %}{:.massive.center}
 
 To accompany the talk I also created some demos, these can be viewed online on [blog.omgmog.net/jscard.xyz](https://blog.omgmog.net/jscard.xyz). These are best viewed in Chrome on an Android device, but should work alright in Chrome on Mac/Windows too.
-
-You can view the source for the slides and demos [here on Github](https://github.com/omgmog/talk-jsoxford-20-minutes-into-the-future).
 
 To present the demos live, using an actual device, I used the Chrome extension/Android application [Vysor](http://www.vysor.io/). This allows you to stream your phone's screen over USB (via ADB), and it works really well.
 
