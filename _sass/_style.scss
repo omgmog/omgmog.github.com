@@ -206,7 +206,11 @@ article {
     flex: 1;
     margin: 0;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 400;
+
+    img {
+      display: none;
+    }
   }
   nav {
     align-self: center;
@@ -333,9 +337,8 @@ blockquote {
   img {
     max-width: 100%;
     height: auto;
-    order: 1;
+    order: 0;
     flex-basis: 12rem;
-    transform: scaleX(-1); // because I'm too lazy to flip the image in Photoshop
   }
 
   > div {
@@ -350,6 +353,20 @@ blockquote {
     flex-direction: column;
     text-align: center;
     padding: 0;
+    margin-top: 2rem;
+    
+    h1 {
+      font-size: 2rem;
+      a {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          display: inline-block;
+          margin-bottom: 2rem;
+        }
+      }
+    }
 
     nav {
       width: 100%;
@@ -360,6 +377,7 @@ blockquote {
 
     img {
       order: 0;
+      display: none;
     }
   }
 }
