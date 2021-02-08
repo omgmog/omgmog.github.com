@@ -292,44 +292,6 @@ blockquote {
   }
 }
 
-
-
-
-.rating {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: auto;
-  margin-top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  .title,
-  .number {
-    font-size: .6em;
-    line-height: 1;
-  }
-
-  .stars-outer,
-  .stars-inner {
-    background-size: contain;
-    background-position: 0 50%;
-    height: 1em;
-  }
-  .stars-outer {
-    background-image: url(star.svg);
-    width: 5em;
-    margin: 0 .5em;
-    flex-shrink: 0;
-  }
-
-  .stars-inner {
-    width: 0;
-    background-image: url(star-filled.svg);
-  }
-}
-
 .post-bio {
   display: flex;
   align-items: center;

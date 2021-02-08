@@ -200,6 +200,4 @@ This is probably the best VR headset from China right now. When they release the
 
 If the price could be reduced I think this could be the perfect headset for a _travel_ VR setup. The headset construction is very solid and there is only the one 3-in-1 cable to worry about.
 
-{% include stars.html stars="3.5" %}
-
 You can buy the DPVR E3 from Geekbuying today here: [DPVR E3 on Geekbuying](https://goo.gl/br6Sp1)
