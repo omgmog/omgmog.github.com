@@ -33,7 +33,7 @@
   <link rel="canonical" href="{{ site.url }}{% unless page.url == '/index.html' %}{{ page.url }}{% endunless %}">
   <link rel="icon" type="image/png" href="https://omgmog.net/faceicon.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One%7COpen+Sans">
-  <link rel="stylesheet" href="{{ site.url }}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}">
+  <link rel="stylesheet" href="{% if jekyll.environment == "production" %}{{ site.url }}{% endif %}/assets/style.css{% if site.github %}?{{site.github.build_revision}}{% endif %}">
 </head>
 <body>
   <header class="header">
