@@ -6,7 +6,7 @@ html {
   font-family: Open Sans, sans-serif;
   color: rgba(#000, .87);
   line-height: 1.5;
-  font-size: calc(1em + .25vw);
+  font-size: 20px;
 }
 
 body {
@@ -23,6 +23,13 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   letter-spacing: -.02em;
   line-height: 1.1;
+
+  // make headings within posts have more space before them
+  .e-content & {
+    * + & {
+      margin-top: 3rem;
+    }
+  }
 }
 h1 {
   font-size: 3rem;
