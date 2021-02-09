@@ -47,6 +47,14 @@
   <main id="top">
   {{ content }}
   </main>
+
+  <footer class="updated">
+    {% assign repo_name = site.github.repository_name %}
+    {% assign matched_repos = site.github.public_repositories|where:"name",repo_name %}
+    {% for repo in matched_repos limit:1 %}
+      <small>Website last updated: <a target="_blank" href="{{repo.html_url}}/commit/{{site.github.build_revision}}">{{ repo.pushed_at }}</a></small>
+    {% endfor %}
+  </footer>
   {% if jekyll.environment == "production" %}
   <!-- Piwik -->
   <script type="text/javascript">
