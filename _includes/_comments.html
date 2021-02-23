@@ -1,4 +1,6 @@
+
 <h3>Comments</h3>
+<div id="comments-section">
 <ol id="comments" data-issue="{{ include.issue_id }}"></ol>
 <p class="notice">
 <span class="no-comments">There are no comments yet!</span>
@@ -6,12 +8,15 @@
 <span class="comments-closed" style="display:none">Comments are closed for this post.</span>
 </p>
 <script type="text/template" id="comment-template">
-  <li class="comment">
-    <img src="%avatar%" alt="%author%'s avatar" class="avatar">
-    <h4 class="author">%author%</h4>
-    <div class="comment-body">%body%</div>
+  <li class="comment %comment_class%">
+    <div class="inner">
+      <img src="%avatar%" alt="%author%'s avatar" class="avatar">
+      <div class="comment-header"><h3><a href="%author_url%" target="_blank"><strong>%author%</strong></a> commented <a href="%url%" target="_blank"><time datetime="%date%">on %date_fmt%</time></a></h3><span class="who">%who%</span></div>
+      <div class="comment-body">%body%</div>
+    </div>
   </li>
 </script>
 <link rel="stylesheet" href="/assets/comments.css">
 <script src="/assets/marked.js"></script>
 <script src="/assets/comments.js"></script>
+</div>
