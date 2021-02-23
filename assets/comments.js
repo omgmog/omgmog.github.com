@@ -37,10 +37,21 @@
               .then(response => response.json())
               .then(comments => {
                   comments.forEach((comment) => {
+                    // console.log(comment);
                     let comment_markup = tpl(comment_template.innerHTML, {
                       avatar: `${comment.user.avatar_url}&size=60`,
                       author: comment.user.login,
+                      author_url: comment.user.html_url,
                       body: marked(comment.body),
+                      comment_class: comment.author_association.toLowerCase(),
+                      who: comment.author_association === 'OWNER' ? 'Author' : 'Guest',
+                      date: comment.created_at,
+                      date_fmt: new Intl.DateTimeFormat('default', {
+                        year: 'numeric', 
+                        month: 'short', 
+                        day: 'numeric'
+                      }).format(new Date(comment.created_at)),
+                      url: comment.html_url
                     });
                     comments_element.innerHTML += comment_markup;
                   });

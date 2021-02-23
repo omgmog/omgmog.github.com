@@ -1,48 +1,200 @@
 ---
 ---
+:root {
+  --color-avatar-bg: #fff;
+  --color-avatar-border: transparent;
 
-#comments {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  --color-text-primary: #24292e;
+  --color-bg-primary: #fff;
+  --color-border-primary: #e1e4e8;
+  --color-border-secondary: #eaecef;
+  --color-bg-tertiary: #f6f8fa;
 
-  + .notice {
-    text-align: center;
-  }
+  --color-box-bg-info: #f1f8ff;
+  --color-box-border-info: rgba(3,102,214,0.2);
+  --color-text-link: #0366d6;
+  --color-auto-gray-1: #f6f8fa;
 }
-.comment {
-  position: relative;
-  font-size: .8em;
-  margin: 0;
-  padding: 0;
-  padding-left: 3rem;
 
-  + .comment {
-    margin-top: 1rem;
+#comments-section {
+
+  #comments {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  
+    + .notice {
+      text-align: center;
+    }
   }
 
-  img {
-    position: absolute;
-    left: 0;
-    width: 3rem;
-    height: auto;
-    top: 2rem;
-    box-sizing: border-box;
-    background-color: rgba(#dadbdf, .2);
-  }
-  .author {
-    margin: 0 0 .5rem;
-  }
-  &-body {
-    background-color: rgba(#dadbdf, .2);
-    padding: 1rem;
-
-    p {
-      margin: 0;
-      word-break: break-all;
-      + p {
-        margin-top: 1em;
+  .comment {
+    position: relative;
+    display: flex;
+    padding: 16px 0;
+    margin-left: 72px;
+    font-size: 1rem;
+  
+    .avatar {
+      border-radius: 50%;
+      display: inline-block;
+      overflow: hidden;
+      line-height: 1;
+      vertical-align: middle;
+      background-color: var(--color-avatar-bg);
+      box-shadow: 0 0 0 1px var(--color-avatar-border);
+      width: 40px;
+      position: absolute;
+      left: -56px;
+      z-index: 1;
+    }
+  
+    a {
+      background: initial;
+      text-decoration-color: currentColor;
+      text-decoration: none;
+      padding: 0;
+      border: 0;
+  
+      &:hover {
+        text-decoration: underline;
+        color: var(--color-text-link);
+      }
+    }
+  
+    .inner {
+      position: relative;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg-primary);
+      border: 1px solid var(--color-border-primary);
+      border-radius: 6px;
+      margin-left: -16px;
+      width: 100%;
+  
+      &::before,
+      &::after {
+        position: absolute;
+        top: 11px;
+        right: 100%;
+        left: -16px;
+        display: block;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        content: " ";
+        border-color: transparent;
+        border-style: solid solid outset;
+      }
+  
+      &::before {
+        border-width: 8px;
+        border-right-color: var(--color-border-primary);
+      }
+  
+      &::after {
+        margin-top: 1px;
+        margin-left: 3px;
+  
+        border-width: 7px;
+        border-right-color: var(--color-bg-tertiary);
+      }
+    }
+  
+    &.owner {
+      .inner {
+  
+        &::before {
+          border-right-color: var(--color-border-primary);
+        }
+        &::after {
+          border-right-color: var(--color-box-bg-info);
+        }
       }
     }
   }
+}
+
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+  padding-left: 16px;
+  color: var(--color-text-secondary);
+  flex-direction: row;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+
+  h3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 1px;
+    flex: 1 1 auto;
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: normal;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  .who {
+    float: right;
+    padding: 2px 4px;
+    margin-left: 8px;
+    font-size: 12px;
+    cursor: default;
+    border: 1px solid var(--color-border-primary);
+    border-radius: 6px;
+    display: none;
+  }
+
+
+  background-color: var(--color-bg-tertiary);
+  border-bottom: 1px solid var(--color-border-primary);
+
+  .owner & {
+    background-color: var(--color-box-bg-info);
+    border-bottom-color: var(--color-box-border-info);
+
+    .who {
+      display: block;
+      border-color: var(--color-box-border-info);
+    }
+
+  }
+}
+.comment-body {
+  padding: 1em;
+  line-height: 1.5;
+
+  p {
+    margin: 0;
+    // word-break: break-all;
+    font-size: 1em;
+
+    + p {
+      margin-top: 1em;
+    }
+
+    a {
+      color: var(--color-text-link);
+    }
+  }
+
+  blockquote {
+    max-width: 100%;
+    margin: 0 0 1rem;
+    font-size: 1em;
+    
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    border: 1px solid var(--color-border-primary);
+    border-radius: 6px;
+  }
+
 }
