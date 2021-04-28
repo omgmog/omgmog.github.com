@@ -71,3 +71,9 @@ collections:
     output: true
     permalink: /:collection/:title/
 
+posts_intro: >
+  
+reviews_intro: >
+  I enjoy technology and I love nothing more than receiving new gadgets. If I'm not buying a new toy to play with, I'm reading about the latest thing somewhere.
+cardboctober_intro: >
+  I spent every day of October 2016 creating VR content for Google Cardboard using JavaScript/WebGL/other WebAPIs and blogged about it.

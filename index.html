@@ -4,18 +4,30 @@ title: Posts
 
 {% include _post_author.html show_title="true" %}
 
-<h3>Latest Posts</h3>
-{% for post in site.posts limit:10 %}
-  {% include _article_preview.html %}
-{% endfor %}
+<h3>Posts</h3>
+<section>
+  {% for post in site.posts limit:3 %}
+    {% include _article_preview.html %}
+  {% endfor %}
+  <a class="archive" href="{{ site.url }}/archive/">View all ({{site.posts | size }})</a></a>
+</section>
 
-<h3>Latest Reviews</h3>
-{% assign reviews = site.reviews | reverse %}
-{% for post in reviews limit:3 %}
-  {% include _article_preview.html %}
-{% endfor %}
+<h3>Reviews</h3>
+<section>
+  {% assign reviews = site.reviews | reverse %}
+  {% for post in reviews limit:3 %}
+    {% include _article_preview.html %}
+  {% endfor %}
+  <a class="archive" href="{{ site.url }}/reviews/">View all ({{site.reviews | size }})</a></a>
+</section>
 
-<h3>Looking for more?</h3>
-<p>
-  You can find more posts in <a href="{{ site.url }}/archive/">Posts Archive</a>, <a href="{{ site.url }}/reviews/">Reviews Archive</a> or <a href="{{ site.url }}/cardboctober/">Cardboctober 2016 Archive</a>.
-</p>
+<h3>Cardboctober</h3>
+<section>
+  {% assign cardboctober = site.cardboctober %}
+  <div class="grid">
+  {% for post in cardboctober limit:6 offset:1 %}
+    {% include _article_grid_preview.html %}
+  {% endfor %}
+  </div>
+  <a class="archive" href="{{ site.url }}/cardboctober/">View all ({{site.cardboctober | size }})</a></a>
+</section>
