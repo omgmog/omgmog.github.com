@@ -1,3 +1,6 @@
+$yellow: #ffea00;
+$grey: #dadbdf;
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -12,7 +15,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  background-color: #ffea00;
+  background-color: $yellow;
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMTAgMTAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYyICg5MTM5MCkgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+QXJ0Ym9hcmQ8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iQXJ0Ym9hcmQiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtb3BhY2l0eT0iMC4xIj4KICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBmaWxsPSIjMDAwMDAwIiBjeD0iOS41IiBjeT0iOS41IiByPSIxIj48L2NpcmNsZT4KICAgIDwvZz4KPC9zdmc+");
 }
 
@@ -59,33 +62,40 @@ h5 {
 main {
   padding: 2rem;
   background-color: #fff;
-    > h3 {
+
+  > h3 {
     display: flex;
     text-transform: uppercase;
     align-items: center;
     margin-bottom: 2rem;
 
-    &::before {
-      content: '';
-      height: .1rem;
-      flex: 1;
-      background-color: #dadbdf;
-      margin-right: .5em;
-    }
-
     &::after {
       content: '';
       height: .1rem;
       flex: 1;
-      background-color: #dadbdf;
+      background-color: $grey;
       margin-left: .5em;
     }
   }
-  > article ~ h3 {
-    margin-top: 3rem;
-  }
-  > p + h3 {
+  > article ~ h3,
+  p + h3,
+  section + h3 {
     margin-top: 4rem;
+  }
+  section {
+    
+    .archive {
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: .125em .25em;
+      background-size: 100% 100%;
+      margin: 1rem auto auto;
+      display: inline-block;
+
+      &:hover {
+        background-size: 100% 0;
+      }
+    }
   }
 }
 
@@ -96,25 +106,15 @@ main {
   }
 }
 
-@keyframes dashdotdash {
-  0%,
-  100% {
-      border-bottom-style: solid;
-  }
-
-  25%,
-  75% {
-      border-bottom-style: dotted;
-  }
-
-  50% {
-      border-bottom-style: dashed;
-  }
-}
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: .05rem solid rgba(0,0,0,.2);
+  border-bottom: .1rem solid $yellow;
+  background-image: linear-gradient(120deg, $yellow, $yellow);
+  background-size: 100% 0;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .125s ease-in;
   box-decoration-break: clone;
 
   &:hover {
@@ -122,7 +122,8 @@ a {
   }
 }
 main a:hover {
-  animation: dashdotdash .4s infinite;
+  border-bottom-color: $yellow;
+  background-size: 100% 100%;
 }
 .post-meta {
   font-size: .8rem;
@@ -196,14 +197,58 @@ article {
     margin-left: -1rem;
   }
 
-  & + article,
-  & + h3 {
-    margin-top: 3rem;
+  & + article {
+    margin-top: 2rem;
   }
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
 
+  .grid-block {
+    flex: 1;
+    flex-basis: 50%;
+    margin: 0 0 1rem;
+
+    figure {
+      margin: 0;
+    }
+
+    figcaption {
+      font-size: .8rem;
+      margin: 0 .25rem;
+      padding-top: .5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+
+      
+      &::before {
+        content: '';
+        height: .1rem;
+        flex: 1;
+        background-color: $grey;
+        margin-right: .25em;
+      }
+
+      &::after {
+        content: '';
+        height: .1rem;
+        flex: 1;
+        background-color: $grey;
+        margin-left: .25em;
+      }
+    }
+
+    a {
+      padding: .25rem .25rem 0;
+      display: block;
+      line-height: 1;
+    }
+  }
 }
 .notice {
-  background-color: rgba(#dadbdf, .2);
+  background-color: rgba($grey, .2);
   padding: 2rem;
 }
 
@@ -241,7 +286,7 @@ article {
 }
 
 blockquote {
-  background-color: rgba(#dadbdf, .2);
+  background-color: rgba($grey, .2);
   padding: 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -263,7 +308,7 @@ blockquote {
 
 .pagination {
   display: flex;
-  border-top: .1rem solid #dadbdf;
+  border-top: .1rem solid $grey;
   padding-top: 2rem;
   margin-top: 2rem;
 
@@ -361,6 +406,12 @@ blockquote {
       display: none;
     }
   }
+
+  .grid {
+    .grid-block {
+      flex-basis: 100%;
+    }
+  }
 }
 @media screen and (min-width: 1200px) {
   body {
@@ -384,6 +435,16 @@ blockquote {
         right: -.5rem;
         top: .5rem;
         bottom: -.5rem;
+      }
+    }
+  }
+
+  .grid {
+    .grid-block {
+      flex-basis: 33%;
+
+      figcaption {
+        font-size: .6rem;
       }
     }
   }

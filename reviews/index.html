@@ -2,13 +2,10 @@
 title: Reviews
 ---
 <h3>Send me your gadgets!</h3>
+{{ site.reviews_intro | markdownify }}
+<p>If you'd like me to review something, <a href="mailto:hello@maxglenister.co.uk?subject=Hey Max!">Email</a> or <a href="https://twitter.com/intent/tweet?text=@omgmog+Hey Max!">Tweet</a> me!</p>
 
-<article>
-<p>I enjoy technology and I love nothing more than receiving new gadgets. If I'm not buying a new toy to play with, I'm reading about the latest <em>thing</em> somewhere.</p>
-<p>I've had the opportunity to review some great gadgets. If you'd like me to review something, <a href="mailto:hello@maxglenister.co.uk?subject=Hey Max!">Email</a> or <a href="https://twitter.com/intent/tweet?text=@omgmog+Hey Max!">Tweet</a> me!</p>
-</article>
-
-<h3>Reviews Archive</h3>
+<h3>Reviews</h3>
 
 {% assign reviews = site.reviews | reverse %}
 {% for post in reviews %}
