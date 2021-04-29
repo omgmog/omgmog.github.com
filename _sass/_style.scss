@@ -78,16 +78,13 @@ main {
       margin-left: .5em;
     }
   }
-  > article ~ h3,
-  > article > h3,
-  p + h3,
-  section + h3 {
+  > h3:not(:first-child) {
     margin-top: 4rem;
   }
   section {
     
     .archive {
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: bold;
       padding: .125em .25em;
       background-size: 100% 100%;
@@ -187,6 +184,11 @@ article {
     h2 {
       a {
         border-bottom: 0;
+      }
+
+      // in the post lists, make them a little smaller...
+      &:only-child {
+        font-size: 1.5rem;
       }
     }
     p {
