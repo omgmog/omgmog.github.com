@@ -63,7 +63,8 @@ main {
   padding: 2rem;
   background-color: #fff;
 
-  > h3 {
+  > h3,
+  > article > h3 {
     display: flex;
     text-transform: uppercase;
     align-items: center;
@@ -78,6 +79,7 @@ main {
     }
   }
   > article ~ h3,
+  > article > h3,
   p + h3,
   section + h3 {
     margin-top: 4rem;
@@ -365,10 +367,6 @@ blockquote {
 
   > div {
     flex: 1;
-  }
-
-  h4 {
-    display: none;
   }
 }
 
