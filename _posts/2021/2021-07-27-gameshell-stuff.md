@@ -5,7 +5,7 @@ comments_issue: 109
 
 I bought a ClockworkPi Gameshell back in October 2019. I’ve been playing with it a bit lately (in anticipation of the ClockworkPi DevTerm shipping!) and I realised I haven't yet posted anything about it on here.
 
-Here's some of the hardware mods I've made to me Gameshell.
+Here's some of the hardware mods I've made to my Gameshell.
 
 {% include figure.html src="gameshell-stuff/gameshell.jpg" %}{:.center}
 
