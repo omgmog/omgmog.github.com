@@ -1,6 +1,6 @@
 ---
 
-title: "Review: The Revo K101 Plus"
+title: "The Revo K101 Plus Portable Games Console"
 tags: ["consumerism", "review", "nintendo", "software", "hardware"]
 redirect_from: /post/review-the-revo-k101-plus/
 ---

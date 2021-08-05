@@ -1,6 +1,6 @@
 ---
 
-title: A review of the Tronsmart Mars G01 Game Pad
+title: The Tronsmart Mars G01 Game Pad
 tags: ["consumerism", "review", "android", "software", "hardware", "accessories"]
 redirect_from: /post/review-of-the-tronsmart-mars-g01-game-pad/
 ---

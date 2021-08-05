@@ -1,6 +1,6 @@
 ---
 
-title: Finally... a review of the GPD G5A Android handheld
+title: The GPD G5A Portable Android Games Console
 tags: ["consumerism", "review", "android", "software", "hardware"]
 redirect_from: /post/finally-a-review-of-the-gpd-g5a-android-handheld/
 ---

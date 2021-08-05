@@ -1,6 +1,6 @@
 ---
 
-title: Portable Android gaming with the JXD 7800B
+title: The JXD 7800B Portable Android Games Console
 tags: ["consumerism", "review", "android", "software", "hardware"]
 redirect_from: /post/portable-android-gaming-with-the-jxd-7800b/
 ---

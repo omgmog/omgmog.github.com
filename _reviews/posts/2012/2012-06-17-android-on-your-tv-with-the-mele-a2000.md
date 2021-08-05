@@ -1,6 +1,6 @@
 ---
 
-title: "Android on your TV with the Mele A2000"
+title: "The Mele A2000 Android TV Box"
 tags: ["android", "consumerism", "review"]
 redirect_from: /post/android-on-your-tv-with-the-mele-a2000/
 ---

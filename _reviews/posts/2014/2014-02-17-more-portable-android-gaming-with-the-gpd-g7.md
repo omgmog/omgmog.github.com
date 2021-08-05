@@ -1,6 +1,6 @@
 ---
 
-title: More Portable Android Gaming with the GPD G7
+title: The GPD G7 Portable Android Games Console
 tags: ["consumerism", "review", "android", "software", "hardware"]
 redirect_from: /post/more-portable-android-gaming-with-the-gpd-g7/
 ---

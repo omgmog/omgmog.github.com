@@ -1,5 +1,5 @@
 ---
-title: "Windows 10 tablet on the cheap: The Chuwi Vi10 Plus"
+title: "The Chuwi Vi10 Plus Windows and Android Tablet"
 redirect_from: /post/chuwi-vi10-plus-review/
 ---
 

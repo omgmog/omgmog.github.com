@@ -1,6 +1,6 @@
 ---
 
-title: "Finally, a post about the Nexus 7"
+title: "The Nexus 7 Android Tablet from Google"
 tags: ["consumerism", "review", "hardware", "android"]
 redirect_from: /post/finally-a-post-about-the-nexus-7/
 ---

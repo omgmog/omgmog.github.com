@@ -1,6 +1,6 @@
 ---
 
-title: "Hands on with the HP Chromebook 11"
+title: "The HP Chromebook 11"
 tags: ["linux", "consumerism", "review", "software", "hardware", "chromebook"]
 redirect_from: /post/hands-on-with-the-hp-chromebook-11/
 ---
