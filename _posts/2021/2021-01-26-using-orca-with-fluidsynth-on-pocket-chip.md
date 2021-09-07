@@ -1,9 +1,9 @@
 ---
-title: Using ORCA with FluidSynth on the Pocket C.H.I.P.
+title: Using ORCA with FluidSynth on the Pocket CHIP
 comments_issue: 106
 ---
 
-This post is about using the [ORCA](https://hundredrabbits.itch.io/orca) _livecoding playground_ on the [Pocket C.H.I.P.](https://en.wikipedia.org/wiki/CHIP_(computer)#Pocket_CHIP_and_Pockulus)
+This post is about using the [ORCA](https://hundredrabbits.itch.io/orca) _livecoding playground_ on the [Pocket CHIP](https://en.wikipedia.org/wiki/CHIP_(computer)#Pocket_CHIP_and_Pockulus)
 
 From the [ORCA wiki](https://wiki.xxiivv.com/site/orca.html):
 
@@ -54,6 +54,6 @@ Next you need to start ORCA and set it to output to the fluidsynth MIDI output d
 
 Channels 0-8 should be piano, and 9 is a drum kit.
 
-If you want to launch ORCA from the Pocket C.H.I.P. home menu, you could use pocket-home ([instructions here](https://github.com/o-marshmallow/PocketCHIP-pocket-home)) and add a shortcut to launch ORCA.
+If you want to launch ORCA from the Pocket CHIP home menu, you could use pocket-home ([instructions here](https://github.com/o-marshmallow/PocketCHIP-pocket-home)) and add a shortcut to launch ORCA.
 
 The icon command to use would be `vala-terminal -fs 8 --fullscreen -e orca`, but you'll also need to have FluidSynth or your MIDI synthesizer of choice running before you launch ORCA.

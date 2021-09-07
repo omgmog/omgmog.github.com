@@ -1,19 +1,19 @@
 ---
-title: C.H.I.P. stuff
+title: CHIP Stuff
 comments_issue: 107
 ---
 
 > This page is a changing document. I'll probably add more notes to it in the future.
 
-These are just some notes that I've put together in the past about flashing and upgrading the [C.H.I.P.](https://en.wikipedia.org/wiki/CHIP_(computer)) (and Pocket C.H.I.P.) computer. 
+These are just some notes that I've put together in the past about flashing and upgrading the [CHIP](https://en.wikipedia.org/wiki/CHIP_(computer)) (and Pocket CHIP) computer. 
 
 <!-- more -->
 
-This device doesn't have any first party support any more, and it's not as powerful as Raspberry Pi, but it's quite fun and the Pocket C.H.I.P form-factor is great. If you can get hold of one, you should!
+This device doesn't have any first party support any more, and it's not as powerful as Raspberry Pi, but it's quite fun and the Pocket CHIP form-factor is great. If you can get hold of one, you should!
 
-## Erasing and re-flashing the C.H.I.P.
+## Erasing and re-flashing the CHIP
 
-You can erase and factory flash a C.H.I.P. from your computer using [this repo](https://github.com/Thore-Krug/Flash-CHIP). It will completely erase the C.H.I.P., so make sure you have anything important backed up.
+You can erase and factory flash a CHIP from your computer using [this repo](https://github.com/Thore-Krug/Flash-CHIP). It will completely erase the CHIP, so make sure you have anything important backed up.
 
 First you need to jumper the CHIP in FEL mode. You can do this by connecting the FEL pin to any GND pin:
 
@@ -89,7 +89,7 @@ This will replace all of the APT repositories with mainline Debian mirrors. This
 
 Don't bother trying to `dist-upgrade` to a newer Debian version as it tends to break stuff. 🤷
 
-## Installing a newer (> 3.7) version of Cmake on the C.H.I.P
+## Installing a newer (> 3.7) version of Cmake on the CHIP
 
 1. Remove any version of `cmake` installed from `apt`
     ```shell
@@ -101,7 +101,7 @@ Don't bother trying to `dist-upgrade` to a newer Debian version as it tends to b
     ```shell
     ./bootstrap
     ```
-5. Set up a `swapfile` so that we can run `make` with our limited resources on the C.H.I.P
+5. Set up a `swapfile` so that we can run `make` with our limited resources on the CHIP
     ```shell
     sudo su -
     dd if=/dev/zero of=/tmp/swapfile bs=1024 count=1048576 # 1gb swap file
