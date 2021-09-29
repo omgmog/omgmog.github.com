@@ -9,7 +9,7 @@ I've been gradually adding internal speakers to each of my Pocket CHIPs lately a
 
 The Pocket CHIP uses [awesome](https://awesomewm.org) as it's window manager. With awesome you can use the Lua language to script the appearance and behaviour of the user interface, write functions, bind shortcuts to key presses, etc.
 
-I decided to use this to add volume control. With my change you can simply press `ctrl`+`↑` or `ctrl`+`↓` and the volume will increase or decrease by 10% respectively.
+I decided to use this to add volume control. With my changes to `~/.config/awesome/rc.lua` you can simply press `ctrl`+`↑` or `ctrl`+`↓` and the volume will increase or decrease by 10% respectively.
 
 {% include figure.html src="chip-stuff/2021-09-29-095017-480x272-scrot.png" %}{:.center}
 
@@ -63,8 +63,8 @@ I've posted the entire `rc.lua` as a [gist on Github](https://gist.github.com/om
 
 ### Caveats
 
-I've limited the volume range to between 0-100%. You can go higher than this in `alsamixer` directly, but it seemed sensible to have a limit. A volume level of around 50% sound best to me.
+I've limited the volume range to between 0-100%. You can go higher than this in `alsamixer` directly, but it seemed sensible to have a limit. A volume level of around 50% sounds best to me.
 
 Though the volume level is changed, the slider found in the launcher UI doesn't update automatically to reflect the current volume level. That's not something I can control.
 
-Sometimes the increments seems a bit random. The funmctions are adding/substracting 10% each time but somehow `amixer` adds a random 1% here or there. If you want more fine control you can adjust the `volume_up` and `volume_down` functions to use a value smaller than 10.
+Sometimes the increment amount seems a bit random. The functions are adding/substracting 10% each time but somehow `amixer` adds a random 1% here or there. If you want more fine control you can adjust the `volume_up` and `volume_down` functions in your `rc.lua` to use a smaller value.
