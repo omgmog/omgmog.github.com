@@ -51,6 +51,9 @@
   </main>
 
   <footer class="updated">
+    {% if jekyll.environment == "production" %}
+      <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/previous">←</a> An IndieWeb Webring 🕸💍 <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/next">→</a>
+    {% endif %}
     {% assign repo_name = site.github.repository_name %}
     {% assign matched_repos = site.github.public_repositories|where:"name",repo_name %}
     {% for repo in matched_repos limit:1 %}
@@ -93,14 +96,17 @@
     ]
   }
   </script>
+  
+  {% if jekyll.environment == "production" %}
   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('omgmog', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#323842',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
+  <script>
+    kofiWidgetOverlay.draw('omgmog', {
+      'type': 'floating-chat',
+      'floating-chat.donateButton.text': 'Buy me a coffee',
+      'floating-chat.donateButton.background-color': '#323842',
+      'floating-chat.donateButton.text-color': '#fff'
+    });
+  </script>
+  {% endif %}
 </body>
 </html>
