@@ -52,7 +52,10 @@
 
   <footer class="updated">
     {% if jekyll.environment == "production" %}
-      <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/previous">←</a> An IndieWeb Webring 🕸💍 <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/next">→</a>
+      <small>
+        <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/previous">←</a> An IndieWeb Webring 🕸💍 <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/next">→</a>
+      </small>
+        <br>
     {% endif %}
     {% assign repo_name = site.github.repository_name %}
     {% assign matched_repos = site.github.public_repositories|where:"name",repo_name %}
