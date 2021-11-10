@@ -1,6 +1,7 @@
 ---
 title: My workflow for discovering new VR content
 comments_issue: 59
+list: vr
 ---
 
 Since launching the [UX of VR website](https://www.uxofvr.com) last year I've been looking for ways to keep on top of new VR content. For most of the last year I relied solely on a mixture of Google Alerts, manually using the search functionality on websites and browsing VR blogs daily. Here's how I improved on that process.

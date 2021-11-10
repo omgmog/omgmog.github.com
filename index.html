@@ -2,31 +2,52 @@
 title: Posts
 ---
 
-<h3>Posts</h3>
+{% include _post_author.html show_title="true" %}
+
+<h3>Recent Posts</h3>
 <section>
-  {% for post in site.posts limit:10 %}
+  {% assign posts = site.posts | where:"list","blog" %}
+  {% for post in posts limit:5 %}
     {% include _article_preview.html %}
   {% endfor %}
-  <a class="archive" href="{{ site.url }}/archive/">View all ({{site.posts | size }})</a></a>
+  <a class="archive" href="{{ site.url }}/archive/">View all</a></a>
 </section>
 
-<h3>Reviews</h3>
+<h3>CHIP &amp; Pocket CHIP Stuff</h3>
 <section>
-  {% assign reviews = site.reviews | reverse %}
-  {% for post in reviews limit:5 %}
+  {% assign posts = site.posts | where:"list","chip" %}
+  {% for post in posts %}
     {% include _article_preview.html %}
   {% endfor %}
-  <a class="archive" href="{{ site.url }}/reviews/">View all ({{site.reviews | size }})</a></a>
 </section>
 
+<h3>VR Stuff</h3>
+<section>
+  {% assign posts = site.posts | where:"list","vr" %}
+  {% assign reviews =  site.reviews | where:"list","vr" %}
+  {% assign vr_posts = posts | concat:reviews | sort: "-date" %}
+  {% for post in vr_posts %}
+    {% include _article_preview.html %}
+  {% endfor %}
+</section>
 <h3>Cardboctober</h3>
 <section>
+  {{ site.cardboctober_intro | markdownify }}
   {% assign cardboctober = site.cardboctober %}
   <div class="grid">
   {% for post in cardboctober limit:6 offset:1 %}
     {% include _article_grid_preview.html %}
   {% endfor %}
   </div>
-  <a class="archive" href="{{ site.url }}/cardboctober/">View all ({{site.cardboctober | size }})</a></a>
+  <a class="archive" href="{{ site.url }}/cardboctober/">View all</a></a>
 </section>
-{% include _post_author.html show_title="true" %}
+
+
+<h3>Reviews</h3>
+<section>
+  {% assign reviews = site.reviews | where:"list","blog" | reverse %}
+  {% for post in reviews limit:5 %}
+    {% include _article_preview.html %}
+  {% endfor %}
+  <a class="archive" href="{{ site.url }}/reviews/">View all</a></a>
+</section>

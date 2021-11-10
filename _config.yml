@@ -47,6 +47,7 @@ defaults:
       type: "posts"
     values:
       layout: post
+      list: blog
   -
     scope:
       type: "cardboctober"
@@ -57,6 +58,7 @@ defaults:
       type: "reviews"
     values:
       layout: post
+      list: blog
   -
     scope:
       type: "pages"
