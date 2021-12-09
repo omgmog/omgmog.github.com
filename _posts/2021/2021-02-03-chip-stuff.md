@@ -41,8 +41,8 @@ This will replace the now defunct _nextthing.co_ APT repositories with a mirror 
 3. remove `jessie-updates` repositories
 4. change `jessie-backports` to:
     ```
-    deb http://archive.debian.org/debian jessie-backports main contrib non-free
-    deb-src http://archive.debian.org/debian jessie-backports main contrib non-free
+    deb http://deb.debian.org/debian jessie-backports main contrib non-free
+    deb-src http://deb.debian.org/debian jessie-backports main contrib non-free
     ```
 5. Disable `apt valid` check:
     ```shell
