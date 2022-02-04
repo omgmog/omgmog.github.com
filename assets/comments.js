@@ -42,7 +42,7 @@
                       avatar: `${comment.user.avatar_url}&size=60`,
                       author: comment.user.login,
                       author_url: comment.user.html_url,
-                      body: marked(comment.body),
+                      body: marked.parse(comment.body),
                       comment_class: comment.author_association.toLowerCase(),
                       who: comment.author_association === 'OWNER' ? 'Author' : 'Guest',
                       date: comment.created_at,
