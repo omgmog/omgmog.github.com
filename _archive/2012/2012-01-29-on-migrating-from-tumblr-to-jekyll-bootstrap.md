@@ -43,7 +43,7 @@ One of the downsides of using a platform that uses a WYSIWYG editor is that the 
 
 ## Setting up my subdomain to work with GitHub pages
 
-Using a custom subdomain with GitHub pages couldn't be easier. You simply create a file named `CNAME` with the subdomain you want to use contained in it, and put it in the [root of your GitHub repository](https://github.com/omgmog/omgmog.github.com/blob/master/CNAME).
+Using a custom subdomain with GitHub pages couldn't be easier. You simply create a file named `CNAME` with the subdomain you want to use contained in it, and put it in the root of your GitHub repository.
 
 After you've set up the `CNAME` file on your repository, you'll also need to create the subdomain with your domain registrar, and point it to the [GitHub Pages IP address](http://pages.github.com/#custom_domains).
 

@@ -32,17 +32,6 @@ Try resizing your browser, I've added `breakpoints` at `1200px`, `1024px`, and `
 
 I've factored out some bits of code into Jekyll template includes, to reduce code duplication in my templates.
 
-So now the main folder structure is like this:
-
-- [\_includes](https://github.com/omgmog/omgmog.github.com/tree/master/_includes)
-  - [single_post.html](https://github.com/omgmog/omgmog.github.com/blob/master/_includes/single_post.html)
-- [\_layouts](https://github.com/omgmog/omgmog.github.com/tree/master/_layouts)
-  - [layout.html](https://github.com/omgmog/omgmog.github.com/blob/master/_layouts/layout.html)
-  - [post.html](https://github.com/omgmog/omgmog.github.com/blob/master/_layouts/post.html)
-- [archive.html](https://github.com/omgmog/omgmog.github.com/blob/master/archive.html)
-- [index.html](https://github.com/omgmog/omgmog.github.com/blob/master/index.html)
-- [feed.xml](https://github.com/omgmog/omgmog.github.com/blob/master/feed.xml)
-
 I've also spent some time going through all of the old posts on here, many of which were still using some messy `HTML` from way back when the blog was hosted on Tumblr, and bringing them up to scratch to use `Markdown`, and deleting some that were no longer useful.
 
 I'm sure there will be some issues here and there, so if you spot anything odd, and you care enough, feel free to [let me know](https://github.com/omgmog/omgmog.github.com/issues)!
