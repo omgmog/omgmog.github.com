@@ -2,36 +2,33 @@
 title: Posts
 ---
 
+{% assign posts = site.posts %}
+{% assign total_posts = posts | size %}
+{% assign page_amount = 10 %}
+{% assign remainder = total_posts | modulo: page_amount %}
+{% assign number_of_pages = total_posts | minus: remainder | divided_by: page_amount %}
+
+{% for i in (0..number_of_pages) %}
+  {% capture classes %}post-list {% if i > 0 %}hidden{% endif %}{% endcapture %}
+  {% assign offset = page_amount | times: i %}
+  {% if offset != total_posts %}
+    <ul class="{{ classes }}" data-group="{{ i }}">
+    {% for post in posts offset:offset limit:page_amount %}
+      <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span>{% if post.type %}<span class="type">{{ post.type }}</span>{% endif %}<time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%B %Y" }}</time></a></li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
+
+<a class="btn btn-viewmore hidden" href="#">View more</a>
+<script>
+  const viewMoreBtn = document.querySelector('.btn-viewmore');
+  viewMoreBtn.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector('.post-list.hidden').classList.remove('hidden');
+  });
+  viewMoreBtn.classList.remove('hidden');
+</script>
+<p>Looking for more? I recently had a Spring clean and <a href="https://github.com/search?q=repo:{{site.github.owner_name}}/{{site.github.repository_name}}+path:_archive+path:_reviews&type=Code">archived</a> a bunch of old posts.</p>
+
 {% include _post_author.html show_title="true" %}
-
-<h3 class="wide-h3">Posts</h3>
-<section>
-  {% assign posts = site.posts %}
-  {% assign total_posts = posts | size %}
-  {% assign page_amount = 10 %}
-  {% assign remainder = total_posts | modulo: page_amount %}
-  {% assign number_of_pages = total_posts | minus: remainder | divided_by: page_amount %}
-
-  {% for i in (0..number_of_pages) %}
-    {% capture classes %}post-list {% if i > 0 %}hidden{% endif %}{% endcapture %}
-    {% assign offset = page_amount | times: i %}
-    {% if offset != total_posts %}
-      <ul class="{{ classes }}" data-group="{{ i }}">
-      {% for post in posts offset:offset limit:page_amount %}
-        <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span><time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%B %Y" }}</time></a></li>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  {% endfor %}
-
-  <a class="archive view-more hidden" href="#">View more</a>
-  <script>
-    const viewMoreBtn = document.querySelector('.view-more');
-    viewMoreBtn.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelector('.post-list.hidden').classList.remove('hidden');
-    });
-    viewMoreBtn.classList.remove('hidden');
-  </script>
-  <p>Looking for more? I recently had a Spring clean and <a href="https://github.com/search?q=repo:{{site.github.owner_name}}/{{site.github.repository_name}}+path:_archive+path:_reviews&type=Code">archived</a> a bunch of old posts.</p>
-</section>

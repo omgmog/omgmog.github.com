@@ -1,0 +1,40 @@
+---
+title: VR Stuff
+permalink: /vr
+---
+
+{% include _myface.html flipped=true classes="right" %}
+
+<p>
+  Since 2015 I've been dabbling with VR and curating the <a href="https://www.uxofvr.com">UX of VR</a> list. I've given a number of talks on topics around developing VR experiences using web technologies, and my personal experience of creating something for VR each day for a <a href="{{"/cardboctober" | absolute_url}}">whole month</a>. 
+</p>
+<h3 class="wide-h3">Posts</h3>
+<ul class="post-list">
+  {% assign vr_posts = site.posts | where:"type","vr" %}
+  {% for post in vr_posts %}
+    <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span><time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%d %B %Y" }}</time></a></li>
+  {% endfor %}
+</ul>
+
+<h3 class="wide-h3">Talks</h3>
+<ul class="post-list thumbnail-list">
+  {% assign vr_talks = site.data.vr-talks | sort:"date" %}
+  {% for talk in vr_talks %}
+    <li>
+      <img src="{{ talk.img | prepend:"/images/" | absolute_url }}" />
+      <h4>{{ talk.title }}</h4>
+      <p>{{ talk.summary }}</p>
+      <div class="btns">
+        <a href="{{ talk.slides }}" class="btn">View Slides</a>
+        <a href="{{ talk.source }}" class="btn">View Source</a>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+<h3 class="wide-h3">Cardboctober</h3>
+<ul class="post-list">
+  {% for post in site.cardboctober  %}
+    <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span><time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%d %B %Y" }}</time></a></li>
+  {% endfor %}
+</ul>

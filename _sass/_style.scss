@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5 {
   // make headings within posts have more space before them
   .e-content & {
     * + & {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
   }
 }
@@ -71,27 +71,40 @@ main {
   align-items: center;
   margin-bottom: 2rem;
   margin-top: 4rem;
+  cursor: default;
+  user-select: none;
 
   &:first-child {
     margin-top: 0;
   }
 
+  &::before,
   &::after {
-    content: '';
     height: .1rem;
     flex: 1;
     background-color: $grey;
+    content: '';
+  }
+  &::after {
     margin-left: .5em;
+  }
+  &::before {
+    flex-basis: 1rem;
+    flex-grow: 0;
+    margin-right: .5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wide-h3 {
+    justify-content: center;
+    text-align: center;
+
+    &::before {
+      flex: 1;
+    }
   }
 }
     
-.archive {
-  font-size: 1rem;
-  font-weight: bold;
-  padding: .125em .25em;
-  margin: 1rem auto auto;
-  display: inline-block;
-}
 
 .post {
   header {
@@ -320,7 +333,7 @@ blockquote {
   display: flex;
   align-items: center;
 
-  img {
+  .u-photo {
     max-width: 100%;
     height: auto;
     order: 0;
@@ -332,9 +345,19 @@ blockquote {
   }
 }
 
-// Media queries
+.u-photo.right {
+  float: right;
+  width: 10rem;
+  margin-top: -2rem;
+}
+@media screen and (max-width: 600px) {
+  .u-photo.right { display: none;}
+}
 
 @media screen and (max-width: 600px) {
+  main { 
+    padding: .5rem;
+  }
   .header {
     flex-direction: column;
     text-align: center;
@@ -366,12 +389,6 @@ blockquote {
       display: none;
     }
   }
-
-  .grid {
-    .grid-block {
-      flex-basis: 100%;
-    }
-  }
 }
 @media screen and (min-width: 1200px) {
   body {
@@ -380,21 +397,25 @@ blockquote {
     margin-left: auto;
     margin-right: auto;
   }
-
-  .grid {
-    .grid-block {
-      flex-basis: 33%;
-
-      figcaption {
-        font-size: .6rem;
-      }
-    }
-  }
 }
 
 
-// new shit
-
+.btn {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: .125em .25em;
+  margin: 1rem auto auto;
+  display: inline-block;
+}
+.btn-viewmore {
+  display: none;
+  .hidden ~ & {
+    display: inline-block;
+  }
+  &.hidden {
+    display: none !important;
+  }
+}
 .post-list {
   display: block;
   margin: 0;
@@ -411,9 +432,13 @@ blockquote {
     padding: 0;
     font-size: 1.25rem;
 
-    a {
+    > div,
+    > a {
       display: flex;
       justify-content: space-between;
+      flex: 1;
+    }
+    > a {
       text-decoration: none;
       background: none;
       border: none;
@@ -422,28 +447,57 @@ blockquote {
       &:hover {
         background-color: $yellow;
       }
+    }
+    .btns {
+      margin-bottom: 2rem;
+    }
 
-      span {
-        text-decoration: underline;
-        text-decoration-color: $yellow;
-        flex-grow: 1;
-      }
-      time {
-        flex-shrink: 0;
+    span {
+      text-decoration: underline;
+      text-decoration-color: $yellow;
+      flex-grow: 1;
+
+      &.type {
+        flex-grow: 0;
+        background: $yellow;
         font-size: .6em;
-        opacity: .8;
         margin-left: 1rem;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        padding: .25em;
+        text-transform: uppercase;
+        align-items: center;
       }
+    }
+    time {
+      flex-shrink: 0;
+      font-size: .6em;
+      opacity: .8;
+      margin-left: 1rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: .8rem;
     }
   }
 }
-.view-more {
-  display: none;
-  .hidden ~ & {
-    display: inline-block;
+.thumbnail-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  li {
+    flex: 1;
+    flex-basis: 50%;
+    padding: .5rem;
   }
-  &.hidden {
-    display: none !important;
+  h4 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  p {
+    text-align: center;
   }
 }
 
@@ -453,6 +507,12 @@ blockquote {
       a {
         display: block;
       }
+    }
+  }
+  .thumbnail-list {
+    li {
+      flex-basis: 100%;
+      padding: 0;
     }
   }
 }

@@ -1,0 +1,24 @@
+- title: "Cardboctober"
+  summary: A talk about creating VR experiences every day for a month
+  date: 2016-11-01
+  slides:  https://blog.omgmog.net/talk-cardboctober/talk.html
+  source: https://github.com/omgmog/talk-cardboctober
+  img: "vr/talk-cardboctober.jpg"
+- title: "20 Minutes into The Future"
+  summary: A talk about creating Google Cardboard VR experiences using JavaScript
+  date: 2015-11-01
+  slides: https://blog.omgmog.net/talk-20-minutes-into-the-future/talk.html
+  source: https://github.com/omgmog/talk-20-minutes-into-the-future
+  img: "vr/talk-20mins.jpg"
+- title: "An introduction to using A-Frame"
+  summary: This was part of an onboarding/kool-aiding for A-Frame that I put together for participants of Game Dev Day
+  date: 2016-07-23
+  slides: https://blog.omgmog.net/talk-an-intro-to-aframe/talk.html
+  source: https://github.com/omgmog/talk-an-intro-to-aframe
+  img: "vr/talk-aframe.jpg"
+- title: "The UX of VR: 10 Quick Tips"
+  summary: This was a short talk given at The Oxford Mega Super Meetup Meetup
+  date: 2017-02-15
+  slides: https://blog.omgmog.net/talk-uxofvr-10-tips/talk.html
+  source: https://github.com/omgmog/talk-uxofvr-10-tips
+  img: "vr/talk-uxofvr.jpg"

@@ -1,5 +1,6 @@
 ---
 title: "The Virtoba S1 Daydream VR Bluetooth Controller"
+type: vr
 ---
 
 The Virtoba S1 is a Daydream compatible controller from China that costs around £15 ($20). Let me just start with saying I've got a lot of cheap Bluetooth controllers -- and for the most part they're crap. 

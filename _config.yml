@@ -26,8 +26,8 @@ sass:
 menu:
   - link: "/"
     title: "Posts"
-  - link: "/cardboctober"
-    title: "Cardboctober"
+  - link: "/vr"
+    title: "VR Stuff"
 
 collections:
   cardboctober:
@@ -50,4 +50,4 @@ defaults:
     scope:
       type: "pages"
     values:
-      layout: layout
+      layout: page
