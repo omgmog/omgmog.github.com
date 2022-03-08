@@ -3,11 +3,20 @@ title: Page not found
 permalink: "404.html"
 ---
 <h2>I couldn't find that page!</h2>
-<p>Try looking in the <a href="{{ site.url }}/archive/">Archive</a>.</p>
+<p id="message">Maybe you should <a href="{{ "/" | absolute_url }}">start again</a>?</a></p>
 
-<h3>
-  Recent posts
-</h3>
-{% for post in site.posts limit:10 %}
-  {% include _article_preview.html %}
-{% endfor %}
+<script>
+  const pathName = window.location.pathname;
+  const search_folders = ['_archive', '_posts', '_reviews', '_cardboctober'];
+  const prefixes = ['/post/', '/review/'];
+  const message_el = document.getElementById('message');
+  prefixes.forEach(prefix => {
+    if (pathName.match(prefix)) {
+      let folders_string = `path:${search_folders.join('+path:')}`;
+      let query = pathName.replace(prefix,'').replace('/','');
+      let url = `https://github.com/search?q=repo:{{site.github.owner_name}}/{{site.github.repository_name}}+${folders_string}+filename:${query}&type=Code`;
+
+      message_el.innerHTML = `I may have archived that post. Try looking on <a href="${url}">Github</a>.`;
+    }
+  });
+</script>

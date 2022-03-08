@@ -1,6 +1,0 @@
-<article class="grid-block">
-  {% capture filename %}{{post.date| date:"%Y-%m/%d/giphy.gif"}}{% endcapture %}
-  {% assign tlen = post.title | size %}
-  {% assign title = post.title | slice:4,tlen %}
-  {% include figure.html src=filename linkurl=post.url caption=title %}
-</article>

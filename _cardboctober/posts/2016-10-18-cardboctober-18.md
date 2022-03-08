@@ -1,7 +1,5 @@
 ---
 title: "18: Moving around in VR"
-redirect_from:
-  - /post/cardboctober-18/
 ---
 
 Unless your VR experience is a roller coaster or some other sort of rail-based experience, you shouldn't take movement control away from the user. Lack of movement control can cause VR sickness.
@@ -26,13 +24,13 @@ The user is projects a circle or marker to where they want to move to, and then 
 
 In my day 12 hack -- [AAAAH! Zombies](https://cardboctober.github.io/max/12/) -- I used retical-based teleportation. I actually stole this from [Pete's earlier day 11 hack: Blink](https://cardboctober.github.io/pete/11/).
 
-{% include figure.html src="2016-10/18/blink.png" %}{:.massive.center}
+{% include figure.html src="2016-10/18/blink.png" %}{:.massive}
 
 ### Voice control
 
 I played around with this in [day 09's hack: Speech Recognition](https://cardboctober.github.io/max/09/) to move a ball around, but it could easily be adapted to moving the user around. Simple commands such as "move forward 10" or "move left 5", much like the old Television series "Knightmare" where the team command their blind team-mate around with commands
 
-{% include figure.html src="2016-10/18/knightmare.jpg" %}{:.massive.center}
+{% include figure.html src="2016-10/18/knightmare.jpg" %}{:.massive}
 
 ### Gesture-based
 

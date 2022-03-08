@@ -1,7 +1,5 @@
 ---
 title: "25: Creating and Moving Pieces"
-redirect_from:
-  - /post/cardboctober-25/
 has_hack: true
 ---
 
@@ -41,4 +39,4 @@ document.addEventListener('keydown', function (e) {
 
 For the sake of simplifying things today, I've gone back to a flat game board. I'll re-introduce the curve tomorrow!
 
-{% include figure.html src="2016-10/25/giphy.gif" %}{:.massive.center}
+{% include figure.html src="2016-10/25/giphy.gif" %}{:.massive}

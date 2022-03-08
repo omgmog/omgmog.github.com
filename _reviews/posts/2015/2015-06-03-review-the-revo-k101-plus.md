@@ -1,8 +1,6 @@
 ---
 
 title: "The Revo K101 Plus Portable Games Console"
-tags: ["consumerism", "review", "nintendo", "software", "hardware"]
-redirect_from: /post/review-the-revo-k101-plus/
 ---
 
 Today I'm refreshed to be reviewing a console that doesn't try to cram too much in to the form factor, but instead tried to focus on doing one thing well.

@@ -1,7 +1,5 @@
 ---
 title: "19: Which way is North? Part 1"
-redirect_from:
-  - /post/cardboctober-19/
 ---
 
 When developing for Google Cardboard VR with JavaScript we're depending on the browser's support of device orientation to know which way the user is looking. You can't guarantee the user is always looking in the direction you've oriented your scene.
@@ -12,7 +10,7 @@ This is probably one of the most glaring problems you'll encounter when you fina
 
 For me this happened while presenting some demos as part of my "[20 Minutes into the Future with Google Cardboard and JavaScript](/post/talk-jsoxford-20-minutes-into-the-future/)" in 2015.
 
-{% include figure.html src="2016-10/19/presenting.png" %}{:.massive.center}
+{% include figure.html src="2016-10/19/presenting.png" %}{:.massive}
 
 The problem is that I didn't account for the direction I would be presenting in when I created the demos. All of my demos were created with the default orientation of cardinal North, but the stage I was presenting from was facing South.
 

@@ -1,8 +1,6 @@
 ---
 
 title: "The HP Chromebook 11"
-tags: ["linux", "consumerism", "review", "software", "hardware", "chromebook"]
-redirect_from: /post/hands-on-with-the-hp-chromebook-11/
 ---
 
 I bought a [HP Chromebook 11](http://www.google.com/intl/en/chrome/devices/hp-chromebook-11/#hp-cb-11-everyday&tab=colour-blue) as soon as I possibly could when it was announced. I've had a couple of weeks to play with it now, so here are my thoughts...

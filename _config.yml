@@ -1,12 +1,9 @@
 permalink: /post/:title/
-exclude: ["_config.yml", ".gitignore", "README.md", "node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock"]
+exclude: ["_dev.yml","_config.yml", ".gitignore", "README.md", "node_modules", "gulpfile.js", "Gemfile", "Gemfile.lock"]
 url: "https://blog.omgmog.net"
 safe: true
-paginate: 15
-paginate_path: "archive/page:num/"
 excerpt_separator: "<!-- more -->"
 keep_files: ["images/","assets/","CNAME","robots.txt"]
-repository: omgmog/omgmog.github.com
 
 markdown: kramdown
 kramdown:
@@ -16,30 +13,26 @@ kramdown:
 name: "The blog of Max Glenister"
 
 author:
-    name: "Max Glenister"
-    bio: "Max Glenister is a front-end developer from Oxford. He writes mostly about front-end development and technology."
+  name: "Max Glenister"
+  bio: "Max Glenister is a front-end developer from Oxford. He writes mostly about front-end development and technology."
+  twitter: "omgmog"
+  github: "omgmog"
+  home: "https://omgmog.net"
+  avatar: "https://omgmog.net/faceicon.png"
 
 sass:
     style: compressed
 
-# Jekyll < 3.5.0
-gems:
-  - jekyll-redirect-from
-  - jekyll-paginate
-# Jekyll 3.5.0+
-plugins:
-  - jekyll-redirect-from
-  - jekyll-paginate
-# Jekyll in safe mode
-whitelist:
-  - jekyll-redirect-from
-  - jekyll-paginate
-
 menu:
   - link: "/"
     title: "Posts"
-  - link: "/reviews/"
-    title: "Reviews"
+  - link: "/cardboctober"
+    title: "Cardboctober"
+
+collections:
+  cardboctober:
+    output: true
+    permalink: /:collection/:title/
 
 defaults:
   -
@@ -55,26 +48,6 @@ defaults:
       layout: post
   -
     scope:
-      type: "reviews"
-    values:
-      layout: post
-      list: blog
-  -
-    scope:
       type: "pages"
     values:
       layout: layout
-
-collections:
-  cardboctober:
-    output: true
-    permalink: /:collection/:title/
-  reviews:
-    output: true
-    permalink: /:collection/:title/
-
-reviews_intro: >
-  I enjoy technology and I love nothing more than receiving new gadgets. If I'm not buying a new toy to play with, I'm reading about the latest thing somewhere.
-
-cardboctober_intro: >
-  I spent every day of October 2016 creating VR content for Google Cardboard using JavaScript/WebGL/other WebAPIs and blogged about it.

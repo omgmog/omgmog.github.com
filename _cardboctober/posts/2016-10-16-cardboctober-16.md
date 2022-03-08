@@ -1,7 +1,5 @@
 ---
 title: "16: Getting in and out of Fullscreen"
-redirect_from:
-  - /post/cardboctober-16/
 ---
 
 Today we’re looking at the task of getting in and out of Fullscreen. Fullscreen helps maintain an immersive experience.
@@ -12,7 +10,7 @@ When using JavaScript as we’re confined to the capabilities of the web browser
 
 At the time of writing this (October 2016) the support for FullScreen is very patchy across the board and needs vendor prefixed variants for each part of the FullScreen API:
 
-{% include figure.html src="2016-10/16/support.png" %}{:.massive.center}
+{% include figure.html src="2016-10/16/support.png" %}{:.massive}
 
 FullScreen must be triggered by the user, it can’t be triggered automatically.
 
@@ -20,7 +18,7 @@ I began Cardboctober simply targeting Chrome with my FullScreen implementation, 
 
 Even with the polyfill in place on the JavaScript side of things, you still need to use vendor-prefixed CSS selectors for styling things in and out of fullscreen mode (such as hiding a “go fullscreen” button).
 
-{% include figure.html src="2016-10/16/fsdevice.png" %}{:.massive.center}
+{% include figure.html src="2016-10/16/fsdevice.png" %}{:.massive}
 
 In my [core.js library](https://github.com/cardboctober/max/blob/master/js/core.js) I’ve now got a function called `createFullScreenControl` that injects a “go fullscreen” button. This functional only creates the button if the page it’s called from is not embedded in an iframe, is on a mobile device and if the browser supports fullscreen.
 

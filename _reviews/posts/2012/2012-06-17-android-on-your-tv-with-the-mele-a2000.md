@@ -1,8 +1,6 @@
 ---
 
 title: "The Mele A2000 Android TV Box"
-tags: ["android", "consumerism", "review"]
-redirect_from: /post/android-on-your-tv-with-the-mele-a2000/
 ---
 I decided to buy an Android-powered set top box because my Apple TV 1 didn't cut it for playing HD media, and I find it inconvenient to hook my MacBook up to the TV everytime I want to watch some HD media.
 

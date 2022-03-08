@@ -1,8 +1,6 @@
 ---
 
 title: The GPD G5A Portable Android Games Console
-tags: ["consumerism", "review", "android", "software", "hardware"]
-redirect_from: /post/finally-a-review-of-the-gpd-g5a-android-handheld/
 ---
 
 I've got another Android gaming handheld to review, the [GPD G5A from GamePad Digital](http://www.gpd.hk/products.asp?selectclassid=017001&id=1279). I've had this device for a little while now, and have played with it loads. This device was sent to my directly from GPD back in February, but I've been too busy with life to write up a review.

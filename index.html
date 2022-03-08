@@ -4,50 +4,34 @@ title: Posts
 
 {% include _post_author.html show_title="true" %}
 
-<h3>Recent Posts</h3>
+<h3 class="wide-h3">Posts</h3>
 <section>
-  {% assign posts = site.posts | where:"list","blog" %}
-  {% for post in posts limit:5 %}
-    {% include _article_preview.html %}
-  {% endfor %}
-  <a class="archive" href="{{ site.url }}/archive/">View all</a></a>
-</section>
+  {% assign posts = site.posts %}
+  {% assign total_posts = posts | size %}
+  {% assign page_amount = 10 %}
+  {% assign remainder = total_posts | modulo: page_amount %}
+  {% assign number_of_pages = total_posts | minus: remainder | divided_by: page_amount %}
 
-<h3>CHIP &amp; Pocket CHIP Stuff</h3>
-<section>
-  {% assign posts = site.posts | where:"list","chip" %}
-  {% for post in posts %}
-    {% include _article_preview.html %}
+  {% for i in (0..number_of_pages) %}
+    {% capture classes %}post-list {% if i > 0 %}hidden{% endif %}{% endcapture %}
+    {% assign offset = page_amount | times: i %}
+    {% if offset != total_posts %}
+      <ul class="{{ classes }}" data-group="{{ i }}">
+      {% for post in posts offset:offset limit:page_amount %}
+        <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span><time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%B %Y" }}</time></a></li>
+      {% endfor %}
+      </ul>
+    {% endif %}
   {% endfor %}
-</section>
 
-<h3>VR Stuff</h3>
-<section>
-  {% assign posts = site.posts | where:"list","vr" %}
-  {% assign reviews =  site.reviews | where:"list","vr" %}
-  {% assign vr_posts = posts | concat:reviews | sort: "-date" %}
-  {% for post in vr_posts %}
-    {% include _article_preview.html %}
-  {% endfor %}
-</section>
-<h3>Cardboctober</h3>
-<section>
-  {{ site.cardboctober_intro | markdownify }}
-  {% assign cardboctober = site.cardboctober %}
-  <div class="grid">
-  {% for post in cardboctober limit:6 offset:1 %}
-    {% include _article_grid_preview.html %}
-  {% endfor %}
-  </div>
-  <a class="archive" href="{{ site.url }}/cardboctober/">View all</a></a>
-</section>
-
-
-<h3>Reviews</h3>
-<section>
-  {% assign reviews = site.reviews | where:"list","blog" | reverse %}
-  {% for post in reviews limit:5 %}
-    {% include _article_preview.html %}
-  {% endfor %}
-  <a class="archive" href="{{ site.url }}/reviews/">View all</a></a>
+  <a class="archive view-more hidden" href="#">View more</a>
+  <script>
+    const viewMoreBtn = document.querySelector('.view-more');
+    viewMoreBtn.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector('.post-list.hidden').classList.remove('hidden');
+    });
+    viewMoreBtn.classList.remove('hidden');
+  </script>
+  <p>Looking for more? I recently had a Spring clean and <a href="https://github.com/search?q=repo:{{site.github.owner_name}}/{{site.github.repository_name}}+path:_archive+path:_reviews&type=Code">archived</a> a bunch of old posts.</p>
 </section>

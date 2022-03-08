@@ -2,12 +2,11 @@
 title: Cardboctober
 ---
 
-<h3>{{ page.title }}</h3>
-{{ site.cardboctober_intro | markdownify }}
+<h3 class="wide-h3">{{ page.title }}</h3>
+<p>I spent every day of October 2016 creating VR content for Google Cardboard using JavaScript/WebGL/other WebAPIs and blogged about it.</p>
 
-<h3>2016</h3>
-
-{% assign _posts = site.cardboctober %}
-{% for post in _posts %}
-  {% include _article_preview.html %}
-{% endfor %}
+<ul class="post-list">
+  {% for post in site.cardboctober  %}
+    <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span><time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%d %B %Y" }}</time></a></li>
+  {% endfor %}
+</ul>

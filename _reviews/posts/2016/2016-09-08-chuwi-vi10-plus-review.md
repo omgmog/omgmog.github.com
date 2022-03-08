@@ -1,6 +1,5 @@
 ---
 title: "The Chuwi Vi10 Plus Windows and Android Tablet"
-redirect_from: /post/chuwi-vi10-plus-review/
 ---
 
 {% include figure.html src="2016-09-08/chuwivi10plus.png" %}{:.massive}

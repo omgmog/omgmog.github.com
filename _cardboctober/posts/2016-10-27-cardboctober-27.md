@@ -1,7 +1,5 @@
 ---
 title: "27: Moving with gaze"
-redirect_from:
-  - /post/cardboctober-27/
 has_hack: true
 ---
 
@@ -35,6 +33,6 @@ var getLooking = function () {
 There's a lot going on there, and some MAGIC, and it's not going to scale, but it sort of works.
 
 
-{% include figure.html src="2016-10/27/giphy.gif" %}{:.massive.center}
+{% include figure.html src="2016-10/27/giphy.gif" %}{:.massive}
 
 I'm not completely happy with this, so you may have noticed the poop emoji (💩) all over the place. I'll _definitely_ throw this away with the re-write I'm working on, but it's nice to explore the idea.

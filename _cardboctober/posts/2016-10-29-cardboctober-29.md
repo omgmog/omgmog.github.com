@@ -1,7 +1,5 @@
 ---
 title: "29: Blocks out of the pram"
-redirect_from:
-  - /post/cardboctober-29/
 has_hack: true
 ---
 
@@ -45,6 +43,6 @@ When I got to the point of merging colliding blocks (so they become part of the 
 
 So I'll shelf it for now, and do something else for today...
 
-{% include figure.html src="2016-10/29/giphy.gif" %}{:.massive.center}
+{% include figure.html src="2016-10/29/giphy.gif" %}{:.massive}
 
 And I suppose that raises a good point about what I'm doing for Cardboctober. This is meant to be a month of fun simple hacks, not overplanned complex long-running projects. I can do those any other time of the year.

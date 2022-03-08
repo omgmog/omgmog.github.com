@@ -1,7 +1,5 @@
 ---
 title: "06: VR Pairs Game"
-redirect_from:
-  - /post/cardboctober-06/
 has_hack: true
 ---
 
@@ -9,7 +7,7 @@ Todays hack is intended more as an activity to pull together various bits from t
 
 <!-- more -->
 
-{% include figure.html src="2016-10/06/giphy1.gif" %}{:.massive.center}
+{% include figure.html src="2016-10/06/giphy1.gif" %}{:.massive}
 
 The keen-eyed amongst you would have noticed that it's filled with the face of Ben Foxall. For that we can thank Marcus Noble for his [library of Ben faces](https://github.com/AverageMarcus/BensSholder). Thanks Marcus.
 
@@ -66,7 +64,7 @@ var pickCardSet = function (arr, count) {
 
 So we start with a collection of Bens...
 
-{% include figure.html src="2016-10/06/bens1.png" %}{:.massive.center}
+{% include figure.html src="2016-10/06/bens1.png" %}{:.massive}
 
 Then we use `pickCardSet()` to get 8 random Bens:
 
@@ -75,9 +73,9 @@ var benCount = 16;
 var randomBens = pickCardSet(bens, benCount / 2); // 16/2 = 8
 ```
 
-{% include figure.html src="2016-10/06/bens2.png" %}{:.massive.center}
+{% include figure.html src="2016-10/06/bens2.png" %}{:.massive}
 
-{% include figure.html src="2016-10/06/bens3.png" %}{:.massive.center}
+{% include figure.html src="2016-10/06/bens3.png" %}{:.massive}
 
 Then duplicate the 8 Bens to make 8 pairs (16 Bens!):
 
@@ -86,7 +84,7 @@ var clonedBens = randomBens.slice(0);
 randomBens = randomBens.concat(clonedBens);
 ```
 
-{% include figure.html src="2016-10/06/bens4.png" %}{:.massive.center}
+{% include figure.html src="2016-10/06/bens4.png" %}{:.massive}
 
 And then lastly, use the `pickCardSet()` function again to shuffle the Bens:
 
@@ -99,7 +97,7 @@ randomBens = pickCardSet(randomBens, benCount);
 Once we've got the array of random Ben pairs, generating the play area is just as simple as looping through the array and creating a textured `BoxGeometry` for each Ben. You can read more about this sort of thing in my "[Skyboxes and generating meshes](/post/cardboctober-04)" post.
 
 
-{% include figure.html src="2016-10/06/bens5.png" %}{:.massive.center}
+{% include figure.html src="2016-10/06/bens5.png" %}{:.massive}
 
 To lay 16 Bens out in a 4x4 grid automatically, a simple modulo operation is used to start a new line every 4 Bens:
 
@@ -144,4 +142,4 @@ I tweaked the size of the cards, and adjusted the spacing so that the top row di
 
 I also added in the "Start" button at the start of the game, because I found that in the initial play test it was easy to accidentally start triggering the card flips while orienting the Google Cardboard.
 
-{% include figure.html src="2016-10/06/giphy.gif" %}{:.massive.center}
+{% include figure.html src="2016-10/06/giphy.gif" %}{:.massive}

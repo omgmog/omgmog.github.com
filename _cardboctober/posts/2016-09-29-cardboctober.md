@@ -1,7 +1,6 @@
 ---
 title: Announcing Cardboctober
-redirect_from:
-  - /post/cardoctober/
+hide_pager: true
 ---
 
 Throughout October [Ben](https://twitter.com/benjaminbenben) and I are working on a project called [Cardboctober](https://cardboctober.github.io). The challenge is hacking on something new every day using Google Cardboard.
@@ -14,7 +13,7 @@ This will most likely involve a lot of JavaScript and Three.js, but it could eve
 
 I've got a huge list of ideas -- well, I've got enough ideas to cover the first 10 or so days of October, but after that the quality is probably going to go down hill.
 
-{% include figure.html src="2016-09-29/cardboctober.png" %}{:.massive}
+{% include figure.html src="2016-09-29/cardboctober.png" %}{:.massive.center}
 
 I'll try to blog in a short-medium form here for each of my hacks.
 

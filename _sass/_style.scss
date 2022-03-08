@@ -62,40 +62,35 @@ h5 {
 main {
   padding: 2rem;
   background-color: #fff;
+}
 
-  > h3,
-  > article > h3 {
-    display: flex;
-    text-transform: uppercase;
-    align-items: center;
-    margin-bottom: 2rem;
 
-    &::after {
-      content: '';
-      height: .1rem;
-      flex: 1;
-      background-color: $grey;
-      margin-left: .5em;
-    }
+.wide-h3 {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+
+  &:first-child {
+    margin-top: 0;
   }
-  > h3:not(:first-child) {
-    margin-top: 4rem;
+
+  &::after {
+    content: '';
+    height: .1rem;
+    flex: 1;
+    background-color: $grey;
+    margin-left: .5em;
   }
-  section {
+}
     
-    .archive {
-      font-size: 1rem;
-      font-weight: bold;
-      padding: .125em .25em;
-      background-size: 100% 100%;
-      margin: 1rem auto auto;
-      display: inline-block;
-
-      &:hover {
-        background-size: 100% 0;
-      }
-    }
-  }
+.archive {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: .125em .25em;
+  margin: 1rem auto auto;
+  display: inline-block;
 }
 
 .post {
@@ -113,7 +108,6 @@ a {
   color: inherit;
   text-decoration: none;
   border-bottom: .1rem solid $yellow;
-  background-image: linear-gradient(120deg, $yellow, $yellow);
   background-size: 100% 0;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -121,12 +115,8 @@ a {
   box-decoration-break: clone;
 
   &:hover {
-    border-bottom-color: currentColor;
+    background-color: $yellow;
   }
-}
-main a:hover {
-  border-bottom-color: $yellow;
-  background-size: 100% 100%;
 }
 .post-meta {
   font-size: .8rem;
@@ -155,6 +145,24 @@ img {
 figure {
   margin: 2rem 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.massive {
+    margin-left: -1rem;
+    width: calc(100% + 2rem);
+  
+    img {
+      flex-grow: 1;
+    }
+  }
+  &.center {
+    img {
+      flex: 0;
+      margin: auto;
+    }
+  }
 }
 
 
@@ -175,10 +183,6 @@ figure {
     height: 100%;
     width: 100%;
   }
-}
-.massive {
-  margin-left: -1rem;
-  width: calc(100% + 2rem);
 }
 
 article {
@@ -209,50 +213,27 @@ article {
     margin-top: 2rem;
   }
 }
-.grid {
+.prevnext {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 
-  .grid-block {
+  .prev,
+  .next {
     flex: 1;
-    flex-basis: 50%;
-    margin: 0 0 1rem;
-
-    figure {
-      margin: 0;
-    }
-
-    figcaption {
-      font-size: .8rem;
-      margin: 0 .25rem;
-      padding-top: .5rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-
-      
-      &::before {
-        content: '';
-        height: .1rem;
-        flex: 1;
-        background-color: $grey;
-        margin-right: .25em;
-      }
-
-      &::after {
-        content: '';
-        height: .1rem;
-        flex: 1;
-        background-color: $grey;
-        margin-left: .25em;
-      }
-    }
-
-    a {
-      padding: .25rem .25rem 0;
-      display: block;
-      line-height: 1;
-    }
+    padding: 1rem;
+    border: none;
+    font-weight: bold;
+  }
+  .prev {
+    text-align: left;
+  }
+  .next {
+    text-align: right;
+  }
+  .disabled {
+    opacity: .4;
+    cursor: default;
+    pointer-events: none;
   }
 }
 .notice {
@@ -289,9 +270,6 @@ article {
     }
   }
 }
-.center {
-  text-align: center;
-}
 
 blockquote {
   background-color: rgba($grey, .2);
@@ -313,28 +291,6 @@ blockquote {
     }
   }
 }
-
-.pagination {
-  display: flex;
-  border-top: .1rem solid $grey;
-  padding-top: 2rem;
-  margin-top: 2rem;
-
-  a {
-    flex: 1;
-    border: 0;
-    text-transform: uppercase;
-  }
-  .pull-left {
-    text-align: left;
-    align-self: flex-start;
-  }
-  .pull-right {
-    text-align: right;
-    align-self: flex-end;
-  }
-}
-
 .pull-comment {
   blockquote {
     position: relative;
@@ -431,6 +387,71 @@ blockquote {
 
       figcaption {
         font-size: .6rem;
+      }
+    }
+  }
+}
+
+
+// new shit
+
+.post-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &.hidden {
+    display: none;
+  }
+
+  li {
+    width: 100%;
+    margin: 0 0 .5em;
+    padding: 0;
+    font-size: 1.25rem;
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      text-decoration: none;
+      background: none;
+      border: none;
+      padding: .25em;
+
+      &:hover {
+        background-color: $yellow;
+      }
+
+      span {
+        text-decoration: underline;
+        text-decoration-color: $yellow;
+        flex-grow: 1;
+      }
+      time {
+        flex-shrink: 0;
+        font-size: .6em;
+        opacity: .8;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+.view-more {
+  display: none;
+  .hidden ~ & {
+    display: inline-block;
+  }
+  &.hidden {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .post-list {
+    li {
+      a {
+        display: block;
       }
     }
   }

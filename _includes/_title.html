@@ -1,5 +1,5 @@
 <h2>
-	<a href="{% if jekyll.environment == "production" %}{{ site.url }}{% endif %}{{ post.url }}" class="p-name u-url">
+	<a href="{{ post.url | absolute_url }} class="p-name u-url">
 		{{ post.title }}
 	</a>
 </h2>

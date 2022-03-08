@@ -1,8 +1,27 @@
-### Cardboctober
-
+{% assign day_number = page.date|date:'%d'|times:1 %}
+<h3 class="wide-h3">Cardboctober{% unless page.hide_pager %} day {{ day_number }}{% endunless %}</h3>
+{% unless page.hide_pager %}
+<p class="prevnext">
+    {% if day_number > 1 %}
+    <a href="{{ page.previous.url }}" class="prev">Previous day</a>
+    {% else %}
+    <span class="prev disabled">Previous day</span>
+    {% endif %}
+    {% if day_number < 31 %}
+    <a href="{{ page.next.url }}" class="next">Next day</a>
+    {% else %}
+    <span class="next disabled">Next day</span>
+    {% endif %}
+</p>
+{% endunless %}
 {% if page.has_hack %}
-View this Cardboctober hack [{{ page.title }}](https://cardboctober.github.io/max/{{ page.date|date:'%d'}}/)
-
-View the other submissions for day {{ page.date|date:'%d' }} on the [Cardboctober website](https://cardboctober.github.io/#{{ page.date|date:'%d' }}).
+<p>
+    View this Cardboctober hack <a href="https://cardboctober.github.io/max/{{ page.date|date:'%d'}}/">{{ page.title }}</a>
+</p>
+<p>
+    View the other submissions for day {{ day_number}} on the <a href="https://cardboctober.github.io/#{{ page.date|date:'%d' }}">Cardboctober website</a>.
+</p>
 {% endif %}
-Check out my other Cardoctober posts here: [/cardboctober](/cardboctober)
+<p>
+    Check out my other Cardoctober posts here: <a href="{{ "/cardboctober" | absolute_url }}">/cardboctober</a>.
+</p>

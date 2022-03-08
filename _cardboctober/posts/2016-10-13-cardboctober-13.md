@@ -1,7 +1,5 @@
 ---
 title: "13: AAAAH! More Zombies"
-redirect_from:
-  - /post/cardboctober-13/
 has_hack: true
 ---
 
@@ -9,7 +7,7 @@ For today's hack I'm revisiting [yesterday's zombie game](/post/cardboctober-12)
 
 <!-- more -->
 
-{% include figure.html src="2016-10/13/giphy.gif" %}{:.massive.center}
+{% include figure.html src="2016-10/13/giphy.gif" %}{:.massive}
 
 There are a couple of things I've changed in the re-write:
 

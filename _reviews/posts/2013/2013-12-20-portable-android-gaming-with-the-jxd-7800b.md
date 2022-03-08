@@ -1,8 +1,6 @@
 ---
 
 title: The JXD 7800B Portable Android Games Console
-tags: ["consumerism", "review", "android", "software", "hardware"]
-redirect_from: /post/portable-android-gaming-with-the-jxd-7800b/
 ---
 
 It has been a while since I've had a new portable console to play with (and I'm still waiting for my GCW to arrive!), so let's ease back in to this stuff with an Android-powered console from JinXang Digital (JXD): The JXD 7800B.
