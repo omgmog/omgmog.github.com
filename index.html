@@ -14,7 +14,7 @@ title: Posts
   {% if offset != total_posts %}
     <ul class="{{ classes }}" data-group="{{ i }}">
     {% for post in posts offset:offset limit:page_amount %}
-      <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span>{% if post.type %}<span class="type">{{ post.type }}</span>{% endif %}<time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%B %Y" }}</time></a></li>
+      <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span>{% if post.type %}<span class="type type-{{post.type|slugify}}">{{ post.type }}</span>{% endif %}<time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%B %Y" }}</time></a></li>
     {% endfor %}
     </ul>
   {% endif %}

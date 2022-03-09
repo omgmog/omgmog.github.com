@@ -40,7 +40,7 @@ defaults:
       type: "posts"
     values:
       layout: post
-      list: blog
+      type: blog
   -
     scope:
       type: "cardboctober"

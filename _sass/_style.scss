@@ -478,6 +478,19 @@ blockquote {
         padding: .25em;
         text-transform: uppercase;
         align-items: center;
+        text-decoration: none;
+
+        &.type-vr {
+          background-color: #198226;
+          color: #fff;
+        }
+        &.type-chip {
+          background-color: #eb008b;
+          color: #fff;
+        }
+        &.type-blog {
+          display: none;
+        }
       }
     }
     time {
@@ -516,6 +529,10 @@ blockquote {
     li {
       a {
         display: block;
+      }
+      span.type {
+        display: inline-block;
+        line-height: .8;
       }
     }
   }

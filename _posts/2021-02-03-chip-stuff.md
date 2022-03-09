@@ -1,7 +1,7 @@
 ---
 title: CHIP Stuff
 comments_issue: 107
-list: chip
+type: chip
 ---
 
 > This page is a changing document. I'll probably add more notes to it in the future.

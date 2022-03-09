@@ -1,7 +1,7 @@
 ---
 title: UX in Virtual Reality
 comments_issue: 86
-list: vr
+type: vr
 ---
 
 {% include figure.html src="maxcardboard.jpg" %}{:.massive.center}
