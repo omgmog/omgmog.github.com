@@ -1,0 +1,6 @@
+<div class="clear"></div><div class="image-with-title">
+{%- capture img -%}{% if include.img %}<img src="{{ include.img | prepend:"/images/" | absolute_url }}" {% if include.width%}style="width:{{ include.width }}"{% endif %}/>{% endif %}{%- endcapture -%}
+{%- capture title -%}{% if include.title %}{% capture level %}{% if include.level %}{{ include.level }}{% else %}4{% endif %}{% endcapture %}{% for i in (1..level) %}#{% endfor %} {{ include.title }}{% endif %}{%- endcapture -%}
+{{ img }}
+{{ title | strip | markdownify }}
+</div>

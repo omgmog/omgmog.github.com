@@ -154,7 +154,14 @@ img {
   height: auto;
   margin: auto;
 }
-
+.image-with-title {
+  img {
+    width: 6rem;
+    height: auto;
+    float: left;
+    margin-right: 1rem;
+  }
+}
 figure {
   margin: 2rem 0;
   text-align: center;
@@ -177,7 +184,10 @@ figure {
     }
   }
 }
-
+.clear {
+  clear: both;
+  display: block;
+}
 
 .iframe {
   position: relative;
