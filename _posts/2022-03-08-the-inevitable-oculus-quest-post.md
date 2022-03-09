@@ -1,5 +1,6 @@
 ---
 title: The Inevitable Oculus Quest Post
+comments_issue: 112
 type: vr
 ---
 
