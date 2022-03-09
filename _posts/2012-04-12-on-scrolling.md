@@ -1,12 +1,6 @@
 ---
 comments_issue: 52
 title: On scrolling
-tags:
-  - mac
-  - usability
-  - software
-  - browser
-updated: 2013-08-14T00:00:00.000Z
 ---
 Scrolling on the web is something that we take for granted when thinking about how users will interact with our website. There are two schools of thought on the subject: one that's ingrained in how we interact with what we're seeing on our screen, and the other ingrained in how we interact with the real world.
 

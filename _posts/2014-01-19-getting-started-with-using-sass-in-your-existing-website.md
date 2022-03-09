@@ -1,15 +1,6 @@
 ---
 title: Getting started with using Sass in your existing website
 comments_issue: 19
-tags:
-  - project
-  - tutorial
-  - tip
-  - software
-  - terminal
-  - development
-  - sass
-featured: 'true'
 ---
 Sass is a CSS-compatible preprocessor for CSS. It allows you to reduce the amount of duplication and complexity in your CSS by using variables, mixins (functions), nesting, and other cool things that should have existed in the CSS spec from the beginning.
 

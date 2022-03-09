@@ -1,11 +1,6 @@
 ---
 title: Creating an icon font
 comments_issue: 43
-tags:
-  - project
-  - tutorial
-  - software
-  - development
 ---
 
 I've recently been doing a lot of working designing an icon font that works well at small sizes for my day job. Here's an overview of the process I'm using to go from a doodle on paper, to a functional icon font that can be used in most web browsers.

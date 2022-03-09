@@ -1,12 +1,5 @@
 ---
 title: So you want to organise a hack day?
-tags:
-  - project
-  - conference
-  - software
-  - hardware
-  - hackday
-  - development
 comments_issue: 88
 ---
 

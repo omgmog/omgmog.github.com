@@ -1,12 +1,5 @@
 ---
 title: Compressing PDF files from your Mac or Linux terminal with Ghostscript
-tags:
-  - mac
-  - linux
-  - tutorial
-  - tip
-  - terminal
-  - software
 comments_issue: 90
 ---
 I arrived at this solution recently when looking to compress a massive print-quality PDF for the web.
