@@ -24,6 +24,8 @@ sass:
     style: compressed
 
 menu:
+  - link: "/now"
+    title: "/now"
   - link: "/"
     title: "Posts"
   - link: "/vr"
