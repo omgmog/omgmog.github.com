@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
-    {% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}
+    {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
   </title>
   {% if page.excerpt %}
   <meta name="description" content="{{ page.excerpt | strip_html | strip }}">
@@ -12,10 +12,10 @@
   <meta name="description" content="{{ site.author.bio }}">
   {% endif %}
   <!-- opengraph -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.author.bio }}{% endif %}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{{ site.url }}{% unless page.url == '/index.html' %}{{ page.url }}{% endunless %}">
+  <meta property="og:url" content="{% unless page.url == '/index.html' %}{{ page.url | absolute_url }}{% else %}{{ site.url }}{% endunless %}">
   <meta property="og:image" content="{{ site.author.avatar }}">
 
 
@@ -29,7 +29,6 @@
 
   <!-- other -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - RSS Feed" href="{{ "/feed.xml" | absolute_url }}">
-  <link rel="alternate" type="application/json" title="{{ site.name }} - JSON Feed" href="{{ "/feed.json" | absolute_url }}">
   <link rel="canonical" href="{% unless page.url == '/index.html' %}{{ page.url | absolute_url }}{% else %}{{ site.url }}{% endunless %}">
   <link rel="icon" type="image/png" href="{{ site.author.avatar }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One%7COpen+Sans">
