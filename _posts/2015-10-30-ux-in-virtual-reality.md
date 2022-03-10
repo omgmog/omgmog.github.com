@@ -10,6 +10,6 @@ I've been trying to find resources on the subject of User Experience and User In
 
 <!-- more -->
 
-I couldn't find any good single place that collates the various articles and videos that are out there, so I've put together a list on Github.
+I couldn't find any good single place that collates the various articles and videos that are out there, so I've put together a list.
 
-You can [find the UI/UX VR list here](https://github.com/omgmog/ui-ux-vr), and if you've got any additional resources to add to it, feel free to send a [pull request](https://github.com/omgmog/ui-ux-vr/pulls).
+You can [find the UX of VR here](https://www.uxofvr.com).

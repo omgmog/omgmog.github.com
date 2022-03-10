@@ -297,9 +297,22 @@ article {
   nav {
     align-self: center;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 
-    a + a {
-      margin-left: 1rem;
+    a {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      padding: .2em;
+
+      & + a {
+        margin-left: 1rem;
+      }  
+    }
+    svg {
+      width: 1em;
+      height: auto;
     }
   }
 }

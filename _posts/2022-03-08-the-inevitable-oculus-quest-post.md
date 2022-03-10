@@ -7,7 +7,7 @@ type: vr
 I sold my HTC Vive back in 2020 and bought an Oculus Quest. Was it an impulsive _lockdown treat_? Perhaps; but it was time for an upgrade.
 
 I went for the 128GB model, and had to order from the German Amazon store as nowhere in the UK had stock at the time. I was impressed with Amazon Prime in this case, and then in awe of their logistics network. I ordered at around midday, and then received the Oculus Quest 24 hours later from Germany at no extra cost.
-
+<!-- more -->
 I wasn't too happy about having to link a Facebook account (though I believe they've now gone back on that requirement), but it's not as if my sporadical VR gaming sessions leave much to be tracked.
 
 Facebook aside, it's a great untethered headset.

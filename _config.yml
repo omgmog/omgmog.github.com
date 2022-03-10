@@ -18,6 +18,12 @@ author:
   github: "omgmog"
   home: "https://omgmog.net"
   avatar: "https://omgmog.net/faceicon.png"
+plugins:
+  - jekyll-feed
+whitelist:
+  - jekyll-feed
+feed:
+  excerpt_only: true
 menu:
   - link: "/now"
     title: "Now"

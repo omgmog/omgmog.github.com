@@ -7,7 +7,7 @@ type: chip
 The Pocket CHIP doesn't come with internal speakers. It has the GPIO pins for audio, but nothing is hooked up. On the CHIP itself there is a 3.5mm audio jack for connecting headphones, and you can pair a Bluetooth speaker.
 
 On the old NTC blog there was a post back in 2016 about adding an internal speaker using a fairly inexpensive PAM8403 amplifier and a speaker. You can find a mirror of the old post from the NTC blog on [archive.org](http://web.archive.org/web/2016/http://blog.nextthing.co/add-a-speaker-to-pocketc-h-i-p-in-less-than-20-minutes/)
-
+<!-- more -->
 {% include figure.html src="2021-11/messy-desk.jpg" %}{:.center}
 
 ### Adding an internal speaker

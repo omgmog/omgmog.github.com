@@ -1,0 +1,1 @@
+{% include icons/{{include.icon}}.svg title=include.title %}
