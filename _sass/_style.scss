@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5 {
   line-height: 1.1;
 
   // make headings within posts have more space before them
-  .e-content & {
+  .e-content > & {
     * + & {
       margin-top: 2rem;
     }
@@ -205,16 +205,6 @@ figure {
     bottom: 0;
     width: 100%;
     height: 100%;
-  }
-
-  &.twitter {
-    border: .1rem solid #dadbdf;
-    max-width: 30rem;
-
-    iframe {
-      position: absolute !important;
-      height: 100% !important;
-    }
   }
 }
 

@@ -1,0 +1,14 @@
+- title: Phone
+  value: "[Google Pixel 5](https://store.google.com/us/product/pixel_5a_5g)"
+- title: Watch
+  value: "Going between a Pebble 1, Fitbit Flex, and [Bangle.js 2](https://shop.espruino.com/banglejs2)"
+- title: Portables
+  values: 
+    - "[MacBook Pro Retina 2015](https://support.apple.com/kb/SP715?locale=en_US)"
+    - "[Lenovo Duet Chromebook](https://www.lenovo.com/gb/en/laptops/lenovo/student-chromebooks/)"
+- title: Desktop
+  value: "i7 6700k/32GB/Windows 10"
+- title: Audio
+  values: 
+  - "[Google Pixel Buds](https://store.google.com/us/product/pixel_buds)"
+  - "[Urbanista New York headphones](https://www.urbanista.com/uk/new-york)"
