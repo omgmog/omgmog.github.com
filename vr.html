@@ -18,7 +18,7 @@ permalink: /vr
 
 <h3 class="wide-h3">Talks</h3>
 <ul class="post-list thumbnail-list">
-  {% assign vr_talks = site.data.vr-talks | sort:"date" %}
+  {% assign vr_talks = site.data.vr.talks | sort:"date" %}
   {% for talk in vr_talks %}
     <li>
       <img src="{{ talk.img | prepend:"/images/" | absolute_url }}" />
