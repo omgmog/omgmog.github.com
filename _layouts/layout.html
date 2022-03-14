@@ -49,37 +49,15 @@
   {{ content }}
   </main>
 
-  <footer class="updated">
-    {% unless page.show_webring_inline %}
+  <footer class="main-footer">
+    <small>
+      &copy; 2010 Max Glenister. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.
+      <br>
+      {% if site.github %}Website last updated: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time | date_to_long_string }}</a><br>{% endif %}
       {% include webring.html %}
-    {% endunless %}
-    {% if site.github %}
-      <small>Website last updated: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time }}</a></small>
-    {% endif %}
+    </small>
+    
   </footer>
-  {% if jekyll.environment == "production" %}
-  <!-- Piwik -->
-  <script>
-  var _paq = _paq || [];
-  // tracker methods like "setCustomDimension" should be called before "trackPageView"
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u = "//marmjam.co/piwik/";
-    _paq.push(['setTrackerUrl', u + 'piwik.php']);
-    _paq.push(['setSiteId', '2']);
-    var d = document,
-      g = d.createElement('script'),
-      s = d.getElementsByTagName('script')[0];
-    g.type = 'text/javascript';
-    g.async = true;
-    g.defer = true;
-    g.src = u + 'piwik.js';
-    s.parentNode.insertBefore(g, s);
-  })();
-  </script>
-  <!-- End Piwik Code -->
-  {% endif %}
   <script type="application/ld+json">
   {
     "@context": "http://schema.org",

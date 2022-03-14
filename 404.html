@@ -12,9 +12,9 @@ permalink: "404.html"
   const message_el = document.getElementById('message');
   prefixes.forEach(prefix => {
     if (pathName.match(prefix)) {
-      let folders_string = `path:${search_folders.join('+path:')}`;
+      let folders_string = `path:${search_folders.join('+path%3A')}`;
       let query = pathName.replace(prefix,'').replace('/','');
-      let url = `https://github.com/search?q=repo:{{site.github.owner_name}}/{{site.github.repository_name}}+${folders_string}+filename:${query}&type=Code`;
+      let url = `https://github.com/search?q=repo%3A{{site.github.owner_name}}/{{site.github.repository_name}}+${folders_string}+filename%3A${query}&type=Code`;
 
       message_el.innerHTML = `I may have archived that post. Try looking on <a href="${url}">Github</a>.`;
     }
