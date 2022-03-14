@@ -50,10 +50,9 @@
   </main>
 
   <footer class="updated">
-    <small>
-      <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/previous">←</a> <a href="https://xn--sr8hvo.ws" title="An IndieWeb Webring">🕸💍</a> <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/next">→</a>
-    </small>
-      <br>
+    {% unless page.show_webring_inline %}
+      {% include webring.html %}
+    {% endunless %}
     {% if site.github %}
       <small>Website last updated: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time }}</a></small>
     {% endif %}

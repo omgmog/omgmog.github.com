@@ -25,6 +25,7 @@ body {
   text-align: center;
   font-size: .8em;
   color: rgba(#000,.6);
+  margin: -1rem;
 }
 
 h1, h2, h3, h4, h5 {
@@ -64,6 +65,15 @@ main {
   background-color: #fff;
 }
 
+.e-content {
+  ul {
+    li {
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
 
 .wide-h3 {
   display: flex;
@@ -154,12 +164,27 @@ img {
   height: auto;
   margin: auto;
 }
+.img-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  img {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 49%;
+    width: 49%;
+    margin: 0;
+  }
+}
 .image-with-title {
   img {
     width: 6rem;
     height: auto;
     float: left;
     margin-right: 1rem;
+    margin-bottom: 2rem;
   }
 }
 figure {
@@ -189,6 +214,9 @@ figure {
   display: block;
 }
 
+iframe {
+  max-width: 100%;
+}
 .iframe {
   position: relative;
   padding-top: 56.25%;
