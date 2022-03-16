@@ -2,23 +2,37 @@
   link: https://github.com/omgmog/pocketchip-menu
   description: "I've been working on writing a menu app for the Pocket CHIP using PyGame. There has been some work to revive the Pocket CHIP and get it running an up-to-date mainline Debian linux."
   img: https://user-images.githubusercontent.com/50949/139332901-b71a6006-9e25-4ce8-b614-13c5f2cdc231.png
+  now: true
 - title: Carbs calculator
   link: https://carbs.omgmog.net
   description: "This is a simple PWA that I wrote using Vue.js. It let's me pick a food from a list, enter the portion size, and then it gives me the total carbohydrates in the food."
+  now: true
 - title: Airquotes The Podcast Airquotes
   link: https://remotehack.space/live
   description: "Since 2021 I've been editing the episodes for this short-form podcast that is recorded during each [Remote Hack](https://remotehack.space). You can find all episodes on Spotify."
   embed: '<iframe src="https://open.spotify.com/embed-podcast/show/2ppoyoTxxSv9IvRGGqLWP7" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
+  now: true
 - title: We're going to space
   link: https://github.com/omgmog/were-going-to-space
   description: "This was my entry for the 2017 Samsung VR Together Hackathon. It's a simple-ish Three.js WebVR scene that should work across most devices."
   img: 
     - https://camo.githubusercontent.com/2994d6f2d2ebaa043b193b8f0cdf981dcaa360a06e15376257133239279e40e7/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f7855504763687555374730593332374d666d2f67697068792e676966
-    - https://camo.githubusercontent.com/195af30a493bc959f00f204eac8925aa8daf8cf6815d5b33338d791356263a86/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6c3049796e4f487348485061746b3045772f67697068792e676966
+  vr: true
+  now: true
 - title: UX of VR
   link: https://www.uxofvr.com
   description: "I created this list of VR UX resources back in 2016 and have been keeping it alive ever since."
-  embed: '<div class="github-card" data-github="omgmog/uxofvr.com" data-width="400" data-height="" data-theme="default"></div><script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>'
+  embed: '<div class="github-card" data-user="omgmog" data-repo="uxofvr.com" data-width="400" data-height="" data-theme="default"></div>'
+  vr: true
+  now: true
+- title: Cardboctober
+  link: https://cardboctober.github.io
+  description: "I spent every day of October 2016 creating VR content for Google Cardboard using JavaScript/WebGL/other WebAPIs and blogged about it."
+  img: 
+    - https://cardboctober.github.io/max/03/giphy.gif
+    - https://cardboctober.github.io/max/10/giphy.gif
+  vr: true
 - title: Dingoonity
   link: https://boards.dingoonity.org
   description: 'Dingoonity is still going! It has been 13 years since it launched. My involvement is mostly janitorial these days. If you ever see a `500 error` page when visiting the site, it was my fault.'
+  now: true

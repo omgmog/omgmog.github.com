@@ -2,7 +2,7 @@
 title: Now (ish)
 permalink: /now
 show_webring_inline: true
-last_modified_at: 2022-03-14T13:26:16
+last_modified_at: 2022-03-16T10:12:30
 ---
 
 {% if page.last_modified_at %}
@@ -29,8 +29,8 @@ Currently using the following:
 Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spend my time implementing game UIs using web technologies.
 
 ### Projects
-
-{% for project in site.data.now.projects %}
+{% assign projects = site.data.projects | where:"now","true" %}
+{% for project in projects %}
 #### [{{ project.title }}]({{ project.link }})
 {{ project.description | markdownify }}
 {% if project.img %}
@@ -46,7 +46,7 @@ Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spe
 I'm still [on Twitter](https://twitter.com/omgmog), though I'm not using it actively.
 
 #### Github
-<div class="github-card" data-github="omgmog" data-width="400" data-height="150" data-theme="default"></div><script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+<div class="github-card" data-user="omgmog" data-width="400" data-height="150" data-theme="default"></div>
 
 #### Discord
 I'm on <a href="https://discordapp.com/users/omgmog#6206">Discord</a> occasionally. I've joined a handful of niche technology communities on there, but I don't participate much.

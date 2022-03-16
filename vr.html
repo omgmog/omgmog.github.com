@@ -32,7 +32,23 @@ permalink: /vr
   {% endfor %}
 </ul>
 
-<h3 class="wide-h3">Cardboctober</h3>
+<h3 class="wide-h3">Projects</h3>
+<ul class="post-list thumbnail-list">
+  {% assign vr_projects = site.data.projects | where:"vr","true" %}
+  {% for project in vr_projects %}
+    <li>
+      {% if project.img %}<div class="img-grid">{% for img in project.img %}<img src="{{ img }}" />{% endfor %}</div>{% endif %}
+      {% if project.embed %}{{ project.embed }}{% endif %}
+      <h4>{{ project.title }}</h4>
+      <p>{{ project.description }}</p>
+      <div class="btns">
+        <a href="{{ project.link }}" class="btn">View Project</a>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+<h3 class="wide-h3">Cardboctober posts</h3>
 <ul class="post-list">
   {% for post in site.cardboctober  %}
     <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span><time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%d %B %Y" }}</time></a></li>
