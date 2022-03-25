@@ -1,6 +1,7 @@
 ---
 
 title: "The Revo K101 Plus Portable Games Console"
+old_url: "/reviews/review-the-revo-k101-plus/"
 ---
 
 Today I'm refreshed to be reviewing a console that doesn't try to cram too much in to the form factor, but instead tried to focus on doing one thing well.
