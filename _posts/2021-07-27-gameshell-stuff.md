@@ -1,11 +1,11 @@
 ---
-title: "Gameshell Stuff"
+title: "GameShell Stuff"
 comments_issue: 109
 ---
 
-I bought a ClockworkPi Gameshell back in October 2019. I’ve been playing with it a bit lately (in anticipation of the ClockworkPi DevTerm shipping!) and I realised I haven't yet posted anything about it on here.
+I bought a ClockworkPi GameShell back in October 2019. I’ve been playing with it a bit lately (in anticipation of the ClockworkPi DevTerm shipping!) and I realised I haven't yet posted anything about it on here.
 
-Here's some of the hardware mods I've made to my Gameshell.
+Here's some of the hardware mods I've made to my GameShell.
 
 {% include figure.html src="gameshell-stuff/gameshell.jpg" %}{:.center}
 
@@ -13,7 +13,7 @@ Here's some of the hardware mods I've made to my Gameshell.
 
 ## External reset button
 
-Adding an external reset switch is quite straight-forward, and can be done with very minimal alterations to the back of the Gameshell. In this case, I’ve modified the non-LEGO back, but it would work just as effectively on that back too.
+Adding an external reset switch is quite straight-forward, and can be done with very minimal alterations to the back of the GameShell. In this case, I’ve modified the non-LEGO back, but it would work just as effectively on that back too.
 
 Tools needed
 
@@ -36,7 +36,7 @@ Tools needed
 
 ## External access to microSD slot
 
-This is one of my biggest complaints about the Gameshell – the fact that you have to basically fully disassemble everything to get to the microSD card. I bought a small flat ribbon cable microSD extender to move the microSD to a more accessible location and positioned the microSD extension using some nifty folds…
+This is one of my biggest complaints about the GameShell – the fact that you have to basically fully disassemble everything to get to the microSD card. I bought a small flat ribbon cable microSD extender to move the microSD to a more accessible location and positioned the microSD extension using some nifty folds…
 
 {% include figure.html src="gameshell-stuff/sd-extension.jpg" %}{:.center}
 
@@ -44,7 +44,7 @@ This is one of my biggest complaints about the Gameshell – the fact that you h
 
 ## Big Fat Battery mod
 
-I found the Gameshell’s 1200mAh battery to be insufficient… so I upgraded the battery!
+I found the GameShell’s 1200mAh battery to be insufficient… so I upgraded the battery!
 
 I had a 4000mAh 3.7v LiPo kicking around in my parts bin – I’m not sure what this came from, but the dimensions are:
 
@@ -52,8 +52,8 @@ I had a 4000mAh 3.7v LiPo kicking around in my parts bin – I’m not sure what
 - Height: 55mm
 - Thickness: 9mm
 
-That’s pretty close to the size of the entire battery module that comes in the Gameshell.
+That’s pretty close to the size of the entire battery module that comes in the GameShell.
 
-To install it, I had to jam it in to the case, shim it to the right thickness with some pieces of cardboard, and then hook up the 5v/GND wires from the battery to the Gameshell battery cable. I couldn’t find the polarity of this documented anywhere, so I had to determine this (and mark the white cable for future reference) based on looking at the JST connector on the battery module.
+To install it, I had to jam it in to the case, shim it to the right thickness with some pieces of cardboard, and then hook up the 5v/GND wires from the battery to the GameShell battery cable. I couldn’t find the polarity of this documented anywhere, so I had to determine this (and mark the white cable for future reference) based on looking at the JST connector on the battery module.
 
 {% include figure.html src="gameshell-stuff/big-fat-battery.jpg" %}{:.center}
