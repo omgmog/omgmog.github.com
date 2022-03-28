@@ -3,7 +3,7 @@ title: "DevTerm Stuff"
 comments_issue: 113
 ---
 
-I helped crowdfund the [DevTerm from ClockworkPi](https://www.clockworkpi.com/devterm) back in November 2020 and it arrived in January 2022. Here's some of the hardware mods I've made to improve my DevTerm.
+I helped crowdfund the [DevTerm from ClockworkPi](https://www.clockworkpi.com/devterm) back in November 2020 and it arrived in January 2022. It's a nice device, but it's not perfect. Here's some of the mods I've made to improve my DevTerm.
 
 {% include figure.html src="devterm-stuff/devterm.png" %}{:.center}
 
@@ -11,9 +11,9 @@ I helped crowdfund the [DevTerm from ClockworkPi](https://www.clockworkpi.com/de
 
 ## Trackball replacement
 
-This replacement part was originally suggested [in this post](https://forum.clockworkpi.com/t/the-cheapest-keyboard-hardware-mod/7708) on the ClockworkPi forum. I ordered a couple from a seller on AliExpress and then waited a month for them to arrive.
+This replacement trackball was originally suggested [in this post on the ClockworkPi forum](https://forum.clockworkpi.com/t/the-cheapest-keyboard-hardware-mod/7708). I ordered a couple from a seller on AliExpress and then waited a month for them to arrive.
 
-While I waited, I also [flashed an improved keyboard firmware](https://forum.clockworkpi.com/t/ive-rewritten-devterm-keyboard-trackball-firmware/7671).
+While I waited, I [flashed a custom keyboard firmware](https://forum.clockworkpi.com/t/ive-rewritten-devterm-keyboard-trackball-firmware/7671) that improves the trackball sensitivity.
 
 Installation of the trackball was a very simple process:
 
@@ -30,20 +30,20 @@ Installation of the trackball was a very simple process:
 
 {% include figure.html src="devterm-stuff/trackball-installed.jpg" %}{:.center}
 
-## Better access to microSD slot
+## Better access to Micro SD slot
 
-The DevTerm does feature external access to the microSD slot, but it's spring loaded and positioned on the front bottom edge of the device. It's also notoriously easy to slide your microSD card between the main board and the case, requiring a full disassembly to get it out of the device again.
+The DevTerm does feature external access to the Micro SD slot, but it's spring loaded and positioned on the front bottom edge of the device. It's notoriously easy to slide your Micro SD card between the main board and the case, requiring a full disassembly to get it out of the device again.
 
-Inspired by what [I did with my GameShell](/post/gameshell-stuff/#external-access-to-microsd-slot) with an FPC extension cable, I've relocated the microSD slot  to the bottom/left of the outside of the case.
+Inspired by what [I did with my GameShell](/post/gameshell-stuff/#external-access-to-microsd-slot) with an FPC extension cable, I've relocated the Micro SD slot  to the bottom/left of the outside of the case.
 
-This require a couple of folds, some double sided tape and some regular tape to hold everything in place. It's not quite perfect yet as it's not likely to be very knock-proof, but it feels like a much nicer location for the SD card.
+Installation requires a couple of folds, some double-sided tape and some regular tape to hold everything in place. It's not quite perfect yet and it's not likely to be very robust, but it feels like a much nicer location for the SD card.
 
 {% include figure.html src="devterm-stuff/bottom-of-shell.jpg" %}{:.center}
 {% include figure.html src="devterm-stuff/microsd-closeup.jpg" %}{:.center}
 
 ## Copper cooler/heatsink
 
-I swapped out the icnluded aluminum heatsink for one made of copper. I'm not happy with the dimensions of this, or how it's mounted, but I think it provides an improvmement to the passive cooling of the CPU module. A further improvement would be to [3D print a shroud to direct the airflow of the fan better](https://forum.clockworkpi.com/t/fan-shroud-for-devterm/7598).
+I swapped out the included heatsink for one made of copper. I'm not happy with the dimensions of this, or how it's mounted, but I think it provides an improvement to the passive cooling of the CPU module. A further improvement would be to [3D print a shroud to direct the airflow of the fan better](https://forum.clockworkpi.com/t/fan-shroud-for-devterm/7598).
 
 {% include figure.html src="devterm-stuff/heatsink.jpg" %}{:.center}
 
