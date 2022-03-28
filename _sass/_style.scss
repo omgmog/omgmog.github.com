@@ -556,6 +556,14 @@ blockquote {
           background-color: #eb008b;
           color: #fff;
         }
+        &.type-cpi {
+          background-color: #daeff4;
+          color: #4a6368;
+        }
+        &.type-rpi {
+          background-color: #cd2355;
+          color: #fff;
+        }
         &.type-blog {
           display: none;
         }

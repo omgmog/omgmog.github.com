@@ -1,6 +1,7 @@
 ---
 title: "GameShell Stuff"
 comments_issue: 109
+type: cpi
 ---
 
 I bought a ClockworkPi GameShell back in October 2019. I’ve been playing with it a bit lately (in anticipation of the ClockworkPi DevTerm shipping!) and I realised I haven't yet posted anything about it on here.

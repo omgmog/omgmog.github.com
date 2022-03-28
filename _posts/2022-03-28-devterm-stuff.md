@@ -1,6 +1,7 @@
 ---
 title: "DevTerm Stuff"
 comments_issue: 113
+type: cpi
 ---
 
 I helped crowdfund the [DevTerm from ClockworkPi](https://www.clockworkpi.com/devterm) back in November 2020 and it arrived in January 2022. It's a nice device, but it's not perfect. Here's some of the mods I've made to improve my DevTerm.
