@@ -19,7 +19,7 @@ The G7 is very similar to the JXD 7800B, but with a more ergonomic game-controll
 ## Specification
 - **CPU:** RockChip 3188, Quad Core, 1.6GHz (cortex A9 CPU, ARM mali400 mp4 GPU)
 - **Memory:** 1GB DDR3
-- **Storage:** 8GB internal, microSD up to 32GB
+- **Storage:** 8GB internal, Micro SD up to 32GB
 - **Screen:** 7" TFT, 1024x600
 - **OS:** Android 4.2.2 (4.4 on the way!)
 - **Battery:** 5000mAh

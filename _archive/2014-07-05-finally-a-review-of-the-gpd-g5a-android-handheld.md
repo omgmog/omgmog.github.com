@@ -16,7 +16,7 @@ Apart from the obvious difference in screen size (5” vs 7” on the GPD G7), r
 
 - **CPU:** RockChip 3188, Quad Core, 1.6GHz (cortex A9 CPU, ARM mali400 mp4 GPU)
 - **Memory:** 1GB DDR3
-- **Storage:** 8GB internal, microSD up to 32GB
+- **Storage:** 8GB internal, Micro SD up to 32GB
 - **Screen:** 5" TFT, 800x480
 - **OS:** Android 4.4.2
 - **Battery:** 3500mAh

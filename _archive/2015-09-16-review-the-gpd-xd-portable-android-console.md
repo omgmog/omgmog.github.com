@@ -24,7 +24,7 @@ At first glance the device looks like a Nintendo 3DS XL, however that’s where 
 - **WIFI:** Supports 802.11b/g/n/ac (2.4GHz)
 - **Bluetooth:** Not supported
 - **OS:** Android 4.4.4
-- **Storage:** Built-in 16GB/32GB. Supports microSD up to 128GB
+- **Storage:** Built-in 16GB/32GB. Supports Micro SD up to 128GB
 - **Screen:** H-IPS 5.0” capacitive touch screen.
 - **Resolution:** 1280x720
 - **Controller:** Two control sticks, D-pad, Buttons (volume/power/start/select/back/home/menu/controller/A/B/X/Y/L3/R3), Triggers (L1/L2/R1/R2)

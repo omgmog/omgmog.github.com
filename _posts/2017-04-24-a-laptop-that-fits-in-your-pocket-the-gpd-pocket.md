@@ -153,11 +153,11 @@ In the numbers alone from these benchmarks the GPD Pocket compares to laptops fr
 
 ## Storage
 
-The GPD Pocket comes with 128GB of internal storage. There is no microSD slot. If you want to increase your storage you will need to use a USB drive and sacrifice the one full-sized USB Type-A port on the GPD Pocket.
+The GPD Pocket comes with 128GB of internal storage. There is no Micro SD slot. If you want to increase your storage you will need to use a USB drive and sacrifice the one full-sized USB Type-A port on the GPD Pocket.
 
 With a bit of tweaking, the footprint of the Windows 10 install on the eMMC can be reduced to under 15GB.
 
-I imagine the decision not to include a microSD slot came down to space limitations inside the GPD Pocket, and adding a microSD slot (though simple enough to piggyback the USB bus) would have taken up a considerable amount of space inside that has been used instead for the battery and cooling.
+I imagine the decision not to include a Micro SD slot came down to space limitations inside the GPD Pocket, and adding a Micro SD slot (though simple enough to piggyback the USB bus) would have taken up a considerable amount of space inside that has been used instead for the battery and cooling.
 
 ## Audio
 

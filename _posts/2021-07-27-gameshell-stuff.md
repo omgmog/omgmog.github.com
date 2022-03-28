@@ -35,9 +35,9 @@ Tools needed
 
 {% include figure.html src="gameshell-stuff/external-switch.jpg" %}{:.center}
 
-## External access to microSD slot
+## External access to Micro SD slot
 
-This is one of my biggest complaints about the GameShell – the fact that you have to basically fully disassemble everything to get to the microSD card. I bought a small flat ribbon cable microSD extender to move the microSD to a more accessible location and positioned the microSD extension using some nifty folds…
+This is one of my biggest complaints about the GameShell – the fact that you have to basically fully disassemble everything to get to the Micro SD card. I bought a small flat ribbon cable Micro SD extender to move the Micro SD to a more accessible location and positioned the Micro SD extension using some nifty folds…
 
 {% include figure.html src="gameshell-stuff/sd-extension.jpg" %}{:.center}
 

@@ -16,7 +16,7 @@ Since 2011 the Android portables from JXD have been improving to keep up with th
 ## Specification
 - **CPU:** RockChip 3188, Quad Core, 1.6GHz (cortex A9 CPU, ARM mali400 mp4 GPU)
 - **Memory:** 2GB DDR3
-- **Storage:** 8GB internal, microSD up to 32GB
+- **Storage:** 8GB internal, Micro SD up to 32GB
 - **Screen:** 7" IPS LCD, 1280x800
 - **OS:** Android 4.2.2
 - **Battery:** 5000mAh
@@ -85,7 +85,7 @@ The JXD 7800B features both front and rear-facing cameras (0.3MP and 2MP respect
 
 Out of the box, the JXD 7800B comes with a couple of bundled games. Judging by the start up of each game (messages from cracking teams) and the features available in some games (lots of in-game money available), I'd say these bundled games are not legitimately sourced, but I'm not complaining. They're a great showcase for how well the hardware controls can work in games.
 
-The included 8GB of storage is one of the problems I have with this device, as it's partitioned so stupidly. 1GB of installable space is no good if you want to install a bunch of 3D titles from the Play store. You can move some applications to the other 7GB of space, or even to a microSD card though, so the limited space is a limited problem.
+The included 8GB of storage is one of the problems I have with this device, as it's partitioned so stupidly. 1GB of installable space is no good if you want to install a bunch of 3D titles from the Play store. You can move some applications to the other 7GB of space, or even to a Micro SD card though, so the limited space is a limited problem.
 
 The hardware controls on the JXD 7800B do feel quite sturdy, and having a cross-shaped d-pad is very nice. The right analogue stick doesn't appear to be functional in most cases, but I think I read somewhere that newer firmware versions fix that. Generally the games I've played with the hardware controls have worked great. GTA 3 runs very nicely, and (though incorrectly mapped) uses the hardware controls very well.
 
