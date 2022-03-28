@@ -35,6 +35,7 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   letter-spacing: -.02em;
   line-height: 1.1;
+  scroll-margin-top: 2rem;
 
   // make headings within posts have more space before them
   .e-content > & {
