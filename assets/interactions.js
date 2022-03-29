@@ -81,6 +81,13 @@
 
     module.fetchWebmentions = async url => await fetch(`https://webmention.io/api/mentions.jf2?target=${url}`).then(response => response.json());
 
+    const DEFAULT_DATE_OPTIONS = {
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric',
+    };
+    module.prettyDate = (dateString, options=DEFAULT_DATE_OPTIONS) => new Intl.DateTimeFormat('default', options).format(new Date(dateString));
+
     module.renderThing = (type, data) => {
         let template = type.template;
         const attributes = Object.keys(type.attributes);
@@ -98,11 +105,7 @@
             }
 
             if (attribute === 'date') {
-                value = new Intl.DateTimeFormat('default', {
-                    year: 'numeric', 
-                    month: 'short', 
-                    day: 'numeric'
-                }).format(new Date(value));
+                value = module.prettyDate(value);
             }
             if (attribute === 'body') {
                 value = marked.parse(value);
@@ -125,8 +128,8 @@
         data.forEach(item => {
             type = TYPES[item.type];
             const element = document.querySelector(type.element);
-            element.style.display = 'block';
             element.querySelector('.items').innerHTML += module.renderThing(type, item);
+            element.style.display = 'block';
         });
     };
 
@@ -166,7 +169,7 @@
 
     module.checkForFailedAvatars = () => {
         document.querySelectorAll('#interactions .avatar').forEach(avatar => {
-            avatar.onerror = err => module.makeFallbackAvatar(avatar.dataset.username, avatar);
+            avatar.onerror = () => module.makeFallbackAvatar(avatar.dataset.username, avatar);
         });
     };
 
@@ -174,19 +177,25 @@
 
     module.loadData = what => JSON.parse(localStorage.getItem(what));
 
+    // is it more than an hour old?
+    const now = Date.now();
+    const oneHour = 60 * 60 * 1000;
     let interactions = {
         date: module.loadData(`interactions-date-${pageURL_base64}`) || 0,
         comments: module.loadData(`interactions-comments-${pageURL_base64}`) || {},
         webmentions: module.loadData(`interactions-mentions-${pageURL_base64}`) || {}
     };
 
-    // is it more than a day old?
-    const now = Date.now();
-    const oneHour = 60 * 60 * 1000;
-    if (new Date(interactions.date) < (now - oneHour)) {
+    module.renderAll = () => {
+        module.renderThings(interactions.webmentions);
+        module.renderThings(interactions.comments);
+        module.checkForFailedAvatars();
+    }
+
+    module.fetchAndRender = (what = ['comments', 'webmentions']) => {
         module.saveData(now, `interactions-date-${pageURL_base64}`);
 
-        if (githubIssueID) {
+        if (what.includes('comments') && githubIssueID) {
             module.fetchGithubIssue(githubIssueID).then(issue => module.fetchGithubComments(issue).then(comments => {
                 if (!comments) return;
                 interactions.comments = {
@@ -198,7 +207,7 @@
                 module.checkForFailedAvatars();
             }));
         }
-        if (pageURL) {
+        if (what.includes('webmentions') && pageURL) {
             module.fetchWebmentions(pageURL).then(mentions => {
                 if (!mentions) return;
                 interactions.webmentions = {
@@ -210,9 +219,42 @@
                 module.checkForFailedAvatars();
             });
         }
+    }
+    module.clearItems = (what = ['comments', 'webmentions']) => {
+        let sections = []
+        if (what.includes('comments')) {
+            sections.push('#comments');
+        }
+        if (what.includes('webmentions')) {
+            sections.push(
+                '#replies',
+                '#likes',
+                '#bookmarks',
+                '#reposts',
+                '#mentions'
+            )
+        }
+        
+        document.querySelectorAll(sections.join(',')).forEach(section => {
+            let list = section.querySelector('.items');
+            section.style.display = 'none';
+            list.innerHTML = '';
+        });
+    }
+
+    // Bind the reload buttons
+    document.querySelectorAll('#interactions .reload').forEach(button => {
+        button.title = `Last refreshed on ${module.prettyDate(module.loadData(`interactions-date-${pageURL_base64}`), {...DEFAULT_DATE_OPTIONS, hour:'numeric', minute:'numeric' })}`;
+        button.onclick = e => {
+            module.clearItems(e.target.dataset.what);
+            module.fetchAndRender(e.target.dataset.what);
+        }
+    });
+
+    // Render from fetch or localStorage
+    if (new Date(interactions.date) < (now - oneHour)) {
+        module.fetchAndRender();
     } else {
-        module.renderThings(interactions.comments);
-        module.renderThings(interactions.webmentions);
-        module.checkForFailedAvatars();
+        module.renderAll();
     }
 }());
