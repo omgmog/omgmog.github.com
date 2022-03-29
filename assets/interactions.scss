@@ -8,26 +8,10 @@
   width: 60px;
   height: 60px;
   overflow: hidden;
-
-  &.load-failed {
-    &::after {
-      position: absolute;
-      content: attr(data-fallback);
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ffea00;
-      display: flex;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 1rem;
-      text-indent: 0;
-      transition: inherit;
-    }
-  }
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 .likes {
@@ -59,10 +43,6 @@
       &:hover {
         transform: scale(1.2);
         z-index: 1;
-
-        &::after {
-          transform: scale(1.5);
-        }
       }
     }
     

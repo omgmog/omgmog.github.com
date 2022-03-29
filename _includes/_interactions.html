@@ -11,7 +11,7 @@
 
 <script type="text/template" id="tpl-reply">
   <article class="reply">
-    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" class="avatar" data-fallback="💬">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" class="avatar" data-username="%author_name%">
     <header>
       <h4><a href="%author_url%" target="_blank" rel="nofollow">%author_name%</a> <a href="%url%" target="_blank" rel="nofollow">%verb% on <time datetime="%date%">%date%</time></a></h4>
     </header>
@@ -20,7 +20,7 @@
 </script>
 <script type="text/template" id="tpl-like">
   <div class="like">
-    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name%" class="avatar" data-fallback="%emoji%">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name%" class="avatar" data-username="%author_name%">
   </div>
 </script>
 <script type="text/template" id="tpl-bookmark">
@@ -35,14 +35,16 @@
     <div><p>%verb% in <a href="%url%" rel="nofollow" target="_blank">%url%</a></p></div>
   </article>
 </script>
-
+<hr>
 <div id="instructions" class="notice">
 {% assign issue_url = site.github.issues_url | append:page.comments_issue %}
 {% capture instructions %}
+#### Comments, replies, likes, etc.
+
 {:.comments-open}
 You can [comment on this post using Github]({{ issue_url }}). Any replies to the [linked issue]({{ issue_url }}) will appear below this post.
 
-<span class="comments-open">Alternatively, </span>I've sort of hooked up [Webmentions](https://webmention.io), so if you send a Webmention or a Tweet mentioning the post URL, it will probably show up below the post too!
+<span class="comments-open">Alternatively, </span>I've sort of hooked up [Webmentions](https://webmention.io), so if you send a Webmention or a [Tweet mentioning the post URL](https://twitter.com/intent/tweet?text={{ page.title }} - {{ site.title }}&url={{ page.url | absolute_url }}&via={{ site.author.twitter }}), it will probably show up below the post<span class="comments-open"> too</span>!
 {% endcapture %}
 {{ instructions | markdownify }}
 </div>
