@@ -36,28 +36,38 @@
   </article>
 </script>
 
+<div id="instructions" class="notice">
+{% assign issue_url = site.github.issues_url | append:page.comments_issue %}
+{% capture instructions %}
+{:.comments-open}
+You can [comment on this post using Github]({{ issue_url }}). Any replies to the [linked issue]({{ issue_url }}) will appear below this post.
+
+<span class="comments-open">Alternatively, </span>I've sort of hooked up [Webmentions](https://webmention.io), so if you send a Webmention or a Tweet mentioning the post URL, it will probably show up below the post too!
+{% endcapture %}
+{{ instructions | markdownify }}
+</div>
 <section id="interactions">
-  <div id="comments">
+  <div id="comments" style="display:none">
     <h3 class="wide-h3">Comments</h3>
     <div class="items"></div>
   </div>
-  <div id="replies">
+  <div id="replies" style="display:none">
     <h3 class="wide-h3">Replies</h3>
     <div class="items"></div>
   </div>
-  <div id="likes">
+  <div id="likes" style="display:none">
     <h3 class="wide-h3">Likes</h3>
     <div class="items likes"></div>
   </div>
-  <div id="bookmarks">
+  <div id="bookmarks" style="display:none">
     <h3 class="wide-h3">Bookmarks</h3>
     <div class="items"></div>
   </div>
-  <div id="reposts">
+  <div id="reposts" style="display:none">
     <h3 class="wide-h3">Reposts</h3>
     <div class="items"></div>
   </div>
-  <div id="mentions">
+  <div id="mentions" style="display:none">
     <h3 class="wide-h3">Mentions</h3>
     <div class="items"></div>
   </div>
