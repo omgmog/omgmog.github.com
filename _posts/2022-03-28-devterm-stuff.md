@@ -33,14 +33,15 @@ Installation of the trackball was a very simple process:
 
 ## Better access to Micro SD slot
 
-The DevTerm does feature external access to the Micro SD slot, but it's spring loaded and positioned on the front bottom edge of the device. It's notoriously easy to slide your Micro SD card between the main board and the case, requiring a full disassembly to get it out of the device again.
+The DevTerm features external access to the Micro SD slot on the front bottom edge of the device. It's notoriously easy to slide your Micro SD card between the main board and the case, requiring a full disassembly to get it out of the device again.
 
 Inspired by what [I did with my GameShell](/post/gameshell-stuff/#external-access-to-micro-sd-slot) with an FPC extension cable, I've relocated the Micro SD slot  to the bottom/left of the outside of the case.
+
+{% include figure.html src="devterm-stuff/microsd-closeup.jpg" %}{:.center}
 
 Installation requires a couple of folds, some double-sided tape and some regular tape to hold everything in place. It's not quite perfect yet and it's not likely to be very robust, but it feels like a much nicer location for the SD card.
 
 {% include figure.html src="devterm-stuff/bottom-of-shell.jpg" %}{:.center}
-{% include figure.html src="devterm-stuff/microsd-closeup.jpg" %}{:.center}
 
 ## Copper cooler/heatsink
 
