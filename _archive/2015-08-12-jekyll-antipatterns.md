@@ -3,7 +3,7 @@ title: Jekyll Antipatterns
 comments_issue: 27
 ---
 
-{% include figure.html src="jekyllantipatterns.jpg" %}{:.massive.center}
+{% include posts/figure.html src="jekyllantipatterns.jpg" %}{:.massive.center}
 
 If you've used any framework or language for long enough, you might find that you've got parts of your code that are not using the language in it's current state to it's full potential.<!-- more -->
 

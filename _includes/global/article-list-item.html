@@ -1,0 +1,10 @@
+<li>
+  {% unless include.hide_dates %}{% assign post_ym = post.date | date:"%Y%m" %}
+  {% if previous_ym != post_ym %}
+  <time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%B %Y" }}</time>
+  {% endif %}{% endunless %}
+  {% assign previous_ym = post_ym %}
+  <a href="{{ post.url }}">
+    {% unless include.hide_types %}{% include global/types.html %}{% endunless %}<span class="post-title">{{ post.title }}</span>
+  </a>
+</li>

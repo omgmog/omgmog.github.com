@@ -1,7 +1,7 @@
 ---
 title: Well that has been a crazy couple of months... Onward!
 comments_issue: 85
-type: vr
+tags: [vr]
 ---
 
 In October 2016 I spent every day of the month creating something for Google Cardboard using JavaScript — _[Cardboctober](https://cardboctober.github.io)_. Since then I've been preoccupied with a couple of other mostly VR-related things...
@@ -11,27 +11,27 @@ In October 2016 I spent every day of the month creating something for Google Car
 
 ## Virtual _Shenanigans_
 
-{% include figure.html src="2017-03/presenting00.jpg" %}{:.massive}
+{% include posts/figure.html src="2017-03/presenting00.jpg" %}{:.massive}
 
 Immediately after Cardboctober I was scheduled to give a short talk about my experiences planning and executing the month of work, at the JS Oxford meetup group.
 
-{% include figure.html src="2017-03/presenting01.jpg" %}{:.massive}
+{% include posts/figure.html src="2017-03/presenting01.jpg" %}{:.massive}
 
 Just using Google Cardboard for Virtual Reality didn't cut it after a month with the technology, so I finally got around to buying an HTC Vive and spent the rest of 2016 playing with various games and apps for that.
 
-{% include figure.html src="2017-03/vive.png" %}{:.center}
+{% include posts/figure.html src="2017-03/vive.png" %}{:.center}
 
 There is nothing quite like true "room-scale VR". I could go on about the HTC Vive for ages... maybe I will in a future post.
 
 In February I gave a short talk about the UX of VR -- summarising 10 tips based off of what I've learned in building for VR, and maintaining the [uxofvr.com](http://www.uxofvr.com) website.
 
-{% include figure.html src="2017-03/presenting02.jpg" %}{:.massive}
+{% include posts/figure.html src="2017-03/presenting02.jpg" %}{:.massive}
 
 I also spent some time overhauling the functionality on uxofvr.com so that you can now keep track of what you've viewed.
 
 I'll get around to putting all of my slides for my talks online at some point -- right now they're set in [Deckset](http://www.decksetapp.com) flavoured Markdown, so not very easy to consume outside of that.
 
-{% include figure.html src="2017-03/oxvrc.png" %}{:.center}
+{% include posts/figure.html src="2017-03/oxvrc.png" %}{:.center}
 
 Also in February I took over organising the Oxford Virtual Reality Crowd meetup group, and so the first of my _new format_ events will be held in April. You can find out more about that group [here](https://www.meetup.com/Oxfords-Virtual-Reality-Crowd/), and if you're at all local to Oxford and interested in VR in anyway, feel free to come along!
 
@@ -42,7 +42,7 @@ I've just finished a task of moving all of the old "[Reviews](/reviews)" posts a
 
 I've been trying to think of an elegant way to throw a lot of the old posts in to cold storage, and maybe switch to a shorter-form format for posts on the blog.
 
-{% include figure.html src="2017-03/tingbot.png" %}{:.center}
+{% include posts/figure.html src="2017-03/tingbot.png" %}{:.center}
 
 I'm also thinking of pushing more of my _hacks_ and other small projects through this blog, rather than having them scattered around (codepen, github, etc.) and not really shared properly.
 

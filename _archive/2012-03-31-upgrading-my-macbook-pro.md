@@ -22,14 +22,14 @@ To do this upgrade I had to buy a couple of things:
 - [8gb (2x4gb) of Corsair PC3-10666C9 RAM ~£35](http://www.aria.co.uk/Products/Components/Memory+-+RAM/SODIMM+-+Laptops+%2F+Compact+PC/SODIMM+DDR3/8GB+Corsair+Value+Select+%282x4GB%29+DDR3+PC3-10666C9+1333MHz+1.5v+SODIMM+Memory+-+CMSO8GX3M2A1333C9+?productId=47381)
 
 ## Pre-upgrade system information
-{% include figure.html src="Screen%20shot%202012-03-30%20at%2018.13.30.png" %}{:.massive}
-{% include figure.html src="Screen%20shot%202012-03-30%20at%2018.14.01.png" %}{:.massive}
-{% include figure.html src="Screen%20shot%202012-03-30%20at%2018.14.28.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20shot%202012-03-30%20at%2018.13.30.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20shot%202012-03-30%20at%2018.14.01.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20shot%202012-03-30%20at%2018.14.28.png" %}{:.massive}
 
 ## Post-upgrade system information
-{% include figure.html src="Screen%20Shot%202012-03-31%20at%2014.55.49.png" %}{:.massive}
-{% include figure.html src="Screen%20Shot%202012-03-31%20at%2014.56.23.png" %}{:.massive}
-{% include figure.html src="Screen%20Shot%202012-03-31%20at%2014.56.27.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20Shot%202012-03-31%20at%2014.55.49.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20Shot%202012-03-31%20at%2014.56.23.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20Shot%202012-03-31%20at%2014.56.27.png" %}{:.massive}
 
 
 ## Opening up the Macbook Pro

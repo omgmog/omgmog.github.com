@@ -12,7 +12,7 @@ Here are a couple of approaches for user-controlled movement in VR:
 
 An obvious hangover from non-VR first-person games, moving around with a gamepad is an easy way to provide movement in your 3D space. You can still look around using orientation-based movement.
 
-{% include figure.html src="2016-10/18/gamepad.png" %}{:.massive.center}
+{% include posts/figure.html src="2016-10/18/gamepad.png" %}{:.massive.center}
 
 D-pad to move back/forward/left/right and an additional button to jump or interact.
 
@@ -24,13 +24,13 @@ The user is projects a circle or marker to where they want to move to, and then 
 
 In my day 12 hack -- [AAAAH! Zombies](https://cardboctober.github.io/max/12/) -- I used retical-based teleportation. I actually stole this from [Pete's earlier day 11 hack: Blink](https://cardboctober.github.io/pete/11/).
 
-{% include figure.html src="2016-10/18/blink.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/18/blink.png" %}{:.massive}
 
 ### Voice control
 
 I played around with this in [day 09's hack: Speech Recognition](https://cardboctober.github.io/max/09/) to move a ball around, but it could easily be adapted to moving the user around. Simple commands such as "move forward 10" or "move left 5", much like the old Television series "Knightmare" where the team command their blind team-mate around with commands
 
-{% include figure.html src="2016-10/18/knightmare.jpg" %}{:.massive}
+{% include posts/figure.html src="2016-10/18/knightmare.jpg" %}{:.massive}
 
 ### Gesture-based
 
@@ -41,7 +41,7 @@ You could more simply make the user move in the direction they're looking when t
 Recently I played an Android game ([Gravity Pull](https://play.google.com/store/apps/details?id=com.VRMersive.GravityDrop)) that used a method of movement called "VR-Step". VR-Step uses "Inertial sensing" to allow you to move in the direction you're looking. You can see how it works here:
 
 {% assign iframe_url = "https://www.youtube.com/embed/NYD8ZG3W31k" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 
 See also:

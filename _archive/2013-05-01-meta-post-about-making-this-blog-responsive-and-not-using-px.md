@@ -16,7 +16,7 @@ The juicy technical details are:
 
 I've had some great opportunities to play with stripping away useless fluff, using some fancy `css3` (such as `:target`!), and planning the page structure so that the layout translates well to mobile responsively.
 
-{% include figure.html src="responsive.png" %}{:.massive.center}
+{% include posts/figure.html src="responsive.png" %}{:.massive.center}
 
 Try resizing your browser, I've added `breakpoints` at `1200px`, `1024px`, and `800px`.
 

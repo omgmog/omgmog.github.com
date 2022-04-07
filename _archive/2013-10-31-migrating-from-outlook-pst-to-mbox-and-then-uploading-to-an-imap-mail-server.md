@@ -29,7 +29,7 @@ After it had finished scanning, and it told me that one or two bits and bytes ha
 
 So now Outlook was broken.
 
-{% include figure.html src="clintspencer,%20Image%20%233237600%20.jpeg" %}{:.massive.center}
+{% include posts/figure.html src="clintspencer,%20Image%20%233237600%20.jpeg" %}{:.massive.center}
 
 After a couple of hours of furiously deleting rogue `.pst` files, removing accounts by, and I quote Microsoft here, "[Clicking] the Mail icon in Control Panel" -- yes, no-where near Outlook, but in a (meta-)directory tied to the Operating System -- I managed to get Outlook up and running again, with IMAP access to the mail account, but still no old emails.
 

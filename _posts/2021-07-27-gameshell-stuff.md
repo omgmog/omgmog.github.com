@@ -1,14 +1,14 @@
 ---
 title: "GameShell Stuff"
 comments_issue: 109
-type: cpi
+tags: [cpi]
 ---
 
 I bought a ClockworkPi GameShell back in October 2019. I’ve been playing with it a bit lately (in anticipation of the ClockworkPi DevTerm shipping!) and I realised I haven't yet posted anything about it on here.
 
 Here's some of the hardware mods I've made to my GameShell.
 
-{% include figure.html src="gameshell-stuff/gameshell.jpg" %}{:.center}
+{% include posts/figure.html src="gameshell-stuff/gameshell.jpg" %}{:.center}
 
 <!-- more -->
 
@@ -29,19 +29,19 @@ Tools needed
 3. Dismantle the mainboard module, solder 2 wires to the exposed solder pads of the SW2 switch on the back side of the mainboard. You should solder the other end of the wires to the 2 legs on one side of the switch, and fold or remove the remaining two legs.
 4. Assemble the case, fit the new switch in to the space you drilled/cut earlier
 
-{% include figure.html src="gameshell-stuff/switch-drilling.jpg" %}{:.center}
+{% include posts/figure.html src="gameshell-stuff/switch-drilling.jpg" %}{:.center}
 
-{% include figure.html src="gameshell-stuff/switch-wiring.jpg" %}{:.center}
+{% include posts/figure.html src="gameshell-stuff/switch-wiring.jpg" %}{:.center}
 
-{% include figure.html src="gameshell-stuff/external-switch.jpg" %}{:.center}
+{% include posts/figure.html src="gameshell-stuff/external-switch.jpg" %}{:.center}
 
 ## External access to Micro SD slot
 
 This is one of my biggest complaints about the GameShell – the fact that you have to basically fully disassemble everything to get to the Micro SD card. I bought a small flat ribbon cable Micro SD extender to move the Micro SD to a more accessible location and positioned the Micro SD extension using some nifty folds…
 
-{% include figure.html src="gameshell-stuff/sd-extension.jpg" %}{:.center}
+{% include posts/figure.html src="gameshell-stuff/sd-extension.jpg" %}{:.center}
 
-{% include figure.html src="gameshell-stuff/external-sd-folds.jpg" %}{:.center}
+{% include posts/figure.html src="gameshell-stuff/external-sd-folds.jpg" %}{:.center}
 
 ## Big Fat Battery mod
 
@@ -57,4 +57,4 @@ That’s pretty close to the size of the entire battery module that comes in the
 
 To install it, I had to jam it in to the case, shim it to the right thickness with some pieces of cardboard, and then hook up the 5v/GND wires from the battery to the GameShell battery cable. I couldn’t find the polarity of this documented anywhere, so I had to determine this (and mark the white cable for future reference) based on looking at the JST connector on the battery module.
 
-{% include figure.html src="gameshell-stuff/big-fat-battery.jpg" %}{:.center}
+{% include posts/figure.html src="gameshell-stuff/big-fat-battery.jpg" %}{:.center}

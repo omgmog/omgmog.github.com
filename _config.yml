@@ -25,12 +25,12 @@ whitelist:
 feed:
   excerpt_only: true
 menu:
-  - link: "/now"
-    title: "Now"
   - link: "/"
     title: "Posts"
   - link: "/vr"
     title: "VR"
+  - link: "/now"
+    title: "Now"
   - link: "/feed.xml"
     title: "RSS"
     icon: "rss-icon"
@@ -49,6 +49,7 @@ defaults:
       type: "cardboctober"
     values:
       layout: post
+      tags: [vr, cardboctober]
   - scope:
       type: "pages"
     values:

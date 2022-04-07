@@ -6,7 +6,7 @@ If you happen to have installed the Blackberry Desktop Software and you want to 
 
 <!-- more -->
 
-{% include figure.html src="bb-trash.png" %}{:.massive.center}
+{% include posts/figure.html src="bb-trash.png" %}{:.massive.center}
 
 That's not an issue if you still have the installer dmg from when you errantly found yourself installing the Blackberry Desktop Software, but in my case (and my fastidious `~/Downloads` cleaning habits) I no-longer posessed the installer dmg, and (even though it wouldn't take long) I didn't want to redownload it.
 

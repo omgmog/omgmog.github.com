@@ -4,7 +4,7 @@ title: Fluid video embeds for your responsive website
 ---
 Recently I came across an interesting problem, fluidly scaling iframe/embed code on a responsive design.
 
-{% include figure.html src="responsive.png" %}{:.massive.center}
+{% include posts/figure.html src="responsive.png" %}{:.massive.center}
 
 The problem surfaced because I was using a fluid width and a fixed height for my video embed, and so at some screen sizes the video would look fine, and at others it would have some black banding at the edges.
 

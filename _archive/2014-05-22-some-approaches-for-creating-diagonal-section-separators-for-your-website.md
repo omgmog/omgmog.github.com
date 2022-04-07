@@ -18,7 +18,7 @@ This is the first approach that you might try when trying to achieve this effect
 
 When it comes to scaling though you'll have some problems, take the following example. First a fixed width, and then a fluid %-based width:
 
-{% include figure.html src="Ca2hBff.png" %}{:.massive.center}
+{% include posts/figure.html src="Ca2hBff.png" %}{:.massive.center}
 
 The background works fine in the first example, but as soon as your element exceeds the width of the image you're going to have a bad time.
 
@@ -48,7 +48,7 @@ To make a background image that will scale to the dimensions of the element it's
 
 Here is the image:
 
-{% include figure.html src="ZR0qEPI.png" %}{:.massive.center}
+{% include posts/figure.html src="ZR0qEPI.png" %}{:.massive.center}
 
 This dimensions of the image are 1000 x 60 px. To work out the height as a percentage of the width, you can use the following:
 
@@ -76,7 +76,7 @@ position: absolute;
 ```
 
 {% assign iframe_url = "https://jsfiddle.net/U7vMH/embedded/result" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 ### Approach #3: Using SVG for a background image that scales _well_
 
@@ -84,18 +84,18 @@ If you spend any time looking at the diagonal background, or if you're using a r
 
 Fuzzy PNG:
 
-{% include figure.html src="HbmCtVP.png" %}{:.massive.center}
+{% include posts/figure.html src="HbmCtVP.png" %}{:.massive.center}
 
 Crisp SVG:
 
-{% include figure.html src="g249Exx.png" %}{:.massive.center}
+{% include posts/figure.html src="g249Exx.png" %}{:.massive.center}
 
 SVG or "[scalable vector graphics](http://en.wikipedia.org/wiki/Scalable_Vector_Graphics)", means that the image is a vector (rather than a raster) and is designed to scale. You can scale an SVG to any size without losing any quality. SVG is supported in all modern browsers (even IE9+) [http://caniuse.com/svg](http://caniuse.com/svg).
 
 There's an added bonus here, as SVG is scalable, you can create an even smaller starting image (100x6 for example) which will mean that the SVG is 35% (403 bytes vs 1183 bytes) of the size of the PNG used earlier. See the example:
 
 {% assign iframe_url = "https://jsfiddle.net/3zt98/embedded/result" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 ### Approach #4: Improving this by using CSS pseudo elements
 
@@ -166,8 +166,8 @@ This Sass mixin will let you specify the width/height/color of your diagonal sep
 Not bad!
 
 {% assign iframe_url = "https://jsfiddle.net/ves2g/embedded/result" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 This works pretty perfectly in Chrome, but it may have some issues in other browsers. If you can't see the nice diagonal lines in the example above, here is a picture to illustrate how the final result looks:
 
-{% include figure.html src="dKWd4V7.png" %}{:.massive.center}
+{% include posts/figure.html src="dKWd4V7.png" %}{:.massive.center}

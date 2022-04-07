@@ -7,11 +7,11 @@ There has been some talk lately about how iOS 8 has started to handle typography
 
 <!-- more -->
 
-{% include figure.html src="mSVkI40.png" %}{:.massive.center}
+{% include posts/figure.html src="mSVkI40.png" %}{:.massive.center}
 
 You can see the differences of these two methods below:
 
-{% include figure.html src="9o1Y2RU.png" %}{:.massive.center}
+{% include posts/figure.html src="9o1Y2RU.png" %}{:.massive.center}
 
 That's great for the particular apps on iOS 8 on iPhones that use the new descenders, but what about everybody else?
 
@@ -21,11 +21,11 @@ The solution uses a combination of background linear gradients and text shadows 
 
 Without the effect:
 
-{% include figure.html src="9nitT8Q.png" %}{:.massive.center}
+{% include posts/figure.html src="9nitT8Q.png" %}{:.massive.center}
 
 With the effect:
 
-{% include figure.html src="Syx7s6c.png" %}{:.massive.center}
+{% include posts/figure.html src="Syx7s6c.png" %}{:.massive.center}
 
 I've re-created their mixin using Sass, so now you can use it in your projects:
 

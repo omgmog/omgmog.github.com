@@ -1,0 +1,75 @@
+<script>
+  {% if jekyll.environment == "production" %}
+  const githubIssueID = {% if page.comments_issue %}{{page.comments_issue}}{% else %}null{% endif %};
+  const pageURL = [...new Set(['{{page.url | absolute_url }}'{% if page.alternate_urls %},{% for url in page.alternate_urls %}'{{url | absolute_url}}',{% endfor %}'{{page.url | absolute_url }}'{% endif %}])];
+  {% else %}
+  const githubIssueID = {% if page.comments_issue %}{{page.comments_issue}}{% else %}null{% endif %};
+  const pageURL = [...new Set(['{{page.url | absolute_url }}'{% if page.alternate_urls %},{% for url in page.alternate_urls %}'{{url | absolute_url}}',{% endfor %}'{{page.url | absolute_url }}'{% endif %}].map(url=>url.replace('http://localhost:4000', 'https://blog.omgmog.net')))];
+  //console.log(pageURL);
+  {% endif %}
+</script>
+
+<script type="text/template" id="tpl-reply">
+  <article class="reply">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" class="avatar" data-username="%author_name%">
+    <header>
+      <h4><a href="%author_url%" target="_blank" rel="nofollow" class="name">%author_name%</a> %verb% <a href="%url%" target="_blank" rel="nofollow">on <time datetime="%date%">%date%</time></a></h4>
+    </header>
+    <div>%body%</div>
+  </article>
+</script>
+<script type="text/template" id="tpl-like">
+  <div class="like">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name%" class="avatar" data-username="%author_name%">
+  </div>
+</script>
+<script type="text/template" id="tpl-bookmark">
+  %verb% by %author_name% %author_avatar_url% %emoji%
+</script>
+<script type="text/template" id="tpl-repost">
+  %verb% by %author_name% %author_avatar_url% %emoji%
+</script>
+
+<script type="text/template" id="tpl-mention">
+  <article class="reply mention">
+    <div><p>%verb% in <a href="%url%" rel="nofollow" target="_blank">%url%</a></p></div>
+  </article>
+</script>
+<section id="interactions">
+  <div id="comments" data-display="block">
+    <h3 class="wide-h3">Comments</h3>
+    <div class="addyours">
+      <div class="comments-open">Want to comment? You can do so via <a href="{{ issue_url }}">Github</a>.</div> 
+      <div class="comments-closed">Comments via Github are currently closed.</div>
+    </div>
+    <div class="items"></div>
+  </div>
+  <h3 class="wide-h3">Webmentions<button title="Reload" class="reload" data-what="webmentions">{% include icons/icon.svg icon="reload" %}</button></h3>
+  <div class="addyours">
+    Want to reply? I've hooked up <a href="https://indieweb.org/Webmention">Webmentions</a> so you can do so by sending a Webmention, or a <a href="https://twitter.com/intent/tweet?text={{ page.title }} - {{ site.title }}&url={{ page.url | absolute_url }}&via={{ site.author.twitter }}">Tweet mentioning this post</a>.
+  </div>
+  <div id="replies" data-display="none" style="display:none;">
+    <h3>Replies</h3>
+    <div class="items"></div>
+  </div>
+  <div id="likes" data-display="none" style="display:none">
+    <h3>Likes</h3>
+    <div class="items likes"></div>
+  </div>
+  <div id="bookmarks" data-display="none" style="display:none">
+    <h3>Bookmarks</h3>
+    <div class="items"></div>
+  </div>
+  <div id="reposts" data-display="none" style="display:none">
+    <h3>Reposts</h3>
+    <div class="items"></div>
+  </div>
+  <div id="mentions" data-display="none" style="display:none">
+    <h3>Mentions</h3>
+    <div class="items"></div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="{{ '/assets/interactions.css' | absolute_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}">
+<script src="{{ '/assets/marked.min.js' | absolute_url }}"></script>
+<script src="{{ '/assets/interactions.js' | absolute_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}"></script>

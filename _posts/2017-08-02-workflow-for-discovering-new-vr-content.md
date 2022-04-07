@@ -1,7 +1,7 @@
 ---
 title: My workflow for discovering new VR content
 comments_issue: 59
-type: vr
+tags: [vr]
 ---
 
 Since launching the [UX of VR website](https://www.uxofvr.com) last year I've been looking for ways to keep on top of new VR content. For most of the last year I relied solely on a mixture of Google Alerts, manually using the search functionality on websites and browsing VR blogs daily. Here's how I improved on that process.
@@ -18,11 +18,11 @@ First comes automation. I'm a big fan of automation where possible, and it's usu
 
 I'm using [IFTTT](https://ifttt.com) to watch a bunch of RSS feeds (VR blogs, tags on Medium, etc.) and create new issues on a Github repository when a new article is posted. To begin with I simply had an IFTTT recipe that looked like this:
 
-{% include figure.html src="2017-08/chrome_2017-08-02_16-32-52.png" %}{:.center}
+{% include posts/figure.html src="2017-08/chrome_2017-08-02_16-32-52.png" %}{:.center}
 
 After the first couple of days, I realised I needed a bit more control over what made it through to my reading list, so I switched to using IFTTT's platform widgets to add a bit more control.
 
-{% include figure.html src="2017-08/chrome_2017-07-31_20-35-26.png" %}{:.center}
+{% include posts/figure.html src="2017-08/chrome_2017-07-31_20-35-26.png" %}{:.center}
 
 Here's an example of the filtering code I'm using:
 
@@ -54,7 +54,7 @@ This workflow pushes a surprising 40+ pieces of content each day. The workflow o
 
 After doing this for the first couple of weeks I thought that there must be a better way -- well, actually after taking a week's holiday and coming back to a backlog of over 500 issues, I decided there _had_ to be something I could do to reduce the friction of this process.
 
-{% include figure.html src="2017-08/chrome_2017-07-31_20-45-51.png" %}{:.center}
+{% include posts/figure.html src="2017-08/chrome_2017-07-31_20-45-51.png" %}{:.center}
 
 I'm a huge fan of Userscripts. Either as a simple browser extension, or as a simple piece of additional Javascript that's injected in to a page, Userscripts allow you to add more functionality to any website.
 
@@ -96,7 +96,7 @@ It's a simple script, but it reduces my workflow:
 6. Close the issue
 7. Close the tab
 
-{% include figure.html src="2017-08/chrome_2017-08-02_16-15-12.png" %}{:.center}
+{% include posts/figure.html src="2017-08/chrome_2017-08-02_16-15-12.png" %}{:.center}
 
 There might be _as many steps_ there, but it's a much easier process. I can depend on keyboard shortcuts a lot more (such as `cmd`+`w` to close the tab), and there is less clicking required to open issues in bulk. Perfect.
 

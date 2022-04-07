@@ -1,12 +1,12 @@
 ---
 title: "DevTerm Stuff"
 comments_issue: 113
-type: cpi
+tags: [cpi]
 ---
 
 I helped crowdfund the [DevTerm from ClockworkPi](https://www.clockworkpi.com/devterm) back in November 2020 and it arrived in January 2022. It's a nice device, but it's not perfect. Here's some of the mods I've made to improve my DevTerm.
 
-{% include figure.html src="devterm-stuff/devterm.png" %}{:.center}
+{% include posts/figure.html src="devterm-stuff/devterm.png" %}{:.center}
 
 <!-- more -->
 
@@ -25,11 +25,11 @@ Installation of the trackball was a very simple process:
 5. Drop in the new trackball package
 6. Re-assemble everything
 
-{% include figure.html src="devterm-stuff/trackball-compare.jpg" %}{:.center}
+{% include posts/figure.html src="devterm-stuff/trackball-compare.jpg" %}{:.center}
 
-{% include figure.html src="devterm-stuff/trackball-sensors.jpg" %}{:.center}
+{% include posts/figure.html src="devterm-stuff/trackball-sensors.jpg" %}{:.center}
 
-{% include figure.html src="devterm-stuff/trackball-installed.jpg" %}{:.center}
+{% include posts/figure.html src="devterm-stuff/trackball-installed.jpg" %}{:.center}
 
 ## Better access to Micro SD slot
 
@@ -37,20 +37,20 @@ The DevTerm features external access to the Micro SD slot on the front bottom ed
 
 Inspired by what [I did with my GameShell](/post/gameshell-stuff/#external-access-to-micro-sd-slot) with an FPC extension cable, I've relocated the Micro SD slot  to the bottom/left of the outside of the case.
 
-{% include figure.html src="devterm-stuff/microsd-closeup.jpg" %}{:.center}
+{% include posts/figure.html src="devterm-stuff/microsd-closeup.jpg" %}{:.center}
 
 Installation requires a couple of folds, some double-sided tape and some regular tape to hold everything in place. It's not quite perfect yet and it's not likely to be very robust, but it feels like a much nicer location for the SD card.
 
-{% include figure.html src="devterm-stuff/bottom-of-shell.jpg" %}{:.center}
+{% include posts/figure.html src="devterm-stuff/bottom-of-shell.jpg" %}{:.center}
 
 ## Copper cooler/heatsink
 
 I swapped out the included heatsink for one made of copper. I'm not happy with the dimensions of this, or how it's mounted, but I think it provides an improvement to the passive cooling of the CPU module. A further improvement would be to [3D print a shroud to direct the airflow of the fan better](https://forum.clockworkpi.com/t/fan-shroud-for-devterm/7598).
 
-{% include figure.html src="devterm-stuff/heatsink.jpg" %}{:.center}
+{% include posts/figure.html src="devterm-stuff/heatsink.jpg" %}{:.center}
 
 ## Rubber feet
 
 I've stuck a couple of those little rubber dome feet in various locations on the bottom of the shell. This just improves the grip of the DevTerm on most surfaces to stop it sliding around as you type.
 
-{% include figure.html src="devterm-stuff/feet-closeup.jpg" %}{:.center}
+{% include posts/figure.html src="devterm-stuff/feet-closeup.jpg" %}{:.center}

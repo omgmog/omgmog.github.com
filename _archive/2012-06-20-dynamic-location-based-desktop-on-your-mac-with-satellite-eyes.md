@@ -6,13 +6,13 @@ I came across this awesome application today, it sets your wallpaper to a satell
 
 <!-- more -->
 
-{% include figure.html src="ss_preview.png" linkurl="/images/satellite_eyes.jpg" %}{:.massive.center}
+{% include posts/figure.html src="ss_preview.png" linkurl="/images/satellite_eyes.jpg" %}{:.massive.center}
 
 > Satellite Eyes is a simple Mac app that automatically changes your desktop wallpaper to the satellite view of where you are, right now.
 >
 >The app sits quietly in the menu bar at the top of your screen. Pull your laptop out somewhere new, and your desktop will automatically change to the view from overhead.
 
-{% include figure.html src="by%20default%202012-06-20%20at%2010.58.22.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202012-06-20%20at%2010.58.22.png" %}{:.massive.center}
 
 Truly awesome stuff.
 

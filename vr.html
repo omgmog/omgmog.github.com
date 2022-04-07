@@ -2,26 +2,16 @@
 title: VR Stuff
 permalink: /vr
 ---
-
-{% include _myface.html flipped=true classes="right" %}
-
 <p>
   Since 2015 I've been dabbling with VR and curating the <a href="https://www.uxofvr.com">UX of VR</a> list. I've given a number of talks on topics around developing VR experiences using web technologies, and my personal experience of creating something for VR each day for a <a href="{{"/cardboctober" | absolute_url}}">whole month</a>. 
 </p>
-<h3 class="wide-h3">Posts</h3>
-<ul class="post-list">
-  {% assign vr_posts = site.posts | where:"type","vr" %}
-  {% for post in vr_posts %}
-    <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span><time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%d %B %Y" }}</time></a></li>
-  {% endfor %}
-</ul>
 
 <h3 class="wide-h3">Talks</h3>
-<ul class="post-list thumbnail-list">
+<ul class="thumbnail-list">
   {% assign vr_talks = site.data.vr.talks | sort:"date" %}
   {% for talk in vr_talks %}
     <li>
-      <img src="{{ talk.img | prepend:"/images/" | absolute_url }}" />
+      {% include posts/figure.html src=talk.img class="center" %}
       <h4>{{ talk.title }}</h4>
       <p>{{ talk.summary }}</p>
       <div class="btns">
@@ -33,12 +23,12 @@ permalink: /vr
 </ul>
 
 <h3 class="wide-h3">Projects</h3>
-<ul class="post-list thumbnail-list">
+<ul class="thumbnail-list">
   {% assign vr_projects = site.data.projects | where:"vr","true" %}
   {% for project in vr_projects %}
     <li>
-      {% if project.img %}<div class="img-grid">{% for img in project.img %}<img src="{{ img }}" />{% endfor %}</div>{% endif %}
-      {% if project.embed %}{{ project.embed }}{% endif %}
+      {% if project.img %}<div class="img-grid count-{{project.img | size }}">{% for img in project.img %}{% include posts/figure.html src=img class="center" %}{% endfor %}</div>{% endif %}
+      {% if project.embed %}<figure class="iframe">{{ project.embed }}</figure>{% endif %}
       <h4>{{ project.title }}</h4>
       <p>{{ project.description }}</p>
       <div class="btns">
@@ -48,9 +38,17 @@ permalink: /vr
   {% endfor %}
 </ul>
 
+<h3 class="wide-h3">Posts</h3>
+<ul class="post-list">
+  {% assign vr_posts = site.posts | where_exp:"post","post.tags contains 'vr'" %}
+  {% for post in vr_posts %}
+  {% include global/article-list-item.html hide_dates=false hide_types=true %}
+  {% endfor %}
+</ul>
+
 <h3 class="wide-h3">Cardboctober posts</h3>
 <ul class="post-list">
   {% for post in site.cardboctober  %}
-    <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span><time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%d %B %Y" }}</time></a></li>
+  {% include global/article-list-item.html hide_dates=false hide_types=true %}
   {% endfor %}
 </ul>

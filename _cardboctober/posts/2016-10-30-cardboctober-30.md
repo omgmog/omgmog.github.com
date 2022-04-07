@@ -9,7 +9,7 @@ For today's Cardboctober, having shed the burden of creating Tetris in VR, I dec
 
 Have you ever noticed the cool "contribution graph" on your Github profile? I've been completely aware of mine for the past month as I ensure that I'm posting daily for Cardboctober.
 
-{% include figure.html src="2016-10/30/contributions.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/30/contributions.png" %}{:.massive}
 
 You can directly access a users contribution timeline from the following URL, that'll provide you an SVG image in response:
 
@@ -113,11 +113,11 @@ var renderChart = function (data) { // data is the jsonData
 
 So now we've gone from this:
 
-{% include figure.html src="2016-10/30/contributions.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/30/contributions.png" %}{:.massive}
 
 To this:
 
-{% include figure.html src="2016-10/30/giphy.gif" %}{:.massive}
+{% include posts/figure.html src="2016-10/30/giphy.gif" %}{:.massive}
 
 Very similar layout stuff to other days in Cardboctober, but now with some fancy Github Contributions data as the source.
 

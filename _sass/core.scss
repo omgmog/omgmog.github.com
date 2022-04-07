@@ -1,0 +1,118 @@
+// Core
+
+/// Sass Vars
+$colors-primary: #ffea00;
+$bp-small-phone: 480px;
+$bp-phone: 900px;
+$bp-desktop: 1024px;
+$bp-big-desktop: 1200px;
+$tags: (
+  (vr, #198226, #fff),
+  (chip, #eb008b, #fff),
+  (cpi, #daeff4, #4a6368),
+  (rpi, #cd2355, #fff)
+);
+
+/// Mixins
+@mixin mq($minmax, $bp) {
+  @media (#{$minmax}-width: $bp) {
+    @content;
+  }
+}
+@mixin linkHover($height: 1.2em, $order:(off,on)) {
+  --shadow: var(--colors-primary-transparent-25);
+  --background: var(--colors-primary);
+
+  $state_primary: '';
+  @if (nth($order,1) != off) {
+    $state_primary: ':hover';
+  }
+  $state_secondary: ':hover';
+  @if (nth($order,2) != on) {
+    $state_secondary: '';
+  }
+
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    border-radius: 0 .4rem .4rem 0;
+    margin: auto;
+    position: absolute;
+    height: $height;
+    top: 0;
+    left: -0.25em;
+    transition: .4s ease-in-out;
+    z-index: -1;
+    box-shadow: -.25em 0 0 0 var(--shadow), -.5em 0 0 0 var(--shadow);
+    background-color: var(--background);
+  }
+
+  &#{$state_primary} {
+    --shadow: transparent;
+    --background: transparent;
+
+    &::before {
+      right: 100%;
+    }
+  }
+  &#{$state_secondary} {
+    --shadow: var(--colors-primary-transparent-25);
+    --background: var(--colors-primary);
+    background-color: transparent !important;
+    &::before {
+
+      right: -0.25em;
+    }
+  }
+}
+@mixin hideLinkIcon {
+  &::after { display: none;}
+}
+@mixin breakoutWidth {
+  width: calc(100% + (var(--gutter-inner-x)));
+  margin-left: calc(-.5 * var(--gutter-inner-x));
+}
+@mixin spanBodyWidth {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: var(--body-width);
+  max-width: var(--body-max-width);
+}
+
+/// CSS Vars
+:root {
+  --colors-primary: #{$colors-primary};
+  --colors-primary-dark-10: #{darken($colors-primary, 10%)};
+  --colors-primary-transparent-25: #{rgba($colors-primary, .25)};
+  --colors-lightgrey: #f0f0f2;
+  --colors-lightgrey-transparent-25: #{rgba(#f0f0f2, .25)};
+  --colors-grey: #dadbdf;
+  --colors-midgrey: #999;
+  --colors-midgrey-transparent-25: #{rgba(#999, .25)};
+  --colors-midgrey-transparent-50: #{rgba(#999, .50)};
+  --colors-darkgrey: #555;
+  --colors-black: rgba(#000, .87);
+  --colors-white: #fffffa;
+
+  --bg-dots: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMTAgMTAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDYyICg5MTM5MCkgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+QXJ0Ym9hcmQ8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iQXJ0Ym9hcmQiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtb3BhY2l0eT0iMC4xIj4KICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsIiBmaWxsPSIjMDAwMDAwIiBjeD0iOS41IiBjeT0iOS41IiByPSIxIj48L2NpcmNsZT4KICAgIDwvZz4KPC9zdmc+");
+
+  --gutter-outer: 4rem;
+  --gutter-inner-y: 2rem;
+  --gutter-inner-x: 8rem;
+
+  @include mq('max', $bp-big-desktop) {
+    --gutter-outer: 1rem;
+    --gutter-inner-y: 2rem;
+    --gutter-inner-x: 4rem;
+  }
+  @include mq('max', $bp-phone) {
+    --gutter-inner-y: 1rem;
+    --gutter-inner-x: 1rem;
+  };
+
+  // responsive text improvements
+  --font-scale-content: 1;
+  --font-scale-headers: 1;
+}

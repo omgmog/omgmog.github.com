@@ -56,7 +56,7 @@ I'm not going to walk you through burning an ISO to CD, but you can use Imgburn,
 
 I've done this using a CD-RW, CD-R and even a DVD, so you should have no problem finding some compatible disc to burn the ISO to.
 
-{% include figure.html src="Screen%20shot%202010-10-07%20at%2022.12.59.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20shot%202010-10-07%20at%2022.12.59.png" %}{:.massive}
 
 Download the Boot-132 from macyourpc.com here - [http://www.macyourpc.com/wp-content/uploads/2009/07/BootSLv3wifi.iso](http://www.macyourpc.com/wp-content/uploads/2009/07/BootSLv3wifi.iso)
 

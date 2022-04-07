@@ -10,7 +10,7 @@ Today's hack (and each Friday for the rest of October) is going to be hardware r
 
 I've been playing with Google Cardboard for over a year now, and in that time I've collected a nice selection of Google Cardboard headsets:
 
-{% include figure.html src="2016-10/07/headsets.jpg" %}{:.massive}
+{% include posts/figure.html src="2016-10/07/headsets.jpg" %}{:.massive}
 
 As you can see they come in all shapes and sizes, with prices ranging from less than £1 all the way through to £20.
 
@@ -24,7 +24,7 @@ The Google Cardboard is very basic. Two lenses and space to hold most 5" phones.
 
 As Google Cardboard is made of... Cardboard -- it has the unsightly habit of absorbing sweat when placed against your forehead. A couple of strips of tape across the space between the lenses should be enough to stop this happening.
 
-{% include figure.html src="2016-10/07/tape.jpg" %}{:.massive}
+{% include posts/figure.html src="2016-10/07/tape.jpg" %}{:.massive}
 
 ### Touch screen access for v1 Cardboard
 
@@ -42,7 +42,7 @@ Cardboard is great, but it doesn't keep it's rigidity for very long. You can str
 
 This one's more of a LIFE HACK. Adding Googley eyes to anything can make it better.
 
-{% include figure.html src="2016-10/07/eyes.jpg" %}{:.massive}
+{% include posts/figure.html src="2016-10/07/eyes.jpg" %}{:.massive}
 
 ## Recap of Cardboctober Week 1
 
@@ -96,6 +96,6 @@ Pete has been focussed on physics and creating complete experiences each time. H
 
 I've been structuring my hacks as a counterpart to a larger learning exercise, so while each day you're just being drip-fed some aspects of a VR game, at the end of it all you actually have the ability to understand what goes in to it. My [repository](https://github.com/cardboctober/max) has seen 24 commits over the week so far.
 
-{% include figure.html src="2016-10/07/spreadsheet.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/07/spreadsheet.png" %}{:.massive}
 
 I've already got the next couple of weeks planned out. Week 2 is going to be focussed on using various Web APIs within VR to add to the experience.

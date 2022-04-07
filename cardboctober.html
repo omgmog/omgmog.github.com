@@ -2,9 +2,13 @@
 title: Cardboctober
 permalink: /cardboctober
 ---
+{% assign project = site.data.projects | where:"title",page.title | first %}
+{{ project.description | markdownify}}
 
+{% if project.img %}<div class="img-grid count-{{project.img | size }}">{% for img in project.img %}{% include posts/figure.html src=img class="center" %}{% endfor %}</div>{% endif %}
+<h3 class="wide-h3">Cardboctober posts</h3>
 <ul class="post-list">
   {% for post in site.cardboctober  %}
-    <li><a href="{{ post.url | absolute_url }}"><span>{{ post.title }}</span><time class="dt-published" datetime="{{post.date}}">{{ post.date | date:"%d %B %Y" }}</time></a></li>
+  {% include global/article-list-item.html hide_dates=false hide_types=true %}
   {% endfor %}
 </ul>

@@ -1,6 +1,6 @@
 ---
 title: "The Virtoba S1 Daydream VR Bluetooth Controller"
-type: vr
+tags: [vr, review]
 ---
 
 The Virtoba S1 is a Daydream compatible controller from China that costs around £15 ($20). Let me just start with saying I've got a lot of cheap Bluetooth controllers -- and for the most part they're crap. 
@@ -9,7 +9,7 @@ I hit the "Buy now" button for the Virtoba S1 half expecting this to be the case
 
 <!-- more -->
 
-{% include figure.html src="2017-08/daydream.jpg" %}{:.massive.center}
+{% include posts/figure.html src="2017-08/daydream.jpg" %}{:.massive.center}
 
 The official Daydream controller from Google can only be bought as part of the Daydream View bundle (headset included) for upwards of £60.
 
@@ -17,7 +17,7 @@ I'm using a plastic Google Cardboard headset that features elastic/velcro straps
 
 I don't own a Google Pixel -- as much as I've loved the previous generations of Nexus devices, after my Nexus 5X died I decided instead to buy a OnePlus 3T.
 
-{% include figure.html src="2017-08/op3t.jpg" %}{:.massive.center}
+{% include posts/figure.html src="2017-08/op3t.jpg" %}{:.massive.center}
 
 The OnePlus 3T has a spec that rivals the Google Pixel XL, but weirdly enough it doesn't come with Daydream enabled out of the box. So I unlocked, rooted and installed the necessary components to make Daydream work on the OnePlus 3T, and [here we are](http://status.omgmog.net/1501775191/).
 
@@ -25,7 +25,7 @@ The Virtoba S1 pairs in the same way that the official Daydream controller does,
 
 I've tested the controller with a number of Daydream experiences, including some games, navigating around the enjoyable user experience of the Daydream menu inteface, and logging in and playing some videos on the Netflix VR application.
 
-{% include figure.html src="2017-08/Screenshot_20170816-143203.png" %}{:.massive.center}
+{% include posts/figure.html src="2017-08/Screenshot_20170816-143203.png" %}{:.massive.center}
 
 As with the official Daydream controller, the Virtoba S1 features a clickable touchpad, two buttons and two volume buttons. The layout and bindings are exactly the same as the official Daydream controller.
 

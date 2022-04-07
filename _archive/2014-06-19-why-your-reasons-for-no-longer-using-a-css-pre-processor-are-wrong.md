@@ -11,7 +11,7 @@ CSS pre-processors aren't for everyone, but what I found particularly grating ab
 
 You can [read the full article here](http://dwaiter.com/blog/7/why-we-no-longer-use-sass-or-less/), but the gist of their article is outlined with the headings below, along with a refutation to each point of their conjecture.
 
-{% include figure.html src="531T40T.png" %}{:.massive.center}
+{% include posts/figure.html src="531T40T.png" %}{:.massive.center}
 
 
 ### "Pre-processing takes time."
@@ -58,7 +58,7 @@ Sass contains lots of cool features to minimise duplication, and complexity. I s
 If you're using a selector like `body div.something-cool a`, stop that.
 
 {% assign iframe_url="https://www.youtube.com/embed/M8reIa71Bpw" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 Each nesting level should use one selector. If you've got something like the following monstrosity (taken from the article that spurred this post), stop that too!:
 

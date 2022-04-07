@@ -1,7 +1,7 @@
 ---
 title: CHIP Stuff
 comments_issue: 107
-type: chip
+tags: [chip]
 ---
 
 > This page is a changing document. I'll probably add more notes to it in the future.
@@ -18,7 +18,7 @@ You can erase and factory flash a CHIP from your computer using [this repo](http
 
 First you need to jumper the CHIP in FEL mode. You can do this by connecting the FEL pin to any GND pin:
 
-{% include figure.html src="felmode.jpg" %}{:.center}
+{% include posts/figure.html src="felmode.jpg" %}{:.center}
 
 Next you can clone the repo and run the `Flash.sh`:
 

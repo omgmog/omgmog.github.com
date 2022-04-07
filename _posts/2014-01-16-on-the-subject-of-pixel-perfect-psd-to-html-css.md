@@ -1,6 +1,7 @@
 ---
 comments_issue: 35
 title: On the subject of "Pixel-perfect PSD to HTML/CSS"
+tags: [article]
 ---
 I read an [article](http://blog.teamtreehouse.com/pixel-perfect-front-end-development-matters) on the subject of implementing a PSD design of a website perfectly in HTML/CSS, and without wanting to spend my time writing a lengthy response in the comment form of a blog for it to disappear in to the depths of a blog that I don't visit very regularly, I figured I'd write my thoughts up as a blog post.
 
@@ -10,7 +11,7 @@ The gist of the article goes like this:
 
 > I hired a freelance developer at a low rate and expected them to implement my PSD exactly as I made it look in Photoshop, but they couldn't handle that. I'm so outraged with the lack of attention to detail of front-end developers.
 
-{% include figure.html src="cott1.jpg" %}{:.massive.center}
+{% include posts/figure.html src="cott1.jpg" %}{:.massive.center}
 
 
 ### The blame isn't always in the hands of the front-end developer

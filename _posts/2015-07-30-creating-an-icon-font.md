@@ -1,13 +1,14 @@
 ---
 title: Creating an icon font
 comments_issue: 43
+tags: [guide]
 ---
 
 I've recently been doing a lot of working designing an icon font that works well at small sizes for my day job. Here's an overview of the process I'm using to go from a doodle on paper, to a functional icon font that can be used in most web browsers.
 
 <!-- more -->
 
-{% include figure.html src="Screen-Shot-2015-07-30-at-14.27.05.png" %}{:.massive.center}
+{% include posts/figure.html src="Screen-Shot-2015-07-30-at-14.27.05.png" %}{:.massive.center}
 
 ## Process
 
@@ -66,7 +67,7 @@ I'm using [Sketch](http://bohemiancoding.com/sketch/) to draw my icons, but you 
 
 With Sketch I create a document containing a number of "Artboards" for each icon, this allows me to organise the various paths that make up each icon, and makes the process of exporting all of the icons at once very straight forward.
 
-{% include figure.html src="Screen Shot 2015-07-30 at 13.20.48.png" %}{:.massive.center}
+{% include posts/figure.html src="Screen Shot 2015-07-30 at 13.20.48.png" %}{:.massive.center}
 
 I'm not going to explain how to draw your icons, but you can find a pretty good tutorials for using Sketch here: [http://www.sketchappsources.com/tutorials-tips.html](http://www.sketchappsources.com/tutorials-tips.html)
 
@@ -87,7 +88,7 @@ Now that you've got a folder full of SVGs of all of your icons, you can generate
 
 Icomoon allows you to upload your SVG files and then assign them to unicode characters. It will then generate ttf/woff/svg/eot fonts and some accompanying CSS to get you started with using them in your website.
 
-{% include figure.html src="Screen Shot 2015-07-30 at 14.21.12.png" %}{:.massive.center}
+{% include posts/figure.html src="Screen Shot 2015-07-30 at 14.21.12.png" %}{:.massive.center}
 
 There are other tools out there for generating icon fonts, such as [Fontastic](http://fontastic.me/), [Glyphter](https://glyphter.com/) and [Fontello](http://fontello.com/), and they all pretty much have the same functionality.
 

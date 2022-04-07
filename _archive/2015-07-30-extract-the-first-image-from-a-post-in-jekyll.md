@@ -9,7 +9,7 @@ It would be tedious to go through each post and add a piece of Yaml frontmatter 
 
 <!-- more -->
 
-{% include figure.html src="tooth-pull.png" %}{:.massive.center}
+{% include posts/figure.html src="tooth-pull.png" %}{:.massive.center}
 
 All of my posts exist as Markdown in the codebase, but Jekyll parses this to HTML when generating the `{% raw %}{{ post }}{% endraw %}` object. This chunk of HTML can in turn be parsed/split to find the first occurance of an image, and grab it:
 

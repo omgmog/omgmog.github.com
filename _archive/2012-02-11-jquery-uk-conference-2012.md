@@ -22,11 +22,11 @@ There were various stalls around, from such vendors as the Blackberry, Kendo UI,
 
 Inside the fortune cookie in my goodie bag was a ticket to get a free Blackberry Playbook, so I headed over to the Blackberry stall and got it -- of the 300 attendees, only 100 of us got these! So, I started the day well.
 
-{% include figure.html src="Screen%20Shot%202012-02-11%20at%2013.16.11.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20Shot%202012-02-11%20at%2013.16.11.png" %}{:.massive}
 
 The [Coffeescript](http://coffeescript.org/) mugs are really nicely done. Featuring working coffeescript code that according to John Wards ([@whiteoctober](http://twitter.com/whiteoctober)) took a whole day to write/validate before the mugs could be made. You can see a picture of the mug here:
 
-{% include figure.html src="Screen%20Shot%202012-02-11%20at%2012.50.56.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20Shot%202012-02-11%20at%2012.50.56.png" %}{:.massive}
 
 And you can view the working code online at [http://www.whiteoctober.co.uk/mug/](http://www.whiteoctober.co.uk/mug/).
 
@@ -48,7 +48,7 @@ The talks are listed below:
 
 Over-all I really enjoyed the jQuery conference. It was interesting to hear talks from people whom I've only previously heard of through Twitter or ycombinator. Take Jörn Zaefferer for example, I've used his jQuery validation plugin as far back as 2008, and now to have seen him speak at a conference is just mind-blowing.
 
-{% include figure.html src="Screen%20Shot%202012-02-11%20at%2013.28.00.png" %}{:.massive}
+{% include posts/figure.html src="Screen%20Shot%202012-02-11%20at%2013.28.00.png" %}{:.massive}
 
 Paul Irish has a really awesome energetic presentation style. He's really confident about what he's talking about, and it's clear that he's enthusiastic about jQuery and using/pushing new web technologies. Christian Heilmann had a really thought-out talk about redudancy, and his slides were interesting/entertaining, along with how well he presented.
 

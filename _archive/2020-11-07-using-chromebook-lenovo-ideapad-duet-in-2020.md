@@ -11,11 +11,11 @@ With native support for Android apps and a full Debian linux that seemlessly int
 
 So far I've installed VS Code, GIMP, Firefox and a bunch of terminal-based tools/apps (Git, Jekyll, etc,) I'm writing this post from that very environment.
 
-{% include figure.html src="Screenshot 2020-11-07 at 12.36.26.png" %}{:.center}
+{% include posts/figure.html src="Screenshot 2020-11-07 at 12.36.26.png" %}{:.center}
 
 The Lenovo Ideapad Duet comes with a detachable full keyboard -- many reviews will complain about the narrow key layout on the right-hand side of the keyboard -- but it's very usable, I can work on my muscle memory to avoid hitting _0_ instead of _-_ repeatedly.
 
-{% include figure.html src="duet.png" %}{:.center}
+{% include posts/figure.html src="duet.png" %}{:.center}
 
 This device might seem redundant in my already full arsenal of an iPad, Macbook 13" and OnePlus 7 Pro, but it fits in quite nicely. It feels more like a content creation tool than the iPad and it integrates with my Google account and connects seemlessly with the OnePlus 7 Pro for connectivity and smart unlocking.
 

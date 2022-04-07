@@ -7,7 +7,7 @@ For today's hack I'm revisiting [yesterday's zombie game](/post/cardboctober-12)
 
 <!-- more -->
 
-{% include figure.html src="2016-10/13/giphy.gif" %}{:.massive}
+{% include posts/figure.html src="2016-10/13/giphy.gif" %}{:.massive}
 
 There are a couple of things I've changed in the re-write:
 

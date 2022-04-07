@@ -1,7 +1,7 @@
 ---
 title: "The Deepoon DPVR E3 Virtual Reality Headset"
-type: vr
-old_url: "/reviews/deepoon-dpvr-e3-virtual-reality-headset/"
+tags: [vr, review]
+alternate_urls: "/reviews/deepoon-dpvr-e3-virtual-reality-headset/"
 ---
 
 Today I'm reviewing the DPVR E3. This is a Virtual Reality headset with a high resolution display, comfortable straps and an experience that's similar to the Oculus Rift.
@@ -22,11 +22,11 @@ This is quite a long review, with a lot of detail about the DPNAssistant softwar
 
 DPVR (formally Deepoon) are not a new name in the Virtual Reality headset scene. They've released a number of popular Google Cardboard headsets, and a couple of dedicated PC VR headsets before the E3. 
 
-{% include figure.html src="dpvr/dpvr.png" %}{:.center}
+{% include posts/figure.html src="dpvr/dpvr.png" %}{:.center}
 
 I'm looking at the DPVR E3 _Basic_ edition. This is just a headset, no controllers or sensors. DPVR do plan on releasing a more fully-featured edition that features controllers and "Polaris" sensors, but at the time of writing these are not yet released.
 
-{% include figure.html src="dpvr/IMG_20170830_125143.jpg" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/IMG_20170830_125143.jpg" %}{:.massive.center}
 
 So let's take a look at what comes in the box:
 
@@ -47,7 +47,7 @@ You can connect your headphones to the DPVR E3 by the built-in 3.5mm headphone j
 
 The device internals are also quite simple. It's essentially a QHD screen with a magnetometer providing 3 degrees of freedom for seated/stationary VR experiences.
 
-{% include figure.html src="dpvr/parts.jpg" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/parts.jpg" %}{:.massive.center}
 
 Here are the important parts of the specification:
 
@@ -66,9 +66,9 @@ The DPVR has a similar minimum PC requirements to the HTC Vive and Oculus Rift, 
 
 There isn't a lot to look at, but here are some of the key things. The headset, 3-in-1 cable, padding and lenses.
 
-{% include figure.html src="dpvr/IMG_20170830_125206.jpg" %}{:.massive.center}
-{% include figure.html src="dpvr/IMG_20170830_125152.jpg" %}{:.massive.center}
-{% include figure.html src="dpvr/IMG_20170830_125240.jpg" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/IMG_20170830_125206.jpg" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/IMG_20170830_125152.jpg" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/IMG_20170830_125240.jpg" %}{:.massive.center}
 
 
 
@@ -82,7 +82,7 @@ To install the DPVR E3 you'll need to download the _DPNAssistant_ software from 
 
 For the DPVR E3 we need the `2.x.x` version of the DPNAssistant. You can find the link on the Chinese website in the top bar "[大朋助手](http://www.dpvr.cn/dapengzhushou.html)". On this page is a download link to the `2.x.x` DPNAssistant.
 
-{% include figure.html src="dpvr/chrome_2017-08-23_18-20-53.png" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/chrome_2017-08-23_18-20-53.png" %}{:.massive.center}
 
 <div class="pull-comment" markdown="1">
 > You might have also seen a card in the box for _VR Online_. This is a games service similar to Steam or Oculus Home for the DPVR headsets. 
@@ -96,7 +96,7 @@ Installing is very straight forward, you can just keep hitting _Next_. The insta
 
 The DPVR E3 needs one HDMI port and two USB ports. These don't need to be USB 3.0 (as the headset itself is only capable of USB 2.0). It's important that you use the HDMI port on your dedicated graphics card (if you're using a PC).
 
-{% include figure.html src="dpvr/connections.jpg" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/connections.jpg" %}{:.massive.center}
 
 Once you've connected the DPVR E3 we can move on to using the DPNAssistant software.
 
@@ -111,11 +111,11 @@ To use the DPVR E3 headset at all you will need to have the DPNAssistant softwar
 - **Setup** - Upgrade the DPNAssistant sofrware, get support
 - **User Center** - View/manage games installed by DPNAssistant
 
-{% include figure.html src="dpvr/dpnassistant.png" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/dpnassistant.png" %}{:.massive.center}
 
 For now you will just need to worry about the _Equipment_ section, where you can check your DPVR E3 status, update the device firmware and calibrate the magnetometer.
 
-{% include figure.html src="dpvr/2017-08-23_18-15-43.png" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/2017-08-23_18-15-43.png" %}{:.massive.center}
 
 You'll see that I'm on version firmware `0.5.6` here. The DPVR E3 came with firmware `0.5.2` and has already had an update through the DPNAssistant.
 
@@ -143,17 +143,17 @@ As the name suggests, the _Video_ section lists videos. These are played through
 
 The DPNPlayer UI is pretty much entirely in Chinese. As this is essentially Kodi, you _can_ switch over to the usual _Confluence_ theme (by manually editing the config file) and use that.
 
-{% include figure.html src="dpvr/DpnPlayer_2017-08-23_18-02-07.png" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/DpnPlayer_2017-08-23_18-02-07.png" %}{:.massive.center}
 
 The 3D environment is a textured skybox that exists outside of the Kodi interface. It features two types of environment, one for the menu and one for while you're watching video. 
 
 The controls are entirely _gaze-based_ which can take some getting used to as it's very sensitive and lacks a good clear _resting area_ for your gaze.
 
-{% include figure.html src="dpvr/DpnPlayer_2017-08-23_18-03-26.png" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/DpnPlayer_2017-08-23_18-03-26.png" %}{:.massive.center}
 
 I've [created some translated resources](https://github.com/omgmog/DPVR-E3-Files/tree/master/DpnPlayer/addons/skin.deepoon1080/media/osd/fullscreen/progressbar) for the player OSD UI that can be copied over the existing resources if you fancy that. These live in `DpnPlayer/addons/skin.deepoon1080/media/osd/fullscreen/progressbar/`
 
-{% include figure.html src="dpvr/explorer_2017-08-23_18-09-05.png" %}{:.massive.center}
+{% include posts/figure.html src="dpvr/explorer_2017-08-23_18-09-05.png" %}{:.massive.center}
 
 
 #### Equipment

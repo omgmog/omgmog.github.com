@@ -6,7 +6,7 @@ comments_issue: 94
 
 <!-- more -->
 
-{% include figure.html src="by%20default%202013-08-22%20at%2011.45.38.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202013-08-22%20at%2011.45.38.png" %}{:.massive.center}
 
 ### Problems
 
@@ -17,13 +17,13 @@ Is this a feature? Perhaps its a productivity enhancement? Either way it's annoy
 #### It reinstalls itself after you've actively uninstalled it
 
 {% assign iframe_url = "https://www.youtube.com/embed/UPw-3e_pzqU" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 I mean seriously. I could understand if this was an issue with my Google profile getting out of sync between my various computers, but as of this morning none of my installations of Chrome had Hangouts installed, I updated to Chrome 29 and then Hangouts was magically back in my toolbar.
 
 #### It uses a lot of resources over time
 
-{% include figure.html src="by%20default%202013-08-22%20at%2011.17.54.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202013-08-22%20at%2011.17.54.png" %}{:.massive.center}
 
 I've experienced Chrome slow-downs due to Hangouts, running out of RAM (though Mountain Lion is probably to blame in this case), and generally the Hangout windows being slow/unresponsive until they're reloaded.
 
@@ -31,11 +31,11 @@ I've experienced Chrome slow-downs due to Hangouts, running out of RAM (though M
 
 This is how Google promote the desktop windows of Google Hangouts for Chrome:
 
-{% include figure.html src="Image%202013.08.22%2011_23_40.jpeg" %}{:.massive}
+{% include posts/figure.html src="Image%202013.08.22%2011_23_40.jpeg" %}{:.massive}
 
 This is how it is in reality:
 
-{% include figure.html src="by%20default%202013-08-22%20at%2011.32.16.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202013-08-22%20at%2011.32.16.png" %}{:.massive.center}
 
 #### The biggest problems:
 

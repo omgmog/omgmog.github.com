@@ -21,27 +21,27 @@ Getting to the venue was easy, as (besides the fact that I've lived in Oxford my
 
 Last year the conference was Oxford themed, with a Radiohead inspired drawing featuring as the main artwork and t-shirt design.
 
-{% include figure.html src="jquk2012.jpg" %}{:.massive.center}
+{% include posts/figure.html src="jquk2012.jpg" %}{:.massive.center}
 
 This year the theme was Alice's Adventures in Wonderland.
 
-{% include figure.html src="jabberwocky.jpg" %}{:.massive.center}
+{% include posts/figure.html src="jabberwocky.jpg" %}{:.massive.center}
 
 <sub>&copy; [Ben Seymour](http://twitter.com/bseymour): [Original](http://www.flickr.com/photos/boseymour/8663063817/)</sub>
 
 The route to the venue had the occasional white rabbit feet, and the venue had a massive Jabberwocky front and centre.
 
-{% include figure.html src="whiterabbit.jpg" %}{:.massive.center}
+{% include posts/figure.html src="whiterabbit.jpg" %}{:.massive.center}
 
 <sub>&copy; [Elliott Stocks](https://twitter.com/elliott_stocks): [Original](https://twitter.com/elliott_stocks/status/325150484967075840)</sub>
 
-{% include figure.html src="megawocky.jpg" %}{:.massive.center}
+{% include posts/figure.html src="megawocky.jpg" %}{:.massive.center}
 
 <sub>&copy; [Gareth Jones](https://twitter.com/4foot30): [Original](https://twitter.com/4foot30/status/325872540184625153/)</sub>
 
 The t-shirt for this years conference has the same Jabberwocky on the front.
 
-{% include figure.html src="t-shirt.jpg" %}{:.massive.center}
+{% include posts/figure.html src="t-shirt.jpg" %}{:.massive.center}
 
 <sub>&copy; [Mariana Mota](https://twitter.com/MarianaMota): [Original](http://instagram.com/p/YSGRYPDROi/)</sub>
 
@@ -51,7 +51,7 @@ The artwork was created by [Sophie Klevenow](http://www.sophieklevenow.com/) who
 
 I arrived at the venue a little earlier than planned, but the White October staff were on hand to point me in the right direction to collect my pass and delegate bag, and then to collect my t-shirt. The passes this year resemble a deck of cards.
 
-{% include figure.html src="pass.jpg" %}{:.massive.center}
+{% include posts/figure.html src="pass.jpg" %}{:.massive.center}
 
 The delegate bag wasn't spectacular this year, it contained the following:
 
@@ -87,7 +87,7 @@ He talked about some exciting things that JavaScript is being used for, such as 
 He showed a live demo of the Unreal Engine 3 that was recently ported to JavaScript using Web GL and [asm.js](http://asmjs.org/).
 
 {% assign iframe_url = "https://player.vimeo.com/video/66711027" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 He talked about not wanting to go in the direction of Java with bytecode, as it's slow and the JavaScript parser is more efficient. The main goal is for "One JavaScript for humans and computers".
 
@@ -126,7 +126,7 @@ Besides all of that, he invited (implored, encouraged) everybody to take part in
 
 During the first break, the retro games consoles from [REPLAY](http://www.replayevents.com/index.shtml){:target="_blank"} were turned on. There was a circle of chairs set up with 4 TVs and 4 consoles in the middle, and there was an additional 5th TV with an n64 close by.
 
-{% include figure.html src="games.jpg" %}{:.massive}
+{% include posts/figure.html src="games.jpg" %}{:.massive}
 <sub>&copy; [Ian Munro](http://twitter.com/imunro): [Original](https://twitter.com/imunro/status/325234919066464256)</sub>
 
 People were playing Mario Kart 64, Goldeneye 64, Bomberman (SNES), Smash Bros (GC) and many other games. I had a few rounds of Goldeneye and decided ultimately that I've not improved at the game in the past 15 years.
@@ -140,7 +140,7 @@ Remy Sharp gave an interesting/controversial talk about only using jQuery when i
 He demonstrated some great examples of how to achieve some of the core functionality of jQuery with simple JavaScript snippets.
 
 {% assign iframe_url = "https://player.vimeo.com/video/68009123" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 That sounds quite obvious, but there was a noticable eureka across the crowd when he pointed out that for a quick JavaScript prototype you don't need to throw the whole jQuery library in to select DOM elements when you can just use `querySelectorAll()`, and even map it to `$` to soften the blow.
 
@@ -164,7 +164,7 @@ He also covered the dangers of using jQuery, or rather using it incorrectly, and
 Doug's talk mostly focussed around plugging [machina.js](https://github.com/ifandelse/machina.js){:target="_blank"}, but I was too hungry to take extensive notes on the talk.
 
 {% assign iframe_url = "https://player.vimeo.com/video/67473899" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 The gist of it is that machina.js is a Finite State Machine - "What's a Finite State Machine?" you ask? Ah well.. according to [Jim Cowart](http://freshbrewedcode.com/jimcowart/2012/03/12/machina-js-finite-state-machines-in-javascript/){:target="_blank"}:
 
@@ -177,7 +177,7 @@ Doug had a nice demo with a light that changed colour to indicate the state of t
 ## Lunch
 This month White October are celebrating their 10th birthday. To celebrate they had a big green cake with blinking LEDs and icing circuitry. They also had a whole load of tasty cupcakes.
 
-{% include figure.html src="wocake.jpg" %}{:.massive}
+{% include posts/figure.html src="wocake.jpg" %}{:.massive}
 <sub>&copy; [White October](http://twitter.com/whiteoctober): [Original](https://twitter.com/WhiteOctober/status/325187539998748673)</sub>
 
 As the conference had an Alice's Adventures in Wonderland theme, it would have been nice if there were "Eat me" labels on the cupcakes!
@@ -223,7 +223,7 @@ Garann talked about using events and jQuery to glue your templates and front-end
 Ilya's talk was much like Paul Irish's last year, in that it was more about Chrome than about jQuery, but that doesn't mean it wasn't good.
 
 {% assign iframe_url = "https://player.vimeo.com/video/67330007" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 He covered the following things:
 
@@ -241,7 +241,7 @@ He demonstrated how far the remote debugging for Chrome on Android has come alon
 
 ## Break - mad as a hatter
 
-{% include figure.html src="teaparty.jpg" %}{:.massive}
+{% include posts/figure.html src="teaparty.jpg" %}{:.massive}
 
 <sub>&copy; [Ben Seymour](http://twitter.com/bseymour) </sub>
 
@@ -271,7 +271,7 @@ The only bad thing I've got to say about Joe's talk is that he had a heavy empha
 Jason, as jQuery Mobile team member and developer at BlackBerry was here to talk about how he put together a [BlackBerry UI theme for jQuery Mobile](https://github.com/jasondscott/jQueryMobile-BB10-Theme), and the UX considerations that make pages using the theme feel like native apps.
 
 {% assign iframe_url = "https://player.vimeo.com/video/67473673" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 - [Click here to view the slides](https://docs.google.com/presentation/d/19xrnU6cpyvOus0CYUnb7W7uxz_hl6Dqw-6BOxsVMn2s/edit#slide=id.p20)
 
@@ -289,7 +289,7 @@ There were 7 beers to have, each from either the [Compass brewery](http://compas
 - **Oxfordshire Ales**: Marshmellow (sponsored by White October)
 - **Compass**: The King's Shipment (sponsored by White October)
 
-{% include figure.html src="jbeery.jpg" %}{:.massive}
+{% include posts/figure.html src="jbeery.jpg" %}{:.massive}
 
 <sub>&copy; [Becky Jennings](http://twitter.com/beckyjtweets): [Original](http://instagram.com/p/YSgYIew29f/)</sub>
 

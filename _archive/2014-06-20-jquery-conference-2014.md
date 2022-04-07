@@ -10,7 +10,7 @@ Another year, another jQuery UK conference. I wrote previously about the jQuery 
 
 We were back at the [King's Centre](http://www.kingscentre.co.uk/) in Osney Mead again this year. It's a great venue, perfectly located near to the Oxford Rail Station, and capable of catering to a conference as big as jQuery.
 
-{% include figure.html src="7frmBHu.png" %}{:.massive}
+{% include posts/figure.html src="7frmBHu.png" %}{:.massive}
 
 From the Rail Station to the venue, White October staff held signs to direct people, and this year the route featured orange J's painted along the path.
 
@@ -18,11 +18,11 @@ From the Rail Station to the venue, White October staff held signs to direct peo
 
 I'm not sure what the theme was this year, the site and all of the artwork was based around creating the 'J' from 'jQuery' using different materials: cake, ketchup, sand, mustard, LEGO &mdash; but that's about it. No heavy emphasis on a theme like last years Alice's Adventures in Wonderland, or Radiohead the year before.
 
-{% include figure.html src="pa1R39r.jpg" %}{:.massive.center}
+{% include posts/figure.html src="pa1R39r.jpg" %}{:.massive.center}
 
 Theme confusion aside, the T-shirt design featuring the aforementioned materials is very nice.
 
-{% include figure.html src="DFgydEr.png" %}{:.massive.center}
+{% include posts/figure.html src="DFgydEr.png" %}{:.massive.center}
 
 ### Arrival
 
@@ -49,7 +49,7 @@ There plenty of stands in the main hall giving out stickers and other goodies. A
 Loot in hand I was appropriately placated until the conference started.
 
 {% assign iframe_url = "https://www.youtube.com/embed/R4CVi4zfcGM" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 ### John Wards - Hello!
 
@@ -58,7 +58,7 @@ John opened the conference again, and re-assured us that there were 4 ADSL lines
 ### Adam J. Sontag - The State of jQuery
 
 {% assign iframe_url = "https://player.vimeo.com/video/97723665" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 Adam's talk started out a bit like Richard D. Worth's talk last year, covering the plans for jQuery.
 
@@ -88,7 +88,7 @@ Feature detects are now lazy, so they only happen when they need to, ensuring th
 ### Jen Simmons - A Love Letter to HTML
 
 {% assign iframe_url = "https://player.vimeo.com/video/97723667" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 Jen covered a history of HTML, starting with the conception of Hypertext in the 60s, all the way through to the HTML we know and love today. She highlighted the subtle differences between some of the original contending protocols for "the web", and the qualities of the World Wide Web that ultimately won and is what we use today. These qualities are:
 
@@ -107,7 +107,7 @@ Jen covered a history of HTML, starting with the conception of Hypertext in the 
 ### Paul Lewis - Building for the future
 
 {% assign iframe_url = "https://player.vimeo.com/video/97723669" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 Paul covered some of the constraints that we have to deal with to make websites that will work well in the future, covering the multitude of devices and contexts in which our users will use our websites.
 
@@ -125,7 +125,7 @@ Pauls's slides are available online here: [http://speakerdeck.com/paullewis/buil
 ### Lea Verou - The Chroma Zone: Engineering color on the web
 
 {% assign iframe_url = "https://player.vimeo.com/video/97723672" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 Lea covered the technology behind rendering a single pixel on a screen, how subpixels work, the different kinds of subpixel display, and different methods of anti-aliasing.
 
@@ -134,28 +134,28 @@ Lea's slides are available online here: [http://leaverou.github.io/chroma-zone](
 ### Yehuda Katz - Building multi-screen web apps with Ember.js
 
 {% assign iframe_url = "https://player.vimeo.com/video/97723671" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 Yehuda talked about the benefits of convention over configuration, and went in to a pretty intense session using [Ember.js](http://emberjs.com/) to demonstrate how simple it can be to create a multi-screen web app using the GitHub API and Ember.js
 
 ### Andrew Betts - Components and modules for front-end sanity at scale
 
 {% assign iframe_url = "https://player.vimeo.com/video/97724404" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 Andrew talked about the steps that his team at the Financial Times online have taken to make all of their legacy sites more consistent using a modular approach to asset loading and a component-based interface.
 
 ### Divya Manian - Graphical effects you didn't know browsers could do
 
 {% assign iframe_url = "https://player.vimeo.com/video/97724405" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 Divya showcased some cool new features coming to browsers, such as masking elements, blending modes and transforms.
 
 ### Andrew Nesbitt & Francis Gulotta - The Rise of JavaScript Hardware Hacking
 
 {% assign iframe_url = "https://player.vimeo.com/video/97724406" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 Andrew and Francis demonstrated some awesome ways to bring hardware and APIs together to make cool things. The video speaks louder than words, so I'd recommend watching it through.
 

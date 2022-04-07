@@ -1,14 +1,14 @@
 ---
 title: The inevitable HTC Vive post
 comments_issue: 29
-type: vr
+tags: [vr]
 ---
 
 I bought an HTC Vive last November (a week before the Black Friday sales, doh!) and have spent the time since trying to get the most out of it. So here are some highlights, thoughts and other musings about the HTC Vive.
 
 <!-- more -->
 
-{% include figure.html src="2017-03/vive.png" %}{:.center}
+{% include posts/figure.html src="2017-03/vive.png" %}{:.center}
 
 ## The Setup
 
@@ -30,7 +30,7 @@ The HTC Vive is connected to the computer via a long 3-in-1 cable that carries p
 
 To solve this I bought a set of **retractable cables and hooks** that suspend the cable from the ceiling. This works really well, and was very easy to install as each of the hooks sticks to the ceiling with 3M adhesive.
 
-{% include figure.html src="2017-04/phrenology.jpg" %}{:.massive}
+{% include posts/figure.html src="2017-04/phrenology.jpg" %}{:.massive}
 
 To store the HTC Vive headset when I'm not using it my wife bought me a replica **ceramic Phrenology head**; It looks quite nice as a piece of furniture, and it's the perfect size to hold the HTC Vive headset.
 
@@ -55,7 +55,7 @@ I've found myself "Wishlisting" games and then buying them when they're on sale 
 
 There are some great free games too, and I've found that [itch.io](https://itch.io) can be a treasure trove. A particular highlight I've come across is [Compound](https://notdead.itch.io/compound).
 
-{% include figure.html src="2017-04/rec-room.gif" %}{:.massive}
+{% include posts/figure.html src="2017-04/rec-room.gif" %}{:.massive}
 
 One of the best multiplayer experiences out there right now is [Rec Room](https://www.againstgrav.com/rec-room/) which is free and cross-platform. Rec Room puts you up against random other parties in minigames such as paintball and dodgeball. You can also dress up your avatar.
 
@@ -79,6 +79,6 @@ Right now there is some fragmentation with Sony's PSVR being one silo, the Oculu
 
 Well now that I've had a couple of months to play with the HTC Vive, and I've got a great set-up and space going in my home office, it's probably time for me to make something rather than just being a consumer.
 
-{% include figure.html src="2017-04/vr-experience.gif" %}{:.massive}
+{% include posts/figure.html src="2017-04/vr-experience.gif" %}{:.massive}
 
 So watch this space.

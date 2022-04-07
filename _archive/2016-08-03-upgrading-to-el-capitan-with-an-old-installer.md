@@ -9,7 +9,7 @@ Today I tried to install El Capitan using the `Install OS X El Capitan.app` inst
 
 <!-- more -->
 
-{% include figure.html src="2016-08-03/installer.png" %}{:.massive.center}
+{% include posts/figure.html src="2016-08-03/installer.png" %}{:.massive.center}
 
 I was greeted with this message. How could this be? The installer has simply been sat in my Applications directory since October, nothing has changed.
 
@@ -31,7 +31,7 @@ That command changes the date to `October 21st 2015 at 12:00`.
 
 Alternatively you can use the Date & Time System Preferences pane:
 
-{% include figure.html src="2016-08-03/datetime.png" %}{:.massive.center}
+{% include posts/figure.html src="2016-08-03/datetime.png" %}{:.massive.center}
 
 Now you can run the installer without issue.
 

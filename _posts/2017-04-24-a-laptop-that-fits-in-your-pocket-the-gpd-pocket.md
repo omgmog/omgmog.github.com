@@ -1,6 +1,7 @@
 ---
 title: "The GPD Pocket Ultra-mobile PC UMPC Laptop"
-old_url: "/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/"
+alternate_urls: "/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/"
+tags: [review]
 ---
 
 The GPD Pocket is a 7” Ultra-mobile PC that at first glance resembles a shrunken Apple Laptop, but it’s metal unibody exterior is where the similarities end.
@@ -9,7 +10,7 @@ The GPD Pocket is a 7” Ultra-mobile PC that at first glance resembles a shrunk
 
 In this review I'm going to be looking at the design, formfactor and hardware of the GPD Pocket. I'll touch a little on the gaming capabilities and take a closer look at how the GPD Pocket functions as a practical _ultra-portable_ laptop.
 
-{% include figure.html src="2017-04/gpd-pocket/gpd.jpg" %}{:.massive.center}
+{% include posts/figure.html src="2017-04/gpd-pocket/gpd.jpg" %}{:.massive.center}
 
 [GPD](http://www.gpd.hk/) kindly provided an early release of the GPD Pocket for me to review. This is a “T1 Prototype” in their own terms but should pretty much reflect the final state of the GPD Pocket as it will go to retail.
 
@@ -40,7 +41,7 @@ Packing a 1.6ghz “Cherry Trail” Atom x7-Z8750, 8GB of RAM, 128GB of flash st
 
 When I started reviewing the GPD Pocket it was nearing the end of its hugely successful Indiegogo campaign. During the Indiegogo campaign it's price was $399 -- right now after the campaign the GPD Pocket is discounted to $459, but will eventually retail for $599.
 
-{% include figure.html src="2017-04/gpd-pocket/gpd-indiegogo.jpg" %}{:.massive.center.supermassive}
+{% include posts/figure.html src="2017-04/gpd-pocket/gpd-indiegogo.jpg" %}{:.massive.center}
 
 The price point puts it a bit higher than most low-end chromebooks (_and netbooks? do netbooks exist these days?_), substantially more than most [10” hybrid tablets that you can find from other brands such as Chuwi](/reviews/chuwi-vi10-plus-review/) -- though similarly specced -- and considerably cheaper than other metal unibody laptops from Apple and Dell.
 
@@ -59,19 +60,19 @@ The price point puts it a bit higher than most low-end chromebooks (_and netbook
 
 This is a small device. As you can see from this comparison photo, it’s about a third of the size of a 13” Macbook Pro.
 
-{% include figure.html src="2017-04/gpd-pocket/comparison-to-mac.jpg" %}{:.massive.center.supermassive}
+{% include posts/figure.html src="2017-04/gpd-pocket/comparison-to-mac.jpg" %}{:.massive.center}
 
 This size is great, and really is pocket sized -- if you are wearing jeans with particularly large front pockets, or don’t mind the risk of sitting on your GPD Pocket.
 
-{% include figure.html src="2017-04/gpd-pocket/gpd-beer.jpg" %}{:.massive.center}
+{% include posts/figure.html src="2017-04/gpd-pocket/gpd-beer.jpg" %}{:.massive.center}
 
 It’s a size that would suit fitting in a medium-sized purse, or just being thrown in your bag as part of your everyday gear. I would like to see some neoprene sleeves or cases for this formfactor, but haven’t found anything yet.
 
-{% include figure.html src="2017-04/gpd-pocket/gpd-dimensions.png" %}{:.massive.center}
+{% include posts/figure.html src="2017-04/gpd-pocket/gpd-dimensions.png" %}{:.massive.center}
 
 The hinge feels very sturdy and uses a similar opening style to the Macbook pro. The device can be opened to nearly completely flat without issue. Ventilation ports are present on the inside edge of the hinge.
 
-{% include figure.html src="2017-04/gpd-pocket/hinge.jpg" %}{:.massive.center.supermassive}
+{% include posts/figure.html src="2017-04/gpd-pocket/hinge.jpg" %}{:.massive.center}
 
 The GPD Pocket isn’t a device designed for gaming. It doesn’t feature any gamepad controls built in and it isn't made of plastic.
 
@@ -87,7 +88,7 @@ The built-in wifi worked immediately out of the box, and had no problem connecti
 
 The GPD Pocket effortlessly connects with Bluetooth devices, handling gamepads, mice and headphones all without issue.
 
-{% include figure.html src="2017-04/gpd-pocket/ports.jpg" %}{:.massive.center.supermassive}
+{% include posts/figure.html src="2017-04/gpd-pocket/ports.jpg" %}{:.massive.center}
 
 From left to right we've got USB Type-C, Micro HDMI-D, 3.5mm and USB Type-A ports.
 
@@ -99,7 +100,7 @@ The keyboard is my first and maybe only real problem with the GPD Pocket. It’s
 
 The main problems I have with the keyboard are the inclusion of non essential and duplicate keys, the weird position of some important keys and the whole QWERTY layout just feeling wrong due to it being aligned fully to the left.
 
-{% include figure.html src="2017-04/gpd-pocket/keyboard.jpg" %}{:.massive.center.supermassive}
+{% include posts/figure.html src="2017-04/gpd-pocket/keyboard.jpg" %}{:.massive.center}
 
 Additionally the keys are quite spongy (or perhaps just a little unstable on their rubber domes) and sometimes take a couple of tries before they register a full keypress (pro-tip: hit them exactly in the center to guarantee a keypress.)
 
@@ -121,7 +122,7 @@ Other than that it works nicely and as expected for a basic touch input device. 
 
 The screen is very glossy and is made of Corning Gorilla Glass 3 according to the spec sheet provided by GPD. There’s about half an inch of bezel on either side of the screen.
 
-{% include figure.html src="2017-04/gpd-pocket/screen-1.jpg" %}{:.massive.center.supermassive}
+{% include posts/figure.html src="2017-04/gpd-pocket/screen-1.jpg" %}{:.massive.center}
 
 The viewable area of the screen is 7” from one corner diagonally to the other and the resolution is 1920x1200. This is a retina screen with a density of 323.45 PPI.
 
@@ -192,7 +193,7 @@ I then carried out a similar test to simulate low/medium usage:
 
 Using this test the battery discharged in 6 hours.
 
-{% include figure.html src="2017-04/gpd-pocket/charger.jpg" %}{:.massive.center.supermassive}
+{% include posts/figure.html src="2017-04/gpd-pocket/charger.jpg" %}{:.massive.center}
 
 My GPD Pocket came with a USB Type-C charger rated for 3A at 5V. With this charger the GPD Pocket can charge in about 2.5 hours while running in Windows. With the device off it charges faster.
 
@@ -211,17 +212,17 @@ I'm not going to be testing the GPD Pocket's gaming capability extensively, but 
 Using low quality settings Skyrim is quite playable. Indoors the game plays very smoothly with no slowdown, in open spaces (with a lot going on) there is some slowdown. You can see more of this in the two videos I’ve made of Skyrim gameplay:
 
 {% assign iframe_url = "https://www.youtube.com/embed/JApgw0Wafn0" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 {% assign iframe_url = "https://www.youtube.com/embed/-bM18d9mRQE" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 #### Emulation: Super Mario Sunshine on Dolphin
 
 With the default settings Super Mario Sunshine runs at around 15-25 FPS, with noticeable audio stuttering during dialog.
 
 {% assign iframe_url = "https://www.youtube.com/embed/Nq04r9iKA5c" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 ### Other Software
 
@@ -241,11 +242,11 @@ I've not used the GPD Pocket to do any real multitasking, and I can't imagine an
 
 A short test of the streaming capability of the GPD Pocket using [DPC Latency Checker](http://www.thesycon.de/eng/latency_check.shtml) shows that the GPD Pocket should be able to handle streaming without issue.
 
-{% include figure.html src="2017-04/gpd-pocket/dpc-latency.jpg" %}{:.massive.center}
+{% include posts/figure.html src="2017-04/gpd-pocket/dpc-latency.jpg" %}{:.massive.center}
 
 Youtube videos play smoothly, and Netflix worked without issue.
 
-{% include figure.html src="2017-04/gpd-pocket/netflix-stats.png" caption="You can access the stats using Ctrl+Shift+Alt+D while watching a video on Netflix" %}{:.massive.center.supermassive}
+{% include posts/figure.html src="2017-04/gpd-pocket/netflix-stats.png" %}{:.massive.center}
 
 Using MPC-HC I tested some sample 4k and 2k mkv/mp4 files. These seemed to play well. 1080p video played without any issue at all.
 
@@ -271,4 +272,4 @@ It can handle typical laptop tasks, and you will find yourself enjoying doing _r
 
 If you've managed to get hold of a GPD Pocket during the Indiegogo campaign then you've got a bargain.
 
-{% include figure.html src="2017-04/gpd-pocket/gpd-banana.jpg" %}{:.massive.center.supermassive}
+{% include posts/figure.html src="2017-04/gpd-pocket/gpd-banana.jpg" %}{:.massive.center}

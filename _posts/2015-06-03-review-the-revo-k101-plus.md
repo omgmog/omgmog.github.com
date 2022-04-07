@@ -1,7 +1,8 @@
 ---
 
 title: "The Revo K101 Plus Portable Games Console"
-old_url: "/reviews/review-the-revo-k101-plus/"
+alternate_urls: "/reviews/review-the-revo-k101-plus/"
+tags: [review]
 ---
 
 Today I'm refreshed to be reviewing a console that doesn't try to cram too much in to the form factor, but instead tried to focus on doing one thing well.
@@ -18,7 +19,7 @@ You can pick up any GBA game for a good price on eBay these days, so having a ne
 
 The Revo K101 has actually been around since 2012, but the new "Revo K101 Plus" was released earlier this year, addressing some of the small issues found in the original.
 
-{% include figure.html src="k101/1.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/1.jpg" %}{:.massive}
 
 Outwardly, the only visual difference between the K101 and the K101 Plus is the addition of a '+' on the logo below the display, but what precisely has changed?
 
@@ -81,7 +82,7 @@ I'll talk more about that supposed screen resolution later.
 
 ## What's in the box?!
 
-{% include figure.html src="k101/2.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/2.jpg" %}{:.massive}
 
 1. Revo K101 Plus and K-card, Micro SD
 2. USB Power adapter
@@ -98,41 +99,41 @@ Pretty standard stuff. The accessories are the sort you could pick up for about 
 
 The Revo K101 comes with it's own GBA flash card called a "K-card". This uses Micro SD for storage, which is where you would put all of your (ahem) homebrew games. The system software appears to be contained either directly on the K-card, or on the K101 itself.
 
-{% include figure.html src="k101/4.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/4.jpg" %}{:.massive}
 
 The K-card doesn't work in other devices (I tried it in my GBA Micro), but it's pretty nice to get a flash card along with the K101.
 
-{% include figure.html src="k101/5.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/5.jpg" %}{:.massive}
 
-{% include figure.html src="k101/6.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/6.jpg" %}{:.massive}
 
 The K-card is sized very similarly to a genuine GBA cartridge. The Micro SD slot is spring loaded, and the Micro SD sits flush along the edge.
 
-{% include figure.html src="k101/7.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/7.jpg" %}{:.massive}
 
 ## A closer look at the K101
 
 Here's the walkthrough of the K101 Plus from the box:
 
-{% include figure.html src="k101/3.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/3.jpg" %}{:.massive}
 
 The front has a D-pad, start/select buttons, A/B/X/Y buttons. The GBA originally had just A and B buttons, so on the K101 the X/Y buttons function the same as the L/R buttons while playing GBA games.
 
-{% include figure.html src="k101/8.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/8.jpg" %}{:.massive}
 
-{% include figure.html src="k101/9.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/9.jpg" %}{:.massive}
 
 The back features a removable battery cover, behind which you have a replacable Nokia battery.
 
-{% include figure.html src="k101/10.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/10.jpg" %}{:.massive}
 
 On the bottom edge of the K101 there's a 3.5mm audio jack and a reset button, along with the GBA slot. As mentioned previously, the GBA slot can take real GBA games, the K-cart, and GBA flash carts. The GBA slot doesn't seem to work with old Gameboy classic/color games though.
 
-{% include figure.html src="k101/11.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/11.jpg" %}{:.massive}
 
 On the top edge of the K101 there's a Mini USB port for charging the K101, a brightness/function button, a 2.5mm AV-OUT port, an EXT-1 port (to connect the K101 to other K101's and even to GBA), and the left/right triggers.
 
-{% include figure.html src="k101/12.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/12.jpg" %}{:.massive}
 
 On the left hand side of the K101 there's the power button, on the right hand side a volume wheel.
 
@@ -142,32 +143,32 @@ Here are some comparison shots of the K101 Plus next to other devices.
 
 ### GBA Micro
 
-{% include figure.html src="k101/21.jpg" %}{:.massive}
-{% include figure.html src="k101/22.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/21.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/22.jpg" %}{:.massive}
 
 ### Dingoo A320
 
-{% include figure.html src="k101/23.jpg" %}{:.massive}
-{% include figure.html src="k101/24.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/23.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/24.jpg" %}{:.massive}
 
 ## Display
 
-{% include figure.html src="k101/13.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/13.jpg" %}{:.massive}
 
 According to the specs the K101 Plus has an "AUO 3-inch HD LCD screen" at 960x480 px, though I'm not sure how accurate that is. For it to be 960x480 it'd need to be a lot wider, rather than the 4:3 aspect ratio that you can see.
 
-{% include figure.html src="k101-screen-sizes.png" %}{:.massive}
+{% include posts/figure.html src="k101-screen-sizes.png" %}{:.massive}
 
 I presume it's more likely a 320x240 screen, which to my eye matches what I'm seeing with scaling disabled on the K101. Talking about scaling, let's look at how it performs:
 
-{% include figure.html src="k101/17.jpg" %}{:.massive}
-{% include figure.html src="k101/18.jpg" %}{:.massive}
-{% include figure.html src="k101/19.jpg" %}{:.massive}
-{% include figure.html src="k101/20.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/17.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/18.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/19.jpg" %}{:.massive}
+{% include posts/figure.html src="k101/20.jpg" %}{:.massive}
 
 Scaling the GBAs native 240x160 is pretty hard to do, and the K101 doesn't implement any fancy filters for the scaling, so scaled games don't look amazing.
 
-{% include figure.html src="2xsai.png" %}{:.massive}
+{% include posts/figure.html src="2xsai.png" %}{:.massive}
 
 It would be nice to see something like 2xSaI on the K101 to smooth out those fuzzy pixels, and breath some life into these old games!
 

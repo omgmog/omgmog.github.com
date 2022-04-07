@@ -5,7 +5,7 @@ comments_issue: 95
 
 I concluded in my [previous post](/post/hands-on-with-the-hp-chromebook-11/) about the HP Chromebook 11 that it's a good device for casually browsing the internet, but it's no replacement for a regular laptop or desktop for getting stuff done.
 
-{% include figure.html src="IMG_20140210_150652.jpg" %}{:.massive.center}
+{% include posts/figure.html src="IMG_20140210_150652.jpg" %}{:.massive.center}
 
 Since that post I've not used the Chromebook very much, so with a vacant weekend I've decided to blow the dust off of the Chromebook and try to squeeze some more functionality out of it.
 
@@ -92,7 +92,7 @@ arch=('armv7h')
 
 ## Doing real work on the HP Chromebook 11
 
-{% include figure.html src="IMG_20140211_130139.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20140211_130139.jpg" %}{:.massive}
 
 Now that you've got Arch installed you can start using the Chromebook to do some real work. I use `Geany` as my text editor, have `git`, `ruby`, `gem`, `jekyll` and many other important applications installed.
 

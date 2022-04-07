@@ -12,6 +12,6 @@ I was the only front-end developer there, amongst a mixture of Djangonauts and s
 
 I ended up taking my project solo, and so I produced my first extension from scratch.
 
-{% include figure.html src="Screen%20Shot%202013-06-23%20at%2002.41.12.png" %}{:.massive.center}
+{% include posts/figure.html src="Screen%20Shot%202013-06-23%20at%2002.41.12.png" %}{:.massive.center}
 
 You can get the extension over at the [GitHub repository](https://github.com/omgmog/chrome-add-link-to-trello). If you find any issues, feel free to submit a [pull request](https://github.com/omgmog/chrome-add-link-to-trello/pulls) or an [issue](https://github.com/omgmog/chrome-add-link-to-trello/issues) and let me know.

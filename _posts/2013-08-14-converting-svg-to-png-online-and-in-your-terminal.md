@@ -1,6 +1,7 @@
 ---
 title: Converting SVG to PNG online and in your terminal
 comments_issue: 96
+tags: [guide]
 ---
 This post is mostly for my own benefit on the rare occasion that I have to convert SVG files to PNG.
 
@@ -8,7 +9,7 @@ I always spend a large amount of time looking for an online SVG to PNG converter
 
 <!-- more -->
 
-{% include figure.html src="by%20default%202013-08-14%20at%2015.40.29.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202013-08-14%20at%2015.40.29.png" %}{:.massive.center}
 
 ### SVG icon resources:
 

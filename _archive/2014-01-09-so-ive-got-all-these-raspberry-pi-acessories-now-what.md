@@ -20,7 +20,7 @@ Besides using KickStarter, others are independently creating products that compl
 - [Pibow Raspberry Pi case](http://shop.pimoroni.com/products/pibow-raspberry-pi-case)
 - [PiGlow](http://shop.pimoroni.com/products/piglow)
 
-{% include figure.html src="Image%202013.12.10%2019_26_17.png" %}{:.massive.center}
+{% include posts/figure.html src="Image%202013.12.10%2019_26_17.png" %}{:.massive.center}
 
 In November I organised a [sustainability-themed hack day](/post/sushack-1-building-the-foundations-of-the-oxford-flood-network-stack/) where we used the Raspberry Pi paired with some custom-made sensors over white-spectrum radiowaves to monitor flood water levels and push the sensor data to the internet.
 

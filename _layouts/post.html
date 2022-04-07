@@ -2,12 +2,36 @@
 layout: layout
 ---
 {% assign post = page %}
-{% include single_post.html class="post h-entry" %}
 
-{% if jekyll.environment == "production" %}
-<hr>
-{% include _adsense.html %}
+<article class="post h-entry">
+    <header>
+        <h2>
+            <a href="{{ post.url }}" class="p-name u-url">
+                {{ post.title }}
+            </a>
+        </h2>
+        <div class="post-meta">
+            <time class="dt-published" datetime="{{post.date}}">{{ post.date | date_to_long_string }}</time>
+            {% include global/types.html %}
+        </div>
+    </header>
+{% if post.iframe_url %}
+    {% assign iframe_url = post.iframe_url %}
+    {% include posts/figure.html type="iframe" %}
 {% endif %}
+<div class="e-content">{{ content }}</div>
+{% if post.collection == 'cardboctober' %}
+    {% capture cardboctober_footer %}{% include posts/cardboctober.html %}{% endcapture %}
+    {{ cardboctober_footer | markdownify }}
+{% endif %}
+</article>
+
+
+
+{% include posts/interactions.html %}
+  
+
+{% include posts/adsense.html %}
 
 {% if post.content contains '<code' %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono">

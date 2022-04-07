@@ -8,11 +8,11 @@ Some Cardboard experiences might require pertinent information to always be visi
 
 In my Cardboctober hack for Speech Recognition I had an indicator for the current microphone state at the bottom of the screen. This was important to show whether the microphone was off or on.
 
-{% include figure.html src="2016-10/17/1.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/17/1.png" %}{:.massive}
 
 In the Speech Recognition hack I’ve created the indicator using a Mesh that’s added as a child of the camera object. This ensures that it’s drawn stereoscopically as with the rest of the scene. It looks something like this:
 
-{% include figure.html src="2016-10/17/2.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/17/2.png" %}{:.massive}
 
 The benefit of creating the HUD as part of the scene rather than as a 2D overlay is that you don’t have to duplicate it for each side of the stereoscopic view.
 
@@ -22,7 +22,7 @@ Another option would be attaching the hud to something else in the scene. If the
 
 Besides the HUD, there are also some challenges with displaying information within the game world. For example text on buttons needs to be clear, and the buttons need to be large enough that the raycasting reticle from both eyes can hit it without hitting other buttons that are too close.
 
-{% include figure.html src="2016-10/17/3.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/17/3.png" %}{:.massive}
 
 In my Webaudio Beat Sequencer hack I’m displaying a lot of buttons (176 of them!) in a curved grid. The grid is curved to ensure that the size and distance from the camera remains consistent no matter which button you’re looking at.
 

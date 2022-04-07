@@ -14,11 +14,11 @@ Interpupillary distance (IPD) is the distance between the center of the pupils o
 
 With the Cardboard v1 and v2 headsets (and many clones of them) the distance between the lenses is fixed, so the IPD is not controllable. If your eyes are positioned closed or further apart than what these headsets are designed for, you might have trouble seeing the stereoscopic 3D image correctly.
 
-{% include figure.html src="2016-10/21/bad-ipd.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/21/bad-ipd.png" %}{:.massive}
 
 > When viewing in your VR headset, the lens center markers might appear blurry or duplicated. In extreme cases, you might be seeing two separate lens separate markers instead of one.
 
-{% include figure.html src="2016-10/21/vrbox.jpg" %}{:.massive}
+{% include posts/figure.html src="2016-10/21/vrbox.jpg" %}{:.massive}
 
 Some plastic/higher quality headsets such as the VR Box allow you to move the lenses closer together/further apart so that you can adjust the IPD.
 
@@ -27,7 +27,7 @@ Some plastic/higher quality headsets such as the VR Box allow you to move the le
 
 If you're spending very little for your Cardboard headset, the lenses are probably not going to be great quality. In nearly all Cardboard's the lenses are made of plastic. Plastic lenses can distort the image heavily if they're too thick, or you're viewing them from off-centre.
 
-{% include figure.html src="2016-10/21/lenses.jpg" %}{:.massive}
+{% include posts/figure.html src="2016-10/21/lenses.jpg" %}{:.massive}
 
 ### Headstrap or not
 

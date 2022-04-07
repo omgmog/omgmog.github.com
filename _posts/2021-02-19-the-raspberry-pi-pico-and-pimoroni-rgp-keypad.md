@@ -1,16 +1,16 @@
 ---
 title: "The Raspberry Pi Pico and the Pimoroni Pico RGB Keypad"
 comments_issue: 108
-type: rpi
+tags: [rpi]
 ---
 
 In January the [Raspberry Pi Pico was announced](https://www.raspberrypi.org/blog/raspberry-pi-silicon-pico-now-on-sale/). The Pico is a [RP2040 microcontroller](https://www.raspberrypi.org/documentation/pico/getting-started/) featuring a dual-core Arm Cortex-M0+ processor with 264KB internal RAM and support for up to 16MB of off-chip Flash. It's comparable to certain Arduino or ESP32 boards and at less than £4 per board it's a well-priced alternative.
 
-{% include figure.html src="picogpio.jpg" %}{:.center}
+{% include posts/figure.html src="picogpio.jpg" %}{:.center}
 
 The Pico comes with 30 GPIO pins. These feature through-holes so you can solder your own header pins, and [castellations](https://www.pcbdirectory.com/community/what-are-castellated-holes-on-a-pcb) so you can easily flush mount the Pico to another circuit board and permanently integrate it into a larger project.
 
-{% include figure.html src="IMG_20210219_160021.jpg" %}{:.center}
+{% include posts/figure.html src="IMG_20210219_160021.jpg" %}{:.center}
 
 ## Everything's better with RGB lighting
 
@@ -20,7 +20,7 @@ The Keypad features 16 conductive buttons with translucent silicone keys, each w
 
 By using the header slots on the RGB Keypad to hold the Pico and header pins in place I made short work of soldering the 40 header pins. Additionally I added a switch between the `RUN` pin and a nearby `GND` to allow the Pico to be easily rebooted without having to unplug/plug the USB cable.
 
-{% include figure.html src="IMG_20210219_160035.jpg" %}{:.center}
+{% include posts/figure.html src="IMG_20210219_160035.jpg" %}{:.center}
 
 ### So what can it do?
 

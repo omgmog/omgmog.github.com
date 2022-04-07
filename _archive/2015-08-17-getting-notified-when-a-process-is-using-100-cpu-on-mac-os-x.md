@@ -3,7 +3,7 @@ comments_issue: 73
 title: Getting Notified when a process is using 100% CPU on Mac OS X
 ---
 
-{% include figure.html src="hotmacbook.jpg" %}{:.massive.center}
+{% include posts/figure.html src="hotmacbook.jpg" %}{:.massive.center}
 
 Lately I've noticed `node.js` occasionally spawning a process that's using 100% CPU. When this happens, the battery on my MacBook quickly drains.
 

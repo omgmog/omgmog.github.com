@@ -21,7 +21,7 @@ Back to the context of `placeholder` text in Safari then, I had been developing 
 
 The issue here is how each browser supports styling of the `placeholder` text. Here's a matrix of the style support:
 
-{% include figure.html src="by%20default%202012-07-24%20at%2012.17.12.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202012-07-24%20at%2012.17.12.png" %}{:.massive.center}
 
 (From [John Catterfeld's blog: Styling the HTML5 placeholder](http://blog.ajcw.com/2011/02/styling-the-html5-placeholder/))
 
@@ -56,24 +56,24 @@ Anyway, enough background, on to my problem. First of all, let's see how browser
 
 ## Firefox
 
-{% include figure.html src="by%20default%202012-07-24%20at%2011.09.57.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202012-07-24%20at%2011.09.57.png" %}{:.massive.center}
 
 ## Opera
 
-{% include figure.html src="by%20default%202012-07-24%20at%2014.09.35.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202012-07-24%20at%2014.09.35.png" %}{:.massive.center}
 
 ## Chrome
 
-{% include figure.html src="by%20default%202012-07-24%20at%2011.08.57.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202012-07-24%20at%2011.08.57.png" %}{:.massive.center}
 
 ## Safari
 
-{% include figure.html src="by%20default%202012-07-24%20at%2011.08.48.png" %}{:.massive.center}
+{% include posts/figure.html src="by%20default%202012-07-24%20at%2011.08.48.png" %}{:.massive.center}
 
 You can play with the [jsFiddle](http://jsfiddle.net/wfYFW/) that I made to test this here:
 
 {% assign iframe_url = "http://jsfiddle.net/wfYFW/embedded/result/" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 
 I wrote this blog post after I found the cause for the issue I was having in Safari, so I've prepared these screenshots with the solution in place. As you can see, Safari messes up the alignment of `placeholder` text if you've set `line-height` on the `input` element. I believe this is a bug, because the `input` respects the line-height declaration as soon as you begin typing (and the `placeholder` text is cleared).

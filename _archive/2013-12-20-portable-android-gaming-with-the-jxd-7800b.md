@@ -11,7 +11,7 @@ JXD have been on the Android-powered portables scene for a while now, starting w
 
 Since 2011 the Android portables from JXD have been improving to keep up with the rest of the Android devices on the market, and now the [JXD 7800B](http://www.jxd.hk/products.asp?id=639&selectclassid=009006) has a spec that's comparable to most modern tablets.
 
-{% include figure.html src="jxd7800b.jpg" %}{:.massive}
+{% include posts/figure.html src="jxd7800b.jpg" %}{:.massive}
 
 ## Specification
 - **CPU:** RockChip 3188, Quad Core, 1.6GHz (cortex A9 CPU, ARM mali400 mp4 GPU)
@@ -30,43 +30,43 @@ DinoDirect even included a plug adapter to use the US plug provided with British
 
 Here are some unpacking photographs:
 
-{% include figure.html src="IMG_20131222_125152.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_125152.jpg" %}{:.massive}
 
 Exciting, branded packaging from DinoDirect
 
-{% include figure.html src="IMG_20131222_125206.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_125206.jpg" %}{:.massive}
 
-{% include figure.html src="IMG_20131222_125230.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_125230.jpg" %}{:.massive}
 
 Free iPhone screen protector gift!
 
-{% include figure.html src="IMG_20131222_125239.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_125239.jpg" %}{:.massive}
 
-{% include figure.html src="IMG_20131222_125259.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_125259.jpg" %}{:.massive}
 
-{% include figure.html src="IMG_20131222_125324.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_125324.jpg" %}{:.massive}
 
 So how does the JXD 7800B compare to other devices? take a look:
 
 #### Google Nexus 7 (2012 model)
 
-{% include figure.html src="IMG_20131222_124731.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_124731.jpg" %}{:.massive}
 
 #### Sony PSP 3000
 
-{% include figure.html src="IMG_20131222_124813.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_124813.jpg" %}{:.massive}
 
 #### Nintendo DSi
 
-{% include figure.html src="IMG_20131222_124839.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_124839.jpg" %}{:.massive}
 
 #### Dingoo A320
 
-{% include figure.html src="IMG_20131222_124758.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_124758.jpg" %}{:.massive}
 
 #### Banana
 
-{% include figure.html src="IMG_20131222_124704.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_124704.jpg" %}{:.massive}
 
 As you can see, it's quite a large device. The size and weight are as follows:
 
@@ -79,7 +79,7 @@ Unlike most Android devices, the JXD 7800B doesn't charge via micro-USB port, bu
 
 There are two front-facing speakers, they sound pretty good with the games I've played on the JXD 7800B.
 
-{% include figure.html src="IMG_20131222_124924.jpg" %}{:.massive}
+{% include posts/figure.html src="IMG_20131222_124924.jpg" %}{:.massive}
 
 The JXD 7800B features both front and rear-facing cameras (0.3MP and 2MP respectively). As you would expect they're not great, but nobody orders a portable console from China and expects the cameras to be good.
 

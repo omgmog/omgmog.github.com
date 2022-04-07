@@ -1,9 +1,0 @@
-{% if post.collection == 'cardboctober' %}
-  <div class="notice">
-    {% capture cardboctober_footer %}{% include cardboctober.html %}{% endcapture %}
-    {{ cardboctober_footer | markdownify }}
-  </div>
-{% endif %}
-
-
-{% include _interactions.html %}

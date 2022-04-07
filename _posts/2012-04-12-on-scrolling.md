@@ -1,12 +1,13 @@
 ---
 comments_issue: 52
 title: On scrolling
+tags: [article]
 ---
 Scrolling on the web is something that we take for granted when thinking about how users will interact with our website. There are two schools of thought on the subject: one that's ingrained in how we interact with what we're seeing on our screen, and the other ingrained in how we interact with the real world.
 
 <!-- more -->
 
-{% include figure.html src="Image%202013.08.14%2016_09_33.jpeg" %}{:.massive}
+{% include posts/figure.html src="Image%202013.08.14%2016_09_33.jpeg" %}{:.massive}
 
 While you're reading this article, if you're using a standard computer with a mouse that has a scroll wheel, you're probably scrolling down to read more of the article. Don't you find it odd that in order to move the page upwards, you're scrolling downwards? This is even more apparent if you're using a laptop with a trackpad, where you move your finger in a downward motion to move the page upward.
 
@@ -16,23 +17,23 @@ While recently implementing a image scroller/marque/slider, I became aware of an
 
 First a diagram of the problem on the X-axis:
 
-{% include figure.html src="Image%202013.08.14%2016_03_57.png" %}{:.massive.center}
+{% include posts/figure.html src="Image%202013.08.14%2016_03_57.png" %}{:.massive.center}
 
 Second a diagram of the problem on the Y-axis:
 
-{% include figure.html src="Image%202013.08.14%2016_04_26.png" %}{:.massive.center}
+{% include posts/figure.html src="Image%202013.08.14%2016_04_26.png" %}{:.massive.center}
 
 ---
 
 **Figure 1** - The default state. This is before we've interacted with the page at all.
 
-{% include figure.html src="Image%202013.08.14%2016_05_25.png" %}{:.massive.center}
+{% include posts/figure.html src="Image%202013.08.14%2016_05_25.png" %}{:.massive.center}
 
 ---
 
 **Figure 2** - Interaction with a 'viewport bias', here the viewport is the component that we're moving. This is the kind of interaction most people would feel accustomed to. This is how scroll bars in your web browser work, and how your scroll wheel works. This is expected as it's the way scrolling has been ingrained in to interaction with content on an axis.
 
-{% include figure.html src="Image%202013.08.14%2016_06_09.png" %}{:.massive.center}
+{% include posts/figure.html src="Image%202013.08.14%2016_06_09.png" %}{:.massive.center}
 
 Since the early days of terminal computing, the up/down/left/right keys on the keyboard have been used to navigate in their respective directions.
 
@@ -44,7 +45,7 @@ If I click on a 'previous' or 'left' arrow on a slider device I am expecting the
 
 **Figure 3** - Interaction with a 'content bias', here the content is the component that we're moving. This is supposedely a more 'natural' scrolling technique.
 
-{% include figure.html src="Image%202013.08.14%2016_07_20.png" %}{:.massive.center}
+{% include posts/figure.html src="Image%202013.08.14%2016_07_20.png" %}{:.massive.center}
 
 Apple use this on their iOS devices, where you're interacting by moving the content with your finger. Since Mac OS X Lion this feature has crept in to the desktop too.
 

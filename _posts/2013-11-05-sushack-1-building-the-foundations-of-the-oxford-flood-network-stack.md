@@ -1,6 +1,7 @@
 ---
 comments_issue: 17
 title: 'SusHack #1: Building the foundations of the Oxford Flood Network Stack'
+tags: [hackday]
 ---
 
 This past weekend I held my first hack day. This is a recollection of why/how SusHack came to be, and how the day went.
@@ -13,7 +14,7 @@ After the [Refresh Oxford](http://www.refreshoxford.co.uk/) hack day back in Jun
 
 ### Conception
 
-{% include figure.html src="Image%202013.11.05%2022_06_48.png" %}{:.massive.center}
+{% include posts/figure.html src="Image%202013.11.05%2022_06_48.png" %}{:.massive.center}
 
 As we're working in the area of sustainable business, it made sense to have a sustainability themed hack day, so "SusHack" was born towards the end of August. I spoke to the folks who organised Refresh to get some tips on organising the hack day, and then figured out what I needed. In short:
 

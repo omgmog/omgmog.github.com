@@ -9,7 +9,7 @@ This is an overview of why and how I decided to automate part of my home, and bu
 
 I recently decided to change the opening direction of the door in my home office. Previously the door opened in to the room, limiting the usable space next to the door, now it opens against a wall.
 
-{% include figure.html src="2018-08-09/door-direction.jpg" %}{:.center}
+{% include posts/figure.html src="2018-08-09/door-direction.jpg" %}{:.center}
 
 It wasn't until I'd finished changing the door over that I realised that the location of the light switch was now inconvenient as it now sits behind the door when the door is open.
 
@@ -25,23 +25,23 @@ I decided I'd go with an ESP8266 because it's cheap, features WiFi built-in and 
 
 For the servo I bought a [MG996R](https://amzn.to/2AWu3V5) servo with 9.4kg/cm of torque (at 4.8v) -- I'll be powering the servo off of a 3.3v pin on the NodeMCU board, so this should be powerful enough to turn the light on and off... Just look at the size of it!
 
-{% include figure.html src="2018-08-09/IMG_20180808_094000.jpg" %}{:.center}
+{% include posts/figure.html src="2018-08-09/IMG_20180808_094000.jpg" %}{:.center}
 
 ### Designing the hardware
 
 Most examples of this that I've seen were for _American-style_ switches, they look a bit like this:
 
-{% include figure.html src="2018-08-09/us-lightswitch.jpg" %}{:.center}
+{% include posts/figure.html src="2018-08-09/us-lightswitch.jpg" %}{:.center}
 
 I live in the UK, and here our switches typically look something like this:
 
-{% include figure.html src="2018-08-09/uk-lightswitch.jpg" %}{:.center}
+{% include posts/figure.html src="2018-08-09/uk-lightswitch.jpg" %}{:.center}
 
 With variations on that for _2-gang_ (2 switches) _3-gang_, and _dimmer_ style switches. The light switch in my office is just a single switch, so that simplifies things a bit.
 
 I looked online to find some measurements for the switch and where the screw holes and things are positioned, and this is all I could find:
 
-{% include figure.html src="2018-08-09/metcld_plswitch_dims.gif" %}{:.center}
+{% include posts/figure.html src="2018-08-09/metcld_plswitch_dims.gif" %}{:.center}
 
 So I took my calipers and measured the actual switch I've got. 
 
@@ -49,13 +49,13 @@ My plan was to design and print a mounting plate that screws over the existing l
 
 This mounting plate would then house the NodeMCU board and position the axle of the servo so that it can turn the light switch on and off. Here's what I came up with in TinkerCAD:
 
-{% include figure.html src="2018-08-09/firefox_2018-08-09_16-02-07.png" %}{:.center}
+{% include posts/figure.html src="2018-08-09/firefox_2018-08-09_16-02-07.png" %}{:.center}
 
 This first version worked very nicely and fit perfectly. The arms that hold the servo in place were not strong enough and broke pretty much immediately. 
 
 My original plan for mounting the NodeMCU board was to screw through some M2 screws in to recessed nuts in the back of the mounting plate, but this didn't work very well so eventually I decided to reverse that and have the screws permentantly affixed from the back and have the nuts removable.
 
-{% include figure.html src="2018-08-09/mountplate.jpg" %}{:.center}
+{% include posts/figure.html src="2018-08-09/mountplate.jpg" %}{:.center}
 
 This worked pretty well, but having to hold the servo in place with _Gorilla tape_ wasn't ideal for a permenant installation.
 
@@ -97,12 +97,12 @@ void loop(){
 
 Blynk provides an Android app to let you talk to your Blynk-connected devices. On there I simply setup a button that sends a value to the Blynk to configure the rotation angle of the servo. 
 
-{% include figure.html src="2018-08-09/blynk.jpg" %}{:.center}
+{% include posts/figure.html src="2018-08-09/blynk.jpg" %}{:.center}
 
 With my servo I use a rotation of `35` for _On_ and `125` for _Off_. These values will probably be different for you depending on how your servo is mounted, and at what angle the servo arm is attached.
 
 I'm currently revisiting the design of the mounting plate from scratch using [Fusion 360](https://www.autodesk.com/products/fusion-360/overview), and thinking of ways to make the servo easily detachable so that the light can be used like it's the year 2017 or something, but for now it's working great!
 
-{% include figure.html src="2018-08-09/alive.gif" %}{:.center}
+{% include posts/figure.html src="2018-08-09/alive.gif" %}{:.center}
 
 And that's it, my first bit of home automation; My first IoT device. I've scratched the itch, and now I'm thinking about what else I can automate. I've got a second NodeMCU waiting to be used after all.

@@ -11,7 +11,7 @@
   source: https://github.com/omgmog/talk-20-minutes-into-the-future
   img: "vr/talk-20mins.jpg"
 - title: "An introduction to using A-Frame"
-  summary: This was part of an onboarding/kool-aiding for A-Frame that I put together for participants of Game Dev Day
+  summary: Onboarding for A-Frame that I put together for participants of Game Dev Day
   date: 2016-07-23
   slides: https://blog.omgmog.net/talk-an-intro-to-aframe/talk.html
   source: https://github.com/omgmog/talk-an-intro-to-aframe

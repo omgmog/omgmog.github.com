@@ -9,7 +9,7 @@ I bought a [HP Chromebook 11](http://www.google.com/intl/en/chrome/devices/hp-ch
 
 ## The HP Chromebook 11
 
-{% include figure.html src="Image%202013.11.09%2012_02_22.jpeg" %}{:.massive.center}
+{% include posts/figure.html src="Image%202013.11.09%2012_02_22.jpeg" %}{:.massive.center}
 
 This is the latest in the range of Chromebooks to be released. Finally the Chromebooks are getting to the point where they're cheap enough to buy as a second or third computer, and they don't look or feel cheap.
 
@@ -27,14 +27,14 @@ This is quite a similar spec to most Android tablets these days, except that it 
 
 The Chromebook 11 weighs in at 1.04kg, so it's very light, and the 11" form factor means it's not too large to carry around, or just throw in to your bag on your way out.
 
-{% include figure.html src="Screen%20Shot%202013-11-09%20at%2016.42.17.png" %}{:.massive.center}
+{% include posts/figure.html src="Screen%20Shot%202013-11-09%20at%2016.42.17.png" %}{:.massive.center}
 
 ## Using the Chromebook in real life
 
 As with any new gadget, the videos that are used to announce the Chromebook 11 make it look really fun, and possible to use the Chromebook in any situation.
 
 {% assign iframe_url = "https://www.youtube.com/embed/xArQDa1j634" %}
-{% include iframe_embed.html %}
+{% include posts/figure.html type="iframe" %}
 
 The first reality smack-in-the-face is that you need a WiFi connection to do anything with the Chromebook.
 

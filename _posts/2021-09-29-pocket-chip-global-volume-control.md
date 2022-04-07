@@ -1,7 +1,7 @@
 ---
 title: Adding Global Volume Control to the Pocket CHIP
 comments_issue: 110
-type: chip
+tags: [chip]
 ---
 
 I've been gradually [adding internal speakers to each of my Pocket CHIPs](/post/pocketchip-internal-speaker/) lately and found it cumbersome to have to either open `alsamixer` or use the volume control page in the Pocket CHIP launcher to control volume.
@@ -12,9 +12,9 @@ The Pocket CHIP uses [awesome](https://awesomewm.org) as it's window manager. Wi
 
 I decided to use this to add volume control. With my changes to `~/.config/awesome/rc.lua` you can simply press `ctrl`+`↑` or `ctrl`+`↓` and the volume will increase or decrease by 10% respectively.
 
-{% include figure.html src="chip-stuff/2021-09-29-095017-480x272-scrot.png" %}{:.center}
+{% include posts/figure.html src="chip-stuff/2021-09-29-095017-480x272-scrot.png" %}{:.center}
 
-{% include figure.html src="chip-stuff/2021-09-29-095101-480x272-scrot.png" %}{:.center}
+{% include posts/figure.html src="chip-stuff/2021-09-29-095101-480x272-scrot.png" %}{:.center}
 
 The changes are quite simple, first I defined some functions:
 

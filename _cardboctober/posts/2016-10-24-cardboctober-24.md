@@ -77,4 +77,4 @@ var updatePosition = function (piece) {
 
 And that's it for today, tomorrow we'll look at creating some actual Tetrominoes.
 
-{% include figure.html src="2016-10/24/giphy.gif" %}{:.massive}
+{% include posts/figure.html src="2016-10/24/giphy.gif" %}{:.massive}

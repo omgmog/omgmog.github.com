@@ -71,7 +71,7 @@
         }
     };
 
-    const pageURL_base64 = btoa(pageURL);
+    const pageURL_base64 = btoa(pageURL[0]); // first URL is the canonical
 
     const module = {};
 
@@ -118,14 +118,12 @@
 
     module.renderThings = things => {
         let type;
-        let data = things.data.children || things.data;
+        let data = things.data?.children || things.data;
         if (things.type === 'comment') {
             type = TYPES[things.type];
-            if (data.length) {
-                document.querySelectorAll('.comments-open').forEach(el => el.style.display = 'initial');
-            }
+            document.querySelectorAll(`.comments-${things.state}`).forEach(el => el.style.display = 'initial');
         }
-        data.forEach(item => {
+        data?.forEach(item => {
             type = TYPES[item.type];
             const element = document.querySelector(type.element);
             element.querySelector('.items').innerHTML += module.renderThing(type, item);
@@ -179,10 +177,10 @@
 
     // is it more than an hour old?
     const now = Date.now();
-    const oneHour = 60 * 60 * 1000;
+    const halfHour = 30 * 60 * 1000;
     let interactions = {
-        date: module.loadData(`interactions-date-${pageURL_base64}`) || 0,
-        comments: module.loadData(`interactions-comments-${pageURL_base64}`) || {},
+        date: module.loadData(`interactions-date-${pageURL_base64}`) || now - halfHour - 1,
+        comments: module.loadData(`interactions-comments-${pageURL_base64}`) || {type:'comment',state:'closed',data:[]},
         webmentions: module.loadData(`interactions-mentions-${pageURL_base64}`) || {}
     };
 
@@ -196,28 +194,35 @@
         module.saveData(now, `interactions-date-${pageURL_base64}`);
 
         if (what.includes('comments') && githubIssueID) {
-            module.fetchGithubIssue(githubIssueID).then(issue => module.fetchGithubComments(issue).then(comments => {
-                if (!comments) return;
+            module.fetchGithubIssue(githubIssueID).then(async issue => {
+                const comments = await module.fetchGithubComments(issue) || [];
+                
                 interactions.comments = {
                     type: 'comment',
-                    data: comments.map(comment => Object.assign(comment, {type: 'comment'}))
+                    state: issue.state,
+                    data: comments.map(comment => Object.assign(comment, { type: 'comment' }))
                 };
                 module.saveData(interactions.comments, `interactions-comments-${pageURL_base64}`);
                 module.renderThings(interactions.comments);
                 module.checkForFailedAvatars();
-            }));
+            });
         }
         if (what.includes('webmentions') && pageURL) {
-            module.fetchWebmentions(pageURL).then(mentions => {
-                if (!mentions) return;
-                interactions.webmentions = {
-                    type: 'webmention',
-                    data: mentions.children.map(mention => Object.assign(mention, {type: mention['wm-property'].replace('in-reply-to', 'reply').replace('-of', '')}))
-                };
-                module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
-                module.renderThings(interactions.webmentions);
-                module.checkForFailedAvatars();
+            interactions.webmentions = {
+                type: 'webmention',
+                data: []
+            };
+            pageURL.forEach(url => {
+                module.fetchWebmentions(url).then(mentions => {
+                    if (!mentions) return;
+                    interactions.webmentions.data = [...new Set(interactions.webmentions.data.concat(mentions.children.map(mention => Object.assign(mention, {type: mention['wm-property'].replace('in-reply-to', 'reply').replace('-of', '')}))))];
+                    module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
+                    module.clearItems('webmentions');
+                    module.renderThings(interactions.webmentions);
+                    module.checkForFailedAvatars();
+                });
             });
+                    
         }
     }
     module.clearItems = (what = ['comments', 'webmentions']) => {
@@ -237,7 +242,7 @@
         
         document.querySelectorAll(sections.join(',')).forEach(section => {
             let list = section.querySelector('.items');
-            section.style.display = 'none';
+            section.style.display = section.dataset.display;
             list.innerHTML = '';
         });
     }
@@ -250,9 +255,13 @@
             module.fetchAndRender(e.target.dataset.what);
         }
     });
+    // Also some initial hidey shoey stuff
+    if (!githubIssueID) {
+        document.querySelector('.comments-closed').style.display = 'initial';
+    }
 
     // Render from fetch or localStorage
-    if (new Date(interactions.date) < (now - oneHour)) {
+    if (new Date(interactions.date) < (now - halfHour)) {
         module.fetchAndRender();
     } else {
         module.renderAll();

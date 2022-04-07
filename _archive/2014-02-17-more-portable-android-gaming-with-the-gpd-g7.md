@@ -9,9 +9,9 @@ The G7 is very similar to the JXD 7800B, but with a more ergonomic game-controll
 
 <!-- more -->
 
-{% include figure.html src="fullshot.jpg" %}{:.massive}
+{% include posts/figure.html src="fullshot.jpg" %}{:.massive}
 
-{% include figure.html src="shoulder-buttons.jpg" %}{:.massive}
+{% include posts/figure.html src="shoulder-buttons.jpg" %}{:.massive}
 
 
 [Geekbuying](http://www.geekbuying.com) generously supplied me with a GPD G7 to review. I've got the "[GPD G7 RK3188 1.6GHz 7 inch GamePad Android 4.2 Quad Core Capacitive Touch Screen 1024*600 1GB/8GB Tablet PC](http://www.geekbuying.com/item/GPD-G7-RK3188-1-6GHz-7-inch-GamePad-Android-4-2-Quad-Core-Capacitive-Touch-Screen-1024-600-1GB-8GB-Tablet-PC-324409.html)".
@@ -40,19 +40,19 @@ So how does the GPD G7 compare to other devices? take a look:
 
 #### Google Nexus 7 (2012 model)
 
-{% include figure.html src="g7vsnexus7.jpg" %}{:.massive}
+{% include posts/figure.html src="g7vsnexus7.jpg" %}{:.massive}
 
 #### Sony PS3 controller
 
-{% include figure.html src="g7vsps3controller.jpg" %}{:.massive}
+{% include posts/figure.html src="g7vsps3controller.jpg" %}{:.massive}
 
 #### Nintendo DSi
 
-{% include figure.html src="g7vsdsi.jpg" %}{:.massive}
+{% include posts/figure.html src="g7vsdsi.jpg" %}{:.massive}
 
 #### Dingoo A320
 
-{% include figure.html src="g7vsdingoo.jpg" %}{:.massive}
+{% include posts/figure.html src="g7vsdingoo.jpg" %}{:.massive}
 
 As you can see, it's another large device. The size and weight are as follows:
 
@@ -63,7 +63,7 @@ As you can see, it's another large device. The size and weight are as follows:
 
 Again, as I'm now used to with these Chinese Android handhelds, it doesn't charge via the included micro-USB port, but it has it's own dedicated DC jack.
 
-{% include figure.html src="ports.jpg" %}{:.massive}
+{% include posts/figure.html src="ports.jpg" %}{:.massive}
 
 The G7 came with an EU plug, with an adapter to US bundled in the box, and an adapter to UK bundled in the packaging from Geekbuying -- so at the moment I'm charging with a precarious stack of plug adapters.
 
@@ -71,7 +71,7 @@ Hopefully the manufacturers of these handhelds will realise that using a proprie
 
 There are two front-facing speakers, they sound pretty good with the games I've played on the GPD G7. I was worried that their location meant that my hands would cover them as I played games, but it's actually no problem.
 
-{% include figure.html src="speaker.jpg" %}{:.massive}
+{% include posts/figure.html src="speaker.jpg" %}{:.massive}
 
 The battery lasted for a couple of hours, so it's perfect to take on long car journeys or flights, or wherever.
 

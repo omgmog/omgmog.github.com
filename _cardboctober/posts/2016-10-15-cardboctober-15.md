@@ -6,7 +6,7 @@ _This week I’m going to be writing about some of the UX challenges encountered
 
 In VR experiences it’s important to consider the needs of the person using what you’ve created. We can look at the [Hierarchy of Needs in Virtual Reality](https://medium.com/@beaucronin/the-hierarchy-of-needs-in-virtual-reality-development-4333a4833acc) that Beau Cronin adapted from Maslow’s Hierarchy of Needs<!-- more -->:
 
-{% include figure.html src="2016-10/15/hierarchy.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/15/hierarchy.png" %}{:.massive}
 
 When working on a “quick hack” it’s very easy to decide to throw any one or more of these layers away in favor of speed of delivery -- I’m only spending a couple of hours on each hack so time is precious. So which things do I usually throw away? How do I decide which rules to break?
 
@@ -20,6 +20,6 @@ When working on a “quick hack” it’s very easy to decide to throw any one o
 
 In this way it’s the _Hierarchy of Needs in Quick Google Cardboard Hacks_ is much simpler.
 
-{% include figure.html src="2016-10/15/hierarchy-of-gc.png" %}{:.massive}
+{% include posts/figure.html src="2016-10/15/hierarchy-of-gc.png" %}{:.massive}
 
 As we’re time limited, and these are short-lived “quick hacks”, **delight** is really important. Each experience is a novelty. **Usefulness** depends on your context -- are you learning from the hack? **Interpretability** and **comfort** can go out the window, and that’s fine.

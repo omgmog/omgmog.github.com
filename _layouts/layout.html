@@ -33,23 +33,35 @@
   {% feed_meta %}
 </head>
 <body>
-  <header class="header">
-      <h1><a href="{{ site.author.home }}">{% include _myface.html %} Max Glenister</a></h1>
+  <header class="main-header">
+    <div class="inner">
+      <h1><a href="{{ site.author.home }}">{% include global/me.html img="face3d.png" %} Max Glenister</a></h1>
       <nav role="navigation">
         {% for node in site.menu %}
-          <a href="{{ node.link }}">{% if node.icon %}{% include icon.svg icon=node.icon title=node.title %}{% else %}{{ node.title }}{% endif %}</a>
+          <a href="{{ node.link }}">{% if node.icon %}{% include icons/icon.svg icon=node.icon title=node.title %}{% else %}{{ node.title }}{% endif %}</a>
         {% endfor %}
       </nav>
+    </div>
+    <hr>
   </header>
-  <main id="top">
+  <main id="top" class="main-content">
   {{ content }}
   </main>
+  <hr>
   <footer class="main-footer">
+    <div class="p-author h-card post-bio">
+      {% include global/me.html img="max2020-1a.png"  %}
+      <div class="h-card-inner">
+          <p class="p-note"><a class="u-name" href="https://omgmog.net/" rel="me">Max Glenister</a> is a <a href="https://omgmog.net/" rel="me" class="u-url u-uid"><span class="p-job-title">Front-end Developer</span> based in <span class="p-region">Oxfordshire</span></a>. For work he spends his time designing, validating and implementing user interfaces. For fun he tinkers with Virtual Reality, 3D printing, embedded systems, game development and many other things.</p>
+          <p>You can keep up with Max on <a href="https://github.com/omgmog" rel="nofollow me" class="u-url">Github</a>, <a href="https://twitter.com/omgmog" rel="nofollow me" class="u-url">Twitter</a> and <a href="https://reddit.com/u/omgmog" rel="nofollow me" class="u-url">Reddit</a></p>
+      </div>
+    </div>
+    <hr>
     <small>
-      &copy; 2010 Max Glenister. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.
+      &copy; 2010&mdash;{{site.time|date:"%Y"}} Max Glenister. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.
       <br>
-      {% if site.github %}Website last updated: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time | date_to_long_string }}</a><br>{% endif %}
-      {% include webring.html %}
+      Website last built: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time | date_to_long_string }}</a><br>
+      {% include global/webring.html %}
     </small>
   </footer>
   <script type="application/ld+json">
