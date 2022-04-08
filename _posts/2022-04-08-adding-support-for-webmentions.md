@@ -6,7 +6,9 @@ tags: [indieweb]
 
 I've added [Webmention](https://indieweb.org/Webmention) support to the posts on this blog.
 
-Webmentions are a method for websites to know that they've been linked to (or mentioned) from elsewhere on the web. 
+Webmentions are a method for websites to know that they've been linked to (or mentioned) from elsewhere on the web.
+
+<!-- more -->
 
 > **[Webmention](https://www.w3.org/TR/webmention/)** is a web standard for mentions and conversations across the web, a powerful building block that is used for a growing federated network of comments, likes, reposts, and other rich interactions across the decentralized social web.
 >
