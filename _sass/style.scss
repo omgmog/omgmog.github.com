@@ -315,9 +315,11 @@ body {
   img {
     border-radius: inherit;
     max-width: 100%;
-    height: auto;
     margin-left: auto;
     margin-right: auto;
+  }
+  img {
+    height: auto;
   }
   figure {
     @include breakoutWidth;
