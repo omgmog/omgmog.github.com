@@ -1,7 +1,7 @@
 ---
 title: Now
-permalink: /now
-last_modified_at: 2022-04-07T19:02:24
+permalink: /now/
+last_modified_at: 2022-04-08T10:41:34
 ---
 
 Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
