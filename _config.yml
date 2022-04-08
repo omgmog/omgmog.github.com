@@ -24,6 +24,7 @@ whitelist:
   - jekyll-feed
 feed:
   excerpt_only: true
+  posts_limit: 1000
 menu:
   - link: "/"
     title: "Posts"
