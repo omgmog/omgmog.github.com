@@ -101,7 +101,11 @@
                 value = data[type.attributes[attribute][0]];
             }
             if (!value || (typeof value !== 'string')) {
-                value = data[type.attributes[attribute][0]][type.attributes[attribute][1]];
+                if (attribute === 'date') {
+                    value = data['wm-received'];
+                } else {
+                    value = data[type.attributes[attribute][0]][type.attributes[attribute][1]];
+                }
             }
 
             if (attribute === 'date') {
