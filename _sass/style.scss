@@ -97,7 +97,7 @@ body {
       content: '';
       width: calc(100% + var(--gutter-inner-y));
       height: 4rem;
-      background-image: linear-gradient(to bottom, var(--colors-white), transparent);
+      background-image: linear-gradient(to bottom, var(--colors-white), rgba(255,255,255,0));
       position: absolute;
       top: 100%;
       left: calc(-.5 * var(--gutter-inner-y));
@@ -133,9 +133,6 @@ body {
     }
   }
   hr {
-    // margin: 0;
-    // transform: none;
-    // margin-top: 0;
     margin-top: calc(.5 * var(--gutter-inner-y));
     margin-bottom: 0;
   }
@@ -164,6 +161,8 @@ body {
 
   nav {
     font-size: 1.1rem;
+    display: flex;
+    
     a {
       & + a {
         margin-left: 1rem;
