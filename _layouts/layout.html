@@ -7,6 +7,7 @@
   {% capture page_url %}{% if page.url == '/index.html' %}{{ site.url }}{% else %}{{ page.url | absolute_url }}{% endif %}{% endcapture %}
   {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
   {% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.author.bio }}{% endif %}{% endcapture %}
+  {% assign twitter_url = site.author.twitter | prepend: 'https://twitter.com/' %}
 
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
@@ -71,11 +72,21 @@
     "name": "{{ site.author.name }}",
     "url": "{{ site.url }}",
     "sameAs": [
-      "https://twitter.com/{{ site.author.twitter }}",
+      "{{ twitter_url }}",
       "https://github.com/{{ site.author.github }}",
       "{{ site.author.home }}"
     ]
   }
+  </script>
+  <script>
+    // Make Twitter profile links in to Twitter follow intents
+    document.querySelectorAll('a[href="{{ twitter_url }}"]').forEach(twitterLink => {
+      twitterLink.addEventListener('click', e => {
+        e.preventDefault();
+        window.location = 'https://twitter.com/intent/follow?screen_name={{ site.author.twitter }}';
+        return false;
+      })
+    });
   </script>
   {% if content contains "github-card" %}
   <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
