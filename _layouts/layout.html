@@ -8,8 +8,7 @@
   {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
   {% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.author.bio }}{% endif %}{% endcapture %}
   {% assign twitter_url = site.author.twitter | prepend: 'https://twitter.com/' %}
-  {% capture predetermined_font_chars %}{{ site.title }}{% for i in site.menu %}{{ i.title }}{% endfor %}{% endcapture %}
-  {% assign predetermined_font_chars = predetermined_font_chars | replace:' ','' | split:'' | uniq | join:'' %}
+  {% assign predetermined_font_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | append:page.title | replace:' ','' | split:'' | uniq | join:'' %}
   
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
