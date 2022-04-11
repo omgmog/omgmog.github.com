@@ -8,7 +8,9 @@
   {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
   {% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.author.bio }}{% endif %}{% endcapture %}
   {% assign twitter_url = site.author.twitter | prepend: 'https://twitter.com/' %}
-
+  {% capture predetermined_font_chars %}{{ site.title }}{% for i in site.menu %}{{ i.title }}{% endfor %}{% endcapture %}
+  {% assign predetermined_font_chars = predetermined_font_chars | replace:' ','' | split:'' | uniq | join:'' %}
+  
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
   
@@ -29,7 +31,9 @@
   <link rel="pingback" href="https://webmention.io/omgmog.net/xmlrpc" />
 
   <link rel="icon" type="image/png" href="{{ site.author.avatar }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One%7COpen+Sans">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap&text={{predetermined_font_chars}}" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/style.css" | absolute_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}">
   {% feed_meta %}
 </head>
@@ -91,5 +95,6 @@
   {% if content contains "github-card" %}
   <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
   {% endif %}
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 </body>
 </html>
