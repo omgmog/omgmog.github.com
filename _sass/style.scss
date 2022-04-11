@@ -399,6 +399,7 @@ body {
 
     h2 {
       font-size: calc(4rem * var(--font-scale-headers));
+      font-family: Fjalla One, sans-serif;
       margin: 0 auto;
       padding: 0;
 
@@ -455,6 +456,7 @@ hr {
       font-weight: bold;
       text-transform: uppercase;
       font-size: .75em;
+      font-family: Fjalla One, sans-serif;
       
       --background: var(--colors-lightgrey);
       --shadow: var(--colors-lightgrey-transparent-25);
@@ -489,6 +491,7 @@ hr {
     time {
       display: block;
       margin-bottom: .25rem;
+      padding-left: (.125em/7)*10;
       font-size: .7rem;
       color: var(--colors-darkgrey);
     }
@@ -496,6 +499,9 @@ hr {
     & + .post-list li:first-child,
     li:nth-child(1n+2) {
       margin-top: calc(var(--gutter-inner-y)/4);
+      @include mq('max', $bp-desktop) {
+        margin-top: var(--gutter-inner-y);
+      }
       time {
         margin-top: var(--gutter-inner-y);
       }
