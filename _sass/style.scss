@@ -187,18 +187,13 @@ body {
       background-color: var(--colors-primary);
     }
     &::after {
-      content: '';
-      background-image: url(external.svg);
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: contain;
-      width: .6em;
-      height: .6em;
+      content: '↗';
       display: inline-block;
       margin-left: .125em;
-      margin-right: .125em;
-      vertical-align: 0;
+      vertical-align: top;
       opacity: .6;
+      font-size: .7rem;
+      font-weight: bold;
     }
     &:hover {
       &::after {
