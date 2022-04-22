@@ -318,7 +318,11 @@ body {
   figure {
     @include breakoutWidth;
     border-radius: .4rem;
-    overflow: hidden;
+
+    img {
+      border-radius: inherit;
+      filter: drop-shadow(0 .5rem .5rem var(--colors-midgrey-transparent-25));
+    }
     
     &.center {
       display: flex;
@@ -344,6 +348,7 @@ body {
         bottom: 0;
         width: 100%;
         height: 100%;
+        border-radius: inherit;
       }
     }
     &.image-with-blurb {
@@ -354,6 +359,7 @@ body {
       img {
         width: 30%;
         margin: 0 1rem auto 0;
+        filter: none;
       }
 
       &.small {
@@ -620,6 +626,23 @@ iframe[id^="ghcard-"] {
   &.count-2 {
     @include breakoutWidth;
 
+    @include mq('min', $bp-phone) {
+      figure {
+        perspective: 1000px;
+        overflow: visible;
+
+        img {
+          transform: rotateY(20deg);
+        }
+
+        & + figure {
+          img {
+            transform: rotateY(-20deg);
+          }
+        }
+      }
+    }
+
     figure + figure {
       margin-left :1rem;
     }
@@ -669,6 +692,31 @@ iframe[id^="ghcard-"] {
     img {
       // max-width: calc(100% - 1rem);
       margin: 0 0 auto;
+    }
+
+    
+
+    @include mq('min', $bp-phone) {
+      & {
+        overflow: visible;
+
+        figure {
+          perspective: 1000px;
+          overflow: visible;
+
+          img {
+            transform: rotateY(20deg);
+          }
+        }
+
+        &:nth-child(2n) {
+          figure {
+            img {
+              transform: rotateY(-20deg);
+            }
+          }
+        }
+      }
     }
   }
   h4 {
