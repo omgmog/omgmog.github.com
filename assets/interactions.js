@@ -262,6 +262,7 @@
     // Also some initial hidey shoey stuff
     if (!githubIssueID) {
         document.querySelector('.comments-closed').style.display = 'initial';
+        document.querySelector('#comments').style.display = 'none';
     }
 
     // Render from fetch or localStorage
