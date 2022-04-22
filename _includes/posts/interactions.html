@@ -24,10 +24,14 @@
   </div>
 </script>
 <script type="text/template" id="tpl-bookmark">
-  %verb% by %author_name% %author_avatar_url% %emoji%
+  <div class="like">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name%" class="avatar" data-username="%author_name%">
+  </div>
 </script>
 <script type="text/template" id="tpl-repost">
-  %verb% by %author_name% %author_avatar_url% %emoji%
+  <div class="like">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name%" class="avatar" data-username="%author_name%">
+  </div>
 </script>
 
 <script type="text/template" id="tpl-mention">
@@ -62,11 +66,11 @@
   </div>
   <div id="bookmarks" data-display="none" style="display:none">
     <h3>Bookmarks</h3>
-    <div class="items"></div>
+    <div class="items likes"></div>
   </div>
   <div id="reposts" data-display="none" style="display:none">
     <h3>Reposts</h3>
-    <div class="items"></div>
+    <div class="items likes"></div>
   </div>
 </section>
 
