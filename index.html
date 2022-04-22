@@ -2,7 +2,8 @@
 title: Posts
 ---
 
-{% assign posts = site.posts %}
+{% assign posts = site.posts | concat: site.cardboctober %}
+{% assign posts = posts | sort:'date' | reverse %}
 {% assign total_posts = posts | size %}
 {% assign page_amount = 10 %}
 {% assign remainder = total_posts | modulo: page_amount %}
