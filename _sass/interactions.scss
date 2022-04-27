@@ -36,17 +36,20 @@
   }
   
   .avatar {
-    width: 3rem;
-    height: 3rem;
+    width: 3.2rem;
+    height: 3.2rem;
     overflow: hidden;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-crisp-edges;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
     border-radius: .4rem;
     border: 0;
     max-width: initial;
     text-indent: -999em;
+
+    &.fallback {
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-crisp-edges;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
   }
   
   .likes {

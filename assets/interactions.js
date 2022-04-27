@@ -193,6 +193,7 @@
                 }
             }
             img_element.src = canvas.toDataURL();
+            img_element.classList.add('fallback');
         }
     };
 
