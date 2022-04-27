@@ -28,7 +28,8 @@
                 author_url: ['author', 'url'],
                 date: ['published'],
                 body: ['content', 'text'],
-                url: ['url']
+                url: ['url'],
+                domain: ['url']
             }
         },
         'like': {
@@ -38,7 +39,8 @@
                 verb: 'Liked',
                 author_name: ['author', 'name'],
                 author_avatar_url: ['author', 'photo'],
-                emoji: '❤️'
+                emoji: '❤️',
+                domain: ['url']
             }
         },
         'bookmark': {
@@ -48,7 +50,8 @@
                 verb: 'Bookmarked',
                 author_name: ['author', 'name'],
                 author_avatar_url: ['author', 'photo'],
-                emoji: '⭐'
+                emoji: '⭐',
+                domain: ['url']
             }
         },
         'repost': {
@@ -58,7 +61,8 @@
                 verb: 'reposted',
                 author_name: ['author', 'name'],
                 author_avatar_url: ['author', 'photo'],
-                emoji: '🔁'
+                emoji: '🔁',
+                domain: ['url']
             }
         },
         'mention': {
@@ -66,7 +70,23 @@
             element: '#mentions',
             attributes: {
                 verb: 'Mentioned',
-                url: ['url'] 
+                url: ['url'],
+                date: ['published'],
+                domain: ['url']
+            }
+        },
+        'mention-rich': {
+            template: document.getElementById('tpl-mention-rich').innerHTML,
+            element: '#mentions',
+            attributes: {
+                author_name: ['author', 'name'],
+                author_avatar_url: ['author', 'photo'],
+                author_url: ['author', 'url'],
+                body: ['content', 'html'],
+                date: ['published'],
+                verb: 'mentioned',
+                url: ['url'],
+                domain: ['url']
             }
         }
     };
@@ -114,6 +134,9 @@
             if (attribute === 'body') {
                 value = marked.parse(value);
             }
+            if (attribute === 'domain') {
+                value = new URL(value).hostname;
+            }
 
             template = template.replace(new RegExp('%' + attribute + '%', 'g'), value);
         }
@@ -129,6 +152,10 @@
         }
         data?.forEach(item => {
             type = TYPES[item.type];
+            // if we have some content too, let's render it as a rich mention
+            if (item.content?.text && item.type === 'mention') {
+                type = TYPES['mention-rich'];
+            }
             const element = document.querySelector(type.element);
             element.querySelector('.items').innerHTML += module.renderThing(type, item);
             element.style.display = 'block';
