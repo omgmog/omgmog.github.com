@@ -99,7 +99,7 @@
 
     module.fetchGithubComments = async issueData => await fetch(issueData.comments_url, GH_FETCH_OPTS).then(response => response.json());
 
-    module.fetchWebmentions = async url => await fetch(`https://webmention.io/api/mentions.jf2?target=${url}`).then(response => response.json());
+    module.fetchWebmentions = async url => await fetch(`https://webmention.io/api/mentions.jf2?target=${url}&per-page=1000`).then(response => response.json());
 
     const DEFAULT_DATE_OPTIONS = {
         year: 'numeric', 
