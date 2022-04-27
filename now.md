@@ -1,7 +1,7 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2022-04-08T10:41:34
+last_modified_at: 2022-04-27T09:03:13
 ---
 
 Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
@@ -52,16 +52,19 @@ Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spe
 <h3 class="wide-h3">Social media</h3>
 
 #### Twitter 
-I'm still on [Twitter](https://twitter.com/omgmog), though I'm not using it very much.
+I'm still on <a rel="nofollow me" class="u-url" href="https://twitter.com/omgmog">Twitter</a>, though I'm not using it very much.
 
 #### Github
 <div class="github-card" data-user="omgmog" data-width="400" data-height="150" data-theme="default"></div>
 
 #### Discord
-I'm on [Discord](https://discordapp.com/users/omgmog#6206) occasionally. I've joined a handful of niche technology communities on there, but I don't participate much.
+I'm on <a rel="nofollow me" class="u-url" href="https://discordapp.com/users/omgmog#6206">Discord</a> occasionally. I've joined a handful of niche technology communities on there, but I don't participate much.
 
 #### Facebook
-I have a Facebook account again, but it's used exclusively for contacting businesses that think only having a Facebook page is enough, buying things on Marketplace, oh and for my Oculus Quest account.
+I have a Facebook account, but it's used exclusively for contacting businesses that think only having a Facebook page is enough, buying things on Marketplace, oh and for my Oculus Quest account.
+
+#### Mastadon
+I'm on a couple of Mastadon instances, though I'm probably posting as infrequently there as on Twitter: <a rel="nofollow me" class="u-url" href="https://indieweb.social/@omgmog">@omgmog@indieweb.social</a> <a rel="nofollow me" class="u-url" href="https://mstdn.social/@omgmog">@omgmog@mstdn.social</a>
 
 #### IndieWeb Webring
 {% include global/webring.html %}
