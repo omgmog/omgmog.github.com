@@ -15,7 +15,8 @@
                 author_url: ['user', 'html_url'],
                 date: ['created_at'],
                 body: ['body'],
-                url: ['html_url'] 
+                url: ['html_url'] ,
+                domain: ['html_url'] 
             }
         },
         'reply': {
