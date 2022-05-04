@@ -1,14 +1,14 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2022-04-27T09:03:13
+last_modified_at: 2022-05-04T13:47:39
 ---
 
 Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
 
 > [&hellip;] a website with a link that says “now” goes to a page that tells you what this person is focused on at this point in their life. For short, we call it a “now page”.
 
-So basically yeah, this is what I'm currently up to and what I'm using to do it. If the timestamp below says it's been a while since this page was last updated, maybe [give me a poke on Twitter](https://twitter.com/intent/tweet?text=@omgmog+Hey%20Max!) or something?
+So basically yeah, this is what I'm currently up to and what I'm using to do it. If the timestamp below says it's been a while since this page was last updated, maybe [give me a poke](https://social.omgmog.net) or something?
 
 {% if page.last_modified_at %}
 {:.updated}
@@ -52,7 +52,7 @@ Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spe
 <h3 class="wide-h3">Social media</h3>
 
 #### Twitter 
-I'm still on <a rel="nofollow me" class="u-url" href="https://twitter.com/omgmog">Twitter</a>, though I'm not using it very much.
+I've gone read-only with my <a rel="nofollow me" class="u-url" href="https://twitter.com/omgmog">Twitter</a>. Opting to use Mastodon/Known for posting my social updates and replies.
 
 #### Github
 <div class="github-card" data-user="omgmog" data-width="400" data-height="150" data-theme="default"></div>
@@ -61,10 +61,10 @@ I'm still on <a rel="nofollow me" class="u-url" href="https://twitter.com/omgmog
 I'm on <a rel="nofollow me" class="u-url" href="https://discordapp.com/users/omgmog#6206">Discord</a> occasionally. I've joined a handful of niche technology communities on there, but I don't participate much.
 
 #### Facebook
-I have a Facebook account, but it's used exclusively for contacting businesses that think only having a Facebook page is enough, buying things on Marketplace, oh and for my Oculus Quest account.
+I have a Facebook account, but it's used exclusively for buying things on Marketplace, and for my Oculus Quest.
 
-#### Mastadon
-I'm on a couple of Mastadon instances, though I'm probably posting as infrequently there as on Twitter: <a rel="nofollow me" class="u-url" href="https://indieweb.social/@omgmog">@omgmog@indieweb.social</a> <a rel="nofollow me" class="u-url" href="https://mstdn.social/@omgmog">@omgmog@mstdn.social</a>
+#### Mastodon
+I post on my own [social.omgmog.net](https://social.omgmog.net) and syndicate to the [IndieWeb.social](https://indieweb.social) Mastodon instance. <a rel="nofollow me" class="u-url" href="https://indieweb.social/@omgmog">@omgmog@indieweb.social</a>. 
 
 #### IndieWeb Webring
 {% include global/webring.html %}
