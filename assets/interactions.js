@@ -122,21 +122,30 @@
                 value = data[type.attributes[attribute][0]];
             }
             if (!value || (typeof value !== 'string')) {
-                if (attribute === 'date') {
-                    value = data['wm-received'];
-                } else {
-                    value = data[type.attributes[attribute][0]][type.attributes[attribute][1]];
-                }
+                value = data[type.attributes[attribute][0]][type.attributes[attribute][1]];
             }
 
             if (attribute === 'date') {
+                // sometimes the publish date isn't provided but we might know when the mention was received
+                value = value || data['wm-received'];
+                // format the date
                 value = module.prettyDate(value);
             }
             if (attribute === 'body') {
+                // markdown parse the body
                 value = marked.parse(value);
             }
             if (attribute === 'domain') {
+                // extract the hostname from the url
                 value = new URL(value).hostname;
+            }
+            if (attribute === 'author_url') {
+                // sometimes there isn't an author url
+                value = value || data.url;
+            }
+            if (attribute === 'url' ) {
+                // sometimes a canonical url is available!
+                value = data.rels?.canonical || value;
             }
 
             template = template.replace(new RegExp('%' + attribute + '%', 'g'), value);
