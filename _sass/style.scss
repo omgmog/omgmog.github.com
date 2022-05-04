@@ -167,6 +167,10 @@ body {
       & + a {
         margin-left: 1rem;
       }
+
+      &.active {
+        @include linkHover($order:(on,off));
+      }
       svg {
         width: 1.2em;
         height: 1.2em;

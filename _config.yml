@@ -24,17 +24,7 @@ whitelist:
   - jekyll-feed
 feed:
   posts_limit: 1000
-menu:
-  - link: "/"
-    title: "Posts"
-  - link: "/vr"
-    title: "VR"
-  - link: "/now"
-    title: "Now"
-  - link: "/feed.xml"
-    title: "RSS"
-    icon: "rss-icon"
-
+  
 collections:
   cardboctober:
     output: true

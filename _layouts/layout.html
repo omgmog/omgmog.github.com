@@ -41,8 +41,15 @@
     <div class="inner">
       <h1><a href="{{ site.author.home }}">{% include global/me.html img="face3d.png" %} Max Glenister</a></h1>
       <nav role="navigation">
-        {% for node in site.menu %}
-          <a href="{{ node.link }}">{% if node.icon %}{% include icons/icon.svg icon=node.icon title=node.title %}{% else %}{{ node.title }}{% endif %}</a>
+        {% for node in site.data.menu %}
+          {% assign active = false %}
+          {% if page.url contains node.link %}
+            {% assign active = true %}
+          {% endif %}
+          {% if page.url == "/" and node.link == "/index.html" %}
+            {% assign active = true %}
+          {% endif %}
+          <a href="{{ node.link | replace:'/index.html', '/'}}" class="{% if active %}active{% endif %}">{% if node.icon %}{% include icons/icon.svg icon=node.icon title=node.title %}{% else %}{{ node.title }}{% endif %}</a>
         {% endfor %}
       </nav>
     </div>
