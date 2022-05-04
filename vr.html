@@ -42,13 +42,13 @@ permalink: /vr/
 <ul class="post-list">
   {% assign vr_posts = site.posts | where_exp:"post","post.tags contains 'vr'" %}
   {% for post in vr_posts %}
-  {% include global/article-list-item.html hide_dates=false hide_types=true %}
+  {% include global/post-list-item.html hide_dates=false hide_types=true %}
   {% endfor %}
 </ul>
 
 <h3 class="wide-h3">Cardboctober posts</h3>
 <ul class="post-list">
   {% for post in site.cardboctober  %}
-  {% include global/article-list-item.html hide_dates=false hide_types=true %}
+  {% include global/post-list-item.html hide_dates=false hide_types=true %}
   {% endfor %}
 </ul>

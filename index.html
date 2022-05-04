@@ -15,7 +15,7 @@ title: Posts
   {% if offset != total_posts %}
     <ul class="{{ classes }}" data-group="{{ i }}">
     {% for post in posts offset:offset limit:page_amount %}
-      {% include global/article-list-item.html %}
+      {% include global/post-list-item.html %}
     {% endfor %}
     </ul>
   {% endif %}
