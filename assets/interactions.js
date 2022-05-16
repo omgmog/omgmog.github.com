@@ -83,7 +83,7 @@
                 author_name: ['author', 'name'],
                 author_avatar_url: ['author', 'photo'],
                 author_url: ['author', 'url'],
-                body: ['content', 'html'],
+                summary: ['summary', 'value'],
                 date: ['published'],
                 verb: 'mentioned',
                 url: ['url'],
@@ -115,6 +115,8 @@
         for (const index in attributes) {
             const attribute = attributes[index];
             let value = data[type.attributes[attribute]];
+
+            // generally try and fallback for values
             if (!value) {
                 value = type.attributes[attribute];
             }
@@ -122,7 +124,7 @@
                 value = data[type.attributes[attribute][0]];
             }
             if (!value || (typeof value !== 'string')) {
-                value = data[type.attributes[attribute][0]][type.attributes[attribute][1]];
+                value = data[type.attributes[attribute][0]]?.[type.attributes[attribute][1]];
             }
 
             if (attribute === 'date') {
@@ -131,7 +133,21 @@
                 // format the date
                 value = module.prettyDate(value);
             }
-            if (attribute === 'body') {
+
+            if (attribute === 'summary') {
+                // sometimes we use the summary but if it's not available fallback to truncated body
+                if (!data.summary?.value?.length > 0) {
+                    const word_limit = 50;
+                    let words = data.content.text.replace(/\s+/g,' ').split(' ', word_limit + 1);
+
+                    if (words.length > word_limit) {
+                        words[word_limit - 1] += '&hellip;';
+                        words = words.slice(0, word_limit);
+                    }
+                    value = words.join(' ');
+                }
+            }
+            if (attribute === 'body' || attribute === 'summary') {
                 // markdown parse the body
                 value = marked.parse(value);
             }
