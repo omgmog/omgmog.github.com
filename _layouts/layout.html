@@ -6,8 +6,7 @@
 
   {% capture page_url %}{% if page.url == '/index.html' %}{{ site.url }}{% else %}{{ page.url | absolute_url }}{% endif %}{% endcapture %}
   {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
-  {% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.author.bio }}{% endif %}{% endcapture %}
-  {% assign twitter_url = site.author.twitter | prepend: 'https://twitter.com/' %}
+  {% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.data.author.bio }}{% endif %}{% endcapture %}
   {% assign predetermined_font_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | append:page.title | replace:' ','' | split:'' | uniq | join:'' %}
   
   <title>{{ title }}</title>
@@ -15,31 +14,24 @@
   
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="{{ page.content_type | default:'website'}}">
   <meta property="og:url" content="{{ page_url }}">
-  <meta property="og:image" content="{{ site.author.avatar }}">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@{{ site.author.twitter }}">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ description }}">
-  <meta name="twitter:image" content="{{ site.author.avatar }}">
+  <meta property="og:image" content="{{"/assets/ogimage-generic.png" | absolute_url}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
   <link rel="canonical" href="{{ page_url }}">
   <link rel="webmention" href="https://webmention.io/omgmog.net/webmention" />
   <link rel="pingback" href="https://webmention.io/omgmog.net/xmlrpc" />
 
-  <link rel="icon" type="image/png" href="{{ site.author.avatar }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap&text={{predetermined_font_chars}}" rel="stylesheet">
+  <link rel="icon" type="image/png" href="{{ site.data.author.avatar }}">
   <link rel="stylesheet" href="{{ "/assets/style.css" | absolute_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}">
   {% feed_meta %}
 </head>
 <body>
   <header class="main-header">
     <div class="inner">
-      <h1><a href="{{ site.author.home }}">{% include global/me.html img="face3d.png" %} Max Glenister</a></h1>
+      <h1><a href="{{ site.data.author.home }}"><img src="{{"/assets/face3d.png"|absolute_url}}" alt="A pixel-art picture of Max Glenister" /> Max Glenister</a></h1>
       <nav role="navigation">
         {% for node in site.data.menu %}
           {% assign active = false %}
@@ -49,7 +41,7 @@
           {% if page.url == "/" and node.link == "/index.html" %}
             {% assign active = true %}
           {% endif %}
-          <a href="{{ node.link | replace:'/index.html', '/'}}" class="{% if active %}active{% endif %}">{% if node.icon %}{% include icons/icon.svg icon=node.icon title=node.title %}{% else %}{{ node.title }}{% endif %}</a>
+          <a href="{{ node.link | replace:'/index.html', '/'}}" class="{% if active %}active{% endif %}">{% if node.title == "RSS" %}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>RSS Feed icon</title><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>{% else %}{{ node.title }}{% endif %}</a>
         {% endfor %}
       </nav>
     </div>
@@ -61,48 +53,35 @@
   <hr>
   <footer class="main-footer">
     <div class="p-author h-card post-bio">
-      {% include global/me.html img="max2020-1a.png"  %}
+      <img src="{{"/assets/max2020-1a.png"|absolute_url}}" alt="A vector picture of Max Glenister" class="u-photo"/>
       <div class="h-card-inner">
           <p class="p-note"><a class="u-name" href="https://omgmog.net/" rel="me">Max Glenister</a> is a <a href="https://omgmog.net/" rel="me" class="u-url u-uid"><span class="p-job-title">Front-end Developer</span> based in <span class="p-region">Oxfordshire</span></a>. For work he spends his time designing, validating and implementing user interfaces. For fun he tinkers with Virtual Reality, 3D printing, embedded systems, game development and many other things.</p>
-          <p>You can keep up with Max on <a href="https://github.com/omgmog" rel="nofollow me" class="u-url">Github</a>, <a href="https://twitter.com/omgmog" rel="nofollow me" class="u-url">Twitter</a>, <a href="https://reddit.com/u/omgmog" rel="nofollow me" class="u-url">Reddit</a>, and <a rel="nofollow me" class="u-url" href="https://indieweb.social/@omgmog">Mastodon</a></p>
+
+          <p>You can keep up with Max on {% for url in site.data.author.urls %}<a href="{{ url.link }}" rel="nofollow me" class="u-url">{{ url.label }}</a>{% endfor %}</p>
       </div>
     </div>
     <hr>
     <small>
       &copy; 2010&mdash;{{site.time|date:"%Y"}} Max Glenister. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.
       <br>
-      Website last built: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time | date_to_long_string }}</a><br>
-      {% include global/webring.html %}
+      Website last built: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time | date_to_long_string }}</a>
+      <div class="webring"><hr><a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/previous" title="Previous website in the IndieWeb Webring">←</a> <a href="https://xn--sr8hvo.ws" title="An IndieWeb Webring">🕸💍</a> <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/next" title="Next website in the IndieWeb Webring">→</a></div>
     </small>
   </footer>
   <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Person",
-    "name": "{{ site.author.name }}",
+    "name": "{{ site.data.author.name }}",
     "url": "{{ site.url }}",
     "sameAs": [
-      "{{ twitter_url }}",
-      "https://github.com/{{ site.author.github }}",
-      "{{ site.author.home }}",
-      "https://indieweb.social/@omgmog",
-      "https://mstdn.social/@omgmog"
+    {% for url in site.data.author.urls %}
+    "{{ url.link }}",
+    {% endfor %}
+      "{{ site.data.author.home }}",
+      "https://indieweb.social/@omgmog"
     ]
   }
   </script>
-  <script>
-    // Make Twitter profile links in to Twitter follow intents
-    document.querySelectorAll('a[href="{{ twitter_url }}"]').forEach(twitterLink => {
-      twitterLink.addEventListener('click', e => {
-        e.preventDefault();
-        window.location = 'https://twitter.com/intent/follow?screen_name={{ site.author.twitter }}';
-        return false;
-      })
-    });
-  </script>
-  {% if content contains "github-card" %}
-  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-  {% endif %}
-  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 </body>
 </html>

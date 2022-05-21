@@ -14,3 +14,4 @@ Thumbs.db
 .zedstate
 Gemfile.lock
 desktop.ini
+.jekyll-cache

@@ -1,0 +1,6 @@
+{% assign user = site.data.author.urls | where:"label","Mastodon" %}
+{% assign mastodon_link = user[0].link %}
+{% assign username = mastodon_link | split:'/' | last %}
+{% assign mastodon_host = mastodon_link | split:username | first %}
+{% assign mastodon_instance = mastodon_host | split:'/' | last %}
+{% assign mastodon_handle = username | append:'@' | append:mastodon_instance %}

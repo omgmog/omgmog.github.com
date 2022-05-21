@@ -57,9 +57,11 @@
     </div>
     <div class="items"></div>
   </div>
-  <h3 class="wide-h3">Webmentions<button title="Reload" class="reload" data-what="webmentions">{% include icons/icon.svg icon="reload" %}</button></h3>
+  <h3 class="wide-h3">Webmentions<button title="Reload" class="reload" data-what="webmentions"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 80 80" width="20" height="20">
+    <path d="M58.385 34.343V21.615L53.77 26.23C50.244 22.694 45.377 20.5 40 20.5c-10.752 0-19.5 8.748-19.5 19.5S29.248 59.5 40 59.5c7.205 0 13.496-3.939 16.871-9.767l-4.326-2.496C50.035 51.571 45.358 54.5 40 54.5c-7.995 0-14.5-6.505-14.5-14.5S32.005 25.5 40 25.5a14.42 14.42 0 0 1 10.239 4.261l-4.583 4.583h12.729z"/>
+  </svg></button></h3>
   <div class="addyours">
-    <p>Want to reply? I've hooked up <a href="https://indieweb.org/Webmention">Webmentions</a> so you can do so by sending a Webmention, or a <a href="https://twitter.com/intent/tweet?text={{ page.title }} - {{ site.title }}&url={{ page.url | absolute_url }}&via={{ site.author.twitter }}">Tweet mentioning this post</a>.</p>
+    <p>Want to reply? I've hooked up <a href="https://indieweb.org/Webmention">Webmentions</a> so you can do so by sending a Webmention, or a <a href="https://twitter.com/intent/tweet?text={{ page.title }} - {{ site.title }}&url={{ page.url | absolute_url }}&via=omgmog">Tweet mentioning this post</a>.</p>
     <p>Sent a Webmention but it's not showing up below? It could take a little while for <a href="https://brid.gy">brid.gy</a> to pick it up. Webmentions are cached locally for 30 mins before attempting to fetch new Webmentions.</p>
   </div>
   <div id="replies" data-display="none" style="display:none;">

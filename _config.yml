@@ -1,5 +1,5 @@
 permalink: /post/:title/
-exclude: ["_dev.yml","_config.yml", ".gitignore", "README.md"]
+exclude: ["_dev.yml","_config.yml", ".gitignore", "README.md", ".jekyll-cache"]
 url: "https://blog.omgmog.net"
 safe: true
 excerpt_separator: "<!-- more -->"
@@ -11,13 +11,6 @@ kramdown:
 sass:
     style: compressed
 title: "The blog of Max Glenister"
-author:
-  name: "Max Glenister"
-  bio: "Max Glenister is a front-end developer from Oxford. He writes mostly about front-end development and technology."
-  twitter: "omgmog"
-  github: "omgmog"
-  home: "https://omgmog.net"
-  avatar: "https://omgmog.net/faceicon.png"
 plugins:
   - jekyll-feed
 whitelist:
@@ -35,11 +28,13 @@ defaults:
     values:
       layout: post
       type: blog
+      content_type: article
   - scope:
       type: "cardboctober"
     values:
       layout: post
       tags: [vr, cardboctober]
+      content_type: article
   - scope:
       type: "pages"
     values:

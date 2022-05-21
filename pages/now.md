@@ -51,20 +51,20 @@ Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spe
 
 <h3 class="wide-h3">Social media</h3>
 
-#### Twitter 
-I've gone read-only with my <a rel="nofollow me" class="u-url" href="https://twitter.com/omgmog">Twitter</a>. Opting to use Mastodon/Known for posting my social updates and replies.
+#### Mastodon
+{% include global/mastodon.html %}
+I post on my own [social.omgmog.net](https://social.omgmog.net) and syndicate to the [{{mastodon_instance}}]({{mastodon_host}}) Mastodon instance. <a rel="nofollow me" class="u-url" href="{{mastodon_link}}">{{mastodon_handle}}</a>. 
+
+{% include global/mastodon.html %}
 
 #### Github
 <div class="github-card" data-user="omgmog" data-width="400" data-height="150" data-theme="default"></div>
 
 #### Discord
-I'm on <a rel="nofollow me" class="u-url" href="https://discordapp.com/users/omgmog#6206">Discord</a> occasionally. I've joined a handful of niche technology communities on there, but I don't participate much.
+I'm on {% include global/uurl.html what="Discord" %} occasionally. I've joined a handful of niche technology communities on there, but I don't participate much.
+
+#### Twitter 
+I've gone read-only with my {% include global/uurl.html what="Twitter" %}. Opting to use Mastodon/Known for posting my social updates and replies.
 
 #### Facebook
 I have a Facebook account, but it's used exclusively for buying things on Marketplace, and for my Oculus Quest.
-
-#### Mastodon
-I post on my own [social.omgmog.net](https://social.omgmog.net) and syndicate to the [IndieWeb.social](https://indieweb.social) Mastodon instance. <a rel="nofollow me" class="u-url" href="https://indieweb.social/@omgmog">@omgmog@indieweb.social</a>. 
-
-#### IndieWeb Webring
-{% include global/webring.html %}

@@ -1,0 +1,15 @@
+name: "Max Glenister"
+bio: "Max Glenister is a front-end developer from Oxford. He writes mostly about front-end development and technology."
+home: "https://omgmog.net"
+avatar: "https://omgmog.net/faceicon.png"
+urls:
+  - label: Mastodon
+    link: https://indieweb.social/@omgmog
+  - label: Github
+    link: https://github.com/omgmog
+  - label: Reddit
+    link: https://reddit.com/u/omgmog
+  - label: Discord
+    link: https://discordapp.com/users/omgmog#6206
+  - label: Twitter
+    link: https://twitter.com/omgmog
