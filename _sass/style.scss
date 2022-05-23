@@ -538,6 +538,10 @@ hr {
     a {
       display: inline-block;
       @include linkHover(100%);
+
+      @include mq('max', $bp-phone) {
+        display: block;
+      }
     }
     .post-title {
       font-size: 1.2em;
