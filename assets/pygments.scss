@@ -8,6 +8,7 @@
   src: local(''),
        url('fira-mono-v14-latin-regular.woff2') format('woff2'),
        url('fira-mono-v14-latin-regular.woff') format('woff');
+  font-display: swap;
 }
 
 @import "pygments";

@@ -47,6 +47,7 @@
   src: local(''),
        url('fjalla-one-v13-latin-regular.woff2') format('woff2'),
        url('fjalla-one-v13-latin-regular.woff') format('woff');
+  font-display: swap;
 }
 html {
   font-family: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
