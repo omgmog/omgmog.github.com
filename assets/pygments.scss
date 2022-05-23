@@ -1,5 +1,15 @@
 ---
 ---
+/* fira-mono-regular - latin */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('fira-mono-v14-latin-regular.woff2') format('woff2'),
+       url('fira-mono-v14-latin-regular.woff') format('woff');
+}
+
 @import "pygments";
 
 pre {

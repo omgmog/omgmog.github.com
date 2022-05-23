@@ -7,7 +7,6 @@
   {% capture page_url %}{% if page.url == '/index.html' %}{{ site.url }}{% else %}{{ page.url | absolute_url }}{% endif %}{% endcapture %}
   {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
   {% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.data.author.bio }}{% endif %}{% endcapture %}
-  {% assign predetermined_font_chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" | append:page.title | replace:' ','' | split:'' | uniq | join:'' %}
   
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
