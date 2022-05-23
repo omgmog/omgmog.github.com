@@ -166,7 +166,7 @@ body {
       }
 
       &.active {
-        @include linkHover($order:(on,off));
+        @include linkHover($order:(off,off));
       }
       svg {
         width: 1.2em;
