@@ -625,25 +625,6 @@ iframe[id^="ghcard-"] {
   }
 
   &.count-2 {
-    @include breakoutWidth;
-
-    @include mq('min', $bp-phone) {
-      figure {
-        perspective: 1000px;
-        overflow: visible;
-
-        img {
-          transform: rotateY(20deg);
-        }
-
-        & + figure {
-          img {
-            transform: rotateY(-20deg);
-          }
-        }
-      }
-    }
-
     figure + figure {
       margin-left :1rem;
     }
@@ -691,34 +672,9 @@ iframe[id^="ghcard-"] {
     }
 
     img {
-      // max-width: calc(100% - 1rem);
       margin: 0 0 auto;
     }
 
-    
-
-    @include mq('min', $bp-phone) {
-      & {
-        overflow: visible;
-
-        figure {
-          perspective: 1000px;
-          overflow: visible;
-
-          img {
-            transform: rotateY(20deg);
-          }
-        }
-
-        &:nth-child(2n) {
-          figure {
-            img {
-              transform: rotateY(-20deg);
-            }
-          }
-        }
-      }
-    }
   }
   h4 {
     font-size: 1.5rem;
