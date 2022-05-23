@@ -1,19 +1,18 @@
-{% capture type %}{{ include.type | default:"image"}}{% endcapture %}
+{%- capture type -%}{{ include.type | default:"image"}}{%- endcapture -%}
 <figure class="{{ include.class }} {{ type }}">
-{% if type == "image" or type == "image-with-blurb" %}
+{% if type contains "image" %}
 {% assign img_prefix = include.src | slice:0,4 %}
-{% capture src %}{% if img_prefix != 'http' %}{{ site.url }}/images/{% endif %}{{ include.src }}{% endcapture %}
+{%- capture src -%}{% if img_prefix contains 'http:' %}{{include.src}}{% else %}{{ include.src | prepend:'/images/' | absolute_url}}{% endif %}{%- endcapture -%}
+{%- capture alt -%}{% if include.alt %}{{ include.alt }}{% endif %}{%- endcapture -%}
+<img src="{{ src }}" loading="lazy" alt="{{alt}}">
 {% endif %}
-{% case type %}
-{% when "iframe" %}
-<iframe src="{{ include.src|replace:'http:','' }}" width="100%" height="350"></iframe>
-{% when "image-with-blurb" %}
+{% if type contains "image-with-blurb" %}
 {%- capture title -%}{% if include.title %}{% capture level %}{{ include.level | default:4 }}{% endcapture %}{% for i in (1..level) %}#{% endfor %} {{ include.title }}{% endif %}{%- endcapture -%}
 {%- capture blurb -%}{% if include.blurb %}{{ include.blurb }}{% endif %}{%- endcapture -%}
-<img src="{{ src }}">
 <div class="blurb">{{ title | strip | markdownify }}
 {{ blurb | strip | markdownify }}</div>
-{% when "image" %}
-<img src="{{ src }}" loading="lazy">
-{% endcase %}
+{% endif %}
+{% if type contains "iframe" %}
+<iframe src="{{ include.src|replace:'http:','' }}" width="100%" height="350"></iframe>
+{% endif %}
 </figure>
