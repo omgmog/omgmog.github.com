@@ -33,12 +33,12 @@
       <h1><a href="{{ site.data.author.home }}"><img src="{{"/assets/mog.svg"|absolute_url}}" alt="A vectorized pixel-art picture of Max Glenister" /> Max Glenister</a></h1>
       <nav role="navigation">
         {% for node in site.data.menu %}
-          {% assign active = false %}
-          {% if page.url contains node.link %}
+          {% capture is_blog_index_or_article %}{% if node.link == "/index.html" %}{% if page.url == "/" or page.content_type == "article" %}true{% else %}false{% endif %}{% else %}false{% endif %}{% endcapture %}
+          {% capture is_current_page %}{% if page.url contains node.link %}true{% else %}false{% endif %}{% endcapture %}
+          {% if is_blog_index_or_article=="true" or is_current_page=="true" %}
             {% assign active = true %}
-          {% endif %}
-          {% if page.url == "/" and node.link == "/index.html" %}
-            {% assign active = true %}
+          {% else %}
+            {% assign active = false %}
           {% endif %}
           <a href="{{ node.link | replace:'/index.html', '/'}}" class="{% if active %}active{% endif %}">{% if node.title == "RSS" %}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>RSS Feed icon</title><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>{% else %}{{ node.title }}{% endif %}</a>
         {% endfor %}
