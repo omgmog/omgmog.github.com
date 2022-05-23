@@ -89,8 +89,6 @@ body {
 }
 .main-header {
   margin: calc(-.75 * var(--gutter-inner-y)) calc(-.5 * var(--gutter-inner-y)) 0;
-  // margin-bottom: 0;
-
   padding: calc(.5 * var(--gutter-inner-y));
   padding-bottom: 0;
 
@@ -113,20 +111,7 @@ body {
     
     @include mq('max', $bp-phone) {
       flex-direction: column;
-
-      h1 {
-        text-align: center;
-
-        a {
-          display: block;
-        }
-
-        img {
-          display: block;
-          width: 8rem;
-          margin: auto;
-        }
-      }
+      padding-bottom: 1rem;
     }
   }
   hr {
@@ -138,21 +123,40 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: inherit;
-    @include linkHover;
+    @include mq('min', $bp-desktop) {
+      @include linkHover;
+    }
   }
 
   h1 {
     font-weight: 400;
     font-size: 2rem;
-    line-height: 1.1;
+    line-height: 1;
     margin: 0;
     padding: 0;
 
     img {
-      width: 1em;
-      height: auto;
+      --faceSize: 1.25em;
+      width: var(--faceSize);
+      height: var(--faceSize);
       position: relative;
-      margin-bottom: -.1em;
+      margin-bottom: -.2em;
+    }
+  } 
+  @include mq('max', $bp-phone) {
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+
+      a {
+        display: block;
+      }
+
+      img {
+        --faceSize: 8rem;
+        display: block;
+        margin: 1rem auto;
+      }
     }
   }
 
@@ -393,6 +397,27 @@ body {
 }
 .main-footer {
   text-align: center;
+
+  .post-bio {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+
+    .u-photo {
+      width: 8rem;
+      height: 8rem;
+      margin-right: 1rem;
+      margin-top: 1rem;
+    }
+    @include mq('max', $bp-phone) {
+      text-align: center;
+      flex-direction: column; 
+
+      .u-photo {
+        margin: auto;
+      }
+    }
+  }
 }
 .h-entry {
   header {
@@ -510,7 +535,6 @@ hr {
     }
     
     a {
-      text-decoration: none;
       display: inline-block;
       @include linkHover(100%);
     }
