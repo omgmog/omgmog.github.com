@@ -215,9 +215,13 @@ body {
   }
   
   .webring {
+    text-align: center;
     a {
       text-decoration: none;
       @include hideLinkIcon;
+    }
+    @include mq('max', $bp-phone) {
+      font-size: 3rem;
     }
   }
 }
@@ -606,10 +610,6 @@ hr {
     &::before {
       margin-right: .5em;
     }
-  }
-  .webring {
-    font-size: 3rem;
-    text-align: center;
   }
 }
 
