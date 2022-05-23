@@ -101,18 +101,6 @@ body {
     z-index: 1;
     display: flex;
     flex-direction: column;
-
-    &::after {
-      content: '';
-      width: calc(100% + var(--gutter-inner-y));
-      height: 4rem;
-      background-image: linear-gradient(to bottom, var(--colors-white), rgba(255,255,255,0));
-      position: absolute;
-      top: 100%;
-      left: calc(-.5 * var(--gutter-inner-y));
-      right: calc(-.5 * var(--gutter-inner-y));
-      pointer-events: none;
-    }
   }
 
   .inner {
