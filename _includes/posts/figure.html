@@ -14,6 +14,6 @@
 <div class="blurb">{{ title | strip | markdownify }}
 {{ blurb | strip | markdownify }}</div>
 {% when "image" %}
-<img src="{{ src }}">
+<img src="{{ src }}" loading="lazy">
 {% endcase %}
 </figure>
