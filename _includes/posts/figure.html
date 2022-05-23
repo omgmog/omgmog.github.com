@@ -2,7 +2,7 @@
 <figure class="{{ include.class }} {{ type }}">
 {% if type contains "image" %}
 {% assign img_prefix = include.src | slice:0,4 %}
-{%- capture src -%}{% if img_prefix contains 'http:' %}{{include.src}}{% else %}{{ include.src | prepend:'/images/' | absolute_url}}{% endif %}{%- endcapture -%}
+{%- capture src -%}{% if img_prefix contains 'http' %}{{include.src}}{% else %}{{ include.src | prepend:'/images/' | absolute_url}}{% endif %}{%- endcapture -%}
 {%- capture alt -%}{% if include.alt %}{{ include.alt }}{% endif %}{%- endcapture -%}
 <img src="{{ src }}" loading="lazy" alt="{{alt}}">
 {% endif %}
