@@ -31,7 +31,7 @@
   <header class="main-header">
     <div class="inner">
       <h1><a href="{{ site.data.author.home }}"><img src="{{"/assets/mog.svg"|absolute_url}}" alt="A vectorized pixel-art picture of Max Glenister" /> Max Glenister</a></h1>
-      <nav role="navigation">
+      <nav>
         {% for node in site.data.menu %}
           {% capture is_blog_index_or_article %}{% if node.link == "/index.html" %}{% if page.url == "/" or page.content_type == "article" %}true{% else %}false{% endif %}{% else %}false{% endif %}{% endcapture %}
           {% capture is_current_page %}{% if page.url contains node.link %}true{% else %}false{% endif %}{% endcapture %}
@@ -64,8 +64,8 @@
       &copy; 2010&mdash;{{site.time|date:"%Y"}} Max Glenister. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.
       <br>
       Website last built: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time | date_to_long_string }}</a>
-      <div class="webring"><hr><a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/previous" title="Previous website in the IndieWeb Webring">←</a> <a href="https://xn--sr8hvo.ws" title="An IndieWeb Webring">🕸💍</a> <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/next" title="Next website in the IndieWeb Webring">→</a></div>
     </small>
+    <div class="webring"><hr><a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/previous" title="Previous website in the IndieWeb Webring">←</a> <a href="https://xn--sr8hvo.ws" title="An IndieWeb Webring">🕸💍</a> <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/next" title="Next website in the IndieWeb Webring">→</a></div>
   </footer>
   <script type="application/ld+json">
   {
