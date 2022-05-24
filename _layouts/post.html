@@ -15,7 +15,7 @@ layout: layout
       </a>
     </h2>
     <div class="post-meta">
-      <time class="dt-published" datetime="{{post.date}}">{{ post.date | date_to_long_string }}</time>
+      <time class="dt-published" datetime="{{post.date | date: "%Y-%m-%d"}}">{{ post.date | date_to_long_string }}</time>
       {% include global/types.html %}
     </div>
   </header>
