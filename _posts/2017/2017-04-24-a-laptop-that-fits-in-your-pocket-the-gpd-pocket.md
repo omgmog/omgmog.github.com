@@ -211,18 +211,15 @@ I'm not going to be testing the GPD Pocket's gaming capability extensively, but 
 
 Using low quality settings Skyrim is quite playable. Indoors the game plays very smoothly with no slowdown, in open spaces (with a lot going on) there is some slowdown. You can see more of this in the two videos I’ve made of Skyrim gameplay:
 
-{% assign iframe_url = "https://www.youtube.com/embed/JApgw0Wafn0" %}
-{% include posts/figure.html type="iframe" %}
+{% include posts/figure.html type="iframe" src="https://www.youtube.com/embed/JApgw0Wafn0" %}
 
-{% assign iframe_url = "https://www.youtube.com/embed/-bM18d9mRQE" %}
-{% include posts/figure.html type="iframe" %}
+{% include posts/figure.html type="iframe" src="https://www.youtube.com/embed/-bM18d9mRQE" %}
 
 #### Emulation: Super Mario Sunshine on Dolphin
 
 With the default settings Super Mario Sunshine runs at around 15-25 FPS, with noticeable audio stuttering during dialog.
 
-{% assign iframe_url = "https://www.youtube.com/embed/Nq04r9iKA5c" %}
-{% include posts/figure.html type="iframe" %}
+{% include posts/figure.html type="iframe" src="https://www.youtube.com/embed/Nq04r9iKA5c" %}
 
 ### Other Software
 

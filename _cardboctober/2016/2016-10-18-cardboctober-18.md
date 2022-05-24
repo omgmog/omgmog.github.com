@@ -40,8 +40,7 @@ You could more simply make the user move in the direction they're looking when t
 
 Recently I played an Android game ([Gravity Pull](https://play.google.com/store/apps/details?id=com.VRMersive.GravityDrop)) that used a method of movement called "VR-Step". VR-Step uses "Inertial sensing" to allow you to move in the direction you're looking. You can see how it works here:
 
-{% assign iframe_url = "https://www.youtube.com/embed/NYD8ZG3W31k" %}
-{% include posts/figure.html type="iframe" %}
+{% include posts/figure.html type="iframe" src="https://www.youtube.com/embed/NYD8ZG3W31k" %}
 
 
 See also:
