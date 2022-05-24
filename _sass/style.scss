@@ -322,6 +322,11 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  iframe {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
   img {
     height: auto;
   }

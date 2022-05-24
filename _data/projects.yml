@@ -10,7 +10,7 @@
 - title: Airquotes The Podcast Airquotes
   link: https://remotehack.space/live
   description: "Since 2021 I've been editing the episodes for this short-form podcast that is recorded during each [Remote Hack](https://remotehack.space). You can find all episodes on Spotify."
-  embed: '<iframe src="https://open.spotify.com/embed-podcast/show/2ppoyoTxxSv9IvRGGqLWP7" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>'
+  embed: '<iframe src="https://open.spotify.com/embed-podcast/show/2ppoyoTxxSv9IvRGGqLWP7" width="600" height="232" allow="encrypted-media"></iframe>'
   now: true
 - title: We're going to space
   link: https://github.com/omgmog/were-going-to-space
