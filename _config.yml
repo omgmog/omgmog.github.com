@@ -19,6 +19,12 @@ whitelist:
   - jekyll-sitemap
 feed:
   posts_limit: 1000
+  excerpt_only: true
+
+# Used by jekyll-feed
+author:
+  name: Max Glenister
+
   
 collections:
   cardboctober:
