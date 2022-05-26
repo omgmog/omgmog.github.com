@@ -333,6 +333,29 @@ body {
   img {
     height: auto;
   }
+  table {
+    border: 1px solid var(--colors-lightgrey);
+    border-radius: .4rem;
+    // filter: drop-shadow(0 .5rem .5rem var(--colors-midgrey-transparent-25));
+    background-color: var(--colors-white);
+    font-size: .9em;
+
+    td, th {
+      padding: .25rem .5rem;
+    }
+    thead {
+      background: var(--colors-primary);
+      color: var(--colors-black);
+    }
+    tbody {
+      tr:nth-child(2n) {
+        background-color: var(--colors-lightgrey-transparent-25);
+      }
+    }
+    &.massive {
+      @include breakoutWidth;
+    }
+  }
   figure {
     @include breakoutWidth;
     border-radius: .4rem;
