@@ -1,0 +1,38 @@
+<script type="text/template" id="tpl-reply">
+  <article class="reply">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" class="avatar" data-username="%author_name%" loading="lazy">
+    <header>
+      <h4><a href="%author_url%" target="_blank" rel="nofollow" class="name">%author_name%</a> %verb% <a href="%url%" target="_blank" rel="nofollow">on <time datetime="%date%">%date_formatted%</time> via %domain%</a></h4>
+    </header>
+    <div>%body%</div>
+  </article>
+</script>
+<script type="text/template" id="tpl-like">
+  <div class="like">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name% on %domain%" class="avatar" data-username="%author_name%" loading="lazy">
+  </div>
+</script>
+<script type="text/template" id="tpl-bookmark">
+  <div class="like">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name% on %domain%" class="avatar" data-username="%author_name%" loading="lazy">
+  </div>
+</script>
+<script type="text/template" id="tpl-repost">
+  <div class="like">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name% on %domain%" class="avatar" data-username="%author_name%" loading="lazy">
+  </div>
+</script>
+<script type="text/template" id="tpl-mention">
+  <article class="reply mention">
+    <div><p>%verb% in <a href="%url%" rel="nofollow" target="_blank">%url%</a> on <time datetime="%date%">%date_formatted%</time></p></div>
+  </article>
+</script>
+<script type="text/template" id="tpl-mention-rich">
+  <article class="reply mention-rich">
+    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" class="avatar" data-username="%author_name%" loading="lazy">
+    <header>
+      <h4><a href="%author_url%" target="_blank" rel="nofollow" class="name">%author_name%</a> %verb% <a href="%url%" target="_blank" rel="nofollow">on <time datetime="%date%">%date_formatted%</time> via %domain%</a></h4>
+    </header>
+    <div>%summary%</div>
+  </article>
+</script>

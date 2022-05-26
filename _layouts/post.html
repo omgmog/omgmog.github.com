@@ -2,6 +2,7 @@
 layout: layout
 ---
 {% assign post = page %}
+{% include interactions/vars.html %}
 
 {% if post.content contains '<code' %}
 <link rel="stylesheet" href="{{ "/assets/pygments.css" | absolute_url }}" />
@@ -15,7 +16,13 @@ layout: layout
       </a>
     </h2>
     <div class="post-meta">
-      <time class="dt-published" datetime="{{post.date | date: "%Y-%m-%d"}}">{{ post.date | date_to_long_string }}</time>
+      <div class="post-meta-left">
+        <time class="dt-published" datetime="{{post.date | date: "%Y-%m-%d"}}">{{ post.date | date:"%B %d %Y" }}</time>
+        <span>  &bull; </span>
+        {% assign read_time = post.content | number_of_words | divided_by:180 %}
+        <span>{% if read_time != 0 %}{{ read_time }}{% else %}1{% endif %} min read</span>
+        {% include interactions/count.html %}
+      </div>
       {% include global/types.html %}
     </div>
   </header>
@@ -26,4 +33,5 @@ layout: layout
   {% endif %}
 </article>
 
-{% include posts/interactions.html %}
+{% include interactions/templates.html %}
+{% include interactions/stream.html %}

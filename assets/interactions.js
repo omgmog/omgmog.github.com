@@ -14,6 +14,7 @@
                 author_avatar_url: ['user', 'avatar_url'],
                 author_url: ['user', 'html_url'],
                 date: ['created_at'],
+                date_formatted: ['created_at'],
                 body: ['body'],
                 url: ['html_url'] ,
                 domain: ['html_url'] 
@@ -28,6 +29,7 @@
                 author_avatar_url: ['author', 'photo'],
                 author_url: ['author', 'url'],
                 date: ['published'],
+                date_formatted: ['published'],
                 body: ['content', 'text'],
                 url: ['url'],
                 domain: ['url']
@@ -73,6 +75,7 @@
                 verb: 'Mentioned',
                 url: ['url'],
                 date: ['published'],
+                date_formatted: ['published'],
                 domain: ['url']
             }
         },
@@ -85,6 +88,7 @@
                 author_url: ['author', 'url'],
                 summary: ['summary', 'value'],
                 date: ['published'],
+                date_formatted: ['published'],
                 verb: 'mentioned',
                 url: ['url'],
                 domain: ['url']
@@ -128,6 +132,10 @@
             }
 
             if (attribute === 'date') {
+                // sometimes the publish date isn't provided but we might know when the mention was received
+                value = value || data['wm-received'];
+            }
+            if (attribute === 'date_formatted') {
                 // sometimes the publish date isn't provided but we might know when the mention was received
                 value = value || data['wm-received'];
                 // format the date

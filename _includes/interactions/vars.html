@@ -1,0 +1,9 @@
+<script>
+  {% if jekyll.environment == "production" %}
+  const githubIssueID = {% if page.comments_issue %}{{page.comments_issue}}{% else %}null{% endif %};
+  const pageURL = [...new Set(['{{page.url | absolute_url }}'{% if page.alternate_urls %},{% for url in page.alternate_urls %}'{{url | absolute_url}}',{% endfor %}'{{page.url | absolute_url }}'{% endif %}])];
+  {% else %}
+  const githubIssueID = {% if page.comments_issue %}{{page.comments_issue}}{% else %}null{% endif %};
+  const pageURL = [...new Set(['{{page.url | absolute_url }}'{% if page.alternate_urls %},{% for url in page.alternate_urls %}'{{url | absolute_url}}',{% endfor %}'{{page.url | absolute_url }}'{% endif %}].map(url=>url.replace('http://dev.local:4000', 'https://blog.omgmog.net')))];
+  {% endif %}
+</script>

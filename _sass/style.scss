@@ -458,13 +458,48 @@ body {
       justify-content: space-between;
       align-items: center;
       flex-direction: row;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: var(--gutter-inner-y) auto;
       color: var(--colors-darkgrey);
-      pointer-events: none;
       user-select: none;
       width: calc(100% - (var(--gutter-inner-x)));
+      
+      .post-meta-left {
+        display: flex;
+        flex-direction: row;
+
+        > * {
+          margin-right: .5em;
+        }
+      }
     }
+    .webmention-stats { 
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+
+      > span {
+        vertical-align: middle;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        & + span {
+          margin-left: .5em;
+        }
+      }
+
+      svg {
+        width: .8em;
+        height: auto;
+        margin-right: .2em;
+    }
+      .value {
+        font-size: .8em;
+      }
+    }
+
   }
 }
 hr {
