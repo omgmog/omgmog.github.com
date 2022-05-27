@@ -2,6 +2,9 @@
 title: Using a Raspberry Pi to Host a local Visual Studio Code Server
 tags: [rpi, guide]
 comments_issue: 117
+syndication:
+  - https://social.omgmog.net/2022/-a-new-blog-post-using-a
+  - https://indieweb.social/@omgmog/108370156996002839
 ---
 
 I tend to work on this blog from multiple machines in my home. These include a desktop PC running Windows, a MacBook Pro running macOS, and a Chromebook with the [Linux environment enabled](https://chromeos.dev/en/linux). Across all of these machines I primarily use [Visual Studio Code](https://code.visualstudio.com).

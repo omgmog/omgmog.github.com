@@ -524,6 +524,11 @@ body {
     }
 
   }
+
+  .syndication {
+    text-align: center;
+    color: var(--colors-darkgrey);
+  }
 }
 hr {
   height: 0.05rem;
@@ -535,6 +540,10 @@ hr {
 
   & + hr {
     display: none;
+  }
+
+  &.blank {
+    background: transparent;
   }
 }
 .main-content {

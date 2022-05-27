@@ -1,0 +1,4 @@
+{% if page.syndication %}
+<hr class="blank">
+<p class="syndication">This post has been syndicated to {% for link in page.syndication %}{% assign host = link | split:'http://' | last | split:'https://' | last | split:'/' | first %} <a href="{{ link }}" rel="syndication" class="u-syndication">{{ host }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+{% endif %}

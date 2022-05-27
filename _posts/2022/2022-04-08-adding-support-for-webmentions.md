@@ -2,6 +2,9 @@
 title: Adding support for Webmentions
 comments_issue: 114
 tags: [indieweb]
+syndication:
+  - https://indieweb.social/@omgmog/108203284974135392
+  - https://twitter.com/omgmog/status/1512402287846699011
 ---
 
 I've added [Webmention](https://indieweb.org/Webmention) support to the posts on this blog.
