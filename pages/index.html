@@ -2,8 +2,7 @@
 permalink: /
 ---
 
-{% assign posts = site.posts | concat: site.cardboctober %}
-{% assign posts = posts | sort:'date' | reverse %}
+{% assign posts = site.posts | concat: site.cardboctober | sort:'date' | reverse %}
 {% assign total_posts = posts | size %}
 {% assign page_amount = 15 %}
 {% assign remainder = total_posts | modulo: page_amount %}

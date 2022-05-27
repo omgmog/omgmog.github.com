@@ -19,7 +19,7 @@ $tags: (
     @content;
   }
 }
-@mixin linkHover($height: 1.2em, $order:(off,on)) {
+@mixin linkHover($height: 1.3em, $order:(off,on)) {
   --shadow: var(--colors-primary-transparent-25);
   --background: var(--colors-primary);
 
@@ -37,7 +37,6 @@ $tags: (
 
   &::before {
     content: '';
-    border-radius: 0 .4rem .4rem 0;
     margin: auto;
     position: absolute;
     height: $height;
@@ -47,6 +46,7 @@ $tags: (
     z-index: -1;
     box-shadow: -.25em 0 0 0 var(--shadow), -.5em 0 0 0 var(--shadow);
     background-color: var(--background);
+    border-radius: 0 .1rem .1rem 0; 
   }
 
   &#{$state_primary} {
