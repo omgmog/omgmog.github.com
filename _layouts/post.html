@@ -16,14 +16,16 @@ layout: layout
       </a>
     </h2>
     <div class="post-meta">
-      <div class="post-meta-left">
-        <time class="dt-published" datetime="{{post.date | date: "%Y-%m-%d"}}">{{ post.date | date:"%B %d %Y" }}</time>
-        <span>  &bull; </span>
+      <div class="post-meta-primary">
         {% assign read_time = post.content | number_of_words | divided_by:180 %}
-        <span>{% if read_time != 0 %}{{ read_time }}{% else %}1{% endif %} min read</span>
-        {% include interactions/count.html %}
+        <time class="dt-published" datetime="{{post.date | date: "%Y-%m-%d"}}">{{ post.date | date:"%B %d %Y" }}</time>
+        <span class="bullet">  &bull; </span>
+        <span class="read-time">{% if read_time != 0 %}{{ read_time }}{% else %}1{% endif %} min read</span>
       </div>
-      {% include global/types.html %}
+      <div class="post-meta-secondary">
+        {% include interactions/count.html %}
+        {% include global/types.html %}
+      </div>
     </div>
   </header>
   <div class="e-content">{{ content }}</div>

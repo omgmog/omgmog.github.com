@@ -339,6 +339,11 @@ body {
     // filter: drop-shadow(0 .5rem .5rem var(--colors-midgrey-transparent-25));
     background-color: var(--colors-white);
     font-size: .9em;
+    width: 100%;
+
+    & + table {
+      margin-top: 1rem;
+    }
 
     td, th {
       padding: .25rem .5rem;
@@ -478,21 +483,32 @@ body {
 
     .post-meta {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      flex-direction: row;
+      flex-direction: column;
       font-size: 1rem;
       margin: var(--gutter-inner-y) auto;
       color: var(--colors-darkgrey);
       user-select: none;
       width: calc(100% - (var(--gutter-inner-x)));
-      
-      .post-meta-left {
+
+      &-primary,
+      &-secondary {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
+      }
+      &-primary {
+        margin-bottom: .5rem;
+        .bullet {
+          margin: 0 1rem;
+        }
+      }
+      &-secondary {
+        .webmention-stats {
+          margin-right: 1rem;
+        }
+        .tags {
 
-        > * {
-          margin-right: .5em;
         }
       }
     }

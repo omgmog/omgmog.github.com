@@ -51,13 +51,13 @@ The device internals are also quite simple. It's essentially a QHD screen with a
 
 Here are the important parts of the specification:
 
-- **Screen size:** 5.7" (diagonal)
-- **Screen technology:** Samsung Amoled
-- **Resolution:** 2560 x 1440 px (QHD) -- that's 1280x1440 per eye.
-- **FOV:** 110 degrees
-- **Weight:** 297g
-- **Sensors:** Magnetometer, 3 degrees of freedom
-- **Controller:** Any PC compatible gamepad
+|**Screen size**| 5.7" (diagonal)|
+|**Screen technology**| Samsung Amoled|
+|**Resolution**| 2560 x 1440 px (QHD) -- that's 1280x1440 per eye.|
+|**FOV**| 110 degrees|
+|**Weight**| 297g|
+|**Sensors**| Magnetometer, 3 degrees of freedom|
+|**Controller**| Any PC compatible gamepad|
 
 The DPVR has a similar minimum PC requirements to the HTC Vive and Oculus Rift, that being a fourth generation i5 or better, Nvidia GTX 970 or better and 4 GB of ram.
 
@@ -104,12 +104,12 @@ Once you've connected the DPVR E3 we can move on to using the DPNAssistant softw
 
 To use the DPVR E3 headset at all you will need to have the DPNAssistant software running. This software seems to provide a couple of functions:
 
-- **Hot** - Home screen, list popular games and videos
-- **Game** - List some compatible games (with links to purchase/open them on Steam, and some non-Steam games)
-- **Video** - Provides some (questionable) 3D and 360 video content
-- **Equipment** - Manage your DPVR E3 headset
-- **Setup** - Upgrade the DPNAssistant sofrware, get support
-- **User Center** - View/manage games installed by DPNAssistant
+|**Hot** | Home screen, list popular games and videos|
+|**Game** | List some compatible games (with links to purchase/open them on Steam, and some non-Steam games)|
+|**Video** | Provides some (questionable) 3D and 360 video content|
+|**Equipment** | Manage your DPVR E3 headset|
+|**Setup** | Upgrade the DPNAssistant sofrware, get support|
+|**User Center** | View/manage games installed by DPNAssistant|
 
 {% include posts/figure.html src="dpvr/dpnassistant.png" %}{:.massive.center}
 

@@ -47,14 +47,14 @@ The price point puts it a bit higher than most low-end chromebooks (_and netbook
 
 ## Full specs
 
-- **CPU**: Intel Atom x7-Z8750 / 1.6ghz / quad-core
-- **Memory**: 8GB LPDDR3-1600
-- **Storage**: 128GB eMMC
-- **GPU**: Intel HD 405
-- **Network**: Wifi 802.11a/b/g/n/ac 2.4ghz/5ghz, Bluetooth 4.1
-- **Connectivity**: 1x USB Type-C 3.0, 1 x USB Type-A 3.0, HDMI-D “Micro HDMI”, 3.5mm headphone jack
-- **Weight**: 480g
-- **Dimensions**: 180mm / 106mm / 18.5mm
+|**CPU**| Intel Atom x7-Z8750 / 1.6ghz / quad-core|
+|**Memory**| 8GB LPDDR3-1600|
+|**Storage**| 128GB eMMC|
+|**GPU**| Intel HD 405|
+|**Network**| Wifi 802.11a/b/g/n/ac 2.4ghz/5ghz, Bluetooth 4.1|
+|**Connectivity**| 1x USB Type-C 3.0, 1 x USB Type-A 3.0, HDMI-D “Micro HDMI”, 3.5mm headphone jack|
+|**Weight**| 480g|
+|**Dimensions**| 180mm / 106mm / 18.5mm|
 
 ## Design
 
@@ -142,13 +142,12 @@ The x7-Z8750 supports up to 8GB of RAM, and GPD have maxed that out to get every
 
 I’ve run through a number of benchmark applications -- I’m not sure how these numbers can compare to real-world activities such as internet browsing or playing games, but I’ll share them here anyway:
 
-- **Passmark performancetest**: 804.5
-- **PCMark**: 1543
-- **Geekbench**: 7223
-- **3DMark**:
-  - **Sky Diver**: 1195
-  - **Cloud Gate**: 1750
-  - **Ice Storm Extreme**: 13221
+|**Passmark performancetest**| 804.5|
+|**PCMark**| 1543|
+|**Geekbench**| 7223|
+|**3DMark Sky Diver**| 1195|
+|**3DMark Cloud Gate**| 1750|
+|**3DMark Ice Storm Extreme**| 13221|
 
 In the numbers alone from these benchmarks the GPD Pocket compares to laptops from within the past 5 years -- but as I’ve mentioned, this isn’t a device to replace your main computer, and these numbers are likely not representative of real-world activities.
 

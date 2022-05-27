@@ -15,10 +15,10 @@ I've got an old [2009 MacBook 6,1 (A1342)](https://everymac.com/systems/apple/ma
 
 The specs of the device are:
 
-- **CPU**: Core 2 Duo (2.26Ghz)
-- **RAM**: 8GB (Upgraded from 2GB)
-- **GPU**: Nvidia GeForce 9400M (256MB shared)
-- **Storage**: 240GB SSD (Upgraded from 250GB 5400RPM HDD)
+|**CPU**| Core 2 Duo (2.26Ghz)|
+|**RAM**| 8GB (Upgraded from 2GB)|
+|**GPU**| Nvidia GeForce 9400M (256MB shared)|
+|**Storage**| 240GB SSD (Upgraded from 250GB 5400RPM HDD)|
 
 The most recent version of macOS supported on this MacBook is High Sierra (10.13) from 2017, though I've been running Ubuntu Linux on it recently as macOS feels a bit slow these days (even with an SSD and 8GB RAM upgrade!).
 

@@ -52,11 +52,11 @@ If you’re using the format of an existing established hack day, then it’s co
 
 With SusHack we had the following sponsors:
 
-- **2degrees** - location, wifi, refreshments, breakfast pastries, lunch
-- **Starbucks** - coffee
-- **Github** - T-shirts, stickers, promo codes
-- **Mission Burrito** - discount code for our bulk lunch order
-- **Love Hz** - Prizes (books, devkits, etc.) for the second SusHack, because the first SusHack was targeted specifically at helping them launch their “Oxford Flood Network”
+|**2degrees**| location, wifi, refreshments, breakfast pastries, lunch|
+|**Starbucks**| coffee|
+|**Github**| T-shirts, stickers, promo codes|
+|**Mission Burrito**| discount code for our bulk lunch order|
+|**Love Hz**| Prizes (books, devkits, etc.) for the second SusHack, because the first SusHack was targeted specifically at helping them launch their “Oxford Flood Network”|
 
 
 ## Where will you host your hack day?
