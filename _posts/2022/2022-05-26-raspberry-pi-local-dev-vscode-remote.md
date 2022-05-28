@@ -120,17 +120,29 @@ Now you can access your Jekyll site from the hostname of the remote server and a
 
 ### Comparison to running locally
 
-With a large website containing a lot of pages Jekyll can be a bit of a slog. Here's how the complete build times compare on my desktop, MacBook Pro,  Chromebook, and Raspberry Pi 4:
+With a large website containing a lot of pages Jekyll can be a bit of a slog. Here's how the complete build times compare on my desktop, MacBook Pro,  Chromebook, and Raspberry Pi 4 (SD card):
 
-| Device | Build time (cold, seconds) | Build time (serve/watch, seconds)
+| Device | Build time (cold, seconds) | Build time (serve/watch, seconds) |
 | :----- | :------------------------: | :---------------------------: |
-| Desktop (Windows 10) | 2.674/2.537/2.656 | 1.527/1.449/1.266 |
-| MacBook Pro (macOS Monterey) | 1.513/1.556/1.552 | 0.963/0.509/0.541 |
-| Chromebook (Linux environment) | 8.539/8.744/8.698 | 8.033/7.918/7.864 |
-| Raspberry Pi 4 via Code Server | 8.703/8.938/8.785 | 8.002/8.048/8.059 |
+| Desktop (Windows 10)            | 2.674/2.537/2.656 | 1.527/1.449/1.266 |
+| MacBook Pro (macOS Monterey)    | 1.513/1.556/1.552 | 0.963/0.509/0.541 |
+| Chromebook (Linux environment)  | 8.539/8.744/8.698 | 8.033/7.918/7.864 |
+| Raspberry Pi 4                  | 8.703/8.938/8.785 | 8.002/8.048/8.059 |
 {:.massive}
 
-As you can see the build time on the Raspberry Pi 4 is a bit slower than building locally on the desktop or MacBook. I can work around this by using the `--incremental` build flag to just build the pages that are actually being changed and cut the build time to around 2 seconds.
+~~As you can see the build time on the Raspberry Pi 4 is a bit slower than building locally on the desktop or MacBook. I can work around this by using the `--incremental` build flag to just build the pages that are actually being changed and cut the build time to around 2 seconds.~~
+
+I wasn't happy with the ~8s build times on the SD card-based install. Thanks to [a comment from Philip Newborough](https://indieweb.social/web/@corenominal/108374237744275808), I was pointed to the fact that the Raspberry Pi 4 supports booting from USB so I switched to using an SSD with a USB 3.0 to SATA adapter.
+
+Here's the build time with the SSD:
+
+| Device | Build time (cold, seconds) | Build time (serve/watch, seconds) |
+| :----- | :------------------------: | :---------------------------: |
+| Raspberry Pi 4 (SD card)        | 8.703/8.938/8.785 | 8.002/8.048/8.059 |
+| Raspberry Pi 4 (USB SSD)        | 4.922/5.022/4.965 | 1.846/1.797/1.652|
+{:.massive}
+
+If I use the `--incremental` build flag I see build times of ~0.7s. Much better!
 
 ### Closing thoughts
 
