@@ -321,18 +321,56 @@ body {
     }
   }
 
-  iframe,
+  .iframe .figure-content,
   img {
     border-radius: inherit;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
-  iframe {
+  .iframe .figure-content {
     background-color: transparent;
     border: none;
     width: 100%;
   }
+  .iframe .figure-content.placeholder { 
+    background: var(--colors-darkgrey);
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: inherit;
+      object-fit: cover;
+      z-index: 0;
+      opacity: .5;
+    }
+    &::before,
+    &::after {
+      color: var(--colors-white);
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 1;
+      filter: drop-shadow(0 0 .5rem var(--colors-black));
+    }
+    &::before {
+      content: 'Click to play';
+      font-weight: bold;
+      bottom: 2.5rem;
+    }
+    &::after {
+      content: attr(data-src);
+      font-style: italic;
+      bottom: 1rem;
+    }
+  }
+
   img {
     height: auto;
   }
@@ -388,7 +426,7 @@ body {
       padding-top: 71.25%;
       height: 0;
     
-      iframe {
+      .figure-content {
         border: 0;
         position: absolute;
         left: 0;
@@ -726,11 +764,22 @@ hr {
   @include breakoutWidth;
   margin-top: var(--gutter-inner-y);
 }
-
-iframe[id^="ghcard-"] { 
-  min-height: 154px;  // minimum height of the content of the embed
+iframe {
+  border: 0;
+  background-color: transparent;
   width: 100%;
-} 
+
+  &[id^="ghcard-"] { 
+    min-height: 154px;  // minimum height of the content of the embed
+
+    figure & {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+    }
+  } 
+}
 
 .img-grid {
   display: flex;
@@ -794,7 +843,7 @@ iframe[id^="ghcard-"] {
       &.iframe {
         padding-top: calc(calc(100% / 480) * 260);  // match aspect ratio of adjacent project thumb
         
-        iframe {
+        .figure-content {
           margin: auto;
         }
       }

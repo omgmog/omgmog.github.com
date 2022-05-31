@@ -38,3 +38,21 @@ layout: layout
 
 {% include interactions/templates.html %}
 {% include interactions/stream.html %}
+
+{% if post.content contains '<div data-src' %}
+<script>
+  const lazy_iframes = document.querySelectorAll('.iframe [data-src]');
+  lazy_iframes.forEach(el => {
+    el.addEventListener('click', e => {
+      const iframe = document.createElement('iframe');
+      iframe.width = el.clientWidth;
+      iframe.height = el.clientHeight;
+      iframe.classList = el.classList;
+      iframe.classList.remove('placeholder');
+      iframe.src = [el.dataset.src, 'autoplay=1'].join(el.dataset.src.includes('?') ? '&' : '?');
+      
+      el.replaceWith(iframe); 
+    }, false)
+  });
+</script>
+{% endif %}

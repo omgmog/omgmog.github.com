@@ -1,5 +1,5 @@
 {%- capture type -%}{{ include.type | default:"image"}}{%- endcapture -%}
-<figure class="{{ include.class }} {{ type }}">
+<figure class="{{ type }} {{ include.class }}">
 {% if type contains "image" %}
 {% assign img_prefix = include.src | slice:0,4 %}
 {%- capture src -%}{% if img_prefix contains 'http' %}{{include.src}}{% else %}{{ include.src | prepend:'/images/' | absolute_url}}{% endif %}{%- endcapture -%}
@@ -13,6 +13,14 @@
 {{ blurb | strip | markdownify }}</div>
 {% endif %}
 {% if type contains "iframe" %}
-<iframe src="{{ include.src|replace:'http:','' }}" width="600" height="350"></iframe>
+{% if include.src contains 'youtube.com' or include.src contains 'youtu.be' %}
+{% comment %}Youtube. Make it a lazy loader... {% endcomment %}
+<div data-src="{{ include.src|replace:'http:','' }}" class="figure-content placeholder" width="600" height="350">
+    <img src="https://img.youtube.com/vi/{{ include.src|split:'/'|last|split:'?'|first}}/0.jpg" loading="lazy"/>
+</div>
+{% else %}
+{% comment %}Some other sort of iframe then... {% endcomment %}
+<iframe class="figure-content" src="{{ include.src|replace:'http:','' }}" width="600" height="350"></iframe>
+{% endif %}
 {% endif %}
 </figure>
