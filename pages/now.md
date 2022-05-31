@@ -45,7 +45,7 @@ Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spe
 {% for project in projects %}
 #### [{{ project.title }}]({{ project.link }})
 {{ project.description | markdownify }}
-{% if project.img %}<div class="img-grid count-{{project.img | size }}">{% for img in project.img %}{% include posts/figure.html src=img class="center" %}{% endfor %}</div>{% endif %}
+{% if project.img %}<div class="img-grid count-{{project.img | size }}">{% for img in project.img %}{% assign _img = img | absolute_url %}{% include posts/figure.html src=_img class="center" %}{% endfor %}</div>{% endif %}
 {% if project.embed %}{{ project.embed }}{% endif %}
 {% endfor %}
 

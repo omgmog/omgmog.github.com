@@ -27,7 +27,7 @@ permalink: /vr/
   {% assign vr_projects = site.data.projects | where:"vr","true" %}
   {% for project in vr_projects %}
     <li>
-      {% if project.img %}<div class="img-grid count-{{project.img | size }}">{% for img in project.img %}{% include posts/figure.html src=img class="center" %}{% endfor %}</div>{% endif %}
+      {% if project.img %}<div class="img-grid count-{{project.img | size }}">{% for img in project.img %}{% assign _img = img | absolute_url %}{% include posts/figure.html src=_img class="center" %}{% endfor %}</div>{% endif %}
       {% if project.embed %}<figure class="iframe">{{ project.embed }}</figure>{% endif %}
       <h4>{{ project.title }}</h4>
       <p>{{ project.description }}</p>
