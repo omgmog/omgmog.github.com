@@ -82,8 +82,6 @@ body {
   @include mq('min', $bp-big-desktop) {
     --body-max-width: calc(#{$bp-big-desktop} - calc(var(--gutter-outer) * 2));
     --body-margin: var(--gutter-outer) auto;
-  }
-  @include mq('max', $bp-big-desktop) {
     border-radius: .4rem;
   }
   @include mq('max', $bp-phone) {
@@ -98,7 +96,9 @@ body {
   @include mq('min', $bp-desktop) {
     position: sticky;
     top: 0;
-    background: var(--colors-white);
+    background-color: rgba(#fff, .7);
+    backdrop-filter: saturate(180%) blur(.5rem);
+
     z-index: 1;
     display: flex;
     flex-direction: column;
