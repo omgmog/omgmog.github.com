@@ -16,12 +16,9 @@ I always spend a large amount of time looking for an online SVG to PNG converter
 - The Noun Project - [http://thenounproject.com/](http://thenounproject.com/)
 - Iconmonstr (PNG available too!) - [http://iconmonstr.com/](http://iconmonstr.com/)
 - Game icons - [http://game-icons.net/](http://game-icons.net/)
-- Batch. icons - [http://adamwhitcroft.com/batch/](http://adamwhitcroft.com/batch/)
 
 ### Online services to convert SVG to PNG that aren't totally rubbish:
 
-- Grumpicon, probably the best converter I've used, 'nuff said. - [http://www.grumpicon.com/](http://www.grumpicon.com/)
-- Simple, outputs all standard icon sizes and formats (icns, hqx, ico, png) - [http://iconverticons.com/online/](http://iconverticons.com/online/)
 - Surprisingly not another Windows shareware site - [http://image.online-convert.com/convert-to-png](http://image.online-convert.com/convert-to-png)
 - Very simple, lets you specify output dimensions - [http://www.fileformat.info/convert/image/svg2raster.htm](http://www.fileformat.info/convert/image/svg2raster.htm)
 
