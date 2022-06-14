@@ -1,0 +1,52 @@
+---
+layout: none
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="3.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:a="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+  <xsl:output method="html" encoding="UTF-8"/>
+  <xsl:template match="text()"/>
+  <xsl:template match="a:feed">
+    <html>
+      <head>
+        <title>
+          <xsl:value-of select="a:title"/>
+        </title>
+        <link rel="stylesheet" href="{{ 'assets/style.css' | absolute_url }}" />
+        <style>
+        ul { margin: 0; padding: 0; list-style: none;}
+        .intro { display: flex; flex-direction: row; font-size: 1.25rem}
+        .intro .url { border-radius: .4rem; user-select: none; width: 35rem; text-align: center; margin: 0 0 0 1rem; padding: 1rem; background-color: #eee; font-size: 4rem; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+        .intro .url a { font-size: 1rem; margin-top: 1rem;}
+        </style>
+      </head>
+      <body>
+        <h1>
+          <xsl:value-of select="a:title"/>
+        </h1>
+        <div class="intro">
+        <div class="blurb">
+            <p>You're looking at a styled version of my RSS feed. With the right software, you can use this URL to be automatically notified when there's new content.</p>
+            <p>Find out more:</p>
+            <p><a href="https://duckduckgo.com/?q=what+is+rss" target="_blank" rel="nofollow">What is RSS?</a>, <a href="https://en.wikipedia.org/wiki/RSS" target="_blank" rel="nofollow">RSS on Wikipedia</a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/RSS" target="_blank" rel="nofollow">RSS on MDN</a></p>
+        </div>
+        <div class="url">📫 <xsl:element name="a"><xsl:attribute name="href"><xsl:value-of select="a:link[@rel='self']/@href"/></xsl:attribute><xsl:value-of select="a:link[@rel='self']/@href"/></xsl:element></div>
+        </div>
+        <ul>
+          <xsl:apply-templates/>
+        </ul>
+      </body>
+    </html>
+  </xsl:template> 
+  <xsl:template match="a:entry">
+    <li>
+      <hr />
+      <b>
+      <xsl:element name="a"><xsl:attribute name="href"><xsl:value-of select="a:id"/></xsl:attribute><xsl:value-of select="a:title"/></xsl:element><br />
+      <xsl:value-of select="substring(a:updated, 1, 10)"/>
+      </b><br /><br />
+      <i><xsl:value-of select="a:summary"/></i>
+    </li>
+  </xsl:template> 
+</xsl:stylesheet>
