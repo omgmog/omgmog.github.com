@@ -1,12 +1,13 @@
-{% assign day_number = page.date|date:'%d'|times:1 %}
+{% assign day_date = page.date|date:'%d' %}
+{% assign day_number = day_date|times:1 %}
 <h3 class="wide-h3">Cardboctober{% unless page.hide_pager %} day {{ day_number }}{% endunless %}</h3>
 <div class="cardboctober-nav">
 {% if page.has_hack %}
 <p>
-    View this Cardboctober hack <a href="https://cardboctober.github.io/max/{{ page.date|date:'%d'}}/">{{ page.title }}</a>
+    <a href="https://cardboctober.github.io/max/{{ day_date }}/">View this Cardboctober hack</a> &bull; <a href="https://github.com/cardboctober/max/tree/master/{{ day_date }}/">View the source code on Github</a>
 </p>
 <p>
-    View the other submissions for day {{ day_number}} on the <a href="https://cardboctober.github.io/#{{ page.date|date:'%d' }}">Cardboctober website</a>.
+    View the other submissions for day {{ day_number}} on the <a href="https://cardboctober.github.io/#{{ day_date }}">Cardboctober website</a>.
 </p>
 {% endif %}
 {% unless page.hide_pager %}
