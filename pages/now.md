@@ -1,7 +1,7 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2022-05-04T13:47:39
+last_modified_at: 2022-12-19T11:54:50
 ---
 
 Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
@@ -62,9 +62,6 @@ I post on my own [social.omgmog.net](https://social.omgmog.net) and syndicate to
 
 #### Discord
 I'm on {% include global/uurl.html what="Discord" %} occasionally. I've joined a handful of niche technology communities on there, but I don't participate much.
-
-#### Twitter 
-I've gone read-only with my {% include global/uurl.html what="Twitter" %}. Opting to use Mastodon/Known for posting my social updates and replies.
 
 #### Facebook
 I have a Facebook account, but it's used exclusively for buying things on Marketplace, and for my Oculus Quest.

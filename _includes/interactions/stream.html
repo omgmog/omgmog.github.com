@@ -12,7 +12,7 @@
   </svg></button></h3>
   <div class="addyours">
     {% capture tweet_text %}{{ page.title }} - {{ site.title }}{% endcapture %}
-    <p>Want to reply? I've hooked up <a href="https://indieweb.org/Webmention">Webmentions</a> so you can do so by sending a Webmention, or a <a href="https://twitter.com/intent/tweet?text={{ tweet_text | replace:' ','%20'}}&url={{ page.url | absolute_url }}&via=omgmog">Tweet mentioning this post</a>.</p>
+    <p>Want to reply? I've hooked up <a href="https://indieweb.org/Webmention">Webmentions</a> so you can do so by sending a Webmention.</p>
     <p>Sent a Webmention but it's not showing up below? It could take a little while for <a href="https://brid.gy">brid.gy</a> to pick it up. Webmentions are cached locally for 30 mins before attempting to fetch new Webmentions.</p>
   </div>
   <div id="replies" data-display="none" style="display:none;">
