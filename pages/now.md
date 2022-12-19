@@ -1,7 +1,7 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2022-12-19T11:54:50
+last_modified_at: 2022-12-19T11:58:57
 ---
 
 Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
@@ -54,8 +54,6 @@ Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spe
 #### Mastodon
 {% include global/mastodon.html %}
 I post on my own [social.omgmog.net](https://social.omgmog.net) and syndicate to the [{{mastodon_instance}}]({{mastodon_host}}) Mastodon instance. <a rel="nofollow me" class="u-url" href="{{mastodon_link}}">{{mastodon_handle}}</a>. 
-
-{% include global/mastodon.html %}
 
 #### Github
 <div class="github-card" data-user="omgmog" data-width="400" data-height="150" data-theme="default"></div>
