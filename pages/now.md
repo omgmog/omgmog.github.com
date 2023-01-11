@@ -53,7 +53,7 @@ Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spe
 
 #### Mastodon
 {% include global/mastodon.html %}
-I post on my own [social.omgmog.net](https://social.omgmog.net) and syndicate to the [{{mastodon_instance}}]({{mastodon_host}}) Mastodon instance. <a rel="nofollow me" class="u-url" href="{{mastodon_link}}">{{mastodon_handle}}</a>. 
+I post on [social.omgmog.net](https://social.omgmog.net) and syndicate to the [{{mastodon_instance}}]({{mastodon_host}}) Mastodon instance. <a rel="nofollow me" class="u-url" href="{{mastodon_link}}">{{mastodon_handle}}</a>. 
 
 #### Github
 <div class="github-card" data-user="omgmog" data-width="400" data-height="150" data-theme="default"></div>
