@@ -1,7 +1,7 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2022-12-19T11:58:57
+last_modified_at: 2023-01-12T12:18:00
 ---
 
 Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
