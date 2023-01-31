@@ -2,7 +2,9 @@
 title: The Movies I Watched in 2022
 tags: [data, guide]
 comments_issue: 118
-syndication:
+syndication: 
+- https://social.omgmog.net/2023/i-finally-got-around-to-publishing-a
+- https://indieweb.social/@omgmog/109784861736204017
 ---
 
 Through 2022 I kept track of most the movies I watched.
