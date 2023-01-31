@@ -7,7 +7,8 @@ syndication:
 - https://indieweb.social/@omgmog/109784861736204017
 ---
 
-Through 2022 I kept track of most the movies I watched.
+Through 2022 I kept track of most the movies I watched. In this post I'll talk about how I took that data and, combined with the OMDb API, used the data with Jekyll.
+
 <!-- more -->
 
 I'm subscribed to Amazon Prime Video, Netflix and Disney Plus. The movies I watched show a good mix of all of these services. I found that I would more often use Netflix or Disney Plus when choosing movies to watch with my wife, and Amazon Prime Video for movies that I watched on my own. I watched only one movie at the cinema (The Batman).
