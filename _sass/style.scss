@@ -10,6 +10,7 @@
   --colors-midgrey-transparent-50: #{rgba(#999, .50)};
   --colors-darkgrey: #555;
   --colors-black: #{rgba(#000, .87)};
+  --colors-black-transparent-75: #{rgba(#000, .75)};
   --colors-white: #fffffa;
 
   --gutter-outer: 4rem;
@@ -459,6 +460,108 @@ body {
       .blurb {
         :first-child {
           margin-top: 0;
+        }
+      }
+    }
+  }
+  .posters-wrap {
+    @include breakoutWidth;
+    margin-bottom: 2rem;
+
+    @include mq('min', $bp-phone) {
+      display: grid;
+      grid-auto-flow: row; // row-wise arrangement
+      grid-gap: .5rem; // gap between rows and columns
+      grid-template-columns: repeat(4, 25%); // here 2rem is gap between columns
+      position: relative;
+      z-index: 0;
+
+      figure {
+        margin: 0;
+        width: auto;
+        aspect-ratio: 2/3;
+        transition: .2s;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 2/3;
+          object-fit: cover;
+          transition: .2s;
+          z-index: 1;
+        }
+
+        .blurb {
+          position: absolute;
+          visibility: hidden;
+          pointer-events: none;
+          left: -100%;
+          width: calc(200% + 1rem);
+          min-height: 100%;
+          background-color: var(--colors-black-transparent-75);
+          color: var(--colors-white);
+          padding: .5rem .5rem .5rem 1.5rem;
+          margin: 0 .25rem;
+          backdrop-filter: saturate(180%) blur(.5rem);
+          border-radius: inherit;
+          filter: drop-shadow(0 .5rem 1rem var(--colors-midgrey-transparent-50));
+          transition: .1s;
+          z-index: 0;
+          transform: scaleX(0);
+          overflow: hidden;
+
+          font-size: .8em;
+
+          h4 {
+            line-height: 1;
+            margin-bottom: 0;
+          }
+        }
+
+        &:hover {
+          z-index: 2;
+
+          img {
+            transform: scale(1.2);
+            position: relative;
+            filter: drop-shadow(0 .5rem 1rem var(--colors-midgrey-transparent-50));
+          }
+
+          .blurb {
+            visibility: visible;
+            pointer-events: all;
+            left: 100%;
+            transition: .1s;
+            transform: scaleX(1);
+          }
+
+          transform: translateX(0);
+
+          // 3rd column
+          &:nth-child(3),
+          &:nth-child(4n+3) {
+            transform: translateX(calc(-100% - .5rem));
+          }
+
+          // 4th column
+          &:nth-child(4n) {
+            transform: translateX(calc(-200% - 1rem))
+          }
+        }
+      }
+    }
+    @include mq('max', $bp-phone) {
+      figure {
+
+        img {
+          width: 33%;
+        }
+        .blurb {
+          width: 66%;
+          right: 0;
+          margin: 0;
+          padding: 0;
         }
       }
     }
