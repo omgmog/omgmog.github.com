@@ -4,7 +4,7 @@ permalink: /
 
 {% assign posts = site.posts | concat: site.cardboctober | sort:'date' | reverse %}
 {% assign total_posts = posts | size %}
-{% assign page_amount = 15 %}
+{% assign page_amount = 20 %}
 {% assign remainder = total_posts | modulo: page_amount %}
 {% assign number_of_pages = total_posts | minus: remainder | divided_by: page_amount %}
 {% assign previous_ym = '' %}
