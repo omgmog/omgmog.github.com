@@ -5,6 +5,7 @@ comments_issue: 118
 syndication: 
 - https://social.omgmog.net/2023/i-finally-got-around-to-publishing-a
 - https://indieweb.social/@omgmog/109784861736204017
+- https://www.linkedin.com/posts/omgmog_the-movies-i-watched-in-2022-the-blog-of-activity-7026847479715246081-Pflh
 ---
 
 Through 2022 I kept track of most the movies I watched. In this post I'll talk about how I took that data and, combined with the OMDb API, used the data with Jekyll.
