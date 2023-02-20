@@ -3,10 +3,14 @@ title: The end of Dingoonity
 comments_issue: 119
 tags: [Dingoonity]
 syndication: 
+    - https://social.omgmog.net/2023/ive-posted-a-short-blog-post-about
+    - https://indieweb.social/@omgmog/109896836961993163
 
 ---
 
 If you were familiar with [Dingoonity](https://boards.dingoonity.org), you might have noticed by now that I've made the decision to shut down the website.
+
+<!-- more -->
 
 I founded Dingoonity back in 2009 as a place for portable gaming enthusiasts to connect and share their passion for the Dingoo A320 and other niche Chinese handheld consoles. Over the years, we grew into a thriving community with members from all over the world. It's been an honor to be a part of that community and to see the incredible things that the community has accomplished.
 
