@@ -170,6 +170,16 @@
             if (attribute === 'url' ) {
                 // sometimes a canonical url is available!
                 value = data.rels?.canonical || value;
+
+                // If it's a Twitter webmention, use archive.org
+                if (value.match('https://twitter.com')) {
+                    const date = new Date(data['wm-received']);
+                    const [month, year] = [
+                        date.getMonth() + 1,
+                        date.getFullYear(),
+                    ];
+                    value = `https://web.archive.org/web/${year}${(month<10?'0':'')}${month}/${value}`;
+                }
             }
 
             template = template.replace(new RegExp('%' + attribute + '%', 'g'), value);
