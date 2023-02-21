@@ -287,9 +287,14 @@
                     module.renderThings(interactions.webmentions);
                     module.checkForFailedAvatars();
                 });
-            });
-                    
+            });  
         }
+    }
+    module.renderFetchDate = _ => {
+        const fetchedDateElement = document.querySelector('#mentions-last-fetched');
+        const output = fetchedDateElement.querySelector('span');
+        output.innerText = `${module.prettyDate(module.loadData(`interactions-date-${pageURL_base64}`), {...DEFAULT_DATE_OPTIONS, hour:'numeric', minute:'numeric' })}`;
+        fetchedDateElement.style.display = 'block';
     }
     module.clearItems = (what = ['comments', 'webmentions']) => {
         let sections = []
@@ -313,15 +318,19 @@
         });
     }
 
+    module.getLastUpdatedTime = () => module.loadData(`interactions-date-${pageURL_base64}`) || Date.now();
+
     // Bind the reload buttons
     document.querySelectorAll('#interactions .reload').forEach(button => {
-        button.title = `Last refreshed on ${module.prettyDate(module.loadData(`interactions-date-${pageURL_base64}`), {...DEFAULT_DATE_OPTIONS, hour:'numeric', minute:'numeric' })}`;
+        button.title = `Last refreshed on ${module.prettyDate(module.getLastUpdatedTime(), {...DEFAULT_DATE_OPTIONS, hour:'numeric', minute:'numeric' })}`;
         button.onclick = e => {
             module.clearItems(e.target.dataset.what);
             module.fetchAndRender(e.target.dataset.what);
+            button.title = `Last refreshed on ${module.prettyDate(module.getLastUpdatedTime(), {...DEFAULT_DATE_OPTIONS, hour:'numeric', minute:'numeric' })}`;
+            module.renderFetchDate(); 
         }
     });
-    // Also some initial hidey shoey stuff
+    // Also some initial hidey showy stuff
     if (!githubIssueID) {
         document.querySelector('.comments-closed').style.display = 'initial';
         document.querySelector('#comments').style.display = 'none';
@@ -333,4 +342,6 @@
     } else {
         module.renderAll();
     }
+            
+    module.renderFetchDate(); 
 }());
