@@ -1,6 +1,8 @@
 ---
 title: VR Stuff
 permalink: /vr/
+excerpt: Max Glenister has been immersing himself in Virtual Reality (VR) since 2015, building a comprehensive understanding of VR user experience (UX) and delivering insightful presentations on developing VR experiences with web technologies.
+ogimage: /images/vr/ogimage-vrstuff.png
 ---
 
 {% include posts/figure.html src="max.jpg" class="center circle" %}
@@ -13,11 +15,11 @@ permalink: /vr/
 <p>
   With a passion for exploring the frontiers of VR, I continue to push the boundaries of what's possible in this exciting and rapidly-evolving field.
 </p>
-<h3 class="wide-h3">Current Setup</h3>
+{% include global/wide-h3.html text="Current Setup" %}
 <p>I'm currently using an Oculus Quest. While the headset itself isn't very powerful for running games or other experiences on the device, I've found that it works well when tethered to my PC. This allows me to run PC-based virtual reality experiences using the Quest headset.</p>
 <p>Other than that, I haven't changed much since I <a href="{{"/post/the-inevitable-oculus-quest-post/" | absolute_url}}">wrote about my Oculus Quest</a>.</p>
 
-<h3 class="wide-h3">Talks</h3>
+{% include global/wide-h3.html text="Talks" %}
 <ul class="thumbnail-list">
   {% assign vr_talks = site.data.vr.talks | sort:"date" %}
   {% for talk in vr_talks %}
@@ -33,7 +35,7 @@ permalink: /vr/
   {% endfor %}
 </ul>
 
-<h3 class="wide-h3">Projects</h3>
+{% include global/wide-h3.html text="Projects" %}
 <ul class="thumbnail-list">
   {% assign vr_projects = site.data.projects | where:"vr","true" %}
   {% for project in vr_projects %}
@@ -49,15 +51,15 @@ permalink: /vr/
   {% endfor %}
 </ul>
 
-<h3 class="wide-h3">Posts</h3>
+{% include global/wide-h3.html text="Posts" %}
 <ul class="post-list">
   {% assign vr_posts = site.posts | where_exp:"post","post.tags contains 'vr'" %}
   {% for post in vr_posts %}
-  {% include global/post-list-item.html hide_dates=false hide_types=true %}
+  {% include global/post-list-item.html hide_dates=true %}
   {% endfor %}
 </ul>
 
-<h3 class="wide-h3">Cardboctober posts</h3>
+{% include global/wide-h3.html text="Cardboctober posts" %}
 <ul class="post-list">
   {% for post in site.cardboctober  %}
   {% include global/post-list-item.html hide_dates=false hide_types=true %}

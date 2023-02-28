@@ -10,7 +10,7 @@ kramdown:
   syntax_highlighter: rouge
 sass:
     style: compressed
-title: "The blog of Max Glenister"
+title: "Max Glenister"
 plugins:
   - jekyll-feed
   - jekyll-sitemap

@@ -1,7 +1,7 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2023-01-12T12:18:00
+last_modified_at: 2023-02-28T14:52:11
 ---
 
 Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
@@ -15,7 +15,7 @@ So basically yeah, this is what I'm currently up to and what I'm using to do it.
 > This page was last updated on {{ page.last_modified_at | date_to_long_string }}.
 {% endif %}
 
-<h3 class="wide-h3">Technology</h3>
+{% include global/wide-h3.html text="Technology" %}
 
 {% include posts/figure.html src="now/desk.jpg" %}{:.massive}
 
@@ -35,11 +35,11 @@ Currently using the following:
 {% endfor %}
 </ul>
 
-<h3 class="wide-h3">Work</h3>
+{% include global/wide-h3.html text="Work" %}
 
 Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spend my time implementing responsive game UIs using web technologies.
 
-<h3 class="wide-h3">Projects</h3>
+{% include global/wide-h3.html text="Projects" %}
 
 {% assign projects = site.data.projects | where:"now","true" %}
 {% for project in projects %}
@@ -49,7 +49,7 @@ Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spe
 {% if project.embed %}{{ project.embed }}{% endif %}
 {% endfor %}
 
-<h3 class="wide-h3">Social media</h3>
+{% include global/wide-h3.html text="Social media" %}
 
 #### Mastodon
 {% include global/mastodon.html %}

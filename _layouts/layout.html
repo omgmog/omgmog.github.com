@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% capture page_url %}{% if page.url == '/index.html' %}{{ site.url }}{% else %}{{ page.url | absolute_url }}{% endif %}{% endcapture %}
-  {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
+  {% capture title %}{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}{% endcapture %}
   {% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip }}{% else %}{{ site.data.author.bio }}{% endif %}{% endcapture %}
   
   <title>{{ title }}</title>
@@ -15,7 +15,7 @@
   <meta property="og:description" content="{{ description }}">
   <meta property="og:type" content="{{ page.content_type | default:'website'}}">
   <meta property="og:url" content="{{ page_url }}">
-  <meta property="og:image" content="{{"/assets/ogimage-generic.png" | absolute_url}}">
+  <meta property="og:image" content="{{ page.ogimage | default:"/assets/ogimage-generic.png" | absolute_url}}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 

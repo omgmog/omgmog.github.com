@@ -50,6 +50,14 @@
        url('fjalla-one-v13-latin-regular.woff') format('woff');
   font-display: swap;
 }
+@font-face {
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('teko-v15-latin-500.woff2') format('woff2'),
+         url('teko-v15-latin-500.woff') format('woff');
+  }
 html {
   font-family: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
   color: var(--colors-black);
@@ -81,7 +89,7 @@ body {
   border-radius: .2rem;
 
   @include mq('min', $bp-big-desktop) {
-    --body-max-width: calc(#{$bp-big-desktop} - calc(var(--gutter-outer) * 2));
+    --body-max-width: #{$bp-big-desktop};
     --body-margin: var(--gutter-outer) auto;
     border-radius: .4rem;
   }
@@ -692,11 +700,6 @@ body {
     }
 
   }
-
-  .syndication {
-    text-align: center;
-    color: var(--colors-darkgrey);
-  }
 }
 hr {
   height: 0.05rem;
@@ -822,7 +825,6 @@ hr {
     @include hideLinkIcon;
   }
   .wide-h3 {
-    --font-scale-headers: 1.5;
     display: flex;
     text-transform: uppercase;
     align-items: center;
@@ -830,11 +832,16 @@ hr {
     text-align: center;
     cursor: default;
     user-select: none;
-    font-family: Fjalla One, sans-serif;
+    font-family: Teko, sans-serif;
     font-weight: 400;
-    @include spanBodyWidth;
-    margin-bottom: 2rem;
-    margin-top: 4rem;
+    // @include spanBodyWidth;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+
+    font-size: 2rem;
+
+    white-space: pre;
+    line-height: 1;
     
     &:first-child {
       margin-top: 0;
@@ -842,16 +849,41 @@ hr {
     
     &::before,
     &::after {
-      height: .1rem;
-      flex: 1;
-      background-color: var(--colors-lightgrey);
-      content: '';
-    }
-    &::after {
-      margin-left: .5em;
+        content: '';
+        height: .2rem;
+        background-color: var(--colors-primary);
+        flex: 1;
     }
     &::before {
-      margin-right: .5em;
+        margin-right: .5em;
+        flex-grow: 0;
+        flex-basis: 1em;
+    }
+    &::after {
+        margin-left: .5em;
+    }
+    .slice {
+        color: var(--colors-primary);
+        margin-left: .25em;
+        margin-right: -.5em;
+
+        &:first-child {
+            margin-left: -.5em;
+            margin-right: .25em;
+        }
+    }
+    @include mq('max', $bp-phone) {
+      
+      white-space: pre-wrap;
+      line-height: 1;
+      text-align: center;
+
+      &::before,
+      &::after {
+          flex-basis: 1em;
+          flex-shrink: 0;
+          flex-grow: 1;
+      }
     }
   }
 }
@@ -1027,4 +1059,12 @@ iframe {
       color: var(--colors-darkgrey);
     }
   }
+}
+
+  
+.formatted-text {
+  text-align: center;
+  margin: var(--gutter-inner-y) 0;
+  font-size: .8em;
+  color: var(--colors-midgrey);
 }

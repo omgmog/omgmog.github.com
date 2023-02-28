@@ -1,6 +1,6 @@
 
 #interactions {
-  @include spanBodyWidth;
+  // @include spanBodyWidth;
   
   h3 {
     position: relative;
@@ -128,30 +128,6 @@
       > div {
         &::before { display: none;}
       }
-    }
-  }
-  
-  .formatted-text {
-    color: var(--colors-darkgrey);
-    text-align: center;
-
-    &:last-child {
-      margin-top: var(--gutter-inner-y);
-      font-size: .8em;
-      color: var(--colors-midgrey);
-    }
-  }
-  > div {
-    padding: var(--gutter-inner-y) var(--gutter-inner-x);
-
-    // top level
-    &.formatted-text {
-      padding: 0 var(--gutter-inner-x) 0;
-    }
-
-    // child of a section
-    .formatted-text {
-      padding: 0 0 var(--gutter-inner-y) 0;
     }
   }
   

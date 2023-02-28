@@ -6,7 +6,7 @@ permalink: /cardboctober/
 {{ project.description | markdownify}}
 
 {% if project.img %}<div class="img-grid count-{{project.img | size }}">{% for img in project.img %}{% include posts/figure.html src=img class="center" %}{% endfor %}</div>{% endif %}
-<h3 class="wide-h3">Cardboctober posts</h3>
+{% include global/wide-h3.html text="Cardboctober posts" %}
 <ul class="post-list">
   {% for post in site.cardboctober  %}
   {% include global/post-list-item.html hide_dates=false hide_types=true %}
