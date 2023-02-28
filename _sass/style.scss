@@ -411,7 +411,9 @@ body {
       border-radius: inherit;
       filter: drop-shadow(0 .5rem .5rem var(--colors-midgrey-transparent-25));
     }
-    
+    &.circle {
+      border-radius: 100%;
+    }
     &.center {
       display: flex;
       justify-content: center;
