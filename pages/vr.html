@@ -30,6 +30,9 @@ ogimage: /images/vr/ogimage-vrstuff.png
       <div class="btns">
         <a href="{{ talk.slides }}" class="btn">View Slides</a>
         <a href="{{ talk.source }}" class="btn">View Source</a>
+        {% if talk.writeup %}
+        <a href="{{ talk.writeup }}" class="btn">Read more</a>
+        {% endif %}
       </div>
     </li>
   {% endfor %}
@@ -46,6 +49,9 @@ ogimage: /images/vr/ogimage-vrstuff.png
       <p>{{ project.description }}</p>
       <div class="btns">
         <a href="{{ project.link }}" class="btn">View Project</a>
+        {% if project.writeup %}
+        <a href="{{ project.writeup }}" class="btn">Read more</a>
+        {% endif %}
       </div>
     </li>
   {% endfor %}

@@ -3,12 +3,14 @@
   date: 2016-11-01
   slides:  https://blog.omgmog.net/talk-cardboctober/talk.html
   source: https://github.com/omgmog/talk-cardboctober
+  writeup: https://omgmog.net/projects/vr/cardboctober/
   img: "vr/talk-cardboctober.jpg"
 - title: "20 Minutes into The Future"
   summary: A talk about creating Google Cardboard VR experiences using JavaScript
   date: 2015-11-01
   slides: https://blog.omgmog.net/talk-20-minutes-into-the-future/talk.html
   source: https://github.com/omgmog/talk-20-minutes-into-the-future
+  writeup: https://omgmog.net/projects/vr/20-minutes-into-the-future/
   img: "vr/talk-20mins.jpg"
 - title: "An introduction to using A-Frame"
   summary: Onboarding for A-Frame that I put together for participants of Game Dev Day
