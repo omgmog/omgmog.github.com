@@ -2,8 +2,6 @@
 title: Adding Global Volume Control to the Pocket CHIP
 comments_issue: 110
 tags: [chip]
-syndication:
-  - https://twitter.com/omgmog/status/1443185062372065290
 ---
 
 I've been gradually [adding internal speakers to each of my Pocket CHIPs](/post/pocketchip-internal-speaker/) lately and found it cumbersome to have to either open `alsamixer` or use the volume control page in the Pocket CHIP launcher to control volume.

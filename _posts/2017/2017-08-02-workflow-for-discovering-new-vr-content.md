@@ -100,6 +100,6 @@ It's a simple script, but it reduces my workflow:
 
 There might be _as many steps_ there, but it's a much easier process. I can depend on keyboard shortcuts a lot more (such as `cmd`+`w` to close the tab), and there is less clicking required to open issues in bulk. Perfect.
 
-Consuming so much content is time consuming, so I usually go through this process on a slow afternoon, or over lunch, or before starting my work for the day. Anything that I think is interesting gets [Tweeted](https://twitter.com/omgmog), and anything that is super useful for the UX of VR gets tagged and I later add it to the [UX of VR website](https://www.uxofvr.com).
+Consuming so much content is time consuming, so I usually go through this process on a slow afternoon, or over lunch, or before starting my work for the day. Anything that I think is interesting gets shared, and anything that is super useful for the UX of VR gets tagged and I later add it to the [UX of VR website](https://www.uxofvr.com).
 
 One of the most surprising things about this workflow is the huge amount of content that gets published on the subject of "Virtual Reality". It's astounding really. The content _does_ vary, from editorial pieces, to personal experiences and reviews, from business analysis of current trends through to press releases.

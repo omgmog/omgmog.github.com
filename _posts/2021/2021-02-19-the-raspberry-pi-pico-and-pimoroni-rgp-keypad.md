@@ -2,8 +2,6 @@
 title: "The Raspberry Pi Pico and the Pimoroni Pico RGB Keypad"
 comments_issue: 108
 tags: [rpi]
-syndication:
-  - https://twitter.com/omgmog/status/1362844019924094976
 ---
 
 In January the [Raspberry Pi Pico was announced](https://www.raspberrypi.org/blog/raspberry-pi-silicon-pico-now-on-sale/). The Pico is a [RP2040 microcontroller](https://www.raspberrypi.org/documentation/pico/getting-started/) featuring a dual-core Arm Cortex-M0+ processor with 264KB internal RAM and support for up to 16MB of off-chip Flash. It's comparable to certain Arduino or ESP32 boards and at less than £4 per board it's a well-priced alternative.

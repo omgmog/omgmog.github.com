@@ -4,7 +4,6 @@ tags: [tech]
 comments_issue: 115
 syndication:
   - https://indieweb.social/@omgmog/108214705297975912
-  - https://twitter.com/omgmog/status/1517597711477968897
 ---
 
 I've got an old [2009 MacBook 6,1 (A1342)](https://everymac.com/systems/apple/macbook/specs/macbook-core-2-duo-2.26-white-13-polycarbonate-unibody-late-2009-specs.html) kicking about in my office that I've been playing with on and off lately.
