@@ -4,12 +4,11 @@
   value: "[Amazfit Neo](https://web.archive.org/web/20220615070914/https://www.amazfit.com/en/neo)"
 - title: Portables
   values: 
-    - "[MacBook Pro Retina 2015](https://support.apple.com/kb/SP715?locale=en_US)"
-    - "[Lenovo Duet Chromebook](https://www.lenovo.com/gb/en/laptops/lenovo/student-chromebooks/)"
-- title: Desktop
-  value: "i7 6700k/32GB/Windows 10"
+    - "MacBook Pro M2 Max 16\" 2023"
+    - "Lenovo Duet Chromebook"
+    - "MacBook Pro Retina 13\" 2015"
 - title: Audio
   values: 
   - "[Google Pixel Buds](https://store.google.com/us/product/pixel_buds)"
-  - "[Urbanista New York headphones](https://www.urbanista.com/uk/new-york)"
-  - "[Logitech G635 headset](https://www.logitechg.com/en-gb/products/gaming-audio/g635-7-1-surround-sound-gaming-headset.html)"
+  - "[Logitech G635](https://www.logitechg.com/en-gb/products/gaming-audio/g635-7-1-surround-sound-gaming-headset.html)"
+  - "[Urbanista New York](https://www.urbanista.com/uk/new-york)"

@@ -1,7 +1,7 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2023-02-28T14:52:11
+last_modified_at: 2023-11-03T12:00:00
 ---
 
 Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
@@ -37,7 +37,7 @@ Currently using the following:
 
 {% include global/wide-h3.html text="Work" %}
 
-Working at Aris Technologies as _Lead UX & UI Front-end Developer_. I mostly spend my time implementing responsive game UIs using web technologies.
+I'm currently Working as a _Senior Frontend Developer_ at [Scriptic](https://scriptic.com), creating content creation interfaces using React.
 
 {% include global/wide-h3.html text="Projects" %}
 
@@ -60,6 +60,3 @@ I post on [social.omgmog.net](https://social.omgmog.net) and syndicate to the [{
 
 #### Discord
 I'm on {% include global/uurl.html what="Discord" %} occasionally. I've joined a handful of niche technology communities on there, but I don't participate much.
-
-#### Facebook
-I have a Facebook account, but it's used exclusively for buying things on Marketplace, and for my Oculus Quest.
