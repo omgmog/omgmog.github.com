@@ -748,13 +748,13 @@ hr {
         margin-right: 1rem;
       }
       
-      @each $tag,$bg,$fg in $tags {
-        &-#{$tag} {
-          --background: #{$bg};
-          --shadow: #{rgba($bg, .25)};
-          --foreground: #{$fg};
-        }
-      }
+      // @each $tag,$bg,$fg in $tags {
+      //   &-#{$tag} {
+      //     --background: #{$bg};
+      //     --shadow: #{rgba($bg, .25)};
+      //     --foreground: #{$fg};
+      //   }
+      // }
       &.tag-blog {
         display: none;
       }
@@ -784,10 +784,34 @@ hr {
         margin-top: var(--gutter-inner-y);
       }
     }
+    .post-list-item {
+      line-height: 1.46;
+
+      &:not(:last-child) {
+
+        margin-bottom: var(--gutter-inner-y);
+        padding-bottom: var(--gutter-inner-y);
+        border-bottom: 1px dashed rgba(107, 138, 185, 0.4);
+      }
+    }
+    .post-item-meta {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: calc(var(--gutter-inner-y)/2);
+
+      time {
+        margin: 0 !important;
+      }
+    }
     
     a {
-      display: inline-block;
+      display: inline;
       @include linkHover(100%);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+      text-decoration-color: #969696;
 
       @include mq('max', $bp-phone) {
         display: block;
@@ -795,12 +819,14 @@ hr {
     }
     .post-title {
       font-size: 1.2em;
-      font-weight: bold;
+      // font-weight: bold;
     }
     .tags {
-      right: 100%;
-      position: absolute;
-      margin-right: .5rem;
+      // right: 100%;
+      // position: absolute;
+      // margin-right: .5rem;
+      justify-content: flex-start;
+      flex-direction: row;
       
       @include mq('max', $bp-phone) {
         display: none;

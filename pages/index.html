@@ -15,7 +15,7 @@ title: Blog
   {% if offset != total_posts %}
     <ul class="{{ classes }}" data-group="{{ i }}">
     {% for post in posts offset:offset limit:page_amount %}
-      {% include global/post-list-item.html %}
+      {% include global/post-list-item.html hide_dates="true" %}
     {% endfor %}
     </ul>
   {% endif %}
