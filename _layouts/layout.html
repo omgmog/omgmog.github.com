@@ -65,7 +65,7 @@
       <br>
       Website last built: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time | date_to_long_string }}</a>
     </small>
-    <div class="webring"><hr><a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/previous" title="Previous website in the IndieWeb Webring">←</a> <a href="https://xn--sr8hvo.ws" title="An IndieWeb Webring">🕸💍</a> <a href="https://xn--sr8hvo.ws/%F0%9F%8D%A2%F0%9F%99%88%F0%9F%91%BE/next" title="Next website in the IndieWeb Webring">→</a></div>
+    <div class="webring"><hr><a href="https://xn--sr8hvo.ws/previous">←</a> <a href="https://xn--sr8hvo.ws">🕸💍</a> <a href="https://xn--sr8hvo.ws/next">→</a></div>
   </footer>
   <script type="application/ld+json">
   {
@@ -80,6 +80,16 @@
       "{{ site.data.author.home }}"
     ]
   }
+  </script>
+
+  <script>
+    const el = document.querySelector(".main-header")
+    const observer = new IntersectionObserver( 
+      ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+      { threshold: [1] }
+    );
+
+    observer.observe(el);
   </script>
 </body>
 </html>

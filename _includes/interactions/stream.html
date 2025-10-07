@@ -1,4 +1,5 @@
 <section id="interactions">
+  {% if post.comments_issue %}
   {% include global/wide-h3.html text="Comments" %}
   <div id="comments" data-display="block">
     <div class="items"></div>
@@ -7,6 +8,7 @@
       <div class="comments-closed">Comments via Github are currently closed.</div>
     </div>
   </div>
+  {% endif %}
   {% include global/wide-h3.html text="Webmentions" %}
   <div id="replies" data-display="none" style="display:none;">
     <h3>Replies</h3>
