@@ -779,8 +779,12 @@ hr {
       font-size: .7rem;
       color: var(--colors-darkgrey);
     }
-    
-    & + .post-list li:first-child,
+    & + .post-list li:nth-child(1){
+        margin-top: var(--gutter-inner-y);
+        padding-top: var(--gutter-inner-y);
+        border-top: 1px solid rgba(107, 138, 185, 0.2);
+    }
+
     li:nth-child(1n+2) {
       margin-top: calc(var(--gutter-inner-y)/4);
       @include mq('max', $bp-desktop) {
@@ -1032,6 +1036,19 @@ iframe {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    @include mq('min', $bp-desktop) {
+
+      flex-wrap: wrap;
+      gap: 2rem;
+      
+      .btn { margin: auto; width: auto;}
+      
+      .btn:nth-child(n+3) {
+        margin-top: calc(-1 * calc(var(--gutter-inner-y)/2));
+        width: calc(100% - 2.4rem);
+      }
+    }
 
     @include mq('max', $bp-big-desktop) {
       flex-direction: column;

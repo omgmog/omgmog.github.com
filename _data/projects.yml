@@ -5,7 +5,7 @@
   now: true
 - title: Carbs calculator
   link: https://carbs.omgmog.net
-  description: "This is a simple PWA that I wrote using Vue.js. It let's me pick a food from a list, enter the portion size, and then it gives me the total carbohydrates in the food."
+  description: "This is a lightweight PWA that lets me pick foods and enter portion sizes to work out the total carbohydrates, with settings to tweak things like insulin ratios and target glucose levels."
   now: true
 - title: Airquotes The Podcast Airquotes
   link: https://remotehack.space/live
@@ -37,4 +37,4 @@
 - title: Dingoonity
   link: https://boards.dingoonity.org
   description: 'Dingoonity is still going! It has been 13 years since it launched. My involvement is mostly janitorial these days. If you ever see a `500 error` page when visiting the site, it was my fault.'
-  now: true
+  now: false
