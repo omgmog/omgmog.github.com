@@ -91,7 +91,7 @@ body {
   @include mq('min', $bp-big-desktop) {
     --body-max-width: calc(#{$bp-big-desktop} * 0.8);
     --body-margin: var(--gutter-outer) auto;
-    border-radius: .4rem;
+    border-radius: .7125rem;
   }
   @include mq('max', $bp-phone) {
     --body-width: 100vw;
