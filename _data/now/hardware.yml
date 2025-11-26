@@ -1,15 +1,14 @@
 - title: Phone
-  value: "[Google Pixel 7a](https://store.google.com/us/config/pixel_7a)"
+  value: "[Google Pixel 7a](https://en.wikipedia.org/wiki/Pixel_7a)"
 - title: Watch
-  value: "[Amazfit Neo](https://web.archive.org/web/20220615070914/https://www.amazfit.com/en/neo)"
+  value: "[Google Pixel Watch 2](https://en.wikipedia.org/wiki/Pixel_Watch_2)"
 - title: Portables
   values: 
+    - "MacBook Pro M4 Pro 16\" 2024"
     - "MacBook Pro M2 Max 16\" 2023"
-    - "Lenovo Duet Chromebook"
     - "MacBook Pro Retina 13\" 2015"
 - title: Audio
   values: 
   - "[Google Pixel Buds](https://store.google.com/us/product/pixel_buds)"
   - "[Anker Soundcore A1](https://uk.soundcore.com/products/life-a1)"
   - "[Logitech G635](https://www.logitechg.com/en-gb/products/gaming-audio/g635-7-1-surround-sound-gaming-headset.html)"
-  - "[Urbanista New York](https://www.urbanista.com/uk/new-york)"

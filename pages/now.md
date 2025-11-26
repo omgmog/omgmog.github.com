@@ -1,7 +1,7 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2024-08-28T12:00:00
+last_modified_at: 2025-11-26T12:00:00
 ---
 
 Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
@@ -37,7 +37,7 @@ Currently using the following:
 
 {% include global/wide-h3.html text="Work" %}
 
-I'm currently Working as a _Lead Developer_ at [Scriptic](https://scriptic.com), leading the team creating content creation interfaces using React.
+I'm currently Working as a _Senior Full Stack Developer_ at [Consultant Connect](http://consultantconnect.org.uk/).
 
 {% include global/wide-h3.html text="Projects" %}
 
