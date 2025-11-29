@@ -6,6 +6,8 @@ tags: [review]
 
 Back in 2015 when I reviewed devices like the GPD XD and similar Android handhelds, the whole ecosystem felt half-baked. Emulation wasn't particularly good yet, the devices came from obscure Chinese manufacturers, the ROMs were loaded with questionable apps, and the SOCs couldn't handle much.
 
+<!-- more -->
+
 A decade later and the whole landscape has shifted. Linux powered handhelds like the Steam Deck have normalised the idea of a portable gaming machine that can play almost anything. The Android handheld space has exploded too. Retroid, ANBERNIC, Powkiddy and others are churning out devices at every price point and form factor. Which means even cheaper options have to actually be good now. Decent screens, sensible thermals, proper controls. These things are expected rather than hoped for.
 
 {% include posts/figure.html src="2025-11/mangmi_air_x_android_retro_gaming_console.png" %}{:.massive}
@@ -61,6 +63,8 @@ The real surprise is that the Air X can run [Gamehub](https://gamehublite.com/),
 The Air X runs PS1, PSP, Dreamcast and most 2D systems at full speed. Everything I've tried on PS1 and GBA has worked without issue. PSP titles like GTA Liberty City Stories and Vice City Stories run well, as do lighter PS2 games. Katamari Damacy plays smoothly with some tweaking. Android titles like Abe's Oddysee New 'n' Tasty, Munch's Oddysee and Beach Buggy Racing 2 all run fine out of the box.
 
 GameCube is where you start pushing the limits. Mario Kart Double Dash wasn't really playable even with precompiled shader caches, and still had slow moments. Heavier PS2 titles are similar. The Snapdragon 662 shows its age here.
+
+If you want to see what else runs well, there's a [growing compatibility list on EmuReady](https://www.emuready.com/listings?deviceIds=%5B%22c0215117-4f4d-4a3b-b4db-31e51958d819%22%5D) for the Mangmi Air X.
 
 ## Battery and Connectivity
 
