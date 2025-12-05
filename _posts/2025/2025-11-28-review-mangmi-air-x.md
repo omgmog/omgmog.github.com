@@ -56,7 +56,19 @@ There's a small custom ROM scene forming around the device already. [GammaOS](ht
 
 I've tried a few different launchers on the Air X. The stock Android launcher works fine but is fairly basic. Mangmi's own Game Launcher is useful if you've already got a library of ROMs as it can scan and organise them. [Daijishō](https://github.com/magneticchen/Daijishou) is great for power users but requires a lot of setting up. I've read that [ES-DE](https://es-de.org/) is good but haven't tried it yet. I've been playing with [TrinketOS](https://trinketos.org/) since the summer and have really enjoyed it on other Android devices, so I might give it a go on the Mangmi as well.
 
-The real surprise is that the Air X can run [Gamehub](https://gamehublite.com/), an app that uses compatibility layers to run Windows and Steam games on Android. I tried a couple of games from my library and it was finicky to get working. I had to hunt down a Reddit post detailing which Proton version, GPU driver and CPU translation settings to use, but once configured it did actually run. Performance isn't great, but it's playable for older 2D games and small indie titles. Obviously this isn't a Steam Deck and expecting AAA games to run is silly, but the fact that it works at all on a sub-100-dollar Android handheld is worth commenting on. Like the Steam Deck, this will likely improve over time as compatibility layers mature.
+The real surprise is that the Air X can run Gamehub, an app that uses compatibility layers to run Windows and Steam games on Android. I'm using the community-maintained [GameHub Lite](https://github.com/Producdevity/gamehub-lite) version. I tried a couple of games from my library and it was finicky to get working. I found a [thread on Reddit](https://www.reddit.com/r/SBCGaming/comments/1p40sf6/mangmi_air_x_the_gamehub_thread/) detailing which Proton version, GPU driver and CPU translation settings to use, but once configured it did actually run:
+
+- Compatibility Layer: proton9.0-x64-3
+- Translation Params: Game Presets
+- GPU Driver: turnip_v25.0.0_R1
+- Audio Driver: Pulse
+- DXVK Version: dxvk-2.3.1-async
+- VKD3D Version: vkd3d-2.12
+- CPU Translator: Box64-0.37-b1
+- CPU Core Limit: No Limit
+- VRAM Limit: No Limit
+
+Performance for most titles isn't great at the moment, but it's playable for older 2D games and small indie titles. The more recent release of Quake 2 runs nicely, and has good gamepad/touch support. Obviously this isn't a Steam Deck and expecting AAA games to run is silly, but the fact that it works at all on a sub-100-dollar Android handheld is worth commenting on. Like the Steam Deck, this will likely improve over time as compatibility layers mature.
 
 ## Performance
 
