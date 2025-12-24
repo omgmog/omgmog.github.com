@@ -15,6 +15,11 @@ So basically yeah, this is what I'm currently up to and what I'm using to do it.
 > This page was last updated on {{ page.last_modified_at | date_to_long_string }}.
 {% endif %}
 
+{% if site.data.now.lastfm %}
+  {% assign track = site.data.now.lastfm %}
+  🎵 {% if track.now_playing %}Now playing{% else %}Last song listened to {% endif %} [{{ track.track }} — {{ track.artist }}]({{ track.url }}) on {{ track.played_at | date_to_string }}
+{% endif %}
+
 {% include global/wide-h3.html text="Technology" %}
 
 {% include posts/figure.html src="now/desk.jpg" %}{:.massive}

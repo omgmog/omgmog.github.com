@@ -1,0 +1,33 @@
+name: Update Last.fm Data
+
+on:
+  schedule:
+    - cron: "0 * * * *" # hourly
+  workflow_dispatch:
+
+jobs:
+  lastfm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch Last.fm data
+        env:
+          LASTFM_USERNAME: moglenstar
+          LASTFM_API_KEY: 6bcfcb1e0c192d84adf10cf95b0589e3
+        run: node .github/lastfm.js
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add _data/now/lastfm.json
+          git commit -m "Update Last.fm now playing" || exit 0
+          git push
