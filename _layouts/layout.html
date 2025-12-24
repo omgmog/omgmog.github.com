@@ -54,7 +54,7 @@
     <div class="p-author h-card post-bio">
       <img src="{{"/assets/mog.svg"|absolute_url}}" alt="A vectorized pixel-art picture of Max Glenister" class="u-photo" loading="lazy"/>
       <div class="h-card-inner">
-          <p class="p-note"><a class="u-name" href="https://omgmog.net/" rel="me">Max Glenister</a> is a <a href="https://omgmog.net/" rel="me" class="u-url u-uid"><span class="p-job-title">Front-end Developer</span> based in <span class="p-region">Oxfordshire</span></a>. For work he spends his time designing, validating and implementing user interfaces. For fun he tinkers with Virtual Reality, 3D printing, embedded systems, game development and many other things.</p>
+          <p class="p-note">{{ site.data.author.bio_rich | markdownify }}</p>
 
           <p>You can keep up with Max on {% for url in site.data.author.urls %}<a href="{{ url.link }}" rel="nofollow me" class="u-url">{{ url.label }}</a>{% endfor %}</p>
       </div>
