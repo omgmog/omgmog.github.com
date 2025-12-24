@@ -22,8 +22,7 @@
 - title: UX of VR
   link: https://www.uxofvr.com
   writeup: https://omgmog.net/projects/vr/ux-of-vr/
-  description: "I created this list of VR UX resources back in 2016 and have been keeping it alive ever since."
-  embed: '<div class="github-card" data-user="omgmog" data-repo="uxofvr.com" data-width="400" data-height="" data-theme="default"></div>'
+  description: "I created this list of VR UX resources back in 2016. It has links to articles, talks, and other resources about designing for VR."
   vr: true
   now: true
 - title: Cardboctober
@@ -34,7 +33,3 @@
     - /images/now/cardboctober-03.gif
     - /images/now/cardboctober-10.gif
   vr: true
-- title: Dingoonity
-  link: https://boards.dingoonity.org
-  description: 'Dingoonity is still going! It has been 13 years since it launched. My involvement is mostly janitorial these days. If you ever see a `500 error` page when visiting the site, it was my fault.'
-  now: false
