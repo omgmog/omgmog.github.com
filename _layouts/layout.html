@@ -54,7 +54,7 @@
     <div class="p-author h-card post-bio">
       <img src="{{"/assets/mog.svg"|absolute_url}}" alt="A vectorized pixel-art picture of Max Glenister" class="u-photo" loading="lazy"/>
       <div class="h-card-inner">
-          <p class="p-note">{{ site.data.author.bio_rich | markdownify }}</p>
+          {{ site.data.author.bio_rich | markdownify | replace: '<p>', '<p class="p-note">' }}
 
           <p>You can keep up with Max on {% for url in site.data.author.urls %}<a href="{{ url.link }}" rel="nofollow me" class="u-url">{{ url.label }}</a>{% endfor %}</p>
       </div>
