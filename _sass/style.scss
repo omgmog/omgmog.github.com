@@ -480,6 +480,19 @@ body {
       }
     }
   }
+  .inline-grid {
+    @include breakoutWidth;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    figure {
+      margin: 0;
+      width: auto;
+    }
+  }
   .posters-wrap {
     @include breakoutWidth;
     margin-bottom: 2rem;
