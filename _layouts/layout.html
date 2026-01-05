@@ -25,7 +25,8 @@
 
   <link rel="icon" type="image/png" href="{{ site.data.author.avatar }}">
   <link rel="stylesheet" href="{{ "/assets/style.css" | absolute_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}">
-  {% feed_meta %}
+
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | absolute_url }}">
 </head>
 <body>
   <header class="main-header">
