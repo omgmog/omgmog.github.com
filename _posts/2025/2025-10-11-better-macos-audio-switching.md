@@ -45,9 +45,9 @@ Here’s the script:
 SWITCH_AUDIO_BIN="${SWITCH_AUDIO_BIN:-SwitchAudioSource}"
 
 # ---- Config: one per line: Label|UID|SF Symbol ----
-DEVICES='G635 Gaming Headset|AppleUSBAudioEngine:Logitech:G635 Gaming Headset:00000000:2|headphones
-Stage V2|00-02-3C-99-0B-7C:output|speaker.wave.2.fill
-MacBook Pro Speakers|BuiltInSpeakerDevice|laptopcomputer'
+DEVICES='Headset|AppleUSBAudioEngine:Logitech:G635 Gaming Headset:00000000:2|headphones
+External Speakers|00-02-3C-99-0B-7C:output|speaker.wave.2.fill
+Internal Speakers|BuiltInSpeakerDevice|laptopcomputer'
 
 trim(){ sed 's/^[[:space:]]*//; s/[[:space:]]*$//'; }
 die(){ echo "⚠️"; echo "---"; echo "$1"; exit 0; }
@@ -112,6 +112,12 @@ You can fetch the UIDs for your outputs with:
 
 ```bash
 SwitchAudioSource -a -f json
+```
+
+Or better still pull out just the label and UID from the json using `jq`:
+
+```bash
+SwitchAudioSource -a -f json | jq '.name + "|" + .uid + "|speaker"'
 ```
 
 Pick the devices you actually use and enter them with whatever label and [SF Symbol](https://developer.apple.com/design/human-interface-guidelines/sf-symbols) you want. The active device is indicated, and the menu bar icon updates to match.
