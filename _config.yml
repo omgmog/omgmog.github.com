@@ -1,7 +1,6 @@
 permalink: /post/:title/
-exclude: ["_dev.yml","_config.yml", ".gitignore", "README.md", ".jekyll-cache"]
+exclude: ["_dev.yml","_config.yml", ".gitignore", "README.md", ".jekyll-cache", "vendor", "Gemfile", "Gemfile.lock"]
 url: "https://blog.omgmog.net"
-safe: true
 excerpt_separator: "<!-- more -->"
 keep_files: ["images/","assets/","CNAME"]
 markdown: kramdown

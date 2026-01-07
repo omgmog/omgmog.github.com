@@ -15,3 +15,5 @@ Thumbs.db
 Gemfile.lock
 desktop.ini
 .jekyll-cache
+
+vendor
