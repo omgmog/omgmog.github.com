@@ -1,0 +1,19 @@
+{% assign target = page.post %}{{ target.title }}
+
+================================================================================
+
+{{ target.content | images_to_urls | unwrap_links | html_to_plain_text_convert | wrap_lines | collapse_blank_lines }}
+
+================================================================================
+Published {{ target.date | date: "%B %d, %Y" }}
+
+Generated from the original post:
+{{ site.url }}{{ target.url }}
+
+{% if target.syndication %}Post syndicated to:
+{% for syndication in target.syndication %}- {{ syndication }}
+{% endfor %}{% endif %}
+{{ site.data.author.bio | wrap_lines}}
+
+{% for url in site.data.author.urls %}- {{ url.label }}: {{ url.link }}
+{% endfor %}
