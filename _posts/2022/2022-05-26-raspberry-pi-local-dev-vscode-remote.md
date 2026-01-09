@@ -1,6 +1,6 @@
 ---
 title: Using a Raspberry Pi to Host a local Visual Studio Code Server
-tags: [rpi, guide]
+tags: [raspberry-pi, guide]
 comments_issue: 117
 syndication:
   - https://social.omgmog.net/2022/-a-new-blog-post-using-a

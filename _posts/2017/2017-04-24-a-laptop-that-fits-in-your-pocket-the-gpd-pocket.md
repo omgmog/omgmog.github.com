@@ -1,7 +1,7 @@
 ---
 title: "The GPD Pocket Ultra-mobile PC UMPC Laptop"
 alternate_urls: "/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/"
-tags: [review]
+tags: [review, umpc]
 ---
 
 The GPD Pocket is a 7” Ultra-mobile PC that at first glance resembles a shrunken Apple Laptop, but it’s metal unibody exterior is where the similarities end.

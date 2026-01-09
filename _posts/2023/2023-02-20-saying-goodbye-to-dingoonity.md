@@ -1,7 +1,7 @@
 ---
 title: The end of Dingoonity
 comments_issue: 119
-tags: [Dingoonity]
+tags: [dingoonity, archival]
 syndication: 
     - https://social.omgmog.net/2023/ive-posted-a-short-blog-post-about
     - https://indieweb.social/@omgmog/109896836961993163

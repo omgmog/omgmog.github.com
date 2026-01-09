@@ -2,7 +2,7 @@
 
 title: "The Revo K101 Plus Portable Games Console"
 alternate_urls: "/reviews/review-the-revo-k101-plus/"
-tags: [review]
+tags: [review, handheld, retro-gaming]
 ---
 
 Today I'm refreshed to be reviewing a console that doesn't try to cram too much in to the form factor, but instead tried to focus on doing one thing well.

@@ -1,7 +1,7 @@
 ---
 title: "The Mangmi Air X"
 comments_issue: 123
-tags: [review]
+tags: [review, handheld, retro-gaming, android]
 ---
 
 Back in 2015 when I reviewed devices like the GPD XD and similar Android handhelds, the whole ecosystem felt half-baked. Emulation wasn't particularly good yet, the devices came from obscure Chinese manufacturers, the ROMs were loaded with questionable apps, and the SOCs couldn't handle much.

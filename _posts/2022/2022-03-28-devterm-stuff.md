@@ -1,7 +1,7 @@
 ---
 title: "DevTerm Stuff"
 comments_issue: 113
-tags: [cpi]
+tags: [clockwork-pi, devterm]
 syndication:
   - https://indieweb.social/@omgmog/108209353554883449
 ---
