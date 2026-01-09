@@ -1,7 +1,7 @@
 ---
 title: "GameShell Stuff"
 comments_issue: 109
-tags: [cpi]
+tags: [clockwork-pi, gameshell]
 syndication:
   - https://indieweb.social/@omgmog/108206108760679056
 ---

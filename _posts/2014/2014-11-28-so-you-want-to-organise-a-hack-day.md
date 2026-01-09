@@ -1,7 +1,7 @@
 ---
 title: So you want to organise a hack day?
 comments_issue: 88
-tags: [article]
+tags: [guide, hackday]
 ---
 
 

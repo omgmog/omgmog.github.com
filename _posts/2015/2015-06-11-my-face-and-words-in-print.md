@@ -1,6 +1,7 @@
 ---
 comments_issue: 66
 title: My face and words in print
+tags: [css, web-development]
 ---
 
 Recently I was contacted to provide a short quote about why CSS preprocessors are awesome. This wasn't a hard task as I spend a lot of time evangelising the use of preprocessors, specifically Sass.
