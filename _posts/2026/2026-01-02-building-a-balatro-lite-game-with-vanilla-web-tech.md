@@ -1,7 +1,7 @@
 ---
 title: Building a Balatro-lite game with vanilla web tech
 comments_issue: 125
-tags: [game development, javascript, typescript]
+tags: [game-development, javascript, typescript]
 ---
 
 I’ve spent countless hours playing [Balatro](https://www.playbalatro.com/), and I’ve always wanted to create my own game with similar mechanics. When [TrinketOS](https://trinketos.org/) announced a game jam, it was the perfect excuse to make it happen. 

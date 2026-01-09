@@ -1,7 +1,7 @@
 ---
 title: Pico-8 on the Raspberry Pi with Game HAT
 comments_issue: 104
-tags: [rpi]
+tags: [raspberry-pi, pico-8, guide]
 ---
 
 I've been playing with [Pico-8](https://www.lexaloffle.com/pico-8.php) a lot lately. I've got a small Pico-8 project site to launch soon, but in the mean time I'm more occupied with getting Pico-8 running on _things_.

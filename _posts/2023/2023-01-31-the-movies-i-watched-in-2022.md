@@ -1,6 +1,6 @@
 ---
 title: The Movies I Watched in 2022
-tags: [data, guide]
+tags: [jekyll, guide]
 comments_issue: 118
 syndication: 
 - https://social.omgmog.net/2023/i-finally-got-around-to-publishing-a
