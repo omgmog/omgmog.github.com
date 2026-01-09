@@ -9,12 +9,17 @@ permalink: "404.html"
   const pathName = window.location.pathname;
   const prefixes = ['/post/', '/reviews/', '/review/'];
   const message_el = document.getElementById('message');
-  prefixes.forEach(prefix => {
-    if (pathName.match(prefix)) {
-      let query = pathName.replace(prefix,'').replace('/','');
-      let url = `https://github.com/search?q=repo%3A{{site.github.owner_name}}/{{site.github.repository_name}}+${query}&type=Code`;
 
+  const repo = '{{site.github.owner_name}}/{{site.github.repository_name}}';
+  
+  prefixes.some(prefix => {
+    if (pathName.includes(prefix)) {
+      const query = pathName.replace(prefix, '').replace(/\//g, '');
+      const encodedQuery = encodeURIComponent(query);
+      const url = `https://github.com/search?q=repo%3A${repo}+${encodedQuery}&type=Code`;
       message_el.innerHTML = `I may have archived that post. Try looking on <a href="${url}">Github</a>.`;
+      return true;
     }
+    return false;
   });
 </script>
