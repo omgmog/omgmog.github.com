@@ -158,6 +158,7 @@ fetchWithRetry(url)
         }
       } else {
         console.log("Track hasn't changed, skipping update");
+        process.exit(0); // Exit gracefully without attempting commit
       }
 
     } catch (err) {
@@ -166,6 +167,13 @@ fetchWithRetry(url)
     }
   })
   .catch(err => {
+    // Handle timeout gracefully - don't fail the workflow
+    if (err.code === 'TIMEOUT' || err.message.includes('timeout')) {
+      console.log(`Last.fm API timeout - skipping update this run`);
+      process.exit(0);
+    }
+
+    // Other errors should fail the workflow
     console.error(`Request failed: ${err.message}`);
     process.exit(1);
   });
