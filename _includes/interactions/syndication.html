@@ -1,6 +1,12 @@
-{% if page.syndication %}
+{% if page.syndication and page.syndication.size > 0 %}
 <hr class="blank">
 <div class="formatted-text">
     <p class="syndication">This post has been syndicated to {% for link in page.syndication | sort %}{% assign host = link | split:'://' | last | split:'/' | first | split:'www.' | last  %} <a href="{{ link }}" rel="syndication" class="u-syndication">{{ host }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+</div>
+{% endif %}
+
+{% if page.alternates and page.alternates.size > 0 %}
+<div class="formatted-text">
+<p>This post is also available in {% for alternate in page.alternates %}<a href="{{ alternate.href }}">{{ alternate.title }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
 </div>
 {% endif %}

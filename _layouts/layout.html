@@ -27,6 +27,11 @@
   <link rel="stylesheet" href="{{ "/assets/style.css" | absolute_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}">
 
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | absolute_url }}">
+  {% if page.alternates %}
+    {% for alternate in page.alternates %}
+      <link rel="alternate" type="{{ alternate.type }}" title="{{ alternate.title }}" href="{{ alternate.href }}">
+    {% endfor %}
+  {% endif %}
 </head>
 <body>
   <header class="main-header">
