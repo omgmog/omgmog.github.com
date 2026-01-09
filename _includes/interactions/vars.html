@@ -1,6 +1,7 @@
 <script>
   {% assign comments_issue = page.comments_issue | default: 'null' %}
-  {% capture page_urls %}'{{page.url | absolute_url }}'{% if page.alternate_urls %},{% for url in page.alternate_urls %}'{{url | absolute_url}}',{% endfor %}'{{page.url | absolute_url }}'{% endif %}{% endcapture %}
+  {% assign page_url_size_minus_1 = page.url | size | minus: 1 %}
+  {% capture page_urls %}'{{page.url | absolute_url }}','{{page.url | slice: 0,page_url_size_minus_1 | append: ".txt" | absolute_url }}'{% if page.alternate_urls %},{% for url in page.alternate_urls %}'{{url | absolute_url}}',{% endfor %}'{{page.url | absolute_url }}'{% endif %}{% endcapture %}
   const githubIssueID = {{comments_issue}};
   const pageURL = [...new Set([{{page_urls}}]{% unless jekyll.environment == "production" %}.map(url=>url.replace('http://localhost:4000', 'https://blog.omgmog.net')).map(url=>url.replace('http://dev.local:4000', 'https://blog.omgmog.net')){% endunless %})];
 </script>
