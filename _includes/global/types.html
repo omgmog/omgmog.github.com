@@ -1,1 +1,1 @@
-{% assign tags = include.tags | default: post.tags %}<div class="tags">{% for tag in tags %}<span class="tag tag-{{tag|slugify}}">{{ tag }}</span>{% endfor %}</div>
+{% assign tags = include.tags | default: post.tags | sort %}<div class="tags">{% for tag in tags %}<span class="tag tag-{{tag|slugify}}">{{ tag }}</span>{% endfor %}</div>
