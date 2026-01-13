@@ -1,7 +1,7 @@
 ---
 title: The Inevitable Oculus Quest Post
 comments_issue: 112
-tags: [vr]
+tags: [vr, hardware, review, gaming]
 ---
 
 I sold my HTC Vive back in 2020 and bought an Oculus Quest. Was it an impulsive _lockdown treat_? Perhaps; but it was time for an upgrade.

@@ -1,7 +1,7 @@
 ---
 title: Adding an internal speaker to the Pocket CHIP
 comments_issue: 111
-tags: [chip]
+tags: [chip, guide, hardware, diy]
 ---
 
 The Pocket CHIP doesn't come with internal speakers. It has the GPIO pins for audio, but nothing is hooked up. On the CHIP itself there is a 3.5mm audio jack for connecting headphones, and you can pair a Bluetooth speaker.

@@ -1,7 +1,7 @@
 ---
 title: UX in Virtual Reality
 comments_issue: 86
-tags: [vr]
+tags: [vr, ux, design, guide]
 ---
 
 {% include posts/figure.html src="maxcardboard.jpg" %}{:.massive.center}

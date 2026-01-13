@@ -28,7 +28,18 @@ layout: layout
       </div>
     </div>
   </header>
-  <div class="e-content">{{ content }}</div>
+{% assign post_year = post.date | date: "%Y" | plus: 0 %}
+{% assign cutoff_year = 2020 | plus: 0 %}
+{% assign archive_check = post.archived | default: false %}
+{% assign old_difference = cutoff_year | minus: post_year %}
+
+{% if archive_check or old_difference > 0 %}
+  <div class="archived-notice">
+    This post was published in {{ post_year }} and is kept here for reference. It may contain information that's outdated or inaccurate. All external links and references have been updated to point to archived versions on archive.org where possible.
+  </div>
+{% endif %}
+
+  <div class="e-content {% if post.archived %}archived{% endif %}">{{ content }}</div>
 
   {% if post.collection == 'cardboctober' %}
     {% capture cardboctober_footer %}{% include posts/cardboctober.html %}{% endcapture %}{{ cardboctober_footer | markdownify }}
