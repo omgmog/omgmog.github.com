@@ -147,5 +147,10 @@
       pointer-events: none;
       fill: var(--colors-midgrey);
     }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
   }
 }
