@@ -50,6 +50,21 @@ layout: layout
 {% include interactions/templates.html %}
 {% include interactions/stream.html %}
 
+<nav class="post-navigation">
+  {% if page.previous %}
+    <a href="{{ page.previous.url }}" class="prev-post" title="{{ page.previous.title }}">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">{{ page.previous.title }}</span>
+    </a>
+  {% endif %}
+  {% if page.next %}
+    <a href="{{ page.next.url }}" class="next-post" title="{{ page.next.title }}">
+      <span class="nav-label">Next →</span>
+      <span class="nav-title">{{ page.next.title }}</span>
+    </a>
+  {% endif %}
+</nav>
+
 {% if post.content contains '<div data-src' %}
 <script>
   const lazy_iframes = document.querySelectorAll('.iframe [data-src]');

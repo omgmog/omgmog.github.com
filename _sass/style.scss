@@ -1136,6 +1136,62 @@ iframe {
   }
 }
 
+// Post navigation
+.post-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: var(--gutter-inner-y);
+  padding-top: var(--gutter-inner-y);
+  border-top: .1rem solid var(--colors-lightgrey);
+  @include breakoutWidth;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 1rem;
+    border: .1rem solid var(--colors-lightgrey);
+    border-radius: .2rem;
+    flex: 1;
+    @include hideLinkIcon;
+
+    &:hover {
+      background-color: var(--colors-lightgrey-transparent-25);
+    }
+  }
+
+  .prev-post {
+    text-align: left;
+  }
+
+  .next-post {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  .nav-label {
+    font-size: .875rem;
+    color: var(--colors-midgrey);
+    margin-bottom: .5rem;
+  }
+
+  .nav-title {
+    font-weight: 600;
+    color: var(--colors-black);
+  }
+
+  @include mq('max', $bp-phone) {
+    flex-direction: column;
+    gap: .5rem;
+
+    .next-post {
+      margin-left: 0;
+    }
+  }
+}
+
   
 .formatted-text {
   text-align: center;
