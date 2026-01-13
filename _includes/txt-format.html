@@ -2,7 +2,7 @@
 
 ================================================================================
 
-{{ target.content | images_to_urls | unwrap_links | html_to_plain_text_convert | wrap_lines | collapse_blank_lines }}
+{{ target.content | iframes_to_urls | images_to_urls | unwrap_links | html_to_plain_text_convert | wrap_lines | collapse_blank_lines }}
 
 ================================================================================
 Published {{ target.date | date: "%B %d, %Y" }}

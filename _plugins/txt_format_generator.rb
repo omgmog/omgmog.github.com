@@ -3,6 +3,29 @@ require "html_to_plain_text"
 
 module Jekyll
   module TxtFormatFilters
+    # Replace iframes with their URLs before main conversion
+    def iframes_to_urls(input)
+      return input unless input
+
+      # Handle YouTube lazy-loading divs with data-src
+      input = input.gsub(/<div[^>]+data-src=["']([^"']+)["'][^>]*>.*?<\/div>/im) do
+        url = $1
+        # Add https: if missing (template strips it)
+        url = "https:#{url}" unless url.start_with?('http')
+        "\n#{url}\n"
+      end
+
+      # Handle regular iframes
+      input = input.gsub(/<iframe[^>]+src=["']([^"']+)["'][^>]*>.*?<\/iframe>/im) do
+        url = $1
+        # Add https: if missing (template strips it)
+        url = "https:#{url}" unless url.start_with?('http')
+        "\n#{url}\n"
+      end
+
+      input
+    end
+
     # Replace images with their URLs before main conversion
     def images_to_urls(input)
       return input unless input
