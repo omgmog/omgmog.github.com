@@ -322,6 +322,23 @@ body {
     }
   }
 
+  .archived-notice {
+    @include breakoutWidth;
+    background-color: var(--colors-lightgrey);
+    border: .1rem solid var(--colors-grey);
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    font-size: .9em;
+    color: var(--colors-darkgrey);
+    margin-bottom: var(--gutter-inner-y);
+  }
+
+  .e-content.archived {
+    a {
+      @include hideLinkIcon;
+    }
+  }
+
   .pull-comment {
     position: relative;
     width: 100%;
