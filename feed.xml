@@ -3,7 +3,7 @@ layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xml" href="{{ site.url }}{{ site.baseurl }}/feed.xslt.xml"?>
-{% assign all_posts = site.posts | concat: site.cardboctober | sort:'date' | reverse %}
+{% assign all_posts = site.posts | concat: site.cardboctober | where_exp: "post", "post.archived != true" | sort:'date' | reverse %}
 <feed xmlns="http://www.w3.org/2005/Atom">
     <generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator>
     <link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/atom+xml" />

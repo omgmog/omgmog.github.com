@@ -1,7 +1,7 @@
 ---
 title: CHIP Stuff
 comments_issue: 107
-tags: [chip]
+tags: [chip, guide, linux, hardware]
 ---
 
 > This page is a changing document. I'll probably add more notes to it in the future.
