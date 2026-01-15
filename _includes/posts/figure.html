@@ -20,6 +20,7 @@
   {%- comment -%}Development: Use original image only{%- endcomment -%}
   <img src="{{ src }}" loading="lazy" alt="{{alt}}">
 {% endif %}
+{% if include.title %}<figcaption>{{ include.title | markdownify }}</figcaption>{% endif %}
 {% endif %}
 {% if include.linkurl %}</a>{% endif %}
 {% if type contains "image-with-blurb" %}
