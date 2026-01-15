@@ -7,6 +7,9 @@ layout: layout
 {% if post.content contains '<code' %}
 <link rel="stylesheet" href="{{ "/assets/pygments.css" | absolute_url }}" />
 {% endif %}
+{% if post.header_background %}
+<style>body { background-image: url('{{ post.header_background }}'); }</style>
+{% endif %}
 
 <article class="post h-entry">
   <header>

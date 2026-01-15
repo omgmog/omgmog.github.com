@@ -4,7 +4,7 @@
   --colors-primary-transparent-25: #{rgba($colors-primary, .25)};
   --colors-lightgrey: #f0f0f2;
   --colors-lightgrey-transparent-25: #{rgba(#f0f0f2, .25)};
-  --colors-grey: #dadbdf;
+  --colors-grey: rgba(218, 219, 223, .8);
   --colors-midgrey: #999;
   --colors-midgrey-transparent-25: #{rgba(#999, .25)};
   --colors-midgrey-transparent-50: #{rgba(#999, .50)};
@@ -81,26 +81,34 @@ body {
   --body-margin: var(--gutter-outer);
   width: var(--body-width);
   max-width: var(--body-max-width);
-  margin: var(--body-margin);
+  margin: var(--body-margin) auto;
 
   padding: var(--gutter-inner-y);
   background-color: var(--colors-white);
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
   box-shadow: 0 1rem 2rem var(--colors-primary-dark-10);
   border-radius: .2rem;
 
   @include mq('min', $bp-big-desktop) {
     --body-max-width: calc(#{$bp-big-desktop} * 0.8);
-    --body-margin: var(--gutter-outer) auto;
+    --body-margin: calc(var(--gutter-outer) * 0.8) auto;
     border-radius: .7125rem;
   }
   @include mq('max', $bp-phone) {
     --body-width: 100vw;
     --body-max-width: calc(100vw - calc(var(--gutter-outer) * 2));
+    --body-margin: var(--gutter-outer) auto;
   }
 }
 .main-header {
   margin: calc(-.75 * var(--gutter-inner-y)) calc(-1 * var(--gutter-inner-y)) 0;
   padding: 0;
+
+  hr {
+    display: none;
+  }
 
   @include mq('min', $bp-desktop) {
     position: sticky;
@@ -116,6 +124,10 @@ body {
 
     &.is-pinned {
       box-shadow: 0 .5rem 1rem var(--colors-midgrey-transparent-25);
+    }
+
+    hr {
+      display: block;
     }
   }
 
@@ -252,6 +264,8 @@ body {
 
 .main-content {
   padding: var(--gutter-inner-y) var(--gutter-inner-x);
+  background-color: rgba(#fff, .65);
+  border-radius: .7125rem;
   
   @each $sel in (h2,h3,h4,h5) {
     > #{$sel} {
@@ -440,10 +454,17 @@ body {
   figure {
     @include breakoutWidth;
     border-radius: .4rem;
+    flex-direction: column;
 
     img {
       border-radius: inherit;
       filter: drop-shadow(0 .5rem .5rem var(--colors-midgrey-transparent-25));
+
+      & + figcaption {
+        margin-top: .5rem;
+        font-size: .9em;
+        color: var(--colors-darkgrey);
+      }
     }
     &.circle {
       border-radius: 100%;
@@ -665,10 +686,11 @@ body {
     @include breakoutWidth;
 
     h2 {
-      font-size: calc(4rem * var(--font-scale-headers));
+      font-size: calc(3rem * var(--font-scale-headers));
       font-family: Fjalla One, sans-serif;
       margin: 0 auto;
       padding: 0;
+      max-width: 21ch;
 
       a {
         text-decoration: none;
