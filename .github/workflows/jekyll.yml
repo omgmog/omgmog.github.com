@@ -31,15 +31,27 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: Install ImageMagick
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick libmagickwand-dev
-
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
+      - name: Restore image cache
+        id: image-cache
+        uses: actions/cache@v4
+        with:
+          path: _site/images/**/*.webp
+          key: images-${{ hashFiles('images/**/*') }}
+
+      - name: Install ImageMagick
+        if: steps.image-cache.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick libmagickwand-dev
+
+      - name: Optimize images
+        if: steps.image-cache.outputs.cache-hit != 'true'
+        run: bundle exec ruby scripts/optimize_images.rb _site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
