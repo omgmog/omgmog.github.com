@@ -12,8 +12,6 @@ sass:
 title: "Max Glenister"
 plugins:
   - jekyll-sitemap
-whitelist:
-  - jekyll-sitemap
 
 author:
   name: Max Glenister
