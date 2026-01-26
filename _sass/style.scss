@@ -475,6 +475,8 @@ body {
       align-items: center;
     }
     &.massive {
+      width: calc(100% + (var(--gutter-inner-x) * 2));
+      margin-left: calc(-.5 * var(--gutter-inner-x) * 2);
       img {
         width: 100%;
       }
