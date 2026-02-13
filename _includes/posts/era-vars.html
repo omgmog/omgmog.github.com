@@ -1,0 +1,37 @@
+{% comment %}
+Sets era_class, era_label, era_tagline, era_notice based on post.archive and post.date.
+Requires post and post_year to be set before including.
+{% endcomment %}
+
+{% assign era_class = "" %}
+{% assign era_label = "" %}
+{% assign era_tagline = "" %}
+{% assign era_notice = "" %}
+
+{% case post.archive %}
+  {% when "moglenstar.net" %}
+    {% assign era_year = post.date | date: "%Y" | plus: 0 %}
+    {% assign era_month = post.date | date: "%m" | plus: 0 %}
+    {% assign era_label = "moglenstar.net" %}
+
+    {% if era_year <= 2005 or era_year == 2006 and era_month <= 3 %}
+      {% assign era_class = " era-moglenstar-dark" %}
+    {% elsif era_year == 2006 and era_month <= 6 %}
+      {% assign era_class = " era-moglenstar-06" %}
+      {% assign era_tagline = "now with less hue!" %}
+    {% else %}
+      {% assign era_class = " era-moglenstar-custom" %}
+    {% endif %}
+
+    {% capture era_notice %}This post was originally published on <strong>moglenstar.net</strong> in {{ post_year }}. moglenstar.net was my first website, active from 2004 to 2008, where I wrote about pixel art, foobar2000, web design, and whatever else was going on. The content below has been recovered from the Wayback Machine and local backups.{% endcapture %}
+
+  {% when "omgmog.net" %}
+    {% assign era_class = " era-omgmog" %}
+    {% assign era_label = "omgmog.net" %}
+    {% capture era_notice %}This post was originally published on <strong>omgmog.net</strong> in {{ post_year }}. This was my WordPress blog from 2007 to 2009, where I wrote about R4DS themes, CSS, and web development. Recovered from the Wayback Machine.{% endcapture %}
+
+  {% when "blog.omgmog.net" %}
+    {% assign era_class = " era-tumblr" %}
+    {% assign era_label = "blog.omgmog.net" %}
+    {% capture era_notice %}This post was originally published on <strong>blog.omgmog.net</strong> in {{ post_year }}, back when I was using Octopress. Recovered from a local backup.{% endcapture %}
+{% endcase %}

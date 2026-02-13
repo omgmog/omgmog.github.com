@@ -1,0 +1,357 @@
+// Era fragment styles for archived posts
+// These styles recreate the look of posts from different blog eras
+
+// Base era fragment styles
+.era-fragment {
+  border-radius: .4rem;
+  margin: var(--gutter-inner-y) calc(var(--gutter-inner-x) * -1);
+
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.era-fragment-header {
+  padding: .5rem 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  user-select: none;
+  border-top-left-radius: .4rem;
+  border-top-right-radius: .4rem;
+}
+
+.era-fragment-domain {
+  font-weight: bold;
+}
+
+.era-fragment-tagline {
+  margin-left: .5rem;
+  font-style: italic;
+  opacity: .7;
+}
+
+.era-fragment-body {
+  padding: 1rem 1.5rem;
+  border-bottom-left-radius: .4rem;
+  border-bottom-right-radius: .4rem;
+
+  // Override breakout width for elements inside era fragments
+  blockquote,
+  figure,
+  .inline-grid {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  figure {
+    border-radius: 0;
+  }
+
+  hr {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    transform: none;
+  }
+}
+
+// 2004-2005 moglenstar.net: dark with yellow headers, white text
+.era-moglenstar-dark {
+  .era-fragment {
+    background: #000;
+    border: 1px solid #333;
+  }
+
+  .era-fragment-header {
+    background: #000;
+    border-bottom: 1px solid #333;
+    font-family: 'Trebuchet MS', Tahoma, Verdana, sans-serif;
+
+    .era-fragment-domain {
+      color: #f1f238;
+      text-transform: uppercase;
+    }
+    .era-fragment-tagline {
+      color: #888;
+    }
+  }
+
+  .era-fragment-body {
+    background: #000;
+    color: #fff;
+    font-family: 'Trebuchet MS', Tahoma, Verdana, sans-serif;
+    font-size: .9em;
+
+    h2 {
+      color: #f1f238;
+      font-family: 'Trebuchet MS', Tahoma, Verdana, sans-serif;
+      text-transform: uppercase;
+      font-size: 1.1em;
+    }
+
+    a {
+      color: #f1f238;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #222;
+      }
+    }
+
+    // code, pre {
+    //   background-color: #1a1a1a;
+    //   color: #f1f238;
+    // }
+
+    blockquote {
+      border-color: #333;
+      background-color: #111;
+      color: #ccc;
+    }
+  }
+}
+
+// 2006 moglenstar.net: K2 WordPress theme, "now with less hue!"
+// Archive: https://web.archive.org/web/20060615032031/http://moglenstar.net/
+// K2 theme: https://web.archive.org/web/20060701000000*/getk2.com
+.era-moglenstar-06 {
+  .era-fragment {
+    background: #fff;
+    border: 1px solid #c6d9e9;
+    border-radius: 4px;
+  }
+
+  .era-fragment-header {
+    background: linear-gradient(to bottom, #7090a0 0%, #5a7a8a 100%);
+    border-bottom: 1px solid #4a6a7a;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    .era-fragment-domain {
+      color: #fff;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+    }
+    .era-fragment-tagline {
+      color: rgba(255,255,255,.8);
+      font-style: italic;
+    }
+  }
+
+  .era-fragment-body {
+    background: #fff;
+    color: #555;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: .9em;
+    line-height: 1.6;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    h2 {
+      color: #456;
+      font-weight: normal;
+      font-size: 1.3em;
+    }
+
+    a {
+      color: #c30;
+      text-decoration: none;
+      transition: color .15s ease;
+
+      &:hover {
+        color: #900;
+        text-decoration: underline;
+      }
+    }
+
+    blockquote {
+      border: 1px solid #dde8f0;
+      background-color: #f0f5f8;
+      color: #556;
+      border-left: 3px solid #7090a0;
+      border-radius: 3px;
+    }
+
+    code, pre {
+      font-family: Monaco, 'Courier New', monospace;
+      // background-color: #f5f8fa;
+      // border: 1px solid #dde8f0;
+      // color: #555;
+      border-radius: 2px;
+    }
+  }
+}
+
+// mid-2006 through 2008 moglenstar.net: custom "mogdotnet" theme
+// Archive: https://web.archive.org/web/20061225020423/http://moglenstar.net/
+.era-moglenstar-custom {
+  .era-fragment {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+  }
+
+  .era-fragment-header {
+    background: #3b3c3d;
+    border-bottom: none;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, sans-serif;
+
+    .era-fragment-domain {
+      color: #fff;
+    }
+    .era-fragment-tagline {
+      color: #999;
+    }
+  }
+
+  .era-fragment-body {
+    background: #fff;
+    color: #333;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, sans-serif;
+    font-size: .95em;
+    line-height: 1.6;
+
+    h2 {
+      color: #333;
+      font-weight: normal;
+      font-size: 1.4em;
+    }
+
+    a {
+      color: #7a9e47;
+      text-decoration: none;
+      transition: color .15s ease;
+
+      &:hover {
+        color: #5a7a2f;
+        text-decoration: underline;
+      }
+    }
+
+    code, pre {
+      // background-color: #f5f5f5;
+      // border: 1px solid #ddd;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    blockquote {
+      border-color: #ddd;
+      background-color: #f9f9f9;
+      color: #555;
+      border-left: 3px solid #7a9e47;
+    }
+  }
+}
+
+// 2007-2009 omgmog.net: WordPress 2.2 default
+.era-omgmog {
+  .era-fragment {
+    background: #fff;
+    border: 1px solid #ccc;
+  }
+
+  .era-fragment-header {
+    background: #21759b;
+    font-family: Georgia, 'Bitstream Charter', serif;
+
+    .era-fragment-domain {
+      color: #fff;
+    }
+    .era-fragment-tagline {
+      color: rgba(255,255,255,.7);
+    }
+  }
+
+  .era-fragment-body {
+    background: #fff;
+    color: #333;
+    font-family: Georgia, 'Bitstream Charter', serif;
+
+    h2 {
+      color: #333;
+    }
+
+    a {
+      color: #21759b;
+
+      &:hover {
+        color: #d54e21;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// 2010-2011 blog.omgmog.net: Custom theme with lime green accents
+// Archive: https://web.archive.org/web/20110220211508/http://blog.omgmog.net/
+.era-tumblr {
+  .era-fragment {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-left: 4px solid #75a325;
+    border-radius: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .era-fragment-header {
+    background: #75a325;
+    border-bottom: none;
+    font-family: Helvetica, Arial, sans-serif;
+    border-radius: 0;
+    padding: .4rem 1rem;
+
+    .era-fragment-domain {
+      color: #fff;
+      text-shadow: 0 -1px 0 #55771a;
+      font-weight: bold;
+    }
+    .era-fragment-tagline {
+      color: rgba(255,255,255,.85);
+      text-shadow: 0 -1px 0 #55771a;
+    }
+  }
+
+  .era-fragment-body {
+    background: #fff;
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: .95em;
+    line-height: 1.5;
+    border-radius: 0;
+    padding: 1.25rem 1.5rem;
+
+    h2 {
+      color: #75a325;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    a {
+      color: #75a325;
+      transition: color .15s ease;
+
+      &:hover {
+        color: #5a7d1c;
+        text-decoration: underline;
+      }
+    }
+
+    blockquote {
+      border-color: #ddd;
+      background-color: #f9f9f9;
+      color: #555;
+      border-left: 3px solid #75a325;
+      border-radius: 0;
+    }
+
+    code, pre {
+      // background-color: #f5f5f5;
+      // border: 1px solid #ddd;
+      border-radius: 0;
+    }
+  }
+}
