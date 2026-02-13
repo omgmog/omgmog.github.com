@@ -364,9 +364,27 @@
         });
     };
 
+    module.updateCommentCount = (githubCount = 0) => {
+        const statsElement = document.querySelector('.interaction-stats');
+        const commentSpan = statsElement?.querySelector('.comment');
+        if (!commentSpan) return;
+
+        const archivedCount = parseInt(commentSpan.dataset.archivedCount || '0', 10);
+        const totalCount = archivedCount + githubCount;
+
+        if (totalCount > 0) {
+            const valueSpan = commentSpan.querySelector('.value');
+            if (valueSpan) {
+                valueSpan.textContent = totalCount;
+            }
+            commentSpan.title = `${totalCount} Comment${totalCount === 1 ? '' : 's'}`;
+            commentSpan.removeAttribute('style');
+            statsElement?.removeAttribute('style');
+        }
+    };
+
 
     module.renderArchivedComments = () => {
-        console.log('Rendering archived comments avatars');
         const archivedCommentsSection = document.querySelector('#archived-comments');
         if (!archivedCommentsSection) return;
 
@@ -500,6 +518,7 @@
     module.renderAll = () => {
         module.renderThings(interactions.webmentions);
         module.renderThings(interactions.comments);
+        module.updateCommentCount(interactions.comments?.data?.length || 0);
         module.checkForFailedAvatars();
         module.renderArchivedComments();
     }
@@ -556,6 +575,7 @@
                 };
                 module.saveData(interactions.comments, `interactions-comments-${pageURL_base64}`);
                 module.renderThings(interactions.comments);
+                module.updateCommentCount(interactions.comments.data.length);
                 module.checkForFailedAvatars();
             } catch (error) {
                 console.warn('Error fetching and rendering comments:', error);
@@ -686,6 +706,9 @@
         if (commentsClosed) commentsClosed.style.display = 'initial';
         if (commentsOpen) commentsOpen.style.display = 'none';
     }
+
+    // Initialize comment count (for archived-only posts or to set tooltip)
+    module.updateCommentCount(0);
 
     // Render from fetch or localStorage
     try {

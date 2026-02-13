@@ -5,7 +5,8 @@
       {% for comment in post.archived_comments %}
       <article class="reply">
         {% assign author_lower = comment.author | downcase %}
-        {% if author_lower == 'max'%}<img src="{{'/assets/mog.svg'|relative_url}}" alt="{{ comment.author }}'s avatar picture" class="avatar" data-username="{{ author_lower }}" loading="lazy">{% else %}<img class="avatar" data-username="{{ author_lower }}">{% endif %}
+        {% if author_lower == 'max glenister' %}{% assign author_lower = 'max' %}{% endif %}
+        {% if author_lower == 'max' %}<img src="{{'/assets/mog.svg'|relative_url}}" alt="{{ comment.author }}'s avatar picture" class="avatar" data-username="{{ author_lower }}" loading="lazy">{% else %}<img class="avatar" data-username="{{ author_lower }}">{% endif %}
         <header>
           <h4><span class="name">{{ comment.author }}</span> commented <time datetime="{{ comment.date }}">{{ comment.date }}</time></h4>
         </header>
