@@ -16,7 +16,7 @@ For a while, this method was fine, I had all of my postgres databases working fi
 
 After struggling with this farcical exercise for the best part of a year, and vocalising my problems at various hack days, on IRC, etc. people suggested [Postgres.app](http://postgresapp.com/).
 
-![The elephant in the room!]({{ site.url }}/images/Image%202013.10.01%2014_32_09.jpeg)
+{% include posts/figure.html src="Image 2013.10.01 14_32_09.jpeg" %}
 
 Postgres.app is magical, it's a completely isolated/packaged version of postgres, contained in an app. If you want to upgrade it, no problem, you just replace the app, all paths stay the same.
 

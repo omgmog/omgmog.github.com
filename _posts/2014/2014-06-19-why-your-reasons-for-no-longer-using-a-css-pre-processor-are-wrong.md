@@ -3,6 +3,27 @@ title: "Why your reasons for no-longer using a CSS pre-processor are wrong, and 
 comments_issue: 91
 tags: [css, sass, web-development]
 archived: true
+archived_comments:
+- author: "tevko1"
+  date: June 19, 2014
+  content: |
+    http://www.cairoscene.com/A...
+- author: "skube"
+  date: July 08, 2014
+  content: |
+    I'm ashamed to admit, I have yet to truly utilize preprocessors because of some the points brought up in the referenced article. I find posts like these however make me seriously question my judgement. Thanks!It would be great if you could have offered a suggestion for the nightmare example.scss which illustrates better practice.
+- author: "Max Glenister"
+  date: July 08, 2014
+  content: |
+    I'll add a good example later today. It's all too easy to say why something is bad!Edit: Added an example
+- author: "ErekJ"
+  date: February 29, 2016
+  content: |
+    On point. And nothing comes close to the re-usable mixing such as respond-to(screen-size/type/etc). When you want to change your breakpoint settings on a huge project, it's quick and painless; just change your breakpoint variables that are used by the respond-to() mixin. Since, most CSS I see does not create the partials encouraged by SASS, you are left with a huge responsive.css file which is never fun to manage. With the respond-to() mixin approach, you can put all the styling for a particular component in on partial that represents that component along with it's behavior to each breakpoint.
+- author: "garek007"
+  date: December 29, 2016
+  content: |
+    instead of reusable mixin you could just use autoprefixer, much easier. write simple CSS as you want, and let it add the prefixes when you save.
 ---
 
 I read an article recently that explained why a web design agency had stopped using CSS pre-processing as part of their development process, as a means to "optimise [their] internal workflow".
@@ -36,7 +57,7 @@ If you're not comfortable in the terminal, there are a whole bunch of GUI altern
 
 So at this point, authoring SCSS is as straight forward as authoring CSS is. You can still use LiveReload with this as the generated CSS will be different each time you change your SCSS, and so LiveReload will detect a change. Unless you're using a computer with a 'Turbo' button on the front of the tower, there should be no problem with speed.
 
-![Will this button speed up your development process?]({{ site.url }}/images/cPPUP8v.png)
+{% include posts/figure.html src="cPPUP8v.png" %}
 
 
 ### "Nested Code"

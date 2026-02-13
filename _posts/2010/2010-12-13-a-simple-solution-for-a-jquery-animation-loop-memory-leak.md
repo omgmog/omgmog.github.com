@@ -1,0 +1,32 @@
+---
+title: "A simple solution for a jQuery animation loop memory leak"
+tags: [javascript, tutorial]
+archived: true
+archive: blog.omgmog.net
+---
+
+I'm probably stating something very obvious to everybody, but this is something that caused me a couple of hours of confusion.
+
+When creating a new slightly-fancier page to be displayed on [omgmog.net](http://www.omgmog.net) I had a problem in that after a certain amount of time the browser would become unresponsive (or in Google Chrome the page would die - but I love how Google Chrome handles this).
+
+The problem I soon realised was in my animation loop. I've got a couple of lines of jQuery that move some elements on the page around randomly, to give a floating effect. The original code was as follows:
+
+```javascript
+$("h1 span").not("#h1p3").everyTime(0,function(){
+    $(this).animate({'margin-left':rand_no(),'margin-top':rand_no()});
+});
+```
+
+It turns out the problem with this code is that the animation was looping before it had completed, so the browser presumably is stacking up all of these `$().animate();` functions, which in turn caused the browser to become unresponsive.
+
+To remedy this, I specified a time for the `$().animation();` function, and set the `$().everyTime();` timeout to slightly longer than this:
+
+```javascript
+$("h1 span").not("#h1p3").everyTime(500,function(){
+    $(this).animate({'margin-left':rand_no(),'margin-top':rand_no()},490);
+});
+```
+
+With these small changes in place, it seems my problem is solved!
+
+I don't have any "lessons learned" speech to close the post with, it's just something that I found interesting :)

@@ -3,6 +3,15 @@ comments_issue: 39
 title: Migrating from Outlook .pst to mbox and then uploading to an IMAP mail server
 tags: [email, outlook, guide]
 archived: true
+archived_comments:
+- author: "Russell Smith"
+  date: June 06, 2014
+  content: |
+    For converting PST file in to Mac supported MBOX file, 'Stellar PST to MBOX converter- Mac' is best option. Its demo version is free of cost.
+- author: "Sonika Rawat"
+  date: July 03, 2015
+  content: |
+    To know more about the advanced mbox to pst converter tool is here: http://mbox2pstconverter.com/
 ---
 Microsoft Outlook uses a stupid/proprietary format to store mail locally. This is the burden I had to deal with recently while attempting to rescue mail from a friends dying computer.
 

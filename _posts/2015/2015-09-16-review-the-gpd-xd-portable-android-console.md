@@ -2,6 +2,31 @@
 title: "The GPD XD Portable Android Games Console"
 tags: [android, hardware, gpd-xd, review]
 archived: true
+archived_comments:
+- author: "Pete Scoffield"
+  date: December 08, 2015
+  content: |
+    Just found a $20 coupon for this console, do you suggest it at that price?For those interested the code is: SCVYOQAH always on geekbuying.
+- author: "Aaron"
+  date: January 18, 2016
+  content: |
+    Both his and your coupon codes are expired.
+- author: "Justin Chalmers"
+  date: March 23, 2016
+  content: |
+    I would like to play streetfighter the movie game from ps1 on gpd xd happy chick
+- author: "Dave Granger"
+  date: September 07, 2016
+  content: |
+    I've seen some reviews give the screen resolution as 768x1280. Is this a mistake or are there two versions?
+- author: "Max Glenister"
+  date: September 07, 2016
+  content: |
+    It's 1280x720, as mentioned on the GPD website http://www.gpd.hk/products.... and as you can see from the dimensions of my device screenshots https://blog.omgmog.net/ima...
+- author: "Ver JJ"
+  date: November 01, 2016
+  content: |
+    How does god eater burst with ppsspp run on this device and what is the best setting for god eater burst?
 ---
 
 I’m back with another Android console out of China from GPD, the GPD XD. I've had the GPD XD for a couple of weeks now, and to be honest I've been unable to put it down! In short it's a great device for portable gaming, and it also handles my media needs with ease.

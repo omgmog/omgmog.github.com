@@ -2,6 +2,11 @@
 title: The GPD G7 Portable Android Games Console
 tags: [android, hardware, gpd-g7, review]
 archived: true
+archived_comments:
+- author: "Rob"
+  date: February 18, 2015
+  content: |
+    mine wont reboot just shows the gears logo and stay thats way till the battery is dead...anyway to reboot it? and yes ive tried holing both the power and vol+
 ---
 
 Hot on the heels of my last Android device review I'm back with another device: The [GPD G7 Quad-core from GamePad Digital](http://www.gpd.hk/products.asp?selectclassid=017001&id=1278).

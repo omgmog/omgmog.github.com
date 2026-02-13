@@ -2,6 +2,27 @@
 comments_issue: 35
 title: On the subject of "Pixel-perfect PSD to HTML/CSS"
 tags: [web-design, web-development]
+archived_comments:
+- author: "Vu Hoang Anh"
+  date: January 20, 2014
+  content: |
+    This could also probably save the developer a lot of time in process of transforming a PSD into code - csshat.com
+- author: "Carlos Cárdenas"
+  date: April 29, 2014
+  content: |
+    This is one of my favorite articles ever. Just have a personal con, I don't like css preprocessors. They make the site a little heavier (at least when using WordPress).
+- author: "Max Glenister"
+  date: April 29, 2014
+  content: |
+    Thanks.There's no reason that using a preprocessor should make anything heavier, unless you go over the top with nesting your style declarations. At the end of the day, you can keep your .scss files on your computer, compile them to .css and upload them to your server to be used on your WordPress site.See this subject on nesting in Sass: http://thesassway.com/edito...
+- author: "Dipesh Batheja"
+  date: May 06, 2014
+  content: |
+    Hi Max, this is great article and absolutely correct advise for both frontend developers and designer. I run a PSD to HTML company www.netlingshq.com and face such issues almost on daily basis from both design and development perspective.Its very important to have a good review process in place before you start converting designs into code. A good frontend developer should be able to review and clear expectations upfront as much as possible. Also it is advisable to have a standard frontend framework in place, this should include standard directory structure, naming conventions, css organisation. Here are some common guidelines we provide to every new frontend developer trainee https://hackpad.com/PSD-to-... .
+- author: "Tyrone Avnit"
+  date: May 19, 2014
+  content: |
+    Love this. Web designers with no web experience can be extremely detrimental to a project. I am a true believer that all web designers should have a basic understanding of web fundamentals such as HTML and CSS.I was given a project in illustrator and was expected to construct a pixel perfect design in the browser. The canvas width was not even set to the size expected in the browser. The inconsistency was maddening.We as engineers need to create modular applications. This is true for CSS as well. There needs to be consistency between screens, so we can create an application where we can reuse styles and code. Please do not give us a design where the same parts of the application are designed differently.
 ---
 I read an [article](http://blog.teamtreehouse.com/pixel-perfect-front-end-development-matters) on the subject of implementing a PSD design of a website perfectly in HTML/CSS, and without wanting to spend my time writing a lengthy response in the comment form of a blog for it to disappear in to the depths of a blog that I don't visit very regularly, I figured I'd write my thoughts up as a blog post.
 

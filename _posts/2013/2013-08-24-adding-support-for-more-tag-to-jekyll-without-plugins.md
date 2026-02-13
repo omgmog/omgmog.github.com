@@ -3,6 +3,19 @@ comments_issue: 70
 title: Adding support for &lt;!-- more --> tag to Jekyll without plugins
 tags: [jekyll, guide]
 archived: true
+archived_comments:
+- author: "CURIOSITY"
+  date: February 28, 2014
+  content: |
+    It really helped me a lot. Thank you!
+- author: "lance"
+  date: March 29, 2014
+  content: |
+    Thanks, this was helpful. I added an else to the original IF statement and found that I had to change "post.content | size" to "post.content.size" for it to match on size. Either way, thanks for sharing.
+- author: "achmad"
+  date: October 24, 2015
+  content: |
+    thanks
 ---
 Here's a quick tip for an approach I've started using to split post content at a given point for displaying in an archive page, without using a plugin.
 

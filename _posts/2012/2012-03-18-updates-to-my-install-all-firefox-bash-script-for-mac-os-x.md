@@ -3,6 +3,11 @@ comments_issue: 42
 title: Updates to my 'install all firefox' bash script for Mac OS X
 tags: [firefox, bash, mac-os-x, guide]
 archived: true
+archived_comments:
+- author: "Batman"
+  date: March 18, 2012
+  content: |
+    I wanna give you kids.
 ---
 I wrote briefly about my [install-all-firefox shell script](/post/bash-script-to-install-all-major-versions-of-firefox-on-osx/) back in December last year. Since then the script has received a complete rewrite, and some new features.
 

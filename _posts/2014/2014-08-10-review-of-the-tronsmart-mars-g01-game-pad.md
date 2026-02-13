@@ -2,6 +2,39 @@
 title: The Tronsmart Mars G01 Game Pad
 tags: [hardware, gamepad, review]
 archived: true
+archived_comments:
+- author: "Ricardo Ferreira"
+  date: August 14, 2014
+  content: |
+    HiHow does the dpad are?
+- author: "Max Glenister"
+  date: August 14, 2014
+  content: |
+    The dpad is good, feels similar to ps3 controller, quite "spongey".
+- author: "Luis Mosqueira Muñoz"
+  date: August 26, 2014
+  content: |
+    How is the analog response? Are a noticiable "dead zone" in the analog? During this time, can you use it with a PS3?
+- author: "fransfebri"
+  date: August 29, 2014
+  content: |
+    I also want to ask about the analog dead zone. I have used G910 and the dead zone is annoying. Also are the triggers recognized as analog triggers and not buttons in both Windows and Android? To test the buttons and sticks on Windows, you can go to device and printer, right click on the gamepad and choose properties (or something, I forgot). The analog dead zone is especially important because if there's a hardware dead zone (like in G910) then you stuck with it and can't change it. I would prefer no dead zone and if it's off center, then just use the built in calibration tool from Windows. I mostly use G910 on Windows and some games (like racing or fps) are much harder than it should be because of the dead zone.
+- author: "Max Glenister"
+  date: August 29, 2014
+  content: |
+    I'll take a look at the deadzone tonight and get back to you.
+- author: "Max Glenister"
+  date: August 29, 2014
+  content: |
+    See @fransfebri:disqus's post further down, I'll test the deadzone of the controller later today.The box says that it supports PS3, but unfortunately I've not got one at hand to test it with.
+- author: "Mocha"
+  date: September 17, 2014
+  content: |
+    I was playing dungeon hunter 4 on Android with it and sometimes it vibrates and sometimes it doesn't. Any thoughts?
+- author: "Babu"
+  date: July 25, 2016
+  content: |
+    Can some one help me with online portal where this product sells???link or something?https://twitter.com/latesto...
 ---
 
 A different sort of review today, the [Mars G01 Game Pad from Tronsmart](http://www.tronsmart.com/Item/80).

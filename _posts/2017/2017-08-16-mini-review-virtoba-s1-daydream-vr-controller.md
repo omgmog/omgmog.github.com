@@ -19,7 +19,7 @@ I don't own a Google Pixel -- as much as I've loved the previous generations of 
 
 {% include posts/figure.html src="2017-08/op3t.jpg" %}{:.massive.center}
 
-The OnePlus 3T has a spec that rivals the Google Pixel XL, but weirdly enough it doesn't come with Daydream enabled out of the box. So I unlocked, rooted and installed the necessary components to make Daydream work on the OnePlus 3T, and [here we are](http://status.omgmog.net/1501775191/).
+The OnePlus 3T has a spec that rivals the Google Pixel XL, but weirdly enough it doesn't come with Daydream enabled out of the box. So I unlocked, rooted and installed the necessary components to make Daydream work on the OnePlus 3T, and [here we are](/post/enabling-google-daydream-on-oneplus-3t/).
 
 The Virtoba S1 pairs in the same way that the official Daydream controller does, and works instantly. 
 

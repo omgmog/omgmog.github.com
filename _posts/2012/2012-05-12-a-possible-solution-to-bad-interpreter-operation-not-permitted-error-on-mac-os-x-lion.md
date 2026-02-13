@@ -3,6 +3,27 @@ comments_issue: 49
 title: "A possible solution to 'bad interpreter: operation not permitted' error on Mac OS X Lion"
 tags: [mac-os-x, guide]
 archived: true
+archived_comments:
+- author: "Jake"
+  date: October 16, 2012
+  content: |
+    thanks, it worked
+- author: "Andrew"
+  date: May 21, 2013
+  content: |
+    Great Result...... Was having a problem with a sparseImage and executed the xattr command on the image file and the problem just went away! thanks!
+- author: "nickjouannem"
+  date: June 05, 2013
+  content: |
+    Thanks for posting about this.
+- author: "Jaime"
+  date: June 26, 2013
+  content: |
+    Thanks a lot, it worked!!!
+- author: "John"
+  date: March 22, 2014
+  content: |
+    dont have appropriate permissions... im on administrator account
 ---
 Out of the blue I started having an issue in my Terminal.app on Lion where downloaded scripts/applications wouldn't run. I first noticed this when trying to setup the Android SDK.
 

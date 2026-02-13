@@ -3,6 +3,19 @@ title: Jekyll Antipatterns
 comments_issue: 27
 tags: [jekyll, web-development]
 archived: true
+archived_comments:
+- author: "mvaneijgen"
+  date: August 13, 2015
+  content: |
+    Hey I was looking for a way to limit:n on my featured posts and it seem to work, the only thing is im trying to do it for my portfolio called `work` and not for the posts. This is what I have ```{% assign featured_posts = (site.work|where:"featured","true") %}{% for posts in featured_posts limit:4 %}```Is there something else I need to do to get this to work for work instate of posts?
+- author: "Max Glenister"
+  date: August 13, 2015
+  content: |
+    Hi, I've just had a play to see if I can reproduce your issue, and I could. I also worked out how to solve it.In Jekyll, "true" is not equal to true, and when you use the "where:" filter, even if you omit the quotes on true, it treats it as a string rather than a boolean.This drove me a mad for a moment as I was getting no results when doing{% assign featured_works = (site.work | where: "featured", "true") %}The solution for this is to quote "true" in the frontmatter of your Work pieces:---title: foofeatured: "true"---Then you should be able to limit on the resulting queryset:{% for work in featured_works | limit: 4 %} {{ work.title }}{% endfor %}I hope that helps!
+- author: "mvaneijgen"
+  date: August 13, 2015
+  content: |
+    Thanks! {{ work.title }}is really important. I still used{{ post.title }}in my code. I changed it and now it works thanks!
 ---
 
 {% include posts/figure.html src="jekyllantipatterns.jpg" %}{:.massive.center}

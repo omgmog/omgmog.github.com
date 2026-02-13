@@ -3,6 +3,19 @@ comments_issue: 44
 title: Making suspend on lid-close work with Arch Linux on the HP Chromebook 11
 tags: [chromebook, arch-linux, linux, guide]
 archived: true
+archived_comments:
+- author: "anonimo"
+  date: April 13, 2016
+  content: |
+    Thanks, you are a genius!!!
+- author: "atefe shokri"
+  date: September 28, 2016
+  content: |
+    Thank You!Its Work For me.
+- author: "Wenzel Pomeryll"
+  date: November 15, 2016
+  content: |
+    Thank you very much! Worked for me...
 ---
 
 The more time that I spend using Arch Linux on my HP Chromebook 11, the more things I find to tweak and tinker with.

@@ -2,6 +2,23 @@
 title: Converting SVG to PNG online and in your terminal
 comments_issue: 96
 tags: [guide]
+archived_comments:
+- author: "Richardrtg"
+  date: January 22, 2014
+  content: |
+    Also ksvgtopng in Ubuntu package kde-runtime
+- author: "Scotty"
+  date: November 13, 2014
+  content: |
+    thank you. Totally awesome.....the grump icon that is :-)
+- author: "norm_c"
+  date: December 09, 2014
+  content: |
+    Don't follow the instructions for the librsvg install - I did it without thinking about the commands and what happened was it upgraded a bunch of my tools! Now I have to go through a few hours of testing and upgrading other tools just to get my development environment back up. And to top it off, brew was not able to install the lbrsvg tool due to dependencies that it could not install.Yup, it's my fault I should not have blindly followed the above directions, hopefully this post will keep someone else from making the same mistake.
+- author: "Max Glenister"
+  date: December 09, 2014
+  content: |
+    I suppose you should say "Don't blindly follow the instructions" then -- for most people updating and upgrading brew is a good first step, and if it's not they would know otherwise.
 ---
 This post is mostly for my own benefit on the rare occasion that I have to convert SVG files to PNG.
 

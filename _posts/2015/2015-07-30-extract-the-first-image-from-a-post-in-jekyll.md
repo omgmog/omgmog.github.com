@@ -3,6 +3,11 @@ title: Extract the first image from a post in Jekyll
 comments_issue: 81
 tags: [jekyll, guide]
 archived: true
+archived_comments:
+- author: "iziy"
+  date: April 09, 2016
+  content: |
+    a good way~. but i'm just need the src
 ---
 
 I decided that I want to show an image next to posts in my "article list" type pages in Jekyll.

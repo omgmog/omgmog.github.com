@@ -3,6 +3,11 @@ comments_issue: 76
 title: 'Adventures in IMAP: Migrating lots of mail to Atmail'
 tags: [email, imap, guide]
 archived: true
+archived_comments:
+- author: "Dr Doolittle"
+  date: October 20, 2013
+  content: |
+    Hi Max!
 ---
 Besides my day job as a front-end developer at [2degrees](http://2degreesnetwork.com), I run my own web design company with my partner, called [Marmalade &amp; Jam](http://marmaladeandjam.co.uk).
 

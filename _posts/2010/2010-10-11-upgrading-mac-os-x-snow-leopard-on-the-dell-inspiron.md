@@ -3,6 +3,15 @@ comments_issue: 40
 title: Upgrading Mac OS X Snow Leopard on the Dell Inspiron 1525 to 10.6.4
 tags: [hackintosh, mac-os-x, guide]
 archived: true
+archived_comments:
+- author: "Bob"
+  date: January 12, 2011
+  content: |
+    Which version of the Dell Bios do you have installed on your 1525?
+- author: "Joshua"
+  date: December 15, 2011
+  content: |
+    hey we can check for updates? that means apple won't lock my computer for using hackintosh?
 ---
 
 In this part of the guide, I'll be covering upgrading to 10.6.4. You can read the first part of this guide here - [Installing Mac OS X Snow Leopard on the Dell Inspiron 1525](/post/installing-mac-os-x-snow-leopard-on-the-dell-inspiron/)

@@ -3,6 +3,19 @@ title: Removing the Blackberry Desktop Software for Mac without having to re-dow
 comments_issue: 92
 tags: [mac-os-x, blackberry, guide]
 archived: true
+archived_comments:
+- author: "Antonio"
+  date: November 24, 2013
+  content: |
+    Good script!I had the blackberry daemon running and doing nothing and I've removed it with this script.Thanks!
+- author: "Coen van Wyk"
+  date: June 23, 2014
+  content: |
+    It does not seem to work! I cut and pasted it into Terminal, it seemed to exit on the first exit, and BBLaunchAgent.app is still there, using .1 to 2.4 of the CPU time.
+- author: "rsaias"
+  date: September 16, 2014
+  content: |
+    I had to change the killall command to effectively stop the app.That one did work:sudo killall BBLaunchAgent
 ---
 If you happen to have installed the Blackberry Desktop Software and you want to remove it and it's annoying persistant daemons, you might have discovered that this can only be done by downloading the [70mb installer dmg](http://us.blackberry.com/software/desktop/desktop-mac.html), and running the uninstaller.
 
