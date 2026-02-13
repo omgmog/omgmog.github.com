@@ -4,37 +4,11 @@ title: Blog
 ---
 
 {% assign posts = site.posts | concat: site.cardboctober | sort:'date' | reverse %}
-{% assign total_posts = posts | size %}
-{% assign page_amount = 20 %}
-{% assign remainder = total_posts | modulo: page_amount %}
-{% assign number_of_pages = total_posts | minus: remainder | divided_by: page_amount %}
-{% assign previous_ym = '' %}
-{% for i in (0..number_of_pages) %}
-  {% capture classes %}post-list {% if i > 0 %}hidden{% endif %}{% endcapture %}
-  {% assign offset = page_amount | times: i %}
-  {% if offset != total_posts %}
-    <ul class="{{ classes }}" data-group="{{ i }}">
-    {% for post in posts offset:offset limit:page_amount %}
-      {% include global/post-list-item.html hide_dates="true" %}
-    {% endfor %}
-    </ul>
-  {% endif %}
+
+<ul class="post-list">
+{% for post in posts limit:20 %}
+  {% include global/post-list-item.html hide_dates="true" %}
 {% endfor %}
+</ul>
 
-<a class="btn viewmore hidden" href="#">View more</a>
-
-<p class="evenmore hidden">Looking for even more? I recently had a Spring clean and archived a bunch of old posts. You can find the raw posts in the <a href="https://github.com/search?q=repo:{{site.github.owner_name}}/{{site.github.repository_name}}+path:_archive&type=Code"><code>Archive</code> on Github</a></p>
-<script>
-  const HIDDEN_CLASS = 'hidden';
-  const viewMore = document.querySelector('.viewmore');
-  const evenMore = document.querySelector('.evenmore');
-  viewMore.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector('.post-list.hidden').classList.remove(HIDDEN_CLASS);
-
-    if (!document.querySelector('.post-list.hidden')) {
-      evenMore.classList.remove(HIDDEN_CLASS);
-    }
-  });
-  viewMore.classList.remove(HIDDEN_CLASS);
-</script>
+<a class="btn" href="/archive/">View all posts</a>

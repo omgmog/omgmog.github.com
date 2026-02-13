@@ -1,5 +1,5 @@
 
-#interactions {
+.interactions {
   // @include spanBodyWidth;
   
   h3 {
@@ -65,12 +65,10 @@
       }
       a {
         text-decoration: none;
-
-        &.name {
-          font-weight: bold;
-        }
-
         @include hideLinkIcon;
+      }
+      .name {
+        font-weight: bold;
       }
     }
     > div {

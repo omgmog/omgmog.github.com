@@ -1,4 +1,5 @@
-<section id="interactions">
+<section id="interactions" class="interactions">
+  {% include interactions/archived_comments.html %}
   {% if post.comments_issue %}
   {% include global/wide-h3.html text="Comments" %}
   <div id="comments" data-display="block">

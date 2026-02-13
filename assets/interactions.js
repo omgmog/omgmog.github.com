@@ -364,6 +364,19 @@
         });
     };
 
+
+    module.renderArchivedComments = () => {
+        console.log('Rendering archived comments avatars');
+        const archivedCommentsSection = document.querySelector('#archived-comments');
+        if (!archivedCommentsSection) return;
+
+        // fallback avatars for archived comments
+        archivedCommentsSection.querySelectorAll('.avatar').forEach(avatar => {
+            if (avatar.dataset.username === 'max') return; // skip my avatar
+            module.makeFallbackAvatar(avatar.dataset.username, avatar)
+        });
+    };
+
     module.saveData = (what, where) => {
         try {
             localStorage.setItem(where, JSON.stringify(what));
@@ -488,6 +501,7 @@
         module.renderThings(interactions.webmentions);
         module.renderThings(interactions.comments);
         module.checkForFailedAvatars();
+        module.renderArchivedComments();
     }
 
     module.fetchAndRender = async (what = ['comments', 'webmentions']) => {
@@ -579,6 +593,8 @@
                 console.warn('Error fetching and rendering webmentions:', error);
             }
         }
+
+        module.renderArchivedComments();
     };
     module.renderFetchDate = _ => {
         const fetchedDateElement = document.querySelector('#mentions-last-fetched');
@@ -683,6 +699,6 @@
         // Fallback to empty state
         module.renderAll();
     }
-            
+    
     module.renderFetchDate(); 
 }());
