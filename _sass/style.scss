@@ -739,7 +739,7 @@ body {
         }
       }
       &-secondary {
-        .webmention-stats {
+        .interaction-stats {
           margin-right: 1rem;
         }
         .tags {
@@ -747,7 +747,7 @@ body {
         }
       }
     }
-    .webmention-stats { 
+    .interaction-stats { 
       text-decoration: none;
       display: flex;
       flex-direction: row;
