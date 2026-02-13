@@ -535,6 +535,18 @@ body {
       margin: 0;
       width: auto;
     }
+
+    &.two-columns {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      grid-gap: 1rem;
+
+      figure {
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
   .posters-wrap {
     @include breakoutWidth;
@@ -829,6 +841,10 @@ hr {
     padding: 0;
     list-style: none;
 
+    &:last-of-type {
+      margin-bottom: var(--gutter-inner-y);
+    }
+
     time {
       display: block;
       margin-bottom: .25rem;
@@ -858,6 +874,7 @@ hr {
         border-bottom: 1px solid rgba(107, 138, 185, 0.2);
       }
     }
+
     .post-item-meta {
       display: flex;
       flex-direction: row;
@@ -897,6 +914,12 @@ hr {
     }
   }
   
+  .wide-h3 + .post-list .post-list-item {
+    border-bottom: 0;
+     margin-bottom: 0;
+     padding-bottom: 0;
+  }
+
   .btn {
     margin: var(--gutter-inner-y) auto auto;
     padding: .125rem .25rem;

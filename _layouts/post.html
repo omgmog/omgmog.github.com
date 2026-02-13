@@ -4,14 +4,23 @@ layout: layout
 {% assign post = page %}
 {% include interactions/vars.html %}
 
-{% if post.content contains '<code' %}
-<link rel="stylesheet" href="{{ "/assets/pygments.css" | absolute_url }}" />
+{% capture codetag %}<code{% endcapture %}
+{% assign parts = page.content | split: codetag %}
+
+{% if parts.size > 1 or page.archived_comments %}
+  <link rel="stylesheet" href="{{ '/assets/pygments.css' | relative_url }}" />
+{% endif %}
+{% if post.archive %}
+  <link rel="stylesheet" href="{{ '/assets/eras.css' | relative_url }}" />
 {% endif %}
 {% if post.header_background %}
 <style>body { background-image: url('{{ post.header_background }}'); }</style>
 {% endif %}
 
-<article class="post h-entry">
+{% assign post_year = post.date | date: "%Y" | plus: 0 %}
+{% include posts/era-vars.html %}
+
+<article class="post h-entry{{ era_class }}">
   <header>
     <h2>
       <a href="{{ post.url }}" class="p-name u-url">
@@ -31,18 +40,29 @@ layout: layout
       </div>
     </div>
   </header>
-{% assign post_year = post.date | date: "%Y" | plus: 0 %}
 {% assign cutoff_year = 2020 | plus: 0 %}
 {% assign archive_check = post.archived | default: false %}
 {% assign old_difference = cutoff_year | minus: post_year %}
 
-{% if archive_check or old_difference > 0 %}
+{% if era_notice != "" %}
+  <div class="archived-notice">{{ era_notice }}</div>
+{% elsif archive_check or old_difference > 0 %}
   <div class="archived-notice">
-    This post was published in {{ post_year }} and is kept here for reference. It may contain information that's outdated or inaccurate. All external links and references have been updated to point to archived versions on archive.org where possible.
+    This post was published in {{ post_year }} and is kept here for reference. It may contain information that's outdated or inaccurate.
   </div>
 {% endif %}
 
+{% if era_class != "" %}
+  <div class="era-fragment">
+    <div class="era-fragment-header">
+      <span class="era-fragment-domain">{{ era_label }}</span>
+      {% if era_tagline != "" %}<span class="era-fragment-tagline">{{ era_tagline }}</span>{% endif %}
+    </div>
+    <div class="era-fragment-body e-content {% if post.archived %}archived{% endif %}">{{ content }}</div>
+  </div>
+{% else %}
   <div class="e-content {% if post.archived %}archived{% endif %}">{{ content }}</div>
+{% endif %}
 
   {% if post.collection == 'cardboctober' %}
     {% capture cardboctober_footer %}{% include posts/cardboctober.html %}{% endcapture %}{{ cardboctober_footer | markdownify }}
