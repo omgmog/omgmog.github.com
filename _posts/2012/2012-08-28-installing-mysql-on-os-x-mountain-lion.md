@@ -3,6 +3,27 @@ title: Installing MySQL on OS X Mountain Lion
 comments_issue: 99
 tags: [mysql, mac-os-x, guide]
 archived: true
+archived_comments:
+- author: "Rob Bennet"
+  date: September 26, 2012
+  content: |
+    Thanks for linking to the article. Glad you found it useful!
+- author: "Pstinghua"
+  date: November 27, 2012
+  content: |
+    thanks, but where is my.cnf? How to config remote access
+- author: "Sergio Moya"
+  date: April 03, 2013
+  content: |
+    Thanks!! works!
+- author: "Juan Daniel Flórez"
+  date: May 22, 2013
+  content: |
+    Thanks, I was missing the -w in launchctl that was driving me crazy
+- author: "angelxmoreno"
+  date: February 14, 2014
+  content: |
+    using mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmpI get an error: -bash: mysql_install_db: command not found
 ---
 I was having some issues getting MySQL installed on OS X 10.8 Mountain Lion, and then I came across [a useful article](http://madebyhoundstooth.com/blog/install-mysql-on-mountain-lion-with-homebrew/) describing how to do it.
 

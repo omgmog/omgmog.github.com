@@ -3,6 +3,15 @@ comments_issue: 31
 title: Fluid video embeds for your responsive website
 tags: [css, responsive-design, web-development, guide]
 archived: true
+archived_comments:
+- author: "Prasad"
+  date: August 05, 2014
+  content: |
+    Thank you so much for sharing this code!!Just want to highlight that perhaps there is an error in the padding-bottom value for .cinema: shouldn't it be 54.05%?Best wishes! :-)
+- author: "Martin Cadoux"
+  date: September 06, 2014
+  content: |
+    Great suggestion, thanks ! It's especially useful when dealing with the <video> element on iOS.
 ---
 Recently I came across an interesting problem, fluidly scaling iframe/embed code on a responsive design.
 

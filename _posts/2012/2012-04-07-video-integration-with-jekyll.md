@@ -3,6 +3,19 @@ comments_issue: 24
 title: Video integration with Jekyll
 tags: [jekyll, youtube, guide]
 archived: true
+archived_comments:
+- author: "John H. Sheridan"
+  date: April 19, 2012
+  content: |
+    I'm setting up my Jekyll blog now, and this was a really big help. Thanks a lot.
+- author: "Murphy Randle"
+  date: May 16, 2012
+  content: |
+    Hey, this worked fantasticly. I loved it. Thank you!
+- author: "sfarooq"
+  date: June 17, 2013
+  content: |
+    Good post... Thanks
 ---
 Adding some functionality to Jekyll to allow integration of YouTube videos is a pretty easy task.
 

@@ -3,9 +3,14 @@ comments_issue: 82
 title: Installing Mac OS X Snow Leopard on the Dell Inspiron 1525
 tags: [hackintosh, mac-os-x, guide]
 archived: true
+archived_comments:
+- author: "griftopia"
+  date: November 20, 2014
+  content: |
+    Any way you can help me with pre installation boot options for Inspiron 1720? I can't even get started.
 ---
 
-_This is an update to my previous guide. I've since changed platform for my site &mdash; and even changed computers &mdash; but there is enough interest in this guide to warrant a re-write, so here we go._
+_This is an update to my [previous guide](/post/installing-os-x-snow-leopard-on-the-dell-inspiron-1525/). I've since changed platform for my site &mdash; and even changed computers &mdash; but there is enough interest in this guide to warrant a re-write, so here we go._
 
 I'm going to be walking you through installing Mac OS X Snow Leopard 10.6.4 on your Dell Inspiron 1525. The configuration of your Inspiron 1525 might differ from mine, but generally most of the hardware will be the same.
 

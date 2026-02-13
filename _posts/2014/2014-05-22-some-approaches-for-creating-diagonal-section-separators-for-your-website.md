@@ -3,6 +3,23 @@ title: Some approaches for creating diagonal section separators for your website
 comments_issue: 97
 tags: [css, web-development, guide]
 archived: true
+archived_comments:
+- author: "Ben Foxall"
+  date: June 10, 2014
+  content: |
+    Awesome. I quite like @carljwood's approach on http://allyourbaseconf.com/... (we're using it in another project too). Using two rotation transforms on a normal div. Feels like it falls back quite nicely.
+- author: "Max Glenister"
+  date: June 10, 2014
+  content: |
+    But the coolness of generated-on-the-fly SVG!
+- author: "Anika Jaffara"
+  date: July 28, 2014
+  content: |
+    Hey Max! Thanks for this. So glad to see you included a Sass approach. Exactly what I had in mind.
+- author: "Joseph Fusco"
+  date: June 16, 2016
+  content: |
+    Wow great info here.
 ---
 
 In their simplest form, web pages are made of stacked rectangles. Every [block-level element](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements) takes up as much vertical space as the content requires, and fills as much horizontal space as is available. Additionally, block-level elements can have their width/height specified. When you have absolutely positioned, or floated elements this changes a bit but the rule pretty much sticks.

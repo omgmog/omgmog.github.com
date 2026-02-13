@@ -2,6 +2,23 @@
 title: Getting started with using Sass in your existing website
 comments_issue: 19
 tags: [guide, sass, css, web-development]
+archived_comments:
+- author: "Theron S"
+  date: April 14, 2014
+  content: |
+    Great write up. A few questions though. Would the phpscss compiler not be slow as snot dripping in summer? Isn't that why it's preferable to use it as a preprocessor and have it compiled before it's made live? Also, how would this effect page load times?
+- author: "Max Glenister"
+  date: April 15, 2014
+  content: |
+    It caches the compiled scss until any changes are detected, so it's not bad at all. I'm using it in place on http://www.omgmog.net
+- author: "Theron S"
+  date: April 29, 2014
+  content: |
+    Sounds interesting I'm going to check it out. Thanks again for the write up.
+- author: "Victor Gerard Temprano"
+  date: August 22, 2014
+  content: |
+    Thanks, great post, it fully helped me get set up.
 ---
 Sass is a CSS-compatible preprocessor for CSS. It allows you to reduce the amount of duplication and complexity in your CSS by using variables, mixins (functions), nesting, and other cool things that should have existed in the CSS spec from the beginning.
 
