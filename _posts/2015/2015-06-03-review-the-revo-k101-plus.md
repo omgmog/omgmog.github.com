@@ -3,6 +3,35 @@
 title: "The Revo K101 Plus Portable Games Console"
 alternate_urls: "/reviews/review-the-revo-k101-plus/"
 tags: [review, handheld, retro-gaming]
+archived_comments:
+- author: "I. S."
+  date: July 31, 2015
+  content: |
+    You say the Plus works with your EZ-Flash? Is it an EZ-Flash 4?
+- author: "Max Glenister"
+  date: July 31, 2015
+  content: |
+    Yes, but I've only tested it with the game I have flashed to it (Mother 3), I've not used any of the normal EZ-flash functions.
+- author: "CupCakesDragon"
+  date: March 18, 2016
+  content: |
+    I love mine, but want to point out 100% compability is a bit overstated. For example super mario world pure blue backgrous are displayed as black (ie the sky in the first world third level) and when jn the middle of that level you start jumping the graphics start flickering. In the game scurge hife thereis a very minor glitch barely noticable but fog flickers a bit when placed on black backgrounds. The ~20 other games i played so fr (matroid zero mission, street fighter, sonic advance, metal slug advance, duke nukem advance, super mario bros 3, gunstar super heroes, rebelstar, fire emblem, breath of fire 2, and more) work perfeclty tough or at least k think so since this is the first time i have a gba and am pirating them all on the kcard so nl memories to compare with lol.I think they did a great job, the minor issues with a few roms/games dont outweigh the luxury of both a decenstized visible screen AND a headphone jack by far, plus good mp3 player!, but just wanted to point out its not perfect.
+- author: "RetroPlayers"
+  date: May 05, 2016
+  content: |
+    It would be interesting to find out if the K-Card works on GBA's or not.
+- author: "Max Glenister"
+  date: May 05, 2016
+  content: |
+    As I said in the review:> The K-card doesn’t work in other devices (I tried it in my GBA Micro),
+- author: "RetroPlayers"
+  date: May 12, 2016
+  content: |
+    As ever, my skim reading skills have been my own downfall.
+- author: "Denis Franco"
+  date: July 10, 2016
+  content: |
+    I wrote a blog post about the screen resolution http://idleretrogaming.blog...
 ---
 
 Today I'm refreshed to be reviewing a console that doesn't try to cram too much in to the form factor, but instead tried to focus on doing one thing well.

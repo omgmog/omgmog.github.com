@@ -3,6 +3,11 @@ comments_issue: 54
 title: On migrating from Tumblr to Jekyll Bootstrap
 tags: [jekyll, tumblr, github-pages, guide]
 archived: true
+archived_comments:
+- author: "plusjade"
+  date: February 01, 2012
+  content: |
+    (I maintain Jekyll Bootstrap)Makes my day to hear you find Jekyll Bootstrap easier to manage! I also definitely appreciate the write-ups. Since you have done well in customizing your install, please think about contributing any feedback back to the project. Anything you feel should work better, or you have an idea of a better implementation or feature request etc. It's tremendously helpful for me to get feedback from actual day-to-day users. Contact me personally or through http:/github.com/plusjade/j... !keep up the good work. BTW your theme customizations are looking good!
 ---
 I've been toying with the idea of moving away from [Tumblr](http://www.tumblr.com) for a long time now, having had my own share of problems with Tumblr downtime.
 

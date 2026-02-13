@@ -2,6 +2,15 @@
 title: "So I've got a Raspberry Pi, now what?"
 tags: [raspberry-pi, hardware]
 archived: true
+archived_comments:
+- author: "Alex Downs"
+  date: May 29, 2013
+  content: |
+    How did you run quake 1?
+- author: "Max Glenister"
+  date: May 31, 2013
+  content: |
+    Hi, see here: http://www.raspberrypi.org/...
 ---
 I was going to title this post "In which I moan about the Raspberry Pi", read on to find out why.
 

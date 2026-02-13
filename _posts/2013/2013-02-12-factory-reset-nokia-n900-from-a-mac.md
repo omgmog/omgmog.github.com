@@ -3,6 +3,23 @@ comments_issue: 16
 title: Factory resetting a Nokia N900 from Mac OS X Mountain Lion
 tags: [nokia-n900, mac-os-x, guide]
 archived: true
+archived_comments:
+- author: "radambe"
+  date: August 12, 2013
+  content: |
+    thanks for those commands to get the flasher working in 10.8!!!
+- author: "Max Glenister"
+  date: August 12, 2013
+  content: |
+    Glad it was of help :)
+- author: "jpanela"
+  date: September 21, 2013
+  content: |
+    flashing now on 10.8.5, perfect, but 1st F is capital "sudo flasher-3.5 -F <emmc.bin> -f -R"
+- author: "oob"
+  date: December 03, 2013
+  content: |
+    Beautiful guide! Thank you so much.
 ---
 
 I had a Nokia N900 when they first came out, this was unfortunately shortly before Android had matured to a usable state, and so I didn't use my Nokia N900 for long.

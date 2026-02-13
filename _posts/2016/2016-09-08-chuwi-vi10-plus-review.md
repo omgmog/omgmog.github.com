@@ -2,6 +2,23 @@
 title: "The Chuwi Vi10 Plus Windows and Android Tablet"
 tags: [hardware, windows, android, chuwi-vi10-plus, review]
 archived: true
+archived_comments:
+- author: "Matthew"
+  date: January 06, 2017
+  content: |
+    Hi. Your article helped me quite a lot. My question is : the quide you gave us is full guide how to install only single OS, which is windows 10 in this case ? Do we have to update BIOS, or whatever they attempt us to do ? I belive the BIOS update will add only dual boot support, which I dont really want... :) I am really afraid of bricking my tablet... Thanks, Matthew.
+- author: "Max Glenister"
+  date: January 09, 2017
+  content: |
+    Hi Matthew,The BIOS update will allow you to boot Windows or Android (dual boot). I think it's required to bring the 2/32 (Remix OS) model of the Vi10 Plus inline with the dual bootable 4/64 (Android/Win) model of the Vi10 Plus.If you follow the BIOS update instructions from Chuwi perfectly you should have no chance of bricking your tablet, and if something does go wrong you would still be able to reflash the device using the PC software.Cheers!
+- author: "Matthew"
+  date: January 09, 2017
+  content: |
+    Thanks. I updated the BIOS, but it seems like you can use even the stock one for single boot option, from what I red on the chuwi forum. I suscefully flashed Android with moddified file, that spreads the partitions, so my tablet wil be "windows" only. With the little creeper : Android behind it eating only 1.5Gb of storage. Fair enough. But. I downloaded windows image twice already and something is going still wrong. It ll boot into error message saying, that files are missing or corrupted. Im now downloading the image from different source and hoping for the best :) Thanks for response, Matthew. :)
+- author: "Mathew"
+  date: January 09, 2017
+  content: |
+    It might be my flash drive. I rented old 2.0 one.... and booted... All day lost because of the new flash drive.... O:)
 ---
 
 {% include posts/figure.html src="2016-09-08/chuwivi10plus.png" %}{:.massive}

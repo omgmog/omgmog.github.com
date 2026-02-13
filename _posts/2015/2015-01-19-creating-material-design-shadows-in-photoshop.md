@@ -3,6 +3,43 @@ comments_issue: 68
 title: Creating 'Material Design' shadows in Photoshop
 tags: [photoshop, design, guide]
 archived: true
+archived_comments:
+- author: "uucky"
+  date: May 17, 2015
+  content: |
+    Thank you very much! Really help!
+- author: "Stan Petkan"
+  date: June 02, 2015
+  content: |
+    That's helpful! Thanks a lot! Keep up the good work!
+- author: "edwnx"
+  date: July 14, 2015
+  content: |
+    Thank you!
+- author: "Edward Bernays"
+  date: July 28, 2015
+  content: |
+    You are the best kind of person. Thanks!
+- author: "Fayez Ahmed"
+  date: August 06, 2015
+  content: |
+    Thanks!
+- author: "Jon Lehman"
+  date: August 11, 2015
+  content: |
+    I think I love you
+- author: "JeremTheOuf"
+  date: June 20, 2016
+  content: |
+    the CC library link seems to be dead
+- author: "Franco Chan"
+  date: October 07, 2016
+  content: |
+    Thank for your share , love you
+- author: "Stephanie Seitz"
+  date: January 16, 2017
+  content: |
+    Thank you! This is super helpful!
 ---
 
 Somebody over on [Designer News](https://news.layervault.com/) asked how to re-create the various `z-height` shadow effects from [Google's Material Design](http://www.google.co.uk/design/spec/material-design/introduction.html) in Photoshop.

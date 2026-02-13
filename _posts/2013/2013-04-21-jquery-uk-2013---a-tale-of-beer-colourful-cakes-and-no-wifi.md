@@ -3,6 +3,15 @@ title: 'jQuery UK 2013 - A tale of beer, colourful cakes and no wifi'
 comments_issue: 100
 tags: [jquery, conference]
 archived: true
+archived_comments:
+- author: "thepandalion"
+  date: April 21, 2013
+  content: |
+    Great post! You collated the talk info and useful links really well and I love the collection of photos too. I wasn't at last year's jquk so it's interesting to hear how it compared too. Thanks! :)
+- author: "Max Glenister"
+  date: July 02, 2013
+  content: |
+    Well that's cool
 ---
 
 Yesterday I attended the second jQuery conference in the UK (the first being last year, which I blogged about [here](/post/jquery-uk-conference-2012/)).

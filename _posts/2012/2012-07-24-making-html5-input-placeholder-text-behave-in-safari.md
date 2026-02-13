@@ -3,6 +3,27 @@ comments_issue: 80
 title: Making HTML5 input placeholder text behave in Safari
 tags: [css, safari, web-development]
 archived: true
+archived_comments:
+- author: "Max Glenister"
+  date: May 31, 2013
+  content: |
+    Good to know, thanks!
+- author: "Remington"
+  date: June 22, 2013
+  content: |
+    I was having a problem with Safari 6 on the Mac, and your advice allowed me to solve the issue. So it would seem that this is still a problem on the Mac version of Safari 6 (at least in my experience).
+- author: "David"
+  date: July 08, 2013
+  content: |
+    Got the same problem on FF 21, fixed it by removing the line-height altogether.
+- author: "edydjunges"
+  date: July 08, 2013
+  content: |
+    Detect safari<script>var isSafari = /Constructor/.test(window.HTMLElement);if (isSafari) {document.documentElement.className+=' safari';}</script>Then use this css:.safari form input[type="text"] {line-height: normal;}
+- author: "joepolask"
+  date: April 11, 2014
+  content: |
+    Using javascript to detect the browser for safari works for me.
 ---
 Making assumptions during web development is never a good idea -- especially if your assumptions are about the way a new feature will behave across modern browsers. This is an issue because of two things:
 

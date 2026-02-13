@@ -3,6 +3,35 @@ comments_issue: 53
 title: Jekyll for dummies
 tags: [jekyll, github-pages, guide]
 archived: true
+archived_comments:
+- author: "Max Glenister"
+  date: March 14, 2014
+  content: |
+    Instead of referencing {{ post.content }}, simply use {{ content }}.
+- author: "Josh Kayani"
+  date: March 14, 2014
+  content: |
+    Thanks for the tip - no dice though, the markdown isn't being placed into the post.html file in my _layouts folder. I referenced in the front-matter the way the docs say to, but to no avail. Even if I start a new Jekyll site, the pre-loaded post doesn't use the post.html template in the _layouts folder. Is my install messed up?
+- author: "Ajk_P"
+  date: March 16, 2014
+  content: |
+    So what are the main pros and cons of using Jekyll for blogging compared to the usual WordPress or BlogSpot, which have a variety of plugins to do the job for you and additionally you can add in your own scripts.
+- author: "Max Glenister"
+  date: March 17, 2014
+  content: |
+    I mentioned the pros in the post above:- No hosting requirements besides being able to serve HTML and static files- No cumbersome templates or plugins- Security — no "Admin dashboard" to be logged in to, or to be hacked- Separated content from design- Content can be version controlled as it's just text!- Content written as markdown, so it's readable even with just the un-parsed files.- Can be hosted for free on GitHub Pages- You can use Ruby to write your own plugins, or use existing pluginsThe only cons I can see are that you have to a bit more tech savvy.
+- author: "erlend_sh"
+  date: March 29, 2014
+  content: |
+    Thank you so much for a Jekyll guide even I could follow! So happy to have my first ever Jekyll install up and running after being keen on it for over a year now.Question: Did anyone else experience the theme not being rendered for the jekyll-for-dummies.md page when you included the tags line?:tags: ["wow","such","tags"]I had to remove it in order for my new post to display properly. Are you sure tags are supported in vanilla Jekyll?
+- author: "erlend_sh"
+  date: March 29, 2014
+  content: |
+    As per my post above, try removing:tags: ["wow","such","tags"]That did it for me.
+- author: "Josh Kayani"
+  date: March 30, 2014
+  content: |
+    Hey thanks for the tips guys - I gave up trying to use it on Windows, since even the default theme wouldn't render correctly. I'm using an Ubuntu VM now, and it works perfectly! Thanks anyway.
 ---
 
 2014 has been [heralded](http://www.typeandgrids.com/blog/goodbye-wordpress-2014-will-be-the-year-of-flat-file-cmses) as "the year of flat-file websites". This blog in fact uses [Jekyll](http://jekyllrb.com) to generate the very blog post you are reading.
