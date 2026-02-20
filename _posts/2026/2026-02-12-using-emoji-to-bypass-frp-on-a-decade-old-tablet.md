@@ -14,11 +14,14 @@ I recently picked up two Pixel C tablets from a seller on eBay, along with the m
 
 I've been through a few Android and ChromeOS tablets over the years, from [the Nexus 7](/post/finally-a-post-about-the-nexus-7/) to [the Lenovo Duet](/post/using-chromebook-lenovo-ideapad-duet-in-2020/). The [Pixel C](https://blog.google/products-and-platforms/platforms/android/meet-pixel-c-our-take-on-tablet/) was Google's first tablet designed entirely in-house, released in December 2015. It was [originally intended to run Chrome OS](https://9to5google.com/2015/12/10/pixel-c-chrome-os-device/) before being pivoted to Android mid-development.
 
-- **Display**: 10.2-inch IPS LCD, 2560x1800 (308 ppi)
-- **Processor**: Nvidia Tegra X1, quad-core
-- **RAM**: 3 GB
-- **Storage**: 32 GB or 64 GB
-- **OS**: Android 6.0.1 at launch, final update Android 8.1
+| Feature | Details |
+|---------|---------|
+| **Display** | 10.2-inch IPS LCD, 2560x1800 (308 ppi) |
+| **Processor** | Nvidia Tegra X1, quad-core |
+| **RAM** | 3 GB |
+| **Storage** | 32 GB or 64 GB |
+| **OS** | Android 6.0.1 at launch, final update Android 8.1 |
+{:.massive}
 
 The keyboard attaches magnetically and charges inductively from the tablet itself. Quite slick for its time. Google stopped selling the Pixel C in 2017 and ended software support in June 2019, so the two I'm working with are running the final build they'll _ever_ get.
 
