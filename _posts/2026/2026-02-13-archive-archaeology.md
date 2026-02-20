@@ -6,9 +6,9 @@ tags: [web, nostalgia]
 
 I was talking to someone about [foobar2000](https://www.foobar2000.org/) and how prolific I'd been in the customisation scene back in the day. I knew I'd written up a detailed config somewhere, with screenshots and everything, but the domain was long gone and I hadn't thought about it in years. On a whim I punched moglenstar.net into the [Wayback Machine](https://web.archive.org/) and there it was, cached HTML from a site I'd let lapse almost two decades ago. That led to more searching.
 
-The earliest post on this blog used to be from October 2010. I knew there was older stuff out there, on domains I'd moved away from, but I'd assumed it was just _gone_. It wasn't. I ended up recovering 117 posts stretching back to January 2004, along with 348 archived comments, 81 images, and enough CSS nostalgia to make me wince.
-
 <!-- more -->
+
+The earliest post on this blog used to be from October 2010. I knew there was older stuff out there, on domains I'd moved away from, but I'd assumed it was just _gone_. It wasn't. I ended up recovering 117 posts stretching back to January 2004, along with 348 archived comments, 81 images, and enough CSS nostalgia to make me wince.
 
 ## The timeline
 
