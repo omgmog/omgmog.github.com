@@ -3,7 +3,7 @@
 {% if type contains "image" %}
 {% assign img_prefix = include.src | slice:0,4 %}
 {% if include.linkurl %}<a href="{{ include.linkurl }}">{% endif %}
-{%- capture src -%}{% if img_prefix contains 'http' %}{{include.src}}{% else %}{{ include.src | prepend:'/images/' | absolute_url}}{% endif %}{%- endcapture -%}
+{%- capture src -%}{% if img_prefix contains 'http' %}{{include.src}}{% else %}{{ include.src | prepend:'/images/' | relative_url }}{% endif %}{%- endcapture -%}
 {%- capture webp_src -%}{{ src }}.webp{%- endcapture -%}
 {%- capture alt -%}{% if include.alt %}{{ include.alt }}{% endif %}{%- endcapture -%}
 {%- assign is_gif = include.src | downcase | slice: -4, 4 -%}
@@ -28,6 +28,34 @@
 {%- capture blurb -%}{% if include.blurb %}{{ include.blurb }}{% endif %}{%- endcapture -%}
 <div class="blurb">{{ title | strip | markdownify }}
 {{ blurb | strip | markdownify }}</div>
+{% endif %}
+{% if type contains "audio" %}
+{%- assign audio_prefix = include.src | slice:0,4 -%}
+{%- capture audio_src -%}{% if audio_prefix contains 'http' %}{{ include.src }}{% else %}{{ include.src | prepend:'/images/' | relative_url }}{% endif %}{%- endcapture -%}
+{%- assign audio_ext = include.src | split: "." | last | downcase -%}
+{%- if audio_ext == "mp3" -%}{%- assign audio_type = "audio/mpeg" -%}
+{%- elsif audio_ext == "ogg" or audio_ext == "opus" -%}{%- assign audio_type = "audio/ogg" -%}
+{%- else -%}{%- assign audio_type = "audio/wav" -%}
+{%- endif -%}
+<audio class="figure-content" controls preload="auto">
+  <source src="{{ audio_src }}" type="{{ audio_type }}">
+</audio>
+{% if include.title %}<figcaption>{{ include.title | markdownify }}</figcaption>{% endif %}
+{% if include.transcript %}
+<div class="transcript">
+  {% assign turns = include.transcript | split: "||" %}
+  {% for turn in turns %}
+    {% assign turn_stripped = turn | strip %}
+    {% assign speaker = turn_stripped | split: ": " | first %}
+    {% assign text = turn_stripped | replace_first: speaker, "" | remove_first: ": " %}
+    {% if speaker == "Google" %}{% assign speaker_class = "speaker-google" %}{% elsif speaker == "Me" %}{% assign speaker_class = "speaker-me" %}{% else %}{% assign speaker_class = "speaker-caller" %}{% endif %}
+    <div class="transcript-turn {{ speaker_class }}">
+      <span class="transcript-text">{{ text }}</span>
+      <span class="speaker-label">{{ speaker }}</span>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
 {% endif %}
 {% if type contains "iframe" %}
 {% if include.src contains 'youtube.com' or include.src contains 'youtu.be' %}
