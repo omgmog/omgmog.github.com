@@ -12,12 +12,15 @@ I've gone through a few sets of Joy-Cons since buying my Switch back in 2018. Ev
 
 ## Specs
 
-- **Connectivity**: Bluetooth 2.1
-- **Joysticks**: Hall Effect
-- **Gyro**: 6-axis
-- **Battery**: 500mAh per side, ~6.5 hours, ~3 hours to charge
-- **Weight**: 350g (combined)
-- **Extras**: Dual vibration motors, 2 macro back buttons, turbo, RGB LEDs
+| Feature | Details |
+|---------|---------|
+| **Connectivity** | Bluetooth 2.1 |
+| **Joysticks** | Hall Effect |
+| **Gyro** | 6-axis |
+| **Battery** | 500mAh per side, ~6.5 hours, ~3 hours to charge |
+| **Weight** | 350g (combined) |
+| **Extras** | Dual vibration motors, 2 macro back buttons, turbo, RGB LEDs |
+{:.massive}
 
 ## Build and feel
 
