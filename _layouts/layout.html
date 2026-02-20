@@ -39,7 +39,7 @@
       <h1><a href="{{ site.data.author.home }}"><img src="{{"/assets/mog.svg"|relative_url}}" alt="A vectorized pixel-art picture of Max Glenister" /> Max Glenister</a></h1>
       <nav>
         {% for node in site.data.menu %}
-          {% capture is_blog_index_or_article %}{% if node.link == "/index.html" %}{% if page.url == "/" or page.content_type == "article" %}true{% else %}false{% endif %}{% else %}false{% endif %}{% endcapture %}
+          {% capture is_blog_index_or_article %}{% if node.link == "/index.html" %}{% if page.url == "/" or page.url == "/archive/" or page.content_type == "article" %}true{% else %}false{% endif %}{% else %}false{% endif %}{% endcapture %}
           {% capture is_current_page %}{% if page.url contains node.link %}true{% else %}false{% endif %}{% endcapture %}
           {% if is_blog_index_or_article=="true" or is_current_page=="true" %}
             {% assign active = true %}
