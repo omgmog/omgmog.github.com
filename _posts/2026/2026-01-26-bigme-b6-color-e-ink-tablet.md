@@ -14,18 +14,21 @@ The [Bigme B6 Color](https://bigmestore.com/products/bigme-b6-color-ereader-with
 
 ## Specs
 
-- **Display**: 6-inch Kaleido 3 colour e-ink (300 PPI B&W, 150 PPI colour)
-- **Resolution**: 1448 × 1072 (B&W), 724 × 536 (colour layer)
-- **Processor**: MediaTek Helio P35, Octa-core 2.3GHz
-- **RAM**: 4GB
-- **Storage**: 64GB (expandable via microSD up to 1TB)
-- **OS**: Android 14
-- **Battery**: 2100mAh
-- **Frontlight**: Warm/cool adjustable (36 white and amber LEDs)
-- **Connectivity**: Dual-band WiFi, Bluetooth, USB-C with OTG
-- **Audio**: Speaker, microphone
-- **Size**: 108 × 149 × 7mm
-- **Weight**: 176g
+| Feature | Details |
+|---------|---------|
+| **Display** | 6-inch Kaleido 3 colour e-ink (300 PPI B&W, 150 PPI colour) |
+| **Resolution** | 1448 × 1072 (B&W), 724 × 536 (colour layer) |
+| **Processor** | MediaTek Helio P35, Octa-core 2.3GHz |
+| **RAM** | 4GB |
+| **Storage** | 64GB (expandable via microSD up to 1TB) |
+| **OS** | Android 14 |
+| **Battery** | 2100mAh |
+| **Frontlight** | Warm/cool adjustable (36 white and amber LEDs) |
+| **Connectivity** | Dual-band WiFi, Bluetooth, USB-C with OTG |
+| **Audio** | Speaker, microphone |
+| **Size** | 108 × 149 × 7mm |
+| **Weight** | 176g |
+{:.massive}
 
 ## The display
 
