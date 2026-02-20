@@ -22,6 +22,7 @@ layout: none
         <h1>
           <xsl:value-of select="a:title"/>
         </h1>
+        <p>This is an RSS feed. You can subscribe to it with a feed reader. See the <a href="{{ '/archive/' | relative_url }}">full archive</a> for all posts.</p>
         <ul>
           <xsl:apply-templates/>
         </ul>

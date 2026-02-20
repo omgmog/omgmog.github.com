@@ -18,7 +18,7 @@ layout: null
     </author>
     {% assign feed_icon = site.icon | default: site.data.author.avatar %}
     {% if feed_icon %}<icon>{{ feed_icon }}</icon>{% endif %}
-    {% for post in all_posts limit:1000 %}
+    {% for post in all_posts limit:25 %}
     <entry>
         <title type="html">{{ post.title | xml_escape }}</title>
         <link href="{{ post.url | absolute_url }}" rel="alternate" type="text/html" title="{{ post.title | xml_escape }}" />
