@@ -24,7 +24,7 @@
   <link rel="pingback" href="https://webmention.io/omgmog.net/xmlrpc" />
 
   <link rel="icon" type="image/png" href="{{ site.data.author.avatar }}">
-  <link rel="stylesheet" href="{{ "/assets/style.css" | absolute_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}">
+  <link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}">
 
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | absolute_url }}">
   {% if page.alternates %}
@@ -36,7 +36,7 @@
 <body>
   <header class="main-header">
     <div class="inner">
-      <h1><a href="{{ site.data.author.home }}"><img src="{{"/assets/mog.svg"|absolute_url}}" alt="A vectorized pixel-art picture of Max Glenister" /> Max Glenister</a></h1>
+      <h1><a href="{{ site.data.author.home }}"><img src="{{"/assets/mog.svg"|relative_url}}" alt="A vectorized pixel-art picture of Max Glenister" /> Max Glenister</a></h1>
       <nav>
         {% for node in site.data.menu %}
           {% capture is_blog_index_or_article %}{% if node.link == "/index.html" %}{% if page.url == "/" or page.content_type == "article" %}true{% else %}false{% endif %}{% else %}false{% endif %}{% endcapture %}
@@ -58,7 +58,7 @@
   <hr>
   <footer class="main-footer">
     <div class="p-author h-card post-bio">
-      <img src="{{"/assets/mog.svg"|absolute_url}}" alt="A vectorized pixel-art picture of Max Glenister" class="u-photo" loading="lazy"/>
+      <img src="{{"/assets/mog.svg"|relative_url}}" alt="A vectorized pixel-art picture of Max Glenister" class="u-photo" loading="lazy"/>
       <div class="h-card-inner">
           {{ site.data.author.bio_rich | markdownify | replace: '<p>', '<p class="p-note">' }}
 

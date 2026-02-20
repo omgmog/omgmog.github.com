@@ -13,7 +13,7 @@ layout: none
         <title>
           <xsl:value-of select="a:title"/>
         </title>
-        <link rel="stylesheet" href="{{ 'assets/style.css' | absolute_url }}" />
+        <link rel="stylesheet" href="{{ 'assets/style.css' | relative_url }}" />
         <style>
         ul { margin: 0; padding: 0; list-style: none;}
         </style>
