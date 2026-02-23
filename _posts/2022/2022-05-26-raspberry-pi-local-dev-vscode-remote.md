@@ -1,6 +1,6 @@
 ---
 title: Using a Raspberry Pi to Host a local Visual Studio Code Server
-tags: [raspberry-pi, guide]
+tags: [raspberry-pi, linux, nas, guide]
 comments_issue: 117
 syndication:
   - https://social.omgmog.net/2022/-a-new-blog-post-using-a
@@ -151,3 +151,5 @@ This is the setup I've been using for a couple of days now. I've been gradually 
 I had originally tried this setup on a Raspberry Pi Zero W 2 but found that it wasn't powerful enough to run Visual Studio Code Server and my development stack without regularly crashing or taking a long time to build. 
 
 Luckily the SD card I had setup for the Raspberry Pi Zero W 2 worked just fine in the Raspberry Pi 4 so I didn't hsve to configure everything from scratch when moving it over.
+
+_**Update, February 2026:** I've since replaced the Pi with a proper mini-PC and NAS setup. See [Building a Home NAS from Mostly Spare Parts](/post/building-a-home-nas-from-mostly-spare-parts/)._
