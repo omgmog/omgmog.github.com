@@ -21,6 +21,13 @@ image_files.each do |image_file|
   begin
     webp_path = "#{image_file}.webp"
 
+    # Check if WebP already exists in destination (restored from cache)
+    if File.exist?(webp_path)
+      puts "Image Optimizer: Skipping #{File.basename(image_file)} - WebP cached"
+      skipped_count += 1
+      next
+    end
+
     # Check if source already has this exact WebP file
     source_webp = image_file.sub(dest, source) + '.webp'
     if File.exist?(source_webp)
