@@ -2,6 +2,9 @@
 title: Downgrading the OnePlus 7 Pro for LineageOS
 comments_issue: 133
 tags: [guide, android]
+syndication:
+  - https://social.omgmog.net/2026/postdowngrading-the-oneplus-7-pro-for-lineageos
+  - https://indieweb.social/@omgmog/116012252580686372
 ---
 
 I've had a OnePlus 7 Pro sitting in a drawer for a couple of years. I used it from 2019, found it too big, got a Pixel 5a, and now I'm on the Pixel 7a. The usual thing, fiddling with an old gadget that's been kicking about doing nothing. It's a nice phone with nice features. Shame it's stuck on such an old version of Android. Time to get LineageOS on there.

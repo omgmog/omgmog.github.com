@@ -2,6 +2,9 @@
 title: "The Mangmi Air X"
 comments_issue: 123
 tags: [review, handheld, retro-gaming, android]
+syndication:
+  - https://social.omgmog.net/2025/ive-been-playing-with-a-new-android
+  - https://indieweb.social/@omgmog/115632976758166558
 ---
 
 Back in 2015 when I reviewed devices like the GPD XD and similar Android handhelds, the whole ecosystem felt half-baked. Emulation wasn't particularly good yet, the devices came from obscure Chinese manufacturers, the ROMs were loaded with questionable apps, and the SOCs couldn't handle much.

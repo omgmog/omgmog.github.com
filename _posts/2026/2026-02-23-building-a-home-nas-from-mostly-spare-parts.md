@@ -2,6 +2,9 @@
 title: Building a Home NAS from Mostly Spare Parts
 comments_issue: 138
 tags: [linux, nas, guide]
+syndication:
+  - https://social.omgmog.net/2026/new-blog-post-building-a-home-nas
+  - https://indieweb.social/@omgmog/116120634329000893
 ---
 
 I've had a SNUNMU GK3 mini-PC kicking about since early-2023, barely used. An impulse buy that ended up on a shelf, alongside a drawer full of old drives from various machines and NAS attempts that never quite came together. Picking up a 5-bay USB enclosure finally gave me a reason to use all of it. It's not polished and it's not redundant, but it's simple, flexible, and entirely under my control.

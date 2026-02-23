@@ -2,6 +2,9 @@
 title: Plugins instead of patches
 comments_issue: 131
 tags: [known, indieweb, php]
+syndication:
+  - https://social.omgmog.net/2026/this-is-getting-very-metapostplugins-instead-of-patches
+  - https://indieweb.social/@omgmog/115973704081587647
 ---
 
 I've been running [Known](https://withknown.com/) as [my social posting hub](https://social.omgmog.net) for a while now. It's a solid IndieWeb-friendly CMS that handles status updates, photos, and syndication to various silos. Recently I upgraded my instance for the first time in about four years, which meant dealing with all the little tweaks I'd made to core templates over that time.
