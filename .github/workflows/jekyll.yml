@@ -31,17 +31,19 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
-
       - name: Restore image cache
         id: image-cache
         uses: actions/cache@v4
         with:
           path: _site/images/**/*.webp
           key: images-${{ hashFiles('images/**/*') }}
+          restore-keys: |
+            images-
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
 
       - name: Install ImageMagick
         if: steps.image-cache.outputs.cache-hit != 'true'
