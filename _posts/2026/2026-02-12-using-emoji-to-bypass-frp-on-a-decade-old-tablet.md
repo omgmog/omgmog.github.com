@@ -3,6 +3,9 @@ title: Using emoji to bypass FRP on a decade-old tablet
 comments_issue: 135
 tags: [android, hardware, emoji]
 header_background: "/images/2026-02/background-emoji-frp.png"
+syndication:
+  - https://social.omgmog.net/2026/postusing-emoji-to-bypass-frp-on-a-decade-old-tablet
+  - https://indieweb.social/@omgmog/116057161151075247
 ---
 I recently picked up two Pixel C tablets from a seller on eBay, along with the magnetic keyboard. One tablet had a cracked screen but worked fine and wasn't locked. The other was cosmetically perfect but the display was completely black. I figured between the two I could end up with at least one working tablet.
 
