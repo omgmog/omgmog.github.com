@@ -11,7 +11,7 @@ archived_comments:
 - author: "lance"
   date: March 29, 2014
   content: |
-    Thanks, this was helpful. I added an else to the original IF statement and found that I had to change "post.content | size" to "post.content.size" for it to match on size. Either way, thanks for sharing.
+    Thanks, this was helpful. I added an else to the original IF statement and found that I had to change "post.content \| size" to "post.content.size" for it to match on size. Either way, thanks for sharing.
 - author: "achmad"
   date: October 24, 2015
   content: |
