@@ -58,5 +58,5 @@
 <iframe class="figure-content" src="{{ include.src|replace:'http:','' }}" width="600" height="350"></iframe>
 {% endif %}
 {% endif %}
-{% if include.title %}<figcaption>{{ include.title | markdownify }}</figcaption>{% endif %}
+{% unless type contains "image-with-blurb" %}{% if include.title %}<figcaption>{{ include.title | markdownify }}</figcaption>{% endif %}{% endunless %}
 </figure>
