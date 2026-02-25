@@ -573,23 +573,40 @@ body {
       display: flex;
       flex-direction: row;
       margin-bottom: 2rem;
+      gap: 1rem;
+      align-items: center;
 
-      img {
-        width: 30%;
-        margin: 0 1rem auto 0;
-        filter: none;
+      picture {
+        width: 15rem;
+        flex-grow: 0;
+        order: 1;
+
+        img {
+          width: 100%;
+          margin: auto;
+          height: auto;
+          filter: none;
+        }
       }
 
       &.small {
-        img {
-          width: 20%;
-          margin-left: 5%;
-          margin-right: calc(1rem + 5%);
+        picture {
+          width: 10rem;
         }
       }
       .blurb {
+        flex: 1;
         :first-child {
           margin-top: 0;
+        }
+      }
+
+      @include mq('max', $bp-phone) {
+        flex-direction: column;
+
+        picture {
+          width: 100%;
+          order: 0;
         }
       }
     }
