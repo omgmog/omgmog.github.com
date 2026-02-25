@@ -1,7 +1,7 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2026-02-25T10:50:31
+last_modified_at: 2026-02-25T10:59:48
 ---
 
 This is what I'm currently up to and what I'm using to do it. If the timestamp below says it's been a while since this page was last updated, maybe [give me a poke](https://social.omgmog.net) or something? ([What's a now page?](https://nownownow.com))
@@ -38,7 +38,7 @@ Currently using the following:
 
 {% include global/wide-h3.html text="Work" %}
 
-I'm currently working as a _Senior Full Stack Developer_ at [Consultant Connect](http://consultantconnect.org.uk/).
+I'm currently working as a _Senior Full-stack Developer_ at [Consultant Connect](http://consultantconnect.org.uk/), working with Django, Angular, Sass and Dart/Flutter. My focus is on interface design and front-end development. You can find out more on [my portfolio](https://omgmog.net).
 
 {% include global/wide-h3.html text="Projects" %}
 
