@@ -1,46 +1,36 @@
 {%- capture type -%}{{ include.type | default:"image"}}{%- endcapture -%}
+{%- assign src_prefix = include.src | slice:0,4 -%}
+{%- assign is_external = false -%}
+{%- if src_prefix contains 'http' -%}{%- assign is_external = true -%}{%- endif -%}
+{%- assign src_suffix = include.src | split: "." | last | downcase -%}
+{%- assign alt = include.alt | default: "" -%}
+{%- capture src -%}{% if is_external %}{{ include.src }}{% else %}{{ include.src | prepend:'/images/' | relative_url }}{% endif %}{%- endcapture -%}
 <figure class="{{ type }} {{ include.class }}">
 {% if type contains "image" %}
-{% assign img_prefix = include.src | slice:0,4 %}
-{% if include.linkurl %}<a href="{{ include.linkurl }}">{% endif %}
-{%- capture src -%}{% if img_prefix contains 'http' %}{{include.src}}{% else %}{{ include.src | prepend:'/images/' | relative_url }}{% endif %}{%- endcapture -%}
 {%- capture webp_src -%}{{ src }}.webp{%- endcapture -%}
-{%- capture alt -%}{% if include.alt %}{{ include.alt }}{% endif %}{%- endcapture -%}
-{%- assign is_gif = include.src | downcase | slice: -4, 4 -%}
-{% if img_prefix contains 'http' or is_gif == '.gif' %}
-  {%- comment -%}External image or GIF, no WebP{%- endcomment -%}
-  <img src="{{ src }}" loading="lazy" alt="{{alt}}">
-{% elsif jekyll.environment == "production" %}
-  {%- comment -%}Production: Use WebP with fallback{%- endcomment -%}
-  <picture>
-    <source srcset="{{ webp_src }}" type="image/webp">
-    <img src="{{ src }}" loading="lazy" alt="{{alt}}">
-  </picture>
-{% else %}
-  {%- comment -%}Development: Use original image only{%- endcomment -%}
-  <img src="{{ src }}" loading="lazy" alt="{{alt}}">
-{% endif %}
-{% if include.title %}<figcaption>{{ include.title | markdownify }}</figcaption>{% endif %}
+{% if include.linkurl %}<a href="{{ include.linkurl }}">{% endif %}
+<picture>
+  {% if jekyll.environment == "production" and is_external == false and src_suffix != 'gif' %}
+  <source srcset="{{ webp_src }}" type="image/webp">
+  {% endif %}
+  <img src="{{ src }}" loading="lazy" alt="{{ alt }}">
+</picture>
 {% endif %}
 {% if include.linkurl %}</a>{% endif %}
 {% if type contains "image-with-blurb" %}
 {%- capture title -%}{% if include.title %}{% capture level %}{{ include.level | default:4 }}{% endcapture %}{% for i in (1..level) %}#{% endfor %} {{ include.title }}{% endif %}{%- endcapture -%}
-{%- capture blurb -%}{% if include.blurb %}{{ include.blurb }}{% endif %}{%- endcapture -%}
+{%- assign blurb = include.blurb | default: "" -%}
 <div class="blurb">{{ title | strip | markdownify }}
 {{ blurb | strip | markdownify }}</div>
 {% endif %}
 {% if type contains "audio" %}
-{%- assign audio_prefix = include.src | slice:0,4 -%}
-{%- capture audio_src -%}{% if audio_prefix contains 'http' %}{{ include.src }}{% else %}{{ include.src | prepend:'/images/' | relative_url }}{% endif %}{%- endcapture -%}
-{%- assign audio_ext = include.src | split: "." | last | downcase -%}
-{%- if audio_ext == "mp3" -%}{%- assign audio_type = "audio/mpeg" -%}
-{%- elsif audio_ext == "ogg" or audio_ext == "opus" -%}{%- assign audio_type = "audio/ogg" -%}
+{%- if src_suffix == "mp3" -%}{%- assign audio_type = "audio/mpeg" -%}
+{%- elsif src_suffix == "ogg" or src_suffix == "opus" -%}{%- assign audio_type = "audio/ogg" -%}
 {%- else -%}{%- assign audio_type = "audio/wav" -%}
 {%- endif -%}
 <audio class="figure-content" controls preload="auto">
-  <source src="{{ audio_src }}" type="{{ audio_type }}">
+  <source src="{{ src }}" type="{{ audio_type }}">
 </audio>
-{% if include.title %}<figcaption>{{ include.title | markdownify }}</figcaption>{% endif %}
 {% if include.transcript %}
 <div class="transcript">
   {% assign turns = include.transcript | split: "||" %}
@@ -61,11 +51,12 @@
 {% if include.src contains 'youtube.com' or include.src contains 'youtu.be' %}
 {% comment %}Youtube. Make it a lazy loader... {% endcomment %}
 <div data-src="{{ include.src|replace:'http:','' }}" class="figure-content placeholder" width="600" height="350">
-    <img src="https://img.youtube.com/vi/{{ include.src|split:'/'|last|split:'?'|first}}/0.jpg" loading="lazy"/>
+  <img src="https://img.youtube.com/vi/{{ include.src|split:'/'|last|split:'?'|first}}/0.jpg" loading="lazy"/>
 </div>
 {% else %}
 {% comment %}Some other sort of iframe then... {% endcomment %}
 <iframe class="figure-content" src="{{ include.src|replace:'http:','' }}" width="600" height="350"></iframe>
 {% endif %}
 {% endif %}
+{% if include.title %}<figcaption>{{ include.title | markdownify }}</figcaption>{% endif %}
 </figure>
