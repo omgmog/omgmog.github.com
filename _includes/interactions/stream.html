@@ -43,6 +43,6 @@
   </div>
 </section>
 
-<link rel="stylesheet" href="{{ '/assets/interactions.css' | absolute_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}" />
-<script src="{{ '/assets/marked.min.js' | absolute_url }}"></script>
-<script src="{{ '/assets/interactions.js' | absolute_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}"></script>
+<link rel="stylesheet" href="{{ '/assets/interactions.css' | relative_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}" />
+<script src="{{ '/assets/marked.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/interactions.js' | relative_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}"></script>

@@ -18,7 +18,11 @@ layout: layout
 {% endif %}
 
 {% assign post_year = post.date | date: "%Y" | plus: 0 %}
-{% include posts/era-vars.html %}
+{% if post.archive %}
+  {% include posts/era-vars.html %}
+{% else %}
+  {% assign era_class = "" %}{% assign era_notice = "" %}
+{% endif %}
 
 <article class="post h-entry{{ era_class }}">
   <header>
@@ -36,9 +40,9 @@ layout: layout
       </div>
       <div class="post-meta-secondary">
         {% include interactions/count.html %}
-        {% include global/types.html %}
       </div>
     </div>
+    <hr>
   </header>
 {% assign cutoff_year = 2020 | plus: 0 %}
 {% assign archive_check = post.archived | default: false %}

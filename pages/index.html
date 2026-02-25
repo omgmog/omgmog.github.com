@@ -4,10 +4,20 @@ title: Blog
 ---
 
 {% assign posts = site.posts | concat: site.cardboctober | sort:'date' | reverse %}
+{% assign post = posts | first %}
+
+<div class="post-featured">
+  <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  {% if post.excerpt %}{{ post.excerpt | strip_html | markdownify }}{% endif %}
+  <div class="post-item-meta">
+    <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+    <a class="btn" href="{{ post.url }}">Read more</a>
+  </div>
+</div>
 
 <ul class="post-list">
-{% for post in posts limit:20 %}
-  {% include global/post-list-item.html hide_dates="true" %}
+{% for post in posts offset:1 limit:19 %}
+  {% include global/post-list-item.html hide_types="true" hide_dates="true" %}
 {% endfor %}
 </ul>
 
