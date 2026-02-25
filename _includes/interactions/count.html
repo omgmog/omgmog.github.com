@@ -40,36 +40,47 @@
     </span>
 </a>
 <script>
-    let counts = {};
-    // pageURL is actually an array and could contain multiple URLs
-    pageURL.forEach(url => {  
-        fetch(`https://webmention.io/api/count.json?target=${url}`)
-        .then(response => response.json())
-        .then(data => {
-            const element = document.querySelector('.interaction-stats');
-            if (data.count > 0) {
-                const keys = Object.keys(data.type);
-                const VERBS = {
-                    bookmark: ['Bookmark', 'Bookmarks'],
-                    like: ['Like', 'Likes'],
-                    mention: ['Mention', 'Mentions'],
-                    reply: ['Reply', 'Replies'],
-                    repost: ['Repost', 'Reposts']
-                }
-                keys.forEach(key => {
-                    const parent = element.querySelector(`.${key}`);
-                    const value = parent.querySelector('.value');
-                    
-                    counts[key] = (counts[key] || 0) + data.type[key];
-
-                    if (counts[key] > 0) {
-                        value.innerHTML = counts[key];
-                        parent.title = `${counts[key]} ${VERBS[key][counts[key] == 1 ? 0 : 1]}`
-                        parent.removeAttribute('style');
-                    }
-                });
-                element.removeAttribute('style');
-            }
-        });
-    });
+try {
+    const _b64 = btoa(pageURL[0]);
+    const VERBS = {
+        bookmark: ['Bookmark', 'Bookmarks'],
+        like: ['Like', 'Likes'],
+        mention: ['Mention', 'Mentions'],
+        reply: ['Reply', 'Replies'],
+        repost: ['Repost', 'Reposts']
+    };
+    const el = document.querySelector('.interaction-stats');
+    if (el) {
+        const _applyCounts = counts => {
+            Object.entries(counts).forEach(([key, count]) => {
+                const parent = el.querySelector(`.${key}`);
+                if (!parent) return;
+                parent.querySelector('.value').innerHTML = count;
+                parent.title = `${count} ${VERBS[key][count === 1 ? 0 : 1]}`;
+                parent.removeAttribute('style');
+            });
+            if (Object.keys(counts).length > 0) el.removeAttribute('style');
+        };
+        const _mentions = JSON.parse(localStorage.getItem(`interactions-mentions-${_b64}`));
+        if (_mentions?.data?.length) {
+            const counts = {};
+            _mentions.data.forEach(m => {
+                if (m.type && VERBS[m.type]) counts[m.type] = (counts[m.type] || 0) + 1;
+            });
+            _applyCounts(counts);
+        }
+        const commentSpan = el.querySelector('.comment');
+        const archivedCount = parseInt(commentSpan?.dataset?.archivedCount || '0', 10);
+        const _comments = JSON.parse(localStorage.getItem(`interactions-comments-${_b64}`));
+        const githubCount = _comments?.data?.length || 0;
+        const totalCount = archivedCount + githubCount;
+        if (totalCount > 0 && commentSpan) {
+            const valueSpan = commentSpan.querySelector('.value');
+            if (valueSpan) valueSpan.textContent = totalCount;
+            commentSpan.title = `${totalCount} Comment${totalCount === 1 ? '' : 's'}`;
+            commentSpan.removeAttribute('style');
+            el.removeAttribute('style');
+        }
+    }
+} catch(e) {}
 </script>

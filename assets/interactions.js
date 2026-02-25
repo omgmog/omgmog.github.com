@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    if (!'fetch' in window) return;
+    if (!('fetch' in window)) return;
 
     const GH_FETCH_OPTS = {Accept: "application/vnd.github.v3.full+json", cache: "force-cache"};
   
@@ -106,6 +106,14 @@
     const pageURL_base64 = (typeof pageURL !== 'undefined' && pageURL && pageURL[0]) 
         ? btoa(pageURL[0]) 
         : btoa(window.location.href);
+
+    const VERBS = {
+        bookmark: ['Bookmark', 'Bookmarks'],
+        like: ['Like', 'Likes'],
+        mention: ['Mention', 'Mentions'],
+        reply: ['Reply', 'Replies'],
+        repost: ['Repost', 'Reposts']
+    };
 
     const module = {};
 
@@ -215,9 +223,7 @@
         }
         
         let template = type.template;
-        const attributes = Object.keys(type.attributes);
-        for (const index in attributes) {
-            const attribute = attributes[index];
+        for (const attribute of Object.keys(type.attributes)) {
             let value = data[type.attributes[attribute]];
 
             // generally try and fallback for values
@@ -330,7 +336,6 @@
         canvas.width = 14;
         canvas.height = 14;
         const context = canvas.getContext('2d');
-        const r = 1;
 
         if (text_value) {
             for (
@@ -344,7 +349,7 @@
                 if (i >= 28) {
                     // seed state
                     r += text_value.charCodeAt(i - 28);
-                    context.fillStyle = '#' + ((r >> 8) & 0xffffff).toString(16).padStart(0, 6);
+                    context.fillStyle = '#' + ((r >> 8) & 0xffffff).toString(16).padStart(6, '0');
                 } else {
                     // draw pixel
                     if (r >>> 29 > (X * X) / 3 + Y / 2) {
@@ -383,6 +388,35 @@
         }
     };
 
+
+    module.updateWebmentionCounts = () => {
+        const data = interactions.webmentions?.data;
+        if (!data || !Array.isArray(data)) return;
+
+        const counts = {};
+        data.forEach(mention => {
+            if (mention.type && VERBS[mention.type]) {
+                counts[mention.type] = (counts[mention.type] || 0) + 1;
+            }
+        });
+
+        const element = document.querySelector('.interaction-stats');
+        if (!element) return;
+
+        Object.entries(counts).forEach(([key, count]) => {
+            const parent = element.querySelector(`.${key}`);
+            if (!parent) return;
+            const value = parent.querySelector('.value');
+            if (!value) return;
+            value.innerHTML = count;
+            parent.title = `${count} ${VERBS[key][count === 1 ? 0 : 1]}`;
+            parent.removeAttribute('style');
+        });
+
+        if (Object.keys(counts).length > 0) {
+            element.removeAttribute('style');
+        }
+    };
 
     module.renderArchivedComments = () => {
         const archivedCommentsSection = document.querySelector('#archived-comments');
@@ -506,12 +540,12 @@
         return reset.getTime() > now;
     };
 
-    // is it more than an hour old?
+    // is it more than half an hour old?
     const now = Date.now();
     const halfHour = 30 * 60 * 1000;
     let interactions = {
         date: module.loadData(`interactions-date-${pageURL_base64}`) || now - halfHour - 1,
-        comments: module.loadData(`interactions-comments-${pageURL_base64}`) || {type:'comment',state:'closed',data:[]},
+        comments: githubIssueID ? (module.loadData(`interactions-comments-${pageURL_base64}`) || {type:'comment',state:'closed',data:[]}) : {type:'comment',state:'closed',data:[]},
         webmentions: module.loadData(`interactions-mentions-${pageURL_base64}`) || {}
     };
 
@@ -519,9 +553,80 @@
         module.renderThings(interactions.webmentions);
         module.renderThings(interactions.comments);
         module.updateCommentCount(interactions.comments?.data?.length || 0);
+        module.updateWebmentionCounts();
         module.checkForFailedAvatars();
         module.renderArchivedComments();
     }
+
+    module.fetchAndCache = async (what = ['comments', 'webmentions']) => {
+        module.saveData(Date.now(), `interactions-date-${pageURL_base64}`);
+
+        if (what.includes('comments') && githubIssueID) {
+            const storedReset = module.getStoredRateLimitReset();
+            if (storedReset && storedReset.getTime() > Date.now()) {
+                module.showRateLimitMessage(storedReset);
+                module.updateRetryButtonState(storedReset);
+                return;
+            }
+            try {
+                const issue = await module.fetchGithubIssue(githubIssueID);
+                if (!issue || issue.error) {
+                    if (issue?.error === 'rate_limit' && issue.resetTime) {
+                        module.showRateLimitMessage(issue.resetTime);
+                        module.updateRetryButtonState(issue.resetTime);
+                    } else if (issue?.error === 'gone') {
+                        module.showCommentsClosed();
+                    }
+                    return;
+                }
+                const comments = await module.fetchGithubComments(issue);
+                if (comments?.error) {
+                    if (comments.error === 'rate_limit' && comments.resetTime) {
+                        module.showRateLimitMessage(comments.resetTime);
+                        module.updateRetryButtonState(comments.resetTime);
+                    }
+                    return;
+                }
+                module.hideRateLimitMessage();
+                module.clearStoredRateLimit();
+                module.updateRetryButtonState();
+                interactions.comments = {
+                    type: 'comment',
+                    state: issue.state || 'closed',
+                    data: (Array.isArray(comments) ? comments : []).map(comment => Object.assign(comment, { type: 'comment' }))
+                };
+                module.saveData(interactions.comments, `interactions-comments-${pageURL_base64}`);
+                module.updateCommentCount(interactions.comments.data.length);
+            } catch (error) {
+                console.warn('Error fetching comments:', error);
+            }
+        }
+
+        if (what.includes('webmentions') && pageURL) {
+            interactions.webmentions = { type: 'webmention', data: [] };
+            try {
+                const allMentions = await Promise.all(pageURL.map(url => module.fetchWebmentions(url).catch(e => null)));
+                allMentions.forEach(mentions => {
+                    if (!mentions || !mentions.children || !Array.isArray(mentions.children)) return;
+                    const validMentions = mentions.children
+                        .filter(mention => mention && mention['wm-property'])
+                        .map(mention => Object.assign(mention, {
+                            type: mention['wm-property']
+                                .replace('in-reply-to', 'reply')
+                                .replace('-of', '')
+                        }));
+                    const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
+                    interactions.webmentions.data = interactions.webmentions.data.concat(
+                        validMentions.filter(m => !existingIds.has(m['wm-id']))
+                    );
+                });
+                module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
+                module.updateWebmentionCounts();
+            } catch (error) {
+                console.warn('Error fetching webmentions:', error);
+            }
+        }
+    };
 
     module.fetchAndRender = async (what = ['comments', 'webmentions']) => {
         module.saveData(Date.now(), `interactions-date-${pageURL_base64}`);
@@ -602,12 +707,16 @@
                                 .replace('-of', '')
                         }));
 
-                    interactions.webmentions.data = [...new Set(interactions.webmentions.data.concat(validMentions))];
+                    const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
+                    interactions.webmentions.data = interactions.webmentions.data.concat(
+                        validMentions.filter(m => !existingIds.has(m['wm-id']))
+                    );
                 });
 
                 module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
-                module.clearItems('webmentions');
+                module.clearItems(['webmentions']);
                 module.renderThings(interactions.webmentions);
+                module.updateWebmentionCounts();
                 module.checkForFailedAvatars();
             } catch (error) {
                 console.warn('Error fetching and rendering webmentions:', error);
@@ -616,7 +725,7 @@
 
         module.renderArchivedComments();
     };
-    module.renderFetchDate = _ => {
+    module.renderFetchDate = () => {
         const fetchedDateElement = document.querySelector('#mentions-last-fetched');
         if (!fetchedDateElement) return;
         
@@ -699,29 +808,42 @@
     } else {
         module.updateRetryButtonState();
     }
-    // Also some initial hidey showy stuff
-    if (!githubIssueID) {
-        const commentsClosed = document.querySelector('.comments-closed');
-        const commentsOpen = document.querySelector('.comments-open');
-        if (commentsClosed) commentsClosed.style.display = 'initial';
-        if (commentsOpen) commentsOpen.style.display = 'none';
+    // Update count icons immediately from cached data
+    module.updateCommentCount(interactions.comments?.data?.length || 0);
+    module.updateWebmentionCounts();
+
+    // Fetch fresh data eagerly if cache is stale — saves to localStorage and updates counts,
+    // but does not render the stream (that happens lazily on scroll)
+    let fetchPromise = null;
+    if (new Date(interactions.date) < (now - halfHour)) {
+        fetchPromise = module.fetchAndCache();
     }
 
-    // Initialize comment count (for archived-only posts or to set tooltip)
-    module.updateCommentCount(0);
-
-    // Render from fetch or localStorage
-    try {
-        if (new Date(interactions.date) < (now - halfHour)) {
-            module.fetchAndRender();
-        } else {
+    // Defer stream rendering until #interactions is visible
+    const interactionsSection = document.querySelector('#interactions');
+    const renderOnVisible = async () => {
+        try {
+            if (fetchPromise) await fetchPromise;
+            module.renderAll();
+        } catch (error) {
+            console.warn('Error during initial render:', error);
             module.renderAll();
         }
-    } catch (error) {
-        console.warn('Error during initial render:', error);
-        // Fallback to empty state
-        module.renderAll();
+        module.renderFetchDate();
+    };
+
+    if (interactionsSection && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    observer.disconnect();
+                    renderOnVisible();
+                }
+            },
+            { rootMargin: '200px' }
+        );
+        observer.observe(interactionsSection);
+    } else {
+        renderOnVisible();
     }
-    
-    module.renderFetchDate(); 
 }());
