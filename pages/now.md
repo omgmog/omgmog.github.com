@@ -1,14 +1,10 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2025-12-24T12:00:00
+last_modified_at: 2026-02-25T10:50:31
 ---
 
-Welcome to my "Now" page! 'What is a "Now" page?' you ask? Here's how [nownownow.com](https://nownownow.com) describes it:
-
-> [&hellip;] a website with a link that says “now” goes to a page that tells you what this person is focused on at this point in their life. For short, we call it a “now page”.
-
-So basically yeah, this is what I'm currently up to and what I'm using to do it. If the timestamp below says it's been a while since this page was last updated, maybe [give me a poke](https://social.omgmog.net) or something?
+This is what I'm currently up to and what I'm using to do it. If the timestamp below says it's been a while since this page was last updated, maybe [give me a poke](https://social.omgmog.net) or something? ([What's a now page?](https://nownownow.com))
 
 {% if page.last_modified_at %}
 {:.updated}
@@ -42,17 +38,21 @@ Currently using the following:
 
 {% include global/wide-h3.html text="Work" %}
 
-I'm currently Working as a _Senior Full Stack Developer_ at [Consultant Connect](http://consultantconnect.org.uk/).
+I'm currently working as a _Senior Full Stack Developer_ at [Consultant Connect](http://consultantconnect.org.uk/).
 
 {% include global/wide-h3.html text="Projects" %}
 
 {% assign projects = site.data.projects | where:"now","true" %}
+{% if projects.size > 0 %}
 {% for project in projects %}
 #### [{{ project.title }}]({{ project.link }})
 {{ project.description | markdownify }}
 {% if project.img %}<div class="img-grid count-{{project.img | size }}">{% for img in project.img %}{% assign _img = img | absolute_url %}{% include posts/figure.html src=_img class="center" %}{% endfor %}</div>{% endif %}
 {% if project.embed %}{{ project.embed }}{% endif %}
 {% endfor %}
+{% else %}
+Nothing notable on the go right now.
+{% endif %}
 
 {% include global/wide-h3.html text="Social media" %}
 

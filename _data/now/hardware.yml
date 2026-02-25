@@ -3,10 +3,25 @@
 - title: Watch
   value: "[Google Pixel Watch 2](https://en.wikipedia.org/wiki/Pixel_Watch_2)"
 - title: Portables
-  values: 
+  values:
     - "MacBook Pro M4 Pro 16\" 2024"
     - "MacBook Pro M2 Max 16\" 2023"
     - "MacBook Pro Retina 13\" 2015"
+    - "[Lenovo Ideapad Duet Chromebook](https://web.archive.org/web/*/https://www.lenovo.com/gb/en/laptops/lenovo/student-chromebooks/Lenovo-CT-X636/p/ZZICZCTCT1X), [Review](/post/using-chromebook-lenovo-ideapad-duet-in-2020)"
+    - "[Google Pixel C](https://en.wikipedia.org/wiki/Pixel_C), [bypassing FRP](/post/using-emoji-to-bypass-frp-on-a-decade-old-tablet)"
+- title: Games systems
+  values:
+    - "[Mangmi Air X](https://mangmi.com/products/mangmi-air-x), [Review](/post/review-mangmi-air-x)"
+    - "[Steam Deck (non-OLED)](https://store.steampowered.com/steamdeck)"
+    - "[Nintendo Switch (non-OLED)](https://en.wikipedia.org/wiki/Nintendo_Switch), [running Android](/post/android-on-the-nintendo-switch), [KS42 Joy-Cons](/post/linyuvo-ks42-wireless-joycons)"
+    - "[Nintendo DSi](https://en.wikipedia.org/wiki/Nintendo_DSi)"
+    - "[GameForce Chi](https://gameforce.fun/)"
+    - "[TrimUI Brick](https://www.trimuistore.com/products/trimui-brick-retro-handheld-game-console)"
+- title: 3D printers
+  values:
+    - "[Creality Ender 5 Pro](https://www.creality.com/products/ender-5-pro-3d-printer)"
+    - "[Geeetech A10](https://www.geeetech.com/wiki/index.php/Geeetech_A10_3D_Printer)"
+    - "[Anycubic Kossel Delta Linear Plus](https://store.anycubic.com/products/anycubic-kossel-3d-printer), [first impressions](/post/it-begins)"
 - title: Audio
   values: 
   - "[Google Pixel Buds](https://store.google.com/us/product/pixel_buds)"
