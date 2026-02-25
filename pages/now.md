@@ -1,10 +1,8 @@
 ---
 title: Now
 permalink: /now/
-last_modified_at: 2026-02-25T10:59:48
+last_modified_at: 2026-02-25T12:38:06
 ---
-
-This is what I'm currently up to and what I'm using to do it. If the timestamp below says it's been a while since this page was last updated, maybe [give me a poke](https://social.omgmog.net) or something? ([What's a now page?](https://nownownow.com))
 
 {% if page.last_modified_at %}
 {:.updated}
@@ -13,8 +11,11 @@ This is what I'm currently up to and what I'm using to do it. If the timestamp b
 
 {% if site.data.now.lastfm %}
   {% assign track = site.data.now.lastfm %}
-  🎵 {% if track.now_playing %}Now playing{% else %}Last song listened to {% endif %} [{{ track.track }} — {{ track.artist }}]({{ track.url }}) on {{ track.played_at | date_to_string }}
+  🎵 {% if track.now_playing %}Now playing{% else %}Last listened to{% endif %} [{{ track.track }} — {{ track.artist }}]({{ track.url }}){% unless track.now_playing %} on {{ track.played_at | date_to_string }}{% endunless %}
+{:.center}
 {% endif %}
+
+This is what I'm currently up to and what I'm using to do it. If the timestamp below says it's been a while since this page was last updated, maybe [give me a poke](https://social.omgmog.net) or something? ([What's a now page?](https://nownownow.com))
 
 {% include global/wide-h3.html text="Technology" %}
 

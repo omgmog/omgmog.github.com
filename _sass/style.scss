@@ -295,6 +295,9 @@ body {
       font-size: 1em;
     }
   }
+  p.center {
+    text-align: center;
+  }
   h2 {
     font-size: calc(2rem * var(--font-scale-headers));
   }
