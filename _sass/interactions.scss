@@ -4,7 +4,7 @@
   .comments-closed {
     display: none;
   }
-  
+
   .avatar {
     width: 3.2rem;
     height: 3.2rem;
@@ -21,7 +21,7 @@
       image-rendering: crisp-edges;
     }
   }
-  
+
   .likes {
     display: flex;
     flex-direction: row;
@@ -29,7 +29,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: var(--gutter-inner-y);
-  
+
     .like {
       flex-shrink: 1;
       width: 3.5rem;
@@ -39,12 +39,12 @@
       align-items: center;
     }
   }
-  
+
   .reply {
     position: relative;
     padding-left: 4rem;
     margin-bottom: var(--gutter-inner-y);
-  
+
     .avatar {
       position: absolute;
       top: .5rem;
@@ -87,7 +87,7 @@
         left: -1rem;
         top: .5rem;
       }
-      p, 
+      p,
       blockquote {
         margin: 1rem 0;
 
@@ -123,7 +123,7 @@
       }
     }
   }
-  
+
   button {
     padding: 0;
     margin: 0 0 0 .5em;
@@ -143,7 +143,7 @@
 
     &:disabled {
       cursor: not-allowed;
-      opacity: 0.5;
+      opacity: .5;
     }
   }
 }

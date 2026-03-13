@@ -1389,7 +1389,7 @@ iframe {
     padding: 1rem;
     border: .1rem solid var(--colors-lightgrey);
     flex: 0 0 50%;
-    gap: 0.5rem;
+    gap: .5rem;
     @include hideLinkIcon;
 
     span {
@@ -1427,12 +1427,6 @@ iframe {
     svg {
       order: 1;
     }
-  }
-
-  .nav-label {
-    font-size: .875rem;
-    color: var(--colors-midgrey);
-    margin-bottom: .5rem;
   }
 
   .nav-title {
