@@ -307,6 +307,11 @@
         if (things.type === 'comment') {
             type = TYPES[things.type];
             const state = things.state || 'closed'; // fallback to 'closed' if state is undefined
+            const hasComments = Array.isArray(things.data) && things.data.length > 0;
+            if (state === 'open' || hasComments) {
+                const el = document.querySelector('#comments');
+                if (el) el.style.display = 'block';
+            }
             document.querySelectorAll(`.comments-${state}`).forEach(el => el.style.display = 'initial');
         }
         

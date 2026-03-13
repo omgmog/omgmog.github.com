@@ -77,16 +77,17 @@ layout: layout
 {% include interactions/templates.html %}
 {% include interactions/stream.html %}
 
+<hr>
 <nav class="post-navigation">
   {% if page.previous %}
     <a href="{{ page.previous.url }}" class="prev-post" title="{{ page.previous.title }}">
-      <span class="nav-label">← Previous</span>
+      <svg viewBox="0 0 24 24"><use href="#icon-move-left"/></svg>
       <span class="nav-title">{{ page.previous.title }}</span>
     </a>
   {% endif %}
   {% if page.next %}
     <a href="{{ page.next.url }}" class="next-post" title="{{ page.next.title }}">
-      <span class="nav-label">Next →</span>
+      <svg viewBox="0 0 24 24"><use href="#icon-move-right"/></svg>
       <span class="nav-title">{{ page.next.title }}</span>
     </a>
   {% endif %}
