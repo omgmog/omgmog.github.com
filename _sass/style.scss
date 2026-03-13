@@ -1047,6 +1047,10 @@ hr {
       }
     }
     
+    .interaction-stats {
+      display: flex;
+    }
+
     a {
       display: inline;
       // @include linkHover(100%);
