@@ -6,12 +6,6 @@ $bp-small-phone: 480px;
 $bp-phone: 900px;
 $bp-desktop: 1024px;
 $bp-big-desktop: 1188px;
-$tags: (
-  (vr, #198226, #fff),
-  (chip, #eb008b, #fff),
-  (cpi, #daeff4, #4a6368),
-  (rpi, #cd2355, #fff)
-);
 
 /// Mixins
 @mixin mq($minmax, $bp) {
@@ -46,7 +40,7 @@ $tags: (
     z-index: -1;
     box-shadow: -.25em 0 0 0 var(--shadow), -.5em 0 0 0 var(--shadow);
     background-color: var(--background);
-    border-radius: 0 .1rem .1rem 0; 
+    border-radius: 0 .1rem .1rem 0;
   }
 
   &#{$state_primary} {
