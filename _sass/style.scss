@@ -103,8 +103,14 @@ body {
   }
 }
 .main-header {
-  margin: calc(-.75 * var(--gutter-inner-y)) calc(-1 * var(--gutter-inner-y)) 0;
+  margin: calc(-1 * var(--gutter-inner-y)) calc(-1 * var(--gutter-inner-y)) 0;
   padding: 0;
+
+  border-radius: .2rem .2rem 0 0;
+
+  @include mq('min', $bp-big-desktop) {
+    border-radius: .7125rem .7125rem 0 0;
+  }
 
   hr {
     display: none;
@@ -124,6 +130,7 @@ body {
 
     &.is-pinned {
       box-shadow: 0 .5rem 1rem var(--colors-midgrey-transparent-25);
+      border-radius: 0;
     }
 
     hr {
@@ -265,6 +272,7 @@ body {
 .main-content {
   padding: var(--gutter-inner-y) var(--gutter-inner-x);
   background-color: rgba(#fff, .65);
+  box-shadow: 0 0 1rem 1rem rgba(#fff, .65);
   border-radius: .7125rem;
   
   @each $sel in (h2,h3,h4,h5) {
