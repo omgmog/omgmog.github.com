@@ -999,8 +999,8 @@ hr {
     .post-item-meta {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       align-items: center;
+      gap: .75em;
       margin-top: calc(var(--gutter-inner-y)/2);
 
       time {
@@ -1032,12 +1032,38 @@ hr {
       // margin-right: .5rem;
       justify-content: flex-start;
       flex-direction: row;
-      
+
       @include mq('max', $bp-phone) {
         display: none;
       }
       .tag {
         margin-right: .5rem;
+      }
+    }
+    .interaction-stats {
+      margin-left: 0;
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: var(--colors-darkgrey);
+      gap: .5rem;
+
+      > span {
+        vertical-align: middle;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      svg {
+        width: .8em;
+        height: auto;
+        margin-right: .2em;
+      }
+      .value {
+        font-size: .8em;
       }
     }
   }

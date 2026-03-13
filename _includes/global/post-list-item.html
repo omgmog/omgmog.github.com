@@ -1,9 +1,10 @@
 {% unless include.hide_dates %}{% assign post_ym = post.date | date:"%Y%m" %}{% if previous_ym != post_ym %}<li><time class="dt-published" datetime="{{post.date | date: "%Y-%m"}}">{{ post.date | date:"%B %Y" }}</time></li>{% endif %}{% endunless %}{% assign previous_ym = post_ym %}
-<li id="post-{{ post.slug }}" class="post-list-item">
+<li id="post-{{ post.slug }}" class="post-list-item" data-post-url="{{ post.url | absolute_url }}">
     <h4 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
     {% unless include.hide_excerpt %}{% if post.excerpt %}{{post.excerpt | strip_html | truncatewords: 30 | markdownify }}{% endif %}{% endunless %}
     <div class="post-item-meta">
       {% unless include.hide_types %}{% include global/types.html %}{% endunless %}
       {% unless include.hide_date %}<time class="dt-published" datetime="{{post.date|date_to_xmlschema}}">{{ post.date|date_to_string}}</time>{% endunless %}
+      {% include interactions/list-count.html %}
     </div>
 </li>
