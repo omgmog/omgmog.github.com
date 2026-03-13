@@ -1,8 +1,8 @@
 <section id="interactions" class="interactions">
   {% include interactions/archived_comments.html %}
   {% if post.comments_issue %}
-  {% include global/wide-h3.html text="Comments" %}
-  <div id="comments" data-display="block">
+  <div id="comments" data-display="block" style="display:none">
+    {% include global/wide-h3.html text="Comments" %}
     <div class="items"></div>
     <div class="formatted-text">
       <div class="comments-open">Want to comment? You can do so via <a href="{{ site.github.issues_url | append:'/' | append:page.comments_issue }}">Github</a>.</div> 
@@ -13,25 +13,24 @@
     </div>
   </div>
   {% endif %}
-  {% include global/wide-h3.html text="Webmentions" %}
   <div id="replies" data-display="none" style="display:none;">
-    <h3>Replies</h3>
+    {% include global/wide-h3.html text="Replies" %}
     <div class="items"></div>
   </div>
   <div id="mentions" data-display="none" style="display:none">
-    <h3>Mentions</h3>
+    {% include global/wide-h3.html text="Mentions" %}
     <div class="items"></div>
   </div>
   <div id="likes" data-display="none" style="display:none">
-    <h3>Likes</h3>
+    {% include global/wide-h3.html text="Likes" %}
     <div class="items likes"></div>
   </div>
   <div id="bookmarks" data-display="none" style="display:none">
-    <h3>Bookmarks</h3>
+    {% include global/wide-h3.html text="Bookmarks" %}
     <div class="items likes"></div>
   </div>
   <div id="reposts" data-display="none" style="display:none">
-    <h3>Reposts</h3>
+    {% include global/wide-h3.html text="Reposts" %}
     <div class="items likes"></div>
   </div>
   <div class="formatted-text">

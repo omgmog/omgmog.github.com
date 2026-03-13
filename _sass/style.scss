@@ -282,7 +282,7 @@ body {
 }
 
 .main-content {
-  padding: var(--gutter-inner-y) var(--gutter-inner-x);
+  padding: var(--gutter-inner-y) var(--gutter-inner-x) 0;
   background-color: rgba(#fff, .65);
   box-shadow: 0 0 1rem 1rem rgba(#fff, .65);
   border-radius: .7125rem;
@@ -1380,32 +1380,53 @@ iframe {
   justify-content: space-between;
   gap: 1rem;
   margin-top: var(--gutter-inner-y);
-  padding-top: var(--gutter-inner-y);
-  border-top: .1rem solid var(--colors-lightgrey);
   @include breakoutWidth;
 
   a {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-decoration: none;
     padding: 1rem;
     border: .1rem solid var(--colors-lightgrey);
-    border-radius: .2rem;
-    flex: 1;
+    flex: 0 0 50%;
+    gap: 0.5rem;
     @include hideLinkIcon;
 
+    span {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      flex: 1;
+    }
+    svg {
+      width: 2rem;
+      height: 2rem;
+      flex-shrink: 0;
+      margin: auto;
+    }
+
     &:hover {
-      background-color: var(--colors-lightgrey-transparent-25);
+      background-color: var(--colors-primary);
+      border-color: transparent;
     }
   }
 
   .prev-post {
     text-align: left;
+
+    svg {
+      order: 0;
+    }
   }
 
   .next-post {
     text-align: right;
     margin-left: auto;
+
+    svg {
+      order: 1;
+    }
   }
 
   .nav-label {

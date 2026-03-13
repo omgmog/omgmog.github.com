@@ -1,9 +1,5 @@
 
 .interactions {
-  h3 {
-    position: relative;
-    margin-top: 0;
-  }
   .comments-open,
   .comments-closed {
     display: none;
@@ -32,6 +28,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: var(--gutter-inner-y);
   
     .like {
       flex-shrink: 1;
