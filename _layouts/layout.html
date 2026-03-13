@@ -19,6 +19,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
+  <meta name="fediverse:creator" content="@omgmog@indieweb.social">
+
   <link rel="canonical" href="{{ page_url }}">
   <link rel="webmention" href="https://webmention.io/omgmog.net/webmention" />
   <link rel="pingback" href="https://webmention.io/omgmog.net/xmlrpc" />
@@ -46,7 +48,7 @@
           {% else %}
             {% assign active = false %}
           {% endif %}
-          <a href="{{ node.link | replace:'/index.html', '/'}}" class="{% if active %}active{% endif %}">{% if node.title == "RSS" %}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>RSS Feed icon</title><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>{% else %}{{ node.title }}{% endif %}</a>
+          <a href="{{ node.link | replace:'/index.html', '/'}}" class="{% if active %}active{% endif %}">{% if node.title == "RSS" %}<svg viewBox="0 0 24 24" width="22" height="22"><title>RSS Feed icon</title><use href="#icon-rss"/></svg>{% else %}{{ node.title }}{% endif %}</a>
         {% endfor %}
       </nav>
     </div>
@@ -71,24 +73,35 @@
     </div>
     <hr>
     <small>
-      &copy; {{site.posts.last.date|date:"%Y"}}&mdash;{{site.time|date:"%Y"}} Max Glenister. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.
+      &copy; {{site.posts.last.date|date:"%Y"}}&mdash;{{site.time|date:"%Y"}} Max Glenister. Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.
       <br>
       Website last built: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time | date_to_long_string }}</a>
     </small>
   </footer>
   <script type="application/ld+json">
+  {% if page.layout == "post" %}
   {
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title | escape }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "url": "{{ page_url }}",
+    "description": "{{ description | escape }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.data.author.name }}",
+      "url": "{{ site.data.author.home }}"
+    }
+  }
+  {% else %}
+  {
+    "@context": "https://schema.org",
     "@type": "Person",
     "name": "{{ site.data.author.name }}",
     "url": "{{ site.url }}",
-    "sameAs": [
-    {% for url in site.data.author.urls %}
-    "{{ url.link }}",
-    {% endfor %}
-      "{{ site.data.author.home }}"
-    ]
+    "sameAs": [{% for url in site.data.author.urls %}"{{ url.link }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
   }
+  {% endif %}
   </script>
 
   {% include global/svg-icons.html %}
