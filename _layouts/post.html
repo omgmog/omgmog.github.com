@@ -33,10 +33,7 @@ layout: layout
     </h2>
     <div class="post-meta">
       <div class="post-meta-primary">
-        {% assign read_time = post.content | number_of_words | plus: 199 | divided_by: 200 %}
-        <time class="dt-published" datetime="{{post.date | date: "%Y-%m-%d"}}">{{ post.date | date:"%B %d %Y" }}</time>
-        <span class="bullet">  &bull; </span>
-        <span class="read-time">{% if read_time != 0 %}{{ read_time }}{% else %}1{% endif %} min read</span>
+        <time class="dt-published" datetime="{{post.date | date: "%Y-%m-%d"}}">{{ post.date | date_to_string }}</time>
       </div>
       <div class="post-meta-secondary">
         {% include interactions/count.html %}

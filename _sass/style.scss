@@ -1116,6 +1116,7 @@ body {
     h2 {
       font-size: calc(3rem * var(--font-scale-headers));
       font-family: Fjalla One, sans-serif;
+      font-weight: 400;
       margin: 0 auto;
       padding: 0;
 
@@ -1132,32 +1133,16 @@ body {
 
     .post-meta {
       display: flex;
-      justify-content: space-between;
       flex-direction: row;
+      align-items: center;
       font-size: 1rem;
       margin: var(--gutter-inner-y) auto;
       color: var(--colors-darkgrey);
       user-select: none;
+      gap: 1rem;
 
-      &-primary,
-      &-secondary {
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-      }
-
-      &-primary {
-        margin-right: auto;
-        justify-content: flex-start;
-
-        .bullet {
-          margin: 0 1rem;
-        }
-      }
-
-      &-secondary {
-        margin-left: auto;
-        justify-content: flex-end;
+      .bullet {
+        margin: 0 1rem;
       }
     }
   }
