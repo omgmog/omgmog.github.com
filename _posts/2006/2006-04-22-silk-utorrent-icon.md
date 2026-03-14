@@ -1,4 +1,5 @@
 ---
+archived: true
 title: Silk utorrent icon
 tags:
 - moglenstar

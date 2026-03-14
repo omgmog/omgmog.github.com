@@ -1,4 +1,5 @@
 ---
+archived: true
 title: New Columns_UI Config
 tags:
 - moglenstar

@@ -1,4 +1,5 @@
 ---
+archived: true
 title: Pixel-level Detail
 tags:
 - moglenstar

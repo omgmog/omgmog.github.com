@@ -1,4 +1,5 @@
 ---
+archived: true
 title: New foobar buttons
 tags:
 - moglenstar

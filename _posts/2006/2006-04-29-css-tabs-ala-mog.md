@@ -1,4 +1,5 @@
 ---
+archived: true
 title: CSS Tabs, ala mog
 tags:
 - moglenstar
