@@ -1,0 +1,19 @@
+{% assign bg_path = "/images/ogimage/bg_" | append: post.slug | append: ".png" %}
+{% assign bg_file = site.static_files | where: "path", bg_path | first %}
+{% assign bg_webp_path = "/images/ogimage/bg_" | append: post.slug | append: ".webp" %}
+{% assign bg_webp_file = site.static_files | where: "path", bg_webp_path | first %}
+<li class="post-card{% if bg_file %} has-bg{% endif %}" id="post-{{ post.slug }}">
+  <a href="{{ post.url }}" class="post-card-link">
+    <div class="post-card-bg">
+      {% if bg_file %}
+      <picture class="post-card-bg-picture">
+        {% if bg_webp_file %}<source srcset="{{ bg_webp_path }}" type="image/webp">{% endif %}
+        <img src="{{ bg_path }}" alt="" loading="eager">
+      </picture>
+      {% endif %}
+      <div class="post-card-inner">
+        <div class="post-card-title">{{ post.title }}</div>
+      </div>
+    </div>
+  </a>
+</li>

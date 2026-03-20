@@ -10,8 +10,9 @@
 {%- capture webp_src -%}{{ src }}.webp{%- endcapture -%}
 {% if include.linkurl %}<a href="{{ include.linkurl }}">{% endif %}
 <picture>
-  {% if jekyll.environment == "production" and is_external == false and src_suffix != 'gif' %}
-  <source srcset="{{ webp_src }}" type="image/webp">
+  {% if is_external == false and src_suffix != 'gif' %}
+  {% assign webp_file = site.static_files | where: "path", webp_src | first %}
+  {% if webp_file %}<source srcset="{{ webp_src }}" type="image/webp">{% endif %}
   {% endif %}
   <img src="{{ src }}" loading="lazy" alt="{{ alt }}">
 </picture>

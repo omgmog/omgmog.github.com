@@ -1,0 +1,36 @@
+<ul class="post-grid">
+  {% for _url in include.urls %}
+    {% assign post = site.posts | where: "url", _url | first %}
+    {% if post %}{% include global/post-card.html %}{% endif %}
+  {% endfor %}
+</ul>
+<script>
+  document.querySelectorAll('.post-card').forEach(card => {
+    const link = card.querySelector('.post-card-link')
+    const inner = card.querySelector('.post-card-inner')
+    const bgPicture = card.classList.contains('has-bg') ? card.querySelector('.post-card-bg-picture') : null
+    const TILT = 10
+    const PARALLAX = 20
+    const INNER_SHADOW = 16
+    const CARD_SHADOW = 20
+
+    card.addEventListener('mousemove', e => {
+      const { left, top, width, height } = card.getBoundingClientRect()
+      const x = (e.clientX - left) / width - 0.5
+      const y = (e.clientY - top) / height - 0.5
+      link.style.transform = `rotateY(${x * TILT * 2}deg) rotateX(${-y * TILT * 2}deg)`
+      inner.style.boxShadow = `${-x * INNER_SHADOW}px ${-y * INNER_SHADOW}px 2rem rgba(0,0,0,0.2)`
+      if (bgPicture) {
+        bgPicture.style.transform = `translate(${-x * PARALLAX}px, ${-y * PARALLAX}px)`
+      }
+      link.style.boxShadow = `${x * CARD_SHADOW}px ${y * CARD_SHADOW}px 2rem rgba(0,0,0,0.15)`
+    })
+
+    card.addEventListener('mouseleave', () => {
+      link.style.transform = ''
+      link.style.boxShadow = ''
+      inner.style.boxShadow = ''
+      if (bgPicture) bgPicture.style.transform = ''
+    })
+  })
+</script>

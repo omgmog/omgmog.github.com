@@ -3,22 +3,25 @@ permalink: /
 title: Blog
 ---
 
-{% assign posts = site.posts | concat: site.cardboctober | sort:'date' | reverse %}
-{% assign post = posts | first %}
+{% for section in site.data.homepage.sections %}
+  {% include global/wide-h3.html text=section.title %}
+  {% include global/post-list-from-urls.html urls=section.urls %}
+  {% if section.more_link %}<a href="{{ section.more_link }}" class="btn">{{ section.more_text }}</a>{% endif %}
+{% endfor %}
 
-<div class="post-featured" data-post-url="{{ post.url | absolute_url }}">
-  <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  {% if post.excerpt %}{{ post.excerpt | strip_html | markdownify }}{% endif %}
-  <div class="post-item-meta">
-    <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-    {% include interactions/list-count.html %}
-    <a class="btn" href="{{ post.url }}">Read more</a>
-  </div>
-</div>
-
+{% include global/wide-h3.html text="Reviews" %}
 <ul class="post-list">
-{% for post in posts offset:1 limit:19 %}
-  {% include global/post-list-item.html hide_types="true" hide_dates="true" %}
+{% assign all_reviews = site.posts | where_exp:"post","post.tags contains 'review'" %}
+{% for post in all_reviews limit:5 %}
+  {% include global/post-list-item.html hide_types="true" hide_years="true" hide_date="true" hide_excerpt="true" hide_counts="true" %}
+{% endfor %}
+</ul>
+<a class="btn" href="/reviews/">View all reviews</a>
+
+{% include global/wide-h3.html text="Recent" %}
+<ul class="post-list">
+{% for post in site.posts limit:5 %}
+  {% include global/post-list-item.html hide_types="true" hide_years="true" %}
 {% endfor %}
 </ul>
 

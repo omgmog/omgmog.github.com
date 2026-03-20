@@ -1,7 +1,7 @@
 - title: Pocket CHIP Menu
   link: https://github.com/omgmog/pocketchip-menu
   description: "I've been working on writing a menu app for the Pocket CHIP using PyGame. There has been some work to revive the Pocket CHIP and get it running an up-to-date mainline Debian linux."
-  img: /images/now/pockethome.png
+  img: [now/pockethome.png]
 - title: Carbs calculator
   link: https://carbs.omgmog.net
   description: "A React PWA for calculating insulin doses based on carb intake and current blood glucose. Handles meal boluses, correction boluses, insulin-on-board tracking, and adjustments for things like high fat meals and exercise. Everything stays on-device."
@@ -15,18 +15,17 @@
   link: https://github.com/omgmog/were-going-to-space
   writeup: https://omgmog.net/projects/vr/were-going-to-space/
   description: "This was my entry for the 2017 Samsung VR Together Hackathon. It's a simple-ish Three.js WebVR scene that should work across most devices."
-  img: /images/now/space.gif
-  vr: true
-- title: UX of VR
-  link: https://www.uxofvr.com
-  writeup: https://omgmog.net/projects/vr/ux-of-vr/
-  description: "I created this list of VR UX resources back in 2016. It has links to articles, talks, and other resources about designing for VR."
+  img: [now/space.gif]
   vr: true
 - title: Cardboctober
   link: https://cardboctober.github.io
   writeup: https://omgmog.net/projects/vr/cardboctober/
   description: "I spent every day of October 2016 creating VR content for Google Cardboard using JavaScript/WebGL/other WebAPIs and blogged about it."
-  img: 
-    - /images/now/cardboctober-03.gif
-    - /images/now/cardboctober-10.gif
+  img: [now/cardboctober-03.gif, now/cardboctober-10.gif]
+  vr: true
+- title: UX of VR
+  link: https://www.uxofvr.com
+  writeup: https://omgmog.net/projects/vr/ux-of-vr/
+  description: "I created this list of VR UX resources back in 2016. It has links to articles, talks, and other resources about designing for VR."
+  img: [uxofvr.png]
   vr: true

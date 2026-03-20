@@ -1,0 +1,35 @@
+sections:
+  - title: Featured
+    urls:
+      - /post/archive-archaeology/
+      - /post/building-a-balatro-lite-game-with-vanilla-web-tech/
+      - /post/why-vendor-prefixes-are-still-in-your-css/
+      - /post/why-cant-i-read-this-picture-book/
+
+  - title: Handhelds &amp; Retro Gaming
+    urls:
+      - /post/review-mangmi-air-x/
+      - /post/android-on-the-nintendo-switch/
+      - /post/gameshell-stuff/
+      - /post/devterm-stuff/
+
+  - title: Jekyll &amp; IndieWeb
+    urls:
+      - /post/plugins-instead-of-patches/
+      - /post/adding-support-for-webmentions/
+      - /post/moving-to-github-actions-and-adding-txt-posts/
+      - /post/reducing-github-action-commit-noise/
+
+  - title: Tinkering
+    urls:
+      - /post/building-a-home-nas-from-mostly-spare-parts/
+      - /post/using-emoji-to-bypass-frp-on-a-decade-old-tablet/
+      - /post/pocketchip-internal-speaker/
+      - /post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/
+
+  - title: VR
+    urls:
+      - /post/the-inevitable-htc-vive-post/
+      - /post/the-inevitable-oculus-quest-post/
+    more_link: /vr
+    more_text: View all VR Stuff
