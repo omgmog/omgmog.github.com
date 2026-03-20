@@ -1,0 +1,11 @@
+{% assign _recent_posts = site.posts | where_exp: "p", "p.url != page.url" | slice: 0, 3 %}
+{% if _recent_posts.size > 0 %}
+<section class="pullout-section">
+  <h2>Recent posts:</h2>
+  <ul>
+    {% for _rp in _recent_posts %}
+    <li><a href="{{ _rp.url }}">{{ _rp.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

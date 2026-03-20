@@ -1369,6 +1369,33 @@ iframe {
   }
 }
 
+// Read next and recent sections
+.pullout-section {
+  @include breakoutWidth;
+  margin-top: var(--gutter-inner-y);
+  margin-bottom: var(--gutter-inner-y);
+  padding: var(--gutter-inner-y);
+  border: .1rem solid var(--colors-grey);
+  background-color: var(--colors-lightgrey);
+
+  h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 400;
+    font-size: calc(1.4rem * var(--font-scale-headers));
+    margin: 0 0 .5rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: .2rem 0;
+  }
+}
+
 // Post navigation
 .post-navigation {
   display: flex;
