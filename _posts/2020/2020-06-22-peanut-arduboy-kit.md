@@ -1,6 +1,6 @@
 ---
 title: Peanut Arduboy kit
-tags: [arduino, gaming, diy]
+tags: [arduino, gaming, diy, review]
 archived: true
 ---
 

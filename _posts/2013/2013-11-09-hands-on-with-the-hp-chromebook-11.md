@@ -1,6 +1,6 @@
 ---
 title: "The HP Chromebook 11"
-tags: [chromebook, hardware]
+tags: [chromebook, hardware, review]
 archived: true
 ---
 

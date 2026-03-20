@@ -1,6 +1,6 @@
 ---
 title: Children of Time book review
-tags: [books, sci-fi]
+tags: [books, sci-fi, review]
 archived: true
 ---
 
