@@ -55,19 +55,12 @@
     <hr>
   </header>
   <main id="top" class="main-content">
+    {% if page.url == "/" %}{% include global/bio.html hide_face="true" %}{% endif %}
   {{ content }}
   </main>
   <hr>
   <footer class="main-footer">
-    <div class="p-author h-card post-bio">
-      <img src="{{"/assets/mog.svg"|relative_url}}" alt="A vectorized pixel-art picture of Max Glenister" class="u-photo" loading="lazy"/>
-      <div class="h-card-inner">
-          {{ site.data.author.bio_rich | markdownify | replace: '<p>', '<p class="p-note">' }}
-
-          <p>You can keep up with Max on {% for url in site.data.author.urls %}<a href="{{ url.link }}" rel="nofollow me" class="u-url">{{ url.label }}</a>{% endfor %}</p>
-      </div>
-    </div>
-    <hr>
+    {% if page.url != "/" %}{% include global/bio.html %}{% endif %}
     <div class="webring">
       <a href="https://xn--sr8hvo.ws/previous" aria-label="Previous site in webring"><svg viewBox="0 0 24 24" width="64" height="64"><use href="#icon-move-left"/></svg></a> <a href="https://xn--sr8hvo.ws">🕸💍</a> <a href="https://xn--sr8hvo.ws/next" aria-label="Next site in webring"><svg viewBox="0 0 24 24" width="64" height="64"><use href="#icon-move-right"/></svg></a>
     </div>

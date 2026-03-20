@@ -1,0 +1,8 @@
+<div class="p-author h-card post-bio">
+    {% unless include.hide_face == "true" %}<img src="{{"/assets/mog.svg"|relative_url}}" alt="A vectorized pixel-art picture of Max Glenister" class="u-photo" loading="lazy"/>{% endunless %}
+    <div class="h-card-inner">
+        {{ site.data.author.bio_rich | markdownify | replace: '<p>', '<p class="p-note">' }}
+        <p>You can keep up with Max on {% for url in site.data.author.urls %}<a href="{{ url.link }}" rel="nofollow me" class="u-url">{{ url.label }}</a>{% endfor %}</p>
+    </div>
+</div>
+<hr>
