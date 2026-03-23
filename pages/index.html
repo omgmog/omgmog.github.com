@@ -4,25 +4,21 @@ title: Blog
 ---
 
 {% for section in site.data.homepage.sections %}
-  {% include global/wide-h3.html text=section.title %}
+  {% include global/wide-h3.html text=section.title more_link=section.more_link %}
   {% include global/post-list-from-urls.html urls=section.urls %}
-  {% if section.more_link %}<a href="{{ section.more_link }}" class="btn">{{ section.more_text }}</a>{% endif %}
 {% endfor %}
 
-{% include global/wide-h3.html text="Reviews" %}
+{% include global/wide-h3.html text="Reviews" more_link="/reviews/" %}
 <ul class="post-list">
 {% assign all_reviews = site.posts | where_exp:"post","post.tags contains 'review'" %}
 {% for post in all_reviews limit:5 %}
   {% include global/post-list-item.html hide_types="true" hide_years="true" hide_date="true" hide_excerpt="true" hide_counts="true" %}
 {% endfor %}
 </ul>
-<a class="btn" href="/reviews/">View all reviews</a>
 
-{% include global/wide-h3.html text="Recent" %}
+{% include global/wide-h3.html text="Recent" more_link="/archive/" %}
 <ul class="post-list">
 {% for post in site.posts limit:5 %}
   {% include global/post-list-item.html hide_types="true" hide_years="true" %}
 {% endfor %}
 </ul>
-
-<a class="btn" href="/archive/">View all posts</a>

@@ -328,9 +328,6 @@ body {
   p.center {
     text-align: center;
   }
-  h2,h3,h4,h5 {
-    text-wrap: balance;
-  }
 
   h2 { font-size: calc(2rem * var(--font-scale-headers)); }
   h3 { font-size: calc(1.5rem * var(--font-scale-headers)); }
@@ -1134,6 +1131,7 @@ body {
         min-height: 0;
         transform: translateZ(24px);
         will-change: transform;
+        text-wrap: balance;
       }
 
       .post-card-branding {
@@ -1160,12 +1158,6 @@ body {
       }
     }
   }
-
-  // .wide-h3 + .post-list .post-list-item {
-  //   border-bottom: 0;
-  //   margin-bottom: 0;
-  //   padding-bottom: 0;
-  // }
 
   .btn {
     margin: var(--gutter-inner-y) auto auto;
@@ -1195,6 +1187,7 @@ body {
     font-size: 2rem;
     white-space: pre;
     line-height: 1;
+    text-wrap: balance;
 
     &:first-child {
       margin-top: 0;
@@ -1241,13 +1234,22 @@ body {
         flex-grow: 1;
       }
     }
+
+    a {
+      margin-left: 1rem;
+      margin-top: 0;
+      margin-bottom: auto;
+      font-size: .6em;
+      text-decoration: none;
+    }
   }
 
 
 
   .page-blog {
     .wide-h3 {
-      &::before {
+      &::before,
+      &::after {
         flex-grow: 1;
         flex-basis: auto;
       }

@@ -8,8 +8,8 @@ sections:
 
   - title: Handhelds &amp; Retro Gaming
     urls:
-      - /post/review-mangmi-air-x/
       - /post/android-on-the-nintendo-switch/
+      - /post/devterm-gameboy-printer/
       - /post/gameshell-stuff/
       - /post/devterm-stuff/
 
@@ -26,10 +26,3 @@ sections:
       - /post/using-emoji-to-bypass-frp-on-a-decade-old-tablet/
       - /post/pocketchip-internal-speaker/
       - /post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/
-
-  - title: VR
-    urls:
-      - /post/the-inevitable-htc-vive-post/
-      - /post/the-inevitable-oculus-quest-post/
-    more_link: /vr
-    more_text: View all VR Stuff
