@@ -11,8 +11,7 @@
 {% if include.linkurl %}<a href="{{ include.linkurl }}">{% endif %}
 <picture>
   {% if is_external == false and src_suffix != 'gif' %}
-  {% assign webp_file = site.static_files | where: "path", webp_src | first %}
-  {% if webp_file %}<source srcset="{{ webp_src }}" type="image/webp">{% endif %}
+  {% if jekyll.environment == 'production' %}<source srcset="{{ webp_src }}" type="image/webp">{% endif %}
   {% endif %}
   <img src="{{ src }}" loading="lazy" alt="{{ alt }}">
 </picture>
