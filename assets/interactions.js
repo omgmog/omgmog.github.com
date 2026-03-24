@@ -115,6 +115,17 @@
         repost: ['Repost', 'Reposts']
     };
 
+    // Snapshot pre-rendered counts before any JS writes to the DOM
+    const staticDomCounts = {};
+    (function() {
+        const el = document.querySelector('.interaction-stats');
+        if (!el) return;
+        Object.keys(VERBS).forEach(key => {
+            const val = parseInt(el.querySelector(`.${key} .value`)?.textContent || '0', 10);
+            if (val > 0) staticDomCounts[key] = val;
+        });
+    })();
+
     const module = {};
 
     module.fetchGithubIssue = async issueID => {
@@ -275,6 +286,11 @@
                     value = value || '';
                 }
             }
+            if (attribute === 'author_name' && !value) {
+                try {
+                    value = new URL(data.url || data['wm-source']).hostname;
+                } catch (e) {}
+            }
             if (attribute === 'author_url') {
                 // sometimes there isn't an author url
                 value = value || data.url;
@@ -304,6 +320,12 @@
         
         let type;
         let data = things.data?.children || things.data;
+        if (Array.isArray(data) && things.type === 'comment') {
+            data = data.filter(c => !preRenderedCommentIds.has(c.id));
+        }
+        if (Array.isArray(data) && things.type !== 'comment') {
+            data = [...data].sort((a, b) => new Date(a['wm-received'] || 0) - new Date(b['wm-received'] || 0));
+        }
         if (things.type === 'comment') {
             type = TYPES[things.type];
             const state = things.state || 'closed'; // fallback to 'closed' if state is undefined
@@ -370,7 +392,11 @@
 
     module.checkForFailedAvatars = () => {
         document.querySelectorAll('#interactions .avatar').forEach(avatar => {
-            avatar.onerror = () => module.makeFallbackAvatar(avatar.dataset.username, avatar);
+            if (!avatar.getAttribute('src')) {
+                module.makeFallbackAvatar(avatar.dataset.username, avatar);
+            } else {
+                avatar.onerror = () => module.makeFallbackAvatar(avatar.dataset.username, avatar);
+            }
         });
     };
 
@@ -380,7 +406,8 @@
         if (!commentSpan) return;
 
         const archivedCount = parseInt(commentSpan.dataset.archivedCount || '0', 10);
-        const totalCount = archivedCount + githubCount;
+        const preRenderedCount = typeof preRenderedCommentIds !== 'undefined' ? preRenderedCommentIds.size : 0;
+        const totalCount = archivedCount + preRenderedCount + githubCount;
 
         if (totalCount > 0) {
             const valueSpan = commentSpan.querySelector('.value');
@@ -398,15 +425,17 @@
         const data = interactions.webmentions?.data;
         if (!data || !Array.isArray(data)) return;
 
-        const counts = {};
-        data.forEach(mention => {
+        const element = document.querySelector('.interaction-stats');
+        if (!element) return;
+
+        // Seed from pre-rendered static counts (snapshotted before any JS writes)
+        const counts = Object.assign({}, staticDomCounts);
+
+        data.filter(m => !preRenderedWmIds.has(m['wm-id'])).forEach(mention => {
             if (mention.type && VERBS[mention.type]) {
                 counts[mention.type] = (counts[mention.type] || 0) + 1;
             }
         });
-
-        const element = document.querySelector('.interaction-stats');
-        if (!element) return;
 
         Object.entries(counts).forEach(([key, count]) => {
             const parent = element.querySelector(`.${key}`);
@@ -598,7 +627,7 @@
                 interactions.comments = {
                     type: 'comment',
                     state: issue.state || 'closed',
-                    data: (Array.isArray(comments) ? comments : []).map(comment => Object.assign(comment, { type: 'comment' }))
+                    data: (Array.isArray(comments) ? comments : []).filter(c => !preRenderedCommentIds.has(c.id)).map(comment => Object.assign(comment, { type: 'comment' }))
                 };
                 module.saveData(interactions.comments, `interactions-comments-${pageURL_base64}`);
                 module.updateCommentCount(interactions.comments.data.length);
@@ -622,7 +651,7 @@
                         }));
                     const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
                     interactions.webmentions.data = interactions.webmentions.data.concat(
-                        validMentions.filter(m => !existingIds.has(m['wm-id']))
+                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !preRenderedWmIds.has(m['wm-id']))
                     );
                 });
                 module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
@@ -681,7 +710,7 @@
                 interactions.comments = {
                     type: 'comment',
                     state: issue.state || 'closed',
-                    data: (Array.isArray(comments) ? comments : []).map(comment => Object.assign(comment, { type: 'comment' }))
+                    data: (Array.isArray(comments) ? comments : []).filter(c => !preRenderedCommentIds.has(c.id)).map(comment => Object.assign(comment, { type: 'comment' }))
                 };
                 module.saveData(interactions.comments, `interactions-comments-${pageURL_base64}`);
                 module.renderThings(interactions.comments);
@@ -714,7 +743,7 @@
 
                     const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
                     interactions.webmentions.data = interactions.webmentions.data.concat(
-                        validMentions.filter(m => !existingIds.has(m['wm-id']))
+                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !preRenderedWmIds.has(m['wm-id']))
                     );
                 });
 
@@ -757,13 +786,18 @@
                 '#mentions'
             )
         }
-        
+
         document.querySelectorAll(sections.join(',')).forEach(section => {
             const list = section.querySelector('.items');
             if (list) {
-                list.innerHTML = '';
+                Array.from(list.children).forEach(child => {
+                    if (!child.classList.contains('static-item')) child.remove();
+                });
             }
-            section.style.display = section.dataset.display || 'none';
+            const hasStaticItems = list && list.querySelector('.static-item');
+            if (!hasStaticItems) {
+                section.style.display = section.dataset.display || 'none';
+            }
         });
     }
 

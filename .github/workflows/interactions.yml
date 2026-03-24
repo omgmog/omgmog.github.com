@@ -1,0 +1,91 @@
+name: Update Interactions Data
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  interactions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Fetch Morris index
+        id: morris-index
+        run: |
+          curl -sf https://wm.omgmog.net/morris/data/index.json -o /tmp/morris-index.json
+          echo "hash=$(sha256sum /tmp/morris-index.json | cut -d' ' -f1)" >> $GITHUB_OUTPUT
+
+      - name: Restore webmentions cache
+        id: wm-cache
+        uses: actions/cache@v4
+        with:
+          path: _data/webmentions.json
+          key: webmentions-${{ steps.morris-index.outputs.hash }}
+
+      - name: Fetch webmentions from Morris
+        if: steps.wm-cache.outputs.cache-hit != 'true'
+        run: bundle exec ruby scripts/fetch_webmentions.rb
+
+      - name: Fetch GitHub issues index
+        id: gh-index
+        run: |
+          curl -sf \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/omgmog/omgmog.github.com/issues?state=all&per_page=100" \
+            -o /tmp/gh-issues.json
+          echo "hash=$(sha256sum /tmp/gh-issues.json | cut -d' ' -f1)" >> $GITHUB_OUTPUT
+
+      - name: Restore GitHub comments cache
+        id: gh-cache
+        uses: actions/cache@v4
+        with:
+          path: _data/github_comments.json
+          key: github-comments-${{ steps.gh-index.outputs.hash }}
+
+      - name: Fetch GitHub comments
+        if: steps.gh-cache.outputs.cache-hit != 'true'
+        run: bundle exec ruby scripts/fetch_github_comments.rb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        id: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add _data/webmentions.json _data/github_comments.json
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            if [ "$(git log -1 --pretty=%s)" = "Update interactions data" ]; then
+              git commit --amend --no-edit
+              git push --force-with-lease
+            else
+              git commit -m "Update interactions data"
+              git push
+            fi
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Trigger Jekyll build
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run jekyll.yml

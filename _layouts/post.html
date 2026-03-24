@@ -67,7 +67,6 @@ layout: layout
   {% if post.collection == 'cardboctober' %}
     {% capture cardboctober_footer %}{% include posts/cardboctober.html %}{% endcapture %}{{ cardboctober_footer | markdownify }}
   {% endif %}
-  {% include interactions/syndication.html %}
 </article>
 
 {% include posts/recent-posts.html %}
@@ -76,6 +75,7 @@ layout: layout
 {% include interactions/templates.html %}
 {% include interactions/stream.html %}
 
+{% include interactions/syndication.html %}
 <hr>
 <nav class="post-navigation">
   {% if page.previous %}

@@ -1,0 +1,40 @@
+{% assign page_mentions = site.data.webmentions[page.url] %}
+{% if page_mentions %}
+  {% assign filtered = page_mentions | where: "wm-property", include.wm_property | sort: "wm-received" %}
+  {% for mention in filtered %}
+    {% assign mention_url = mention.url | default: mention['wm-source'] %}
+    {% assign mention_date = mention.published | default: mention['wm-received'] %}
+    {% assign mention_domain = mention_url | split: "/" | slice: 2 %}
+    {% assign author_name = mention.author.name | default: mention_domain %}
+    {% assign author_url = mention.author.url | default: mention_url %}
+    {% assign author_photo = mention.author.photo %}
+    {% if include.wm_property == "mention-of" %}
+      {% if mention.content.text %}
+        <article class="reply mention-rich static-item">
+          <img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">
+          <header>
+            <h4><a href="{{ author_url }}" rel="nofollow" class="name">{{ author_name }}</a> mentioned <a href="{{ mention_url }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain }}</a></h4>
+          </header>
+          {% assign mention_body = mention.summary.value | default: mention.content.html | default: mention.content.text %}
+          {% if mention_body %}<div>{{ mention_body | markdownify }}</div>{% endif %}
+        </article>
+      {% else %}
+        <article class="reply mention static-item">
+          <div><p>Mentioned in <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
+        </article>
+      {% endif %}
+    {% elsif include.wm_property == "in-reply-to" %}
+      <article class="reply static-item">
+        <img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">
+        <header>
+          <h4><a href="{{ author_url }}" rel="nofollow" class="name">{{ author_name }}</a> replied <a href="{{ mention_url }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain }}</a></h4>
+        </header>
+        <div>{{ mention.content.text | markdownify }}</div>
+      </article>
+    {% elsif include.wm_property == "like-of" or include.wm_property == "bookmark-of" or include.wm_property == "repost-of" %}
+      <div class="like static-item">
+        <img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" title="{{ include.wm_property | split: "-" | first | capitalize }} by {{ author_name }} on {{ mention_domain }}" class="avatar" data-username="{{ author_name }}" loading="lazy">
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}

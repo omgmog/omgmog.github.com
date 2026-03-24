@@ -1,0 +1,17 @@
+{% if post.comments_issue %}
+  {% assign _issue_key = post.comments_issue | append: "" %}
+  {% assign _issue = site.data.github_comments[_issue_key] %}
+  {% if _issue and _issue.comments.size > 0 %}
+    {% for comment in _issue.comments %}
+      {% assign _author = comment.user.login %}
+      {% assign _author_lower = _author | downcase %}
+      <article class="reply static-item">
+        <img {% if comment.user.avatar_url %}src="{{ comment.user.avatar_url }}"{% endif %} alt="{{ _author }}'s avatar picture" class="avatar" data-username="{{ _author_lower }}" loading="lazy">
+        <header>
+          <h4><a href="{{ comment.user.html_url }}" rel="nofollow" class="name">{{ _author }}</a> commented <a href="{{ comment.html_url }}" rel="nofollow">on <time datetime="{{ comment.created_at }}">{{ comment.created_at | date: "%b %-d, %Y" }}</time></a></h4>
+        </header>
+        <div>{{ comment.body | markdownify }}</div>
+      </article>
+    {% endfor %}
+  {% endif %}
+{% endif %}
