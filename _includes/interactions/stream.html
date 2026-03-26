@@ -1,34 +1,26 @@
 {% assign page_mentions = site.data.webmentions[page.url] %}
-{% assign static_replies = page_mentions | where: "wm-property", "in-reply-to" %}
-{% assign static_mentions = page_mentions | where: "wm-property", "mention-of" %}
 {% assign static_likes = page_mentions | where: "wm-property", "like-of" %}
 {% assign static_bookmarks = page_mentions | where: "wm-property", "bookmark-of" %}
 {% assign static_reposts = page_mentions | where: "wm-property", "repost-of" %}
+{% assign _issue_key = page.comments_issue | append: "" %}
+{% assign _static_issue = site.data.github_comments[_issue_key] %}
+{% assign _static_comments = _static_issue.comments %}
+{% assign _feed_items = "" | split: "" %}
+{% if page_mentions %}
+  {% assign _wm_replies_feed = page_mentions | where: "wm-property", "in-reply-to" %}
+  {% assign _wm_mentions_feed = page_mentions | where: "wm-property", "mention-of" %}
+  {% assign _wm_feed = _wm_replies_feed | concat: _wm_mentions_feed %}
+  {% assign _feed_items = _feed_items | concat: _wm_feed %}
+{% endif %}
+{% if _static_comments %}
+  {% assign _feed_items = _feed_items | concat: _static_comments %}
+{% endif %}
+{% assign _feed_items = _feed_items | sort: "sort_date" %}
 <section id="interactions" class="interactions">
   {% include interactions/archived_comments.html %}
-  {% if post.comments_issue %}
-  {% assign _issue_key = post.comments_issue | append: "" %}
-  {% assign _static_issue = site.data.github_comments[_issue_key] %}
-  {% assign _static_comments = _static_issue.comments %}
-  <div id="comments" data-display="block"{% if _static_comments.size > 0 %} style="display:block"{% else %} style="display:none"{% endif %}>
-    {% include global/wide-h3.html text="Comments" %}
-    <div class="items">{% include interactions/static-comments.html %}</div>
-    <div class="formatted-text">
-      <div class="comments-open">Want to comment? You can do so via <a href="{{ site.github.issues_url | append:'/' | append:page.comments_issue }}">Github</a>.</div>
-      <div class="comments-closed">Comments via Github are currently closed.</div>
-      <p style="display: none;" id="github-rate-limit">GitHub API rate limit exceeded. Comments available again at <span></span> <button id="github-retry-btn" type="button" title="Retry fetching comments now" class="reload" data-what="comments"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 80 80" width="20" height="20">
-        <path d="M58.385 34.343V21.615L53.77 26.23C50.244 22.694 45.377 20.5 40 20.5c-10.752 0-19.5 8.748-19.5 19.5S29.248 59.5 40 59.5c7.205 0 13.496-3.939 16.871-9.767l-4.326-2.496C50.035 51.571 45.358 54.5 40 54.5c-7.995 0-14.5-6.505-14.5-14.5S32.005 25.5 40 25.5a14.42 14.42 0 0 1 10.239 4.261l-4.583 4.583h12.729z"/>
-      </svg></button></p>
-    </div>
-  </div>
-  {% endif %}
-  <div id="replies" data-display="none"{% if static_replies.size > 0 %} style="display:block"{% else %} style="display:none"{% endif %}>
-    {% include global/wide-h3.html text="Replies" %}
-    <div class="items">{% include interactions/static-mentions.html wm_property="in-reply-to" %}</div>
-  </div>
-  <div id="mentions" data-display="none"{% if static_mentions.size > 0 %} style="display:block"{% else %} style="display:none"{% endif %}>
-    {% include global/wide-h3.html text="Mentions" %}
-    <div class="items">{% include interactions/static-mentions.html wm_property="mention-of" %}</div>
+  <div id="feed" data-display="{% if page.comments_issue %}block{% else %}none{% endif %}"{% if _feed_items.size > 0 or page.comments_issue %} style="display:block"{% else %} style="display:none"{% endif %}>
+    {% include global/wide-h3.html text="Discussion" %}
+    <div class="items">{% include interactions/static-feed.html items=_feed_items %}</div>
   </div>
   <div id="likes" data-display="none"{% if static_likes.size > 0 %} style="display:block"{% else %} style="display:none"{% endif %}>
     {% include global/wide-h3.html text="Likes" %}
@@ -43,8 +35,15 @@
     <div class="items likes">{% include interactions/static-mentions.html wm_property="repost-of" %}</div>
   </div>
   <div class="formatted-text">
+    {% if page.comments_issue %}
+    <p class="comments-open" style="display: none;">Want to comment? You can do so via <a href="{{ site.github.issues_url | append:'/' | append:page.comments_issue }}">Github</a> or reply using <a href="/post/adding-support-for-webmentions/">Webmentions</a>.</p>
+    <p class="comments-closed" style="display: none;">Want to reply? I've <a href="/post/adding-support-for-webmentions/">hooked up Webmentions</a>, so give it a go!</p>
+    <p style="display: none;" id="github-rate-limit">GitHub API rate limit exceeded. Comments available again at <span></span> <button id="github-retry-btn" type="button" title="Retry fetching comments now" class="reload" data-what="comments"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 80 80" width="20" height="20">
+      <path d="M58.385 34.343V21.615L53.77 26.23C50.244 22.694 45.377 20.5 40 20.5c-10.752 0-19.5 8.748-19.5 19.5S29.248 59.5 40 59.5c7.205 0 13.496-3.939 16.871-9.767l-4.326-2.496C50.035 51.571 45.358 54.5 40 54.5c-7.995 0-14.5-6.505-14.5-14.5S32.005 25.5 40 25.5a14.42 14.42 0 0 1 10.239 4.261l-4.583 4.583h12.729z"/>
+    </svg></button></p>
+    {% else %}
     <p>Want to reply? I've <a href="/post/adding-support-for-webmentions/">hooked up Webmentions</a>, so give it a go!</p>
-
+    {% endif %}
     <p style="display: none;" id="mentions-last-fetched">Webmentions last fetched: <span></span><button title="Reload" class="reload" data-what="webmentions"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 80 80" width="20" height="20">
       <path d="M58.385 34.343V21.615L53.77 26.23C50.244 22.694 45.377 20.5 40 20.5c-10.752 0-19.5 8.748-19.5 19.5S29.248 59.5 40 59.5c7.205 0 13.496-3.939 16.871-9.767l-4.326-2.496C50.035 51.571 45.358 54.5 40 54.5c-7.995 0-14.5-6.505-14.5-14.5S32.005 25.5 40 25.5a14.42 14.42 0 0 1 10.239 4.261l-4.583 4.583h12.729z"/>
     </svg></button></p>
@@ -55,6 +54,7 @@
 <script>
   const preRenderedWmIds = new Set([{% if page_mentions %}{% for mention in page_mentions %}{% if mention['wm-id'] %}{{ mention['wm-id'] }},{% endif %}{% endfor %}{% endif %}]);
   const preRenderedCommentIds = new Set([{% if _static_comments %}{% for comment in _static_comments %}{{ comment.id }},{% endfor %}{% endif %}]);
+  const preRenderedWmConvCount = {{ _wm_feed.size | default: 0 }};
   const preRenderedIssueState = "{{ _static_issue.state }}";
 </script>
 <script src="{{ '/assets/marked.min.js' | relative_url }}"></script>

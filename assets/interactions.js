@@ -13,7 +13,7 @@
     const TYPES = {
         'comment': {
             template: getTemplateContent('tpl-reply'),
-            element: '#comments',
+            element: '#feed',
             attributes: {
                 verb: 'commented',
                 author_name: ['user', 'login'],
@@ -23,12 +23,12 @@
                 date_formatted: ['created_at'],
                 body: ['body'],
                 url: ['html_url'] ,
-                domain: ['html_url'] 
+                domain: ['html_url']
             }
         },
         'reply': {
             template: getTemplateContent('tpl-reply'),
-            element: '#replies',
+            element: '#feed',
             attributes: {
                 verb: 'replied',
                 author_name: ['author', 'name'],
@@ -76,7 +76,7 @@
         },
         'mention': {
             template: getTemplateContent('tpl-mention'),
-            element: '#mentions',
+            element: '#feed',
             attributes: {
                 verb: 'Mentioned',
                 url: ['url'],
@@ -87,7 +87,7 @@
         },
         'mention-rich': {
             template: getTemplateContent('tpl-mention-rich'),
-            element: '#mentions',
+            element: '#feed',
             attributes: {
                 author_name: ['author', 'name'],
                 author_avatar_url: ['author', 'photo'],
@@ -400,14 +400,17 @@
         });
     };
 
+    module._wmConvCount = 0;
+
     module.updateCommentCount = (githubCount = 0) => {
         const statsElement = document.querySelector('.interaction-stats');
         const commentSpan = statsElement?.querySelector('.comment');
         if (!commentSpan) return;
 
         const archivedCount = parseInt(commentSpan.dataset.archivedCount || '0', 10);
+        const wmConvPreRendered = parseInt(commentSpan.dataset.wmConvCount || '0', 10);
         const preRenderedCount = typeof preRenderedCommentIds !== 'undefined' ? preRenderedCommentIds.size : 0;
-        const totalCount = archivedCount + preRenderedCount + githubCount;
+        const totalCount = archivedCount + wmConvPreRendered + preRenderedCount + githubCount + module._wmConvCount;
 
         if (totalCount > 0) {
             const valueSpan = commentSpan.querySelector('.value');
@@ -430,13 +433,17 @@
 
         // Seed from pre-rendered static counts (snapshotted before any JS writes)
         const counts = Object.assign({}, staticDomCounts);
+        let newWmConvCount = 0;
 
         data.filter(m => !preRenderedWmIds.has(m['wm-id'])).forEach(mention => {
-            if (mention.type && VERBS[mention.type]) {
+            if (mention.type === 'reply' || mention.type === 'mention') {
+                newWmConvCount++;
+            } else if (mention.type && VERBS[mention.type]) {
                 counts[mention.type] = (counts[mention.type] || 0) + 1;
             }
         });
 
+        // Update reaction badges (like, bookmark, repost)
         Object.entries(counts).forEach(([key, count]) => {
             const parent = element.querySelector(`.${key}`);
             if (!parent) return;
@@ -447,9 +454,13 @@
             parent.removeAttribute('style');
         });
 
-        if (Object.keys(counts).length > 0) {
+        if (Object.keys(counts).length > 0 || newWmConvCount > 0) {
             element.removeAttribute('style');
         }
+
+        // Fold new wm replies+mentions into the conversation badge
+        module._wmConvCount = newWmConvCount;
+        module.updateCommentCount(interactions.comments?.data?.length || 0);
     };
 
     module.renderArchivedComments = () => {
@@ -583,9 +594,51 @@
         webmentions: module.loadData(`interactions-mentions-${pageURL_base64}`) || {}
     };
 
+    module.renderFeed = () => {
+        const wmData = interactions.webmentions?.data?.children || interactions.webmentions?.data || [];
+        const commentsData = interactions.comments?.data || [];
+
+        // Render reactions (like, bookmark, repost) to their own sections
+        wmData.filter(m => m.type && !['reply', 'mention'].includes(m.type)).forEach(item => {
+            const type = TYPES[item.type];
+            if (!type) return;
+            const element = document.querySelector(type.element);
+            if (!element?.querySelector('.items')) return;
+            element.querySelector('.items').innerHTML += module.renderThing(type, item);
+            element.style.display = 'block';
+        });
+
+        // Merge feed items: wm replies+mentions + new github comments, sorted by date
+        const feedWm = wmData.filter(m => m.type === 'reply' || m.type === 'mention');
+        const newComments = commentsData.filter(c => !preRenderedCommentIds.has(c.id));
+        const merged = [...feedWm, ...newComments].sort((a, b) =>
+            new Date(a['wm-received'] || a.created_at || 0) - new Date(b['wm-received'] || b.created_at || 0)
+        );
+
+        // Handle issue open/closed state
+        const state = interactions.comments?.state || 'closed';
+        const otherState = state === 'open' ? 'closed' : 'open';
+        const feedEl = document.querySelector('#feed');
+        if (feedEl && (state === 'open' || merged.length > 0)) {
+            feedEl.style.display = 'block';
+        }
+        document.querySelectorAll(`.comments-${state}`).forEach(el => el.style.display = 'initial');
+        document.querySelectorAll(`.comments-${otherState}`).forEach(el => el.style.display = 'none');
+
+        // Render merged items into #feed
+        if (!feedEl?.querySelector('.items')) return;
+        merged.forEach(item => {
+            if (!item.type) return;
+            let type = TYPES[item.type];
+            if (item.content?.text && item.type === 'mention') type = TYPES['mention-rich'];
+            if (!type) return;
+            feedEl.querySelector('.items').innerHTML += module.renderThing(type, item);
+            feedEl.style.display = 'block';
+        });
+    };
+
     module.renderAll = () => {
-        module.renderThings(interactions.webmentions);
-        module.renderThings(interactions.comments);
+        module.renderFeed();
         module.updateCommentCount(interactions.comments?.data?.length || 0);
         module.updateWebmentionCounts();
         module.checkForFailedAvatars();
@@ -713,7 +766,7 @@
                     data: (Array.isArray(comments) ? comments : []).filter(c => !preRenderedCommentIds.has(c.id)).map(comment => Object.assign(comment, { type: 'comment' }))
                 };
                 module.saveData(interactions.comments, `interactions-comments-${pageURL_base64}`);
-                module.renderThings(interactions.comments);
+                module.renderFeed();
                 module.updateCommentCount(interactions.comments.data.length);
                 module.checkForFailedAvatars();
             } catch (error) {
@@ -749,7 +802,7 @@
 
                 module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
                 module.clearItems(['webmentions']);
-                module.renderThings(interactions.webmentions);
+                module.renderFeed();
                 module.updateWebmentionCounts();
                 module.checkForFailedAvatars();
             } catch (error) {
@@ -774,16 +827,14 @@
     }
     module.clearItems = (what = ['comments', 'webmentions']) => {
         let sections = []
-        if (what.includes('comments')) {
-            sections.push('#comments');
+        if (what.includes('comments') || what.includes('webmentions')) {
+            sections.push('#feed');
         }
         if (what.includes('webmentions')) {
             sections.push(
-                '#replies',
                 '#likes',
                 '#bookmarks',
-                '#reposts',
-                '#mentions'
+                '#reposts'
             )
         }
 

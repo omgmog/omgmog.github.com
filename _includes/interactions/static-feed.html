@@ -1,0 +1,44 @@
+{% for item in include.items %}
+  {% if item['wm-property'] %}
+    {% assign mention_url = item.url | default: item['wm-source'] %}
+    {% assign mention_date = item.published | default: item['wm-received'] %}
+    {% assign mention_domain = mention_url | split: "/" | slice: 2 %}
+    {% assign author_name = item.author.name | default: mention_domain %}
+    {% assign author_url = item.author.url | default: mention_url %}
+    {% assign author_photo = item.author.photo %}
+    {% if item['wm-property'] == "mention-of" %}
+      {% if item.content.text %}
+        <article class="reply mention-rich static-item">
+          <img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">
+          <header>
+            <h4><a href="{{ author_url }}" rel="nofollow" class="name">{{ author_name }}</a> mentioned <a href="{{ mention_url }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain }}</a></h4>
+          </header>
+          {% assign mention_body = item.summary.value | default: item.content.html | default: item.content.text %}
+          {% if mention_body %}<div>{{ mention_body | markdownify }}</div>{% endif %}
+        </article>
+      {% else %}
+        <article class="reply mention static-item">
+          <div><p>Mentioned in <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
+        </article>
+      {% endif %}
+    {% elsif item['wm-property'] == "in-reply-to" %}
+      <article class="reply static-item">
+        <img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">
+        <header>
+          <h4><a href="{{ author_url }}" rel="nofollow" class="name">{{ author_name }}</a> replied <a href="{{ mention_url }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain }}</a></h4>
+        </header>
+        <div>{{ item.content.text | markdownify }}</div>
+      </article>
+    {% endif %}
+  {% else %}
+    {% assign _author = item.user.login %}
+    {% assign _author_lower = _author | downcase %}
+    <article class="reply static-item">
+      <img {% if item.user.avatar_url %}src="{{ item.user.avatar_url }}"{% endif %} alt="{{ _author }}'s avatar picture" class="avatar" data-username="{{ _author_lower }}" loading="lazy">
+      <header>
+        <h4><a href="{{ item.user.html_url }}" rel="nofollow" class="name">{{ _author }}</a> commented <a href="{{ item.html_url }}" rel="nofollow">on <time datetime="{{ item.created_at }}">{{ item.created_at | date: "%b %-d, %Y" }}</time></a></h4>
+      </header>
+      <div>{{ item.body | markdownify }}</div>
+    </article>
+  {% endif %}
+{% endfor %}

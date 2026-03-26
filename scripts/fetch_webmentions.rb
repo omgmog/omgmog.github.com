@@ -29,7 +29,12 @@ webmentions = {}
 total = 0
 
 index.each do |path, hashes|
-  mentions = hashes.filter_map { |hash| fetch_json("#{MORRIS_BASE}/mentions/#{hash}.json") }
+  mentions = hashes.filter_map do |hash|
+    m = fetch_json("#{MORRIS_BASE}/mentions/#{hash}.json")
+    next unless m
+    m['sort_date'] = m['wm-received'] || m['published'] || ''
+    m
+  end
   unless mentions.empty?
     webmentions[path] = mentions
     total += mentions.length

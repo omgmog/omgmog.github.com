@@ -57,7 +57,8 @@ issue_numbers.each do |n|
         'body'         => c['body'],
         'body_html'    => c['body_html'],
         'created_at'   => c['created_at'],
-        'html_url'     => c['html_url']
+        'html_url'     => c['html_url'],
+        'sort_date'    => c['created_at']
       }
     end
     break if batch.length < 100
