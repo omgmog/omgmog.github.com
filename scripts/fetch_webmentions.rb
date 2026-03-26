@@ -6,6 +6,17 @@ require 'uri'
 MORRIS_BASE = 'https://wm.omgmog.net/morris/data'
 OUTPUT_FILE = File.join(__dir__, '..', '_data', 'webmentions.json')
 
+BLOCKED_DOMAINS = %w[
+  beatonma.org
+  muo.blogs.web.id
+  ar.eastspace.net
+  www.noise.my.id
+  x.svenger.de
+  z.kdrama.my.id
+  io-max.one
+  www.howtobuildclub.com
+].freeze
+
 def fetch_json(url)
   uri = URI(url)
   Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
@@ -32,6 +43,8 @@ index.each do |path, hashes|
   mentions = hashes.filter_map do |hash|
     m = fetch_json("#{MORRIS_BASE}/mentions/#{hash}.json")
     next unless m
+    source_domain = URI.parse(m['wm-source'] || '').host rescue nil
+    next if source_domain && BLOCKED_DOMAINS.include?(source_domain)
     m['sort_date'] = m['published'] || m['wm-received'] || ''
     m
   end
