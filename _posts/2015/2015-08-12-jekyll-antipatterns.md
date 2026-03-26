@@ -11,7 +11,7 @@ archived_comments:
 - author: "Max Glenister"
   date: August 13, 2015
   content: |
-    Hi, I've just had a play to see if I can reproduce your issue, and I could. I also worked out how to solve it.In Jekyll, "true" is not equal to true, and when you use the "where:" filter, even if you omit the quotes on true, it treats it as a string rather than a boolean.This drove me a mad for a moment as I was getting no results when doing{% assign featured_works = (site.work | where: "featured", "true") %}The solution for this is to quote "true" in the frontmatter of your Work pieces:---title: foofeatured: "true"---Then you should be able to limit on the resulting queryset:{% for work in featured_works | limit: 4 %} {{ work.title }}{% endfor %}I hope that helps!
+    Hi, I've just had a play to see if I can reproduce your issue, and I could. I also worked out how to solve it.In Jekyll, "true" is not equal to true, and when you use the "where:" filter, even if you omit the quotes on true, it treats it as a string rather than a boolean.This drove me a mad for a moment as I was getting no results when doing{% assign featured_works = (site.work \| where: "featured", "true") %}The solution for this is to quote "true" in the frontmatter of your Work pieces:---title: foofeatured: "true"---Then you should be able to limit on the resulting queryset:{% for work in featured_works \| limit: 4 %} {{ work.title }}{% endfor %}I hope that helps!
 - author: "mvaneijgen"
   date: August 13, 2015
   content: |

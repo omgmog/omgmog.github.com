@@ -1,5 +1,57 @@
 
 .interactions {
+
+  // Source/platform accent colours
+  $source-github:   #24292e;
+  $source-archived: #999;
+  $platform-reddit:  #ff4500;
+  $platform-twitter: #1da1f2;
+  $platform-mastodon: #6364ff;
+  $author: var(--colors-primary-transparent-25);
+
+  @mixin bubble-accent($color, $side: 'left') {
+    > div {
+      @if $side == 'left' {
+        border-left: 3px solid $color;
+        border-radius: 0 .4rem .4rem 0;
+      } @else if $side == 'right' {
+        border-right: 3px solid $color;
+        border-radius: .4rem 0 0 .4rem;
+      }
+    }
+  }
+
+  .reply {
+    &[data-source="github"]            { @include bubble-accent($source-github); }
+    &[data-source="archived"]          { @include bubble-accent($source-archived); }
+    &[data-platform="reddit"]          { @include bubble-accent($platform-reddit); }
+    &[data-platform="twitter"]         { @include bubble-accent($platform-twitter); }
+    &[data-platform="mastodon"]        { @include bubble-accent($platform-mastodon); }
+  }
+
+  // Author: reversed bubble (sent-message style)
+  .reply.is-author {
+    padding-left: 0;
+    padding-right: 4rem;
+
+    .avatar {
+      left: auto;
+      right: 0;
+    }
+
+    > div {
+      background-color: $author;
+      @include bubble-accent($author, 'right');
+      
+
+      &::before {
+        border-right-color: transparent;
+        border-left-color: $author;
+        left: auto;
+        right: -1rem;
+      }
+    }
+  }
   .comments-open,
   .comments-closed {
     display: none;
@@ -22,21 +74,19 @@
     }
   }
 
-  .likes {
+  .reaction-names {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    gap: .4em;
+    font-size: .9rem;
+    color: var(--colors-darkgrey);
     margin-bottom: var(--gutter-inner-y);
 
-    .like {
-      flex-shrink: 1;
-      width: 3.5rem;
-      height: 3.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    svg {
+      flex-shrink: 0;
+      width: 1.1em;
+      height: 1.1em;
+      stroke: currentColor;
     }
   }
 

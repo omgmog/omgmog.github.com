@@ -32,7 +32,7 @@ index.each do |path, hashes|
   mentions = hashes.filter_map do |hash|
     m = fetch_json("#{MORRIS_BASE}/mentions/#{hash}.json")
     next unless m
-    m['sort_date'] = m['wm-received'] || m['published'] || ''
+    m['sort_date'] = m['published'] || m['wm-received'] || ''
     m
   end
   unless mentions.empty?

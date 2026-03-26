@@ -1,3 +1,7 @@
+{% assign _author_domains = "omgmog.net,omgmog.github.io,twitter.com/omgmog,indieweb.social/@omgmog" | split: "," %}
+{% assign _author_gh_login = "omgmog" %}
+{% assign _author_display_name = "Max Glenister" %}
+
 {% for item in include.items %}
   {% if item['wm-property'] %}
     {% assign mention_url = item.url | default: item['wm-source'] %}
@@ -6,39 +10,73 @@
     {% assign author_name = item.author.name | default: mention_domain %}
     {% assign author_url = item.author.url | default: mention_url %}
     {% assign author_photo = item.author.photo %}
+    {% assign _is_author = false %}
+    {% for _d in _author_domains %}
+      {% if author_url contains _d or item['wm-source'] contains _d %}{% assign _is_author = true %}{% endif %}
+    {% endfor %}
+    {% if _is_author %}{% assign author_name = _author_display_name %}{% endif %}
+    {% assign _platform = "web" %}
+    {% if mention_url contains 'reddit.com' %}{% assign _platform = "reddit" %}
+    {% elsif mention_url contains 'twitter.com' %}{% assign _platform = "twitter" %}
+    {% elsif item['wm-source'] contains 'brid.gy' %}{% assign _platform = "mastodon" %}
+    {% endif %}
     {% if item['wm-property'] == "mention-of" %}
       {% if item.content.text %}
-        <article class="reply mention-rich static-item">
-          <img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">
+        <article class="reply mention-rich static-item{% if _is_author %} is-author{% endif %}" data-source="webmention" data-platform="{{ _platform }}">
+          {% if _is_author %}<img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ author_name }}'s avatar picture" class="avatar" loading="lazy">
+          {% else %}<img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">{% endif %}
           <header>
             <h4><a href="{{ author_url }}" rel="nofollow" class="name">{{ author_name }}</a> mentioned <a href="{{ mention_url }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain }}</a></h4>
           </header>
-          {% assign mention_body = item.summary.value | default: item.content.html | default: item.content.text %}
-          {% if mention_body %}<div>{{ mention_body | markdownify }}</div>{% endif %}
+          {% assign _html_limit = 1000 %}
+          {% if item.summary.value %}<div>{{ item.summary.value | markdownify }}</div>
+          {% elsif item.content.html and item.content.html.size <= _html_limit %}<div>{{ item.content.html }}</div>
+          {% elsif item.content.text %}<div>{{ item.content.text | truncatewords: 50, "&hellip;" }}</div>
+          {% endif %}
         </article>
       {% else %}
-        <article class="reply mention static-item">
+        <article class="reply mention static-item{% if _is_author %} is-author{% endif %}" data-source="webmention" data-platform="{{ _platform }}">
           <div><p>Mentioned in <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
         </article>
       {% endif %}
     {% elsif item['wm-property'] == "in-reply-to" %}
-      <article class="reply static-item">
-        <img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">
+      <article class="reply static-item{% if _is_author %} is-author{% endif %}" data-source="webmention" data-platform="{{ _platform }}">
+        {% if _is_author %}<img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ author_name }}'s avatar picture" class="avatar" loading="lazy">
+        {% else %}<img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">{% endif %}
         <header>
           <h4><a href="{{ author_url }}" rel="nofollow" class="name">{{ author_name }}</a> replied <a href="{{ mention_url }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain }}</a></h4>
         </header>
         <div>{{ item.content.text | markdownify }}</div>
       </article>
     {% endif %}
-  {% else %}
+  {% elsif item.user %}
     {% assign _author = item.user.login %}
     {% assign _author_lower = _author | downcase %}
-    <article class="reply static-item">
-      <img {% if item.user.avatar_url %}src="{{ item.user.avatar_url }}"{% endif %} alt="{{ _author }}'s avatar picture" class="avatar" data-username="{{ _author_lower }}" loading="lazy">
+    {% assign _is_author = false %}
+    {% if _author_lower == _author_gh_login %}{% assign _is_author = true %}{% endif %}
+    <article class="reply static-item{% if _is_author %} is-author{% endif %}" data-source="github">
+      {% if _is_author %}<img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ _author_display_name }}'s avatar picture" class="avatar" loading="lazy">
+      {% else %}<img {% if item.user.avatar_url %}src="{{ item.user.avatar_url }}"{% endif %} alt="{{ _author }}'s avatar picture" class="avatar" data-username="{{ _author_lower }}" loading="lazy">{% endif %}
       <header>
-        <h4><a href="{{ item.user.html_url }}" rel="nofollow" class="name">{{ _author }}</a> commented <a href="{{ item.html_url }}" rel="nofollow">on <time datetime="{{ item.created_at }}">{{ item.created_at | date: "%b %-d, %Y" }}</time></a></h4>
+        <h4><a href="{{ item.user.html_url }}" rel="nofollow" class="name">{% if _is_author %}{{ _author_display_name }}{% else %}{{ _author }}{% endif %}</a> commented <a href="{{ item.html_url }}" rel="nofollow">on <time datetime="{{ item.created_at }}">{{ item.created_at | date: "%b %-d, %Y" }}</time> via github.com</a></h4>
       </header>
       <div>{{ item.body | markdownify }}</div>
+    </article>
+  {% else %}
+    {% assign _author_lower = item.author | downcase %}
+    {% if _author_lower == 'max glenister' %}{% assign _author_lower = 'max' %}{% endif %}
+    {% assign _is_author = false %}
+    {% if _author_lower == 'max' %}{% assign _is_author = true %}{% endif %}
+    <article class="reply static-item{% if _is_author %} is-author{% endif %}" data-source="archived">
+      {% if _is_author %}
+        <img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ item.author }}'s avatar picture" class="avatar" loading="lazy">
+      {% else %}
+        <img class="avatar" data-username="{{ _author_lower }}" loading="lazy">
+      {% endif %}
+      <header>
+        <h4><span class="name">{{ item.author }}</span> commented <time datetime="{{ item.date }}">{{ item.date }}</time></h4>
+      </header>
+      <div>{{ item.content | markdownify }}</div>
     </article>
   {% endif %}
 {% endfor %}

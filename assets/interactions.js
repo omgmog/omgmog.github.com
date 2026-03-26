@@ -12,9 +12,10 @@
 
     const TYPES = {
         'comment': {
-            template: getTemplateContent('tpl-reply'),
+            template: getTemplateContent('tpl-comment'),
             element: '#feed',
             attributes: {
+                is_author_class: ['_is_author_class'],
                 verb: 'commented',
                 author_name: ['user', 'login'],
                 author_avatar_url: ['user', 'avatar_url'],
@@ -22,7 +23,7 @@
                 date: ['created_at'],
                 date_formatted: ['created_at'],
                 body: ['body'],
-                url: ['html_url'] ,
+                url: ['html_url'],
                 domain: ['html_url']
             }
         },
@@ -30,6 +31,8 @@
             template: getTemplateContent('tpl-reply'),
             element: '#feed',
             attributes: {
+                is_author_class: ['_is_author_class'],
+                platform: ['_platform'],
                 verb: 'replied',
                 author_name: ['author', 'name'],
                 author_avatar_url: ['author', 'photo'],
@@ -41,43 +44,11 @@
                 domain: ['url']
             }
         },
-        'like': {
-            template: getTemplateContent('tpl-like'),
-            element: '#likes',
-            attributes: {
-                verb: 'Liked',
-                author_name: ['author', 'name'],
-                author_avatar_url: ['author', 'photo'],
-                emoji: '❤️',
-                domain: ['url']
-            }
-        },
-        'bookmark': {
-            template: getTemplateContent('tpl-bookmark'),
-            element: '#bookmarks',
-            attributes: {
-                verb: 'Bookmarked',
-                author_name: ['author', 'name'],
-                author_avatar_url: ['author', 'photo'],
-                emoji: '⭐',
-                domain: ['url']
-            }
-        },
-        'repost': {
-            template: getTemplateContent('tpl-repost'),
-            element: '#reposts',
-            attributes: {
-                verb: 'reposted',
-                author_name: ['author', 'name'],
-                author_avatar_url: ['author', 'photo'],
-                emoji: '🔁',
-                domain: ['url']
-            }
-        },
         'mention': {
             template: getTemplateContent('tpl-mention'),
             element: '#feed',
             attributes: {
+                platform: ['_platform'],
                 verb: 'Mentioned',
                 url: ['url'],
                 date: ['published'],
@@ -89,6 +60,8 @@
             template: getTemplateContent('tpl-mention-rich'),
             element: '#feed',
             attributes: {
+                is_author_class: ['_is_author_class'],
+                platform: ['_platform'],
                 author_name: ['author', 'name'],
                 author_avatar_url: ['author', 'photo'],
                 author_url: ['author', 'url'],
@@ -260,22 +233,44 @@
             }
 
             if (attribute === 'summary') {
-                // sometimes we use the summary but if it's not available fallback to truncated body
-                if (!data.summary?.value?.length > 0) {
+                const HTML_LIMIT = 1000;
+                const truncateText = text => {
                     const word_limit = 50;
-                    const contentText = data.content?.text || '';
-                    let words = contentText.replace(/\s+/g,' ').split(' ', word_limit + 1);
-
+                    let words = (text || '').replace(/\s+/g,' ').split(' ', word_limit + 1);
                     if (words.length > word_limit) {
                         words[word_limit - 1] += '&hellip;';
                         words = words.slice(0, word_limit);
                     }
-                    value = words.join(' ');
+                    return words.join(' ');
+                };
+                if (data.summary?.value) {
+                    value = data.summary.value;
+                } else if (data.content?.html && data.content.html.length <= HTML_LIMIT) {
+                    value = data.content.html;
+                } else if (data.content?.html) {
+                    // Extract context around the mention link from large HTML
+                    const targetUrl = data['wm-target'] || '';
+                    let extracted = null;
+                    try {
+                        const doc = new DOMParser().parseFromString(data.content.html, 'text/html');
+                        const targetPath = targetUrl ? new URL(targetUrl).pathname : '';
+                        const link = doc.querySelector(`a[href="${targetUrl}"]`)
+                            || (targetPath && doc.querySelector(`a[href*="${targetPath}"]`));
+                        if (link) {
+                            const container = link.closest('p, blockquote, li') || link.parentElement;
+                            extracted = container ? container.innerHTML : link.outerHTML;
+                        }
+                    } catch(e) {}
+                    value = extracted || truncateText(data.content?.text);
+                } else {
+                    value = truncateText(data.content?.text);
                 }
             }
             if (attribute === 'body' || attribute === 'summary') {
-                // markdown parse the body
-                value = marked.parse(value);
+                // skip markdown parsing if already HTML
+                if (!/<[a-z][\s\S]*>/i.test(value)) {
+                    value = marked.parse(value);
+                }
             }
             if (attribute === 'domain') {
                 // extract the hostname from the url
@@ -310,7 +305,7 @@
                 }
             }
 
-            template = template.replace(new RegExp('%' + attribute + '%', 'g'), value);
+            template = template.replace(new RegExp('%' + attribute + '%', 'g'), value ?? '');
         }
       return template;
     };
@@ -598,16 +593,6 @@
         const wmData = interactions.webmentions?.data?.children || interactions.webmentions?.data || [];
         const commentsData = interactions.comments?.data || [];
 
-        // Render reactions (like, bookmark, repost) to their own sections
-        wmData.filter(m => m.type && !['reply', 'mention'].includes(m.type)).forEach(item => {
-            const type = TYPES[item.type];
-            if (!type) return;
-            const element = document.querySelector(type.element);
-            if (!element?.querySelector('.items')) return;
-            element.querySelector('.items').innerHTML += module.renderThing(type, item);
-            element.style.display = 'block';
-        });
-
         // Merge feed items: wm replies+mentions + new github comments, sorted by date
         const feedWm = wmData.filter(m => m.type === 'reply' || m.type === 'mention');
         const newComments = commentsData.filter(c => !preRenderedCommentIds.has(c.id));
@@ -625,6 +610,25 @@
         document.querySelectorAll(`.comments-${state}`).forEach(el => el.style.display = 'initial');
         document.querySelectorAll(`.comments-${otherState}`).forEach(el => el.style.display = 'none');
 
+        // Helpers for author detection and platform classification
+        const AUTHOR_GH_LOGIN = 'omgmog';
+        const AUTHOR_DISPLAY_NAME = 'Max Glenister';
+        const AUTHOR_DOMAINS = ['omgmog.net', 'omgmog.github.io', 'twitter.com/omgmog'];
+        const checkIsAuthor = item => {
+            if (item.type === 'comment') return item.user?.login?.toLowerCase() === AUTHOR_GH_LOGIN;
+            const url = item.author?.url || '';
+            const source = item['wm-source'] || '';
+            return AUTHOR_DOMAINS.some(d => url.includes(d) || source.includes(d));
+        };
+        const computePlatform = item => {
+            const url = item.url || item['wm-source'] || '';
+            const source = item['wm-source'] || '';
+            if (url.includes('reddit.com')) return 'reddit';
+            if (url.includes('twitter.com')) return 'twitter';
+            if (source.includes('brid.gy')) return 'mastodon';
+            return 'web';
+        };
+
         // Render merged items into #feed
         if (!feedEl?.querySelector('.items')) return;
         merged.forEach(item => {
@@ -632,9 +636,34 @@
             let type = TYPES[item.type];
             if (item.content?.text && item.type === 'mention') type = TYPES['mention-rich'];
             if (!type) return;
-            feedEl.querySelector('.items').innerHTML += module.renderThing(type, item);
+
+            const isAuthor = checkIsAuthor(item);
+            const enriched = Object.assign({}, item);
+            enriched._is_author_class = isAuthor ? ' is-author' : '';
+            enriched._platform = computePlatform(item);
+            if (isAuthor) {
+                if (item.type === 'comment') {
+                    enriched.user = Object.assign({}, item.user, { login: AUTHOR_DISPLAY_NAME, avatar_url: '/assets/mog.svg' });
+                } else {
+                    enriched.author = Object.assign({}, item.author, { name: AUTHOR_DISPLAY_NAME, photo: '/assets/mog.svg' });
+                }
+            }
+
+            feedEl.querySelector('.items').innerHTML += module.renderThing(type, enriched);
             feedEl.style.display = 'block';
         });
+
+        // Re-sort all feed children (static + dynamic) by datetime
+        const itemsEl = feedEl.querySelector('.items');
+        if (itemsEl) {
+            Array.from(itemsEl.children)
+                .sort((a, b) => {
+                    const aDate = a.querySelector('time')?.getAttribute('datetime') || '';
+                    const bDate = b.querySelector('time')?.getAttribute('datetime') || '';
+                    return aDate.localeCompare(bDate);
+                })
+                .forEach(child => itemsEl.appendChild(child));
+        }
     };
 
     module.renderAll = () => {
@@ -642,7 +671,6 @@
         module.updateCommentCount(interactions.comments?.data?.length || 0);
         module.updateWebmentionCounts();
         module.checkForFailedAvatars();
-        module.renderArchivedComments();
     }
 
     module.fetchAndCache = async (what = ['comments', 'webmentions']) => {
@@ -704,7 +732,7 @@
                         }));
                     const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
                     interactions.webmentions.data = interactions.webmentions.data.concat(
-                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !preRenderedWmIds.has(m['wm-id']))
+                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !(preRenderedWmIds.has(m['wm-id']) && (m.type === 'reply' || m.type === 'mention')))
                     );
                 });
                 module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
@@ -796,7 +824,7 @@
 
                     const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
                     interactions.webmentions.data = interactions.webmentions.data.concat(
-                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !preRenderedWmIds.has(m['wm-id']))
+                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !(preRenderedWmIds.has(m['wm-id']) && (m.type === 'reply' || m.type === 'mention')))
                     );
                 });
 
@@ -810,7 +838,6 @@
             }
         }
 
-        module.renderArchivedComments();
     };
     module.renderFetchDate = () => {
         const fetchedDateElement = document.querySelector('#mentions-last-fetched');
@@ -830,14 +857,6 @@
         if (what.includes('comments') || what.includes('webmentions')) {
             sections.push('#feed');
         }
-        if (what.includes('webmentions')) {
-            sections.push(
-                '#likes',
-                '#bookmarks',
-                '#reposts'
-            )
-        }
-
         document.querySelectorAll(sections.join(',')).forEach(section => {
             const list = section.querySelector('.items');
             if (list) {

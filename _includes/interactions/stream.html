@@ -1,7 +1,4 @@
 {% assign page_mentions = site.data.webmentions[page.url] %}
-{% assign static_likes = page_mentions | where: "wm-property", "like-of" %}
-{% assign static_bookmarks = page_mentions | where: "wm-property", "bookmark-of" %}
-{% assign static_reposts = page_mentions | where: "wm-property", "repost-of" %}
 {% assign _issue_key = page.comments_issue | append: "" %}
 {% assign _static_issue = site.data.github_comments[_issue_key] %}
 {% assign _static_comments = _static_issue.comments %}
@@ -9,30 +6,21 @@
 {% if page_mentions %}
   {% assign _wm_replies_feed = page_mentions | where: "wm-property", "in-reply-to" %}
   {% assign _wm_mentions_feed = page_mentions | where: "wm-property", "mention-of" %}
-  {% assign _wm_feed = _wm_replies_feed | concat: _wm_mentions_feed %}
+  {% assign _wm_feed = _wm_replies_feed | concat: _wm_mentions_feed | sort: "wm-received" %}
   {% assign _feed_items = _feed_items | concat: _wm_feed %}
 {% endif %}
 {% if _static_comments %}
   {% assign _feed_items = _feed_items | concat: _static_comments %}
 {% endif %}
 {% assign _feed_items = _feed_items | sort: "sort_date" %}
+{% if post.archived_comments %}
+  {% comment %}Put archived comments first as they're usually older{% endcomment %}
+  {% assign _feed_items = post.archived_comments | concat: _feed_items %}
+{% endif %}
 <section id="interactions" class="interactions">
-  {% include interactions/archived_comments.html %}
-  <div id="feed" data-display="{% if page.comments_issue %}block{% else %}none{% endif %}"{% if _feed_items.size > 0 or page.comments_issue %} style="display:block"{% else %} style="display:none"{% endif %}>
+  <div id="feed" data-display="{% if page.comments_issue or post.archived_comments %}block{% else %}none{% endif %}"{% if _feed_items.size > 0 or page.comments_issue %} style="display:block"{% else %} style="display:none"{% endif %}>
     {% include global/wide-h3.html text="Discussion" %}
     <div class="items">{% include interactions/static-feed.html items=_feed_items %}</div>
-  </div>
-  <div id="likes" data-display="none"{% if static_likes.size > 0 %} style="display:block"{% else %} style="display:none"{% endif %}>
-    {% include global/wide-h3.html text="Likes" %}
-    <div class="items likes">{% include interactions/static-mentions.html wm_property="like-of" %}</div>
-  </div>
-  <div id="bookmarks" data-display="none"{% if static_bookmarks.size > 0 %} style="display:block"{% else %} style="display:none"{% endif %}>
-    {% include global/wide-h3.html text="Bookmarks" %}
-    <div class="items likes">{% include interactions/static-mentions.html wm_property="bookmark-of" %}</div>
-  </div>
-  <div id="reposts" data-display="none"{% if static_reposts.size > 0 %} style="display:block"{% else %} style="display:none"{% endif %}>
-    {% include global/wide-h3.html text="Reposts" %}
-    <div class="items likes">{% include interactions/static-mentions.html wm_property="repost-of" %}</div>
   </div>
   <div class="formatted-text">
     {% if page.comments_issue %}
