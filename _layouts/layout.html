@@ -61,15 +61,15 @@
   <hr>
   <footer class="main-footer">
     {% if page.url != "/" %}{% include global/bio.html %}{% endif %}
-    <div class="webring">
-      <a href="https://xn--sr8hvo.ws/previous" aria-label="Previous site in webring"><svg viewBox="0 0 24 24" width="64" height="64"><use href="#icon-move-left"/></svg></a> <a href="https://xn--sr8hvo.ws">🕸💍</a> <a href="https://xn--sr8hvo.ws/next" aria-label="Next site in webring"><svg viewBox="0 0 24 24" width="64" height="64"><use href="#icon-move-right"/></svg></a>
-    </div>
-    <hr>
     <small>
       &copy; {{site.posts.last.date|date:"%Y"}}&mdash;{{site.time|date:"%Y"}} Max Glenister. Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.
       <br>
       Website last built: <a target="_blank" href="{{site.github.repository_url}}/commit/{{site.github.build_revision}}">{{ site.time | date_to_long_string }}</a>
     </small>
+    <hr>
+    <div class="webring">
+      <a href="https://xn--sr8hvo.ws/previous" aria-label="Previous site in webring"><svg viewBox="0 0 24 24" width="64" height="64"><use href="#icon-move-left"/></svg></a> <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> <a href="https://xn--sr8hvo.ws/next" aria-label="Next site in webring"><svg viewBox="0 0 24 24" width="64" height="64"><use href="#icon-move-right"/></svg></a>
+    </div>
   </footer>
   <script type="application/ld+json">
   {% if page.layout == "post" %}
