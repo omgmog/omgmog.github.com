@@ -24,7 +24,7 @@ A scheduled action runs every hour, fetches my most recent track via the Last.fm
     if git diff --staged --quiet; then
       echo "No change"
     else
-      git commit -m "Update Last.fm now playing"
+      git commit -m "Update data"
       git push
     fi
 ```
@@ -33,11 +33,11 @@ The script only writes to disk when something actually changes (track name, arti
 
 ```
 d3e220d post about my home nas
-a051ecf Update Last.fm now playing
-c2d9699 Update Last.fm now playing
-5eb6c17 Update Last.fm now playing
-9644ed6 Update Last.fm now playing
-e4dca4d Update Last.fm now playing
+a051ecf Update data
+c2d9699 Update data
+5eb6c17 Update data
+9644ed6 Update data
+e4dca4d Update data
 b4c5fba limit the feed to 25 posts
 ```
 
@@ -45,7 +45,7 @@ b4c5fba limit the feed to 25 posts
 
 ## Fixing it going forward
 
-The solution was to make the workflow amend the previous Last.fm update commit, instead of creating a new commit each time. That leaves at most one Last.fm commit between real ones:
+The solution was to make the workflow amend the previous update commit, instead of creating a new commit each time. That leaves at most one Last.fm commit between real ones:
 
 ```yaml
 - name: Checkout repo
@@ -62,11 +62,11 @@ The solution was to make the workflow amend the previous Last.fm update commit, 
     if git diff --staged --quiet; then
       echo "changed=false" >> $GITHUB_OUTPUT
     else
-      if [ "$(git log -1 --pretty=%s)" = "Update Last.fm now playing" ]; then
+      if [ "$(git log -1 --pretty=%s)" = "Update data" ]; then
         git commit --amend --no-edit
         git push --force-with-lease
       else
-        git commit -m "Update Last.fm now playing"
+        git commit -m "Update data"
         git push
       fi
       echo "changed=true" >> $GITHUB_OUTPUT
@@ -101,18 +101,18 @@ for line in lines:
     parts = stripped.split(' ', 2)
     action, sha = parts[0], parts[1]
     msg = parts[2] if len(parts) > 2 else ''
-    is_lastfm = msg == 'Update Last.fm now playing'
-    if is_lastfm and prev_was_lastfm:
+    is_update = msg == 'Update data'
+    if is_update and prev_was_update:
         out.append(line.replace(action, 'fixup', 1))
     else:
         out.append(line)
-    prev_was_lastfm = is_lastfm
+    prev_was_update = is_update
 
 with open(todo_file, 'w') as f:
     f.writelines(out)
 ```
 
-It reads through the rebase todo in order. The first Last.fm commit in a consecutive run stays as `pick`. Every subsequent one becomes `fixup`, folding it into the previous commit and discarding its message. Any non-Last.fm commit breaks the run.
+It reads through the rebase todo in order. The first `Update data` commit in a consecutive run stays as `pick`. Every subsequent one becomes `fixup`, folding it into the previous commit and discarding its message. Any other commit breaks the run.
 
 I ran it from just before the [oldest Last.fm commit](https://github.com/omgmog/omgmog.github.com/commit/a1aaf39e):
 
@@ -129,10 +129,10 @@ git push --force-with-lease
 The log now looks like it should:
 
 ```
-e35e061 Update Last.fm now playing
+e35e061 Update data
 b4c5fba limit the feed to 25 posts
 fc050f2 also highlight the nav when viewing archive page
 ...
-4fdfec4 Update Last.fm now playing
+4fdfec4 Update data
 adc03e8 Improve feed.xml
 ```

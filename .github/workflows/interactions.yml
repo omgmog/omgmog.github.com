@@ -74,11 +74,11 @@ jobs:
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
-            if [ "$(git log -1 --pretty=%s)" = "Update interactions data" ]; then
+            if [ "$(git log -1 --pretty=%s)" = "Update data" ]; then
               git commit --amend --no-edit
               git push --force-with-lease
             else
-              git commit -m "Update interactions data"
+              git commit -m "Update data"
               git push
             fi
             echo "changed=true" >> $GITHUB_OUTPUT
