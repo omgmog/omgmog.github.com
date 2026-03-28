@@ -501,6 +501,17 @@ body {
     }
   }
 
+  div.massive {
+    @include breakoutWidth;
+
+    &.post-list-item {
+      background-color: var(--colors-white);
+      border-radius: .4rem;
+      padding: 1rem;
+      box-shadow: 0 .5rem .5rem var(--colors-midgrey-transparent-25);
+    }
+  }
+
   figure {
     @include breakoutWidth;
     border-radius: .4rem;
@@ -948,6 +959,7 @@ body {
       margin-top: var(--gutter-inner-y);
     }
 
+    // post months/years
     > li > time {
       display: block;
       margin-bottom: .25rem;
@@ -955,45 +967,22 @@ body {
       font-size: .7rem;
       color: var(--colors-darkgrey);
     }
+  }
 
-    .post-list-item {
-      margin-top: calc(var(--gutter-inner-y) / 2);
-      margin-bottom: calc(var(--gutter-inner-y)/2);
+  .post-list-item {
+    margin-top: calc(var(--gutter-inner-y) / 2);
+    margin-bottom: calc(var(--gutter-inner-y)/2);
 
-      &:not(:last-child) {
-        padding-bottom: calc(var(--gutter-inner-y) /2);
-        border-bottom: 1px solid var(--colors-lightgrey);
-      }
+    &:not(:last-child) {
+      padding-bottom: calc(var(--gutter-inner-y) /2);
+      border-bottom: 1px solid var(--colors-lightgrey);
     }
-
-    .post-item-meta {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: .75em;
-      margin-top: calc(var(--gutter-inner-y)/2);
-
-      time {
-        margin: 0;
-        font-size: .8rem;
-        color: var(--colors-darkgrey);
-      }
-    }
-
-    .interaction-stats {
-      display: flex;
-
-      font-size: .8rem;
-      color: var(--colors-darkgrey);
-    }
-
     a {
       display: inline;
       text-decoration-thickness: 2px;
       text-underline-offset: 3px;
       text-decoration-color: #969696;
     }
-
     .post-title {
       font-size: calc(1.2rem * var(--font-scale-headers));
       font-family: Fjalla One, sans-serif;
@@ -1020,6 +1009,27 @@ body {
       .tag {
         margin-right: .5rem;
       }
+    }
+
+    .interaction-stats {
+      display: flex;
+
+      font-size: .8rem;
+      color: var(--colors-darkgrey);
+    }
+  }
+
+  .post-item-meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .75em;
+    margin-top: calc(var(--gutter-inner-y)/2);
+
+    time {
+      margin: 0;
+      font-size: .8rem;
+      color: var(--colors-darkgrey);
     }
   }
 
