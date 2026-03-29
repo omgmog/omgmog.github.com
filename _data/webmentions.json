@@ -20,7 +20,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-06-01T08:42:07Z"
+      "sort_date": "2022-06-01T08:41:16+00:00"
     },
     {
       "type": "entry",
@@ -54,7 +54,7 @@
       "rels": {
         "canonical": "https://minutestomidnight.co.uk/blog/indieweb-and-webmentions-for-my-static-site/"
       },
-      "sort_date": "2022-05-16T14:24:00Z"
+      "sort_date": "2022-05-16T12:47:30+02:00"
     },
     {
       "type": "entry",
@@ -77,7 +77,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-05-02T19:23:57Z"
+      "sort_date": "2022-05-02T19:23:56+00:00"
     },
     {
       "type": "entry",
@@ -103,7 +103,7 @@
       "rels": {
         "canonical": "https://brainbaking.com/notes/2022/04/29h13m30s38/"
       },
-      "sort_date": "2022-04-29T12:00:18Z"
+      "sort_date": "2022-04-29T13:30:00"
     },
     {
       "type": "entry",
@@ -126,7 +126,7 @@
       "like-of": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "like-of",
       "wm-private": false,
-      "sort_date": "2022-04-28T10:00:04Z"
+      "sort_date": "2022-04-28T11:49:13+02:00"
     },
     {
       "type": "entry",
@@ -149,7 +149,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T20:40:28Z"
+      "sort_date": "2022-04-27T14:14:54"
     },
     {
       "type": "entry",
@@ -191,7 +191,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T20:40:05Z"
+      "sort_date": "2022-04-27T14:18:14"
     },
     {
       "type": "entry",
@@ -214,7 +214,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T20:40:04Z"
+      "sort_date": "2022-04-27T16:06:13"
     },
     {
       "type": "entry",
@@ -237,7 +237,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T20:40:01Z"
+      "sort_date": "2022-04-27T14:17:04"
     },
     {
       "type": "entry",
@@ -263,7 +263,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T20:40:01Z"
+      "sort_date": "2022-04-27T15:26:49"
     },
     {
       "type": "entry",
@@ -324,7 +324,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T14:04:42Z"
+      "sort_date": "2022-04-27T14:03:05"
     },
     {
       "type": "entry",
@@ -347,7 +347,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T14:04:42Z"
+      "sort_date": "2022-04-27T13:59:29"
     },
     {
       "type": "entry",
@@ -408,7 +408,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T13:40:59Z"
+      "sort_date": "2022-04-27T13:11:29"
     },
     {
       "type": "entry",
@@ -469,7 +469,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T13:40:29Z"
+      "sort_date": "2022-04-27T13:31:54"
     },
     {
       "type": "entry",
@@ -511,7 +511,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T13:09:26Z"
+      "sort_date": "2022-04-27T13:06:04"
     },
     {
       "type": "entry",
@@ -534,7 +534,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T13:09:26Z"
+      "sort_date": "2022-04-27T13:09:14"
     },
     {
       "type": "entry",
@@ -614,7 +614,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T13:03:52Z"
+      "sort_date": "2022-04-27T12:59:54"
     },
     {
       "type": "entry",
@@ -675,7 +675,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-27T12:57:02Z"
+      "sort_date": "2022-04-27T12:50:10"
     },
     {
       "type": "entry",
@@ -752,7 +752,7 @@
       "like-of": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "like-of",
       "wm-private": false,
-      "sort_date": "2022-04-27T12:53:31Z"
+      "sort_date": "2022-04-27T14:53:28+02:00"
     },
     {
       "type": "entry",
@@ -794,7 +794,7 @@
       "mention-of": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-04-27T10:03:01Z"
+      "sort_date": "2022-04-27T09:18:21+00:00"
     },
     {
       "type": "entry",
@@ -836,7 +836,7 @@
       "mention-of": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-04-08T14:39:23Z"
+      "sort_date": "2022-04-08T12:09:39+00:00"
     },
     {
       "type": "entry",
@@ -859,7 +859,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T12:17:04Z"
+      "sort_date": "2022-04-08T12:15:20+00:00"
     },
     {
       "type": "entry",
@@ -905,7 +905,7 @@
       "rels": {
         "canonical": "https://brainbaking.com/notes/2022/04/29h13m30s38/"
       },
-      "sort_date": "2022-04-29T12:00:18Z"
+      "sort_date": "2022-04-29T13:30:00"
     }
   ],
   "/post/raspberry-pi-local-dev-vscode-remote/": [
@@ -930,7 +930,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/raspberry-pi-local-dev-vscode-remote/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-05-27T15:42:01Z"
+      "sort_date": "2022-05-27T13:57:06"
     },
     {
       "type": "entry",
@@ -953,7 +953,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/raspberry-pi-local-dev-vscode-remote/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-05-27T15:42:00Z"
+      "sort_date": "2022-05-27T13:53:53"
     },
     {
       "type": "entry",
@@ -1014,7 +1014,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/raspberry-pi-local-dev-vscode-remote/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-05-26T23:19:47Z"
+      "sort_date": "2022-05-26T20:40:10"
     },
     {
       "type": "entry",
@@ -1040,7 +1040,7 @@
       "mention-of": "https://blog.omgmog.net/post/raspberry-pi-local-dev-vscode-remote/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-05-26T20:36:08Z"
+      "sort_date": "2022-05-26T20:36:06+00:00"
     }
   ],
   "/": [
@@ -1087,7 +1087,7 @@
       "mention-of": "https://www.uxofvr.com/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-04-09T06:45:35Z"
+      "sort_date": "2022-04-09T04:08:05+00:00"
     },
     {
       "type": "entry",
@@ -1110,7 +1110,7 @@
       "mention-of": "https://www.uxofvr.com/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-03-31T09:23:37Z"
+      "sort_date": "2021-06-20T21:51:39+00:00"
     },
     {
       "type": "entry",
@@ -1133,7 +1133,7 @@
       "mention-of": "https://www.uxofvr.com/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-03-31T09:23:08Z"
+      "sort_date": "2021-06-26T08:53:20+00:00"
     },
     {
       "type": "entry",
@@ -1156,7 +1156,7 @@
       "mention-of": "https://www.uxofvr.com/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-03-31T09:23:08Z"
+      "sort_date": "2021-06-20T21:03:44+00:00"
     },
     {
       "type": "entry",
@@ -1179,7 +1179,7 @@
       "mention-of": "https://www.uxofvr.com/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-03-31T09:23:08Z"
+      "sort_date": "2021-06-20T21:35:27+00:00"
     },
     {
       "type": "entry",
@@ -1202,7 +1202,7 @@
       "mention-of": "https://www.uxofvr.com/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-03-31T09:23:07Z"
+      "sort_date": "2021-06-20T20:42:30+00:00"
     },
     {
       "type": "entry",
@@ -1225,7 +1225,7 @@
       "mention-of": "https://www.uxofvr.com/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-03-31T09:23:07Z"
+      "sort_date": "2021-06-20T21:03:39+00:00"
     },
     {
       "type": "entry",
@@ -1295,7 +1295,7 @@
       "bookmark-of": "https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/",
       "wm-property": "bookmark-of",
       "wm-private": false,
-      "sort_date": "2022-05-06T07:18:58Z"
+      "sort_date": "2022-05-06T08:49:00+02:00"
     },
     {
       "type": "entry",
@@ -1378,7 +1378,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-05-05T15:36:54Z"
+      "sort_date": "2022-05-05T15:36:52+00:00"
     }
   ],
   "/post/installing-chrome-os-on-a-late-2009-macbook/": [
@@ -1403,7 +1403,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/installing-chrome-os-on-a-late-2009-macbook/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-29T13:05:03Z"
+      "sort_date": "2022-04-29T09:52:58"
     },
     {
       "type": "entry",
@@ -1426,7 +1426,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/installing-chrome-os-on-a-late-2009-macbook/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-29T13:04:35Z"
+      "sort_date": "2022-04-29T09:54:37"
     },
     {
       "type": "entry",
@@ -1449,7 +1449,7 @@
       "mention-of": "https://blog.omgmog.net/post/installing-chrome-os-on-a-late-2009-macbook/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-04-29T10:08:09Z"
+      "sort_date": "2022-04-29T09:42:41+00:00"
     },
     {
       "type": "entry",
@@ -1491,7 +1491,7 @@
       "mention-of": "https://blog.omgmog.net/post/installing-chrome-os-on-a-late-2009-macbook/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-04-22T20:47:33Z"
+      "sort_date": "2022-04-22T20:43:36+00:00"
     },
     {
       "type": "entry",
@@ -1551,7 +1551,7 @@
       "repost-of": "https://blog.omgmog.net/post/installing-chrome-os-on-a-late-2009-macbook/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2022-04-22T20:18:18Z"
+      "sort_date": "2022-04-22T20:18:02+00:00"
     }
   ],
   "/post/devterm-stuff/": [
@@ -1579,7 +1579,7 @@
       "mention-of": "https://blog.omgmog.net/post/devterm-stuff/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-04-28T11:08:30Z"
+      "sort_date": "2022-04-28T11:01:40+00:00"
     },
     {
       "type": "entry",
@@ -1621,7 +1621,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/devterm-stuff/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-29T10:34:08Z"
+      "sort_date": "2022-03-29T10:15:17+00:00"
     },
     {
       "type": "entry",
@@ -1644,7 +1644,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/devterm-stuff/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-29T10:34:08Z"
+      "sort_date": "2022-03-29T10:33:50+00:00"
     },
     {
       "type": "entry",
@@ -1691,7 +1691,7 @@
       "mention-of": "https://blog.omgmog.net/post/gameshell-stuff/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-04-28T11:06:27Z"
+      "sort_date": "2022-04-27T21:16:28+00:00"
     },
     {
       "type": "entry",
@@ -1735,7 +1735,7 @@
       "in-reply-to": "https://blog.omgmog.net/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:09:13Z"
+      "sort_date": "2017-04-25T10:59:57"
     },
     {
       "type": "entry",
@@ -1758,7 +1758,7 @@
       "in-reply-to": "https://blog.omgmog.net/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:09:12Z"
+      "sort_date": "2017-04-25T04:16:37"
     },
     {
       "type": "entry",
@@ -1781,7 +1781,7 @@
       "in-reply-to": "https://blog.omgmog.net/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:09:11Z"
+      "sort_date": "2017-04-26T06:47:13"
     },
     {
       "type": "entry",
@@ -1804,7 +1804,7 @@
       "in-reply-to": "https://blog.omgmog.net/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:09:10Z"
+      "sort_date": "2017-04-25T16:02:34"
     },
     {
       "type": "entry",
@@ -1827,7 +1827,7 @@
       "in-reply-to": "https://blog.omgmog.net/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:08:53Z"
+      "sort_date": "2017-04-26T18:09:09"
     },
     {
       "type": "entry",
@@ -1850,7 +1850,7 @@
       "in-reply-to": "https://blog.omgmog.net/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:15:58Z"
+      "sort_date": "2017-04-25T11:24:10"
     },
     {
       "type": "entry",
@@ -1873,7 +1873,7 @@
       "in-reply-to": "https://blog.omgmog.net/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:15:58Z"
+      "sort_date": "2017-04-25T22:32:07"
     },
     {
       "type": "entry",
@@ -1896,7 +1896,7 @@
       "in-reply-to": "https://blog.omgmog.net/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:15:57Z"
+      "sort_date": "2017-04-28T17:52:59"
     }
   ],
   "/post/review-the-revo-k101-plus/": [
@@ -1921,7 +1921,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/review-the-revo-k101-plus/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:08:04Z"
+      "sort_date": "2015-06-05T16:44:34"
     },
     {
       "type": "entry",
@@ -1944,7 +1944,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/review-the-revo-k101-plus/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:07:53Z"
+      "sort_date": "2015-06-05T20:40:45"
     },
     {
       "type": "entry",
@@ -1967,7 +1967,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/review-the-revo-k101-plus/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:07:50Z"
+      "sort_date": "2015-06-06T04:05:08"
     },
     {
       "type": "entry",
@@ -1990,7 +1990,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/review-the-revo-k101-plus/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:07:49Z"
+      "sort_date": "2015-06-08T09:56:19"
     },
     {
       "type": "entry",
@@ -2013,7 +2013,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/review-the-revo-k101-plus/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:07:47Z"
+      "sort_date": "2015-06-05T22:28:09"
     },
     {
       "type": "entry",
@@ -2036,7 +2036,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/review-the-revo-k101-plus/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-04-08T15:07:46Z"
+      "sort_date": "2015-06-24T18:21:11"
     },
     {
       "type": "entry",
@@ -2059,7 +2059,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/review-the-revo-k101-plus/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:16:06Z"
+      "sort_date": "2015-06-05T20:03:16"
     }
   ],
   "/post/the-inevitable-oculus-quest-post/": [
@@ -2105,7 +2105,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-28T08:58:33Z"
+      "sort_date": "2018-08-10T09:07:37"
     },
     {
       "type": "entry",
@@ -2128,7 +2128,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-28T08:58:31Z"
+      "sort_date": "2018-08-10T19:05:31"
     },
     {
       "type": "entry",
@@ -2151,7 +2151,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-28T08:58:29Z"
+      "sort_date": "2018-08-09T20:44:59"
     },
     {
       "type": "entry",
@@ -2174,7 +2174,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-28T08:58:25Z"
+      "sort_date": "2018-08-10T15:00:30"
     },
     {
       "type": "entry",
@@ -2197,7 +2197,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-28T08:57:52Z"
+      "sort_date": "2018-08-09T16:25:10"
     },
     {
       "type": "entry",
@@ -2220,124 +2220,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-28T08:57:46Z"
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
-      },
-      "url": "https://www.howtobuildclub.com/how-to-build-home-automation-system/",
-      "published": null,
-      "wm-received": "2022-07-04T23:13:07Z",
-      "wm-id": 1427434,
-      "wm-source": "https://www.howtobuildclub.com/how-to-build-home-automation-system/",
-      "wm-target": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "mention-of": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "wm-property": "mention-of",
-      "wm-private": false,
-      "rels": {
-        "canonical": "https://www.howtobuildclub.com/how-to-build-home-automation-system/"
-      },
-      "sort_date": "2022-07-04T23:13:07Z"
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
-      },
-      "url": "https://muo.blogs.web.id/budget-smart-home-projects/",
-      "published": null,
-      "wm-received": "2022-10-17T12:54:41Z",
-      "wm-id": 1540217,
-      "wm-source": "https://muo.blogs.web.id/budget-smart-home-projects/",
-      "wm-target": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "mention-of": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "wm-property": "mention-of",
-      "wm-private": false,
-      "sort_date": "2022-10-17T12:54:41Z"
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
-      },
-      "url": "https://ar.eastspace.net/budget-smart-home-projects/",
-      "published": null,
-      "wm-received": "2022-10-17T15:20:46Z",
-      "wm-id": 1540292,
-      "wm-source": "https://ar.eastspace.net/budget-smart-home-projects/",
-      "wm-target": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "mention-of": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "wm-property": "mention-of",
-      "wm-private": false,
-      "sort_date": "2022-10-17T15:20:46Z"
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
-      },
-      "url": "https://www.noise.my.id/budget-smart-home-projects/",
-      "published": null,
-      "wm-received": "2022-10-17T16:47:18Z",
-      "wm-id": 1540367,
-      "wm-source": "https://www.noise.my.id/budget-smart-home-projects/",
-      "wm-target": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "mention-of": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "wm-property": "mention-of",
-      "wm-private": false,
-      "sort_date": "2022-10-17T16:47:18Z"
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
-      },
-      "url": "https://x.svenger.de/budget-smart-home-projects/",
-      "published": null,
-      "wm-received": "2022-10-17T23:36:38Z",
-      "wm-id": 1540531,
-      "wm-source": "https://x.svenger.de/budget-smart-home-projects/",
-      "wm-target": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "mention-of": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "wm-property": "mention-of",
-      "wm-private": false,
-      "sort_date": "2022-10-17T23:36:38Z"
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
-      },
-      "url": "https://z.kdrama.my.id/budget-smart-home-projects/",
-      "published": null,
-      "wm-received": "2022-10-18T06:23:29Z",
-      "wm-id": 1540715,
-      "wm-source": "https://z.kdrama.my.id/budget-smart-home-projects/",
-      "wm-target": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "mention-of": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "wm-property": "mention-of",
-      "wm-private": false,
-      "sort_date": "2022-10-18T06:23:29Z"
+      "sort_date": "2018-08-09T18:12:46"
     },
     {
       "type": "entry",
@@ -2364,30 +2247,7 @@
       "rels": {
         "canonical": "https://danielthepope.wordpress.com/2021/05/24/controlling-ws2812b-leds-with-nodemcu/"
       },
-      "sort_date": "2022-12-04T18:29:28Z"
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
-      },
-      "url": "https://io-max.one/9-proyectos-de-bricolaje-de-automatizacion-del-hogar-inteligente-con-un-presupuesto-reducido/",
-      "published": null,
-      "wm-received": "2024-01-03T01:03:08Z",
-      "wm-id": 1762073,
-      "wm-source": "https://io-max.one/9-proyectos-de-bricolaje-de-automatizacion-del-hogar-inteligente-con-un-presupuesto-reducido/",
-      "wm-target": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "wm-protocol": "pingback",
-      "mention-of": "https://blog.omgmog.net/post/a-foray-into-home-automation/",
-      "wm-property": "mention-of",
-      "wm-private": false,
-      "rels": {
-        "canonical": "https://io-max.one/9-proyectos-de-bricolaje-de-automatizacion-del-hogar-inteligente-con-un-presupuesto-reducido/"
-      },
-      "sort_date": "2024-01-03T01:03:08Z"
+      "sort_date": "2021-05-24T20:15:39+00:00"
     }
   ],
   "/post/pocket-chip-global-volume-control/": [
@@ -2412,7 +2272,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/pocket-chip-global-volume-control/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-28T08:58:10Z"
+      "sort_date": "2021-09-30T00:03:11"
     },
     {
       "type": "entry",
@@ -2513,7 +2373,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:10:22Z"
+      "sort_date": "2021-02-19T19:30:51+00:00"
     },
     {
       "type": "entry",
@@ -2536,7 +2396,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:10:21Z"
+      "sort_date": "2021-02-19T19:32:01+00:00"
     },
     {
       "type": "entry",
@@ -3150,7 +3010,7 @@
       "repost-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:09:34Z"
+      "sort_date": "2021-02-19T19:31:06+00:00"
     },
     {
       "type": "entry",
@@ -3175,7 +3035,7 @@
       "repost-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:09:33Z"
+      "sort_date": "2021-02-19T19:30:37+00:00"
     },
     {
       "type": "entry",
@@ -3200,7 +3060,7 @@
       "repost-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:09:32Z"
+      "sort_date": "2021-02-19T19:28:20+00:00"
     },
     {
       "type": "entry",
@@ -3225,7 +3085,7 @@
       "repost-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:09:31Z"
+      "sort_date": "2021-02-19T19:26:00+00:00"
     },
     {
       "type": "entry",
@@ -3250,7 +3110,7 @@
       "repost-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:09:30Z"
+      "sort_date": "2021-02-19T19:28:10+00:00"
     },
     {
       "type": "entry",
@@ -3275,7 +3135,7 @@
       "repost-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:09:28Z"
+      "sort_date": "2021-02-19T19:23:45+00:00"
     },
     {
       "type": "entry",
@@ -3298,7 +3158,7 @@
       "mention-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:09:26Z"
+      "sort_date": "2021-02-19T19:30:06+00:00"
     },
     {
       "type": "entry",
@@ -3321,7 +3181,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:09:25Z"
+      "sort_date": "2021-02-19T19:25:51+00:00"
     },
     {
       "type": "entry",
@@ -3555,7 +3415,7 @@
       "repost-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:07:28Z"
+      "sort_date": "2021-02-20T09:14:15+00:00"
     },
     {
       "type": "entry",
@@ -3580,7 +3440,7 @@
       "repost-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:07:26Z"
+      "sort_date": "2021-02-19T23:54:31+00:00"
     },
     {
       "type": "entry",
@@ -3603,7 +3463,7 @@
       "mention-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:07:23Z"
+      "sort_date": "2021-02-22T22:00:06+00:00"
     },
     {
       "type": "entry",
@@ -3626,7 +3486,7 @@
       "mention-of": "https://blog.omgmog.net/post/the-raspberry-pi-pico-and-pimoroni-rgp-keypad/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:07:13Z"
+      "sort_date": "2021-02-26T11:00:12+00:00"
     },
     {
       "type": "entry",
@@ -3670,7 +3530,7 @@
       "in-reply-to": "https://blog.omgmog.net/cardboctober/cardboctober-30/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:07:00Z"
+      "sort_date": "2021-04-06T09:25:51+00:00"
     },
     {
       "type": "entry",
@@ -3693,7 +3553,7 @@
       "in-reply-to": "https://blog.omgmog.net/cardboctober/cardboctober-30/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:06:58Z"
+      "sort_date": "2021-04-06T10:32:10+00:00"
     },
     {
       "type": "entry",
@@ -3716,7 +3576,7 @@
       "in-reply-to": "https://blog.omgmog.net/cardboctober/cardboctober-30/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:06:56Z"
+      "sort_date": "2021-04-06T10:41:56+00:00"
     },
     {
       "type": "entry",
@@ -3739,7 +3599,7 @@
       "in-reply-to": "https://blog.omgmog.net/cardboctober/cardboctober-30/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-23T16:06:53Z"
+      "sort_date": "2021-04-06T09:30:08+00:00"
     },
     {
       "type": "entry",
@@ -3783,7 +3643,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/pocketchip-internal-speaker/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-03-15T16:19:52Z"
+      "sort_date": "2021-11-14T11:30:15"
     },
     {
       "type": "entry",
@@ -3850,7 +3710,7 @@
       "in-reply-to": "https://blog.omgmog.net/webmention-tests/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2022-06-01T18:25:39Z"
+      "sort_date": "2022-06-01T18:25:37+00:00"
     }
   ],
   "/post/the-movies-i-watched-in-2022/": [
@@ -3878,7 +3738,7 @@
       "mention-of": "https://blog.omgmog.net/post/the-movies-i-watched-in-2022/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2023-01-31T16:54:09Z"
+      "sort_date": "2023-01-31T16:54:07+00:00"
     }
   ],
   "/post/saying-goodbye-to-dingoonity/": [
@@ -3906,7 +3766,7 @@
       "mention-of": "https://blog.omgmog.net/post/saying-goodbye-to-dingoonity/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2023-02-20T11:30:56Z"
+      "sort_date": "2023-02-20T11:30:53+00:00"
     },
     {
       "type": "entry",
@@ -3948,7 +3808,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/saying-goodbye-to-dingoonity/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2023-02-20T14:21:02Z"
+      "sort_date": "2023-02-20T12:36:08"
     },
     {
       "type": "entry",
@@ -3996,7 +3856,7 @@
       "mention-of": "https://blog.omgmog.net/post/better-macos-audio-switching/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2025-10-11T19:27:37Z"
+      "sort_date": "2025-10-11T19:27:34+00:00"
     }
   ],
   "/post/review-mangmi-air-x/": [
@@ -4025,7 +3885,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/review-mangmi-air-x/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2025-11-29T12:24:29Z"
+      "sort_date": "2025-11-29T12:24:27+00:00"
     }
   ],
   "/post/moving-to-github-actions-and-adding-txt-posts/": [
@@ -4054,7 +3914,7 @@
       "mention-of": "https://blog.omgmog.net/post/moving-to-github-actions-and-adding-txt-posts/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-01-09T15:40:20Z"
+      "sort_date": "2026-01-09T15:40:17+00:00"
     },
     {
       "type": "entry",
@@ -4078,7 +3938,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/moving-to-github-actions-and-adding-txt-posts/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2026-01-09T16:02:49Z"
+      "sort_date": "2026-01-09T15:49:47+00:00"
     },
     {
       "type": "entry",
@@ -4233,7 +4093,7 @@
       "mention-of": "https://blog.omgmog.net/post/android-on-the-nintendo-switch/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-01-19T09:48:27Z"
+      "sort_date": "2026-01-19T09:48:25+00:00"
     }
   ],
   "/post/why-cant-i-read-this-picture-book/": [
@@ -4262,7 +4122,7 @@
       "mention-of": "https://blog.omgmog.net/post/why-cant-i-read-this-picture-book/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-01-23T10:31:19Z"
+      "sort_date": "2026-01-23T10:31:17+00:00"
     },
     {
       "type": "entry",
@@ -4311,7 +4171,7 @@
       "mention-of": "https://blog.omgmog.net/post/bigme-b6-color-e-ink-tablet/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-01-26T11:31:43Z"
+      "sort_date": "2026-01-26T11:31:40+00:00"
     },
     {
       "type": "entry",
@@ -4339,7 +4199,7 @@
       "mention-of": "https://blog.omgmog.net/post/bigme-b6-color-e-ink-tablet/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-03-22T16:35:24Z"
+      "sort_date": "2026-03-22T12:34:59-04:00"
     }
   ],
   "/post/plugins-instead-of-patches/": [
@@ -4368,30 +4228,10 @@
       "mention-of": "https://blog.omgmog.net/post/plugins-instead-of-patches/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-01-29T11:24:36Z"
+      "sort_date": "2026-01-28T16:38:07+00:00"
     }
   ],
   "/post/archive-archaeology/": [
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
-      },
-      "url": "https://beatonma.org/webmentions_tester/",
-      "published": null,
-      "wm-received": "2026-02-20T13:35:12Z",
-      "wm-id": 1977358,
-      "wm-source": "https://beatonma.org/webmentions_tester/",
-      "wm-target": "https://blog.omgmog.net/post/archive-archaeology/",
-      "wm-protocol": "webmention",
-      "mention-of": "https://blog.omgmog.net/post/archive-archaeology/",
-      "wm-property": "mention-of",
-      "wm-private": false,
-      "sort_date": "2026-02-20T13:35:12Z"
-    },
     {
       "type": "entry",
       "author": {
@@ -4417,7 +4257,7 @@
       "mention-of": "https://blog.omgmog.net/post/archive-archaeology/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-02-20T13:45:15Z"
+      "sort_date": "2026-02-13T19:06:53+00:00"
     }
   ],
   "/post/using-emoji-to-bypass-frp-on-a-decade-old-tablet/": [
@@ -4446,7 +4286,7 @@
       "mention-of": "https://blog.omgmog.net/post/using-emoji-to-bypass-frp-on-a-decade-old-tablet/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-02-20T13:46:19Z"
+      "sort_date": "2026-02-12T10:22:20+00:00"
     }
   ],
   "/post/building-a-home-nas-from-mostly-spare-parts/": [
@@ -4475,7 +4315,7 @@
       "mention-of": "https://blog.omgmog.net/post/building-a-home-nas-from-mostly-spare-parts/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-02-23T15:24:27Z"
+      "sort_date": "2026-02-23T15:24:24+00:00"
     },
     {
       "type": "entry",
@@ -4544,7 +4384,7 @@
       "mention-of": "https://blog.omgmog.net/post/reducing-github-action-commit-noise/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-02-25T11:49:48Z"
+      "sort_date": "2026-02-25T11:49:44+00:00"
     },
     {
       "type": "entry",
@@ -4596,7 +4436,7 @@
       "mention-of": "https://blog.omgmog.net/post/ds-pico-flashcart/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-03-03T16:30:13Z"
+      "sort_date": "2026-03-03T16:30:11+00:00"
     },
     {
       "type": "entry",
@@ -4624,7 +4464,7 @@
       "mention-of": "https://blog.omgmog.net/post/ds-pico-flashcart/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-03-23T15:39:25Z"
+      "sort_date": "2026-03-23T11:38:54-04:00"
     }
   ],
   "/post/why-vendor-prefixes-are-still-in-your-css/": [
@@ -4653,7 +4493,7 @@
       "mention-of": "https://blog.omgmog.net/post/why-vendor-prefixes-are-still-in-your-css/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-03-11T22:13:35Z"
+      "sort_date": "2026-03-11T22:13:32+00:00"
     },
     {
       "type": "entry",
@@ -4705,7 +4545,7 @@
       "mention-of": "https://blog.omgmog.net/post/your-forecast-is-accurate-and-still-wrong/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-03-13T09:29:26Z"
+      "sort_date": "2026-03-12T12:06:15+00:00"
     }
   ],
   "/post/devterm-gameboy-printer/": [
@@ -4734,7 +4574,7 @@
       "mention-of": "https://blog.omgmog.net/post/devterm-gameboy-printer/",
       "wm-property": "mention-of",
       "wm-private": false,
-      "sort_date": "2026-03-23T12:24:32Z"
+      "sort_date": "2026-03-23T12:24:27+00:00"
     },
     {
       "type": "entry",
@@ -4758,7 +4598,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/devterm-gameboy-printer/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2026-03-25T20:10:12Z"
+      "sort_date": "2026-03-25T03:31:55+00:00"
     },
     {
       "type": "entry",
@@ -4782,7 +4622,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/devterm-gameboy-printer/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2026-03-25T20:10:13Z"
+      "sort_date": "2026-03-25T06:14:02+00:00"
     },
     {
       "type": "entry",
@@ -4806,7 +4646,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/devterm-gameboy-printer/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2026-03-25T20:10:23Z"
+      "sort_date": "2026-03-25T12:54:24+00:00"
     },
     {
       "type": "entry",
@@ -4830,7 +4670,7 @@
       "in-reply-to": "https://blog.omgmog.net/post/devterm-gameboy-printer/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2026-03-25T20:10:26Z"
+      "sort_date": "2026-03-25T13:08:37+00:00"
     },
     {
       "type": "entry",
@@ -4854,7 +4694,37 @@
       "in-reply-to": "https://blog.omgmog.net/post/devterm-gameboy-printer/",
       "wm-property": "in-reply-to",
       "wm-private": false,
-      "sort_date": "2026-03-25T20:10:36Z"
+      "sort_date": "2026-03-25T19:55:06+00:00"
+    }
+  ],
+  "/post/emoji-only-chat/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://thenewleafjournal.com/looking-at-moji-an-emoji-only-chat-app/",
+      "published": "2026-03-28T21:30:31-04:00",
+      "wm-received": "2026-03-29T01:30:49Z",
+      "wm-id": 1986912,
+      "wm-source": "https://thenewleafjournal.com/looking-at-moji-an-emoji-only-chat-app/",
+      "wm-target": "https://blog.omgmog.net/post/emoji-only-chat/",
+      "wm-protocol": "webmention",
+      "summary": {
+        "content-type": "text/plain",
+        "value": "A look at Max Glenister's emoji-only Moji chat app, which he created in a weekend for his young daughter to enjoy."
+      },
+      "content": {
+        "html": "<p>On February 4, 2025, I published <a href=\"https://thenewleafjournal.com/emojam-and-emoji-story-telling-memories/\"><em>Emojam and Emoji Story-Telling Memories</em></a>. The article was prompted by the Emojam, a Japanese \"pager\" for kids which only allows for messages made up up of pre-loaded emoji (<a href=\"https://soranews24.com/2024/11/02/overwhelmed-by-modern-social-media-japanese-company-is-bringing-back-pages-with-an-emoji-twist/\">see Emojam report</a>). I only spent a few sentences on the Emojam itself before segueing into a story from my high school days where my friend made up a plot from the \"24\" TV show by employing emojis accompanied by dialogue as an example of the untapped power of emoji-based story-telling. I thought of my Emojam-inspired anecdote when I read Max Gelnister's January 12, 2026 article titled <a href=\"https://blog.omgmog.net/post/emoji-only-chat/\"><em>Building an emoji-only chat app</em></a>.</p>\n\n\n\n<p>Max Genister explained that his six-year old daughter enjoys sending and receiving emojis. He wanted to allow her to send him and receive emojis, but also wanted to separate the emojis from his main chat app. While there were apparently existing emoji-only chat options on iOS, they had two issues. Firstly, Mr. Glenister was not comfortable with the lack of information about how they handled data. Second, they only allowed 1:1 chats.</p>\n\n\n\n<p>While I would have been stumped at this point, Mr. Glenister is a web developer. Over the course of a weekend, he built a new web-app called Moji. He describes the concept as follows:</p>\n\n\n\n<blockquote>\n<p>Emoji only - the app only allows non-alphanumeric characters. Random room IDs get generated when starting a chat, but any string works. No accounts means nothing to store, nothing to manage. Type a name when joining and that’s it.</p>\n</blockquote>\n\n\n\n<p>He also explained how he worked to avoid storing data on a central server:</p>\n\n\n\n<blockquote>\n<p>I used <a href=\"https://gun.eco/\">GunDB</a> for peer-to-peer messaging so messages stay between whoever’s in the room, not on my server or in the cloud. The frontend is React, using Vite and Tailwind. The relay server is just Express with GunDB, about 15 lines - it only helps peers find each other.</p>\n</blockquote>\n\n\n\n<p>The source code for Moji is <a href=\"https://github.com/omgmog/moji-emoji-chat\">available on GitHub</a>. But as of the date of the publication of this article, one need not deploy his or her own Moji instance to try the app. Mr. Glenister deployed Moji using the Fly.io service and the instance is live at <a href=\"https://moji-frontend.fly.dev/\">https://moji-frontend.fly.dev/</a> as of the initial publication date of this article (it can also be installed on supported devices as a progressive web app).</p>\n\n\n\n<p>I decided to call upon our <a href=\"https://thenewleafjournal.com/collection/justin-and-justina-dialogues/\">fictional dialogue duo, Justin and Justina</a>, to test out the app.</p>\n\n\n\n<p>First, Justin chooses a color and user-name and then creates a room.</p>\n\n\n\n<a href=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/justin-creates-moji-room.jpg\"><img src=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/justin-creates-moji-room-800x563.jpg\" alt=\"Login screen for Moji web app. Fields for choosing username, color, and starting a room. Background outside of the menu window is bright yellow.\" /></a>You can use the room link or ID to join an existing room.<p>The room is empty. Justin clicks the field to send messages and sees that he can only send emojis. </p>\n\n\n\n<a href=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/moji-emoji-keyboard.jpg\"><img src=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/moji-emoji-keyboard-800x563.jpg\" alt=\"Chat window and emoji keyboard showing nothing but emojis in Moji chat app. Dialogue window is empty.\" /></a>Emoji keyboard in Moji chat app.<p>He decides to invite a friend. There is no \"invite\" button, but from reading Mr. Glenister's article he understands that the URL is the link to the room. He cryptically sends the link to Justina. Justina, feeling suspicion, opens the link. Note that when she opens the link, she sees a different welcome screen than Justin saw when he opened the room. </p>\n\n\n\n<a href=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/justina-joins-justins-moji-room.jpg\"><img src=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/justina-joins-justins-moji-room-718x800.jpg\" alt=\"Moji log-in screen with red background in Brave. Fields for creating username and color. This was opened pursuant to an invite so only option is to join room.\" /></a>Joining a room in Moji.<p>She has name and color options, but there is only a single button to \"Join Room\" instead of an additional option to \"Create Room.\"</p>\n\n\n\n<p>Justin and Justina proceed to begin a conversation. First, see the conversation from Justin's side using the Mullvad web browser, which is derivative of Firefox.</p>\n\n\n\n<a href=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/moji-conversation-in-mullvad.jpg\"><img src=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/moji-conversation-in-mullvad-800x563.jpg\" alt=\"Emoji conversation in Moji chat app seen in Mullvad web browser.\" /></a>Moji in Mullvad.<p>Now see the conversation from Justina's side using Brave, which is derivative of Chromium.</p>\n\n\n\n<a href=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/moji-conversation-in-brave.jpg\"><img src=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/moji-conversation-in-brave-718x800.jpg\" alt=\"Emoji conversation in Moji chat app seen in Brave web browser.\" /></a>Moji in Brave.<p>Note that the emojis look different. Mr. Glenister noted this issue:</p>\n\n\n\n<blockquote>\n<p>Emoji render differently across devices. The picker shows one set of glyphs, but messages display in whatever the system provides. I tried using Twemoji to keep things consistent but gave up - too much overhead. Works fine for now.</p>\n</blockquote>\n\n\n\n<p>I also discussed the potential problem of emojis displaying differently on different devices in a 2022 essay titled <a href=\"https://thenewleafjournal.com/emojis-corporations-and-censorship/\"><em>Emojis, Corporations, and Censorship</em></a>. With that being said, I doubt that the sorts of entirely emoji-based conversations on an app like Moji will be adversely affected by differing emoji appearances.</p>\n\n\n\n<p>Moji conversations use the web browser's local storage. Brave keeps local storage by default, so Justina could close out of her conversation and most likely access it again in the future. However, Justin's browser Mullvad clears itself on close (by design), so he would lose access to his conversations upon closing. But before Justin closes, see below what the Moji homepage looks like in his browser with the existing chat still in local storage.</p>\n\n\n\n<a href=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/signing-into-moji-with-open-room.jpg\"><img src=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/signing-into-moji-with-open-room-800x563.jpg\" alt=\"Signing into Moji chat app with one room already open and available to re-join.\" /></a>See Justin's existing room in browser cache at the bottom.<p>Justin now has a third option in addition to \"Create New Room\" or join a room using its ID. He can now re-join the room he created to exchange emojis with Justina. While testing, I discovered that if you change your user-name and then return to a chat, the chat treats you as a new participant. For example, if Justin changed his name to Justinian and then returned to the room he created, “Justinian” would be treated as a new participant in the chat. However, were Justin to then join from an entirely different web browser and set his username as “Justin” with the same color as when he first made the room, Moji would treat him as the original “Justin” despite the fact that he is using a new web browser.</p>\n\n\n\n<p>Moji looks good and works well in my brief testing with a friend and with \"Justin and Justina.\" I rate this as an impressive weekend project. While I assume that it is largely \"feature complete\" from Mr. Glenister's perspective since he notes he created it for his daughter to enjoy and wrote it up to explain the tech behind it, I humbly offer a few suggestions were he or someone else to want to consider improvements for broader use while keeping to the simple spirit of the concept. I will set aside standardizing the appearance of emojis across devices and web browsers since he already noted that issue in his blog post.</p>\n\n\n\n<p>Firstly, while I would not disturb the emoji-only messaging concept, I would like the ability to use text search for emojis. See, for example, how I can search for emojis in my favorite traditional messaging app, Delta Chat:</p>\n\n\n\n<a href=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/emoji-text-search-in-delta-chat.jpg\"><img src=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/emoji-text-search-in-delta-chat-800x447.jpg\" alt=\"Running text search for &quot;bird&quot; in emoji select window in Delta Chat.\" /></a>Searching for emoji in Delta Chat.<p>I do not use emojis so frequently that I am able to find specific ones quickly, and even if I were an emoji story-teller, I think I would find having to scroll-to-search cumbersome.</p>\n\n\n\n<p>Secondly, I think text tooltips when hovering over an emoji would be a nice addition. See below what happens when I hover over the hatching chick emoji in Delta Chat:</p>\n\n\n\n<a href=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/emoji-tooltip-in-delta-chat.jpg\"><img src=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/emoji-tooltip-in-delta-chat-800x447.jpg\" alt=\"Hovering over &quot;Hatching Chick&quot; emoji in Delta Chat with tooltip &quot;Hatching Chick.&quot;\" /></a>Note I can see the text describing the emoji when I hover.<p>Contrast with Moji:</p>\n\n\n\n<a href=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/Screenshot_2026-03-22_21-29-42.jpg\"><img src=\"https://thenewleafjournal.com/wp-content/uploads/2026/03/Screenshot_2026-03-22_21-29-42-800x563.jpg\" alt=\"Hovering over hatching chick emoji in Moji chat app. There is no tooltip.\" /></a>Find my cursor hovering over the hatching chick in the second row of emojis, ninth from the right.<p>Tooltips would provide two benefits. Firstly, some people who try the app may not be familiar with all of the common emojis. While the hatching chick is self-evident, I find some of the smilies ambiguous. Secondly, so long as the appearances of emojis in Moji varies depending on the chatter's device and web browser, tooltips would help ensure that chatters are able to send the emoji they intend to send.</p>\n\n\n\n<p>Thirdly, rooms should have an \"invite to room\" button that brings up the sharing link. This would make sharing rooms more intuitive for people who are not technically inclined or who are linked to Moji without having read the introductory blog post.</p>\n\n\n\n<p>Fourthly, it may be worth considering how Moji handles “usernames.” It seems a little bit unintuitive to treat someone who accesses a chat from the same browser but then changes his or her username as a new user. Similarly, while there is a benefit to treating someone who accesses from a new browser as a returning user if he or she chooses the same username and color that he or she used on a different browser, this could also lead to false impersonation. While Moji is somewhat abuse-proof in that rooms require specific URLs/room codes and the only things that can be sent are emojis, it may be worth revising how user “accounts” are handled (alas, this is a case where I can more easily identify the issues than offer solutions).</p>\n\n\n\n<p>Fifthly, Moji could be enhanced with chat export functionality. I would be most interested in having the ability to export Moji \"conversations\" for future reading, perhaps into HTML or a similar format. With that functionality, people could save and post Moji \"conversations\" (for example, I could use Moji to put together an entire Justin and Justina dialogue).</p>\n\n\n\n<p>Finally, it would be a nice (albeit unnecessary addition) to include a color picker, which would allow people to choose their own chat colors. I describe this suggestion as \"unnecessary\" because Moji already has 16 default color options, but some Moji chatters may appreciate being able to define their own chat color.</p>\n\n\n\n<p>Moji is a fun app and looks slick for a weekend project. I see how it could be fun for kids and emoji story-tellers alike. I hope that Mr. Glenister continues to maintain the public instance and considers making some tweaks to improve it further. Consider this review my small contribution to the project.</p>",
+        "text": "On February 4, 2025, I published Emojam and Emoji Story-Telling Memories. The article was prompted by the Emojam, a Japanese \"pager\" for kids which only allows for messages made up up of pre-loaded emoji (see Emojam report). I only spent a few sentences on the Emojam itself before segueing into a story from my high school days where my friend made up a plot from the \"24\" TV show by employing emojis accompanied by dialogue as an example of the untapped power of emoji-based story-telling. I thought of my Emojam-inspired anecdote when I read Max Gelnister's January 12, 2026 article titled Building an emoji-only chat app.\n\n\n\nMax Genister explained that his six-year old daughter enjoys sending and receiving emojis. He wanted to allow her to send him and receive emojis, but also wanted to separate the emojis from his main chat app. While there were apparently existing emoji-only chat options on iOS, they had two issues. Firstly, Mr. Glenister was not comfortable with the lack of information about how they handled data. Second, they only allowed 1:1 chats.\n\n\n\nWhile I would have been stumped at this point, Mr. Glenister is a web developer. Over the course of a weekend, he built a new web-app called Moji. He describes the concept as follows:\n\n\n\n\nEmoji only - the app only allows non-alphanumeric characters. Random room IDs get generated when starting a chat, but any string works. No accounts means nothing to store, nothing to manage. Type a name when joining and that’s it.\n\n\n\n\nHe also explained how he worked to avoid storing data on a central server:\n\n\n\n\nI used GunDB for peer-to-peer messaging so messages stay between whoever’s in the room, not on my server or in the cloud. The frontend is React, using Vite and Tailwind. The relay server is just Express with GunDB, about 15 lines - it only helps peers find each other.\n\n\n\n\nThe source code for Moji is available on GitHub. But as of the date of the publication of this article, one need not deploy his or her own Moji instance to try the app. Mr. Glenister deployed Moji using the Fly.io service and the instance is live at https://moji-frontend.fly.dev/ as of the initial publication date of this article (it can also be installed on supported devices as a progressive web app).\n\n\n\nI decided to call upon our fictional dialogue duo, Justin and Justina, to test out the app.\n\n\n\nFirst, Justin chooses a color and user-name and then creates a room.\n\n\n\nYou can use the room link or ID to join an existing room.The room is empty. Justin clicks the field to send messages and sees that he can only send emojis. \n\n\n\nEmoji keyboard in Moji chat app.He decides to invite a friend. There is no \"invite\" button, but from reading Mr. Glenister's article he understands that the URL is the link to the room. He cryptically sends the link to Justina. Justina, feeling suspicion, opens the link. Note that when she opens the link, she sees a different welcome screen than Justin saw when he opened the room. \n\n\n\nJoining a room in Moji.She has name and color options, but there is only a single button to \"Join Room\" instead of an additional option to \"Create Room.\"\n\n\n\nJustin and Justina proceed to begin a conversation. First, see the conversation from Justin's side using the Mullvad web browser, which is derivative of Firefox.\n\n\n\nMoji in Mullvad.Now see the conversation from Justina's side using Brave, which is derivative of Chromium.\n\n\n\nMoji in Brave.Note that the emojis look different. Mr. Glenister noted this issue:\n\n\n\n\nEmoji render differently across devices. The picker shows one set of glyphs, but messages display in whatever the system provides. I tried using Twemoji to keep things consistent but gave up - too much overhead. Works fine for now.\n\n\n\n\nI also discussed the potential problem of emojis displaying differently on different devices in a 2022 essay titled Emojis, Corporations, and Censorship. With that being said, I doubt that the sorts of entirely emoji-based conversations on an app like Moji will be adversely affected by differing emoji appearances.\n\n\n\nMoji conversations use the web browser's local storage. Brave keeps local storage by default, so Justina could close out of her conversation and most likely access it again in the future. However, Justin's browser Mullvad clears itself on close (by design), so he would lose access to his conversations upon closing. But before Justin closes, see below what the Moji homepage looks like in his browser with the existing chat still in local storage.\n\n\n\nSee Justin's existing room in browser cache at the bottom.Justin now has a third option in addition to \"Create New Room\" or join a room using its ID. He can now re-join the room he created to exchange emojis with Justina. While testing, I discovered that if you change your user-name and then return to a chat, the chat treats you as a new participant. For example, if Justin changed his name to Justinian and then returned to the room he created, “Justinian” would be treated as a new participant in the chat. However, were Justin to then join from an entirely different web browser and set his username as “Justin” with the same color as when he first made the room, Moji would treat him as the original “Justin” despite the fact that he is using a new web browser.\n\n\n\nMoji looks good and works well in my brief testing with a friend and with \"Justin and Justina.\" I rate this as an impressive weekend project. While I assume that it is largely \"feature complete\" from Mr. Glenister's perspective since he notes he created it for his daughter to enjoy and wrote it up to explain the tech behind it, I humbly offer a few suggestions were he or someone else to want to consider improvements for broader use while keeping to the simple spirit of the concept. I will set aside standardizing the appearance of emojis across devices and web browsers since he already noted that issue in his blog post.\n\n\n\nFirstly, while I would not disturb the emoji-only messaging concept, I would like the ability to use text search for emojis. See, for example, how I can search for emojis in my favorite traditional messaging app, Delta Chat:\n\n\n\nSearching for emoji in Delta Chat.I do not use emojis so frequently that I am able to find specific ones quickly, and even if I were an emoji story-teller, I think I would find having to scroll-to-search cumbersome.\n\n\n\nSecondly, I think text tooltips when hovering over an emoji would be a nice addition. See below what happens when I hover over the hatching chick emoji in Delta Chat:\n\n\n\nNote I can see the text describing the emoji when I hover.Contrast with Moji:\n\n\n\nFind my cursor hovering over the hatching chick in the second row of emojis, ninth from the right.Tooltips would provide two benefits. Firstly, some people who try the app may not be familiar with all of the common emojis. While the hatching chick is self-evident, I find some of the smilies ambiguous. Secondly, so long as the appearances of emojis in Moji varies depending on the chatter's device and web browser, tooltips would help ensure that chatters are able to send the emoji they intend to send.\n\n\n\nThirdly, rooms should have an \"invite to room\" button that brings up the sharing link. This would make sharing rooms more intuitive for people who are not technically inclined or who are linked to Moji without having read the introductory blog post.\n\n\n\nFourthly, it may be worth considering how Moji handles “usernames.” It seems a little bit unintuitive to treat someone who accesses a chat from the same browser but then changes his or her username as a new user. Similarly, while there is a benefit to treating someone who accesses from a new browser as a returning user if he or she chooses the same username and color that he or she used on a different browser, this could also lead to false impersonation. While Moji is somewhat abuse-proof in that rooms require specific URLs/room codes and the only things that can be sent are emojis, it may be worth revising how user “accounts” are handled (alas, this is a case where I can more easily identify the issues than offer solutions).\n\n\n\nFifthly, Moji could be enhanced with chat export functionality. I would be most interested in having the ability to export Moji \"conversations\" for future reading, perhaps into HTML or a similar format. With that functionality, people could save and post Moji \"conversations\" (for example, I could use Moji to put together an entire Justin and Justina dialogue).\n\n\n\nFinally, it would be a nice (albeit unnecessary addition) to include a color picker, which would allow people to choose their own chat colors. I describe this suggestion as \"unnecessary\" because Moji already has 16 default color options, but some Moji chatters may appreciate being able to define their own chat color.\n\n\n\nMoji is a fun app and looks slick for a weekend project. I see how it could be fun for kids and emoji story-tellers alike. I hope that Mr. Glenister continues to maintain the public instance and considers making some tweaks to improve it further. Consider this review my small contribution to the project."
+      },
+      "mention-of": "https://blog.omgmog.net/post/emoji-only-chat/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-03-28T21:30:31-04:00"
     }
   ]
 }
