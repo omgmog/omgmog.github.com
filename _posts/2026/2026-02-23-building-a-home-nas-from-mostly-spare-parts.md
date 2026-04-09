@@ -100,7 +100,13 @@ sudo udevadm control --reload
 sudo udevadm trigger
 ```
 
-That sorted it.
+To verify it took, check the power control state for each USB device:
+
+```bash
+for dev in /sys/bus/usb/devices/*/; do vendor=$(cat "$dev/idVendor" 2>/dev/null); product=$(cat "$dev/idProduct" 2>/dev/null); power=$(cat "$dev/power/control" 2>/dev/null); [ -n "$vendor" ] && echo "$vendor:$product $power"; done
+```
+
+The `152d:0567` entry should show `on`. If it still shows `auto`, replug the enclosure to force the rule to fire.
 
 I'm organising by media type (films, series, music) rather than worrying about which physical drive things land on. I've got about 20 years of media to consolidate from various machines and old drives, so it's a dump-and-sort job.
 
