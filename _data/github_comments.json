@@ -924,5 +924,62 @@
     "comments": [
 
     ]
+  },
+  "146": {
+    "state": "open",
+    "comments": [
+      {
+        "id": 4237566266,
+        "user": {
+          "login": "jaspertandy",
+          "avatar_url": "https://avatars.githubusercontent.com/u/350834?v=4",
+          "html_url": "https://github.com/jaspertandy"
+        },
+        "body": "I love Children of Time. Have you started Children of Strife yet? I'm having trouble getting started, but I did on the previous books too.",
+        "body_html": "<p dir=\"auto\">I love Children of Time. Have you started Children of Strife yet? I'm having trouble getting started, but I did on the previous books too.</p>",
+        "created_at": "2026-04-13T15:24:34Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/146#issuecomment-4237566266",
+        "sort_date": "2026-04-13T15:24:34Z"
+      },
+      {
+        "id": 4238816254,
+        "user": {
+          "login": "omgmog",
+          "avatar_url": "https://avatars.githubusercontent.com/u/50949?v=4",
+          "html_url": "https://github.com/omgmog"
+        },
+        "body": "@jaspertandy haven't got around to Strife yet. I loved Time, Ruin and Memory though! I found the same problem re-orienting myself to each book.",
+        "body_html": "<p dir=\"auto\"><a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/jaspertandy/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/jaspertandy\">@jaspertandy</a> haven't got around to Strife yet. I loved Time, Ruin and Memory though! I found the same problem re-orienting myself to each book.</p>",
+        "created_at": "2026-04-13T18:46:53Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/146#issuecomment-4238816254",
+        "sort_date": "2026-04-13T18:46:53Z"
+      },
+      {
+        "id": 4239670130,
+        "user": {
+          "login": "jaspertandy",
+          "avatar_url": "https://avatars.githubusercontent.com/u/350834?v=4",
+          "html_url": "https://github.com/jaspertandy"
+        },
+        "body": "@omgmog I did too! I was so sad when Memory was over; was planning to read them again when I heard about Strife. Very happy.\n\nHave you read Three Body Problem? That's another I enjoyed for similar reasons.",
+        "body_html": "<p dir=\"auto\"><a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/omgmog/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/omgmog\">@omgmog</a> I did too! I was so sad when Memory was over; was planning to read them again when I heard about Strife. Very happy.</p>\n<p dir=\"auto\">Have you read Three Body Problem? That's another I enjoyed for similar reasons.</p>",
+        "created_at": "2026-04-13T21:13:04Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/146#issuecomment-4239670130",
+        "sort_date": "2026-04-13T21:13:04Z"
+      },
+      {
+        "id": 4246765379,
+        "user": {
+          "login": "omgmog",
+          "avatar_url": "https://avatars.githubusercontent.com/u/50949?v=4",
+          "html_url": "https://github.com/omgmog"
+        },
+        "body": "@jaspertandy I haven't, but it's on my to-read list!\n",
+        "body_html": "<p dir=\"auto\"><a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/jaspertandy/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/jaspertandy\">@jaspertandy</a> I haven't, but it's on my to-read list!</p>",
+        "created_at": "2026-04-14T20:02:52Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/146#issuecomment-4246765379",
+        "sort_date": "2026-04-14T20:02:52Z"
+      }
+    ]
   }
 }
