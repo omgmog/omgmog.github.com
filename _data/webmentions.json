@@ -4094,6 +4094,34 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-01-19T09:48:25+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://social.emucafe.org/naferrell/installing-android-and-linux-on-switch-04-19-26/",
+      "published": "2026-04-19T21:28:52-04:00",
+      "wm-received": "2026-04-20T01:29:07Z",
+      "wm-id": 1991240,
+      "wm-source": "https://social.emucafe.org/naferrell/installing-android-and-linux-on-switch-04-19-26/",
+      "wm-target": "https://blog.omgmog.net/post/android-on-the-nintendo-switch/",
+      "wm-protocol": "webmention",
+      "summary": {
+        "content-type": "text/plain",
+        "value": "I had seen on the LineageOS website that the LineageOS project supports a couple of different Nintendo Switch models. While I have run LineageOS on phones and tablets, I will stick to Nintendo&#8217;s stock OS on the Switch. But I was curious about how LineageOS would run on a Switch, which made me read Max [&hellip;]"
+      },
+      "content": {
+        "html": "I had seen on the LineageOS website that the LineageOS project supports a couple of different Nintendo Switch models. While I have run LineageOS on <a href=\"https://thenewleafjournal.com/stick-library-in-brooklyn-heights/\">phones</a> and <a href=\"https://thenewleafjournal.com/installing-lineageos-on-a-2013-nexus-7-wi-fi/\">tablets</a>, I will stick to Nintendo's stock OS on the Switch. But I was curious about how LineageOS would run on a Switch, which made me read Max Glenister's article on <a href=\"https://blog.omgmog.net/post/android-on-the-nintendo-switch/\">Installing Android on the Nintendo Switch</a> with interest. To be sure, his article has interesting notes about installing LineageOS 22 on the Switch and how it performs. But I am sharing his article because it noted that \"the Switchroot project maintains Android 10 and 11 builds alongside Linux images (Ubuntu, Fedora), and LineageOS now has official support going uip to Android 15.\" I followed the link and saw that the <a href=\"https://switchroot.org/\">Switchroot project</a> also supports Lakka, which is a sort of Retro Arch-based OS. That would be an interesting option for a Switch that is being used only for games.",
+        "text": "I had seen on the LineageOS website that the LineageOS project supports a couple of different Nintendo Switch models. While I have run LineageOS on phones and tablets, I will stick to Nintendo's stock OS on the Switch. But I was curious about how LineageOS would run on a Switch, which made me read Max Glenister's article on Installing Android on the Nintendo Switch with interest. To be sure, his article has interesting notes about installing LineageOS 22 on the Switch and how it performs. But I am sharing his article because it noted that \"the Switchroot project maintains Android 10 and 11 builds alongside Linux images (Ubuntu, Fedora), and LineageOS now has official support going uip to Android 15.\" I followed the link and saw that the Switchroot project also supports Lakka, which is a sort of Retro Arch-based OS. That would be an interesting option for a Switch that is being used only for games."
+      },
+      "mention-of": "https://blog.omgmog.net/post/android-on-the-nintendo-switch/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-04-19T21:28:52-04:00"
     }
   ],
   "/post/why-cant-i-read-this-picture-book/": [
