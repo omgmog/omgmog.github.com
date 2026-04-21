@@ -1,7 +1,7 @@
 ---
 comments_issue: 64
 title: Testing responsive layouts with the RWD bookmarklet
-tags: [responsive-design, chrome, web-development]
+tags: [responsive-design, software, web-development]
 archived: true
 ---
 

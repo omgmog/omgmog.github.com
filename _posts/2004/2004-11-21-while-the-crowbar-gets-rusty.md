@@ -1,6 +1,6 @@
 ---
 title: "while the crowbar gets rusty.."
-tags: [moglenstar]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

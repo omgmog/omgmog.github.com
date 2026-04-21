@@ -1,7 +1,7 @@
 ---
 comments_issue: 78
 title: Making Postgres work nicely on OS X Mountain Lion
-tags: [postgresql, mac-os-x, guide]
+tags: [database, mac-os-x, guide]
 archived: true
 ---
 Postgres on OS X has been a pain in the ass for as long as I have had to use it.

@@ -1,7 +1,7 @@
 ---
 comments_issue: 71
 title: Gamification of life with the Fitbit Flex
-tags: [fitbit, hardware]
+tags: [hardware]
 archived: true
 ---
 Earlier this year, Jenny got a [Fitbit Zip](http://www.fitbit.com/uk/zip), it's basically a pedometer, but with the added cool-factor that it can synchronise over Bluetoooth with your computer (and some mobile devices), so that you can see statistics about your daily step count, active times of the day, etc. all online.

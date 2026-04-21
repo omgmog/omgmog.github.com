@@ -1,6 +1,6 @@
 ---
 title: "css, xhtml, and faking \"jet lag\""
-tags: [moglenstar, web]
+tags: [web-development]
 archived: true
 archive: moglenstar.net
 ---

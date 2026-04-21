@@ -1,6 +1,6 @@
 ---
 title: Using jQuery to supply and clear default input values
-tags: [jquery, javascript, tutorial]
+tags: [jquery, programming, guide]
 archived: true
 archive: omgmog.net
 ---

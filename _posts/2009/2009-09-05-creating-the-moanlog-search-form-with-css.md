@@ -1,6 +1,6 @@
 ---
 title: "Creating the moanlog search form with CSS"
-tags: [css, tutorial]
+tags: [css, guide]
 archived: true
 archive: omgmog.net
 ---

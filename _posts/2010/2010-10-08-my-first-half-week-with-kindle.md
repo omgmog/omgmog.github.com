@@ -1,6 +1,6 @@
 ---
 title: "My first half-week with Kindle"
-tags: [review, gadget]
+tags: [review, hardware]
 archived: true
 archive: blog.omgmog.net
 ---

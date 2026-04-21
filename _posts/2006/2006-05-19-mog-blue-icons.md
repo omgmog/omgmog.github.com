@@ -1,6 +1,6 @@
 ---
 title: "Mog Blue Icons"
-tags: [moglenstar, pixel-art, icons]
+tags: [pixel-art, icons]
 archived: true
 archive: moglenstar.net
 ---

@@ -1,7 +1,7 @@
 ---
 comments_issue: 56
 title: My solution to the JavaScript challenge 07/03/11
-tags: [javascript]
+tags: [programming]
 archived: true
 ---
 

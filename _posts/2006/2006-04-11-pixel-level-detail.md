@@ -1,9 +1,7 @@
 ---
 archived: true
 title: Pixel-level Detail
-tags:
-- moglenstar
-- pixel-art
+tags: [pixel-art]
 archive: moglenstar.net
 archived_comments:
 - author: iz

@@ -1,6 +1,6 @@
 ---
 title: Pizza & icecream.
-tags: [moglenstar, life]
+tags: [life]
 archived: true
 archive: moglenstar.net
 ---

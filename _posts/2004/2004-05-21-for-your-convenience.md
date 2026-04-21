@@ -1,6 +1,6 @@
 ---
 title: "For your convenience"
-tags: [moglenstar]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

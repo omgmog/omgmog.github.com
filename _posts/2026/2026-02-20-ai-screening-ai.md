@@ -1,7 +1,7 @@
 ---
 title: My phone's AI is screening your AI
 comments_issue: 137
-tags: [android, google, ai, phone]
+tags: [android, google, hardware]
 ---
 
 I've been using Google's Call Screening feature for a while now. I turned it on mostly to filter out calls from numbers I don't recognise (I've signed up with [TPS](https://www.tpsonline.org.uk/) and reported numbers to the [ICO](https://ico.org.uk/for-the-public/nuisance-calls/), and neither has made much difference), but in practice it's doing something I didn't quite expect: it's almost exclusively screening other AIs.

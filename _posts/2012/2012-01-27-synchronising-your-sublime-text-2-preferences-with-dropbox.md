@@ -1,7 +1,7 @@
 ---
 title: Synchronising your Sublime Text 2 preferences with Dropbox
 comments_issue: 93
-tags: [sublime-text, dropbox, guide]
+tags: [software, guide]
 archived: true
 archived_comments:
 - author: "Tomás Mayr"

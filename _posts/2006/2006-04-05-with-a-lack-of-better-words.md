@@ -1,6 +1,6 @@
 ---
 title: With a lack of better words..
-tags: [moglenstar, site-related]
+tags: [site-related]
 archived: true
 archive: moglenstar.net
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Grey Media Icons"
-tags: [moglenstar, pixel-art, icons, foobar2000]
+tags: [pixel-art, icons, software]
 archived: true
 archive: moglenstar.net
 ---

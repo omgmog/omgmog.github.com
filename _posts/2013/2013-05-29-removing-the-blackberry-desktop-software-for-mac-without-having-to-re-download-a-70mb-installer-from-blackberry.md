@@ -1,7 +1,7 @@
 ---
 title: Removing the Blackberry Desktop Software for Mac without having to re-download a 70mb installer from Blackberry
 comments_issue: 92
-tags: [mac-os-x, blackberry, guide]
+tags: [mac-os-x, hardware, guide]
 archived: true
 archived_comments:
 - author: "Antonio"

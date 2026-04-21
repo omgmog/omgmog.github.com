@@ -1,7 +1,7 @@
 ---
 comments_issue: 28
 title: Saving your CSS changes in the Google Chrome inspector
-tags: [chrome, css, guide]
+tags: [software, css, guide]
 archived: true
 archived_comments:
 - author: "Jim Hohl"

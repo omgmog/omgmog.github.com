@@ -1,7 +1,7 @@
 ---
 comments_issue: 68
 title: Creating 'Material Design' shadows in Photoshop
-tags: [photoshop, design, guide]
+tags: [software, design, guide]
 archived: true
 archived_comments:
 - author: "uucky"

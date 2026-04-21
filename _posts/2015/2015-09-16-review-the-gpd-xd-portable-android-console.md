@@ -1,6 +1,6 @@
 ---
 title: "The GPD XD Portable Android Games Console"
-tags: [android, hardware, gpd-xd, review]
+tags: [android, hardware, review, handheld]
 archived: true
 archived_comments:
 - author: "Pete Scoffield"

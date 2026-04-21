@@ -1,7 +1,7 @@
 ---
 comments_issue: 34
 title: 'So, I''ve got all of these Raspberry Pi accessories... now what?'
-tags: [raspberry-pi, hardware, kickstarter]
+tags: [raspberry-pi, hardware, project]
 archived: true
 ---
 

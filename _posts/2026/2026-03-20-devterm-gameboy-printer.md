@@ -1,7 +1,7 @@
 ---
 title: I turned my DevTerm into a Game Boy Camera and Printer
 comments_issue: 143
-tags: [devterm, gameboy, hardware]
+tags: [clockwork-pi, handheld, hardware]
 ---
 
 The Game Boy Camera was brilliant and stupid in equal measure, a 128x112 pixel sensor bolted on top of a cartridge, printing to thermal paper on a Game Boy Printer the size of a brick. I got both for Christmas when I was 12 and somehow spent hours with them. The minigames are absurd, the image quality is _aggressively_ awful, and the whole thing looks like a prop from a cheap sci-fi film. I loved it.

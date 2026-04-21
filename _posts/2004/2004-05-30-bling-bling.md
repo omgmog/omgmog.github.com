@@ -1,6 +1,6 @@
 ---
 title: "bling bling."
-tags: [moglenstar]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

@@ -1,6 +1,6 @@
 ---
 title: "well, this sucks."
-tags: [moglenstar]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

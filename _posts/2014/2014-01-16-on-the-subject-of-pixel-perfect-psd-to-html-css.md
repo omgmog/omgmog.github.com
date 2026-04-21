@@ -1,7 +1,7 @@
 ---
 comments_issue: 35
 title: On the subject of "Pixel-perfect PSD to HTML/CSS"
-tags: [web-design, web-development]
+tags: [web-development]
 archived_comments:
 - author: "Vu Hoang Anh"
   date: January 20, 2014

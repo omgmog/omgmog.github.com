@@ -1,6 +1,6 @@
 ---
 title: "heart rating icons for foobar"
-tags: [moglenstar, foobar2000, pixel-art]
+tags: [software, pixel-art]
 archived: true
 archive: moglenstar.net
 ---

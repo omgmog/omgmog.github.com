@@ -1,6 +1,6 @@
 ---
 title: and it begins
-tags: [moglenstar]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

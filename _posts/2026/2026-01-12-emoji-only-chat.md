@@ -1,7 +1,7 @@
 ---
 title: Building an emoji-only chat app
 comments_issue: 127
-tags: [emoji, javascript, web-development]
+tags: [emoji, programming, web-development]
 ---
 
 My daughter finds emoji hilarious. She's 6 and will scroll through an emoji picker for ages. My wife and I started by letting her use WhatsApp's emoji picker to send us messages, but that quickly polluted our chat history with emoji spam. We tried a few dedicated emoji-only apps like Emojichat, but there was this uncertainty about how they handled data. Most of them were also 1:1 only. I wanted the three of us in the same room.

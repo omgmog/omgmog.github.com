@@ -1,10 +1,7 @@
 ---
 archived: true
 title: CSS Tabs, ala mog
-tags:
-- moglenstar
-- css
-- web
+tags: [css, web-development]
 archive: moglenstar.net
 archived_comments:
 - author: z3rb

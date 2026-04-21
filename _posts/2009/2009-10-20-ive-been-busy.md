@@ -1,6 +1,6 @@
 ---
 title: I've been busy
-tags: [web, dingoo]
+tags: [web-development, retro-gaming]
 archived: true
 archive: omgmog.net
 ---

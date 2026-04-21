@@ -1,7 +1,7 @@
 ---
 title: Pulling Google Takeout straight to a NAS
 comments_issue: 145
-tags: [guide, google, linux, nas]
+tags: [guide, google, linux, server]
 ---
 
 I've been having a bit of a think about data I've left entirely in someone else's hands. Specifically Google Photos, which has photos going back to 2011 and no local copy _anywhere_. I'm not going anywhere dramatic with it, but having a backup I actually control felt overdue.

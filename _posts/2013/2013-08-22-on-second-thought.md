@@ -1,7 +1,7 @@
 ---
 title: On second thought...
 comments_issue: 94
-tags: [google, app]
+tags: [google, software]
 archived: true
 ---
 ... Google Hangouts for Chrome needs some work.

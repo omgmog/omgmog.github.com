@@ -1,7 +1,7 @@
 ---
 comments_issue: 79
 title: Adding more post metadata to Jekyll with YAML
-tags: [jekyll, yaml, guide]
+tags: [jekyll, web-development, guide]
 archived: true
 ---
 <strong>NB: This flurry of content might be shortlived, but for now I'm excited to be posting again so shush!</strong>

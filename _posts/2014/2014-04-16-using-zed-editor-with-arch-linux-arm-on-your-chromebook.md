@@ -1,7 +1,7 @@
 ---
 comments_issue: 47
 title: Using the Zed editor with Arch Linux ARM on your Chromebook
-tags: [chromebook, arch-linux, editor, guide]
+tags: [chromebook, arch-linux, software, guide]
 archived: true
 ---
 

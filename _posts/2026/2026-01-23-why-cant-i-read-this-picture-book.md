@@ -1,7 +1,7 @@
 ---
 title: "Why can't I read this picture book?"
 comments_issue: 129
-tags: [ux, design, accessibility]
+tags: [ux, design]
 syndication:
   - https://social.omgmog.net/2026/postwhy-cant-i-read-this-picture-book
   - https://indieweb.social/@omgmog/115943950065114858

@@ -1,6 +1,6 @@
 ---
 title: "Trying coffeescript"
-tags: [javascript]
+tags: [programming]
 archived: true
 archive: blog.omgmog.net
 ---

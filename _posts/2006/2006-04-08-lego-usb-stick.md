@@ -1,6 +1,6 @@
 ---
 title: Lego USB Stick
-tags: [moglenstar, project]
+tags: [project]
 archived: true
 archive: moglenstar.net
 ---

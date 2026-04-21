@@ -1,7 +1,7 @@
 ---
 title: Javascript function to group repeated values of an array with totals
 comments_issue: 98
-tags: [javascript]
+tags: [programming]
 archived: true
 archived_comments:
 - author: "Benjamin Fowl"

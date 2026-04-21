@@ -1,6 +1,6 @@
 ---
 title: Useful bash aliases for VPS
-tags: [bash, server, sysadmin]
+tags: [programming, server]
 archived: true
 ---
 

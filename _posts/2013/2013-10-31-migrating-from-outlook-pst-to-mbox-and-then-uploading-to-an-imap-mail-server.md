@@ -1,7 +1,7 @@
 ---
 comments_issue: 39
 title: Migrating from Outlook .pst to mbox and then uploading to an IMAP mail server
-tags: [email, outlook, guide]
+tags: [email, guide]
 archived: true
 archived_comments:
 - author: "Russell Smith"

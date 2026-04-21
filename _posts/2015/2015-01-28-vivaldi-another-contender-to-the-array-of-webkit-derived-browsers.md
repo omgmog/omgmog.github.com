@@ -1,7 +1,7 @@
 ---
 title: 'Vivaldi: Another contender to the array of Webkit-derived browsers'
 comments_issue: 87
-tags: [browser, vivaldi]
+tags: [software]
 archived: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Out of sync
-tags: [moglenstar, life]
+tags: [life]
 archived: true
 archive: moglenstar.net
 ---

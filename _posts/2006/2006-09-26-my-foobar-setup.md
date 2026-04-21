@@ -1,8 +1,6 @@
 ---
 title: My foobar setup
-tags:
-- moglenstar
-- foobar2000
+tags: [software]
 archived: true
 archive: moglenstar.net
 archived_comments:

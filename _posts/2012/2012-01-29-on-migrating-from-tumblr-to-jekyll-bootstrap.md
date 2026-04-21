@@ -1,7 +1,7 @@
 ---
 comments_issue: 54
 title: On migrating from Tumblr to Jekyll Bootstrap
-tags: [jekyll, tumblr, github-pages, guide]
+tags: [jekyll, software, github-pages, guide]
 archived: true
 archived_comments:
 - author: "plusjade"

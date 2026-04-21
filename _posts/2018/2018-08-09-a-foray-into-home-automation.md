@@ -1,7 +1,7 @@
 ---
 title: A Foray Into Home Automation
 comments_issue: 102
-tags: [home-automation]
+tags: [hardware]
 archived: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "The Chuwi Vi10 Plus Windows and Android Tablet"
-tags: [hardware, windows, android, chuwi-vi10-plus, review]
+tags: [hardware, windows, android, review]
 archived: true
 archived_comments:
 - author: "Matthew"

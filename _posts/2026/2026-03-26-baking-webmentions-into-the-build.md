@@ -1,7 +1,7 @@
 ---
 title: Baking webmentions into the build
 comments_issue: 144
-tags: [indieweb, web-development, jekyll, javascript]
+tags: [indieweb, web-development, jekyll, programming]
 ---
 
 Back in 2022 I [added webmention support to this blog](/post/adding-support-for-webmentions/). The implementation worked but it was entirely client-side, so the page would load, JS would fire, fetch from webmention.io, and render the results into the DOM. With JS disabled or on a slow connection, the discussion section was just empty.

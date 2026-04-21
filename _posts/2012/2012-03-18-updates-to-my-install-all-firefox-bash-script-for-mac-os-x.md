@@ -1,7 +1,7 @@
 ---
 comments_issue: 42
 title: Updates to my 'install all firefox' bash script for Mac OS X
-tags: [firefox, bash, mac-os-x, guide]
+tags: [software, programming, mac-os-x, guide]
 archived: true
 archived_comments:
 - author: "Batman"

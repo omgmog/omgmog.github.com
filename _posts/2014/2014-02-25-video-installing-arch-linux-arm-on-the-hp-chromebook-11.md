@@ -1,7 +1,7 @@
 ---
 comments_issue: 32
 title: 'Video: Installing Arch Linux ARM on the HP Chromebook 11'
-tags: [chromebook, arch-linux, linux, video]
+tags: [chromebook, arch-linux, linux]
 archived: true
 archived_comments:
 - author: "Violaine"

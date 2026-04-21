@@ -1,7 +1,7 @@
 ---
 title: Getting started with using Sass in your existing website
 comments_issue: 19
-tags: [guide, sass, css, web-development]
+tags: [guide, css, web-development]
 archived_comments:
 - author: "Theron S"
   date: April 14, 2014

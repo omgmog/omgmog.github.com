@@ -1,6 +1,6 @@
 ---
 title: "R4DS Panda theme"
-tags: [r4ds, pixel-art]
+tags: [pixel-art, retro-gaming]
 archived: true
 archive: omgmog.net
 ---

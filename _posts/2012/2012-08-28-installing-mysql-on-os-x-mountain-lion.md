@@ -1,7 +1,7 @@
 ---
 title: Installing MySQL on OS X Mountain Lion
 comments_issue: 99
-tags: [mysql, mac-os-x, guide]
+tags: [database, mac-os-x, guide]
 archived: true
 archived_comments:
 - author: "Rob Bennet"

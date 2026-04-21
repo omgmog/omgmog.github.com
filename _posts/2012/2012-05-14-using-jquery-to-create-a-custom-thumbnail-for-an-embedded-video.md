@@ -1,7 +1,7 @@
 ---
 comments_issue: 25
 title: Using jQuery to create a custom thumbnail for an embedded video
-tags: [jquery, javascript, youtube, guide]
+tags: [jquery, programming, youtube, guide]
 archived: true
 archived_comments:
 - author: "Kelsey Brookes"

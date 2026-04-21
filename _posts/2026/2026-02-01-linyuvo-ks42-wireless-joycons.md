@@ -1,7 +1,7 @@
 ---
 title: The LinYuvo KS42 Wireless Joycons for the Nintendo Switch
 comments_issue: 132
-tags: [nintendo-switch, review, android]
+tags: [nintendo, review, android]
 ---
 
 I've gone through a few sets of Joy-Cons since buying my Switch back in 2018. Every pair has ended up with stick drift, and at this point my Switch is [running Android](/post/installing-android-on-the-nintendo-switch/) full time, so spending £60 on first-party replacements felt like a waste. I picked up the [LinYuvo KS42](https://www.linyuvo.com/products/ks42) from [AliExpress](https://www.aliexpress.com/item/1005007359114819.html) for around £18 instead.

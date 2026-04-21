@@ -1,7 +1,7 @@
 ---
 comments_issue: 21
 title: Using Greasemonkey scripts with Google Chrome
-tags: [chrome, userscripts, javascript, guide]
+tags: [software, userscripts, programming, guide]
 archived: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: The GPD G5A Portable Android Games Console
-tags: [android, hardware, gpd-g5a, review]
+tags: [android, hardware, review, handheld]
 archived: true
 ---
 

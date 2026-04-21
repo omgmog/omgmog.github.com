@@ -1,6 +1,6 @@
 ---
 title: Installing Ubuntu on MacBookPro 8,2
-tags: [linux, ubuntu, macbook]
+tags: [linux, ubuntu, mac-os-x, hardware]
 archived: true
 ---
 

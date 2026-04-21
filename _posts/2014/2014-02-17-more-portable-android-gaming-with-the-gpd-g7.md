@@ -1,6 +1,6 @@
 ---
 title: The GPD G7 Portable Android Games Console
-tags: [android, hardware, gpd-g7, review]
+tags: [android, hardware, review, handheld]
 archived: true
 archived_comments:
 - author: "Rob"

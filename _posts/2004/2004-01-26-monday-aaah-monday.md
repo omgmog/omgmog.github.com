@@ -1,6 +1,6 @@
 ---
 title: "monday.. aaah, monday :)"
-tags: [moglenstar, life]
+tags: [life]
 archived: true
 archive: moglenstar.net
 ---

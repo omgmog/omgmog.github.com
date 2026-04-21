@@ -1,7 +1,7 @@
 ---
 comments_issue: 38
 title: Google's relaunched Hangouts -- Wow.
-tags: [google, android, app, review]
+tags: [google, android, software, review]
 archived: true
 ---
 The long-speculated consolidation of Google Talk, Google+ Hangouts, and Google Video Chat has finally occured, and it's pretty spectacular.

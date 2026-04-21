@@ -1,6 +1,6 @@
 ---
 title: The great return
-tags: [moglenstar, site-related]
+tags: [site-related]
 archived: true
 archive: moglenstar.net
 ---

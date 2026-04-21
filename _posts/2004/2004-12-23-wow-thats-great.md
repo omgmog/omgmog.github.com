@@ -1,6 +1,6 @@
 ---
 title: "wow thats great."
-tags: [moglenstar]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

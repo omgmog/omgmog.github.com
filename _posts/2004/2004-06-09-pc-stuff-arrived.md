@@ -1,6 +1,6 @@
 ---
 title: "Well."
-tags: [moglenstar]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

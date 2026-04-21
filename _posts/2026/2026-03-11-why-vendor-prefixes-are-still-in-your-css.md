@@ -1,7 +1,7 @@
 ---
 title: "It's 2026, why are vendor prefixes still in your CSS?"
 comments_issue: 141
-tags: [web-development, css, performance]
+tags: [web-development, css]
 ---
 
 I've spent more time over the last 20 years working on front-end asset pipelines than I'd care to admit. One thing that kept coming up when inheriting older codebases was CSS full of vendor prefixes that hadn't been necessary for years - `-webkit-border-radius` sitting above `border-radius`, `-moz-box-shadow` doubling up on `box-shadow`.

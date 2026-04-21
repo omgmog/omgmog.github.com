@@ -1,7 +1,7 @@
 ---
 title: "Why your reasons for no-longer using a CSS pre-processor are wrong, and you're wrong, and you should feel bad."
 comments_issue: 91
-tags: [css, sass, web-development]
+tags: [css, web-development]
 archived: true
 archived_comments:
 - author: "tevko1"

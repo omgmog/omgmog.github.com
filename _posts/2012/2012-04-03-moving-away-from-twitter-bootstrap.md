@@ -1,6 +1,6 @@
 ---
 title: Moving away from Twitter Bootstrap - Hello new design!
-tags: [jekyll, css, web]
+tags: [jekyll, css, web-development]
 archived: true
 archive: blog.omgmog.net
 archived_comments:

@@ -1,7 +1,7 @@
 ---
 title: Building a Home NAS from Mostly Spare Parts
 comments_issue: 138
-tags: [linux, nas, guide, review]
+tags: [linux, server, guide, review]
 syndication:
   - https://social.omgmog.net/2026/new-blog-post-building-a-home-nas
   - https://indieweb.social/@omgmog/116120634329000893

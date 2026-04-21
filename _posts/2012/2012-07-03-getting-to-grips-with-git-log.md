@@ -1,7 +1,7 @@
 ---
 comments_issue: 33
 title: Getting to grips with git log
-tags: [git, bash, guide]
+tags: [programming, guide]
 archived: true
 ---
 `git` is a powerful tool. After using it for the past couple of years I'm still finding new/powerful things that can be done with it.

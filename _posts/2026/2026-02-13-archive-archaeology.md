@@ -1,7 +1,7 @@
 ---
 title: Archive Archaeology
 comments_issue: 136
-tags: [web, nostalgia]
+tags: [web-development, life]
 syndication:
   - https://social.omgmog.net/2026/postarchive-archaeology
   - https://indieweb.social/@omgmog/116064886046517915

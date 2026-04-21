@@ -1,7 +1,7 @@
 ---
 comments_issue: 80
 title: Making HTML5 input placeholder text behave in Safari
-tags: [css, safari, web-development]
+tags: [css, software, web-development]
 archived: true
 archived_comments:
 - author: "Max Glenister"

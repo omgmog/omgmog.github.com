@@ -1,7 +1,7 @@
 ---
 title: Installing Android on the Nintendo Switch
 comments_issue: 128
-tags: [guide, nintendo-switch, android, retro-gaming]
+tags: [guide, nintendo, android, retro-gaming]
 syndication:
   - https://social.omgmog.net/2026/postandroid-on-the-nintendo-switch
   - https://indieweb.social/@omgmog/115921132325289714

@@ -1,6 +1,6 @@
 ---
 title: "The Nexus 7 Android Tablet from Google"
-tags: [android, nexus-7, hardware, review]
+tags: [android, hardware, review]
 archived: true
 archived_comments:
 - author: "Reiki_david"

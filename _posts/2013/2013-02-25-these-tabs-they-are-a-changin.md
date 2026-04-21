@@ -1,7 +1,7 @@
 ---
 comments_issue: 75
 title: These tabs they are a changin'
-tags: [chrome, design]
+tags: [software, design]
 archived: true
 ---
 The latest update to Chrome (25.0.1364.99) seems to have brought some slight tweaks the interface.

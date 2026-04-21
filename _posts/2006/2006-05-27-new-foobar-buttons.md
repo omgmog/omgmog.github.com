@@ -1,10 +1,7 @@
 ---
 archived: true
 title: New foobar buttons
-tags:
-- moglenstar
-- foobar2000
-- pixel-art
+tags: [software, pixel-art]
 archive: moglenstar.net
 archived_comments:
 - author: ing

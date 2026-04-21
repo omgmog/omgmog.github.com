@@ -1,7 +1,7 @@
 ---
 title: 'Getting to know @for, @each and @while in Sass'
 comments_issue: 58
-tags: [sass, css, guide]
+tags: [css, guide]
 archived: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 comments_issue: 83
 title: On being spammed for being interested
-tags: [privacy, email]
+tags: [email]
 archived: true
 ---
 

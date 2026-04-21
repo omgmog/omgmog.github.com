@@ -1,7 +1,7 @@
 ---
 title: Using split view in Chrome
 comments_issue: 134
-tags: [chrome, browser, productivity]
+tags: [software]
 ---
 
 Chrome's split view tabs is one of those features that silently arrived and slipped into my workflow. I've found myself using it more and more over the past couple of weeks since it rolled out at the end of 2025. It's as intuitive as tab grouping (hold shift when selecting multiple tabs), and genuinely useful. The kind of feature that slots in and makes me wonder how I managed without it.

@@ -1,7 +1,7 @@
 ---
 comments_issue: 76
 title: 'Adventures in IMAP: Migrating lots of mail to Atmail'
-tags: [email, imap, guide]
+tags: [email, guide]
 archived: true
 archived_comments:
 - author: "Dr Doolittle"

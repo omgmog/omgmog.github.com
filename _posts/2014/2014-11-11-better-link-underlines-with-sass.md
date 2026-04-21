@@ -1,7 +1,7 @@
 ---
 comments_issue: 57
 title: Better link underlines with Sass
-tags: [css, sass, web-development, guide]
+tags: [css, web-development, guide]
 archived: true
 ---
 

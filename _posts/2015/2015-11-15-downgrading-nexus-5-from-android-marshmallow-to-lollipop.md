@@ -1,7 +1,7 @@
 ---
 comments_issue: 48
 title: Downgrading Nexus 5 from Android 6.0 to Android 5.1.1
-tags: [android, nexus-5, guide]
+tags: [android, guide, hardware]
 archived: true
 ---
 

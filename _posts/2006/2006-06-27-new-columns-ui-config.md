@@ -1,9 +1,7 @@
 ---
 archived: true
 title: New Columns_UI Config
-tags:
-- moglenstar
-- foobar2000
+tags: [software]
 archive: moglenstar.net
 archived_comments:
 - author: Anthony

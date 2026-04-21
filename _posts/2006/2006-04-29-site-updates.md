@@ -1,6 +1,6 @@
 ---
 title: Site updates
-tags: [moglenstar, site-related]
+tags: [site-related]
 archived: true
 archive: moglenstar.net
 ---

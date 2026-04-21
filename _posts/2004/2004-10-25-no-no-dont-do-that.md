@@ -1,6 +1,6 @@
 ---
 title: "no, no! dont do that!"
-tags: [moglenstar]
+tags: []
 archived: true
 archive: moglenstar.net
 ---
