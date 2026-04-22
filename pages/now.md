@@ -1,7 +1,7 @@
 ---
 title: Now
-permalink: /now
-last_modified_at: 2026-02-25T13:02:27
+permalink: /now/
+last_modified_at: 2026-04-22T14:58:31
 description: What I'm currently up to — projects I'm working on, music I'm listening to, and the gear I'm using day to day.
 ---
 
