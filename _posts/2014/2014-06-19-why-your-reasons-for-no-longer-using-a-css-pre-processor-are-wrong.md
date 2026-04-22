@@ -4,10 +4,6 @@ comments_issue: 91
 tags: [css, web-development]
 archived: true
 archived_comments:
-- author: "tevko1"
-  date: June 19, 2014
-  content: |
-    http://www.cairoscene.com/A...
 - author: "skube"
   date: July 08, 2014
   content: |
