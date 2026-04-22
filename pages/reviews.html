@@ -1,24 +1,15 @@
 ---
-permalink: /reviews/
 title: Reviews
+permalink: /reviews
+description: Hands-on reviews of gadgets and tech from Max Glenister. Less about specs, more about whether it's actually worth it.
 ---
-
-{% include global/wide-h3.html text="Reviews" %}
 <p>I like to get my hands on new gadgets to see what they're really like. These aren't about specs or marketing hype, they're about how things actually feel and work in everyday use.</p>
 <p>Some posts are detailed deep dives, others are quick impressions, but they all aim to give a clear sense of whether something's worth it.</p>
 <p>If there's a gadget you'd like me to try, <a href="mailto:hello@maxglenister.co.uk?subject=Review%20request">drop me a line</a>.</p>
 
 <ul class="post-list">
 {% assign all_reviews = site.posts | where_exp:"post","post.tags contains 'review'" %}
-{% assign previous_year = '' %}
 {% for post in all_reviews %}
-  {% assign current_year = post.date | date: '%Y' %}
-  {% if current_year != previous_year %}
-    {% if previous_year != '' %}</ul>{% endif %}
-    {% include global/wide-h3.html text=current_year %}
-    <ul class="post-list">
-    {% assign previous_year = current_year %}
-  {% endif %}
   {% include global/post-list-item.html hide_years="true" %}
 {% endfor %}
 </ul>

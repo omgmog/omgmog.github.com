@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% capture page_url %}{% if page.url == '/index.html' %}{{ site.url }}{% else %}{{ page.url | absolute_url }}{% endif %}{% endcapture %}
+    {% capture title %}{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}{% endcapture %}
+    {% capture description %}{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip | truncate: 160 }}{% else %}{{ site.data.author.bio }}{% endif %}{% endcapture %}
+
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="en_GB">
+    <meta name="theme-color" content="#ffea00">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="{{ page.content_type | default: 'website' }}">
+    <meta property="og:url" content="{{ page_url }}">
+    <meta property="og:image" content="{{ page.ogimage | default: '/assets/ogimage-generic.png' | absolute_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    {% if page.content_type == 'article' %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    {% if page.last_modified_at %}<meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+    {% for tag in page.tags %}<meta property="article:tag" content="{{ tag }}">
+    {% endfor %}{% endif %}
+    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+
+    <meta name="fediverse:creator" content="@omgmog@indieweb.social">
+
+    <link rel="canonical" href="{{ page_url }}">
+    <link rel="webmention" href="https://webmention.io/omgmog.net/webmention">
+    <link rel="pingback" href="https://webmention.io/omgmog.net/xmlrpc">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
+    <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fjalla-one-v13-latin-regular.woff2' | relative_url }}" crossorigin>
+    <link rel="stylesheet" href="{{ 'assets/style.css' | relative_url }}">
+    <script>(function(){var t=localStorage.getItem('theme');if(t&&t!=='auto')document.documentElement.setAttribute('data-theme',t);})()</script>
+
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ '/feed.xml' | absolute_url }}">
+    {% if page.alternates %}
+        {% for alternate in page.alternates %}
+        <link rel="alternate" type="{{ alternate.type }}" title="{{ alternate.title }}" href="{{ alternate.href }}">
+        {% endfor %}
+    {% endif %}
+</head>
+<body>
+    <main{% if page.layout == 'post' %} class="h-entry"{% endif %}>
+        <aside class="sidebar sidebar-left">
+            {% include sidebar-header.html %}
+            {% include sidebar-nav.html %}
+        </aside>
+        <div class="page-content{% if page.layout == 'post' %} e-content{% endif %}">{{ content }}</div>
+        <aside class="sidebar sidebar-right">
+            {% include sidebar-theme-toggle.html %}
+            {% include sidebar-author.html %}
+            {% include sidebar-secondary-nav.html %}
+            {% include sidebar-post-nav.html %}
+            {% include sidebar-tags.html %}
+            {% include sidebar-webmentions.html %}
+            {% include sidebar-webring.html %}
+        </aside>
+    </main>
+    <footer class="main-footer">
+        <small>&copy; {{ site.posts.last.date | date: "%Y" }}&ndash;{{ site.time | date: "%Y" }} Max Glenister. Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.</small>
+        <small>Last built: {% if site.github.build_revision %}<a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}">{{ site.time | date_to_long_string }}</a>{% else %}{{ site.time | date_to_long_string }}{% endif %}</small>
+    </footer>
+    {% if content contains 'class="github-card"' %}<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>{% endif %}
+    {% include svg-icons.html %}
+    <script>
+    (function() {
+        var themes = ['auto', 'light', 'dark'];
+        var icons = { auto: 'icon-theme-auto', light: 'icon-sun', dark: 'icon-moon' };
+        var labels = { auto: 'auto', light: 'light', dark: 'dark' };
+        function getTheme() { return localStorage.getItem('theme') || 'auto'; }
+        function applyTheme(theme) {
+            var root = document.documentElement;
+            if (theme === 'auto') { root.removeAttribute('data-theme'); }
+            else { root.setAttribute('data-theme', theme); }
+            var btn = document.getElementById('theme-toggle');
+            if (!btn) return;
+            btn.querySelector('use').setAttribute('href', '#' + icons[theme]);
+            btn.setAttribute('title', 'Theme: ' + labels[theme]);
+        }
+        var btn = document.getElementById('theme-toggle');
+        if (btn) {
+            applyTheme(getTheme());
+            btn.addEventListener('click', function() {
+                var current = getTheme();
+                var next = themes[(themes.indexOf(current) + 1) % themes.length];
+                localStorage.setItem('theme', next);
+                applyTheme(next);
+            });
+        }
+    })();
+    </script>
+    {% if page.url == '/' or page.url == '/vr' %}{% include global/post-card-js.html %}{% endif %}
+    <script type="application/ld+json">
+    {% if page.layout == 'post' %}
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ page.title | escape }}",
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        {% if page.last_modified_at %}"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",{% endif %}
+        "url": "{{ page_url }}",
+        "description": "{{ description | escape }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ site.data.author.name }}",
+            "url": "{{ site.data.author.home }}",
+            "sameAs": [{% for url in site.data.author.urls %}"{{ url.link }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
+        }
+    }
+    {% else %}
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{ site.data.author.name }}",
+        "url": "{{ site.url }}",
+        "sameAs": [{% for url in site.data.author.urls %}"{{ url.link }}"{% unless forloop.last %},{% endunless %}{% endfor %}]
+    }
+    {% endif %}
+    </script>
+</body>
+</html>

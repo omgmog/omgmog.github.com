@@ -13,18 +13,18 @@
   {% assign _feed_items = _feed_items | concat: _static_comments %}
 {% endif %}
 {% assign _feed_items = _feed_items | sort: "sort_date" %}
-{% if post.archived_comments %}
+{% if page.archived_comments %}
   {% comment %}Put archived comments first as they're usually older{% endcomment %}
-  {% assign _feed_items = post.archived_comments | concat: _feed_items %}
+  {% assign _feed_items = page.archived_comments | concat: _feed_items %}
 {% endif %}
 <section id="interactions" class="interactions">
-  <div id="feed" data-display="{% if page.comments_issue or post.archived_comments %}block{% else %}none{% endif %}"{% if _feed_items.size > 0 or page.comments_issue %} style="display:block"{% else %} style="display:none"{% endif %}>
+  <div id="feed" data-display="{% if page.comments_issue or page.archived_comments %}block{% else %}none{% endif %}"{% if _feed_items.size > 0 or page.comments_issue %} style="display:block"{% else %} style="display:none"{% endif %}>
     {% include global/wide-h3.html text="Discussion" %}
-    <div class="items">{% include interactions/static-feed.html items=_feed_items %}</div>
+    <div class="items">{% include posts/webmention-static-feed.html items=_feed_items %}</div>
   </div>
   <div class="formatted-text">
     {% if page.comments_issue %}
-    <p class="comments-open" style="display: none;">Want to comment? You can do so via <a href="{{ site.github.issues_url | append:'/' | append:page.comments_issue }}">Github</a> or reply using <a href="/post/adding-support-for-webmentions/">Webmentions</a>.</p>
+    <p class="comments-open" style="display: none;">Want to comment? You can do so via <a href="https://github.com/omgmog/omgmog.github.com/issues/{{ page.comments_issue }}">Github</a> or reply using <a href="/post/adding-support-for-webmentions/">Webmentions</a>.</p>
     <p class="comments-closed" style="display: none;">Want to reply? I've <a href="/post/adding-support-for-webmentions/">hooked up Webmentions</a>, so give it a go!</p>
     <p style="display: none;" id="github-rate-limit">GitHub API rate limit exceeded. Comments available again at <span></span> <button id="github-retry-btn" type="button" title="Retry fetching comments now" class="reload" data-what="comments"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 80 80" width="20" height="20">
       <path d="M58.385 34.343V21.615L53.77 26.23C50.244 22.694 45.377 20.5 40 20.5c-10.752 0-19.5 8.748-19.5 19.5S29.248 59.5 40 59.5c7.205 0 13.496-3.939 16.871-9.767l-4.326-2.496C50.035 51.571 45.358 54.5 40 54.5c-7.995 0-14.5-6.505-14.5-14.5S32.005 25.5 40 25.5a14.42 14.42 0 0 1 10.239 4.261l-4.583 4.583h12.729z"/>
@@ -38,7 +38,6 @@
   </div>
 </section>
 
-<link rel="stylesheet" href="{{ '/assets/interactions.css' | relative_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}" />
 <script>
   const preRenderedWmIds = new Set([{% if page_mentions %}{% for mention in page_mentions %}{% if mention['wm-id'] %}{{ mention['wm-id'] }},{% endif %}{% endfor %}{% endif %}]);
   const preRenderedCommentIds = new Set([{% if _static_comments %}{% for comment in _static_comments %}{{ comment.id }},{% endfor %}{% endif %}]);
@@ -46,4 +45,4 @@
   const preRenderedIssueState = "{{ _static_issue.state }}";
 </script>
 <script src="{{ '/assets/marked.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/interactions.js' | relative_url }}{% if site.github %}?{{site.github.build_revision}}{% endif %}"></script>
+<script src="{{ '/assets/interactions.js' | relative_url }}"></script>

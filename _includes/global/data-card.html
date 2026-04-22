@@ -1,0 +1,17 @@
+{% assign item = include.item %}
+{% if item.img.first %}{% assign img = item.img.first %}{% else %}{% assign img = item.img %}{% endif %}
+<li class="post-card{% if img %} has-bg{% endif %}">
+  <a href="{{ item.slides | default: item.link | default: item.writeup }}" class="post-card-link">
+    <div class="post-card-bg">
+      {% if img %}
+      <picture class="post-card-bg-picture">
+        <img src="{{ img | prepend: '/images/' | relative_url }}" alt="" loading="lazy">
+      </picture>
+      {% endif %}
+      <div class="post-card-inner">
+        <div class="post-card-title">{{ item.title }}</div>
+        {% if item.summary %}<div class="post-card-summary">{{ item.summary }}</div>{% endif %}
+      </div>
+    </div>
+  </a>
+</li>

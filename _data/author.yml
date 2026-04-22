@@ -1,15 +1,25 @@
 name: "Max Glenister"
 bio: "Max Glenister is an interface designer and senior full-stack developer from Oxfordshire. He writes mostly about front-end development and technology."
 bio_rich: |
-  <a class="u-name" href="https://omgmog.net/" rel="me">Max Glenister</a> is an <a href="https://omgmog.net/" rel="me" class="u-url u-uid"><span class="p-job-title">Interface Designer and Senior Full-stack Developer</span> based in <span class="p-region">Oxfordshire</span></a>. For work he spends his time designing, validating and implementing user interfaces. For fun he tinkers with Virtual Reality, 3D printing, embedded systems, game development and many other things.
+  <a class="p-name" href="https://omgmog.net/" rel="me">Max Glenister</a> is an <a href="https://omgmog.net/" rel="me" class="u-url u-uid"><span class="p-job-title">Interface Designer and Senior Full-stack Developer</span> based in <span class="p-region">Oxfordshire</span></a>. For work he spends his time designing, validating and implementing user interfaces. For fun he tinkers with Virtual Reality, 3D printing, embedded systems, game development and many other things.
 home: "https://omgmog.net"
 avatar: "https://omgmog.net/faceicon.png"
 urls:
-  - label: Mastodon
-    link: https://indieweb.social/@omgmog
   - label: Github
     link: https://github.com/omgmog
+    icon: icon-github
+  - label: LinkedIn
+    link: https://linkedin.com/in/omgmog
+    icon: icon-linkedin
+  - label: Email
+    link: mailto:hello@maxglenister.co.uk
+    icon: icon-mail
+  - label: Mastodon
+    link: https://indieweb.social/@omgmog
+    icon: icon-mastodon
   - label: Reddit
     link: https://reddit.com/u/omgmog
+    icon: icon-reddit
   - label: Discord
     link: https://discordapp.com/users/omgmog#6206
+    icon: icon-discord

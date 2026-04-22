@@ -1,3 +1,4 @@
+{% assign post = include.post | default: post %}
 {% assign archived_count = post.archived_comments | size %}
 {% assign has_comments_issue = post.comments_issue | default: false %}
 {% assign _gh_issue_key = post.comments_issue | append: "" %}

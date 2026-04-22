@@ -2,9 +2,9 @@ sections:
   - title: Featured
     urls:
       - /post/archive-archaeology/
+      - /post/why-cant-i-read-this-picture-book/
       - /post/building-a-balatro-lite-game-with-vanilla-web-tech/
       - /post/why-vendor-prefixes-are-still-in-your-css/
-      - /post/why-cant-i-read-this-picture-book/
 
   - title: Handhelds &amp; Retro Gaming
     urls:

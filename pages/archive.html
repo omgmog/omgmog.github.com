@@ -1,9 +1,10 @@
 ---
-permalink: /archive/
 title: Archive
+permalink: /archive
+description: A full archive of every post on the blog, sorted by year.
 ---
 
-{% assign posts = site.posts | concat: site.cardboctober | sort:'date' | reverse %}
+{% assign posts = site.posts | concat: site.cardboctober | sort: 'date' | reverse %}
 {% assign previous_year = '' %}
 
 {% for post in posts %}

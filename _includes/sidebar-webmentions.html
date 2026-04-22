@@ -1,0 +1,49 @@
+{% if site.data.recent_webmentions.size > 0 %}
+  <div class="sidebar-webmentions">
+    {% include global/wide-h3.html text="Latest interactions" %}
+    <ul class="webmentions-list">
+    {% for mention in site.data.recent_webmentions %}
+      {% assign related_post = mention.related_post %}
+      {% if mention._source == "github" %}
+        {% if mention.author_name and mention.link_url %}
+          <li class="webmention github{% if mention.is_author %} is-author{% endif %}" data-source="github" data-platform="{{ mention.platform }}">
+        {% else %}
+          {% continue %}
+        {% endif %}
+      {% elsif mention["wm-target"] and mention.author_name %}
+        <li class="webmention {% if mention["wm-property"] == "in-reply-to" %}reply{% else %}mention{% endif %}{% if mention.is_author %} is-author{% endif %}" data-source="webmention" data-platform="{{ mention.platform }}">
+      {% else %}
+        {% continue %}
+      {% endif %}
+        <svg class="icon interaction-icon" aria-hidden="true"><use xlink:href="#{{ mention.icon }}"></use></svg>
+        <div class="mention-content">
+          {% if mention._source == "github" %}
+            <a href="{{ mention.link_url }}" class="author-link"><strong>{{ mention.author_name }}</strong></a>
+            commented on
+            <a href="{% if related_post %}{{ related_post.url | relative_url }}{% else %}{{ mention.link_url }}{% endif %}" class="post-link">
+              {% if related_post %}<em>{{ related_post.title }}</em>{% endif %}
+            </a>
+          {% else %}
+            {% assign is_shared = false %}
+            {% if mention.author_name == blank %}{% assign is_shared = true %}{% endif %}
+            {% if is_shared %}
+              <a href="{{ mention.post_url }}" class="post-link">
+                {% if related_post %}<em>{{ related_post.title }}</em>{% else %}<code>{{ mention.post_url }}</code>{% endif %}
+              </a>
+              shared on
+              <a href="{{ mention.link_url }}" class="author-link"><strong>{{ mention.author_name }}</strong></a>
+            {% else %}
+              <a href="{{ mention.link_url }}" class="author-link"><strong>{{ mention.author_name }}</strong></a>
+              {% if mention["wm-property"] == "in-reply-to" %}replied to{% else %}mentioned{% endif %}
+              <a href="{{ mention.post_url }}" class="post-link">
+                {% if related_post %}<em>{{ related_post.title }}</em>{% else %}<code>{{ mention.post_url }}</code>{% endif %}
+              </a>
+            {% endif %}
+          {% endif %}
+          <small class="date">{{ mention.date | date: "%b %d, %Y" }}</small>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+{% endif %}

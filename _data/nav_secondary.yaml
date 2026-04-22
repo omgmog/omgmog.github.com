@@ -1,0 +1,9 @@
+- label: Archive
+  url: /archive
+- label: Reviews
+  url: /reviews
+- label: VR
+  url: /vr
+- label: RSS Feed
+  url: /feed.xml
+  icon: icon-rss

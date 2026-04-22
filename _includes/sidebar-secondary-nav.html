@@ -1,0 +1,9 @@
+{% include global/wide-h3.html text="Blog sections" %}
+    
+<nav class="sidebar-secondary-nav">
+    <ul>
+        {% for item in site.data.nav_secondary %}
+            <li><a href="{{ item.url }}"{% if page.url == item.url or page.url contains item.url and item.url != '/' %} class="active"{% endif %}>{% if item.icon %}<svg aria-label="{{ item.label }}" focusable="false"><use href="#{{ item.icon }}"></use></svg>{% else %}{{ item.label }}{% endif %}</a></li>
+        {% endfor %}
+    </ul>
+</nav>

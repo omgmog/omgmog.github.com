@@ -1,0 +1,79 @@
+{% if page.layout == 'post' %}
+
+{% if page.previous or page.next %}
+{% include global/wide-h3.html text="Posts" %}
+<ul class="post-list sidebar-posts">
+    {% if page.previous %}
+    <li>
+        <div class="post-meta"><svg viewBox="0 0 24 24"><use href="#icon-move-left"/></svg> Previous post</div>
+        <h3 class="post-title">
+            <a href="{{ page.previous.url }}">
+                {{ page.previous.title }}
+            </a>
+        </h3>
+    </li>
+    {% endif %}
+    {% if page.next %}
+    <li>
+        <div class="post-meta">Next post <svg viewBox="0 0 24 24"><use href="#icon-move-right"/></svg></div>
+        <h3 class="post-title">
+            <a href="{{ page.next.url }}">
+                {{ page.next.title }}
+            </a>
+        </h3>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
+
+{% assign recent = site.posts | where_exp: "p", "p.url != page.url" | slice: 0, 5 %}
+{% assign recent_urls = "" | split: "" %}
+{% for p in recent %}{% assign recent_urls = recent_urls | push: p.url %}{% endfor %}
+
+{% include global/wide-h3.html text="Recent" %}
+<ul class="post-list sidebar-posts">
+    {% for post in recent %}
+    <li>
+        <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></div>
+        <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    </li>
+    {% endfor %}
+</ul>
+
+{% if page.tags %}
+{% assign related = "" | split: "" %}
+{% for post in site.posts %}
+    {% if post.url != page.url %}
+        {% for tag in page.tags %}
+            {% if tag != 'guide' and post.tags contains tag %}
+                {% assign related = related | push: post %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+{% assign related = related | uniq | sort: "date" | reverse %}
+{% assign related_filtered = "" | split: "" %}
+{% for post in related %}
+    {% unless recent_urls contains post.url %}
+        {% assign related_filtered = related_filtered | push: post %}
+    {% endunless %}
+{% endfor %}
+{% if related_filtered.size > 0 %}
+{% include global/wide-h3.html text="Related" %}
+<ul class="post-list sidebar-posts">
+    {% assign count = 0 %}
+    {% for post in related_filtered %}
+        {% if count < 4 %}
+        <li>
+            <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></div>
+            <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        </li>
+        {% assign count = count | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
+{% endif %}
+
+{% endif %}

@@ -74,7 +74,7 @@
         <img class="avatar" data-username="{{ _author_lower }}" loading="lazy">
       {% endif %}
       <header>
-        <h4><span class="name">{{ item.author }}</span> commented <time datetime="{{ item.date }}">{{ item.date }}</time></h4>
+        <h4><span class="name">{% if _is_author %}{{ _author_display_name }}{% else %}{{ item.author }}{% endif %}</span> commented <time datetime="{{ item.date }}">{{ item.date }}</time></h4>
       </header>
       <div>{{ item.content | markdownify }}</div>
     </article>

@@ -1,0 +1,9 @@
+<div class="p-author h-card post-author post-bio">
+    {% include global/wide-h3.html text="About the author" extra_classes="show-mobile" %}
+    <img src="{{ 'assets/max-2025.webp' | relative_url}}" alt="Photo of Max" class="u-photo author-photo">
+    <div class="card-inner">
+        {{ site.data.author.bio_rich | markdownify | replace: '<p>', '<p class="p-note">' }}
+
+        <div class="social-links">{% for url in site.data.author.urls %}<a href="{{ url.link }}" rel="nofollow me" class="u-url" title="{{ url.label }}">{% if url.icon %}<svg aria-hidden="true" focusable="false"><use href="#{{ url.icon }}"></use></svg>{% else %}{{ url.label }}{% endif %}</a>{% endfor %}</div>
+    </div>
+</div>

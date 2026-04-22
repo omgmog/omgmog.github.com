@@ -20,7 +20,7 @@
 - title: Cardboctober
   link: https://cardboctober.github.io
   writeup: https://omgmog.net/projects/vr/cardboctober/
-  description: "I spent every day of October 2016 creating VR content for Google Cardboard using JavaScript/WebGL/other WebAPIs and blogged about it."
+  description: "I spent October 2016 creating a new VR project every day for Google Cardboard, built with JavaScript, WebGL, and whatever web APIs seemed interesting at the time. I blogged the lot."
   img: [now/cardboctober-03.gif, now/cardboctober-10.gif]
   vr: true
 - title: UX of VR

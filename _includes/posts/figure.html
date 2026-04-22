@@ -10,10 +10,10 @@
 {%- capture webp_src -%}{{ src }}.webp{%- endcapture -%}
 {% if include.linkurl %}<a href="{{ include.linkurl }}">{% endif %}
 <picture>
-  {% if is_external == false and src_suffix != 'gif' %}
-  {% if jekyll.environment == 'production' %}<source srcset="{{ webp_src }}" type="image/webp">{% endif %}
-  {% endif %}
-  <img src="{{ src }}" loading="lazy" alt="{{ alt }}">
+{% if is_external == false and src_suffix != 'gif' %}
+{% if jekyll.environment == 'production' %}<source srcset="{{ webp_src }}" type="image/webp">{% endif %}
+{% endif %}
+<img src="{{ src }}" loading="lazy" alt="{{ alt }}">
 </picture>
 {% endif %}
 {% if include.linkurl %}</a>{% endif %}
@@ -29,21 +29,21 @@
 {%- else -%}{%- assign audio_type = "audio/wav" -%}
 {%- endif -%}
 <audio class="figure-content" controls preload="auto">
-  <source src="{{ src }}" type="{{ audio_type }}">
+<source src="{{ src }}" type="{{ audio_type }}">
 </audio>
 {% if include.transcript %}
 <div class="transcript">
-  {% assign turns = include.transcript | split: "||" %}
-  {% for turn in turns %}
-    {% assign turn_stripped = turn | strip %}
-    {% assign speaker = turn_stripped | split: ": " | first %}
-    {% assign text = turn_stripped | replace_first: speaker, "" | remove_first: ": " %}
-    {% if speaker == "Google" %}{% assign speaker_class = "speaker-google" %}{% elsif speaker == "Me" %}{% assign speaker_class = "speaker-me" %}{% else %}{% assign speaker_class = "speaker-caller" %}{% endif %}
-    <div class="transcript-turn {{ speaker_class }}">
-      <span class="transcript-text">{{ text }}</span>
-      <span class="speaker-label">{{ speaker }}</span>
-    </div>
-  {% endfor %}
+{% assign turns = include.transcript | split: "||" %}
+{% for turn in turns %}
+{% assign turn_stripped = turn | strip %}
+{% assign speaker = turn_stripped | split: ": " | first %}
+{% assign text = turn_stripped | replace_first: speaker, "" | remove_first: ": " %}
+{% if speaker == "Google" %}{% assign speaker_class = "speaker-google" %}{% elsif speaker == "Me" %}{% assign speaker_class = "speaker-me" %}{% else %}{% assign speaker_class = "speaker-caller" %}{% endif %}
+<div class="transcript-turn {{ speaker_class }}">
+<span class="transcript-text">{{ text }}</span>
+<span class="speaker-label">{{ speaker }}</span>
+</div>
+{% endfor %}
 </div>
 {% endif %}
 {% endif %}
@@ -51,7 +51,7 @@
 {% if include.src contains 'youtube.com' or include.src contains 'youtu.be' %}
 {% comment %}Youtube. Make it a lazy loader... {% endcomment %}
 <div data-src="{{ include.src|replace:'http:','' }}" class="figure-content placeholder" width="600" height="350">
-  <img src="https://img.youtube.com/vi/{{ include.src|split:'/'|last|split:'?'|first}}/0.jpg" loading="lazy"/>
+<img src="https://img.youtube.com/vi/{{ include.src|split:'/'|last|split:'?'|first}}/0.jpg" loading="lazy"/>
 </div>
 {% else %}
 {% comment %}Some other sort of iframe then... {% endcomment %}

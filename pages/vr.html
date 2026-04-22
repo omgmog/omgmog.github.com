@@ -1,55 +1,24 @@
 ---
 title: VR Stuff
-permalink: /vr/
-excerpt: Max Glenister has been immersing himself in Virtual Reality (VR) since 2015, building a comprehensive understanding of VR user experience (UX) and delivering insightful presentations on developing VR experiences with web technologies.
-ogimage: /images/vr/ogimage-vrstuff.png
+permalink: /vr
+description: VR experiments, talks, and projects built with web technologies since 2015.
 ---
-<p>
-  I've been working with Virtual Reality since 2015, focusing on VR development and UX design. I've given talks about building VR experiences with web technologies, and in 2016 I challenged myself to create a new VR project every day for a month.</p>
-<p>
-  I'm interested in what's possible with VR on the web, and I continue to experiment with new approaches to immersive experiences.
-</p>
-{% include global/wide-h3.html text="Current Setup" %}
-{% include posts/figure.html src="max.jpg" class="pull-right circle" %}
-<p>I'm currently using an Oculus Quest tethered to my PC for running VR experiences. Not much has changed since I last <a href="{{"/post/the-inevitable-oculus-quest-post/"}}">wrote about the Quest</a>.</p>
+<p>I've been building VR experiences since 2015, back when WebVR was still finding its feet. I've given talks on developing immersive web experiences, and in 2016 I set myself a challenge: create a new VR project every day for a month. <a href="/cardboctober">I actually did it.</a></p>
+
+<p>I'm interested in what's possible when you combine VR with web technologies. The accessibility, the immediacy, the weird experimental stuff you can't do anywhere else. This is where I document the experiments, talks, and projects that came out of that.</p>
 
 {% include global/wide-h3.html text="Talks" %}
-<ul class="thumbnail-list">
-  {% assign vr_talks = site.data.vr.talks | sort:"date" %}
-  {% for talk in vr_talks %}
-    <li>
-      <div class="thumbnail-card">
-        <div class="thumbnail-card-bg" style="background-image: url('/images/{{ talk.img }}')">
-          <div class="thumbnail-card-title">{{ talk.title }}</div>
-        </div>
-      </div>
-      <p>{{ talk.summary }}</p>
-      <div class="btns">
-        <a href="{{ talk.slides }}" class="btn">View Slides</a>
-        <!-- <a href="{{ talk.source }}" class="btn">View Source</a> -->
-        {% if talk.writeup %}<a href="{{ talk.writeup }}" class="btn">Read more</a>{% endif %}
-      </div>
-    </li>
+<ul class="post-grid">
+  {% for item in site.data.vr.talks %}
+    {% include global/data-card.html item=item %}
   {% endfor %}
 </ul>
 
 {% include global/wide-h3.html text="Projects" %}
-<ul class="thumbnail-list">
-  {% assign vr_projects = site.data.projects | where:"vr","true" %}
-  {% for project in vr_projects %}
-    <li>
-      {% assign _first_img = project.img | first %}
-      <div class="thumbnail-card">
-        <div class="thumbnail-card-bg" style="background-image: url('/images/{{ _first_img }}')">
-          <div class="thumbnail-card-title">{{ project.title }}</div>
-        </div>
-      </div>
-      <p>{{ project.description }}</p>
-      <div class="btns">
-        <a href="{{ project.link }}" class="btn">View Project</a>
-        {% if project.writeup %}<a href="{{ project.writeup }}" class="btn">Read more</a>{% endif %}
-      </div>
-    </li>
+{% assign vr_projects = site.data.projects | where: "vr", true %}
+<ul class="post-grid">
+  {% for item in vr_projects %}
+    {% include global/data-card.html item=item %}
   {% endfor %}
 </ul>
 
@@ -57,13 +26,13 @@ ogimage: /images/vr/ogimage-vrstuff.png
 <ul class="post-list">
   {% assign vr_posts = site.posts | where_exp:"post","post.tags contains 'vr'" %}
   {% for post in vr_posts %}
-  {% include global/post-list-item.html hide_years=true %}
+    {% include global/post-list-item.html hide_years=true %}
   {% endfor %}
 </ul>
 
 {% include global/wide-h3.html text="Cardboctober posts" %}
 <ul class="post-list">
-  {% for post in site.cardboctober  %}
-  {% include global/post-list-item.html hide_years=true hide_types=true %}
+  {% for post in site.cardboctober %}
+    {% include global/post-list-item.html hide_years=true hide_types=true %}
   {% endfor %}
 </ul>

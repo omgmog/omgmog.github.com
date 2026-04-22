@@ -1,16 +1,17 @@
 ---
-permalink: /
 title: Blog
+permalink: /
+layout: core
 ---
 
 {% assign first_section = site.data.homepage.sections | first %}
 {% include global/wide-h3.html text=first_section.title more_link=first_section.more_link %}
 {% include global/post-list-from-urls.html urls=first_section.urls %}
 
-{% include global/wide-h3.html text="Recent" more_link="/archive/" %}
+{% include global/wide-h3.html text="Recent posts" more_link="/archive" %}
 <ul class="post-list">
 {% for post in site.posts limit:5 %}
-  {% include global/post-list-item.html hide_types="true" hide_years="true" %}
+  {% include global/post-list-item.html hide_types=true hide_years=true %}
 {% endfor %}
 </ul>
 
@@ -19,10 +20,10 @@ title: Blog
   {% include global/post-list-from-urls.html urls=section.urls %}
 {% endfor %}
 
-{% include global/wide-h3.html text="Reviews" more_link="/reviews/" %}
+{% include global/wide-h3.html text="Recent reviews" more_link="/reviews" %}
 <ul class="post-list">
 {% assign all_reviews = site.posts | where_exp:"post","post.tags contains 'review'" %}
 {% for post in all_reviews limit:5 %}
-  {% include global/post-list-item.html hide_types="true" hide_years="true" hide_date="true" hide_excerpt="true" hide_counts="true" %}
+  {% include global/post-list-item.html hide_types=true hide_years=true hide_date=true hide_excerpt=true hide_counts=true %}
 {% endfor %}
 </ul>

@@ -1,0 +1,22 @@
+<nav>
+    <ul>
+        {% assign is_blog_section = false %}
+        {% if page.url contains "/post/" or page.url contains "/cardboctober" or page.url contains "/tags/" %}
+            {% assign is_blog_section = true %}
+        {% endif %}
+        {% for secondary in site.data.nav_secondary %}
+            {% if page.url == secondary.url %}
+                {% assign is_blog_section = true %}
+            {% endif %}
+        {% endfor %}
+        {% for item in site.data.nav %}
+            {% assign is_active = false %}
+            {% if item.url == page.url %}
+                {% assign is_active = true %}
+            {% elsif item.url == "/" and is_blog_section %}
+                {% assign is_active = true %}
+            {% endif %}
+            <li><a href="{{ item.url }}" {% if is_active %}class="active"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>

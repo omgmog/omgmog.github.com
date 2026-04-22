@@ -1,42 +1,70 @@
 ---
 layout: none
 ---
-
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="3.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:a="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 
   <xsl:output method="html" encoding="UTF-8"/>
   <xsl:template match="text()"/>
   <xsl:template match="a:feed">
-    <html>
+    <html lang="en-GB" data-theme="light">
       <head>
-        <title>
-          <xsl:value-of select="a:title"/>
-        </title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex, follow" />
+        <title><xsl:value-of select="a:title"/> — Feed</title>
         <link rel="stylesheet" href="{{ 'assets/style.css' | relative_url }}" />
         <style>
-        ul { margin: 0; padding: 0; list-style: none;}
+          body { display: block; padding: var(--gutter-size); max-width: 960px; margin: 0 auto; }
+          main { grid-template-columns: 1fr; margin: 0 auto;}
+          .page-content {  border-radius: 1rem;}
+          .feed-header { margin-bottom: var(--double-gutter-size); border-bottom: 1px solid rgba(0,0,0,.08); }
+          .feed-header h1 { font-size: var(--text-lg); margin-bottom: var(--half-gutter-size); }
+          .feed-notice { font-size: var(--text-sm); margin-bottom: var(--gutter-size); }
+          .feed-notice code { background: rgba(0,0,0,.08); padding: .1em .35em; border-radius: .3em; font-size: .9em; word-break: break-all; }
+          .post-list { padding: 0; list-style: none; margin: 0; }
+          .post-list li { padding: var(--gutter-size) 0 }
+          .post-summary { margin-top: var(--half-gutter-size); font-size: var(--text-sm); opacity: .7; }
         </style>
       </head>
       <body>
-        <h1>
-          <xsl:value-of select="a:title"/>
-        </h1>
-        <p>This is an RSS feed. You can subscribe to it with a feed reader. See the <a href="{{ '/archive/' | relative_url }}">full archive</a> for all posts.</p>
-        <ul>
-          <xsl:apply-templates/>
-        </ul>
+        <main>
+        <div class="page-content">
+          <div class="feed-header">
+            <h1><xsl:value-of select="a:title"/></h1>
+            <p class="feed-notice">
+              This is an Atom feed. Subscribe by copying the URL into your feed reader, or open the <a href="{{ '/archive/' | relative_url }}">full archive</a> to browse all posts.<br/>
+              <code><xsl:value-of select="a:link[@rel='self']/@href"/></code>
+            </p>
+          </div>
+          <ul class="post-list">
+            <xsl:apply-templates/>
+          </ul>
+          </div>
+        </main>
       </body>
     </html>
-  </xsl:template> 
+  </xsl:template>
   <xsl:template match="a:entry">
     <li>
-      <hr />
-      <b>
-      <xsl:element name="a"><xsl:attribute name="href"><xsl:value-of select="a:id"/></xsl:attribute><xsl:value-of select="a:title"/></xsl:element><br />
-      <xsl:value-of select="substring(a:updated, 1, 10)"/>
-      </b><br /><br />
-      <i><xsl:value-of select="a:summary"/></i>
+      <div class="post-meta">
+        <time><xsl:value-of select="substring(a:updated, 1, 10)"/></time>
+        <xsl:if test="a:category">
+          <span>
+            <xsl:for-each select="a:category">
+              <xsl:if test="position() > 1">, </xsl:if>
+              #<xsl:value-of select="@term"/>
+            </xsl:for-each>
+          </span>
+        </xsl:if>
+      </div>
+      <h3 class="post-title">
+        <xsl:element name="a">
+          <xsl:attribute name="href"><xsl:value-of select="a:id"/></xsl:attribute>
+          <xsl:value-of select="a:title"/>
+        </xsl:element>
+      </h3>
+      <p class="post-summary"><xsl:value-of select="a:summary"/></p>
     </li>
-  </xsl:template> 
+  </xsl:template>
 </xsl:stylesheet>

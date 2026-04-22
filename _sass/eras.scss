@@ -3,6 +3,10 @@
 
 // Base era fragment styles
 .era-fragment {
+  --gutter-inner-y: var(--gutter-size);
+  --gutter-inner-x: var(--gutter-size);
+
+  font-size: .6rem;
   border-radius: .4rem;
   margin: var(--gutter-inner-y) calc(var(--gutter-inner-x) * -1);
 

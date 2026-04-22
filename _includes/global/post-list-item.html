@@ -1,15 +1,12 @@
 {% assign post = include.post | default: post %}
 {% assign tag = include.tag | default: 'li' %}
 {% unless include.hide_years %}{% assign post_ym = post.date | date:"%Y%m" %}{% if previous_ym != post_ym %}<li><time class="dt-published" datetime="{{post.date | date: "%Y-%m"}}">{{ post.date | date:"%B %Y" }}</time></li>{% endif %}{% endunless %}{% assign previous_ym = post_ym %}
-<{{ tag}} id="post-{{ post.slug }}" class="post-list-item" data-post-url="{{ post.url | absolute_url }}">
-    {% if include.show_image %}{% capture _default_card_image %}/images/ogimage/{{ post.slug }}.png{% endcapture %}<a href="{{ post.url }}" class="post-card-image-link"><img class="post-card-image" src="{{ post.ogimage | default: _default_card_image }}" alt="{{ post.title }}"></a>{% endif %}
-    <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    {% unless post.archived %}{% unless include.hide_excerpt %}{% if post.excerpt %}{{post.excerpt | strip_html | truncatewords: 30 | markdownify }}{% endif %}{% endunless %}{% endunless %}
-    {% unless include.hide_types and include.hide_date and include.hide_counts %}
-    <div class="post-item-meta">
-      {% unless include.hide_types %}{% include global/types.html %}{% endunless %}
-      {% unless include.hide_date %}<time class="dt-published" datetime="{{post.date|date_to_xmlschema}}">{{ post.date|date_to_string}}</time>{% endunless %}
-      {% unless include.hide_counts %}{% include interactions/list-count.html %}{% endunless %}
-    </div>
-    {% endunless %}
-</{{ tag}}>
+<{{ tag }} id="post-{{ post.slug }}" class="post-list-item h-entry" data-post-url="{{ post.url | absolute_url }}">
+    {% unless include.hide_date or include.hide_counts %}<div class="post-meta">
+    {% unless include.hide_date %}<time class="dt-published" datetime="{{post.date|date_to_xmlschema}}">{{ post.date|date_to_string}}</time>{% endunless %}
+    {% unless include.hide_counts %}{% include interactions/count.html post=post %}{% endunless %}
+    </div>{% endunless %}
+    <h3 class="post-title"><a href="{{ post.url }}" class="u-url p-name">{{ post.title }}</a></h3>
+    {% unless post.archived %}{% unless include.hide_excerpt %}{% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>{% endif %}{% endunless %}{% endunless %}
+    {% unless include.hide_types %}{% if post.tags %}<div class="tags-list">{% for tag in post.tags %}<a href="/tags/{{ tag | slugify }}/" class="tag tag-{{tag|slugify}}">#{{ tag }}</a>{% endfor %}</div>{% endif %}{% endunless %}
+</{{ tag }}>

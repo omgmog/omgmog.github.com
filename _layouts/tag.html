@@ -1,0 +1,12 @@
+---
+layout: core
+---
+
+<h1>#{{ page.tag }}</h1>
+<ul class="post-list">
+{% for post in site.posts %}
+  {% if post.tags contains page.tag %}
+    {% include global/post-list-item.html hide_types=true hide_years=true %}
+  {% endif %}
+{% endfor %}
+</ul>

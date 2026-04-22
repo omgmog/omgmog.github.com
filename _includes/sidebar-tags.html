@@ -1,0 +1,6 @@
+{% include global/wide-h3.html text="All tags" %}
+
+{% assign tags = site.tags | sort_tags_by_count %}
+<p class="tags-list">
+{% for tag in tags %}<a href="/tags/{{ tag[0] | slugify }}/">#{{ tag[0] }} ({{ tag[1].size }})</a>{% endfor %}
+</p>
