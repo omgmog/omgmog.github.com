@@ -838,7 +838,19 @@
   "133": {
     "state": "open",
     "comments": [
-
+      {
+        "id": 4321227443,
+        "user": {
+          "login": "windsorschmidt",
+          "avatar_url": "https://avatars.githubusercontent.com/u/1273851?v=4",
+          "html_url": "https://github.com/windsorschmidt"
+        },
+        "body": "I was in a similar situation and your post helped me move to LineageOS. Thanks!",
+        "body_html": "<p dir=\"auto\">I was in a similar situation and your post helped me move to LineageOS. Thanks!</p>",
+        "created_at": "2026-04-26T04:11:20Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/133#issuecomment-4321227443",
+        "sort_date": "2026-04-26T04:11:20Z"
+      }
     ]
   },
   "134": {
@@ -980,6 +992,12 @@
         "html_url": "https://github.com/omgmog/omgmog.github.com/issues/146#issuecomment-4246765379",
         "sort_date": "2026-04-14T20:02:52Z"
       }
+    ]
+  },
+  "147": {
+    "state": "open",
+    "comments": [
+
     ]
   }
 }
