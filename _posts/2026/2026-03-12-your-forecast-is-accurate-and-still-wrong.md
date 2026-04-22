@@ -2,7 +2,6 @@
 title: "Your forecast is accurate and still wrong"
 comments_issue: 142
 tags: [ux, design]
-header_background: "/images/2026-03/background-weather.png"
 ---
 
 Icons work because they're fast. One glance, immediate meaning, no reading required. The tradeoff is that they compress complex information into a single symbol, and compression always drops something.

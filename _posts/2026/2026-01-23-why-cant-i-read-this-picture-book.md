@@ -5,7 +5,6 @@ tags: [ux, design]
 syndication:
   - https://social.omgmog.net/2026/postwhy-cant-i-read-this-picture-book
   - https://indieweb.social/@omgmog/115943950065114858
-header_background: "/images/2026-01/picture-books-header-alt.png"
 ---
 
 I've spent the last five years reading picture books with my kids at bedtime. Hundreds of them - and I'm still going, even as my eldest moves on to chapter books. One thing has consistently driven me mad: I often can't read the words.

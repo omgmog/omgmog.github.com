@@ -2,7 +2,6 @@
 title: Using emoji to bypass FRP on a decade-old tablet
 comments_issue: 135
 tags: [android, hardware, emoji]
-header_background: "/images/2026-02/background-emoji-frp.png"
 syndication:
   - https://social.omgmog.net/2026/postusing-emoji-to-bypass-frp-on-a-decade-old-tablet
   - https://indieweb.social/@omgmog/116057161151075247
