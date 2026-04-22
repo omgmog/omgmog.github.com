@@ -4840,5 +4840,54 @@
       },
       "sort_date": "2026-04-10T09:29:23Z"
     }
+  ],
+  "/post/finding-the-small-web-in-a-loud-internet/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/a-wild-new-blog-post-appears-postfinding-the-small-web-in-a-loud-internetalso",
+      "published": "2026-04-22T14:44:52+00:00",
+      "wm-received": "2026-04-22T14:44:54Z",
+      "wm-id": 1991697,
+      "wm-source": "https://social.omgmog.net/2026/a-wild-new-blog-post-appears-postfinding-the-small-web-in-a-loud-internetalso",
+      "wm-target": "https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116448892851029474"
+      ],
+      "content": {
+        "html": "<p>A wild new blog post appears!: <a href=\"https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/\" class=\"u-mention-of\">https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/</a></p>\n\n<p>Also just launched a new blog design, so hopefully that's all working 😅</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/\" class=\"u-mention-of\">https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/</a>",
+        "text": "A wild new blog post appears!: https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/\n\nAlso just launched a new blog design, so hopefully that's all working 😅\n\n        \n                        https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-04-22T14:44:52+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jan Boddez",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/a6f2023643cedeb0aa6195d6bcc57f3d4dc187529f64fab130f0f1311ddb6ef9.png",
+        "url": "https://indieweb.social/@janboddez"
+      },
+      "url": "https://indieweb.social/@omgmog/116448892851029474#favorited-by-91894",
+      "published": null,
+      "wm-received": "2026-04-22T16:18:48Z",
+      "wm-id": 1991719,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/116448892851029474/91894",
+      "wm-target": "https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/finding-the-small-web-in-a-loud-internet/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-04-22T16:18:48Z"
+    }
   ]
 }
