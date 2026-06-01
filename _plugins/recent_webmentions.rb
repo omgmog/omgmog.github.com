@@ -30,7 +30,8 @@ module Jekyll
         m["post_url"]     = post_url(m)
       end
 
-      site.data["recent_webmentions"] = recent
+      site.data["recent_webmentions"]      = recent
+      site.data["sidebar_webmentions_html"] = render_sidebar_html(recent)
     end
 
     private
@@ -142,6 +143,51 @@ module Jekyll
       else
         mention["published"] || mention["wm-received"] || ""
       end
+    end
+
+    def render_sidebar_html(recent)
+      recent.map { |m| render_mention(m) }.compact.join("\n")
+    end
+
+    def render_mention(mention)
+      source       = mention["_source"]
+      related_post = mention["related_post"]
+
+      if source == "github"
+        return nil unless mention["author_name"].to_s != "" && mention["link_url"].to_s != ""
+        css_class  = "webmention github#{" is-author" if mention["is_author"]}"
+        data_attrs = "data-source=\"github\" data-platform=\"#{mention["platform"]}\""
+      elsif mention["wm-target"] && mention["author_name"]
+        wm_type    = mention["wm-property"] == "in-reply-to" ? "reply" : "mention"
+        css_class  = "webmention #{wm_type}#{" is-author" if mention["is_author"]}"
+        data_attrs = "data-source=\"webmention\" data-platform=\"#{mention["platform"]}\""
+      else
+        return nil
+      end
+
+      post_href   = related_post ? related_post.url : mention["post_url"].to_s
+      post_label  = related_post ? "<em>#{related_post.data["title"]}</em>" : "<code>#{mention["post_url"]}</code>"
+      post_link   = "<a href=\"#{post_href}\" class=\"post-link\">#{post_label}</a>"
+      author_link = "<a href=\"#{mention["link_url"]}\" class=\"author-link\"><strong>#{mention["author_name"]}</strong></a>"
+      date_str    = begin; Date.parse(mention["date"]).strftime("%b %d, %Y"); rescue; mention["date"].to_s; end
+      date_html   = "<small class=\"date\">#{date_str}</small>"
+
+      content = if source == "github"
+        "#{author_link} commented on #{post_link}"
+      elsif mention["author_name"].to_s.empty?
+        "#{post_link} shared on #{author_link}"
+      elsif mention["wm-property"] == "in-reply-to"
+        "#{author_link} replied to #{post_link}"
+      else
+        "#{author_link} mentioned #{post_link}"
+      end
+
+      <<~HTML.chomp
+            <li class="#{css_class}" #{data_attrs}>
+              <svg class="icon interaction-icon" aria-hidden="true"><use xlink:href="##{mention["icon"]}"></use></svg>
+              <div class="mention-content">#{content} #{date_html}</div>
+            </li>
+      HTML
     end
 
     def post_url(mention)
