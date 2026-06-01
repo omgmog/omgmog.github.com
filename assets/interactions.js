@@ -72,6 +72,37 @@
                 url: ['url'],
                 domain: ['url']
             }
+        },
+        'like': {
+            template: getTemplateContent('tpl-like'),
+            element: '#likes',
+            attributes: {
+                author_name: ['author', 'name'],
+                author_avatar_url: ['author', 'photo'],
+                verb: 'liked',
+                domain: ['url']
+            }
+        },
+        'bookmark': {
+            template: getTemplateContent('tpl-bookmark'),
+            element: '#likes',
+            attributes: {
+                author_name: ['author', 'name'],
+                author_avatar_url: ['author', 'photo'],
+                verb: 'bookmarked',
+                domain: ['url']
+            }
+        },
+        'repost': {
+            template: getTemplateContent('tpl-repost'),
+            element: '#likes',
+            attributes: {
+                author_name: ['author', 'name'],
+                author_avatar_url: ['author', 'photo'],
+                verb: 'reposted',
+                url: ['url'],
+                domain: ['url']
+            }
         }
     };
 
@@ -351,46 +382,13 @@
         });
     };
 
-    module.makeFallbackAvatar = (text_value, img_element) => {
-        const p = 2;
-        const canvas = document.createElement('canvas');
-        canvas.style.imageRendering='pixelated';
-        canvas.width = 14;
-        canvas.height = 14;
-        const context = canvas.getContext('2d');
-
-        if (text_value) {
-            for (
-                let r = 1, i = 28 + text_value.length;
-                i--;
-            ) {
-                // xorshift32
-                (r ^= r << 13), (r ^= r >>> 17), (r ^= r << 5);
-                const X = i & 3,
-                Y = i >> 2;
-                if (i >= 28) {
-                    // seed state
-                    r += text_value.charCodeAt(i - 28);
-                    context.fillStyle = '#' + ((r >> 8) & 0xffffff).toString(16).padStart(6, '0');
-                } else {
-                    // draw pixel
-                    if (r >>> 29 > (X * X) / 3 + Y / 2) {
-                        context.fillRect(p * 3 + p * X, p * Y, p, p);
-                        context.fillRect(p * 3 - p * X, p * Y, p, p);
-                    }
-                }
-            }
-            img_element.src = canvas.toDataURL();
-            img_element.classList.add('fallback');
-        }
-    };
-
     module.checkForFailedAvatars = () => {
         document.querySelectorAll('#interactions .avatar').forEach(avatar => {
             if (!avatar.getAttribute('src')) {
-                module.makeFallbackAvatar(avatar.dataset.username, avatar);
+                window.makeFallbackAvatar(avatar.dataset.username, avatar);
             } else {
-                avatar.onerror = () => module.makeFallbackAvatar(avatar.dataset.username, avatar);
+                avatar.onerror = () => window.makeFallbackAvatar(avatar.dataset.username, avatar);
+                if (avatar.complete && avatar.naturalWidth === 0) window.makeFallbackAvatar(avatar.dataset.username, avatar);
             }
         });
     };
@@ -465,7 +463,7 @@
         // fallback avatars for archived comments
         archivedCommentsSection.querySelectorAll('.avatar').forEach(avatar => {
             if (avatar.dataset.username === 'max') return; // skip my avatar
-            module.makeFallbackAvatar(avatar.dataset.username, avatar)
+            window.makeFallbackAvatar(avatar.dataset.username, avatar);
         });
     };
 
@@ -653,6 +651,32 @@
             feedEl.style.display = 'block';
         });
 
+        // Render likes/bookmarks/reposts into #likes, deduped by author name
+        const likesEl = document.querySelector('#likes');
+        if (likesEl) {
+            const seenLikers = new Set(
+                Array.from(likesEl.querySelectorAll('.avatar[data-username]')).map(el => el.dataset.username).filter(Boolean)
+            );
+            const likesData = wmData.filter(m => {
+                if (m.type !== 'like' && m.type !== 'bookmark' && m.type !== 'repost') return false;
+                const key = m.author?.name || '';
+                if (!key || seenLikers.has(key)) return false;
+                seenLikers.add(key);
+                return true;
+            });
+            if (likesData.length > 0) {
+                const likesList = likesEl.querySelector('.items');
+                if (likesList) {
+                    likesData.forEach(item => {
+                        const type = TYPES[item.type];
+                        if (!type) return;
+                        likesList.innerHTML += module.renderThing(type, item);
+                    });
+                    likesEl.style.display = 'block';
+                }
+            }
+        }
+
         // Re-sort all feed children (static + dynamic) by datetime
         const itemsEl = feedEl.querySelector('.items');
         if (itemsEl) {
@@ -732,7 +756,7 @@
                         }));
                     const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
                     interactions.webmentions.data = interactions.webmentions.data.concat(
-                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !(preRenderedWmIds.has(m['wm-id']) && (m.type === 'reply' || m.type === 'mention')))
+                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !preRenderedWmIds.has(m['wm-id']))
                     );
                 });
                 module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
@@ -824,7 +848,7 @@
 
                     const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
                     interactions.webmentions.data = interactions.webmentions.data.concat(
-                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !(preRenderedWmIds.has(m['wm-id']) && (m.type === 'reply' || m.type === 'mention')))
+                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !preRenderedWmIds.has(m['wm-id']))
                     );
                 });
 
@@ -856,6 +880,9 @@
         let sections = []
         if (what.includes('comments') || what.includes('webmentions')) {
             sections.push('#feed');
+        }
+        if (what.includes('webmentions')) {
+            sections.push('#likes');
         }
         document.querySelectorAll(sections.join(',')).forEach(section => {
             const list = section.querySelector('.items');

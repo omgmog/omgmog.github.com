@@ -741,6 +741,21 @@ nav {
 }
 
 
+
+.likes-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-bottom: var(--gutter-size);
+
+    .avatar {
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 0.4rem;
+    }
+}
+
 // === POSTS ===
 
 .post-list {

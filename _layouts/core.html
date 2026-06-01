@@ -151,6 +151,7 @@
         } catch(e) {}
     });
     </script>{% endif %}
+    {% if content contains '<div data-src' %}<script src="{{ '/assets/lazy-iframe.js' | relative_url }}" defer></script>{% endif %}
     <script type="application/ld+json">{{ page.ld_json }}</script>
 </body>
 </html>

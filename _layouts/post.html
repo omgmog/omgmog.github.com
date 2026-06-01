@@ -48,23 +48,6 @@ layout: core
 
 {% if page.collection == 'cardboctober' %}{% include posts/cardboctober.html %}{% endif %}
 
-{% if content contains '<div data-src' %}
-<script>
-  document.querySelectorAll('.iframe [data-src]').forEach(el => {
-    el.addEventListener('click', () => {
-      const url = new URL(el.dataset.src, location.href);
-      url.searchParams.set('autoplay', '1');
-      const iframe = document.createElement('iframe');
-      iframe.className = el.className.replace('placeholder', '').trim();
-      iframe.width = el.clientWidth;
-      iframe.height = el.clientHeight;
-      iframe.allowFullscreen = true;
-      iframe.src = url.toString();
-      el.replaceWith(iframe);
-    });
-  });
-</script>
-{% endif %}
 
 {% include posts/webmention-templates.html %}
 {% include posts/webmention-stream.html %}

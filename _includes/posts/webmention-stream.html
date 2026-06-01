@@ -1,23 +1,28 @@
-{% assign page_mentions = site.data.webmentions[page.url] %}
-{% assign _issue_key = page.comments_issue | append: "" %}
-{% assign _static_issue = site.data.github_comments[_issue_key] %}
-{% assign _static_comments = _static_issue.comments %}
-{% assign _feed_items = "" | split: "" %}
-{% if page_mentions %}
-  {% assign _wm_replies_feed = page_mentions | where: "wm-property", "in-reply-to" %}
-  {% assign _wm_mentions_feed = page_mentions | where: "wm-property", "mention-of" %}
-  {% assign _wm_feed = _wm_replies_feed | concat: _wm_mentions_feed | sort: "wm-received" %}
-  {% assign _feed_items = _feed_items | concat: _wm_feed %}
-{% endif %}
-{% if _static_comments %}
-  {% assign _feed_items = _feed_items | concat: _static_comments %}
-{% endif %}
-{% assign _feed_items = _feed_items | sort: "sort_date" %}
+{% assign _feed_items = page._wm_merged_feed %}
 {% if page.archived_comments %}
-  {% comment %}Put archived comments first as they're usually older{% endcomment %}
   {% assign _feed_items = page.archived_comments | concat: _feed_items %}
 {% endif %}
 <section id="interactions" class="interactions">
+  {% assign _likes = page._wm_likes %}
+  <div id="likes"{% unless _likes and _likes.size > 0 %} style="display:none"{% endunless %}>
+    <h3 class="wide-h3">Interactions</h3>
+    <div class="items likes-list">
+      {% for item in _likes %}
+        {% assign _verb = "liked" %}
+        {% if item['wm-property'] == "bookmark-of" %}{% assign _verb = "bookmarked" %}{% endif %}
+        {% if item['wm-property'] == "repost-of" %}{% assign _verb = "reposted" %}{% endif %}
+        {% assign _mention_url = item.url | default: item['wm-source'] %}
+        {% assign _domain = _mention_url | split: "/" | slice: 2 %}
+        {% assign _author_name = item.author.name | default: _domain %}
+        {% assign _author_photo = item.author.photo %}
+        <div class="like static-item">
+          {% if item['wm-property'] == "repost-of" %}<a href="{{ _mention_url }}" rel="nofollow" title="{{ _verb }} by {{ _author_name }} on {{ _domain }}">{% endif %}
+          <img {% if _author_photo %}src="{{ _author_photo }}"{% endif %} alt="{{ _author_name }}'s avatar"{% unless item['wm-property'] == "repost-of" %} title="{{ _verb }} by {{ _author_name }} on {{ _domain }}"{% endunless %} class="avatar" data-username="{{ _author_name }}" loading="lazy">
+          {% if item['wm-property'] == "repost-of" %}</a>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
   <div id="feed" data-display="{% if page.comments_issue or page.archived_comments %}block{% else %}none{% endif %}"{% if _feed_items.size > 0 or page.comments_issue %} style="display:block"{% else %} style="display:none"{% endif %}>
     <h3 class="wide-h3">Discussion</h3>
     <div class="items">{% include posts/webmention-static-feed.html items=_feed_items %}</div>
@@ -39,10 +44,11 @@
 </section>
 
 <script>
-  const preRenderedWmIds = new Set([{% if page_mentions %}{% for mention in page_mentions %}{% if mention['wm-id'] %}{{ mention['wm-id'] }},{% endif %}{% endfor %}{% endif %}]);
-  const preRenderedCommentIds = new Set([{% if _static_comments %}{% for comment in _static_comments %}{{ comment.id }},{% endfor %}{% endif %}]);
-  const preRenderedWmConvCount = {{ _wm_feed.size | default: 0 }};
-  const preRenderedIssueState = "{{ _static_issue.state }}";
+  const preRenderedWmIds = new Set([{{ page._wm_js.wm_ids }}]);
+  const preRenderedCommentIds = new Set([{{ page._wm_js.gh_ids }}]);
+  const preRenderedWmConvCount = {{ page._wm_js.wm_conv | default: 0 }};
+  const preRenderedIssueState = "{{ page._wm_js.gh_state }}";
 </script>
 <script src="{{ '/assets/marked.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/avatar-fallback.js' | relative_url }}"></script>
 <script src="{{ '/assets/interactions.js' | relative_url }}"></script>

@@ -4,12 +4,12 @@
 {% assign _gh_issue_key = post.comments_issue | append: "" %}
 {% assign _gh_issue = site.data.github_comments[_gh_issue_key] %}
 {% assign _gh_comment_count = _gh_issue.comments | size %}
-{% assign _wm = site.data.webmentions[post.url] %}
-{% assign _wm_mentions  = _wm | where: "wm-property", "mention-of"  | size %}
-{% assign _wm_likes     = _wm | where: "wm-property", "like-of"     | size %}
-{% assign _wm_bookmarks = _wm | where: "wm-property", "bookmark-of" | size %}
-{% assign _wm_replies   = _wm | where: "wm-property", "in-reply-to" | size %}
-{% assign _wm_reposts   = _wm | where: "wm-property", "repost-of"   | size %}
+{% assign _wm_c = site.data.webmention_counts[post.url] %}
+{% assign _wm_mentions  = _wm_c.mentions  | default: 0 %}
+{% assign _wm_likes     = _wm_c.likes     | default: 0 %}
+{% assign _wm_bookmarks = _wm_c.bookmarks | default: 0 %}
+{% assign _wm_replies   = _wm_c.replies   | default: 0 %}
+{% assign _wm_reposts   = _wm_c.reposts   | default: 0 %}
 {% assign _has_wm = false %}
 {% if _wm_mentions > 0 or _wm_likes > 0 or _wm_bookmarks > 0 or _wm_replies > 0 or _wm_reposts > 0 %}{% assign _has_wm = true %}{% endif %}
 {% if include.post %}
