@@ -50,8 +50,17 @@
 {% if type contains "iframe" %}
 {% if include.src contains 'youtube.com' or include.src contains 'youtu.be' %}
 {% comment %}Youtube. Make it a lazy loader... {% endcomment %}
-<div data-src="{{ include.src|replace:'http:','' }}" class="figure-content placeholder" width="600" height="350">
-<img src="https://img.youtube.com/vi/{{ include.src|split:'/'|last|split:'?'|first}}/0.jpg" loading="lazy"/>
+{% if include.src contains '?v=' %}
+  {% assign _yt_id = include.src | split: '?v=' | last | split: '&' | first %}
+{% else %}
+  {% assign _yt_id = include.src | split: '/' | last | split: '?' | first %}
+{% endif %}
+{% assign _yt_embed = 'https://www.youtube.com/embed/' | append: _yt_id %}
+<div data-src="{{ _yt_embed }}" class="figure-content placeholder" width="600" height="350">
+<picture>
+  <source srcset="https://i.ytimg.com/vi_webp/{{ _yt_id }}/hqdefault.webp" type="image/webp">
+  <img src="https://i.ytimg.com/vi/{{ _yt_id }}/hqdefault.jpg" loading="lazy" alt="">
+</picture>
 </div>
 {% else %}
 {% comment %}Some other sort of iframe then... {% endcomment %}

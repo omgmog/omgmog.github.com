@@ -1,7 +1,7 @@
 {% if page.layout == 'post' %}
 
 {% if page.previous or page.next %}
-{% include global/wide-h3.html text="Posts" %}
+<h3 class="wide-h3">Posts</h3>
 <ul class="post-list sidebar-posts">
     {% if page.previous %}
     <li>
@@ -30,7 +30,7 @@
 {% assign recent_urls = "" | split: "" %}
 {% for p in recent %}{% assign recent_urls = recent_urls | push: p.url %}{% endfor %}
 
-{% include global/wide-h3.html text="Recent" %}
+<h3 class="wide-h3">Recent</h3>
 <ul class="post-list sidebar-posts">
     {% for post in recent %}
     <li>

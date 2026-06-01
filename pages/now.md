@@ -17,7 +17,7 @@ This is what I'm currently up to and what I'm using to do it. ([What's a now pag
 <p class="now-playing">🎵 {% if track.now_playing %}Now playing{% else %}Last listened to{% endif %} <a href="{{ track.url }}">{{ track.track }} — {{ track.artist }}</a>{% unless track.now_playing %} on {{ track.played_at | date_to_string }}{% endunless %}</p>
 {% endif %}
 
-{% include global/wide-h3.html text="Projects" %}
+<h3 class="wide-h3">Projects</h3>
 
 {% assign projects = site.data.projects | where:"now","true" %}
 {% if projects.size > 0 %}
@@ -31,11 +31,11 @@ This is what I'm currently up to and what I'm using to do it. ([What's a now pag
 Nothing notable on the go right now.
 {% endif %}
 
-{% include global/wide-h3.html text="Work" %}
+<h3 class="wide-h3">Work</h3>
 
 I'm currently working as a _Senior Full-stack Developer_ at [Consultant Connect](http://consultantconnect.org.uk/), working with Django, Angular, Sass and Dart/Flutter. My focus is on interface design and front-end development. You can find out more on [my portfolio](https://omgmog.net).
 
-{% include global/wide-h3.html text="Social media" %}
+<h3 class="wide-h3">Social media</h3>
 
 #### Mastodon
 {% include global/mastodon.html %}
@@ -47,7 +47,7 @@ I post on [social.omgmog.net](https://social.omgmog.net) and syndicate to the [{
 #### Discord
 I'm on {% include global/uurl.html what="Discord" %} occasionally. I've joined a handful of niche technology communities on there, but I don't participate much.
 
-{% include global/wide-h3.html text="Technology" %}
+<h3 class="wide-h3">Technology</h3>
 
 {% include posts/figure.html src="now/desk.jpg" %}{:.massive}
 

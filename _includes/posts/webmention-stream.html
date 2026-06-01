@@ -19,7 +19,7 @@
 {% endif %}
 <section id="interactions" class="interactions">
   <div id="feed" data-display="{% if page.comments_issue or page.archived_comments %}block{% else %}none{% endif %}"{% if _feed_items.size > 0 or page.comments_issue %} style="display:block"{% else %} style="display:none"{% endif %}>
-    {% include global/wide-h3.html text="Discussion" %}
+    <h3 class="wide-h3">Discussion</h3>
     <div class="items">{% include posts/webmention-static-feed.html items=_feed_items %}</div>
   </div>
   <div class="formatted-text">

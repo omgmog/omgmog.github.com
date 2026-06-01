@@ -1,5 +1,5 @@
 <div class="p-author h-card post-author post-bio">
-    {% include global/wide-h3.html text="About the author" extra_classes="show-mobile" %}
+    <h3 class="wide-h3 show-mobile">About the author</h3>
     <img src="{{ 'assets/max-2025.webp' | relative_url}}" alt="Photo of Max" class="u-photo author-photo">
     <div class="card-inner">
         {{ site.data.author.bio_rich | markdownify | replace: '<p>', '<p class="p-note">' }}

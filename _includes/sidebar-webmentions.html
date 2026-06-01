@@ -1,6 +1,6 @@
 {% if site.data.recent_webmentions.size > 0 %}
   <div class="sidebar-webmentions">
-    {% include global/wide-h3.html text="Latest interactions" %}
+    <h3 class="wide-h3">Latest interactions</h3>
     <ul class="webmentions-list">
     {% for mention in site.data.recent_webmentions %}
       {% assign related_post = mention.related_post %}

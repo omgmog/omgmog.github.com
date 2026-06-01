@@ -7,14 +7,14 @@ description: VR experiments, talks, and projects built with web technologies sin
 
 <p>I'm interested in what's possible when you combine VR with web technologies. The accessibility, the immediacy, the weird experimental stuff you can't do anywhere else. This is where I document the experiments, talks, and projects that came out of that.</p>
 
-{% include global/wide-h3.html text="Talks" %}
+<h3 class="wide-h3">Talks</h3>
 <ul class="post-grid">
   {% for item in site.data.vr.talks %}
     {% include global/data-card.html item=item %}
   {% endfor %}
 </ul>
 
-{% include global/wide-h3.html text="Projects" %}
+<h3 class="wide-h3">Projects</h3>
 {% assign vr_projects = site.data.projects | where: "vr", true %}
 <ul class="post-grid">
   {% for item in vr_projects %}
@@ -22,7 +22,7 @@ description: VR experiments, talks, and projects built with web technologies sin
   {% endfor %}
 </ul>
 
-{% include global/wide-h3.html text="Posts" %}
+<h3 class="wide-h3">Posts</h3>
 <ul class="post-list">
   {% assign vr_posts = site.posts | where_exp:"post","post.tags contains 'vr'" %}
   {% for post in vr_posts %}
@@ -30,7 +30,7 @@ description: VR experiments, talks, and projects built with web technologies sin
   {% endfor %}
 </ul>
 
-{% include global/wide-h3.html text="Cardboctober posts" %}
+<h3 class="wide-h3">Cardboctober posts</h3>
 <ul class="post-list">
   {% for post in site.cardboctober %}
     {% include global/post-list-item.html hide_years=true hide_types=true %}

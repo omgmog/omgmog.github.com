@@ -5,10 +5,10 @@ layout: core
 ---
 
 {% assign first_section = site.data.homepage.sections | first %}
-{% include global/wide-h3.html text=first_section.title more_link=first_section.more_link %}
+<h3 class="wide-h3">{{ first_section.title }}<a href="{{ first_section.more_link }}">View all</a></h3>
 {% include global/post-list-from-urls.html urls=first_section.urls %}
 
-{% include global/wide-h3.html text="Recent posts" more_link="/archive" %}
+<h3 class="wide-h3">Recent posts<a href="/archive">View all</a></h3>
 <ul class="post-list">
 {% for post in site.posts limit:5 %}
   {% include global/post-list-item.html hide_types=true hide_years=true %}
@@ -16,11 +16,11 @@ layout: core
 </ul>
 
 {% for section in site.data.homepage.sections offset:1 %}
-  {% include global/wide-h3.html text=section.title more_link=section.more_link %}
+  <h3 class="wide-h3">{{ section.title }}<a href="{{ section.more_link }}">View all</a></h3>
   {% include global/post-list-from-urls.html urls=section.urls %}
 {% endfor %}
 
-{% include global/wide-h3.html text="Recent reviews" more_link="/reviews" %}
+<h3 class="wide-h3">Recent reviews<a href="/reviews">View all</a></h3>
 <ul class="post-list">
 {% assign all_reviews = site.posts | where_exp:"post","post.tags contains 'review'" %}
 {% for post in all_reviews limit:5 %}
