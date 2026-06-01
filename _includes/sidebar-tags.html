@@ -1,6 +1,4 @@
-
-{% assign tags = site.tags | sort_tags_by_count %}
 <h3 class="wide-h3">All tags</h3>
 <p class="tags-list">
-{% for tag in tags %}<a href="/tags/{{ tag[0] | slugify }}/">#{{ tag[0] }} ({{ tag[1].size }})</a>{% endfor %}
+{% for tag in site.data.sorted_tags %}<a href="/tags/{{ tag.name | slugify }}/">#{{ tag.name }} ({{ tag.count }})</a>{% endfor %}
 </p>

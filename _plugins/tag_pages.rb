@@ -1,20 +1,4 @@
 module Jekyll
-  module TagFilters
-    def sort_tags_by_count(tags)
-      now = Time.now
-      tags.sort_by do |_name, posts|
-        most_recent = posts.map(&:date).max
-        years_since = (now - most_recent.to_time) / (365.25 * 86400)
-        recency_weight = 1.0 / (years_since + 1.0)
-        -(posts.length * recency_weight)
-      end
-    end
-  end
-end
-
-Liquid::Template.register_filter(Jekyll::TagFilters)
-
-module Jekyll
   class TagPageGenerator < Generator
     safe true
 
