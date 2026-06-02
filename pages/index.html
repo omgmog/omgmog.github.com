@@ -5,7 +5,7 @@ layout: core
 ---
 
 {% assign first_section = site.data.homepage.sections | first %}
-<h3 class="wide-h3">{{ first_section.title }}<a href="{{ first_section.more_link }}">View all</a></h3>
+<h3 class="wide-h3">{{ first_section.title }}</h3>
 {% include global/post-list-from-urls.html urls=first_section.urls %}
 
 <h3 class="wide-h3">Recent posts<a href="/archive">View all</a></h3>
@@ -16,7 +16,7 @@ layout: core
 </ul>
 
 {% for section in site.data.homepage.sections offset:1 %}
-  <h3 class="wide-h3">{{ section.title }}<a href="{{ section.more_link }}">View all</a></h3>
+  <h3 class="wide-h3">{{ section.title }}</h3>
   {% include global/post-list-from-urls.html urls=section.urls %}
 {% endfor %}
 
