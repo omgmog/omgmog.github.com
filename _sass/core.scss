@@ -1313,6 +1313,10 @@ figure {
                 font-style: italic;
                 bottom: 1rem;
                 font-size: var(--text-sm);
+                padding: 0 1rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
         }
     }
