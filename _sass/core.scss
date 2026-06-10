@@ -1194,6 +1194,19 @@ h3.post-title {
 
 // === FIGURES & MEDIA ===
 
+table {
+    width: 100%;
+    margin: var(--gutter-size) 0;
+
+    thead {
+        background-color: var(--color-brand-primary);
+    }
+    td {
+        padding: .25rem;
+    }
+
+}
+
 figure {
     margin: var(--gutter-size) 0;
     border-radius: .4rem;
