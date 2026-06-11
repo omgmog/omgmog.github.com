@@ -4889,5 +4889,131 @@
       "wm-private": false,
       "sort_date": "2026-04-22T16:18:48Z"
     }
+  ],
+  "/post/anbernic-rg-ds-review/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/anbernic-sent-me-an-rg-ds-to",
+      "published": "2026-06-11T08:15:21+00:00",
+      "wm-received": "2026-06-11T08:15:24Z",
+      "wm-id": 2001829,
+      "wm-source": "https://social.omgmog.net/2026/anbernic-sent-me-an-rg-ds-to",
+      "wm-target": "https://blog.omgmog.net/post/anbernic-rg-ds-review/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116730476793370054"
+      ],
+      "content": {
+        "html": "<p>Anbernic sent me an RG DS to review: my thoughts on the hardware, the firmware options, and whether it beats a DS Lite</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/anbernic-rg-ds-review/\" class=\"u-mention-of\">https://blog.omgmog.net/post/anbernic-rg-ds-review/</a>",
+        "text": "Anbernic sent me an RG DS to review: my thoughts on the hardware, the firmware options, and whether it beats a DS Lite\n\n        \n                        https://blog.omgmog.net/post/anbernic-rg-ds-review/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/anbernic-rg-ds-review/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-06-11T08:15:21+00:00"
+    }
+  ],
+  "/post/five-ais-predict-the-world-cup/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/new-blog-post-five-ais-predict-the",
+      "published": "2026-06-11T13:15:47+00:00",
+      "wm-received": "2026-06-11T13:15:52Z",
+      "wm-id": 2001860,
+      "wm-source": "https://social.omgmog.net/2026/new-blog-post-five-ais-predict-the",
+      "wm-target": "https://blog.omgmog.net/post/five-ais-predict-the-world-cup/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116731658107748029"
+      ],
+      "content": {
+        "html": "<p>New blog post: Five AIs predict the World Cup</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/five-ais-predict-the-world-cup/\" class=\"u-mention-of\">https://blog.omgmog.net/post/five-ais-predict-the-world-cup/</a>",
+        "text": "New blog post: Five AIs predict the World Cup\n\n        \n                        https://blog.omgmog.net/post/five-ais-predict-the-world-cup/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/five-ais-predict-the-world-cup/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-06-11T13:15:47+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dan Pope",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/fa2a89dc0503588a13c04a638549371590ca9c6c4a4f5a16179e8236747ac98b.jpg",
+        "url": "https://mastodon.me.uk/@danielthepope"
+      },
+      "url": "https://indieweb.social/@omgmog/116731658107748029#reblogged-by-109342574903479382",
+      "published": null,
+      "wm-received": "2026-06-13T10:01:27Z",
+      "wm-id": 2002239,
+      "wm-source": "https://brid.gy/repost/mastodon/@omgmog@indieweb.social/116731658107748029/109342574903479382",
+      "wm-target": "https://blog.omgmog.net/post/five-ais-predict-the-world-cup/",
+      "wm-protocol": "webmention",
+      "repost-of": "https://blog.omgmog.net/post/five-ais-predict-the-world-cup/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-06-13T10:01:27Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "James Scholes",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/7542030e9354b280271c6439f57b612ae8a937acb549bebb6b0f24326df7eb0f.jpg",
+        "url": "https://dragonscave.space/@jscholes"
+      },
+      "url": "https://indieweb.social/@omgmog/116731658107748029#favorited-by-109326727579071869",
+      "published": null,
+      "wm-received": "2026-06-13T13:50:00Z",
+      "wm-id": 2002254,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/116731658107748029/109326727579071869",
+      "wm-target": "https://blog.omgmog.net/post/five-ais-predict-the-world-cup/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/five-ais-predict-the-world-cup/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-06-13T13:50:00Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "iandick",
+        "photo": "",
+        "url": "https://www.iandick.com/author/iandick/"
+      },
+      "url": "https://www.iandick.com/weeknote-sunday-14th-june/",
+      "published": "2026-06-14T20:44:12+00:00",
+      "wm-received": "2026-06-14T20:45:08Z",
+      "wm-id": 2002633,
+      "wm-source": "https://www.iandick.com/weeknote-sunday-14th-june/",
+      "wm-target": "https://blog.omgmog.net/post/five-ais-predict-the-world-cup/",
+      "wm-protocol": "webmention",
+      "name": "Weeknote, Sunday 14th June",
+      "content": {
+        "html": "<p>A quite miserable fortnight thanks to a cold/flu/covid bug. Last few days have felt much better but my sleep has been all over the place which hasn’t helped. Thank goodness for the World Cup which against the odds has been an antidote to much of the negative days to day news</p>\n<span></span>\n\n\n<img width=\"1024\" height=\"230\" src=\"https://www.iandick.com/wp-content/uploads/2026/06/IMG_0192-1024x230.jpeg\" alt=\"\" />Scotland top of the table<p>It might not last so let’s remember this moment – Scotland top of their World Cup ground after the first round of games. It was a must win game and after a bright start and but for a few good moments Haiti had better chances and Scotland rode their luck…but they did it. What a fantastic result. </p>\n\n\n\n<p>Was also great to see the tartan army out in force and enjoying themselves. Social media was full of the Boston invasion and the noise when Flower of Scotland was sung at the game was one of those spine tingling moments. SO much emotion.</p>\n\n\n\n<p>While we didn’t play well let’s be honest – it doesn’t matter. Previous tournaments we’ve been unlucky losers, playing well and not getting results or just being pish. To get off to the best of starts is such a relief. Next up – Morocco which I think will be our toughest game. Let’s go.</p>\n\n\n\n<p>It was also great to see Lewis Hamilton win today for the first time in two years and also get his first win with Ferarri. Slight fortune with a safety car but likely he would have won anyway. Also a British 1,2,3 on the podium for the first time since the 1960’s. So good.</p>\n\n\n\n<p>WWDC 26 felt different. Shorter keynote, bit of a reset on things promised but not delivered and a tad more honest? The fixes/back to basics on Liquid Glass, especially on the Mac, are really welcome. So much of the Mac looks a mess thanks to the half baked decisions in Tahoe. Golden Gate is also a much better name. I switched off a bit during parental controls – they look well intended but also a reaction to legislation across the world rather than something Apple believed in deeply. If they did this should have been in place for years.</p>\n\n\n\n<p>Apple Intelligence was the biggest reset. What they showed looked similar to 2024 except this time they showed it actually working including the normal delays you expect when using a chatbot. If it lands as demo’d it will be a useful step forward for Apple who are massively behind on AI capabilites. It might even make Siri useful. The one major negative is that WatchOS 27 when it launches won’t support my gen 1 Apple Ultra. That feels unusually aggressive from Apple and is turning my watch into subscription hardware. Do not like.</p>\n\n\n\n<h3>🔗 Links</h3>\n\n\n\n<ul><li><a href=\"https://www.powerofusnewsletter.com/p/why-are-we-suckers-for-astrology\">Why are we suckers for Astrology, the Myers-Briggs, and other pseudoscientific personality tests?</a> – It’s all bullshit…but I’m an ISTJ. </li>\n\n\n\n<li><a href=\"https://www.bleepingcomputer.com/news/security/us-gov-asks-anthropic-to-ban-foreign-national-access-to-fable-mythos/\">US Gov asks Anthropic to ban ‘foreign national’ access to Fable, Mythos</a> – This is the threat that comes from America and China being at the forefront of AI. Europe, and UK needs to join them, needs to build its own sovereign AI capability. Whats stop America deciding a country or firm n longer has access based on his whim. </li>\n\n\n\n<li><a href=\"https://thenextweb.com/news/cosine-lumen-sovereign-uk-frontier-ai-model\">Cosine rallies UK giants to build a sovereign AI model</a> – important, BAE part of this too, but the money being invested doesn’t look enough when you compare to that of the large American models.</li>\n\n\n\n<li><a href=\"https://blog.omgmog.net/post/five-ais-predict-the-world-cup/\">Five AIs predict the World Cup</a> – be interesting to see where the predictions end up at the end of the tournament.</li>\n\n\n\n<li><a href=\"https://www.theverge.com/entertainment/947956/world-cup-2026-social-media?view_token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImFKZTJRamhXYXgiLCJwIjoiL2VudGVydGFpbm1lbnQvOTQ3OTU2L3dvcmxkLWN1cC0yMDI2LXNvY2lhbC1tZWRpYSIsImV4cCI6MTc4MTc2Mzg3NSwiaWF0IjoxNzgxMzMxODc1fQ.tZYA84702nOCzin1_FBsHNv2ALNtK5aeD9dIV1ze5-o&amp;utm_medium=gift-link\">With the World Cup looming, there’s still no clear replacement for sports Twitter</a> – if there’s one thing I miss about Twitter is the tweets when there was a large sporting or news event. Made you feel part of the crowd and despite looking, I’ve never found a good alternative.</li>\n\n\n\n<li><a href=\"https://www.theguardian.com/commentisfree/2026/jun/05/nigel-farage-speak-for-the-nation-jo-cox-sarah-everard-henry-nowak?CMP=Share_iOSApp_Other\">When does Nigel Farage speak for the nation. When it suits him</a> – Farage skewered yet again. Hateful person.</li>\n\n\n\n<li><a href=\"https://www.macstories.net/stories/wwdc-2026-between-seasons/\">WWDC 2026: Between Seasons</a> – a lovely post from Federico Viticci on his trip to Cupertino and some reflections. </li>\n\n\n\n<li><a href=\"https://bsky.app/profile/cabel.panic.com/post/3mnpxqsbwok2i\">Lego Batman Easter Egg</a> – This is joyous. Cabel Sasser took the code in the game, fired up a C64 image and well…just watch the video. So good.</li>\n</ul><p></p>\n<h3>Share this:</h3><ul><li><a href=\"https://www.iandick.com/weeknote-sunday-14th-june/?share=mastodon\">\n\t\t\t\t<span>Share on Mastodon (Opens in new window)</span>\n\t\t\t\t<span>Mastodon</span>\n\t\t\t</a></li><li><a href=\"https://www.iandick.com/weeknote-sunday-14th-june/?share=bluesky\">\n\t\t\t\t<span>Share on Bluesky (Opens in new window)</span>\n\t\t\t\t<span>Bluesky</span>\n\t\t\t</a></li><li><a href=\"mailto:?subject=%5BShared%20Post%5D%20Weeknote%2C%20Sunday%2014th%20June&amp;body=https%3A%2F%2Fwww.iandick.com%2Fweeknote-sunday-14th-june%2F&amp;share=email\">\n\t\t\t\t<span>Email a link to a friend (Opens in new window)</span>\n\t\t\t\t<span>Email</span>\n\t\t\t</a></li><li></li></ul><h3>Related Posts:</h3><ul><li><a href=\"https://www.iandick.com/48-hours-with-the-apple-watch/\"><span>48 Hours with the Apple Watch</span></a></li><li><a href=\"https://www.iandick.com/fitbit/\"><span>Fitbit</span></a></li><li><a href=\"https://www.iandick.com/the-unbelievable-xbox-one/\"><span>The Unbelievable Xbox One</span></a></li></ul>",
+        "text": "A quite miserable fortnight thanks to a cold/flu/covid bug. Last few days have felt much better but my sleep has been all over the place which hasn’t helped. Thank goodness for the World Cup which against the odds has been an antidote to much of the negative days to day news\n\n\n\nScotland top of the tableIt might not last so let’s remember this moment – Scotland top of their World Cup ground after the first round of games. It was a must win game and after a bright start and but for a few good moments Haiti had better chances and Scotland rode their luck…but they did it. What a fantastic result. \n\n\n\nWas also great to see the tartan army out in force and enjoying themselves. Social media was full of the Boston invasion and the noise when Flower of Scotland was sung at the game was one of those spine tingling moments. SO much emotion.\n\n\n\nWhile we didn’t play well let’s be honest – it doesn’t matter. Previous tournaments we’ve been unlucky losers, playing well and not getting results or just being pish. To get off to the best of starts is such a relief. Next up – Morocco which I think will be our toughest game. Let’s go.\n\n\n\nIt was also great to see Lewis Hamilton win today for the first time in two years and also get his first win with Ferarri. Slight fortune with a safety car but likely he would have won anyway. Also a British 1,2,3 on the podium for the first time since the 1960’s. So good.\n\n\n\nWWDC 26 felt different. Shorter keynote, bit of a reset on things promised but not delivered and a tad more honest? The fixes/back to basics on Liquid Glass, especially on the Mac, are really welcome. So much of the Mac looks a mess thanks to the half baked decisions in Tahoe. Golden Gate is also a much better name. I switched off a bit during parental controls – they look well intended but also a reaction to legislation across the world rather than something Apple believed in deeply. If they did this should have been in place for years.\n\n\n\nApple Intelligence was the biggest reset. What they showed looked similar to 2024 except this time they showed it actually working including the normal delays you expect when using a chatbot. If it lands as demo’d it will be a useful step forward for Apple who are massively behind on AI capabilites. It might even make Siri useful. The one major negative is that WatchOS 27 when it launches won’t support my gen 1 Apple Ultra. That feels unusually aggressive from Apple and is turning my watch into subscription hardware. Do not like.\n\n\n\n🔗 Links\n\n\n\nWhy are we suckers for Astrology, the Myers-Briggs, and other pseudoscientific personality tests? – It’s all bullshit…but I’m an ISTJ. \n\n\n\nUS Gov asks Anthropic to ban ‘foreign national’ access to Fable, Mythos – This is the threat that comes from America and China being at the forefront of AI. Europe, and UK needs to join them, needs to build its own sovereign AI capability. Whats stop America deciding a country or firm n longer has access based on his whim. \n\n\n\nCosine rallies UK giants to build a sovereign AI model – important, BAE part of this too, but the money being invested doesn’t look enough when you compare to that of the large American models.\n\n\n\nFive AIs predict the World Cup – be interesting to see where the predictions end up at the end of the tournament.\n\n\n\nWith the World Cup looming, there’s still no clear replacement for sports Twitter – if there’s one thing I miss about Twitter is the tweets when there was a large sporting or news event. Made you feel part of the crowd and despite looking, I’ve never found a good alternative.\n\n\n\nWhen does Nigel Farage speak for the nation. When it suits him – Farage skewered yet again. Hateful person.\n\n\n\nWWDC 2026: Between Seasons – a lovely post from Federico Viticci on his trip to Cupertino and some reflections. \n\n\n\nLego Batman Easter Egg – This is joyous. Cabel Sasser took the code in the game, fired up a C64 image and well…just watch the video. So good.\n\nShare this:\n\t\t\t\tShare on Mastodon (Opens in new window)\n\t\t\t\tMastodon\n\t\t\t\n\t\t\t\tShare on Bluesky (Opens in new window)\n\t\t\t\tBluesky\n\t\t\t\n\t\t\t\tEmail a link to a friend (Opens in new window)\n\t\t\t\tEmail\n\t\t\tRelated Posts:48 Hours with the Apple WatchFitbitThe Unbelievable Xbox One"
+      },
+      "mention-of": "https://blog.omgmog.net/post/five-ais-predict-the-world-cup/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://www.iandick.com/weeknote-sunday-14th-june/"
+      },
+      "sort_date": "2026-06-14T20:44:12+00:00"
+    }
   ]
 }
