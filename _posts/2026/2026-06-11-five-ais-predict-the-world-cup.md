@@ -50,18 +50,30 @@ The models, fixture by fixture, mostly disagree.
 
 | Model | Predicted draws (of 72) | Rate |
 |---|---|---|
-| GPT-5.5 | 21 | 29% |
-| Claude Sonnet 4.6 | 13 | 18% |
+| Ranking Bot | 10 | 14% |
 | Claude Fable 5 | 12 | 17% |
-| Gemini 3.5 Flash | 12 | 17% |
+| Claude Sonnet 4.6 | 13 | 18% |
+| GPT-5.5 | 21 | 29% |
 | Gemini 3.1 Pro | 10 | 14% |
+| Gemini 3.5 Flash | 12 | 17% |
+| Human 1.0 | 24 | 33% |
 {:.massive}
 
-World Cup group stages have historically run at roughly a quarter draws, before you factor in the new format's incentives. So most of the field is underweight. The odd part is that the models clearly know draws are common (1-1 is joint-top of all 360 predicted scorelines, level with 2-0), they just don't apply that base rate when you ask about matches one at a time.
+World Cup group stages have historically run at roughly a quarter draws, before you factor in the new format's incentives. So most of the models are underweight. The odd part is that the models clearly know draws are common (1-1 is joint-top of all 360 predicted scorelines, level with 2-0), they just don't apply that base rate when you ask about matches one at a time.
 
-The friend who spotted the draws problem declined to put his own picks on the record, which is fair enough, it's my website and his reputation.
+The friend who spotted the draws problem initially declined to put his own picks on the record, which seemed fair enough, it's my website and his reputation.
 
-The bot disagrees with all five models on exactly five fixtures, including calling Brazil v Morocco a draw (they are ranked 6th and 8th, two places apart) and backing Senegal to beat Norway outright. And in a twist I enjoyed, no AI model predicts fewer draws than the bot does: its 10 of 72 (14%) is only matched by Gemini 3.1 Pro at the bottom of the table. So if the draw-heavy theory is right, everyone on this page is wrong together, and the theory's author is watching from the safety of not having entered.
+The bot disagrees with all five models on exactly five fixtures, including calling Brazil v Morocco a draw (they are ranked 6th and 8th, two places apart) and backing Senegal to beat Norway outright. And in a twist I enjoyed, no AI model predicts fewer draws than the bot does: its 10 of 72 (14%) ties Gemini 3.1 Pro for the lowest rate on the page. So if the draw-heavy theory was right, everyone on this page was wrong together, and the theory's author was watching from the safety of not having entered.
+
+## Human Control
+
+Then he changed his mind. He's submitted picks of his own, filed as the seventh column on the page under Human 1.0. Unlike the other six, these didn't arrive before kickoff, they landed about twenty minutes after Mexico's opening match started, including his 2-1 for that very game. He says he wrote the whole lot down beforehand and was just slow sending them over. I believe him, so it's in and it counts, but it doesn't get the git-history alibi the rest of the page has.
+
+His picks are everything you could have wanted from a human control. 24 of his 72 picks are draws, 33%, clear of GPT-5.5's 29% and more than double the bot's 14%. He hasn't just stated the thesis, he's bet the coupon on it.
+
+His most-picked scoreline is 1-1 by a mile, and he's contributed the only 0-0 in the entire dataset (Uzbekistan v DR Congo), a scoreline five models and a lookup table collectively refused to imagine. He also owns the boldest pick on the page by a distance: New Zealand, ranked 85th, to beat Iran, ranked 21st, a 64-place upset that makes the Geminis' Ghana call look timid. Then there's South Korea winning at the Azteca, and France held to draws by both Senegal and Norway, which leaves his Group I in a three-way tie on five points.
+
+Where the models predicted a tournament without surprises, he's predicted one made of almost nothing else.
 
 ## What happens next
 
