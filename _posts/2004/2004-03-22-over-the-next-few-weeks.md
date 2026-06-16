@@ -1,6 +1,6 @@
 ---
 title: over the next few weeks…
-tags: [web-development]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

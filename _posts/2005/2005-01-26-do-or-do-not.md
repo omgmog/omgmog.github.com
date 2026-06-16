@@ -1,6 +1,6 @@
 ---
 title: "Do or Do Not. There is no \"Try\"."
-tags: [web-development]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

@@ -1,6 +1,6 @@
 ---
 title: "eugh - i'm bored."
-tags: [web-development]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

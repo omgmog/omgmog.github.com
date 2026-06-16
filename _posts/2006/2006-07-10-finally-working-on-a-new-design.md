@@ -1,6 +1,6 @@
 ---
 title: "Finally working on a new design"
-tags: [web-development]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

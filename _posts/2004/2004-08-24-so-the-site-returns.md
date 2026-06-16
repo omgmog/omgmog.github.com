@@ -1,6 +1,6 @@
 ---
 title: So the site returns
-tags: [web-development]
+tags: []
 archived: true
 archive: moglenstar.net
 ---

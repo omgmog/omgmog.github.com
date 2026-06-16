@@ -1,6 +1,6 @@
 ---
 title: I've been busy
-tags: [web-development, retro-gaming]
+tags: [retro-gaming]
 archived: true
 archive: omgmog.net
 ---

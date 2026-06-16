@@ -1,6 +1,6 @@
 ---
 title: A few more things
-tags: [web-development]
+tags: []
 archived: true
 archive: moglenstar.net
 ---
