@@ -588,7 +588,8 @@
     };
 
     module.renderFeed = () => {
-        const wmData = interactions.webmentions?.data?.children || interactions.webmentions?.data || [];
+        const wmData = (interactions.webmentions?.data?.children || interactions.webmentions?.data || [])
+            .filter(m => !preRenderedWmIds.has(m['wm-id']));
         const commentsData = interactions.comments?.data || [];
 
         // Merge feed items: wm replies+mentions + new github comments, sorted by date
