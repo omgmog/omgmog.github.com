@@ -6,6 +6,9 @@ gem "kramdown-parser-gfm"
 gem "webrick", "~> 1.8"  # Required for Ruby 3.0+
 gem "html_to_plain_text", "~> 1.0"  # For .txt format generation
 
+# LSI (related posts)
+gem "classifier-reborn"
+
 # Build enhancements
 gem "terser", "~> 1.2"  # JS minification
 gem "htmlcompressor", "~> 0.4.0"  # HTML minification
