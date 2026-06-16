@@ -5015,5 +5015,34 @@
       },
       "sort_date": "2026-06-14T20:44:12+00:00"
     }
+  ],
+  "/post/bbc-3d-world-cup-viewer/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/ive-posted-another-football-ish-post-postbbc-3d-world-cup-viewer",
+      "published": "2026-06-15T21:08:12+00:00",
+      "wm-received": "2026-06-15T21:08:15Z",
+      "wm-id": 2002895,
+      "wm-source": "https://social.omgmog.net/2026/ive-posted-another-football-ish-post-postbbc-3d-world-cup-viewer",
+      "wm-target": "https://blog.omgmog.net/post/bbc-3d-world-cup-viewer/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116756164983722385"
+      ],
+      "content": {
+        "html": "<p>I've posted another football-ish post: <a href=\"https://blog.omgmog.net/post/bbc-3d-world-cup-viewer/\" class=\"u-mention-of\">https://blog.omgmog.net/post/bbc-3d-world-cup-viewer/</a></p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/bbc-3d-world-cup-viewer/\" class=\"u-mention-of\">https://blog.omgmog.net/post/bbc-3d-world-cup-viewer/</a>",
+        "text": "I've posted another football-ish post: https://blog.omgmog.net/post/bbc-3d-world-cup-viewer/\n\n        \n                        https://blog.omgmog.net/post/bbc-3d-world-cup-viewer/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/bbc-3d-world-cup-viewer/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-06-15T21:08:12+00:00"
+    }
   ]
 }
