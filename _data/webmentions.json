@@ -1359,7 +1359,7 @@
       "author": {
         "type": "card",
         "name": "Max Glenister",
-        "photo": "https://webmention.io/avatar/social.omgmog.net/b4dc6ceb5e9ac4030bb6bdc007c4b6193808420c2a44f1561ed5f28182f65d36.png",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
         "url": "https://social.omgmog.net/profile/max"
       },
       "url": "https://social.omgmog.net/2022/-i-was-complaining-about-css-not",
@@ -1368,12 +1368,13 @@
       "wm-id": 1392088,
       "wm-source": "https://social.omgmog.net/2022/-i-was-complaining-about-css-not",
       "wm-target": "https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/",
+      "wm-protocol": "webmention",
       "syndication": [
         "https://indieweb.social/@omgmog/108250071839919233"
       ],
       "content": {
-        "html": "📣 I was complaining about <a href=\"https://social.omgmog.net/tag/CSS\" class=\"p-category\">#CSS</a> not handling DOM Text nodes when using :only-child yesterday, today I've solved the problem with a bit of <a href=\"https://social.omgmog.net/tag/JavaScript\" class=\"p-category\">#JavaScript</a>, some questionable DOM traversial, and a short blog post <a href=\"https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/\">https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/</a>",
-        "text": "📣 I was complaining about #CSS not handling DOM Text nodes when using :only-child yesterday, today I've solved the problem with a bit of #JavaScript, some questionable DOM traversial, and a short blog post https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/"
+        "html": "<p>📣 I was complaining about <a href=\"https://social.omgmog.net/tag/CSS\" class=\"p-category\">#CSS</a> not handling DOM Text nodes when using :only-child yesterday, today I've solved the problem with a bit of <a href=\"https://social.omgmog.net/tag/JavaScript\" class=\"p-category\">#JavaScript</a>, some questionable DOM traversial, and a short blog post <a href=\"https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/\" class=\"u-mention-of\">https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/</a></p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/\" class=\"u-mention-of\">https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/</a>",
+        "text": "📣 I was complaining about #CSS not handling DOM Text nodes when using :only-child yesterday, today I've solved the problem with a bit of #JavaScript, some questionable DOM traversial, and a short blog post https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/\n\n        \n                        https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/"
       },
       "in-reply-to": "https://blog.omgmog.net/post/a-bit-of-a-bodge-to-make-massive-emoji/",
       "wm-property": "in-reply-to",
@@ -3879,8 +3880,8 @@
         "https://indieweb.social/@omgmog/115632976758166558"
       ],
       "content": {
-        "html": "<p>I've been playing with a new Android gaming device this week, the Mangmi Air X.</p>\n\n<p><a href=\"https://blog.omgmog.net/post/review-mangmi-air-x/\">https://blog.omgmog.net/post/review-mangmi-air-x/</a></p>",
-        "text": "I've been playing with a new Android gaming device this week, the Mangmi Air X.\n\nhttps://blog.omgmog.net/post/review-mangmi-air-x/"
+        "html": "<p>I've been playing with a new Android gaming device this week, the Mangmi Air X.</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/review-mangmi-air-x/\" class=\"u-mention-of\">https://blog.omgmog.net/post/review-mangmi-air-x/</a>",
+        "text": "I've been playing with a new Android gaming device this week, the Mangmi Air X.\n\n        \n                        https://blog.omgmog.net/post/review-mangmi-air-x/"
       },
       "in-reply-to": "https://blog.omgmog.net/post/review-mangmi-air-x/",
       "wm-property": "in-reply-to",
@@ -5072,6 +5073,140 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-06-16T20:41:32+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Michael Harley",
+        "photo": "https://avatars.webmention.io/michaelharley.net/4c0ac5f9e8a633a9c91b86912ca00c944a93fdc5bc02b93754a1323d22f489a2.svg",
+        "url": "https://michaelharley.net"
+      },
+      "url": "https://michaelharley.net/posts/2026/06/17/re-how-i-take-my-coffee-max-glenister/",
+      "published": "2026-06-17T11:44:09+00:00",
+      "wm-received": "2026-06-17T11:45:23Z",
+      "wm-id": 2003218,
+      "wm-source": "https://michaelharley.net/posts/2026/06/17/re-how-i-take-my-coffee-max-glenister/",
+      "wm-target": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
+      "wm-protocol": "webmention",
+      "name": "Re: How I take my coffee — Max Glenister",
+      "content": {
+        "html": "<p>Nicely done! Also, love the layout on your site.</p>",
+        "text": "Nicely done! Also, love the layout on your site."
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://michaelharley.net/posts/2026/06/17/re-how-i-take-my-coffee-max-glenister/"
+      },
+      "sort_date": "2026-06-17T11:44:09+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Michael Harley",
+        "photo": "",
+        "url": "https://michaelharley.net"
+      },
+      "url": "https://michaelharley.net/likes/2026/06/17/how-i-take-my-coffee-max-glenister/",
+      "published": "2026-06-17T11:43:48",
+      "wm-received": "2026-06-17T11:45:33Z",
+      "wm-id": 2003219,
+      "wm-source": "https://michaelharley.net/likes/2026/06/17/how-i-take-my-coffee-max-glenister/",
+      "wm-target": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
+      "wm-protocol": "webmention",
+      "photo": [
+        "https://michaelharley.net/assets/images/avatar.svg"
+      ],
+      "like-of": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://michaelharley.net/likes/2026/06/17/how-i-take-my-coffee-max-glenister/"
+      },
+      "sort_date": "2026-06-17T11:43:48"
+    }
+  ],
+  "/post/sending-webmentions-on-deploy": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Beto Dealmeida",
+        "photo": "https://avatars.webmention.io/robida.net/78a56a83f566d01b976bd19a7c49a5db5cac26bbe095602dd786c7a5709e54b3.jpg",
+        "url": "https://robida.net/"
+      },
+      "url": "https://robida.net/entries/2026/06/17/like-1",
+      "published": "2026-06-17T08:04:00-04:00",
+      "wm-received": "2026-06-17T12:04:36Z",
+      "wm-id": 2003225,
+      "wm-source": "https://robida.net/entries/2026/06/17/like-1",
+      "wm-target": "https://blog.omgmog.net/post/sending-webmentions-on-deploy",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/sending-webmentions-on-deploy",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://robida.net/entries/2026/06/17/like-1"
+      },
+      "sort_date": "2026-06-17T08:04:00-04:00"
+    }
+  ],
+  "/post/sending-webmentions-on-deploy/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Michael Harley",
+        "photo": "",
+        "url": "https://michaelharley.net"
+      },
+      "url": "https://michaelharley.net/likes/2026/06/17/sending-webmentions-on-deploy/",
+      "published": "2026-06-17T00:00:00",
+      "wm-received": "2026-06-17T12:16:46Z",
+      "wm-id": 2003227,
+      "wm-source": "https://michaelharley.net/likes/2026/06/17/sending-webmentions-on-deploy/",
+      "wm-target": "https://blog.omgmog.net/post/sending-webmentions-on-deploy/",
+      "wm-protocol": "webmention",
+      "photo": [
+        "https://michaelharley.net/assets/images/avatar.svg"
+      ],
+      "like-of": "https://blog.omgmog.net/post/sending-webmentions-on-deploy/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://michaelharley.net/likes/2026/06/17/sending-webmentions-on-deploy/"
+      },
+      "sort_date": "2026-06-17T00:00:00"
+    }
+  ],
+  "/post/downgrading-the-oneplus-7-pro-for-lineageos/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "dcdirtrider",
+        "photo": "https://avatars.webmention.io/styles.redditmedia.com/510e8650e69dfcec7d60c9bf3a0bd8d841096516365dd545de6171b0ab91c1b7.png",
+        "url": "https://reddit.com/user/dcdirtrider/"
+      },
+      "url": "https://reddit.com/r/LineageOS/comments/1u8x7vc/getting_the_installation_instructions_changed_on/",
+      "published": "2026-06-18T05:09:52+00:00",
+      "wm-received": "2026-06-18T16:21:13Z",
+      "wm-id": 2003553,
+      "wm-source": "https://brid.gy/post/reddit/omgmog/1u8x7vc",
+      "wm-target": "https://blog.omgmog.net/post/downgrading-the-oneplus-7-pro-for-lineageos/",
+      "wm-protocol": "webmention",
+      "name": "Getting the installation instructions changed on the Wiki (OnePlus 7 Pro).",
+      "content": {
+        "html": "Is there a way to request changes to a Lineage OS installation guide?\n\nI spent about 6hrs last night attempting to follow the instructions to install lineage OS (several times) on an old OnePlus 7 Pro. The instructions claim that this phone needs to be updated to the most recent OEM Android 12 firmware before attempting to install Lineage. The problem is, on this specific phone, updating to Android 12 locks the bootloader. And if you're like me, and you're using a T-Mobile version of this phone, reverting back to Android 11 takes about 60-90 extra minutes because (from what I can tell) the only working OEM MSM image is Android 9. So you have to download/install about 2-3 different updates to get back to Android 11. \n\n  \n[https://wiki.lineageos.org/devices/guacamole/install/variant1/](https://wiki.lineageos.org/devices/guacamole/install/variant1/)\n\n  \nLuckily, even though the instructions state Android 12 is required, starting from Android 11 works like a charm. And starting from Android 11 is the only option, since the Android 12 update locks the bootloader. Here's an article from another guy with the exact same issue.\n\n  \n[https://blog.omgmog.net/post/downgrading-the-oneplus-7-pro-for-lineageos/](https://blog.omgmog.net/post/downgrading-the-oneplus-7-pro-for-lineageos/)\n\n\nBookmark: <a title=\"reddit.com/r/LineageOS/comments/1u8x7vc/getting_the_installation_instructions_changed_on\" class=\"u-bookmark-of\" href=\"https://www.reddit.com/r/LineageOS/comments/1u8x7vc/getting_the_installation_instructions_changed_on/\">reddit.com/r/LineageOS/co...</a>\n<a href=\"https://blog.omgmog.net/post/downgrading-the-oneplus-7-pro-for-lineageos/\">https://blog.omgmog.net/post/downgrading-the-oneplus-7-pro-for-lineageos/</a>\n<a href=\"https://wiki.lineageos.org/devices/guacamole/install/variant1/\">https://wiki.lineageos.org/devices/guacamole/install/variant1/</a>",
+        "text": "Is there a way to request changes to a Lineage OS installation guide?\n\nI spent about 6hrs last night attempting to follow the instructions to install lineage OS (several times) on an old OnePlus 7 Pro. The instructions claim that this phone needs to be updated to the most recent OEM Android 12 firmware before attempting to install Lineage. The problem is, on this specific phone, updating to Android 12 locks the bootloader. And if you're like me, and you're using a T-Mobile version of this phone, reverting back to Android 11 takes about 60-90 extra minutes because (from what I can tell) the only working OEM MSM image is Android 9. So you have to download/install about 2-3 different updates to get back to Android 11. \n\n  \n[https://wiki.lineageos.org/devices/guacamole/install/variant1/](https://wiki.lineageos.org/devices/guacamole/install/variant1/)\n\n  \nLuckily, even though the instructions state Android 12 is required, starting from Android 11 works like a charm. And starting from Android 11 is the only option, since the Android 12 update locks the bootloader. Here's an article from another guy with the exact same issue.\n\n  \n[https://blog.omgmog.net/post/downgrading-the-oneplus-7-pro-for-lineageos/](https://blog.omgmog.net/post/downgrading-the-oneplus-7-pro-for-lineageos/)\n\n\nBookmark: reddit.com/r/LineageOS/co...\nhttps://blog.omgmog.net/post/downgrading-the-oneplus-7-pro-for-lineageos/\nhttps://wiki.lineageos.org/devices/guacamole/install/variant1/"
+      },
+      "bookmark-of": "https://blog.omgmog.net/post/downgrading-the-oneplus-7-pro-for-lineageos/",
+      "wm-property": "bookmark-of",
+      "wm-private": false,
+      "sort_date": "2026-06-18T05:09:52+00:00"
     }
   ]
 }
