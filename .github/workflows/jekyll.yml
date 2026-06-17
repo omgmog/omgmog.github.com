@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -34,11 +34,11 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v6
 
       - name: Restore image cache
         id: image-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: _site/images/**/*.webp
           key: images-${{ hashFiles('images/**/*') }}
@@ -61,7 +61,7 @@ jobs:
         run: bundle exec ruby scripts/optimize_images.rb _site
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
 
   deploy:
     environment:
@@ -79,7 +79,7 @@ jobs:
     needs: deploy
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
