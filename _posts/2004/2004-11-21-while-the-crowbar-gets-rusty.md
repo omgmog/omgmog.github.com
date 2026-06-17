@@ -1,6 +1,6 @@
 ---
 title: "while the crowbar gets rusty.."
-tags: []
+tags: [gaming, life]
 archived: true
 archive: moglenstar.net
 ---

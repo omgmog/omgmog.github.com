@@ -1,7 +1,7 @@
 ---
 comments_issue: 36
 title: Dealing with crappy memory management in OS X
-tags: [mac-os-x, guide]
+tags: [macos, guide]
 archived: true
 archived_comments:
 - author: "Alex"

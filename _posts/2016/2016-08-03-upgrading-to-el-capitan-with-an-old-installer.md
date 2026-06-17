@@ -1,7 +1,7 @@
 ---
 title: Upgrading to El Capitan with an old installer
 comments_issue: 72
-tags: [mac-os-x, guide]
+tags: [macos, guide]
 archived: true
 ---
 

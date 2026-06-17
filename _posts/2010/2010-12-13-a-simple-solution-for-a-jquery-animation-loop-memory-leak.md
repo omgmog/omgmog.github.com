@@ -1,6 +1,6 @@
 ---
 title: "A simple solution for a jQuery animation loop memory leak"
-tags: [programming, guide]
+tags: [jquery, programming, guide]
 archived: true
 archive: blog.omgmog.net
 ---

@@ -1,7 +1,7 @@
 ---
 comments_issue: 82
 title: Installing Mac OS X Snow Leopard on the Dell Inspiron 1525
-tags: [hackintosh, mac-os-x, guide]
+tags: [hackintosh, macos, guide]
 archived: true
 archived_comments:
 - author: "griftopia"

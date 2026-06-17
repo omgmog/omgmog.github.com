@@ -1,7 +1,7 @@
 ---
 comments_issue: 22
 title: Bash script to install all major versions of Firefox on OS X
-tags: [programming, software, mac-os-x]
+tags: [programming, software, macos]
 archived: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 comments_issue: 69
 title: Upgrading my Macbook Pro
-tags: [mac-os-x, hardware]
+tags: [macos, hardware, guide]
 archived: true
 archived_comments:
 - author: "Speedy Gonzales"

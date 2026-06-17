@@ -1,6 +1,6 @@
 ---
 title: "Google Plus userstyle for Reddit"
-tags: [programming, reddit]
+tags: [userscripts, reddit, google]
 archived: true
 archive: blog.omgmog.net
 ---

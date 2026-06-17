@@ -1,6 +1,6 @@
 ---
 title: "Review: The Smashing Book #2"
-tags: [review]
+tags: [review, design, web-development]
 archived: true
 archive: blog.omgmog.net
 archived_comments:

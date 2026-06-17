@@ -1,6 +1,6 @@
 ---
 title: over the next few weeks…
-tags: []
+tags: [life, site-related]
 archived: true
 archive: moglenstar.net
 ---

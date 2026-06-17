@@ -1,7 +1,7 @@
 ---
 comments_issue: 18
 title: Building JavaScript arrays from HTML using regular expressions
-tags: [programming]
+tags: [programming, jquery]
 archived: true
 ---
 

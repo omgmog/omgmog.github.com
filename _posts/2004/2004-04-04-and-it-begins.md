@@ -1,6 +1,6 @@
 ---
 title: and it begins
-tags: []
+tags: [life, linux]
 archived: true
 archive: moglenstar.net
 ---

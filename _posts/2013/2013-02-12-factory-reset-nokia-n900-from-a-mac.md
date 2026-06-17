@@ -1,7 +1,7 @@
 ---
 comments_issue: 16
 title: Factory resetting a Nokia N900 from Mac OS X Mountain Lion
-tags: [mac-os-x, guide, hardware]
+tags: [macos, guide, hardware]
 archived: true
 archived_comments:
 - author: "radambe"

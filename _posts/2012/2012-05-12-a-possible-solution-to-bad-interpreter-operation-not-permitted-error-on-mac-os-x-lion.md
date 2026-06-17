@@ -1,7 +1,7 @@
 ---
 comments_issue: 49
 title: "A possible solution to 'bad interpreter: operation not permitted' error on Mac OS X Lion"
-tags: [mac-os-x, guide]
+tags: [macos, guide]
 archived: true
 archived_comments:
 - author: "Jake"

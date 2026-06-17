@@ -1,6 +1,6 @@
 ---
 title: "Site Changes"
-tags: []
+tags: [site-related]
 archived: true
 archive: moglenstar.net
 ---

@@ -1,6 +1,6 @@
 ---
 title: Installing Chrome OS on a Late 2009 MacBook
-tags: [guide, chromebook]
+tags: [guide, chromebook, macos, hardware]
 comments_issue: 115
 syndication:
   - https://indieweb.social/@omgmog/108214705297975912

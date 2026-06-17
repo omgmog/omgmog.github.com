@@ -1,6 +1,6 @@
 ---
 title: "Grooveshark view-modes userscript for Fluidapp/Chrome/GreaseMonkey"
-tags: [programming, guide]
+tags: [userscripts, software, guide]
 archived: true
 archive: blog.omgmog.net
 archived_comments:

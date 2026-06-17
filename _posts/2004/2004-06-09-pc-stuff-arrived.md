@@ -1,6 +1,6 @@
 ---
 title: "Well."
-tags: []
+tags: [life, hardware]
 archived: true
 archive: moglenstar.net
 ---

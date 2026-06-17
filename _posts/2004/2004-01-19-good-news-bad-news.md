@@ -1,6 +1,6 @@
 ---
 title: Good news bad news
-tags: [project]
+tags: [life, hardware]
 archived: true
 archive: moglenstar.net
 ---

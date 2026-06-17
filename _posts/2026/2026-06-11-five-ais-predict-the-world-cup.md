@@ -1,7 +1,7 @@
 ---
 title: Five AIs predict the World Cup
 comments_issue: 150
-tags: [ai, llm, world-cup, jekyll]
+tags: [ai, llm, world-cup]
 ---
 
 The World Cup rolls around every four years, and with it the office sweepstake, the ritual where everyone gets handed a team at random and pretends to care how it does. I have no interest in football (I had to read [a beginner's guide to how it all works](https://www.theguardian.com/football/2026/jun/09/a-very-beginners-guide-to-the-world-cup-how-does-it-work-and-the-players-to-look-out-for) just to follow what's going on), and I definitely don't know enough to make an informed prediction of my own. So I thought I'd hand the job to five AI models instead, get them to commit their predictions in public, and keep score.

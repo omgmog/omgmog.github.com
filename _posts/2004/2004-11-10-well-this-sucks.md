@@ -1,6 +1,6 @@
 ---
 title: "well, this sucks."
-tags: []
+tags: [life, web-development]
 archived: true
 archive: moglenstar.net
 ---

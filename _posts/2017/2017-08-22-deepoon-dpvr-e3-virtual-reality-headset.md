@@ -1,6 +1,6 @@
 ---
 title: "The Deepoon DPVR E3 Virtual Reality Headset"
-tags: [vr, review]
+tags: [vr, review, hardware]
 alternate_urls: "/reviews/deepoon-dpvr-e3-virtual-reality-headset/"
 ---
 

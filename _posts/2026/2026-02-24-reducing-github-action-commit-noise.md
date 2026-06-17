@@ -1,7 +1,7 @@
 ---
 title: Reducing commit log noise caused by a GitHub Action
 comments_issue: 139
-tags: [jekyll, programming, guide]
+tags: [github-pages, programming, guide, git]
 syndication:
   - https://social.omgmog.net/2026/new-blog-post-reducing-commit-log-noise
   - https://indieweb.social/@omgmog/116131114865197098

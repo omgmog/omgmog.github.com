@@ -1,6 +1,6 @@
 ---
 title: The Tronsmart Mars G01 Game Pad
-tags: [hardware, review]
+tags: [hardware, review, gaming, android]
 archived: true
 archived_comments:
 - author: "Ricardo Ferreira"

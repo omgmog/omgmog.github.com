@@ -1,6 +1,6 @@
 ---
 title: Two posts in one day...
-tags: [project]
+tags: [life, hardware]
 archived: true
 archive: moglenstar.net
 ---

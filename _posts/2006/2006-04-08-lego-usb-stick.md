@@ -1,6 +1,6 @@
 ---
 title: Lego USB Stick
-tags: [project]
+tags: [diy, hardware]
 archived: true
 archive: moglenstar.net
 ---

@@ -1,6 +1,6 @@
 ---
 title: Foobar2000 Tutorial
-tags: [software]
+tags: [software, guide]
 archived: true
 archive: moglenstar.net
 ---

@@ -1,6 +1,6 @@
 ---
 title: Approaches for a simple state system
-tags: [pico-8]
+tags: [pico-8, programming]
 archived: true
 ---
 

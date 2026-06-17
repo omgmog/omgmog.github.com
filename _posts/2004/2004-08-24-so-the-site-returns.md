@@ -1,6 +1,6 @@
 ---
 title: So the site returns
-tags: []
+tags: [site-related, life]
 archived: true
 archive: moglenstar.net
 ---

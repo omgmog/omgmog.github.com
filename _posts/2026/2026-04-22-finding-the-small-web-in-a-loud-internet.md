@@ -1,7 +1,7 @@
 ---
 title: Finding the Small Web in a Loud Internet
 comments_issue: 147
-tags: [indieweb]
+tags: [indieweb, life, reddit]
 ---
 
 My daily reading is deliberate at this point. I've settled on a small set of tools that surface the kind of internet I actually want, rather than whatever's performing well today.

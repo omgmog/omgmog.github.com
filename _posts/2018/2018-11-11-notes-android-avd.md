@@ -1,6 +1,6 @@
 ---
 title: Some Notes About Android Virtual Devices
-tags: [android]
+tags: [android, guide, software]
 archived: true
 ---
 

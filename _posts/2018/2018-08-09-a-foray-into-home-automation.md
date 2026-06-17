@@ -1,7 +1,7 @@
 ---
 title: A Foray Into Home Automation
 comments_issue: 102
-tags: [hardware]
+tags: [hardware, diy, raspberry-pi]
 archived: true
 ---
 

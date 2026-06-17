@@ -1,6 +1,6 @@
 ---
 title: "Waka Waka - Pacman Moleskine! and some Objective-C"
-tags: [life]
+tags: [life, programming, gaming]
 archived: true
 archive: blog.omgmog.net
 ---

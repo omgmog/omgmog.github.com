@@ -1,6 +1,6 @@
 ---
 title: "..humbug, christmas break, and assignments"
-tags: []
+tags: [life]
 archived: true
 archive: moglenstar.net
 ---

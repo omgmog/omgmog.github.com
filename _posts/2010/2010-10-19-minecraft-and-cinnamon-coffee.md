@@ -1,6 +1,6 @@
 ---
 title: "Minecraft and cinnamon coffee"
-tags: [minecraft]
+tags: [minecraft, life, coffee]
 archived: true
 archive: blog.omgmog.net
 archived_comments:

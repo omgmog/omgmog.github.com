@@ -1,7 +1,7 @@
 ---
 comments_issue: 61
 title: In which I find a better Imgur screenshot uploading application
-tags: [mac-os-x, software]
+tags: [macos, software, review]
 archived: true
 ---
 

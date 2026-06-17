@@ -1,6 +1,6 @@
 ---
 title: An Audio Amp v1.0
-tags: [3d-printing]
+tags: [3d-printing, diy, hardware]
 archived: true
 ---
 

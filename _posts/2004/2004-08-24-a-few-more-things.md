@@ -1,6 +1,6 @@
 ---
 title: A few more things
-tags: []
+tags: [life, site-related, pixel-art]
 archived: true
 archive: moglenstar.net
 ---

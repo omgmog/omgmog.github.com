@@ -1,7 +1,7 @@
 ---
 title: Moving to GitHub Actions (and adding .txt posts)
 comments_issue: 126
-tags: [jekyll, guide]
+tags: [jekyll, guide, github-pages, site-related]
 syndication: 
   - https://social.omgmog.net/2026/postmoving-to-github-actions-and-adding-txt-postsas-a-result-of-reading-blog202512a-small-collection-of-text-only-websites-by
   - https://indieweb.social/@omgmog/115865892816110097

@@ -1,6 +1,6 @@
 ---
 title: VPN Connection Indication on Windows
-tags: [windows]
+tags: [windows, software, guide]
 archived: true
 ---
 As of tomorrow I'm going to be switching to working remotely. Same job, just from the comfort of my home office (and without 2-3 hours of commute daily!). With this change I figure I'll have about 8-10 hours of _extra time_ per week to work on things.<!-- more -->

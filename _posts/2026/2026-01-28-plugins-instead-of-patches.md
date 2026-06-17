@@ -1,7 +1,7 @@
 ---
 title: Plugins instead of patches
 comments_issue: 131
-tags: [indieweb, programming]
+tags: [indieweb, programming, site-related]
 syndication:
   - https://social.omgmog.net/2026/this-is-getting-very-metapostplugins-instead-of-patches
   - https://indieweb.social/@omgmog/115973704081587647

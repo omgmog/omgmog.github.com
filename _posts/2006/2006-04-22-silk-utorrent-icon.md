@@ -1,7 +1,7 @@
 ---
 archived: true
 title: Silk utorrent icon
-tags: [pixel-art]
+tags: [pixel-art, icons]
 archive: moglenstar.net
 archived_comments:
 - author: Lateralus

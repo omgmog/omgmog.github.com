@@ -1,6 +1,6 @@
 ---
 title: "For your convenience"
-tags: []
+tags: [windows, guide]
 archived: true
 archive: moglenstar.net
 ---

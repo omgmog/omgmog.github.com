@@ -1,7 +1,7 @@
 ---
 title: Exploring OTA firmware updates on the Mangmi Air X
 comments_issue: 124
-tags: [guide, android]
+tags: [guide, android, handheld]
 
 ---
 

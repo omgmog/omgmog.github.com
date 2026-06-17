@@ -1,7 +1,7 @@
 ---
 comments_issue: 40
 title: Upgrading Mac OS X Snow Leopard on the Dell Inspiron 1525 to 10.6.4
-tags: [hackintosh, mac-os-x, guide]
+tags: [hackintosh, macos, guide]
 archived: true
 archived_comments:
 - author: "Bob"

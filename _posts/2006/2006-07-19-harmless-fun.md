@@ -1,6 +1,6 @@
 ---
 title: "Harmless Fun"
-tags: []
+tags: [site-related, design]
 archived: true
 archive: moglenstar.net
 ---

@@ -1,7 +1,7 @@
 ---
 title: Converting SVG to PNG online and in your terminal
 comments_issue: 96
-tags: [guide]
+tags: [guide, design, software]
 archived_comments:
 - author: "Richardrtg"
   date: January 22, 2014

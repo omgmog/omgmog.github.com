@@ -1,6 +1,6 @@
 ---
 title: A custom font
-tags: [pico-8]
+tags: [pico-8, programming]
 archived: true
 ---
 

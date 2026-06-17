@@ -1,7 +1,7 @@
 ---
 comments_issue: 26
 title: prev/next to left/right arrow key bind userscript
-tags: [userscripts, software]
+tags: [userscripts, software, guide]
 archived: true
 ---
 

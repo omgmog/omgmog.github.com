@@ -1,7 +1,7 @@
 ---
 title: Replacing the macOS audio switcher with SwiftBar
 comments_issue: 121
-tags: [guide]
+tags: [guide, macos, software]
 syndication:
   - https://social.omgmog.net/2025/postbetter-macos-audio-switching
   - https://indieweb.social/@omgmog/115357178600304223

@@ -1,6 +1,6 @@
 ---
 title: A Dialog System
-tags: [pico-8]
+tags: [pico-8, programming]
 archived: true
 ---
 This is a flexible dialog system I've come up with.

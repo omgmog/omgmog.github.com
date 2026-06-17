@@ -1,7 +1,7 @@
 ---
 title: "DevTerm Stuff"
 comments_issue: 113
-tags: [clockwork-pi]
+tags: [clockwork-pi, hardware, diy, linux]
 syndication:
   - https://indieweb.social/@omgmog/108209353554883449
 ---

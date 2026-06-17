@@ -1,6 +1,6 @@
 ---
 title: Pocket Sprite Laptop Mount
-tags: [3d-printing]
+tags: [3d-printing, diy, handheld, retro-gaming]
 archived: true
 ---
 

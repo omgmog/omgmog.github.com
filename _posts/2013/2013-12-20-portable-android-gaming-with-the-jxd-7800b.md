@@ -1,6 +1,6 @@
 ---
 title: The JXD 7800B Portable Android Games Console
-tags: [android, hardware, review]
+tags: [android, hardware, review, handheld]
 archived: true
 ---
 

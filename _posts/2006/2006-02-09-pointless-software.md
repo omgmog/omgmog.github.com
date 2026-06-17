@@ -1,6 +1,6 @@
 ---
 title: Pointless software
-tags: []
+tags: [software]
 archived: true
 archive: moglenstar.net
 ---
