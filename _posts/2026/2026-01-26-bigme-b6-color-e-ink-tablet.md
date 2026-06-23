@@ -1,7 +1,7 @@
 ---
 title: The Bigme B6 Color E-Ink Tablet
 comments_issue: 130
-tags: [android, review, hardware]
+tags: [e-ink, android, review, hardware]
 syndication:
   - https://social.omgmog.net/2026/postbigme-b6-color-e-ink-tablet
   - https://indieweb.social/@omgmog/115961174502942417
