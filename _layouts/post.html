@@ -18,7 +18,7 @@ layout: core
   {% assign era_class = "" %}{% assign era_notice = "" %}
 {% endif %}
 
-<div class="post-meta"><time class="dt-published" datetime="{{page.date|date_to_xmlschema}}">{{ page.date|date_to_string}}</time>{% include interactions/count.html post=page %}{% if page.alternates %}<span class="alt-formats">{% for alt in page.alternates %}<a href="{{ alt.href }}" class="alt-format">{{ alt.title }}</a>{% endfor %}</span>{% endif %}</div>
+<div class="post-meta"><time class="dt-published" datetime="{{page.date|date_to_xmlschema}}">{{ page.date|date_to_string}}</time>{% include interactions/count.html post=page %}<span class="alt-formats">{% if page.alternates %}{% for alt in page.alternates %}<a href="{{ alt.href }}" class="alt-format" title="{{ alt.title }}"><svg aria-hidden="true" focusable="false"><use href="#icon-format"></use></svg></a>{% endfor %}{% endif %}<button type="button" class="alt-format" id="share-post" data-title="{{ page.title | escape }}" data-url="{{ page.url | absolute_url }}" hidden title="Share"><svg aria-hidden="true" focusable="false"><use href="#icon-share-page"></use></svg></button></span></div>
 <h1 class="post-title p-name">{{ page.title }}</h1>
 <a class="u-url" href="{{ page.url | absolute_url }}" hidden></a>
 {% if page.tags %}<div class="tags-list">{% for tag in page.tags %}<a href="/tags/{{ tag | slugify }}/" class="tag tag-{{tag|slugify}}">#{{ tag }}</a>{% endfor %}</div>{% endif %}
@@ -51,3 +51,13 @@ layout: core
 
 {% include posts/webmention-templates.html %}
 {% include posts/webmention-stream.html %}
+
+<script>
+if (navigator.share) {
+    var shareBtn = document.getElementById('share-post');
+    shareBtn.hidden = false;
+    shareBtn.addEventListener('click', function() {
+        navigator.share({ title: shareBtn.dataset.title, url: shareBtn.dataset.url });
+    });
+}
+</script>

@@ -132,6 +132,8 @@ html, body {
 }
 html {
     font-size: var(--root-font-size);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     font-family: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
     line-height: 1.33;
 
@@ -775,6 +777,7 @@ nav {
     flex-direction: row;
     align-items: center;
     gap: 1em;
+    flex-wrap: wrap;
 }
 
 .sidebar-posts {
@@ -803,9 +806,24 @@ nav {
     display: flex;
     gap: .5em;
 
-    .alt-format {
-        font-size: var(--text-sm);
+    svg {
+        width: .8rem;
+        height: .8rem;
+    }
+
+    a, button {
+        display: block;
+        font-family: inherit;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 0;
+        background: none;
+        color: var(--color-text);
+        appearance: none;
+        cursor: pointer;
         opacity: .5;
+        font-size: inherit;
         &:hover { opacity: 1; }
     }
 }
