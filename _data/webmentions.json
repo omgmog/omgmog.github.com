@@ -5262,5 +5262,34 @@
       },
       "sort_date": "2026-06-23T22:17:00-04:00"
     }
+  ],
+  "/post/tailscale-exit-node-vm/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/spent-a-few-hours-fighting-polkit-file",
+      "published": "2026-06-24T15:08:56+00:00",
+      "wm-received": "2026-06-24T15:08:58Z",
+      "wm-id": 2004593,
+      "wm-source": "https://social.omgmog.net/2026/spent-a-few-hours-fighting-polkit-file",
+      "wm-target": "https://blog.omgmog.net/post/tailscale-exit-node-vm/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116805713025113160"
+      ],
+      "content": {
+        "html": "<p>Spent a few hours fighting polkit, file permissions and a silent serial console to get a <a href=\"https://social.omgmog.net/tag/Tailscale\" class=\"p-category\">#Tailscale</a> exit node running. Notes on what tripped me up:</p>\n\n<p><a href=\"https://blog.omgmog.net/post/tailscale-exit-node-vm/\" class=\"u-mention-of\">https://blog.omgmog.net/post/tailscale-exit-node-vm/</a> <a href=\"https://social.omgmog.net/tag/selfhosted\" class=\"p-category\">#selfhosted</a></p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/tailscale-exit-node-vm/\" class=\"u-mention-of\">https://blog.omgmog.net/post/tailscale-exit-node-vm/</a>",
+        "text": "Spent a few hours fighting polkit, file permissions and a silent serial console to get a #Tailscale exit node running. Notes on what tripped me up:\n\nhttps://blog.omgmog.net/post/tailscale-exit-node-vm/ #selfhosted\n\n        \n                        https://blog.omgmog.net/post/tailscale-exit-node-vm/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/tailscale-exit-node-vm/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-06-24T15:08:56+00:00"
+    }
   ]
 }
