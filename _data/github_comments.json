@@ -1041,5 +1041,23 @@
     "comments": [
 
     ]
+  },
+  "155": {
+    "state": "open",
+    "comments": [
+      {
+        "id": 4784686428,
+        "user": {
+          "login": "aezell",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2454?v=4",
+          "html_url": "https://github.com/aezell"
+        },
+        "body": "Thank you for the rundown of firmware alternatives to CrossPoint. As soon as I finish the book I'm currently reading, I'm going to give Inx a try. Like you, I found the \"phone magnet\" a bit oversold especially since my phone's layout means the reader sticks out beyond the bottom of the device.",
+        "body_html": "<p dir=\"auto\">Thank you for the rundown of firmware alternatives to CrossPoint. As soon as I finish the book I'm currently reading, I'm going to give Inx a try. Like you, I found the \"phone magnet\" a bit oversold especially since my phone's layout means the reader sticks out beyond the bottom of the device.</p>",
+        "created_at": "2026-06-24T00:12:34Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/155#issuecomment-4784686428",
+        "sort_date": "2026-06-24T00:12:34Z"
+      }
+    ]
   }
 }
