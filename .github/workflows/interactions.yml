@@ -43,7 +43,15 @@ jobs:
         run: bundle exec ruby scripts/fetch_webmentions.rb
 
       - name: Fill in Mastodon replies missing a webmention
-        run: bundle exec ruby scripts/fetch_mastodon_replies.rb
+        id: mastodon-replies
+        run: |
+          cp _data/webmentions.json /tmp/webmentions-before.json
+          bundle exec ruby scripts/fetch_mastodon_replies.rb
+          if cmp -s /tmp/webmentions-before.json _data/webmentions.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Fetch GitHub issues index
         id: gh-index
