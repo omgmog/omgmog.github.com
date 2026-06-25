@@ -879,33 +879,6 @@
       "wm-property": "like-of",
       "wm-private": false,
       "sort_date": "2022-04-08T12:12:11Z"
-    },
-    {
-      "type": "entry",
-      "author": {
-        "type": "card",
-        "name": "Wouter Groeneveld",
-        "photo": "https://webmention.io/avatar/brainbaking.com/4966f3a2a3d4594117a1a709c48bc3d9dc079f6fe32ae92e91acecde0127a5ec.jpg",
-        "url": "https://brainbaking.com/"
-      },
-      "url": "https://brainbaking.com/notes/2022/04/29h13m30s38/",
-      "published": "2022-04-29T13:30:00",
-      "wm-received": "2022-04-29T12:00:18Z",
-      "wm-id": 1388970,
-      "wm-source": "https://brainbaking.com/notes/2022/04/29h13m30s38/",
-      "wm-target": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
-      "name": "Half-Baked Thought",
-      "content": {
-        "html": "<p>Zomg Max, congrats! Next step: getting rid of third-party reliabilities to send/receive the mentions yourself, perhaps?</p>",
-        "text": "Zomg Max, congrats! Next step: getting rid of third-party reliabilities to send/receive the mentions yourself, perhaps?"
-      },
-      "in-reply-to": "https://blog.omgmog.net/post/adding-support-for-webmentions/",
-      "wm-property": "in-reply-to",
-      "wm-private": false,
-      "rels": {
-        "canonical": "https://brainbaking.com/notes/2022/04/29h13m30s38/"
-      },
-      "sort_date": "2022-04-29T13:30:00"
     }
   ],
   "/post/raspberry-pi-local-dev-vscode-remote/": [
@@ -5141,7 +5114,7 @@
       "sort_date": "2026-06-17T11:43:48"
     }
   ],
-  "/post/sending-webmentions-on-deploy": [
+  "/post/sending-webmentions-on-deploy/": [
     {
       "type": "entry",
       "author": {
@@ -5164,9 +5137,7 @@
         "canonical": "https://robida.net/entries/2026/06/17/like-1"
       },
       "sort_date": "2026-06-17T08:04:00-04:00"
-    }
-  ],
-  "/post/sending-webmentions-on-deploy/": [
+    },
     {
       "type": "entry",
       "author": {
@@ -5594,9 +5565,7 @@
       "wm-property": "in-reply-to",
       "wm-private": false,
       "sort_date": "2026-06-25T05:42:27+00:00"
-    }
-  ],
-  "/post/xteink-x4-e-ink-reader": [
+    },
     {
       "type": "entry",
       "author": {
