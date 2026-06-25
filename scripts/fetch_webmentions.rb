@@ -33,6 +33,7 @@ BSKY_PROFILE_API = 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile'
 DID_PLC_REGEX = /did:plc:[a-z0-9]+/i
 
 bsky_profile_cache = {}
+lemmy_post_cache = {}
 
 def fetch_bsky_profile(did, cache)
   return cache[did] if cache.key?(did)
@@ -55,6 +56,27 @@ def enrich_bsky_mention(m, cache)
   m['author']['url'] = "https://bsky.app/profile/#{handle}"
 end
 
+LEMMY_URL_REGEX = %r{\Ahttps?://([^/]+)/post/(\d+)}i
+
+def enrich_lemmy_mention(m, cache)
+  match = (m['url'] || m['wm-source']).to_s.match(LEMMY_URL_REGEX)
+  return unless match
+
+  instance, post_id = match[1], match[2]
+  cache_key = "#{instance}/#{post_id}"
+  return if cache.key?(cache_key) && cache[cache_key].nil?
+
+  data = cache[cache_key] ||= fetch_json("https://#{instance}/api/v3/post?id=#{post_id}")
+  creator = data&.dig('post_view', 'creator')
+  return unless creator
+
+  m['author'] ||= {}
+  m['author']['type'] = 'card'
+  m['author']['name'] = creator['display_name'].to_s.empty? ? creator['name'] : creator['display_name']
+  m['author']['photo'] = creator['avatar'] || m['author']['photo']
+  m['author']['url'] = creator['actor_id'] || m['author']['url']
+end
+
 puts "Fetching Morris index..."
 index = fetch_json("#{MORRIS_BASE}/index.json")
 unless index
@@ -73,6 +95,7 @@ index.each do |path, hashes|
     next if source_domain && BLOCKED_DOMAINS.include?(source_domain)
     m['sort_date'] = m['published'] || m['wm-received'] || ''
     enrich_bsky_mention(m, bsky_profile_cache)
+    enrich_lemmy_mention(m, lemmy_post_cache)
     m
   end
   unless mentions.empty?
