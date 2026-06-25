@@ -59,6 +59,10 @@
           <div><p>Mentioned in <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
         </article>
       {% endif %}
+    {% elsif item['wm-property'] == "in-reply-to" and item._filler %}
+      <article class="reply mention static-item" data-source="webmention" data-platform="mastodon">
+        <div><p>Someone replied on <strong>{{ item._filler_host }}</strong> &mdash; <a href="{{ mention_url }}" rel="nofollow">view reply</a> <small>(their account opts out of bridging, so we can't show it here)</small></p></div>
+      </article>
     {% elsif item['wm-property'] == "in-reply-to" %}
       <article class="reply static-item{% if _is_author %} is-author{% endif %}" data-source="webmention" data-platform="{{ _platform }}">
         {% if _is_author %}<img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ author_name }}'s avatar picture" class="avatar" loading="lazy">

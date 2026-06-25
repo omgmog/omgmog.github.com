@@ -42,6 +42,9 @@ jobs:
         if: steps.wm-cache.outputs.cache-hit != 'true'
         run: bundle exec ruby scripts/fetch_webmentions.rb
 
+      - name: Fill in Mastodon replies missing a webmention
+        run: bundle exec ruby scripts/fetch_mastodon_replies.rb
+
       - name: Fetch GitHub issues index
         id: gh-index
         run: |

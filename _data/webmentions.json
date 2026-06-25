@@ -1014,6 +1014,46 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2022-05-26T20:36:06+00:00"
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/raspberry-pi-local-dev-vscode-remote/",
+      "url": "https://indieweb.social/@omgmog/108380769913633719",
+      "wm-source": "https://indieweb.social/@omgmog/108380769913633719",
+      "published": "2022-05-28T17:35:06.543Z",
+      "wm-received": "2022-05-28T17:35:06.543Z",
+      "sort_date": "2022-05-28T17:35:06.543Z",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://cdn.masto.host/indiewebsocial/accounts/avatars/108/203/153/148/988/770/original/5e3fa24003c1cd00.png",
+        "url": "https://indieweb.social/@omgmog"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://indieweb.social/@corenominal\" class=\"u-url mention\">@<span>corenominal</span></a></span> Switched the setup over to an SSD via USB. I&#39;m now seeing ~1.8s on watch/build, and ~.8s on incremental watch/build 🎉</p>",
+        "text": "@ corenominal Switched the setup over to an SSD via USB. I'm now seeing ~1.8s on watch/build, and ~.8s on incremental watch/build 🎉"
+      }
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/raspberry-pi-local-dev-vscode-remote/",
+      "url": "https://indieweb.social/@corenominal/108380796846599605",
+      "wm-source": "https://indieweb.social/@corenominal/108380796846599605",
+      "published": "2022-05-28T17:41:57.509Z",
+      "wm-received": "2022-05-28T17:41:57.509Z",
+      "sort_date": "2022-05-28T17:41:57.509Z",
+      "author": {
+        "type": "card",
+        "name": "corenominal",
+        "photo": "https://cdn.masto.host/indiewebsocial/accounts/avatars/108/203/218/341/337/016/original/2be6f59ff474693f.png",
+        "url": "https://indieweb.social/@corenominal"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://indieweb.social/@omgmog\" class=\"u-url mention\">@<span>omgmog</span></a></span> cool, that&#39;s a pretty nifty improvement! 👍</p>",
+        "text": "@ omgmog cool, that's a pretty nifty improvement! 👍"
+      }
     }
   ],
   "/": [
@@ -5588,6 +5628,50 @@
         "canonical": "https://robida.net/entries/2026/06/24/like-2"
       },
       "sort_date": "2026-06-23T22:17:00-04:00"
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "url": "https://lazybear.social/@hyde/116801206706787693",
+      "wm-source": "https://lazybear.social/@hyde/116801206706787693",
+      "published": "2026-06-23T20:02:55.000Z",
+      "wm-received": "2026-06-23T20:02:55.000Z",
+      "sort_date": "2026-06-23T20:02:55.000Z",
+      "_filler": true,
+      "_filler_host": "lazybear.social"
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "url": "https://lazybear.social/@hyde/116804126160077158",
+      "wm-source": "https://lazybear.social/@hyde/116804126160077158",
+      "published": "2026-06-24T08:25:22.000Z",
+      "wm-received": "2026-06-24T08:25:22.000Z",
+      "sort_date": "2026-06-24T08:25:22.000Z",
+      "_filler": true,
+      "_filler_host": "lazybear.social"
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "url": "https://indieweb.social/@omgmog/116804133565394806",
+      "wm-source": "https://indieweb.social/@omgmog/116804133565394806",
+      "published": "2026-06-24T08:27:15.703Z",
+      "wm-received": "2026-06-24T08:27:15.703Z",
+      "sort_date": "2026-06-24T08:27:15.703Z",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://cdn.masto.host/indiewebsocial/accounts/avatars/108/203/153/148/988/770/original/5e3fa24003c1cd00.png",
+        "url": "https://indieweb.social/@omgmog"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://lazybear.social/@hyde\" class=\"u-url mention\">@<span>hyde</span></a></span> You can flash the image directly from the Crosspoint web flasher, so give it a go</p>",
+        "text": "@ hyde You can flash the image directly from the Crosspoint web flasher, so give it a go"
+      }
     }
   ],
   "/post/tailscale-exit-node-vm/": [
