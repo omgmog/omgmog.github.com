@@ -5236,6 +5236,212 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-06-23T19:29:27+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "felixdoerp",
+        "photo": "",
+        "url": "https://news.ycombinator.com/user?id=felixdoerp"
+      },
+      "url": "https://news.ycombinator.com/item?id=48662381",
+      "published": "2026-06-24T16:35:56+00:00",
+      "wm-received": "2026-06-24T17:20:14Z",
+      "wm-id": 2004604,
+      "wm-source": "https://news.ycombinator.com/item?id=48662381",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "name": "The Xteink X4 E-Ink Reader",
+      "bookmark-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "bookmark-of",
+      "wm-private": false,
+      "sort_date": "2026-06-24T16:35:56+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://lemmy.bestiver.se/post/1187721",
+      "published": null,
+      "wm-received": "2026-06-24T17:30:06Z",
+      "wm-id": 2004606,
+      "wm-source": "https://lemmy.bestiver.se/post/1187721",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "mention-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://lemmy.bestiver.se/post/1187721"
+      },
+      "sort_date": "2026-06-24T17:30:06Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "TheStartupChime",
+        "photo": "https://avatars.webmention.io/styles.redditmedia.com/cf1a7dfdf8633bbdce76d3ddd13759005afa930578bdd70ed3a4890e7294ed1e.png",
+        "url": "https://reddit.com/user/TheStartupChime/"
+      },
+      "url": "https://reddit.com/r/hypeurls/comments/1uel2fd/the_xteink_x4_eink_reader/",
+      "published": "2026-06-24T18:06:36+00:00",
+      "wm-received": "2026-06-24T18:35:32Z",
+      "wm-id": 2004622,
+      "wm-source": "https://brid.gy/post/reddit/omgmog/1uel2fd",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "name": "The Xteink X4 E-Ink Reader",
+      "content": {
+        "html": "Bookmark: <a title=\"blog.omgmog.net/post/xteink-x4-e-ink-reader\" class=\"u-bookmark-of\" href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\">blog.omgmog.net/post/xteink-x4...</a>\n<a class=\"u-mention\" href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\"></a>",
+        "text": "Bookmark: blog.omgmog.net/post/xteink-x4..."
+      },
+      "bookmark-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "bookmark-of",
+      "wm-private": false,
+      "sort_date": "2026-06-24T18:06:36+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "tbeseda",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/e9694c3d5ee0dc7a2c4236cc575dae76977273756f4b4cad1e4f6bfa1321e764.jpg",
+        "url": "https://indieweb.social/@tbeseda"
+      },
+      "url": "https://indieweb.social/@omgmog/116801075143476395#favorited-by-108337076513502177",
+      "published": null,
+      "wm-received": "2026-06-24T21:04:38Z",
+      "wm-id": 2004635,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/116801075143476395/108337076513502177",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-06-24T21:04:38Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "HNMod",
+        "photo": "https://avatars.webmention.io/styles.redditmedia.com/93b4312d30833ade8833370bbebbf0ad7d93e37190f89ea94a18f2efb7da849d.png",
+        "url": "https://reddit.com/user/HNMod/"
+      },
+      "url": "https://reddit.com/r/hackernews/comments/1ueqrio/the_xteink_x4_eink_reader/",
+      "published": "2026-06-24T21:35:47+00:00",
+      "wm-received": "2026-06-24T21:40:28Z",
+      "wm-id": 2004636,
+      "wm-source": "https://brid.gy/post/reddit/omgmog/1ueqrio",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "name": "The Xteink X4 E-Ink Reader",
+      "content": {
+        "html": "Bookmark: <a title=\"blog.omgmog.net/post/xteink-x4-e-ink-reader\" class=\"u-bookmark-of\" href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\">blog.omgmog.net/post/xteink-x4...</a>\n<a class=\"u-mention\" href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\"></a>",
+        "text": "Bookmark: blog.omgmog.net/post/xteink-x4..."
+      },
+      "bookmark-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "bookmark-of",
+      "wm-private": false,
+      "sort_date": "2026-06-24T21:35:47+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jollino / Daniele N.",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/f6152b5041e14216e3ab74d8954a25c105baf07e629fc772db7458a826cc78bc.png",
+        "url": "https://mastodon.uno/@jollino"
+      },
+      "url": "https://mastodon.uno/@jollino/116807530819574460",
+      "published": "2026-06-24T22:51:13+00:00",
+      "wm-received": "2026-06-24T23:10:31Z",
+      "wm-id": 2004641,
+      "wm-source": "https://brid.gy/comment/mastodon/@omgmog@indieweb.social/116801075143476395/116807530834256811",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://indieweb.social/@omgmog\" class=\"u-url\">@<span>omgmog</span></a></span> Hi! Your post made me quite curious (I use a kindle for convenience but i really like things like that). I looked them up on AliExpress and the ones I found, all between 55 and 65 euros, explicitly say “not compatible with any other firmware”. As far as you know, can they still be flashed via SD like you mention, or are they completely locked down? Thank you in advance!</p>",
+        "text": "@omgmog Hi! Your post made me quite curious (I use a kindle for convenience but i really like things like that). I looked them up on AliExpress and the ones I found, all between 55 and 65 euros, explicitly say “not compatible with any other firmware”. As far as you know, can they still be flashed via SD like you mention, or are they completely locked down? Thank you in advance!"
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-06-24T22:51:13+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/a074803e9f0497c1bd4907a2e6155b2478a92f6e8c59936198192bbc6364d80d.png",
+        "url": "https://indieweb.social/@omgmog"
+      },
+      "url": "https://indieweb.social/@omgmog/116803987626221187",
+      "published": "2026-06-24T07:50:08+00:00",
+      "wm-received": "2026-06-24T23:10:32Z",
+      "wm-id": 2004642,
+      "wm-source": "https://brid.gy/comment/mastodon/@omgmog@indieweb.social/116801075143476395/116803987626221187",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://lazybear.social/@hyde\" class=\"u-url\">@<span>hyde</span></a></span> nicer UI, reading stats, koreader integration. I flashed back in April/May so the features of both may have moved on a little</p>",
+        "text": "@hyde nicer UI, reading stats, koreader integration. I flashed back in April/May so the features of both may have moved on a little"
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-06-24T07:50:08+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jollino / Daniele N.",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/f6152b5041e14216e3ab74d8954a25c105baf07e629fc772db7458a826cc78bc.png",
+        "url": "https://mastodon.uno/@jollino"
+      },
+      "url": "https://indieweb.social/@omgmog/116801075143476395#favorited-by-116807512769402145",
+      "published": null,
+      "wm-received": "2026-06-24T23:10:34Z",
+      "wm-id": 2004643,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/116801075143476395/116807512769402145",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-06-24T23:10:34Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://bsky.app/profile/did:plc:d4jkrca4x4fejypt6ewevkzo/post/3mp3pnvh4o22y",
+      "published": "2026-06-25T05:38:43+00:00",
+      "wm-received": "2026-06-25T05:39:21Z",
+      "wm-id": 2004679,
+      "wm-source": "https://bsky.brid.gy/convert/web/at://did:plc:d4jkrca4x4fejypt6ewevkzo/app.bsky.feed.post/3mp3pnvh4o22y%23bridgy-fed-create-2026-06-25T05:38:53.058747+00:00",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "A £40 e-ink reader you can stick onto your phone? Take my money! 📚💙\n\n<a href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\">blog.omgmog.net/post/xteink-...</a>",
+        "text": "A £40 e-ink reader you can stick onto your phone? Take my money! 📚💙\n\nblog.omgmog.net/post/xteink-..."
+      },
+      "mention-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-06-25T05:38:43+00:00"
     }
   ],
   "/post/xteink-x4-e-ink-reader": [
@@ -5290,6 +5496,51 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-06-24T15:08:56+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Aaron Soto",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/deed47227d551fd696ac444c8c82f463a634e7197fd70ecce077d0e4a82dcaf2.png",
+        "url": "https://infosec.exchange/@surefire"
+      },
+      "url": "https://indieweb.social/@omgmog/116805713025113160#favorited-by-109287512574968452",
+      "published": null,
+      "wm-received": "2026-06-24T16:06:10Z",
+      "wm-id": 2004599,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/116805713025113160/109287512574968452",
+      "wm-target": "https://blog.omgmog.net/post/tailscale-exit-node-vm/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/tailscale-exit-node-vm/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-06-24T16:06:10Z"
+    }
+  ],
+  "/post/making-gimp-feel-less-like-punishment/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Michael Harley",
+        "photo": "https://avatars.webmention.io/michaelharley.net/9d877b708614b8f23bb7afe1ac76b334ee646b40a4d31c80544a0c3f478a74a7.png",
+        "url": "https://michaelharley.net"
+      },
+      "url": "https://michaelharley.net/likes/2026/06/24/max-glenister/",
+      "published": "2026-06-24T17:19:14",
+      "wm-received": "2026-06-24T17:21:01Z",
+      "wm-id": 2004605,
+      "wm-source": "https://michaelharley.net/likes/2026/06/24/max-glenister/",
+      "wm-target": "https://blog.omgmog.net/post/making-gimp-feel-less-like-punishment/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/making-gimp-feel-less-like-punishment/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://michaelharley.net/likes/2026/06/24/max-glenister/"
+      },
+      "sort_date": "2026-06-24T17:19:14"
     }
   ]
 }
