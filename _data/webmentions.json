@@ -5610,6 +5610,113 @@
       "type": "entry",
       "author": {
         "type": "card",
+        "name": "Ryan Brooks",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/86e07a343bd927ed3049f7cb1fb7dcfe064e4fcb46b9ee07495713b39fc1129c.jpg",
+        "url": "https://ruby.social/@spikeheap"
+      },
+      "url": "https://ruby.social/@spikeheap/116812128771730129",
+      "published": "2026-06-25T18:20:32+00:00",
+      "wm-received": "2026-06-25T18:29:13Z",
+      "wm-id": 2004778,
+      "wm-source": "https://brid.gy/comment/mastodon/@omgmog@indieweb.social/116801075143476395/116812128830230989",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "photo": [
+        "https://cdn.masto.host/rubysocial/media_attachments/files/116/812/128/506/520/502/original/725f49d8222482bf.png"
+      ],
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://indieweb.social/@omgmog\" class=\"u-url\">@<span>omgmog</span></a></span> nice to see you pop to the top of lobster.rs 😍</p>",
+        "text": "@omgmog nice to see you pop to the top of lobster.rs 😍"
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-06-25T18:20:32+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://lobste.rs/s/oyurwh/xteink_x4_e_ink_reader",
+      "published": null,
+      "wm-received": "2026-06-25T19:32:24Z",
+      "wm-id": 2004783,
+      "wm-source": "https://lobste.rs/s/oyurwh/xteink_x4_e_ink_reader",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "repost-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-06-25T19:32:24Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "petes_bread_eqn_xls",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/db6ea14d02f32e604d7719a9bad89b9bc1d76a695f44f66422dbcc7cfdd7207c.jpg",
+        "url": "https://mastodo.neoliber.al/@petes_bread_eqn_xls"
+      },
+      "url": "https://indieweb.social/@omgmog/116801075143476395#favorited-by-110806180862476423",
+      "published": null,
+      "wm-received": "2026-06-25T23:42:09Z",
+      "wm-id": 2004820,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/116801075143476395/110806180862476423",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-06-25T23:42:09Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "petes_bread_eqn_xls",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/db6ea14d02f32e604d7719a9bad89b9bc1d76a695f44f66422dbcc7cfdd7207c.jpg",
+        "url": "https://mastodo.neoliber.al/@petes_bread_eqn_xls"
+      },
+      "url": "https://indieweb.social/@omgmog/116801075143476395#reblogged-by-110806180862476423",
+      "published": null,
+      "wm-received": "2026-06-25T23:42:11Z",
+      "wm-id": 2004821,
+      "wm-source": "https://brid.gy/repost/mastodon/@omgmog@indieweb.social/116801075143476395/110806180862476423",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "repost-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-06-25T23:42:11Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Wesley Moore",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/b0ce5179dae2e254b981b3b081473ab2fca634d1f1520a9de9e03f9029512513.png",
+        "url": "https://mastodon.decentralised.social/@wezm"
+      },
+      "url": "https://indieweb.social/@omgmog/116801075143476395#reblogged-by-109746878912921302",
+      "published": null,
+      "wm-received": "2026-06-25T23:42:11Z",
+      "wm-id": 2004822,
+      "wm-source": "https://brid.gy/repost/mastodon/@omgmog@indieweb.social/116801075143476395/109746878912921302",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "repost-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-06-25T23:42:11Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
         "name": "Beto Dealmeida",
         "photo": "https://avatars.webmention.io/robida.net/78a56a83f566d01b976bd19a7c49a5db5cac26bbe095602dd786c7a5709e54b3.jpg",
         "url": "https://robida.net/"
