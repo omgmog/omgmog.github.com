@@ -20,7 +20,18 @@
     {% elsif mention_url contains 'twitter.com' %}{% assign _platform = "twitter" %}
     {% elsif item['wm-source'] contains 'brid.gy' %}{% assign _platform = "mastodon" %}
     {% endif %}
-    {% if item['wm-property'] == "mention-of" %}
+    {% if item['wm-property'] == "bookmark-of" and _platform == "reddit" %}
+      {% assign _subreddit_parts = mention_url | split: "/r/" %}
+      {% assign _subreddit = "" %}
+      {% if _subreddit_parts.size > 1 %}{% assign _subreddit = _subreddit_parts[1] | split: "/" | first %}{% endif %}
+      <article class="reply mention static-item" data-source="webmention" data-platform="reddit">
+        <div><p>Shared to <a href="https://www.reddit.com/r/{{ _subreddit }}" rel="nofollow">/r/{{ _subreddit }}</a> by {{ author_name }}: <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
+      </article>
+    {% elsif item['wm-property'] == "mention-of" and item.community %}
+      <article class="reply mention static-item" data-source="webmention" data-platform="lemmy">
+        <div><p>Shared to <a href="{{ item.community.url }}" rel="nofollow">!{{ item.community.name }}</a> by {{ author_name }}: <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
+      </article>
+    {% elsif item['wm-property'] == "mention-of" %}
       {% if item.content.text %}
         <article class="reply mention-rich static-item{% if _is_author %} is-author{% endif %}" data-source="webmention" data-platform="{{ _platform }}">
           {% if _is_author %}<img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ author_name }}'s avatar picture" class="avatar" loading="lazy">

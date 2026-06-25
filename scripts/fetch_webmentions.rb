@@ -75,6 +75,14 @@ def enrich_lemmy_mention(m, cache)
   m['author']['name'] = creator['display_name'].to_s.empty? ? creator['name'] : creator['display_name']
   m['author']['photo'] = creator['avatar'] || m['author']['photo']
   m['author']['url'] = creator['actor_id'] || m['author']['url']
+
+  community = data&.dig('post_view', 'community')
+  if community
+    m['community'] = {
+      'name' => community['name'],
+      'url' => community['actor_id']
+    }
+  end
 end
 
 puts "Fetching Morris index..."

@@ -73,6 +73,18 @@
                 domain: ['url']
             }
         },
+        'mention-lemmy': {
+            template: getTemplateContent('tpl-mention-lemmy'),
+            element: '#feed',
+            attributes: {
+                author_name: ['author', 'name'],
+                url: ['url'],
+                community_name: ['community', 'name'],
+                community_url: ['community', 'url'],
+                date: ['published'],
+                date_formatted: ['published']
+            }
+        },
         'like': {
             template: getTemplateContent('tpl-like'),
             element: '#likes',
@@ -91,6 +103,17 @@
                 author_avatar_url: ['author', 'photo'],
                 verb: 'bookmarked',
                 domain: ['url']
+            }
+        },
+        'bookmark-reddit': {
+            template: getTemplateContent('tpl-bookmark-reddit'),
+            element: '#feed',
+            attributes: {
+                author_name: ['author', 'name'],
+                url: ['url'],
+                subreddit: ['url'],
+                date: ['published'],
+                date_formatted: ['published']
             }
         },
         'repost': {
@@ -302,6 +325,10 @@
                 if (!/<[a-z][\s\S]*>/i.test(value)) {
                     value = marked.parse(value);
                 }
+            }
+            if (attribute === 'subreddit') {
+                const match = (data.url || data['wm-source'] || '').match(/reddit\.com\/r\/([^/]+)/i);
+                value = match ? match[1] : '';
             }
             if (attribute === 'domain') {
                 // extract the hostname from the url
@@ -592,8 +619,11 @@
             .filter(m => !preRenderedWmIds.has(m['wm-id']));
         const commentsData = interactions.comments?.data || [];
 
-        // Merge feed items: wm replies+mentions + new github comments, sorted by date
-        const feedWm = wmData.filter(m => m.type === 'reply' || m.type === 'mention');
+        const isRedditBookmark = m => m.type === 'bookmark' && /reddit\.com\/r\//i.test(m.url || m['wm-source'] || '');
+        const isLemmyMention = m => m.type === 'mention' && !!m.community?.name;
+
+        // Merge feed items: wm replies+mentions + reddit bookmarks + new github comments, sorted by date
+        const feedWm = wmData.filter(m => m.type === 'reply' || m.type === 'mention' || isRedditBookmark(m));
         const newComments = commentsData.filter(c => !preRenderedCommentIds.has(c.id));
         const merged = [...feedWm, ...newComments].sort((a, b) =>
             new Date(a['wm-received'] || a.created_at || 0) - new Date(b['wm-received'] || b.created_at || 0)
@@ -634,6 +664,8 @@
             if (!item.type) return;
             let type = TYPES[item.type];
             if (item.content?.text && item.type === 'mention') type = TYPES['mention-rich'];
+            if (isLemmyMention(item)) type = TYPES['mention-lemmy'];
+            if (isRedditBookmark(item)) type = TYPES['bookmark-reddit'];
             if (!type) return;
 
             const isAuthor = checkIsAuthor(item);
@@ -660,6 +692,7 @@
             );
             const likesData = wmData.filter(m => {
                 if (m.type !== 'like' && m.type !== 'bookmark' && m.type !== 'repost') return false;
+                if (isRedditBookmark(m)) return false;
                 const key = m.author?.name || '';
                 if (!key || seenLikers.has(key)) return false;
                 seenLikers.add(key);
