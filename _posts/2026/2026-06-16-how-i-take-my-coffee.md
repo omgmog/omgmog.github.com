@@ -2,6 +2,9 @@
 title: "How I take my coffee"
 comments_issue: 152
 tags: [coffee, indieweb]
+syndication:
+  - https://social.omgmog.net/2026/how-i-take-my-coffeeposthow-i-take-my-coffee
+  - https://indieweb.social/@omgmog/116761722395801839
 ---
 
 My default for making coffee for two is a cafetière. French press if you insist. It requires almost no thought, produces a consistent result, and has no moving parts to break. When I've got a bit more time and want a cleaner cup for two or more, I'll reach for a [Bodum pour-over](https://www.bodum.com/gb/en/11571-109-pour-over) instead. When it's just me, I've been using a [Clever Dripper](https://cleverbrewing.coffee/products/clever-dripper) more lately (it suits the days where I want slightly more control without committing to the full V60 ritual). The [Hario V60](https://www.hario.co.uk/collections/hario-v60-coffee-drippers) was my main single-cup pour-over for a long time before that.

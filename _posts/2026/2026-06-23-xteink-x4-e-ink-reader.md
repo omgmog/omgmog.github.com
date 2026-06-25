@@ -2,6 +2,9 @@
 title: The Xteink X4 E-Ink Reader
 comments_issue: 155
 tags: [e-ink, hardware, review, 3d-printing]
+syndication:
+  - https://social.omgmog.net/2026/ive-finally-gotten-around-to-posting-my
+  - https://indieweb.social/@omgmog/116801075143476395
 ---
 
 I've had the Xteink X4 for a couple of months now, a £40 e-ink reader small enough to stick to the back of a phone. I'd seen a few posts about it ([Khairul Selamat](https://medium.com/@khairul_selamat/the-xteink-x4-e-ink-e-reader-flawed-little-device-i-cant-stop-using-82ef97ed6e6d), [Neil Brown](https://neilzone.co.uk/2026/03/initial-thoughts-on-the-tiny-xteink-x4-ereader/), [joelchrono](https://joelchrono.xyz/blog/early-days-with-xteink-x4/), and [moddedbear](https://moddedbear.com/i-love-reading-on-the-xteink-x4/) among them), so I got curious and ordered one.

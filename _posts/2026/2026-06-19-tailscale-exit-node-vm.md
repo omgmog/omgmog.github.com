@@ -2,6 +2,9 @@
 title: Running a Tailscale exit node in a local VM
 comments_issue: 154
 tags: [server, linux, guide]
+syndication:
+  - https://social.omgmog.net/2026/spent-a-few-hours-fighting-polkit-file
+  - https://indieweb.social/@omgmog/116805713025113160
 ---
 
 I run Tailscale on my laptops, phone and NAS, and wanted to add an exit node so I could route traffic through my own connection when I'm out and about. The obvious place to put it was the NAS, since it's already always on, but the NAS also holds everything I'd least like exposed if something went wrong. Making it double up as an exit node, with every device's outbound traffic flowing through it, didn't sit right. What I wanted instead was a disposable, isolated VM living on the same machine doing that job, leaving the NAS untouched.

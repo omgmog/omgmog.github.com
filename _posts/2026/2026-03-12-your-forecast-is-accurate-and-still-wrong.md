@@ -2,6 +2,9 @@
 title: "Your forecast is accurate and still wrong"
 comments_issue: 142
 tags: [ux, design]
+syndication:
+  - https://social.omgmog.net/2026/ive-written-a-new-blog-post-your
+  - https://indieweb.social/@omgmog/116216114443295294
 ---
 
 Icons work because they're fast. One glance, immediate meaning, no reading required. The tradeoff is that they compress complex information into a single symbol, and compression always drops something.

@@ -2,6 +2,9 @@
 title: "Inside the BBC's 3D World Cup viewer"
 comments_issue: 151
 tags: [web-development, world-cup]
+syndication:
+  - https://social.omgmog.net/2026/ive-posted-another-football-ish-post-postbbc-3d-world-cup-viewer
+  - https://indieweb.social/@omgmog/116756164983722385
 ---
 
 While updating scores for [AIWC26](https://blog.omgmog.net/AIWC26/) this week I came across [BBC Sport's 3D World Cup viewer](https://www.3d-bbc.co.uk/), which launched on 12 June for matches broadcast on the BBC. Every match played so far is sitting there to replay in full, not just the live ones. It's UK-only, it's a beta, and somehow this is my second football post in a row, despite still having _zero_ interest in the sport itself. The engineering underneath it is another matter.

@@ -2,6 +2,9 @@
 title: The DS Pico might be the last DS flashcart you'll ever need
 comments_issue: 140
 tags: [nintendo, retro-gaming, review]
+syndication:
+  - https://social.omgmog.net/2026/new-blog-post-the-ds-pico-might
+  - https://indieweb.social/@omgmog/116166191476904752
 ---
 
 In 2007 I was deep in the DS flashcart scene, cycling through a string of carts. [GBATemp](https://gbatemp.net) threads, firmware drama, custom skins, compatibility lists. By 2009 I'd moved on.
