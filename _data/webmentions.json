@@ -5458,6 +5458,142 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-06-25T05:38:43+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Yuri Krupenin",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:jztv4dkp755bqegh5xr3ysed/bafkreidb2duylcc5j4ndcdhekutc3h72rak7gasz572af7dw2b7676ofwq",
+        "url": "https://bsky.app/profile/yurikrupenin.bsky.social"
+      },
+      "url": "https://bsky.app/profile/yurikrupenin.bsky.social/post/3mp43iyc6yk2m",
+      "published": "2026-06-25T09:10:43+00:00",
+      "wm-received": "2026-06-25T09:10:54Z",
+      "wm-id": 2004709,
+      "wm-source": "https://bsky.brid.gy/convert/web/at://did:plc:jztv4dkp755bqegh5xr3ysed/app.bsky.feed.post/3mp43iyc6yk2m%23bridgy-fed-create-2026-06-25T09:10:47.657967+00:00",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "Прочитал что для той мелкой читалки которую все покупают есть кастомная прошивка которая превращает её в distraction-free печатную машинку (работает с bluetooth-клавиатурами)\n\n<a href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\">blog.omgmog.net/post/xteink-...</a>\n<a href=\"https://github.com/Josh-writes/microslate-firmware\">github.com/Josh-writes/...</a>",
+        "text": "Прочитал что для той мелкой читалки которую все покупают есть кастомная прошивка которая превращает её в distraction-free печатную машинку (работает с bluetooth-клавиатурами)\n\nblog.omgmog.net/post/xteink-...\ngithub.com/Josh-writes/..."
+      },
+      "mention-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-06-25T09:10:43+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mike Cane",
+        "photo": "https://avatars.webmention.io/assets.toot.cafe/dccffeeb39749124232d4fec8b57e7ec59c0bb55741cdcd2de95f68587f998e1.jpg",
+        "url": "https://mas.to/@mikecane"
+      },
+      "url": "https://mas.to/@mikecane/116810400036539742",
+      "published": "2026-06-25T11:00:54+00:00",
+      "wm-received": "2026-06-25T11:14:52Z",
+      "wm-id": 2004729,
+      "wm-source": "https://brid.gy/post/mastodon/@baldur@toot.cafe/116810400070574920",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>Odd device gaining more traction.</p><p><a href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\"><span>https://</span><span>blog.omgmog.net/post/xteink-x4</span><span>-e-ink-reader/</span></a></p><p><span class=\"h-card\"><a href=\"https://mastodon.social/@stroughtonsmith\" class=\"u-url\">@<span>stroughtonsmith</span></a></span> <span class=\"h-card\"><a href=\"https://mastodon.social/@WarnerCrocker\" class=\"u-url\">@<span>WarnerCrocker</span></a></span> <span class=\"h-card\"><a href=\"https://mastodon.social/@doctorlaura\" class=\"u-url\">@<span>doctorlaura</span></a></span> <span class=\"h-card\"><a href=\"https://toot.cafe/@baldur\" class=\"u-url\">@<span>baldur</span></a></span> <span class=\"h-card\"><a href=\"https://gardenstate.social/@glecharles\" class=\"u-url\">@<span>glecharles</span></a></span></p>\n<a href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\">The Xteink X4 E-Ink Reader — Max Glenister</a>",
+        "text": "Odd device gaining more traction.\n\nhttps://blog.omgmog.net/post/xteink-x4-e-ink-reader/\n\n@stroughtonsmith @WarnerCrocker @doctorlaura @baldur @glecharles\nThe Xteink X4 E-Ink Reader — Max Glenister"
+      },
+      "mention-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-06-25T11:00:54+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Alex Hyett",
+        "photo": "https://avatars.webmention.io/social.alexhyett.com/66b038d4205968ac811a1a3a2404093febbfccbeff3fdc8d575a59a6b2fd1619.jpg",
+        "url": "https://social.alexhyett.com/@alex"
+      },
+      "url": "https://social.alexhyett.com/@alex/statuses/01KVZAZ1AH0SQRJTXG0VAV3S1H",
+      "published": "2026-06-25T12:09:36+00:00",
+      "wm-received": "2026-06-25T12:14:43Z",
+      "wm-id": 2004734,
+      "wm-source": "https://brid.gy/comment/mastodon/@alex@social.alexhyett.com/01KVZAX6QGTQNP8KB0ADTWANYW/01KVZAZ1AH0SQRJTXG0VAV3S1H",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>Oh and thank you <span class=\"h-card\"><a href=\"https://indieweb.social/@omgmog\" class=\"u-url\">@<span>omgmog</span></a></span> for the write up.</p>\n<a class=\"u-mention\" href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\"></a>",
+        "text": "Oh and thank you @omgmog for the write up."
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-06-25T12:09:36+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "n0madz",
+        "photo": "https://cdn.masto.host/indiewebsocial/cache/accounts/avatars/116/376/228/846/672/408/original/c14c4749c84ce5a7.webp",
+        "url": "https://social.lol/@n0madz"
+      },
+      "url": "https://indieweb.social/@omgmog/116801075143476395#favorited-by-116376228846672408",
+      "published": null,
+      "wm-received": "2026-06-25T13:48:47Z",
+      "wm-id": 2004755,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/116801075143476395/116376228846672408",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-06-25T13:48:47Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "n0madz",
+        "photo": "https://cdn.masto.host/indiewebsocial/cache/accounts/avatars/116/376/228/846/672/408/original/c14c4749c84ce5a7.webp",
+        "url": "https://social.lol/@n0madz"
+      },
+      "url": "https://indieweb.social/@omgmog/116801075143476395#reblogged-by-116376228846672408",
+      "published": null,
+      "wm-received": "2026-06-25T13:48:48Z",
+      "wm-id": 2004756,
+      "wm-source": "https://brid.gy/repost/mastodon/@omgmog@indieweb.social/116801075143476395/116376228846672408",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "repost-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-06-25T13:48:48Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/a074803e9f0497c1bd4907a2e6155b2478a92f6e8c59936198192bbc6364d80d.png",
+        "url": "https://indieweb.social/@omgmog"
+      },
+      "url": "https://indieweb.social/@omgmog/116809147848930331",
+      "published": "2026-06-25T05:42:27+00:00",
+      "wm-received": "2026-06-25T14:20:09Z",
+      "wm-id": 2004760,
+      "wm-source": "https://brid.gy/comment/mastodon/@omgmog@indieweb.social/116801075143476395/116809147848930331",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.uno/@jollino\" class=\"u-url\">@<span>jollino</span></a></span> They can still be flashed by SD, but as it stands right now will never be flashable over USB. There's a good list of working/problematic firmwares here: <a href=\"https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTGCAP5BJhmS0E3cLlK5jZh7MeP9ZDforBp6f6kzfXUmZR7r0NIuUddxJ5A7q_HhBn86S7x17lu0MEn/pubhtml?gid=0&amp;single=true&amp;pli=1\"><span>https://</span><span>docs.google.com/spreadsheets/u</span><span>/1/d/e/2PACX-1vTGCAP5BJhmS0E3cLlK5jZh7MeP9ZDforBp6f6kzfXUmZR7r0NIuUddxJ5A7q_HhBn86S7x17lu0MEn/pubhtml?gid=0&amp;single=true&amp;pli=1</span></a></p>\n<a href=\"https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTGCAP5BJhmS0E3cLlK5jZh7MeP9ZDforBp6f6kzfXUmZR7r0NIuUddxJ5A7q_HhBn86S7x17lu0MEn/pubhtml?gid=0&amp;single=true&amp;pli=1\">Welcome BRICK Club</a>",
+        "text": "@jollino They can still be flashed by SD, but as it stands right now will never be flashable over USB. There's a good list of working/problematic firmwares here: https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTGCAP5BJhmS0E3cLlK5jZh7MeP9ZDforBp6f6kzfXUmZR7r0NIuUddxJ5A7q_HhBn86S7x17lu0MEn/pubhtml?gid=0&single=true&pli=1\nWelcome BRICK Club"
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-06-25T05:42:27+00:00"
     }
   ],
   "/post/xteink-x4-e-ink-reader": [
