@@ -36,7 +36,7 @@ jobs:
         uses: actions/cache@v5
         with:
           path: _data/webmentions.json
-          key: webmentions-${{ steps.morris-index.outputs.hash }}
+          key: webmentions-${{ steps.morris-index.outputs.hash }}-${{ hashFiles('scripts/fetch_webmentions.rb') }}
 
       - name: Fetch webmentions from Morris
         if: steps.wm-cache.outputs.cache-hit != 'true'
