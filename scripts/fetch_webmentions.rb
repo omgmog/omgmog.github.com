@@ -92,10 +92,19 @@ unless index
   exit 0
 end
 
+def canonical_path(path)
+  path = path.sub(/\.txt\z/, '')
+  path = "#{path}/" unless path.empty? || path.end_with?('/')
+  path
+end
+
 webmentions = {}
 total = 0
 
 index.each do |path, hashes|
+  canonical = canonical_path(path)
+  next if canonical.empty?
+
   mentions = hashes.filter_map do |hash|
     m = fetch_json("#{MORRIS_BASE}/mentions/#{hash}.json")
     next unless m
@@ -106,10 +115,12 @@ index.each do |path, hashes|
     enrich_lemmy_mention(m, lemmy_post_cache)
     m
   end
-  unless mentions.empty?
-    webmentions[path] = mentions
-    total += mentions.length
-  end
+  next if mentions.empty?
+
+  existing = webmentions[canonical] ||= []
+  existing.concat(mentions)
+  existing.uniq! { |m| m['wm-id'] || m['url'] }
+  total += mentions.length
 end
 
 def sanitize(obj)

@@ -27,7 +27,9 @@ module Jekyll
       site.posts.docs.each do |post|
         next if post.data["published"] == false
 
-        page_mentions = wm_data[post.url] || []
+        keys = [post.url, *post.data["alternate_urls"]].compact.uniq
+        page_mentions = keys.flat_map { |url| wm_data[url] || [] }
+          .uniq { |m| m["wm-id"] || m["url"] }
 
         wm_feed = page_mentions
           .select { |m| CONVERSATIONAL.include?(m["wm-property"]) || rich_bookmark?(m) }

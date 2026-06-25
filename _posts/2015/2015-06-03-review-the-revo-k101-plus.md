@@ -1,7 +1,7 @@
 ---
 
 title: "The Revo K101 Plus Portable Games Console"
-alternate_urls: "/reviews/review-the-revo-k101-plus/"
+alternate_urls: ["/reviews/review-the-revo-k101-plus/"]
 tags: [review, handheld, retro-gaming]
 archived_comments:
 - author: "I. S."

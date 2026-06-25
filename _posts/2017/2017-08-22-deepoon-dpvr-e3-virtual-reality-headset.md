@@ -1,7 +1,7 @@
 ---
 title: "The Deepoon DPVR E3 Virtual Reality Headset"
 tags: [vr, review, hardware]
-alternate_urls: "/reviews/deepoon-dpvr-e3-virtual-reality-headset/"
+alternate_urls: ["/reviews/deepoon-dpvr-e3-virtual-reality-headset/"]
 ---
 
 Today I'm reviewing the DPVR E3. This is a Virtual Reality headset with a high resolution display, comfortable straps and an experience that's similar to the Oculus Rift.

@@ -1,6 +1,6 @@
 ---
 title: "The GPD Pocket Ultra-mobile PC UMPC Laptop"
-alternate_urls: "/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/"
+alternate_urls: ["/reviews/a-laptop-that-fits-in-your-pocket-the-gpd-pocket/"]
 tags: [review, hardware, handheld, windows]
 ---
 
