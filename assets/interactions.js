@@ -81,6 +81,7 @@
                 url: ['url'],
                 community_name: ['community', 'name'],
                 community_url: ['community', 'url'],
+                community_host: ['community', 'url'],
                 date: ['published'],
                 date_formatted: ['published']
             }
@@ -339,6 +340,13 @@
             if (attribute === 'subreddit') {
                 const match = (data.url || data['wm-source'] || '').match(/reddit\.com\/r\/([^/]+)/i);
                 value = match ? match[1] : '';
+            }
+            if (attribute === 'community_host') {
+                try {
+                    value = new URL(value).hostname;
+                } catch (error) {
+                    value = '';
+                }
             }
             if (attribute === 'domain') {
                 // extract the hostname from the url

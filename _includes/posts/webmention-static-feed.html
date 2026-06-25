@@ -26,15 +26,19 @@
       {% assign _subreddit = "" %}
       {% if _subreddit_parts.size > 1 %}{% assign _subreddit = _subreddit_parts[1] | split: "/" | first %}{% endif %}
       <article class="reply mention static-item" data-source="webmention" data-platform="reddit">
-        <div><p>Shared to <a href="https://www.reddit.com/r/{{ _subreddit }}" rel="nofollow">/r/{{ _subreddit }}</a> by {{ author_name }}: <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
+        <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-reddit-color"></use></svg>
+        <div><p>Shared on the <strong><a href="https://www.reddit.com/r/{{ _subreddit }}" rel="nofollow">/r/{{ _subreddit }}</a></strong> subreddit by <strong>{{ author_name }}</strong> on <a href="{{ mention_url }}" rel="nofollow"><time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></a></p></div>
       </article>
     {% elsif item['wm-property'] == "bookmark-of" and _platform == "hn" %}
       <article class="reply mention static-item" data-source="webmention" data-platform="hn">
-        <div><p>Shared on <a href="{{ mention_url }}" rel="nofollow">Hacker News</a> by {{ author_name }} on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
+        <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-hackernews"></use></svg>
+        <div><p>Shared on <strong><a href="https://news.ycombinator.com/" rel="nofollow">HN</a></strong> by <strong>{{ author_name }}</strong> on <a href="{{ mention_url }}" rel="nofollow"><time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></a></p></div>
       </article>
     {% elsif item['wm-property'] == "mention-of" and item.community %}
+      {% assign _community_host = item.community.url | split: "/" | slice: 2 | first %}
       <article class="reply mention static-item" data-source="webmention" data-platform="lemmy">
-        <div><p>Shared to <a href="{{ item.community.url }}" rel="nofollow">!{{ item.community.name }}</a> by {{ author_name }}: <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
+        <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-fediverse"></use></svg>
+        <div><p>Shared on the <strong><a href="{{ item.community.url }}" rel="nofollow">!{{ item.community.name }}@{{ _community_host }}</a></strong> community by <strong>{{ author_name }}</strong> on <a href="{{ mention_url }}" rel="nofollow"><time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></a></p></div>
       </article>
     {% elsif item['wm-property'] == "mention-of" %}
       {% if item.content.text %}

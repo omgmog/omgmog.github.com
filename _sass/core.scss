@@ -895,6 +895,8 @@ h3.post-title {
     $platform-reddit:   #ff4500;
     $platform-twitter:  #1da1f2;
     $platform-mastodon: #6364ff;
+    $platform-hn:       #ff6600;
+    $platform-lemmy:    #f47601;
 
     margin-top: var(--double-gutter-size);
 
@@ -993,7 +995,7 @@ h3.post-title {
         }
 
         $source-colors: (github: $source-github, archived: $source-archived);
-        $platform-colors: (reddit: $platform-reddit, twitter: $platform-twitter, mastodon: $platform-mastodon);
+        $platform-colors: (reddit: $platform-reddit, twitter: $platform-twitter, mastodon: $platform-mastodon, hn: $platform-hn, lemmy: $platform-lemmy);
         @each $key, $color in $source-colors   { &[data-source="#{$key}"] > div   { 
             border-left-color: $color; 
 
@@ -1035,8 +1037,20 @@ h3.post-title {
 
         &.mention {
             padding-left: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .platform-icon {
+                width: 1.5rem;
+                height: 1.5rem;
+                flex-shrink: 0;
+                border-radius: 0.3rem;
+            }
 
             > div {
+                flex: 1;
+                background: none;
                 border-left: none;
                 border-radius: 0.4rem;
                 &::before { display: none; }
