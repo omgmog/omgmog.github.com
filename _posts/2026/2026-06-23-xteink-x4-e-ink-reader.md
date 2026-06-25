@@ -10,6 +10,20 @@ I've had the Xteink X4 for a couple of months now, a £40 e-ink reader small eno
 
 {% include posts/figure.html src="2026-06/xteink/xteink-x4.png" %}{:.center}
 
+## Specs
+
+| Feature | Details |
+|---------|---------|
+| **Display** | 4.3-inch e-ink, 220 PPI, no front light, no touchscreen |
+| **Storage** | 16GB microSD card included, expandable to 256GB |
+| **Battery** | 650mAh, up to 14 days on 1-3 hours daily reading |
+| **Processor** | ESP32 |
+| **Connectivity** | Wi-Fi 2.4GHz, Bluetooth |
+| **Ports** | USB-C |
+| **Size** | 114 x 69 x 5.9mm |
+| **Weight** | 77g |
+{:.massive}
+
 ## First impressions
 
 Out of the box, the X4 is lightweight, properly light, the kind where I'd forget it's in my pocket. The display is crisp for its size, and the device ships with a branded 16GB microSD card (cute touch) plus a card reader and adhesive metal ring for MagSafe mounting.
