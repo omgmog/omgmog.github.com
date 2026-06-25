@@ -31,6 +31,11 @@
     <div><p>Shared to <a href="https://www.reddit.com/r/%subreddit%" rel="nofollow">/r/%subreddit%</a> by %author_name%: <a href="%url%" rel="nofollow">%url%</a> on <time datetime="%date%">%date_formatted%</time></p></div>
   </article>
 </script>
+<script type="text/template" id="tpl-bookmark-hn">
+  <article class="reply mention" data-source="webmention" data-platform="hn">
+    <div><p>Shared on <a href="%url%" rel="nofollow">Hacker News</a> by %author_name% on <time datetime="%date%">%date_formatted%</time></p></div>
+  </article>
+</script>
 <script type="text/template" id="tpl-mention-lemmy">
   <article class="reply mention" data-source="webmention" data-platform="lemmy">
     <div><p>Shared to <a href="%community_url%" rel="nofollow">!%community_name%</a> by %author_name%: <a href="%url%" rel="nofollow">%url%</a> on <time datetime="%date%">%date_formatted%</time></p></div>

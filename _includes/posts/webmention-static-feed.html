@@ -17,6 +17,7 @@
     {% if _is_author %}{% assign author_name = _author_display_name %}{% endif %}
     {% assign _platform = "web" %}
     {% if mention_url contains 'reddit.com' %}{% assign _platform = "reddit" %}
+    {% elsif mention_url contains 'news.ycombinator.com' %}{% assign _platform = "hn" %}
     {% elsif mention_url contains 'twitter.com' %}{% assign _platform = "twitter" %}
     {% elsif item['wm-source'] contains 'brid.gy' %}{% assign _platform = "mastodon" %}
     {% endif %}
@@ -26,6 +27,10 @@
       {% if _subreddit_parts.size > 1 %}{% assign _subreddit = _subreddit_parts[1] | split: "/" | first %}{% endif %}
       <article class="reply mention static-item" data-source="webmention" data-platform="reddit">
         <div><p>Shared to <a href="https://www.reddit.com/r/{{ _subreddit }}" rel="nofollow">/r/{{ _subreddit }}</a> by {{ author_name }}: <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
+      </article>
+    {% elsif item['wm-property'] == "bookmark-of" and _platform == "hn" %}
+      <article class="reply mention static-item" data-source="webmention" data-platform="hn">
+        <div><p>Shared on <a href="{{ mention_url }}" rel="nofollow">Hacker News</a> by {{ author_name }} on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
       </article>
     {% elsif item['wm-property'] == "mention-of" and item.community %}
       <article class="reply mention static-item" data-source="webmention" data-platform="lemmy">

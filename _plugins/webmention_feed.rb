@@ -11,6 +11,15 @@ module Jekyll
       !!((mention["url"].to_s + mention["wm-source"].to_s) =~ %r{reddit\.com/r/}i)
     end
 
+    def hn_bookmark?(mention)
+      return false unless mention["wm-property"] == "bookmark-of"
+      !!((mention["url"].to_s + mention["wm-source"].to_s) =~ %r{news\.ycombinator\.com}i)
+    end
+
+    def rich_bookmark?(mention)
+      reddit_bookmark?(mention) || hn_bookmark?(mention)
+    end
+
     def generate(site)
       wm_data = site.data["webmentions"] || {}
       gh_data = site.data["github_comments"] || {}
@@ -21,11 +30,11 @@ module Jekyll
         page_mentions = wm_data[post.url] || []
 
         wm_feed = page_mentions
-          .select { |m| CONVERSATIONAL.include?(m["wm-property"]) || reddit_bookmark?(m) }
+          .select { |m| CONVERSATIONAL.include?(m["wm-property"]) || rich_bookmark?(m) }
           .sort_by { |m| m["wm-received"] || m["published"] || "" }
 
         wm_likes = page_mentions
-          .select { |m| REACTIONS.include?(m["wm-property"]) && !reddit_bookmark?(m) }
+          .select { |m| REACTIONS.include?(m["wm-property"]) && !rich_bookmark?(m) }
           .sort_by { |m| m["wm-received"] || m["published"] || "" }
           .uniq { |m| m.dig("author", "url") || m.dig("author", "name") || m["url"] }
 
