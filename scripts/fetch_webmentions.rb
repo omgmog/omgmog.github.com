@@ -56,7 +56,7 @@ def enrich_bsky_mention(m, cache)
   m['author']['url'] = "https://bsky.app/profile/#{handle}"
 end
 
-LEMMY_URL_REGEX = %r{\Ahttps?://([^/]+)/post/(\d+)}i
+LEMMY_URL_REGEX = %r{\Ahttps?://([^/]*lemmy[^/]*)/post/(\d+)}i
 
 def enrich_lemmy_mention(m, cache)
   match = (m['url'] || m['wm-source']).to_s.match(LEMMY_URL_REGEX)
