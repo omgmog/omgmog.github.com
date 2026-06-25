@@ -4044,7 +4044,11 @@
       "rels": {
         "canonical": "https://lemmy.bestiver.se/post/869707"
       },
-      "sort_date": "2026-01-18T16:20:07Z"
+      "sort_date": "2026-01-18T16:20:07Z",
+      "community": {
+        "name": "lobsters",
+        "url": "https://lemmy.bestiver.se/c/lobsters"
+      }
     },
     {
       "type": "entry",
@@ -4436,7 +4440,11 @@
       "rels": {
         "canonical": "https://lemmy.world/post/43769132"
       },
-      "sort_date": "2026-03-02T15:06:25Z"
+      "sort_date": "2026-03-02T15:06:25Z",
+      "community": {
+        "name": "kagismallweb",
+        "url": "https://lemmy.world/c/kagismallweb"
+      }
     }
   ],
   "/post/ds-pico-flashcart/": [
@@ -4545,7 +4553,11 @@
       "rels": {
         "canonical": "https://lemmy.world/post/44380628"
       },
-      "sort_date": "2026-03-17T14:33:19Z"
+      "sort_date": "2026-03-17T14:33:19Z",
+      "community": {
+        "name": "kagismallweb",
+        "url": "https://lemmy.world/c/kagismallweb"
+      }
     },
     {
       "type": "entry",
@@ -5279,7 +5291,11 @@
       "rels": {
         "canonical": "https://lemmy.bestiver.se/post/1187721"
       },
-      "sort_date": "2026-06-24T17:30:06Z"
+      "sort_date": "2026-06-24T17:30:06Z",
+      "community": {
+        "name": "hackernews",
+        "url": "https://lemmy.bestiver.se/c/hackernews"
+      }
     },
     {
       "type": "entry",
