@@ -4057,11 +4057,11 @@
       "rels": {
         "canonical": "https://lemmy.bestiver.se/post/869707"
       },
-      "sort_date": "2026-01-18T16:20:07Z",
       "community": {
         "name": "lobsters",
         "url": "https://lemmy.bestiver.se/c/lobsters"
-      }
+      },
+      "sort_date": "2026-01-18T16:20:07Z"
     },
     {
       "type": "entry",
@@ -4453,11 +4453,11 @@
       "rels": {
         "canonical": "https://lemmy.world/post/43769132"
       },
-      "sort_date": "2026-03-02T15:06:25Z",
       "community": {
         "name": "kagismallweb",
         "url": "https://lemmy.world/c/kagismallweb"
-      }
+      },
+      "sort_date": "2026-03-02T15:06:25Z"
     }
   ],
   "/post/ds-pico-flashcart/": [
@@ -4566,11 +4566,11 @@
       "rels": {
         "canonical": "https://lemmy.world/post/44380628"
       },
-      "sort_date": "2026-03-17T14:33:19Z",
       "community": {
         "name": "kagismallweb",
         "url": "https://lemmy.world/c/kagismallweb"
-      }
+      },
+      "sort_date": "2026-03-17T14:33:19Z"
     },
     {
       "type": "entry",
@@ -5152,6 +5152,90 @@
         "canonical": "https://michaelharley.net/likes/2026/06/17/how-i-take-my-coffee-max-glenister/"
       },
       "sort_date": "2026-06-17T11:43:48"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/a074803e9f0497c1bd4907a2e6155b2478a92f6e8c59936198192bbc6364d80d.png",
+        "url": "https://indieweb.social/@omgmog"
+      },
+      "url": "https://indieweb.social/@omgmog/116815827570548055",
+      "published": "2026-06-26T10:01:12+00:00",
+      "wm-received": "2026-06-26T10:16:38Z",
+      "wm-id": 2004863,
+      "wm-source": "https://brid.gy/comment/mastodon/@omgmog@indieweb.social/116761722395801839/116815827570548055",
+      "wm-target": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>DAY 3 OF THE <a href=\"https://indieweb.social/tags/HEATWAVE\">#<span>HEATWAVE</span></a>: I still haven't got my shit together to make a batch of coldbrew 🧊☕ 💀</p>\n<a class=\"p-category\" href=\"https://indieweb.social/tags/heatwave\">heatwave</a>",
+        "text": "DAY 3 OF THE #HEATWAVE: I still haven't got my shit together to make a batch of coldbrew 🧊☕ 💀\nheatwave"
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-06-26T10:01:12+00:00"
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
+      "url": "https://indieweb.social/@jasper/116816077813668725",
+      "wm-source": "https://indieweb.social/@jasper/116816077813668725",
+      "published": "2026-06-26T11:04:50.468Z",
+      "wm-received": "2026-06-26T11:04:50.468Z",
+      "sort_date": "2026-06-26T11:04:50.468Z",
+      "author": {
+        "type": "card",
+        "name": "jasper",
+        "photo": "https://cdn.masto.host/indiewebsocial/accounts/avatars/108/214/416/457/176/743/original/a3f70a76d69a4a9a.jpeg",
+        "url": "https://indieweb.social/@jasper"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://indieweb.social/@omgmog\" class=\"u-url mention\">@<span>omgmog</span></a></span> ah, but it&#39;s sooo good to have a coldbrew in this heat! 🫠 That reminds me, I also need to make another batch 🧊</p>",
+        "text": "@ omgmog ah, but it's sooo good to have a coldbrew in this heat! 🫠 That reminds me, I also need to make another batch 🧊"
+      }
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
+      "url": "https://indieweb.social/@omgmog/116816169908638706",
+      "wm-source": "https://indieweb.social/@omgmog/116816169908638706",
+      "published": "2026-06-26T11:28:15.725Z",
+      "wm-received": "2026-06-26T11:28:15.725Z",
+      "sort_date": "2026-06-26T11:28:15.725Z",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://cdn.masto.host/indiewebsocial/accounts/avatars/108/203/153/148/988/770/original/5e3fa24003c1cd00.png",
+        "url": "https://indieweb.social/@omgmog"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://indieweb.social/@jasper\" class=\"u-url mention\">@<span>jasper</span></a></span> I suppose I could still enjoy some in 28c tomorrow, or 22c Sunday!</p>",
+        "text": "@ jasper I suppose I could still enjoy some in 28c tomorrow, or 22c Sunday!"
+      }
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
+      "url": "https://indieweb.social/@jasper/116816256894134174",
+      "wm-source": "https://indieweb.social/@jasper/116816256894134174",
+      "published": "2026-06-26T11:50:23.019Z",
+      "wm-received": "2026-06-26T11:50:23.019Z",
+      "sort_date": "2026-06-26T11:50:23.019Z",
+      "author": {
+        "type": "card",
+        "name": "jasper",
+        "photo": "https://cdn.masto.host/indiewebsocial/accounts/avatars/108/214/416/457/176/743/original/a3f70a76d69a4a9a.jpeg",
+        "url": "https://indieweb.social/@jasper"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://indieweb.social/@omgmog\" class=\"u-url mention\">@<span>omgmog</span></a></span> exactly! Go for it! 🙌</p>",
+        "text": "@ omgmog exactly! Go for it! 🙌"
+      }
     }
   ],
   "/post/sending-webmentions-on-deploy/": [
@@ -5302,11 +5386,11 @@
       "rels": {
         "canonical": "https://lemmy.bestiver.se/post/1187721"
       },
-      "sort_date": "2026-06-24T17:30:06Z",
       "community": {
         "name": "hackernews",
         "url": "https://lemmy.bestiver.se/c/hackernews"
-      }
+      },
+      "sort_date": "2026-06-24T17:30:06Z"
     },
     {
       "type": "entry",
@@ -5853,6 +5937,126 @@
         "canonical": "https://michaelharley.net/likes/2026/06/24/max-glenister/"
       },
       "sort_date": "2026-06-24T17:19:14"
+    }
+  ],
+  "/post/enriching-webmentions-from-third-party-platforms/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/new-post-about-webmentions-postenriching-webmentions-from-third-party-platforms",
+      "published": "2026-06-26T11:10:55+00:00",
+      "wm-received": "2026-06-26T11:11:14Z",
+      "wm-id": 2004871,
+      "wm-source": "https://social.omgmog.net/2026/new-post-about-webmentions-postenriching-webmentions-from-third-party-platforms",
+      "wm-target": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116816101713570207"
+      ],
+      "content": {
+        "html": "<p>New post about <a href=\"https://social.omgmog.net/tag/webmentions\" class=\"p-category\">#webmentions</a> <a href=\"https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/\" class=\"u-mention-of\">https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/</a></p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/\" class=\"u-mention-of\">https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/</a>",
+        "text": "New post about #webmentions https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/\n\n        \n                        https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-06-26T11:10:55+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Michael Harley",
+        "photo": "https://avatars.webmention.io/michaelharley.net/9d877b708614b8f23bb7afe1ac76b334ee646b40a4d31c80544a0c3f478a74a7.png",
+        "url": "https://michaelharley.net"
+      },
+      "url": "https://michaelharley.net/likes/2026/06/26/max-glenister/",
+      "published": "2026-06-26T12:05:59",
+      "wm-received": "2026-06-26T12:11:26Z",
+      "wm-id": 2004887,
+      "wm-source": "https://michaelharley.net/likes/2026/06/26/max-glenister/",
+      "wm-target": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://michaelharley.net/likes/2026/06/26/max-glenister/"
+      },
+      "sort_date": "2026-06-26T12:05:59"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Lucas Freeman",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/1fe9be922d68256f4d7fc2f7efe9afe88e8795271aba3cd2afcb776fd257182b.jpg",
+        "url": "https://social.lol/@lucasfreeman"
+      },
+      "url": "https://indieweb.social/@omgmog/116816101713570207#favorited-by-116723527721172369",
+      "published": null,
+      "wm-received": "2026-06-26T12:12:07Z",
+      "wm-id": 2004888,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/116816101713570207/116723527721172369",
+      "wm-target": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-06-26T12:12:07Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Lucas Freeman",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/1fe9be922d68256f4d7fc2f7efe9afe88e8795271aba3cd2afcb776fd257182b.jpg",
+        "url": "https://social.lol/@lucasfreeman"
+      },
+      "url": "https://indieweb.social/@omgmog/116816101713570207#reblogged-by-116723527721172369",
+      "published": null,
+      "wm-received": "2026-06-26T12:12:07Z",
+      "wm-id": 2004889,
+      "wm-source": "https://brid.gy/repost/mastodon/@omgmog@indieweb.social/116816101713570207/116723527721172369",
+      "wm-target": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-protocol": "webmention",
+      "repost-of": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-06-26T12:12:07Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Michael Harley",
+        "photo": "https://avatars.webmention.io/michaelharley.net/9d877b708614b8f23bb7afe1ac76b334ee646b40a4d31c80544a0c3f478a74a7.png",
+        "url": "https://michaelharley.net"
+      },
+      "url": "https://michaelharley.net/links/2026/06/26/enriching-webmentions-from-third-party-platforms/",
+      "published": "2026-06-26T12:23:09",
+      "wm-received": "2026-06-26T12:26:32Z",
+      "wm-id": 2004896,
+      "wm-source": "https://michaelharley.net/links/2026/06/26/enriching-webmentions-from-third-party-platforms/",
+      "wm-target": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-protocol": "webmention",
+      "name": "Enriching webmentions from third-party platforms",
+      "content": {
+        "html": "<p>I've been doing a bunch of work on my own webmentions implementation so found this to be an interesting read.</p>",
+        "text": "I've been doing a bunch of work on my own webmentions implementation so found this to be an interesting read."
+      },
+      "bookmark-of": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-property": "bookmark-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://michaelharley.net/links/2026/06/26/enriching-webmentions-from-third-party-platforms/"
+      },
+      "sort_date": "2026-06-26T12:23:09"
     }
   ]
 }
