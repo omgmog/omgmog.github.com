@@ -672,7 +672,7 @@
         // Helpers for author detection and platform classification
         const AUTHOR_GH_LOGIN = 'omgmog';
         const AUTHOR_DISPLAY_NAME = 'Max Glenister';
-        const AUTHOR_DOMAINS = ['omgmog.net', 'omgmog.github.io', 'twitter.com/omgmog'];
+        const AUTHOR_DOMAINS = ['omgmog.net', 'omgmog.github.io', 'twitter.com/omgmog', 'indieweb.social/@omgmog'];
         const checkIsAuthor = item => {
             if (item.type === 'comment') return item.user?.login?.toLowerCase() === AUTHOR_GH_LOGIN;
             const url = item.author?.url || '';
