@@ -34,6 +34,7 @@ DID_PLC_REGEX = /did:plc:[a-z0-9]+/i
 
 bsky_profile_cache = {}
 lemmy_post_cache = {}
+lobsters_post_cache = {}
 
 def fetch_bsky_profile(did, cache)
   return cache[did] if cache.key?(did)
@@ -85,6 +86,34 @@ def enrich_lemmy_mention(m, cache)
   end
 end
 
+LOBSTERS_URL_REGEX = %r{\Ahttps?://lobste\.rs/s/([a-z0-9]+)}i
+
+def enrich_lobsters_mention(m, cache)
+  match = (m['url'] || m['wm-source']).to_s.match(LOBSTERS_URL_REGEX)
+  return unless match
+
+  short_id = match[1]
+  return if cache.key?(short_id) && cache[short_id].nil?
+
+  data = cache[short_id] ||= fetch_json("https://lobste.rs/s/#{short_id}.json")
+  return unless data
+
+  m['published'] = data['created_at'] if data['created_at']
+
+  username = data['submitter_user']
+  return unless username
+
+  user_cache_key = "user:#{username}"
+  user = cache.key?(user_cache_key) ? cache[user_cache_key] : (cache[user_cache_key] = fetch_json("https://lobste.rs/~#{username}.json"))
+  return unless user
+
+  m['author'] ||= {}
+  m['author']['type'] = 'card'
+  m['author']['name'] = username
+  m['author']['photo'] = user['avatar_url'] ? "https://lobste.rs#{user['avatar_url']}" : m['author']['photo']
+  m['author']['url'] = "https://lobste.rs/~#{username}"
+end
+
 puts "Fetching Morris index..."
 index = fetch_json("#{MORRIS_BASE}/index.json")
 unless index
@@ -110,9 +139,10 @@ index.each do |path, hashes|
     next unless m
     source_domain = URI.parse(m['wm-source'] || '').host rescue nil
     next if source_domain && BLOCKED_DOMAINS.include?(source_domain)
-    m['sort_date'] = m['published'] || m['wm-received'] || ''
     enrich_bsky_mention(m, bsky_profile_cache)
     enrich_lemmy_mention(m, lemmy_post_cache)
+    enrich_lobsters_mention(m, lobsters_post_cache)
+    m['sort_date'] = m['published'] || m['wm-received'] || ''
     m
   end
   next if mentions.empty?

@@ -16,8 +16,13 @@ module Jekyll
       !!((mention["url"].to_s + mention["wm-source"].to_s) =~ %r{news\.ycombinator\.com}i)
     end
 
+    def lobsters_repost?(mention)
+      return false unless mention["wm-property"] == "repost-of"
+      !!((mention["url"].to_s + mention["wm-source"].to_s) =~ %r{lobste\.rs}i)
+    end
+
     def rich_bookmark?(mention)
-      reddit_bookmark?(mention) || hn_bookmark?(mention)
+      reddit_bookmark?(mention) || hn_bookmark?(mention) || lobsters_repost?(mention)
     end
 
     def generate(site)

@@ -96,6 +96,16 @@
                 date_formatted: ['published']
             }
         },
+        'bookmark-lobsters': {
+            template: getTemplateContent('tpl-bookmark-lobsters'),
+            element: '#feed',
+            attributes: {
+                author_name: ['author', 'name'],
+                url: ['url'],
+                date: ['published'],
+                date_formatted: ['published']
+            }
+        },
         'like': {
             template: getTemplateContent('tpl-like'),
             element: '#likes',
@@ -640,9 +650,10 @@
         const isRedditBookmark = m => m.type === 'bookmark' && /reddit\.com\/r\//i.test(m.url || m['wm-source'] || '');
         const isLemmyMention = m => m.type === 'mention' && !!m.community?.name;
         const isHNBookmark = m => m.type === 'bookmark' && /news\.ycombinator\.com/i.test(m.url || m['wm-source'] || '');
+        const isLobstersRepost = m => m.type === 'repost' && /lobste\.rs/i.test(m.url || m['wm-source'] || '');
 
-        // Merge feed items: wm replies+mentions + reddit/HN bookmarks + new github comments, sorted by date
-        const feedWm = wmData.filter(m => m.type === 'reply' || m.type === 'mention' || isRedditBookmark(m) || isHNBookmark(m));
+        // Merge feed items: wm replies+mentions + reddit/HN/Lobsters reposts + new github comments, sorted by date
+        const feedWm = wmData.filter(m => m.type === 'reply' || m.type === 'mention' || isRedditBookmark(m) || isHNBookmark(m) || isLobstersRepost(m));
         const newComments = commentsData.filter(c => !preRenderedCommentIds.has(c.id));
         const merged = [...feedWm, ...newComments].sort((a, b) =>
             new Date(a['wm-received'] || a.created_at || 0) - new Date(b['wm-received'] || b.created_at || 0)
@@ -673,6 +684,7 @@
             const source = item['wm-source'] || '';
             if (url.includes('reddit.com')) return 'reddit';
             if (url.includes('news.ycombinator.com')) return 'hn';
+            if (url.includes('lobste.rs')) return 'lobsters';
             if (url.includes('twitter.com')) return 'twitter';
             if (source.includes('brid.gy')) return 'mastodon';
             return 'web';
@@ -687,6 +699,7 @@
             if (isLemmyMention(item)) type = TYPES['mention-lemmy'];
             if (isRedditBookmark(item)) type = TYPES['bookmark-reddit'];
             if (isHNBookmark(item)) type = TYPES['bookmark-hn'];
+            if (isLobstersRepost(item)) type = TYPES['bookmark-lobsters'];
             if (!type) return;
 
             const isAuthor = checkIsAuthor(item);
@@ -713,7 +726,7 @@
             );
             const likesData = wmData.filter(m => {
                 if (m.type !== 'like' && m.type !== 'bookmark' && m.type !== 'repost') return false;
-                if (isRedditBookmark(m) || isHNBookmark(m)) return false;
+                if (isRedditBookmark(m) || isHNBookmark(m) || isLobstersRepost(m)) return false;
                 const key = m.author?.name || '';
                 if (!key || seenLikers.has(key)) return false;
                 seenLikers.add(key);

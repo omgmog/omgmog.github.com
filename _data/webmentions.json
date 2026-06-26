@@ -5637,12 +5637,12 @@
       "type": "entry",
       "author": {
         "type": "card",
-        "name": "",
-        "photo": "",
-        "url": ""
+        "name": "adaszko",
+        "photo": "https://lobste.rs/avatars/adaszko-100.png",
+        "url": "https://lobste.rs/~adaszko"
       },
       "url": "https://lobste.rs/s/oyurwh/xteink_x4_e_ink_reader",
-      "published": null,
+      "published": "2026-06-25T01:20:45.000-05:00",
       "wm-received": "2026-06-25T19:32:24Z",
       "wm-id": 2004783,
       "wm-source": "https://lobste.rs/s/oyurwh/xteink_x4_e_ink_reader",
@@ -5651,7 +5651,7 @@
       "repost-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
       "wm-property": "repost-of",
       "wm-private": false,
-      "sort_date": "2026-06-25T19:32:24Z"
+      "sort_date": "2026-06-25T01:20:45.000-05:00"
     },
     {
       "type": "entry",

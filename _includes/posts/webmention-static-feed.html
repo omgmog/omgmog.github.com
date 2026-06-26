@@ -18,10 +18,16 @@
     {% assign _platform = "web" %}
     {% if mention_url contains 'reddit.com' %}{% assign _platform = "reddit" %}
     {% elsif mention_url contains 'news.ycombinator.com' %}{% assign _platform = "hn" %}
+    {% elsif mention_url contains 'lobste.rs' %}{% assign _platform = "lobsters" %}
     {% elsif mention_url contains 'twitter.com' %}{% assign _platform = "twitter" %}
     {% elsif item['wm-source'] contains 'brid.gy' %}{% assign _platform = "mastodon" %}
     {% endif %}
-    {% if item['wm-property'] == "bookmark-of" and _platform == "reddit" %}
+    {% if item['wm-property'] == "repost-of" and _platform == "lobsters" %}
+      <article class="reply mention static-item" data-source="webmention" data-platform="lobsters">
+        <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-lobsters"></use></svg>
+        <div><p>Shared on <strong><a href="https://lobste.rs/" rel="nofollow">Lobsters</a></strong> by <strong>{{ author_name }}</strong> on <a href="{{ mention_url }}" rel="nofollow"><time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></a></p></div>
+      </article>
+    {% elsif item['wm-property'] == "bookmark-of" and _platform == "reddit" %}
       {% assign _subreddit_parts = mention_url | split: "/r/" %}
       {% assign _subreddit = "" %}
       {% if _subreddit_parts.size > 1 %}{% assign _subreddit = _subreddit_parts[1] | split: "/" | first %}{% endif %}
