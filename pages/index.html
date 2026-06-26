@@ -4,10 +4,6 @@ permalink: /
 layout: core
 ---
 
-{% assign first_section = site.data.homepage.sections | first %}
-<h3 class="wide-h3">{{ first_section.title }}</h3>
-{% include global/post-list-from-urls.html urls=first_section.urls %}
-
 <h3 class="wide-h3">Recent posts<a href="/archive">View all</a></h3>
 <ul class="post-list">
 {% for post in site.posts limit:5 %}
@@ -15,7 +11,7 @@ layout: core
 {% endfor %}
 </ul>
 
-{% for section in site.data.homepage.sections offset:1 %}
+{% for section in site.data.homepage.sections %}
   <h3 class="wide-h3">{{ section.title }}</h3>
   {% include global/post-list-from-urls.html urls=section.urls %}
 {% endfor %}
