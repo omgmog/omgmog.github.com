@@ -1,6 +1,5 @@
 ---
 title: Announcing Cardboctober
-hide_pager: true
 ---
 
 Throughout October Ben and I are working on a project called [Cardboctober](https://cardboctober.github.io). The challenge is hacking on something new every day using Google Cardboard.

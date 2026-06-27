@@ -2,6 +2,7 @@
 title: Enriching webmentions from third-party platforms
 comments_issue: 157
 tags: [indieweb, jekyll, programming]
+series: webmentions
 ---
 
 I keep finding new gaps in my webmention implementation. Mentions coming in from Bluesky, Lemmy and Lobsters were showing up with no author at all, just a blank avatar and an empty name. Reddit and Hacker News bookmarks fared a bit better, with a username attached, but got flattened into a generic "bookmarked" icon with no indication of where the post had actually been shared. Lobsters mentions also carried the wrong published date. None of these felt like they were pulling their weight compared to a proper webmention from a blog or Mastodon.

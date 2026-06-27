@@ -2,6 +2,7 @@
 title: Sending webmentions on deploy
 comments_issue: 153
 tags: [indieweb, jekyll, programming]
+series: webmentions
 ---
 
 I've spent a fair bit of time on the receiving end of webmentions, from [adding support for them](/post/adding-support-for-webmentions/) in the first place through to [fetching them at build time](/post/baking-webmentions-into-the-build/) and rendering them server-side so the discussion section doesn't flicker in over JS. What I'd never actually done was send the other half. Every link I've ever made out to another IndieWeb site has just sat there, silently not telling anyone I'd linked to them.

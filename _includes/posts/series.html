@@ -1,0 +1,9 @@
+{% assign series_docs = site.documents | where_exp: "doc", "doc.series == page.series" | sort: "date" %}
+{% assign series_info = site.data.series[page.series] %}
+<h3 class="wide-h3">Part of the "{{ series_info.title }}" series</h3>
+<ul class="post-grid series-list">
+{% for doc in series_docs %}
+  {% assign post = doc %}
+  {% include global/post-card.html %}
+{% endfor %}
+</ul>

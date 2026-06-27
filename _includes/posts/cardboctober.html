@@ -1,31 +1,13 @@
+{% if page.has_hack %}
 {% assign day_date = page.date|date:'%d' %}
 {% assign day_number = day_date|times:1 %}
-<h3 class="wide-h3">Cardboctober{% unless page.hide_pager %} day {{ day_number }}{% endunless %}</h3>
+<h3 class="wide-h3">Cardboctober day {{ day_number }}</h3>
 <div class="cardboctober-nav">
-{% if page.has_hack %}
 <p>
     <a href="https://cardboctober.github.io/max/{{ day_date }}/">View this Cardboctober hack</a> &bull; <a href="https://github.com/cardboctober/max/tree/master/{{ day_date }}/">View the source code on Github</a>
 </p>
 <p>
     View the other submissions for day {{ day_number}} on the <a href="https://cardboctober.github.io/#{{ day_date }}">Cardboctober website</a>.
 </p>
+</div>
 {% endif %}
-{% unless page.hide_pager %}
-<div class="prevnext">
-    {% if day_number > 1 %}
-    <a href="{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}">← Previous day</a>
-    {% else %}
-    <span class="prev disabled">← Previous day</span>
-    {% endif %}
-    <hr>
-    {% if day_number < 31 %}
-    <a href="{{ page.next.url }}" class="next" title="{{ page.next.title }}">Next day →</a>
-    {% else %}
-    <span class="next disabled">Next day →</span>
-    {% endif %}
-</div>
-{% endunless %}
-<p>
-    Check out all of my other Cardboctober posts here: <a href="{{ "/cardboctober" | relative_url }}">/cardboctober</a>.
-</p>
-</div>

@@ -2,6 +2,7 @@
 title: Adding support for Webmentions
 comments_issue: 114
 tags: [indieweb, web-development, jekyll, guide, programming]
+series: webmentions
 syndication:
   - https://indieweb.social/@omgmog/108203284974135392
 ---

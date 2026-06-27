@@ -98,7 +98,7 @@
         }
     })();
     </script>
-    {% if page.url == '/' or page.url == '/vr' %}{% include global/post-card-js.html %}{% endif %}
+    {% include global/post-card-js.html %}
     {% if content contains 'data-post-url' %}<script>
     document.addEventListener('DOMContentLoaded', function() {
         try {

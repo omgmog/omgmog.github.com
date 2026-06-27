@@ -34,6 +34,7 @@ defaults:
       layout: post
       tags: [vr, cardboctober]
       content_type: article
+      series: cardboctober
   - scope:
       type: "pages"
     values:
