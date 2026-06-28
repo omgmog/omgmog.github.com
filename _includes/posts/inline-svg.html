@@ -1,0 +1,4 @@
+<figure class="{{ include.class }}">
+{% include posts/svgs/{{ include.src }} %}
+{% if include.title %}<figcaption>{{ include.title | markdownify }}</figcaption>{% endif %}
+</figure>

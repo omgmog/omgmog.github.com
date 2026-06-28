@@ -1,0 +1,80 @@
+<svg viewBox="0 0 830 420" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Line chart of cumulative points for all seven entrants across the 17 real tournament dates, 11 to 27 June. Claude Sonnet 4.6 and Claude Fable 5 pull away in the second half, Ranking Bot tracks in the middle of the pack throughout, and GPT-5.5 and Human 1.0 fall behind from the final week onward.">
+<title>Cumulative points over the course of the group stage</title>
+<style>
+  text { fill: #1a1a1a; }
+  .axis, .tick, .gridline { stroke: #1a1a1a; }
+  .gridline { opacity: 0.12; }
+  .line { fill: none; stroke-width: 2.4; }
+  .line-a { stroke: #1a5fb4; }
+  .line-b { stroke: #5fa8f5; }
+  .line-c { stroke: #15a815; }
+  .line-d { stroke: #7fd47f; }
+  .line-e { stroke: #888888; }
+  .line-f { stroke: #d6261b; }
+  .line-g { stroke: #c77f00; }
+  .label-a { fill: #1a5fb4; }
+  .label-b { fill: #5fa8f5; }
+  .label-c { fill: #15a815; }
+  .label-d { fill: #7fd47f; }
+  .label-e { fill: #888888; }
+  .label-f { fill: #d6261b; }
+  .label-g { fill: #c77f00; }
+  @media (prefers-color-scheme: dark) {
+    text { fill: #f0f0f0; }
+    .axis, .tick, .gridline { stroke: #f0f0f0; }
+    .line-a { stroke: #5fa8f5; }
+    .line-b { stroke: #9bc6f7; }
+    .line-c { stroke: #19e619; }
+    .line-d { stroke: #a3eaa3; }
+    .line-e { stroke: #aaaaaa; }
+    .line-f { stroke: #ff7b72; }
+    .line-g { stroke: #e0a030; }
+    .label-a { fill: #5fa8f5; }
+    .label-b { fill: #9bc6f7; }
+    .label-c { fill: #19e619; }
+    .label-d { fill: #a3eaa3; }
+    .label-e { fill: #aaaaaa; }
+    .label-f { fill: #ff7b72; }
+    .label-g { fill: #e0a030; }
+  }
+</style>
+<line class="axis" x1="50" y1="30" x2="50" y2="380" stroke-width="1.5"/>
+<line class="axis" x1="50" y1="380" x2="640" y2="380" stroke-width="1.5"/>
+<line class="gridline" x1="50" y1="380.0" x2="640" y2="380.0" stroke-width="1"/>
+<text x="40" y="384.0" font-size="11" text-anchor="end">0</text>
+<line class="gridline" x1="50" y1="330.0" x2="640" y2="330.0" stroke-width="1"/>
+<text x="40" y="334.0" font-size="11" text-anchor="end">10</text>
+<line class="gridline" x1="50" y1="280.0" x2="640" y2="280.0" stroke-width="1"/>
+<text x="40" y="284.0" font-size="11" text-anchor="end">20</text>
+<line class="gridline" x1="50" y1="230.0" x2="640" y2="230.0" stroke-width="1"/>
+<text x="40" y="234.0" font-size="11" text-anchor="end">30</text>
+<line class="gridline" x1="50" y1="180.0" x2="640" y2="180.0" stroke-width="1"/>
+<text x="40" y="184.0" font-size="11" text-anchor="end">40</text>
+<line class="gridline" x1="50" y1="130.0" x2="640" y2="130.0" stroke-width="1"/>
+<text x="40" y="134.0" font-size="11" text-anchor="end">50</text>
+<line class="gridline" x1="50" y1="80.0" x2="640" y2="80.0" stroke-width="1"/>
+<text x="40" y="84.0" font-size="11" text-anchor="end">60</text>
+<line class="gridline" x1="50" y1="30.0" x2="640" y2="30.0" stroke-width="1"/>
+<text x="40" y="34.0" font-size="11" text-anchor="end">70</text>
+<line class="tick" x1="50.0" y1="380" x2="50.0" y2="386" stroke-width="1"/>
+<text x="50.0" y="402.0" font-size="11" text-anchor="middle">06-11</text>
+<line class="tick" x1="345.0" y1="380" x2="345.0" y2="386" stroke-width="1"/>
+<text x="345.0" y="402.0" font-size="11" text-anchor="middle">06-19</text>
+<line class="tick" x1="640.0" y1="380" x2="640.0" y2="386" stroke-width="1"/>
+<text x="640.0" y="402.0" font-size="11" text-anchor="middle">06-27</text>
+<text x="14" y="205.0" font-size="13" text-anchor="middle" transform="rotate(-90 14 205.0)">cumulative points</text>
+<polyline class="line line-a" points="50.0,350.0 86.9,330.0 123.8,325.0 160.6,315.0 197.5,315.0 234.4,300.0 271.2,285.0 308.1,270.0 345.0,260.0 381.9,240.0 418.8,225.0 455.6,195.0 492.5,180.0 529.4,150.0 566.2,125.0 603.1,90.0 640.0,45.0"/>
+<polyline class="line line-b" points="50.0,365.0 86.9,345.0 123.8,330.0 160.6,320.0 197.5,320.0 234.4,305.0 271.2,290.0 308.1,275.0 345.0,250.0 381.9,230.0 418.8,215.0 455.6,175.0 492.5,160.0 529.4,140.0 566.2,120.0 603.1,80.0 640.0,60.0"/>
+<polyline class="line line-c" points="50.0,365.0 86.9,360.0 123.8,355.0 160.6,345.0 197.5,345.0 234.4,330.0 271.2,310.0 308.1,295.0 345.0,270.0 381.9,250.0 418.8,235.0 455.6,210.0 492.5,195.0 529.4,180.0 566.2,145.0 603.1,105.0 640.0,70.0"/>
+<polyline class="line line-d" points="50.0,365.0 86.9,345.0 123.8,340.0 160.6,330.0 197.5,330.0 234.4,315.0 271.2,300.0 308.1,285.0 345.0,270.0 381.9,255.0 418.8,240.0 455.6,205.0 492.5,190.0 529.4,150.0 566.2,125.0 603.1,95.0 640.0,70.0"/>
+<polyline class="line line-e" points="50.0,360.0 86.9,355.0 123.8,335.0 160.6,330.0 197.5,330.0 234.4,315.0 271.2,305.0 308.1,290.0 345.0,275.0 381.9,255.0 418.8,240.0 455.6,215.0 492.5,200.0 529.4,170.0 566.2,160.0 603.1,120.0 640.0,85.0"/>
+<polyline class="line line-f" points="50.0,365.0 86.9,360.0 123.8,355.0 160.6,340.0 197.5,340.0 234.4,325.0 271.2,315.0 308.1,305.0 345.0,285.0 381.9,265.0 418.8,250.0 455.6,215.0 492.5,200.0 529.4,190.0 566.2,175.0 603.1,140.0 640.0,120.0"/>
+<polyline class="line line-g" points="50.0,375.0 86.9,360.0 123.8,355.0 160.6,340.0 197.5,325.0 234.4,315.0 271.2,305.0 308.1,300.0 345.0,280.0 381.9,275.0 418.8,265.0 455.6,250.0 492.5,235.0 529.4,205.0 566.2,175.0 603.1,140.0 640.0,120.0"/>
+<text class="label-a" x="648.0" y="49.0" font-size="12" text-anchor="start">Claude Sonnet 4.6</text>
+<text class="label-b" x="648.0" y="64.0" font-size="12" text-anchor="start">Claude Fable 5</text>
+<text class="label-c" x="648.0" y="77.0" font-size="12" text-anchor="start">Gemini 3.1 Pro</text>
+<text class="label-d" x="648.0" y="90.0" font-size="12" text-anchor="start">Gemini 3.5 Flash</text>
+<text class="label-e" x="648.0" y="103.0" font-size="12" text-anchor="start">Ranking Bot</text>
+<text class="label-f" x="648.0" y="124.0" font-size="12" text-anchor="start">GPT-5.5</text>
+<text class="label-g" x="648.0" y="137.0" font-size="12" text-anchor="start">Human 1.0</text>
+</svg>

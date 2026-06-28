@@ -1430,6 +1430,11 @@ figure {
 
     &.massive img { width: 100%; }
 
+    &.full-width {
+        picture { width: 100%; }
+        img { width: 100%; }
+    }
+
     &.image-with-blurb {
         display: flex;
         flex-direction: row;

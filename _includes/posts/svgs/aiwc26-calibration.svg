@@ -1,0 +1,75 @@
+<svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Scatter plot of average stated confidence against actual hit rate for each AI model, with a dashed perfectly-calibrated line. GPT-5.5 and Gemini 3.5 Flash sit above the line (overconfident), Gemini 3.1 Pro sits on it, and Claude Fable 5 and Claude Sonnet 4.6 sit below it (underconfident).">
+<title>Confidence vs actual hit rate by entrant</title>
+<style>
+  text { fill: #1a1a1a; }
+  .axis, .tick { stroke: #1a1a1a; }
+  .diagonal { stroke: #1a1a1a; opacity: 0.4; }
+  .diagonal-label { fill: #1a1a1a; opacity: 0.6; }
+  .dot-blue { fill: #1a5fb4; }
+  .dot-red { fill: #d6261b; }
+  .dot-grey { fill: #1a1a1a; opacity: 0.55; }
+  .label-blue { fill: #1a5fb4; font-weight: 700; }
+  .label-red { fill: #d6261b; }
+  .label-grey { fill: #1a1a1a; opacity: 0.55; }
+  @media (prefers-color-scheme: dark) {
+    text { fill: #f0f0f0; }
+    .axis, .tick { stroke: #f0f0f0; }
+    .diagonal { stroke: #f0f0f0; opacity: 0.4; }
+    .diagonal-label { fill: #f0f0f0; opacity: 0.6; }
+    .dot-blue { fill: #5fa8f5; }
+    .dot-red { fill: #ff3b30; }
+    .dot-grey { fill: #f0f0f0; opacity: 0.55; }
+    .label-blue { fill: #5fa8f5; font-weight: 700; }
+    .label-red { fill: #ff3b30; }
+    .label-grey { fill: #f0f0f0; opacity: 0.55; }
+  }
+</style>
+<line class="axis" x1="70" y1="40" x2="70" y2="420" stroke-width="1.5"/>
+<line class="axis" x1="70" y1="420" x2="600" y2="420" stroke-width="1.5"/>
+<line class="diagonal" x1="70.0" y1="420.0" x2="600.0" y2="40.0" stroke-width="1.5" stroke-dasharray="5,5"/>
+<text class="diagonal-label" x="573.5" y="84.3" font-size="13" text-anchor="end">perfectly calibrated</text>
+<line class="tick" x1="70.0" y1="420" x2="70.0" y2="426" stroke-width="1"/>
+<text x="70.0" y="442" font-size="12" text-anchor="middle">0.40</text>
+<line class="tick" x1="64" y1="420.0" x2="70" y2="420.0" stroke-width="1"/>
+<text x="58" y="424.0" font-size="12" text-anchor="end">0.40</text>
+<line class="tick" x1="158.3" y1="420" x2="158.3" y2="426" stroke-width="1"/>
+<text x="158.3" y="442" font-size="12" text-anchor="middle">0.45</text>
+<line class="tick" x1="64" y1="356.7" x2="70" y2="356.7" stroke-width="1"/>
+<text x="58" y="360.7" font-size="12" text-anchor="end">0.45</text>
+<line class="tick" x1="246.7" y1="420" x2="246.7" y2="426" stroke-width="1"/>
+<text x="246.7" y="442" font-size="12" text-anchor="middle">0.50</text>
+<line class="tick" x1="64" y1="293.3" x2="70" y2="293.3" stroke-width="1"/>
+<text x="58" y="297.3" font-size="12" text-anchor="end">0.50</text>
+<line class="tick" x1="335.0" y1="420" x2="335.0" y2="426" stroke-width="1"/>
+<text x="335.0" y="442" font-size="12" text-anchor="middle">0.55</text>
+<line class="tick" x1="64" y1="230.0" x2="70" y2="230.0" stroke-width="1"/>
+<text x="58" y="234.0" font-size="12" text-anchor="end">0.55</text>
+<line class="tick" x1="423.3" y1="420" x2="423.3" y2="426" stroke-width="1"/>
+<text x="423.3" y="442" font-size="12" text-anchor="middle">0.60</text>
+<line class="tick" x1="64" y1="166.7" x2="70" y2="166.7" stroke-width="1"/>
+<text x="58" y="170.7" font-size="12" text-anchor="end">0.60</text>
+<line class="tick" x1="511.7" y1="420" x2="511.7" y2="426" stroke-width="1"/>
+<text x="511.7" y="442" font-size="12" text-anchor="middle">0.65</text>
+<line class="tick" x1="64" y1="103.3" x2="70" y2="103.3" stroke-width="1"/>
+<text x="58" y="107.3" font-size="12" text-anchor="end">0.65</text>
+<line class="tick" x1="600.0" y1="420" x2="600.0" y2="426" stroke-width="1"/>
+<text x="600.0" y="442" font-size="12" text-anchor="middle">0.70</text>
+<line class="tick" x1="64" y1="40.0" x2="70" y2="40.0" stroke-width="1"/>
+<text x="58" y="44.0" font-size="12" text-anchor="end">0.70</text>
+<text x="335.0" y="465" font-size="14" text-anchor="middle">average stated confidence</text>
+<text x="20" y="230.0" font-size="14" text-anchor="middle" transform="rotate(-90 20 230.0)">actual hit rate</text>
+<circle class="dot-red" cx="76" cy="490" r="5"/>
+<text class="label-red" x="86" y="494" font-size="12" text-anchor="start">overconfident</text>
+<circle class="dot-blue" cx="220" cy="490" r="5"/>
+<text class="label-blue" x="230" y="494" font-size="12" text-anchor="start">underconfident</text>
+<circle class="dot-red" cx="494.0" cy="217.3" r="6"/>
+<text class="label-red" x="494.0" y="237.3" font-size="13" text-anchor="middle">GPT-5.5</text>
+<circle class="dot-red" cx="529.3" cy="192.0" r="6"/>
+<text class="label-red" x="529.3" y="176.0" font-size="13" text-anchor="middle">Gemini 3.5 Flash</text>
+<circle class="dot-blue" cx="476.3" cy="116.0" r="6"/>
+<text class="label-blue" x="466.3" y="102.0" font-size="13" text-anchor="end">Gemini 3.1 Pro</text>
+<circle class="dot-blue" cx="229.0" cy="116.0" r="6"/>
+<text class="label-blue" x="241.0" y="120.0" font-size="13" text-anchor="start">Claude Fable 5</text>
+<circle class="dot-blue" cx="158.3" cy="103.3" r="6"/>
+<text class="label-blue" x="170.3" y="93.3" font-size="13" text-anchor="start">Claude Sonnet 4.6</text>
+</svg>

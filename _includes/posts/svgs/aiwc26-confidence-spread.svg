@@ -1,0 +1,415 @@
+<svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Strip plot of each AI model's 72 stated confidence values. Dots are circles for exact scores, triangles for correct results, and squares for wrong calls, coloured green, cyan and red respectively. Claude Sonnet 4.6 and Claude Fable 5 spread widely from around 0.3 to 0.7, with red squares across the whole range. Gemini 3.1 Pro, Gemini 3.5 Flash and GPT-5.5 cluster tightly above 0.4, reaching higher maximums but never expressing real doubt, with plenty of high-confidence red squares too.">
+<title>Stated confidence per fixture, shaped and coloured by result</title>
+<style>
+  text { fill: #1a1a1a; }
+  .axis, .tick, .rowline { stroke: #1a1a1a; }
+  .rowline { opacity: 0.15; }
+  .label { fill: #1a1a1a; }
+  .dot-exact { fill: #15a815; }
+  .dot-correct { fill: #009999; }
+  .dot-wrong { fill: #d6261b; }
+  @media (prefers-color-scheme: dark) {
+    text { fill: #f0f0f0; }
+    .axis, .tick, .rowline { stroke: #f0f0f0; }
+    .label { fill: #f0f0f0; }
+    .dot-exact { fill: #19e619; }
+    .dot-correct { fill: #00e5e5; }
+    .dot-wrong { fill: #ff3b30; }
+  }
+</style>
+<line class="axis" x1="150" y1="25" x2="150" y2="320" stroke-width="1.5"/>
+<line class="axis" x1="150" y1="320" x2="600" y2="320" stroke-width="1.5"/>
+<line class="tick" x1="180.0" y1="320" x2="180.0" y2="326" stroke-width="1"/>
+<text x="180.0" y="340.0" font-size="12" text-anchor="middle">0.3</text>
+<line class="tick" x1="240.0" y1="320" x2="240.0" y2="326" stroke-width="1"/>
+<text x="240.0" y="340.0" font-size="12" text-anchor="middle">0.4</text>
+<line class="tick" x1="300.0" y1="320" x2="300.0" y2="326" stroke-width="1"/>
+<text x="300.0" y="340.0" font-size="12" text-anchor="middle">0.5</text>
+<line class="tick" x1="360.0" y1="320" x2="360.0" y2="326" stroke-width="1"/>
+<text x="360.0" y="340.0" font-size="12" text-anchor="middle">0.6</text>
+<line class="tick" x1="420.0" y1="320" x2="420.0" y2="326" stroke-width="1"/>
+<text x="420.0" y="340.0" font-size="12" text-anchor="middle">0.7</text>
+<line class="tick" x1="480.0" y1="320" x2="480.0" y2="326" stroke-width="1"/>
+<text x="480.0" y="340.0" font-size="12" text-anchor="middle">0.8</text>
+<line class="tick" x1="540.0" y1="320" x2="540.0" y2="326" stroke-width="1"/>
+<text x="540.0" y="340.0" font-size="12" text-anchor="middle">0.9</text>
+<line class="tick" x1="600.0" y1="320" x2="600.0" y2="326" stroke-width="1"/>
+<text x="600.0" y="340.0" font-size="12" text-anchor="middle">1.0</text>
+<text x="375.0" y="365.0" font-size="14" text-anchor="middle">stated confidence per fixture (72 picks each)</text>
+<circle class="dot-exact" cx="155.00" cy="396.00" r="3.4" opacity="1.0"></circle>
+<text x="166" y="400" font-size="11" text-anchor="start">exact score</text>
+<polygon class="dot-correct" points="255.00,391.80 258.99,398.73 251.01,398.73" opacity="1.0"></polygon>
+<text x="266" y="400" font-size="11" text-anchor="start">correct result</text>
+<rect class="dot-wrong" x="370.00" y="393.00" width="6.00" height="6.00" opacity="1.0"></rect>
+<text x="384" y="400" font-size="11" text-anchor="start">wrong</text>
+<line class="rowline" x1="150" y1="59.0" x2="600" y2="59.0" stroke-width="1"/>
+<text class="label" x="140" y="63.0" font-size="13" text-anchor="end">Claude Sonnet 4.6</text>
+<circle class="dot-exact" cx="330.00" cy="63.53" r="3.4" opacity="0.75"><title>Mexico 2-0 South Africa (actual 2-0) — confidence 0.55</title></circle>
+<circle class="dot-exact" cx="240.00" cy="43.57" r="3.4" opacity="0.75"><title>South Korea 2-1 Czechia (actual 2-1) — confidence 0.40</title></circle>
+<polygon class="dot-correct" points="270.00,47.49 273.99,54.42 266.01,54.42" opacity="0.75"><title>Mexico 2-1 South Korea (actual 1-0) — confidence 0.45</title></polygon>
+<rect class="dot-wrong" x="267.00" y="47.01" width="6.00" height="6.00" opacity="0.75"><title>Czechia 2-1 South Africa (actual 1-1) — confidence 0.45</title></rect>
+<rect class="dot-wrong" x="177.00" y="63.68" width="6.00" height="6.00" opacity="0.75"><title>Czechia 1-1 Mexico (actual 0-3) — confidence 0.30</title></rect>
+<rect class="dot-wrong" x="237.00" y="61.74" width="6.00" height="6.00" opacity="0.75"><title>South Africa 1-2 South Korea (actual 1-0) — confidence 0.40</title></rect>
+<circle class="dot-exact" cx="240.00" cy="71.74" r="3.4" opacity="0.75"><title>Canada 1-2 Switzerland (actual 1-2) — confidence 0.40</title></circle>
+<polygon class="dot-correct" points="270.00,41.38 273.99,48.31 266.01,48.31" opacity="0.75"><title>Qatar 1-2 Bosnia &amp; Herzegovina (actual 1-3) — confidence 0.45</title></polygon>
+<polygon class="dot-correct" points="330.00,52.26 333.99,59.19 326.01,59.19" opacity="0.75"><title>Canada 2-0 Qatar (actual 6-0) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="270.00,39.53 273.99,46.46 266.01,46.46" opacity="0.75"><title>Bosnia &amp; Herzegovina 1-2 Switzerland (actual 1-4) — confidence 0.45</title></polygon>
+<circle class="dot-exact" cx="180.00" cy="49.86" r="3.4" opacity="0.75"><title>Bosnia &amp; Herzegovina 1-1 Canada (actual 1-1) — confidence 0.30</title></circle>
+<rect class="dot-wrong" x="327.00" y="56.17" width="6.00" height="6.00" opacity="0.75"><title>Switzerland 2-0 Qatar (actual 1-1) — confidence 0.55</title></rect>
+<rect class="dot-wrong" x="267.00" y="40.62" width="6.00" height="6.00" opacity="0.75"><title>Brazil 2-1 Morocco (actual 1-1) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="330.00,45.02 333.99,51.95 326.01,51.95" opacity="0.75"><title>Haiti 0-2 Scotland (actual 0-1) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="390.00,59.67 393.99,66.60 386.01,66.60" opacity="0.75"><title>Brazil 4-0 Haiti (actual 3-0) — confidence 0.65</title></polygon>
+<rect class="dot-wrong" x="177.00" y="57.46" width="6.00" height="6.00" opacity="0.75"><title>Scotland 1-1 Morocco (actual 0-1) — confidence 0.30</title></rect>
+<polygon class="dot-correct" points="330.00,45.72 333.99,52.65 326.01,52.65" opacity="0.75"><title>Scotland 0-2 Brazil (actual 0-3) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="330.00,57.70 333.99,64.63 326.01,64.63" opacity="0.75"><title>Morocco 3-0 Haiti (actual 4-2) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="240.00,64.85 243.99,71.78 236.01,71.78" opacity="0.75"><title>United States 2-1 Paraguay (actual 4-1) — confidence 0.40</title></polygon>
+<rect class="dot-wrong" x="267.00" y="39.97" width="6.00" height="6.00" opacity="0.75"><title>Australia 1-2 Türkiye (actual 2-0) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="240.00,64.73 243.99,71.66 236.01,71.66" opacity="0.75"><title>United States 2-1 Australia (actual 2-0) — confidence 0.40</title></polygon>
+<rect class="dot-wrong" x="237.00" y="62.44" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 2-1 Paraguay (actual 0-1) — confidence 0.40</title></rect>
+<rect class="dot-wrong" x="177.00" y="50.81" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 1-1 United States (actual 3-2) — confidence 0.30</title></rect>
+<polygon class="dot-correct" points="180.00,43.61 183.99,50.54 176.01,50.54" opacity="0.75"><title>Paraguay 1-1 Australia (actual 0-0) — confidence 0.30</title></polygon>
+<polygon class="dot-correct" points="390.00,69.65 393.99,76.58 386.01,76.58" opacity="0.75"><title>Germany 4-0 Curaçao (actual 7-1) — confidence 0.65</title></polygon>
+<rect class="dot-wrong" x="177.00" y="50.69" width="6.00" height="6.00" opacity="0.75"><title>Ivory Coast 1-1 Ecuador (actual 1-0) — confidence 0.30</title></rect>
+<circle class="dot-exact" cx="240.00" cy="45.77" r="3.4" opacity="0.75"><title>Germany 2-1 Ivory Coast (actual 2-1) — confidence 0.40</title></circle>
+<rect class="dot-wrong" x="297.00" y="42.90" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 2-0 Curaçao (actual 0-0) — confidence 0.50</title></rect>
+<rect class="dot-wrong" x="237.00" y="67.29" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 1-2 Germany (actual 2-1) — confidence 0.40</title></rect>
+<circle class="dot-exact" cx="300.00" cy="62.37" r="3.4" opacity="0.75"><title>Curaçao 0-2 Ivory Coast (actual 0-2) — confidence 0.50</title></circle>
+<rect class="dot-wrong" x="207.00" y="65.98" width="6.00" height="6.00" opacity="0.75"><title>Netherlands 2-1 Japan (actual 2-2) — confidence 0.35</title></rect>
+<polygon class="dot-correct" points="240.00,62.26 243.99,69.19 236.01,69.19" opacity="0.75"><title>Sweden 2-1 Tunisia (actual 5-1) — confidence 0.40</title></polygon>
+<polygon class="dot-correct" points="300.00,55.98 303.99,62.91 296.01,62.91" opacity="0.75"><title>Netherlands 2-0 Sweden (actual 5-1) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="240.00,70.17 243.99,77.10 236.01,77.10" opacity="0.75"><title>Tunisia 0-1 Japan (actual 0-4) — confidence 0.40</title></polygon>
+<polygon class="dot-correct" points="300.00,50.85 303.99,57.78 296.01,57.78" opacity="0.75"><title>Tunisia 0-2 Netherlands (actual 1-3) — confidence 0.50</title></polygon>
+<rect class="dot-wrong" x="237.00" y="57.69" width="6.00" height="6.00" opacity="0.75"><title>Japan 2-1 Sweden (actual 1-1) — confidence 0.40</title></rect>
+<rect class="dot-wrong" x="237.00" y="66.70" width="6.00" height="6.00" opacity="0.75"><title>Belgium 2-1 Egypt (actual 1-1) — confidence 0.40</title></rect>
+<rect class="dot-wrong" x="297.00" y="59.85" width="6.00" height="6.00" opacity="0.75"><title>Iran 2-0 New Zealand (actual 2-2) — confidence 0.50</title></rect>
+<rect class="dot-wrong" x="297.00" y="67.75" width="6.00" height="6.00" opacity="0.75"><title>Belgium 2-0 Iran (actual 0-0) — confidence 0.50</title></rect>
+<polygon class="dot-correct" points="330.00,57.31 333.99,64.24 326.01,64.24" opacity="0.75"><title>New Zealand 0-2 Egypt (actual 1-3) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="330.00,61.44 333.99,68.37 326.01,68.37" opacity="0.75"><title>New Zealand 0-3 Belgium (actual 1-5) — confidence 0.55</title></polygon>
+<circle class="dot-exact" cx="180.00" cy="44.25" r="3.4" opacity="0.75"><title>Egypt 1-1 Iran (actual 1-1) — confidence 0.30</title></circle>
+<rect class="dot-wrong" x="357.00" y="47.16" width="6.00" height="6.00" opacity="0.75"><title>Spain 3-0 Cape Verde (actual 0-0) — confidence 0.60</title></rect>
+<rect class="dot-wrong" x="267.00" y="49.16" width="6.00" height="6.00" opacity="0.75"><title>Saudi Arabia 1-2 Uruguay (actual 1-1) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="360.00,41.15 363.99,48.08 356.01,48.08" opacity="0.75"><title>Spain 3-0 Saudi Arabia (actual 4-0) — confidence 0.60</title></polygon>
+<rect class="dot-wrong" x="327.00" y="47.32" width="6.00" height="6.00" opacity="0.75"><title>Uruguay 2-0 Cape Verde (actual 2-2) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="240.00,41.84 243.99,48.77 236.01,48.77" opacity="0.75"><title>Uruguay 1-2 Spain (actual 0-1) — confidence 0.40</title></polygon>
+<polygon class="dot-correct" points="180.00,47.59 183.99,54.52 176.01,54.52" opacity="0.75"><title>Cape Verde 1-1 Saudi Arabia (actual 0-0) — confidence 0.30</title></polygon>
+<polygon class="dot-correct" points="240.00,59.21 243.99,66.14 236.01,66.14" opacity="0.75"><title>France 2-1 Senegal (actual 3-1) — confidence 0.40</title></polygon>
+<polygon class="dot-correct" points="300.00,50.41 303.99,57.34 296.01,57.34" opacity="0.75"><title>Iraq 0-2 Norway (actual 1-4) — confidence 0.50</title></polygon>
+<circle class="dot-exact" cx="360.00" cy="54.78" r="3.4" opacity="0.75"><title>France 3-0 Iraq (actual 3-0) — confidence 0.60</title></circle>
+<polygon class="dot-correct" points="210.00,45.36 213.99,52.29 206.01,52.29" opacity="0.75"><title>Norway 2-1 Senegal (actual 3-2) — confidence 0.35</title></polygon>
+<rect class="dot-wrong" x="177.00" y="48.43" width="6.00" height="6.00" opacity="0.75"><title>Norway 1-1 France (actual 1-4) — confidence 0.30</title></rect>
+<polygon class="dot-correct" points="300.00,68.98 303.99,75.91 296.01,75.91" opacity="0.75"><title>Senegal 2-0 Iraq (actual 5-0) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="270.00,59.61 273.99,66.54 266.01,66.54" opacity="0.75"><title>Argentina 2-1 Austria (actual 2-0) — confidence 0.45</title></polygon>
+<polygon class="dot-correct" points="300.00,58.34 303.99,65.27 296.01,65.27" opacity="0.75"><title>Algeria 2-0 Jordan (actual 2-1) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="270.00,44.12 273.99,51.05 266.01,51.05" opacity="0.75"><title>Argentina 2-1 Algeria (actual 3-0) — confidence 0.45</title></polygon>
+<polygon class="dot-correct" points="300.00,62.24 303.99,69.17 296.01,69.17" opacity="0.75"><title>Jordan 0-2 Austria (actual 1-3) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="330.00,43.87 333.99,50.80 326.01,50.80" opacity="0.75"><title>Jordan 0-3 Argentina (actual 1-3) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="180.00,50.88 183.99,57.81 176.01,57.81" opacity="0.75"><title>Austria 1-1 Algeria (actual 3-3) — confidence 0.30</title></polygon>
+<polygon class="dot-correct" points="180.00,70.70 183.99,77.63 176.01,77.63" opacity="0.75"><title>Portugal 1-1 Colombia (actual 0-0) — confidence 0.30</title></polygon>
+<rect class="dot-wrong" x="177.00" y="60.55" width="6.00" height="6.00" opacity="0.75"><title>DR Congo 1-1 Uzbekistan (actual 3-1) — confidence 0.30</title></rect>
+<rect class="dot-wrong" x="297.00" y="57.85" width="6.00" height="6.00" opacity="0.75"><title>Portugal 2-0 DR Congo (actual 1-1) — confidence 0.50</title></rect>
+<polygon class="dot-correct" points="300.00,60.80 303.99,67.73 296.01,67.73" opacity="0.75"><title>Uzbekistan 0-2 Colombia (actual 1-3) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="300.00,65.94 303.99,72.87 296.01,72.87" opacity="0.75"><title>Uzbekistan 0-2 Portugal (actual 0-5) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="300.00,63.76 303.99,70.69 296.01,70.69" opacity="0.75"><title>Colombia 2-0 DR Congo (actual 1-0) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="240.00,46.00 243.99,52.93 236.01,52.93" opacity="0.75"><title>England 2-1 Croatia (actual 4-2) — confidence 0.40</title></polygon>
+<rect class="dot-wrong" x="177.00" y="40.80" width="6.00" height="6.00" opacity="0.75"><title>Panama 1-1 Ghana (actual 0-1) — confidence 0.30</title></rect>
+<circle class="dot-exact" cx="300.00" cy="53.01" r="3.4" opacity="0.75"><title>England 2-0 Panama (actual 2-0) — confidence 0.50</title></circle>
+<circle class="dot-exact" cx="240.00" cy="51.46" r="3.4" opacity="0.75"><title>Ghana 1-2 Croatia (actual 1-2) — confidence 0.40</title></circle>
+<rect class="dot-wrong" x="297.00" y="46.61" width="6.00" height="6.00" opacity="0.75"><title>Ghana 0-2 England (actual 0-0) — confidence 0.50</title></rect>
+<polygon class="dot-correct" points="300.00,69.19 303.99,76.12 296.01,76.12" opacity="0.75"><title>Croatia 2-0 Panama (actual 1-0) — confidence 0.50</title></polygon>
+<line class="rowline" x1="150" y1="117.0" x2="600" y2="117.0" stroke-width="1"/>
+<text class="label" x="140" y="121.0" font-size="13" text-anchor="end">Claude Fable 5</text>
+<circle class="dot-exact" cx="390.00" cy="129.22" r="3.4" opacity="0.75"><title>Mexico 2-0 South Africa (actual 2-0) — confidence 0.65</title></circle>
+<rect class="dot-wrong" x="237.00" y="107.98" width="6.00" height="6.00" opacity="0.75"><title>South Korea 1-1 Czechia (actual 2-1) — confidence 0.40</title></rect>
+<polygon class="dot-correct" points="300.00,117.85 303.99,124.78 296.01,124.78" opacity="0.75"><title>Mexico 2-1 South Korea (actual 1-0) — confidence 0.50</title></polygon>
+<rect class="dot-wrong" x="237.00" y="110.61" width="6.00" height="6.00" opacity="0.75"><title>Czechia 1-0 South Africa (actual 1-1) — confidence 0.40</title></rect>
+<polygon class="dot-correct" points="240.00,126.26 243.99,133.19 236.01,133.19" opacity="0.75"><title>Czechia 0-1 Mexico (actual 0-3) — confidence 0.40</title></polygon>
+<rect class="dot-wrong" x="297.00" y="112.66" width="6.00" height="6.00" opacity="0.75"><title>South Africa 0-2 South Korea (actual 1-0) — confidence 0.50</title></rect>
+<rect class="dot-wrong" x="237.00" y="106.36" width="6.00" height="6.00" opacity="0.75"><title>Canada 1-1 Switzerland (actual 1-2) — confidence 0.40</title></rect>
+<polygon class="dot-correct" points="240.00,104.57 243.99,111.50 236.01,111.50" opacity="0.75"><title>Qatar 0-1 Bosnia &amp; Herzegovina (actual 1-3) — confidence 0.40</title></polygon>
+<polygon class="dot-correct" points="330.00,114.79 333.99,121.72 326.01,121.72" opacity="0.75"><title>Canada 2-0 Qatar (actual 6-0) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="300.00,105.09 303.99,112.02 296.01,112.02" opacity="0.75"><title>Bosnia &amp; Herzegovina 0-2 Switzerland (actual 1-4) — confidence 0.50</title></polygon>
+<circle class="dot-exact" cx="210.00" cy="119.75" r="3.4" opacity="0.75"><title>Bosnia &amp; Herzegovina 1-1 Canada (actual 1-1) — confidence 0.35</title></circle>
+<rect class="dot-wrong" x="327.00" y="126.92" width="6.00" height="6.00" opacity="0.75"><title>Switzerland 3-0 Qatar (actual 1-1) — confidence 0.55</title></rect>
+<rect class="dot-wrong" x="267.00" y="110.73" width="6.00" height="6.00" opacity="0.75"><title>Brazil 2-1 Morocco (actual 1-1) — confidence 0.45</title></rect>
+<circle class="dot-exact" cx="240.00" cy="107.88" r="3.4" opacity="0.75"><title>Haiti 0-1 Scotland (actual 0-1) — confidence 0.40</title></circle>
+<circle class="dot-exact" cx="390.00" cy="133.16" r="3.4" opacity="0.75"><title>Brazil 3-0 Haiti (actual 3-0) — confidence 0.65</title></circle>
+<polygon class="dot-correct" points="300.00,113.11 303.99,120.04 296.01,120.04" opacity="0.75"><title>Scotland 0-2 Morocco (actual 0-1) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="330.00,99.51 333.99,106.44 326.01,106.44" opacity="0.75"><title>Scotland 0-2 Brazil (actual 0-3) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="360.00,98.09 363.99,105.02 356.01,105.02" opacity="0.75"><title>Morocco 3-0 Haiti (actual 4-2) — confidence 0.60</title></polygon>
+<polygon class="dot-correct" points="270.00,100.12 273.99,107.05 266.01,107.05" opacity="0.75"><title>United States 1-0 Paraguay (actual 4-1) — confidence 0.45</title></polygon>
+<rect class="dot-wrong" x="237.00" y="118.14" width="6.00" height="6.00" opacity="0.75"><title>Australia 1-1 Türkiye (actual 2-0) — confidence 0.40</title></rect>
+<polygon class="dot-correct" points="300.00,122.29 303.99,129.22 296.01,129.22" opacity="0.75"><title>United States 2-1 Australia (actual 2-0) — confidence 0.50</title></polygon>
+<rect class="dot-wrong" x="207.00" y="111.47" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 1-1 Paraguay (actual 0-1) — confidence 0.35</title></rect>
+<rect class="dot-wrong" x="237.00" y="99.82" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 1-2 United States (actual 3-2) — confidence 0.40</title></rect>
+<rect class="dot-wrong" x="207.00" y="110.15" width="6.00" height="6.00" opacity="0.75"><title>Paraguay 1-0 Australia (actual 0-0) — confidence 0.35</title></rect>
+<polygon class="dot-correct" points="420.00,128.91 423.99,135.84 416.01,135.84" opacity="0.75"><title>Germany 3-0 Curaçao (actual 7-1) — confidence 0.70</title></polygon>
+<rect class="dot-wrong" x="237.00" y="114.95" width="6.00" height="6.00" opacity="0.75"><title>Ivory Coast 1-1 Ecuador (actual 1-0) — confidence 0.40</title></rect>
+<circle class="dot-exact" cx="300.00" cy="132.30" r="3.4" opacity="0.75"><title>Germany 2-1 Ivory Coast (actual 2-1) — confidence 0.50</title></circle>
+<rect class="dot-wrong" x="327.00" y="125.72" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 2-0 Curaçao (actual 0-0) — confidence 0.55</title></rect>
+<rect class="dot-wrong" x="237.00" y="98.13" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 1-1 Germany (actual 2-1) — confidence 0.40</title></rect>
+<circle class="dot-exact" cx="330.00" cy="124.17" r="3.4" opacity="0.75"><title>Curaçao 0-2 Ivory Coast (actual 0-2) — confidence 0.55</title></circle>
+<rect class="dot-wrong" x="267.00" y="119.90" width="6.00" height="6.00" opacity="0.75"><title>Netherlands 2-1 Japan (actual 2-2) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="240.00,114.00 243.99,120.93 236.01,120.93" opacity="0.75"><title>Sweden 1-0 Tunisia (actual 5-1) — confidence 0.40</title></polygon>
+<polygon class="dot-correct" points="270.00,105.23 273.99,112.16 266.01,112.16" opacity="0.75"><title>Netherlands 2-0 Sweden (actual 5-1) — confidence 0.45</title></polygon>
+<polygon class="dot-correct" points="330.00,117.38 333.99,124.31 326.01,124.31" opacity="0.75"><title>Tunisia 0-2 Japan (actual 0-4) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="330.00,100.18 333.99,107.11 326.01,107.11" opacity="0.75"><title>Tunisia 0-3 Netherlands (actual 1-3) — confidence 0.55</title></polygon>
+<rect class="dot-wrong" x="267.00" y="111.88" width="6.00" height="6.00" opacity="0.75"><title>Japan 2-1 Sweden (actual 1-1) — confidence 0.45</title></rect>
+<rect class="dot-wrong" x="297.00" y="112.50" width="6.00" height="6.00" opacity="0.75"><title>Belgium 2-1 Egypt (actual 1-1) — confidence 0.50</title></rect>
+<rect class="dot-wrong" x="327.00" y="128.74" width="6.00" height="6.00" opacity="0.75"><title>Iran 2-0 New Zealand (actual 2-2) — confidence 0.55</title></rect>
+<rect class="dot-wrong" x="297.00" y="126.21" width="6.00" height="6.00" opacity="0.75"><title>Belgium 2-0 Iran (actual 0-0) — confidence 0.50</title></rect>
+<polygon class="dot-correct" points="330.00,105.11 333.99,112.04 326.01,112.04" opacity="0.75"><title>New Zealand 0-2 Egypt (actual 1-3) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="360.00,112.82 363.99,119.75 356.01,119.75" opacity="0.75"><title>New Zealand 0-3 Belgium (actual 1-5) — confidence 0.60</title></polygon>
+<circle class="dot-exact" cx="210.00" cy="106.56" r="3.4" opacity="0.75"><title>Egypt 1-1 Iran (actual 1-1) — confidence 0.35</title></circle>
+<rect class="dot-wrong" x="387.00" y="127.40" width="6.00" height="6.00" opacity="0.75"><title>Spain 4-0 Cape Verde (actual 0-0) — confidence 0.65</title></rect>
+<rect class="dot-wrong" x="327.00" y="126.03" width="6.00" height="6.00" opacity="0.75"><title>Saudi Arabia 0-2 Uruguay (actual 1-1) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="360.00,106.25 363.99,113.18 356.01,113.18" opacity="0.75"><title>Spain 3-0 Saudi Arabia (actual 4-0) — confidence 0.60</title></polygon>
+<rect class="dot-wrong" x="327.00" y="118.51" width="6.00" height="6.00" opacity="0.75"><title>Uruguay 2-0 Cape Verde (actual 2-2) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="300.00,116.34 303.99,123.27 296.01,123.27" opacity="0.75"><title>Uruguay 0-2 Spain (actual 0-1) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="210.00,101.52 213.99,108.45 206.01,108.45" opacity="0.75"><title>Cape Verde 1-1 Saudi Arabia (actual 0-0) — confidence 0.35</title></polygon>
+<polygon class="dot-correct" points="300.00,121.33 303.99,128.26 296.01,128.26" opacity="0.75"><title>France 2-1 Senegal (actual 3-1) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="330.00,114.08 333.99,121.01 326.01,121.01" opacity="0.75"><title>Iraq 0-2 Norway (actual 1-4) — confidence 0.55</title></polygon>
+<circle class="dot-exact" cx="390.00" cy="126.05" r="3.4" opacity="0.75"><title>France 3-0 Iraq (actual 3-0) — confidence 0.65</title></circle>
+<polygon class="dot-correct" points="240.00,113.79 243.99,120.72 236.01,120.72" opacity="0.75"><title>Norway 2-1 Senegal (actual 3-2) — confidence 0.40</title></polygon>
+<polygon class="dot-correct" points="240.00,96.58 243.99,103.51 236.01,103.51" opacity="0.75"><title>Norway 1-2 France (actual 1-4) — confidence 0.40</title></polygon>
+<polygon class="dot-correct" points="330.00,107.09 333.99,114.02 326.01,114.02" opacity="0.75"><title>Senegal 2-0 Iraq (actual 5-0) — confidence 0.55</title></polygon>
+<circle class="dot-exact" cx="330.00" cy="101.39" r="3.4" opacity="0.75"><title>Argentina 2-0 Austria (actual 2-0) — confidence 0.55</title></circle>
+<polygon class="dot-correct" points="240.00,126.74 243.99,133.67 236.01,133.67" opacity="0.75"><title>Algeria 1-0 Jordan (actual 2-1) — confidence 0.40</title></polygon>
+<polygon class="dot-correct" points="330.00,125.10 333.99,132.03 326.01,132.03" opacity="0.75"><title>Argentina 2-0 Algeria (actual 3-0) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="300.00,123.57 303.99,130.50 296.01,130.50" opacity="0.75"><title>Jordan 0-2 Austria (actual 1-3) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="390.00,106.55 393.99,113.48 386.01,113.48" opacity="0.75"><title>Jordan 0-3 Argentina (actual 1-3) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="210.00,98.44 213.99,105.37 206.01,105.37" opacity="0.75"><title>Austria 1-1 Algeria (actual 3-3) — confidence 0.35</title></polygon>
+<rect class="dot-wrong" x="267.00" y="126.28" width="6.00" height="6.00" opacity="0.75"><title>Portugal 2-1 Colombia (actual 0-0) — confidence 0.45</title></rect>
+<rect class="dot-wrong" x="207.00" y="128.52" width="6.00" height="6.00" opacity="0.75"><title>DR Congo 1-1 Uzbekistan (actual 3-1) — confidence 0.35</title></rect>
+<rect class="dot-wrong" x="357.00" y="100.54" width="6.00" height="6.00" opacity="0.75"><title>Portugal 3-0 DR Congo (actual 1-1) — confidence 0.60</title></rect>
+<polygon class="dot-correct" points="300.00,112.34 303.99,119.27 296.01,119.27" opacity="0.75"><title>Uzbekistan 0-2 Colombia (actual 1-3) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="330.00,98.81 333.99,105.74 326.01,105.74" opacity="0.75"><title>Uzbekistan 0-2 Portugal (actual 0-5) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="300.00,121.26 303.99,128.19 296.01,128.19" opacity="0.75"><title>Colombia 2-0 DR Congo (actual 1-0) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="270.00,121.43 273.99,128.36 266.01,128.36" opacity="0.75"><title>England 2-1 Croatia (actual 4-2) — confidence 0.45</title></polygon>
+<rect class="dot-wrong" x="207.00" y="101.93" width="6.00" height="6.00" opacity="0.75"><title>Panama 1-1 Ghana (actual 0-1) — confidence 0.35</title></rect>
+<polygon class="dot-correct" points="360.00,112.00 363.99,118.93 356.01,118.93" opacity="0.75"><title>England 3-0 Panama (actual 2-0) — confidence 0.60</title></polygon>
+<polygon class="dot-correct" points="300.00,114.42 303.99,121.35 296.01,121.35" opacity="0.75"><title>Ghana 0-2 Croatia (actual 1-2) — confidence 0.50</title></polygon>
+<rect class="dot-wrong" x="327.00" y="106.37" width="6.00" height="6.00" opacity="0.75"><title>Ghana 0-2 England (actual 0-0) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="300.00,124.90 303.99,131.83 296.01,131.83" opacity="0.75"><title>Croatia 2-0 Panama (actual 1-0) — confidence 0.50</title></polygon>
+<line class="rowline" x1="150" y1="175.0" x2="600" y2="175.0" stroke-width="1"/>
+<text class="label" x="140" y="179.0" font-size="13" text-anchor="end">Gemini 3.1 Pro</text>
+<circle class="dot-exact" cx="390.00" cy="172.50" r="3.4" opacity="0.75"><title>Mexico 2-0 South Africa (actual 2-0) — confidence 0.65</title></circle>
+<rect class="dot-wrong" x="267.00" y="162.64" width="6.00" height="6.00" opacity="0.75"><title>South Korea 1-1 Czechia (actual 2-1) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="330.00,172.08 333.99,179.01 326.01,179.01" opacity="0.75"><title>Mexico 2-1 South Korea (actual 1-0) — confidence 0.55</title></polygon>
+<rect class="dot-wrong" x="357.00" y="179.47" width="6.00" height="6.00" opacity="0.75"><title>Czechia 2-0 South Africa (actual 1-1) — confidence 0.60</title></rect>
+<polygon class="dot-correct" points="300.00,161.09 303.99,168.02 296.01,168.02" opacity="0.75"><title>Czechia 1-2 Mexico (actual 0-3) — confidence 0.50</title></polygon>
+<rect class="dot-wrong" x="417.00" y="165.88" width="6.00" height="6.00" opacity="0.75"><title>South Africa 0-2 South Korea (actual 1-0) — confidence 0.70</title></rect>
+<rect class="dot-wrong" x="267.00" y="188.08" width="6.00" height="6.00" opacity="0.75"><title>Canada 1-1 Switzerland (actual 1-2) — confidence 0.45</title></rect>
+<rect class="dot-wrong" x="297.00" y="176.87" width="6.00" height="6.00" opacity="0.75"><title>Qatar 1-0 Bosnia &amp; Herzegovina (actual 1-3) — confidence 0.50</title></rect>
+<polygon class="dot-correct" points="390.00,168.79 393.99,175.72 386.01,175.72" opacity="0.75"><title>Canada 2-0 Qatar (actual 6-0) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="420.00,171.37 423.99,178.30 416.01,178.30" opacity="0.75"><title>Bosnia &amp; Herzegovina 0-2 Switzerland (actual 1-4) — confidence 0.70</title></polygon>
+<rect class="dot-wrong" x="327.00" y="159.69" width="6.00" height="6.00" opacity="0.75"><title>Bosnia &amp; Herzegovina 1-2 Canada (actual 1-1) — confidence 0.55</title></rect>
+<rect class="dot-wrong" x="447.00" y="163.06" width="6.00" height="6.00" opacity="0.75"><title>Switzerland 2-0 Qatar (actual 1-1) — confidence 0.75</title></rect>
+<rect class="dot-wrong" x="357.00" y="166.74" width="6.00" height="6.00" opacity="0.75"><title>Brazil 2-0 Morocco (actual 1-1) — confidence 0.60</title></rect>
+<polygon class="dot-correct" points="480.00,173.67 483.99,180.60 476.01,180.60" opacity="0.75"><title>Haiti 0-3 Scotland (actual 0-1) — confidence 0.80</title></polygon>
+<polygon class="dot-correct" points="510.00,162.03 513.99,168.96 506.01,168.96" opacity="0.75"><title>Brazil 4-0 Haiti (actual 3-0) — confidence 0.85</title></polygon>
+<circle class="dot-exact" cx="300.00" cy="165.91" r="3.4" opacity="0.75"><title>Scotland 0-1 Morocco (actual 0-1) — confidence 0.50</title></circle>
+<polygon class="dot-correct" points="420.00,156.87 423.99,163.80 416.01,163.80" opacity="0.75"><title>Scotland 0-2 Brazil (actual 0-3) — confidence 0.70</title></polygon>
+<polygon class="dot-correct" points="450.00,175.06 453.99,181.99 446.01,181.99" opacity="0.75"><title>Morocco 3-0 Haiti (actual 4-2) — confidence 0.75</title></polygon>
+<polygon class="dot-correct" points="390.00,162.00 393.99,168.93 386.01,168.93" opacity="0.75"><title>United States 2-0 Paraguay (actual 4-1) — confidence 0.65</title></polygon>
+<rect class="dot-wrong" x="357.00" y="185.17" width="6.00" height="6.00" opacity="0.75"><title>Australia 0-2 Türkiye (actual 2-0) — confidence 0.60</title></rect>
+<polygon class="dot-correct" points="330.00,182.48 333.99,189.41 326.01,189.41" opacity="0.75"><title>United States 2-1 Australia (actual 2-0) — confidence 0.55</title></polygon>
+<rect class="dot-wrong" x="237.00" y="158.06" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 1-1 Paraguay (actual 0-1) — confidence 0.40</title></rect>
+<rect class="dot-wrong" x="267.00" y="163.49" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 1-1 United States (actual 3-2) — confidence 0.45</title></rect>
+<rect class="dot-wrong" x="297.00" y="177.49" width="6.00" height="6.00" opacity="0.75"><title>Paraguay 2-1 Australia (actual 0-0) — confidence 0.50</title></rect>
+<polygon class="dot-correct" points="510.00,161.52 513.99,168.45 506.01,168.45" opacity="0.75"><title>Germany 4-0 Curaçao (actual 7-1) — confidence 0.85</title></polygon>
+<rect class="dot-wrong" x="327.00" y="160.06" width="6.00" height="6.00" opacity="0.75"><title>Ivory Coast 1-2 Ecuador (actual 1-0) — confidence 0.55</title></rect>
+<circle class="dot-exact" cx="360.00" cy="189.15" r="3.4" opacity="0.75"><title>Germany 2-1 Ivory Coast (actual 2-1) — confidence 0.60</title></circle>
+<rect class="dot-wrong" x="477.00" y="174.31" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 3-0 Curaçao (actual 0-0) — confidence 0.80</title></rect>
+<rect class="dot-wrong" x="237.00" y="171.11" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 1-1 Germany (actual 2-1) — confidence 0.40</title></rect>
+<circle class="dot-exact" cx="420.00" cy="184.24" r="3.4" opacity="0.75"><title>Curaçao 0-2 Ivory Coast (actual 0-2) — confidence 0.70</title></circle>
+<rect class="dot-wrong" x="327.00" y="181.99" width="6.00" height="6.00" opacity="0.75"><title>Netherlands 2-1 Japan (actual 2-2) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="300.00,160.74 303.99,167.67 296.01,167.67" opacity="0.75"><title>Sweden 1-0 Tunisia (actual 5-1) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="390.00,157.71 393.99,164.64 386.01,164.64" opacity="0.75"><title>Netherlands 2-0 Sweden (actual 5-1) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="360.00,168.56 363.99,175.49 356.01,175.49" opacity="0.75"><title>Tunisia 0-2 Japan (actual 0-4) — confidence 0.60</title></polygon>
+<polygon class="dot-correct" points="450.00,168.32 453.99,175.25 446.01,175.25" opacity="0.75"><title>Tunisia 0-3 Netherlands (actual 1-3) — confidence 0.75</title></polygon>
+<circle class="dot-exact" cx="270.00" cy="173.93" r="3.4" opacity="0.75"><title>Japan 1-1 Sweden (actual 1-1) — confidence 0.45</title></circle>
+<rect class="dot-wrong" x="387.00" y="179.44" width="6.00" height="6.00" opacity="0.75"><title>Belgium 2-0 Egypt (actual 1-1) — confidence 0.65</title></rect>
+<rect class="dot-wrong" x="327.00" y="177.63" width="6.00" height="6.00" opacity="0.75"><title>Iran 1-0 New Zealand (actual 2-2) — confidence 0.55</title></rect>
+<rect class="dot-wrong" x="447.00" y="187.73" width="6.00" height="6.00" opacity="0.75"><title>Belgium 3-0 Iran (actual 0-0) — confidence 0.75</title></rect>
+<polygon class="dot-correct" points="360.00,157.76 363.99,164.69 356.01,164.69" opacity="0.75"><title>New Zealand 0-1 Egypt (actual 1-3) — confidence 0.60</title></polygon>
+<polygon class="dot-correct" points="510.00,167.64 513.99,174.57 506.01,174.57" opacity="0.75"><title>New Zealand 0-4 Belgium (actual 1-5) — confidence 0.85</title></polygon>
+<circle class="dot-exact" cx="240.00" cy="169.78" r="3.4" opacity="0.75"><title>Egypt 1-1 Iran (actual 1-1) — confidence 0.40</title></circle>
+<rect class="dot-wrong" x="477.00" y="183.75" width="6.00" height="6.00" opacity="0.75"><title>Spain 3-0 Cape Verde (actual 0-0) — confidence 0.80</title></rect>
+<rect class="dot-wrong" x="417.00" y="163.84" width="6.00" height="6.00" opacity="0.75"><title>Saudi Arabia 0-2 Uruguay (actual 1-1) — confidence 0.70</title></rect>
+<polygon class="dot-correct" points="450.00,160.74 453.99,167.67 446.01,167.67" opacity="0.75"><title>Spain 2-0 Saudi Arabia (actual 4-0) — confidence 0.75</title></polygon>
+<rect class="dot-wrong" x="387.00" y="170.33" width="6.00" height="6.00" opacity="0.75"><title>Uruguay 2-0 Cape Verde (actual 2-2) — confidence 0.65</title></rect>
+<polygon class="dot-correct" points="300.00,168.26 303.99,175.19 296.01,175.19" opacity="0.75"><title>Uruguay 1-2 Spain (actual 0-1) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="270.00,163.61 273.99,170.54 266.01,170.54" opacity="0.75"><title>Cape Verde 1-1 Saudi Arabia (actual 0-0) — confidence 0.45</title></polygon>
+<polygon class="dot-correct" points="390.00,162.67 393.99,169.60 386.01,169.60" opacity="0.75"><title>France 2-0 Senegal (actual 3-1) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="420.00,184.55 423.99,191.48 416.01,191.48" opacity="0.75"><title>Iraq 0-2 Norway (actual 1-4) — confidence 0.70</title></polygon>
+<circle class="dot-exact" cx="510.00" cy="173.15" r="3.4" opacity="0.75"><title>France 3-0 Iraq (actual 3-0) — confidence 0.85</title></circle>
+<rect class="dot-wrong" x="267.00" y="183.74" width="6.00" height="6.00" opacity="0.75"><title>Norway 1-1 Senegal (actual 3-2) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="360.00,172.43 363.99,179.36 356.01,179.36" opacity="0.75"><title>Norway 1-3 France (actual 1-4) — confidence 0.60</title></polygon>
+<polygon class="dot-correct" points="390.00,156.20 393.99,163.13 386.01,163.13" opacity="0.75"><title>Senegal 2-0 Iraq (actual 5-0) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="420.00,187.02 423.99,193.95 416.01,193.95" opacity="0.75"><title>Argentina 3-0 Austria (actual 2-0) — confidence 0.70</title></polygon>
+<polygon class="dot-correct" points="390.00,181.71 393.99,188.64 386.01,188.64" opacity="0.75"><title>Algeria 2-0 Jordan (actual 2-1) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="360.00,186.03 363.99,192.96 356.01,192.96" opacity="0.75"><title>Argentina 2-0 Algeria (actual 3-0) — confidence 0.60</title></polygon>
+<polygon class="dot-correct" points="450.00,184.65 453.99,191.58 446.01,191.58" opacity="0.75"><title>Jordan 0-2 Austria (actual 1-3) — confidence 0.75</title></polygon>
+<polygon class="dot-correct" points="540.00,182.13 543.99,189.06 536.01,189.06" opacity="0.75"><title>Jordan 0-4 Argentina (actual 1-3) — confidence 0.90</title></polygon>
+<polygon class="dot-correct" points="240.00,159.96 243.99,166.89 236.01,166.89" opacity="0.75"><title>Austria 1-1 Algeria (actual 3-3) — confidence 0.40</title></polygon>
+<rect class="dot-wrong" x="327.00" y="171.53" width="6.00" height="6.00" opacity="0.75"><title>Portugal 2-1 Colombia (actual 0-0) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="300.00,161.50 303.99,168.43 296.01,168.43" opacity="0.75"><title>DR Congo 1-0 Uzbekistan (actual 3-1) — confidence 0.50</title></polygon>
+<rect class="dot-wrong" x="477.00" y="168.79" width="6.00" height="6.00" opacity="0.75"><title>Portugal 3-0 DR Congo (actual 1-1) — confidence 0.80</title></rect>
+<polygon class="dot-correct" points="420.00,156.46 423.99,163.39 416.01,163.39" opacity="0.75"><title>Uzbekistan 0-2 Colombia (actual 1-3) — confidence 0.70</title></polygon>
+<polygon class="dot-correct" points="510.00,166.87 513.99,173.80 506.01,173.80" opacity="0.75"><title>Uzbekistan 0-3 Portugal (actual 0-5) — confidence 0.85</title></polygon>
+<polygon class="dot-correct" points="390.00,186.56 393.99,193.49 386.01,193.49" opacity="0.75"><title>Colombia 2-0 DR Congo (actual 1-0) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="330.00,163.17 333.99,170.10 326.01,170.10" opacity="0.75"><title>England 1-0 Croatia (actual 4-2) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="390.00,180.03 393.99,186.96 386.01,186.96" opacity="0.75"><title>Panama 0-2 Ghana (actual 0-1) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="510.00,169.34 513.99,176.27 506.01,176.27" opacity="0.75"><title>England 3-0 Panama (actual 2-0) — confidence 0.85</title></polygon>
+<circle class="dot-exact" cx="300.00" cy="172.50" r="3.4" opacity="0.75"><title>Ghana 1-2 Croatia (actual 1-2) — confidence 0.50</title></circle>
+<rect class="dot-wrong" x="417.00" y="186.85" width="6.00" height="6.00" opacity="0.75"><title>Ghana 0-2 England (actual 0-0) — confidence 0.70</title></rect>
+<polygon class="dot-correct" points="450.00,186.89 453.99,193.82 446.01,193.82" opacity="0.75"><title>Croatia 2-0 Panama (actual 1-0) — confidence 0.75</title></polygon>
+<line class="rowline" x1="150" y1="233.0" x2="600" y2="233.0" stroke-width="1"/>
+<text class="label" x="140" y="237.0" font-size="13" text-anchor="end">Gemini 3.5 Flash</text>
+<circle class="dot-exact" cx="450.00" cy="234.81" r="3.4" opacity="0.75"><title>Mexico 2-0 South Africa (actual 2-0) — confidence 0.75</title></circle>
+<rect class="dot-wrong" x="267.00" y="237.09" width="6.00" height="6.00" opacity="0.75"><title>South Korea 1-1 Czechia (actual 2-1) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="360.00,217.59 363.99,224.52 356.01,224.52" opacity="0.75"><title>Mexico 2-1 South Korea (actual 1-0) — confidence 0.60</title></polygon>
+<rect class="dot-wrong" x="417.00" y="223.40" width="6.00" height="6.00" opacity="0.75"><title>Czechia 2-0 South Africa (actual 1-1) — confidence 0.70</title></rect>
+<rect class="dot-wrong" x="297.00" y="245.22" width="6.00" height="6.00" opacity="0.75"><title>Czechia 1-1 Mexico (actual 0-3) — confidence 0.50</title></rect>
+<rect class="dot-wrong" x="417.00" y="232.57" width="6.00" height="6.00" opacity="0.75"><title>South Africa 0-2 South Korea (actual 1-0) — confidence 0.70</title></rect>
+<circle class="dot-exact" cx="330.00" cy="234.37" r="3.4" opacity="0.75"><title>Canada 1-2 Switzerland (actual 1-2) — confidence 0.55</title></circle>
+<polygon class="dot-correct" points="300.00,236.85 303.99,243.78 296.01,243.78" opacity="0.75"><title>Qatar 0-1 Bosnia &amp; Herzegovina (actual 1-3) — confidence 0.50</title></polygon>
+<polygon class="dot-correct" points="420.00,214.42 423.99,221.35 416.01,221.35" opacity="0.75"><title>Canada 2-0 Qatar (actual 6-0) — confidence 0.70</title></polygon>
+<polygon class="dot-correct" points="360.00,231.53 363.99,238.46 356.01,238.46" opacity="0.75"><title>Bosnia &amp; Herzegovina 1-2 Switzerland (actual 1-4) — confidence 0.60</title></polygon>
+<circle class="dot-exact" cx="270.00" cy="233.09" r="3.4" opacity="0.75"><title>Bosnia &amp; Herzegovina 1-1 Canada (actual 1-1) — confidence 0.45</title></circle>
+<rect class="dot-wrong" x="477.00" y="241.46" width="6.00" height="6.00" opacity="0.75"><title>Switzerland 3-0 Qatar (actual 1-1) — confidence 0.80</title></rect>
+<rect class="dot-wrong" x="387.00" y="218.87" width="6.00" height="6.00" opacity="0.75"><title>Brazil 2-1 Morocco (actual 1-1) — confidence 0.65</title></rect>
+<polygon class="dot-correct" points="450.00,243.77 453.99,250.70 446.01,250.70" opacity="0.75"><title>Haiti 0-2 Scotland (actual 0-1) — confidence 0.75</title></polygon>
+<polygon class="dot-correct" points="540.00,215.16 543.99,222.09 536.01,222.09" opacity="0.75"><title>Brazil 4-0 Haiti (actual 3-0) — confidence 0.90</title></polygon>
+<polygon class="dot-correct" points="360.00,218.60 363.99,225.53 356.01,225.53" opacity="0.75"><title>Scotland 1-2 Morocco (actual 0-1) — confidence 0.60</title></polygon>
+<circle class="dot-exact" cx="510.00" cy="236.09" r="3.4" opacity="0.75"><title>Scotland 0-3 Brazil (actual 0-3) — confidence 0.85</title></circle>
+<polygon class="dot-correct" points="510.00,234.49 513.99,241.42 506.01,241.42" opacity="0.75"><title>Morocco 3-0 Haiti (actual 4-2) — confidence 0.85</title></polygon>
+<polygon class="dot-correct" points="420.00,220.20 423.99,227.13 416.01,227.13" opacity="0.75"><title>United States 2-0 Paraguay (actual 4-1) — confidence 0.70</title></polygon>
+<rect class="dot-wrong" x="327.00" y="217.65" width="6.00" height="6.00" opacity="0.75"><title>Australia 1-2 Türkiye (actual 2-0) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="360.00,241.48 363.99,248.41 356.01,248.41" opacity="0.75"><title>United States 2-1 Australia (actual 2-0) — confidence 0.60</title></polygon>
+<rect class="dot-wrong" x="297.00" y="221.76" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 1-0 Paraguay (actual 0-1) — confidence 0.50</title></rect>
+<rect class="dot-wrong" x="267.00" y="233.07" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 1-1 United States (actual 3-2) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="270.00,232.68 273.99,239.61 266.01,239.61" opacity="0.75"><title>Paraguay 1-1 Australia (actual 0-0) — confidence 0.45</title></polygon>
+<polygon class="dot-correct" points="570.00,226.18 573.99,233.11 566.01,233.11" opacity="0.75"><title>Germany 4-0 Curaçao (actual 7-1) — confidence 0.95</title></polygon>
+<rect class="dot-wrong" x="297.00" y="232.72" width="6.00" height="6.00" opacity="0.75"><title>Ivory Coast 1-1 Ecuador (actual 1-0) — confidence 0.50</title></rect>
+<circle class="dot-exact" cx="390.00" cy="233.74" r="3.4" opacity="0.75"><title>Germany 2-1 Ivory Coast (actual 2-1) — confidence 0.65</title></circle>
+<rect class="dot-wrong" x="507.00" y="244.12" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 3-0 Curaçao (actual 0-0) — confidence 0.85</title></rect>
+<rect class="dot-wrong" x="357.00" y="220.39" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 1-2 Germany (actual 2-1) — confidence 0.60</title></rect>
+<circle class="dot-exact" cx="480.00" cy="240.02" r="3.4" opacity="0.75"><title>Curaçao 0-2 Ivory Coast (actual 0-2) — confidence 0.80</title></circle>
+<rect class="dot-wrong" x="327.00" y="221.51" width="6.00" height="6.00" opacity="0.75"><title>Netherlands 2-1 Japan (actual 2-2) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="390.00,225.42 393.99,232.35 386.01,232.35" opacity="0.75"><title>Sweden 2-0 Tunisia (actual 5-1) — confidence 0.65</title></polygon>
+<rect class="dot-wrong" x="267.00" y="235.58" width="6.00" height="6.00" opacity="0.75"><title>Netherlands 1-1 Sweden (actual 5-1) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="420.00,222.30 423.99,229.23 416.01,229.23" opacity="0.75"><title>Tunisia 0-2 Japan (actual 0-4) — confidence 0.70</title></polygon>
+<polygon class="dot-correct" points="480.00,222.83 483.99,229.76 476.01,229.76" opacity="0.75"><title>Tunisia 0-2 Netherlands (actual 1-3) — confidence 0.80</title></polygon>
+<rect class="dot-wrong" x="297.00" y="238.18" width="6.00" height="6.00" opacity="0.75"><title>Japan 2-1 Sweden (actual 1-1) — confidence 0.50</title></rect>
+<rect class="dot-wrong" x="357.00" y="216.12" width="6.00" height="6.00" opacity="0.75"><title>Belgium 2-1 Egypt (actual 1-1) — confidence 0.60</title></rect>
+<rect class="dot-wrong" x="417.00" y="228.65" width="6.00" height="6.00" opacity="0.75"><title>Iran 2-0 New Zealand (actual 2-2) — confidence 0.70</title></rect>
+<rect class="dot-wrong" x="327.00" y="246.19" width="6.00" height="6.00" opacity="0.75"><title>Belgium 1-0 Iran (actual 0-0) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="450.00,244.91 453.99,251.84 446.01,251.84" opacity="0.75"><title>New Zealand 0-2 Egypt (actual 1-3) — confidence 0.75</title></polygon>
+<polygon class="dot-correct" points="510.00,214.94 513.99,221.87 506.01,221.87" opacity="0.75"><title>New Zealand 0-3 Belgium (actual 1-5) — confidence 0.85</title></polygon>
+<circle class="dot-exact" cx="270.00" cy="223.68" r="3.4" opacity="0.75"><title>Egypt 1-1 Iran (actual 1-1) — confidence 0.45</title></circle>
+<rect class="dot-wrong" x="537.00" y="222.37" width="6.00" height="6.00" opacity="0.75"><title>Spain 3-0 Cape Verde (actual 0-0) — confidence 0.90</title></rect>
+<rect class="dot-wrong" x="447.00" y="244.07" width="6.00" height="6.00" opacity="0.75"><title>Saudi Arabia 0-2 Uruguay (actual 1-1) — confidence 0.75</title></rect>
+<polygon class="dot-correct" points="480.00,241.17 483.99,248.10 476.01,248.10" opacity="0.75"><title>Spain 2-0 Saudi Arabia (actual 4-0) — confidence 0.80</title></polygon>
+<rect class="dot-wrong" x="477.00" y="242.32" width="6.00" height="6.00" opacity="0.75"><title>Uruguay 3-1 Cape Verde (actual 2-2) — confidence 0.80</title></rect>
+<rect class="dot-wrong" x="267.00" y="225.76" width="6.00" height="6.00" opacity="0.75"><title>Uruguay 1-1 Spain (actual 0-1) — confidence 0.45</title></rect>
+<rect class="dot-wrong" x="327.00" y="218.88" width="6.00" height="6.00" opacity="0.75"><title>Cape Verde 1-2 Saudi Arabia (actual 0-0) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="390.00,239.64 393.99,246.57 386.01,246.57" opacity="0.75"><title>France 2-1 Senegal (actual 3-1) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="480.00,235.41 483.99,242.34 476.01,242.34" opacity="0.75"><title>Iraq 0-2 Norway (actual 1-4) — confidence 0.80</title></polygon>
+<circle class="dot-exact" cx="540.00" cy="236.63" r="3.4" opacity="0.75"><title>France 3-0 Iraq (actual 3-0) — confidence 0.90</title></circle>
+<rect class="dot-wrong" x="267.00" y="245.83" width="6.00" height="6.00" opacity="0.75"><title>Norway 1-1 Senegal (actual 3-2) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="330.00,233.80 333.99,240.73 326.01,240.73" opacity="0.75"><title>Norway 1-2 France (actual 1-4) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="450.00,212.81 453.99,219.74 446.01,219.74" opacity="0.75"><title>Senegal 2-0 Iraq (actual 5-0) — confidence 0.75</title></polygon>
+<circle class="dot-exact" cx="450.00" cy="243.30" r="3.4" opacity="0.75"><title>Argentina 2-0 Austria (actual 2-0) — confidence 0.75</title></circle>
+<polygon class="dot-correct" points="420.00,222.28 423.99,229.21 416.01,229.21" opacity="0.75"><title>Algeria 2-0 Jordan (actual 2-1) — confidence 0.70</title></polygon>
+<polygon class="dot-correct" points="450.00,234.11 453.99,241.04 446.01,241.04" opacity="0.75"><title>Argentina 3-1 Algeria (actual 3-0) — confidence 0.75</title></polygon>
+<polygon class="dot-correct" points="450.00,243.06 453.99,249.99 446.01,249.99" opacity="0.75"><title>Jordan 0-2 Austria (actual 1-3) — confidence 0.75</title></polygon>
+<polygon class="dot-correct" points="540.00,216.92 543.99,223.85 536.01,223.85" opacity="0.75"><title>Jordan 0-4 Argentina (actual 1-3) — confidence 0.90</title></polygon>
+<rect class="dot-wrong" x="297.00" y="217.51" width="6.00" height="6.00" opacity="0.75"><title>Austria 1-0 Algeria (actual 3-3) — confidence 0.50</title></rect>
+<rect class="dot-wrong" x="327.00" y="217.24" width="6.00" height="6.00" opacity="0.75"><title>Portugal 2-1 Colombia (actual 0-0) — confidence 0.55</title></rect>
+<rect class="dot-wrong" x="267.00" y="231.73" width="6.00" height="6.00" opacity="0.75"><title>DR Congo 1-1 Uzbekistan (actual 3-1) — confidence 0.45</title></rect>
+<rect class="dot-wrong" x="507.00" y="222.61" width="6.00" height="6.00" opacity="0.75"><title>Portugal 3-0 DR Congo (actual 1-1) — confidence 0.85</title></rect>
+<polygon class="dot-correct" points="420.00,232.20 423.99,239.13 416.01,239.13" opacity="0.75"><title>Uzbekistan 0-2 Colombia (actual 1-3) — confidence 0.70</title></polygon>
+<polygon class="dot-correct" points="480.00,235.87 483.99,242.80 476.01,242.80" opacity="0.75"><title>Uzbekistan 0-2 Portugal (actual 0-5) — confidence 0.80</title></polygon>
+<polygon class="dot-correct" points="450.00,219.17 453.99,226.10 446.01,226.10" opacity="0.75"><title>Colombia 2-0 DR Congo (actual 1-0) — confidence 0.75</title></polygon>
+<rect class="dot-wrong" x="267.00" y="234.36" width="6.00" height="6.00" opacity="0.75"><title>England 1-1 Croatia (actual 4-2) — confidence 0.45</title></rect>
+<polygon class="dot-correct" points="330.00,221.13 333.99,228.06 326.01,228.06" opacity="0.75"><title>Panama 1-2 Ghana (actual 0-1) — confidence 0.55</title></polygon>
+<polygon class="dot-correct" points="510.00,228.43 513.99,235.36 506.01,235.36" opacity="0.75"><title>England 3-0 Panama (actual 2-0) — confidence 0.85</title></polygon>
+<circle class="dot-exact" cx="360.00" cy="246.17" r="3.4" opacity="0.75"><title>Ghana 1-2 Croatia (actual 1-2) — confidence 0.60</title></circle>
+<rect class="dot-wrong" x="447.00" y="241.24" width="6.00" height="6.00" opacity="0.75"><title>Ghana 0-2 England (actual 0-0) — confidence 0.75</title></rect>
+<polygon class="dot-correct" points="480.00,215.56 483.99,222.49 476.01,222.49" opacity="0.75"><title>Croatia 2-0 Panama (actual 1-0) — confidence 0.80</title></polygon>
+<line class="rowline" x1="150" y1="291.0" x2="600" y2="291.0" stroke-width="1"/>
+<text class="label" x="140" y="295.0" font-size="13" text-anchor="end">GPT-5.5</text>
+<circle class="dot-exact" cx="432.00" cy="288.52" r="3.4" opacity="0.75"><title>Mexico 2-0 South Africa (actual 2-0) — confidence 0.72</title></circle>
+<rect class="dot-wrong" x="327.00" y="280.75" width="6.00" height="6.00" opacity="0.75"><title>South Korea 1-1 Czechia (actual 2-1) — confidence 0.55</title></rect>
+<rect class="dot-wrong" x="333.00" y="271.88" width="6.00" height="6.00" opacity="0.75"><title>Mexico 1-1 South Korea (actual 1-0) — confidence 0.56</title></rect>
+<rect class="dot-wrong" x="345.00" y="296.81" width="6.00" height="6.00" opacity="0.75"><title>Czechia 1-0 South Africa (actual 1-1) — confidence 0.58</title></rect>
+<rect class="dot-wrong" x="315.00" y="292.45" width="6.00" height="6.00" opacity="0.75"><title>Czechia 1-1 Mexico (actual 0-3) — confidence 0.53</title></rect>
+<rect class="dot-wrong" x="357.00" y="280.27" width="6.00" height="6.00" opacity="0.75"><title>South Africa 0-1 South Korea (actual 1-0) — confidence 0.60</title></rect>
+<rect class="dot-wrong" x="339.00" y="295.84" width="6.00" height="6.00" opacity="0.75"><title>Canada 1-1 Switzerland (actual 1-2) — confidence 0.57</title></rect>
+<rect class="dot-wrong" x="303.00" y="289.68" width="6.00" height="6.00" opacity="0.75"><title>Qatar 1-1 Bosnia &amp; Herzegovina (actual 1-3) — confidence 0.51</title></rect>
+<polygon class="dot-correct" points="408.00,284.45 411.99,291.38 404.01,291.38" opacity="0.75"><title>Canada 2-0 Qatar (actual 6-0) — confidence 0.68</title></polygon>
+<polygon class="dot-correct" points="372.00,270.87 375.99,277.80 368.01,277.80" opacity="0.75"><title>Bosnia &amp; Herzegovina 0-1 Switzerland (actual 1-4) — confidence 0.62</title></polygon>
+<rect class="dot-wrong" x="345.00" y="274.20" width="6.00" height="6.00" opacity="0.75"><title>Bosnia &amp; Herzegovina 1-2 Canada (actual 1-1) — confidence 0.58</title></rect>
+<rect class="dot-wrong" x="423.00" y="300.44" width="6.00" height="6.00" opacity="0.75"><title>Switzerland 2-0 Qatar (actual 1-1) — confidence 0.71</title></rect>
+<rect class="dot-wrong" x="381.00" y="301.12" width="6.00" height="6.00" opacity="0.75"><title>Brazil 2-1 Morocco (actual 1-1) — confidence 0.64</title></rect>
+<polygon class="dot-correct" points="420.00,288.28 423.99,295.21 416.01,295.21" opacity="0.75"><title>Haiti 0-2 Scotland (actual 0-1) — confidence 0.70</title></polygon>
+<polygon class="dot-correct" points="498.00,297.67 501.99,304.60 494.01,304.60" opacity="0.75"><title>Brazil 4-0 Haiti (actual 3-0) — confidence 0.83</title></polygon>
+<rect class="dot-wrong" x="321.00" y="290.68" width="6.00" height="6.00" opacity="0.75"><title>Scotland 1-1 Morocco (actual 0-1) — confidence 0.54</title></rect>
+<polygon class="dot-correct" points="432.00,275.37 435.99,282.30 428.01,282.30" opacity="0.75"><title>Scotland 0-2 Brazil (actual 0-3) — confidence 0.72</title></polygon>
+<polygon class="dot-correct" points="456.00,274.70 459.99,281.63 452.01,281.63" opacity="0.75"><title>Morocco 2-0 Haiti (actual 4-2) — confidence 0.76</title></polygon>
+<polygon class="dot-correct" points="378.00,280.57 381.99,287.50 374.01,287.50" opacity="0.75"><title>United States 2-1 Paraguay (actual 4-1) — confidence 0.63</title></polygon>
+<rect class="dot-wrong" x="351.00" y="300.96" width="6.00" height="6.00" opacity="0.75"><title>Australia 1-2 Türkiye (actual 2-0) — confidence 0.59</title></rect>
+<circle class="dot-exact" cx="402.00" cy="300.62" r="3.4" opacity="0.75"><title>United States 2-0 Australia (actual 2-0) — confidence 0.67</title></circle>
+<rect class="dot-wrong" x="327.00" y="299.72" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 1-1 Paraguay (actual 0-1) — confidence 0.55</title></rect>
+<rect class="dot-wrong" x="321.00" y="300.96" width="6.00" height="6.00" opacity="0.75"><title>Türkiye 1-1 United States (actual 3-2) — confidence 0.54</title></rect>
+<polygon class="dot-correct" points="312.00,277.38 315.99,284.31 308.01,284.31" opacity="0.75"><title>Paraguay 1-1 Australia (actual 0-0) — confidence 0.52</title></polygon>
+<polygon class="dot-correct" points="504.00,278.66 507.99,285.59 500.01,285.59" opacity="0.75"><title>Germany 3-0 Curaçao (actual 7-1) — confidence 0.84</title></polygon>
+<rect class="dot-wrong" x="327.00" y="275.10" width="6.00" height="6.00" opacity="0.75"><title>Ivory Coast 1-1 Ecuador (actual 1-0) — confidence 0.55</title></rect>
+<circle class="dot-exact" cx="390.00" cy="300.10" r="3.4" opacity="0.75"><title>Germany 2-1 Ivory Coast (actual 2-1) — confidence 0.65</title></circle>
+<rect class="dot-wrong" x="441.00" y="300.48" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 2-0 Curaçao (actual 0-0) — confidence 0.74</title></rect>
+<rect class="dot-wrong" x="363.00" y="284.96" width="6.00" height="6.00" opacity="0.75"><title>Ecuador 1-2 Germany (actual 2-1) — confidence 0.61</title></rect>
+<polygon class="dot-correct" points="360.00,290.72 363.99,297.65 356.01,297.65" opacity="0.75"><title>Curaçao 1-2 Ivory Coast (actual 0-2) — confidence 0.60</title></polygon>
+<polygon class="dot-correct" points="336.00,275.58 339.99,282.51 332.01,282.51" opacity="0.75"><title>Netherlands 1-1 Japan (actual 2-2) — confidence 0.56</title></polygon>
+<polygon class="dot-correct" points="348.00,300.76 351.99,307.69 344.01,307.69" opacity="0.75"><title>Sweden 1-0 Tunisia (actual 5-1) — confidence 0.58</title></polygon>
+<polygon class="dot-correct" points="366.00,298.64 369.99,305.57 362.01,305.57" opacity="0.75"><title>Netherlands 2-1 Sweden (actual 5-1) — confidence 0.61</title></polygon>
+<polygon class="dot-correct" points="354.00,302.27 357.99,309.20 350.01,309.20" opacity="0.75"><title>Tunisia 0-1 Japan (actual 0-4) — confidence 0.59</title></polygon>
+<polygon class="dot-correct" points="414.00,296.89 417.99,303.82 410.01,303.82" opacity="0.75"><title>Tunisia 0-2 Netherlands (actual 1-3) — confidence 0.69</title></polygon>
+<rect class="dot-wrong" x="339.00" y="300.39" width="6.00" height="6.00" opacity="0.75"><title>Japan 1-0 Sweden (actual 1-1) — confidence 0.57</title></rect>
+<rect class="dot-wrong" x="363.00" y="272.57" width="6.00" height="6.00" opacity="0.75"><title>Belgium 2-1 Egypt (actual 1-1) — confidence 0.61</title></rect>
+<rect class="dot-wrong" x="357.00" y="295.68" width="6.00" height="6.00" opacity="0.75"><title>Iran 1-0 New Zealand (actual 2-2) — confidence 0.60</title></rect>
+<rect class="dot-wrong" x="369.00" y="282.55" width="6.00" height="6.00" opacity="0.75"><title>Belgium 1-0 Iran (actual 0-0) — confidence 0.62</title></rect>
+<polygon class="dot-correct" points="348.00,300.79 351.99,307.72 344.01,307.72" opacity="0.75"><title>New Zealand 0-1 Egypt (actual 1-3) — confidence 0.58</title></polygon>
+<polygon class="dot-correct" points="444.00,296.62 447.99,303.55 440.01,303.55" opacity="0.75"><title>New Zealand 0-2 Belgium (actual 1-5) — confidence 0.74</title></polygon>
+<circle class="dot-exact" cx="330.00" cy="302.82" r="3.4" opacity="0.75"><title>Egypt 1-1 Iran (actual 1-1) — confidence 0.55</title></circle>
+<rect class="dot-wrong" x="507.00" y="298.09" width="6.00" height="6.00" opacity="0.75"><title>Spain 3-0 Cape Verde (actual 0-0) — confidence 0.85</title></rect>
+<rect class="dot-wrong" x="381.00" y="280.43" width="6.00" height="6.00" opacity="0.75"><title>Saudi Arabia 1-2 Uruguay (actual 1-1) — confidence 0.64</title></rect>
+<polygon class="dot-correct" points="456.00,296.13 459.99,303.06 452.01,303.06" opacity="0.75"><title>Spain 2-0 Saudi Arabia (actual 4-0) — confidence 0.76</title></polygon>
+<rect class="dot-wrong" x="465.00" y="275.27" width="6.00" height="6.00" opacity="0.75"><title>Uruguay 2-0 Cape Verde (actual 2-2) — confidence 0.78</title></rect>
+<rect class="dot-wrong" x="333.00" y="300.09" width="6.00" height="6.00" opacity="0.75"><title>Uruguay 1-1 Spain (actual 0-1) — confidence 0.56</title></rect>
+<polygon class="dot-correct" points="312.00,298.45 315.99,305.38 308.01,305.38" opacity="0.75"><title>Cape Verde 1-1 Saudi Arabia (actual 0-0) — confidence 0.52</title></polygon>
+<polygon class="dot-correct" points="390.00,277.78 393.99,284.71 386.01,284.71" opacity="0.75"><title>France 2-1 Senegal (actual 3-1) — confidence 0.65</title></polygon>
+<polygon class="dot-correct" points="378.00,297.08 381.99,304.01 374.01,304.01" opacity="0.75"><title>Iraq 1-2 Norway (actual 1-4) — confidence 0.63</title></polygon>
+<circle class="dot-exact" cx="498.00" cy="289.71" r="3.4" opacity="0.75"><title>France 3-0 Iraq (actual 3-0) — confidence 0.83</title></circle>
+<rect class="dot-wrong" x="327.00" y="281.67" width="6.00" height="6.00" opacity="0.75"><title>Norway 1-1 Senegal (actual 3-2) — confidence 0.55</title></rect>
+<polygon class="dot-correct" points="366.00,296.39 369.99,303.32 362.01,303.32" opacity="0.75"><title>Norway 1-2 France (actual 1-4) — confidence 0.61</title></polygon>
+<polygon class="dot-correct" points="414.00,277.95 417.99,284.88 410.01,284.88" opacity="0.75"><title>Senegal 2-0 Iraq (actual 5-0) — confidence 0.69</title></polygon>
+<circle class="dot-exact" cx="456.00" cy="275.53" r="3.4" opacity="0.75"><title>Argentina 2-0 Austria (actual 2-0) — confidence 0.76</title></circle>
+<polygon class="dot-correct" points="348.00,276.83 351.99,283.76 344.01,283.76" opacity="0.75"><title>Algeria 1-0 Jordan (actual 2-1) — confidence 0.58</title></polygon>
+<polygon class="dot-correct" points="462.00,281.22 465.99,288.15 458.01,288.15" opacity="0.75"><title>Argentina 2-0 Algeria (actual 3-0) — confidence 0.77</title></polygon>
+<polygon class="dot-correct" points="360.00,298.63 363.99,305.56 356.01,305.56" opacity="0.75"><title>Jordan 1-2 Austria (actual 1-3) — confidence 0.60</title></polygon>
+<polygon class="dot-correct" points="450.00,301.96 453.99,308.89 446.01,308.89" opacity="0.75"><title>Jordan 0-2 Argentina (actual 1-3) — confidence 0.75</title></polygon>
+<polygon class="dot-correct" points="324.00,279.63 327.99,286.56 320.01,286.56" opacity="0.75"><title>Austria 1-1 Algeria (actual 3-3) — confidence 0.54</title></polygon>
+<polygon class="dot-correct" points="336.00,291.40 339.99,298.33 332.01,298.33" opacity="0.75"><title>Portugal 1-1 Colombia (actual 0-0) — confidence 0.56</title></polygon>
+<rect class="dot-wrong" x="309.00" y="284.74" width="6.00" height="6.00" opacity="0.75"><title>DR Congo 1-1 Uzbekistan (actual 3-1) — confidence 0.52</title></rect>
+<rect class="dot-wrong" x="429.00" y="303.63" width="6.00" height="6.00" opacity="0.75"><title>Portugal 2-0 DR Congo (actual 1-1) — confidence 0.72</title></rect>
+<polygon class="dot-correct" points="360.00,287.98 363.99,294.91 356.01,294.91" opacity="0.75"><title>Uzbekistan 1-2 Colombia (actual 1-3) — confidence 0.60</title></polygon>
+<polygon class="dot-correct" points="420.00,301.07 423.99,308.00 416.01,308.00" opacity="0.75"><title>Uzbekistan 0-2 Portugal (actual 0-5) — confidence 0.70</title></polygon>
+<polygon class="dot-correct" points="408.00,274.31 411.99,281.24 404.01,281.24" opacity="0.75"><title>Colombia 2-0 DR Congo (actual 1-0) — confidence 0.68</title></polygon>
+<rect class="dot-wrong" x="333.00" y="303.28" width="6.00" height="6.00" opacity="0.75"><title>England 1-1 Croatia (actual 4-2) — confidence 0.56</title></rect>
+<rect class="dot-wrong" x="309.00" y="277.56" width="6.00" height="6.00" opacity="0.75"><title>Panama 1-1 Ghana (actual 0-1) — confidence 0.52</title></rect>
+<polygon class="dot-correct" points="486.00,301.82 489.99,308.75 482.01,308.75" opacity="0.75"><title>England 3-0 Panama (actual 2-0) — confidence 0.81</title></polygon>
+<rect class="dot-wrong" x="321.00" y="280.38" width="6.00" height="6.00" opacity="0.75"><title>Ghana 1-1 Croatia (actual 1-2) — confidence 0.54</title></rect>
+<rect class="dot-wrong" x="435.00" y="275.28" width="6.00" height="6.00" opacity="0.75"><title>Ghana 0-2 England (actual 0-0) — confidence 0.73</title></rect>
+<polygon class="dot-correct" points="426.00,284.67 429.99,291.60 422.01,291.60" opacity="0.75"><title>Croatia 2-0 Panama (actual 1-0) — confidence 0.71</title></polygon>
+</svg>
