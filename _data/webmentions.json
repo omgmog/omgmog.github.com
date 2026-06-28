@@ -6086,5 +6086,54 @@
       },
       "sort_date": "2026-06-27T15:25:47+00:00"
     }
+  ],
+  "/post/how-the-five-ais-actually-did/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/the-group-stage-is-over-and-so",
+      "published": "2026-06-28T13:14:17+00:00",
+      "wm-received": "2026-06-28T13:14:19Z",
+      "wm-id": 2005276,
+      "wm-source": "https://social.omgmog.net/2026/the-group-stage-is-over-and-so",
+      "wm-target": "https://blog.omgmog.net/post/how-the-five-ais-actually-did/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116827911437742759"
+      ],
+      "content": {
+        "html": "<p>The group stage is over, and so is my experiment.</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/how-the-five-ais-actually-did/\" class=\"u-mention-of\">https://blog.omgmog.net/post/how-the-five-ais-actually-did/</a>",
+        "text": "The group stage is over, and so is my experiment.\n\n        \n                        https://blog.omgmog.net/post/how-the-five-ais-actually-did/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/how-the-five-ais-actually-did/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-06-28T13:14:17+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dan Pope",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/fa2a89dc0503588a13c04a638549371590ca9c6c4a4f5a16179e8236747ac98b.jpg",
+        "url": "https://mastodon.me.uk/@danielthepope"
+      },
+      "url": "https://indieweb.social/@omgmog/116827911437742759#favorited-by-109342574903479382",
+      "published": null,
+      "wm-received": "2026-06-28T18:13:20Z",
+      "wm-id": 2005319,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/116827911437742759/109342574903479382",
+      "wm-target": "https://blog.omgmog.net/post/how-the-five-ais-actually-did/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/how-the-five-ais-actually-did/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-06-28T18:13:20Z"
+    }
   ]
 }
