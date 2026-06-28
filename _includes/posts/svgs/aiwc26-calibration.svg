@@ -1,28 +1,16 @@
 <svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Scatter plot of average stated confidence against actual hit rate for each AI model, with a dashed perfectly-calibrated line. GPT-5.5 and Gemini 3.5 Flash sit above the line (overconfident), Gemini 3.1 Pro sits on it, and Claude Fable 5 and Claude Sonnet 4.6 sit below it (underconfident).">
 <title>Confidence vs actual hit rate by entrant</title>
 <style>
-  text { fill: #1a1a1a; }
-  .axis, .tick { stroke: #1a1a1a; }
-  .diagonal { stroke: #1a1a1a; opacity: 0.4; }
-  .diagonal-label { fill: #1a1a1a; opacity: 0.6; }
-  .dot-blue { fill: #1a5fb4; }
-  .dot-red { fill: #d6261b; }
-  .dot-grey { fill: #1a1a1a; opacity: 0.55; }
-  .label-blue { fill: #1a5fb4; font-weight: 700; }
-  .label-red { fill: #d6261b; }
-  .label-grey { fill: #1a1a1a; opacity: 0.55; }
-  @media (prefers-color-scheme: dark) {
-    text { fill: #f0f0f0; }
-    .axis, .tick { stroke: #f0f0f0; }
-    .diagonal { stroke: #f0f0f0; opacity: 0.4; }
-    .diagonal-label { fill: #f0f0f0; opacity: 0.6; }
-    .dot-blue { fill: #5fa8f5; }
-    .dot-red { fill: #ff3b30; }
-    .dot-grey { fill: #f0f0f0; opacity: 0.55; }
-    .label-blue { fill: #5fa8f5; font-weight: 700; }
-    .label-red { fill: #ff3b30; }
-    .label-grey { fill: #f0f0f0; opacity: 0.55; }
-  }
+  text { fill: light-dark(#1a1a1a, #f0f0f0); }
+  .axis, .tick { stroke: light-dark(#1a1a1a, #f0f0f0); }
+  .diagonal { stroke: light-dark(#1a1a1a, #f0f0f0); opacity: 0.4; }
+  .diagonal-label { fill: light-dark(#1a1a1a, #f0f0f0); opacity: 0.6; }
+  .dot-blue { fill: light-dark(#1a5fb4, #5fa8f5); }
+  .dot-red { fill: light-dark(#d6261b, #ff3b30); }
+  .dot-grey { fill: light-dark(#1a1a1a, #f0f0f0); opacity: 0.55; }
+  .label-blue { fill: light-dark(#1a5fb4, #5fa8f5); font-weight: 700; }
+  .label-red { fill: light-dark(#d6261b, #ff3b30); }
+  .label-grey { fill: light-dark(#1a1a1a, #f0f0f0); opacity: 0.55; }
 </style>
 <line class="axis" x1="70" y1="40" x2="70" y2="420" stroke-width="1.5"/>
 <line class="axis" x1="70" y1="420" x2="600" y2="420" stroke-width="1.5"/>

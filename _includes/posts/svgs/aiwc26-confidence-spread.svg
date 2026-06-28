@@ -1,21 +1,13 @@
 <svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Strip plot of each AI model's 72 stated confidence values. Dots are circles for exact scores, triangles for correct results, and squares for wrong calls, coloured green, cyan and red respectively. Claude Sonnet 4.6 and Claude Fable 5 spread widely from around 0.3 to 0.7, with red squares across the whole range. Gemini 3.1 Pro, Gemini 3.5 Flash and GPT-5.5 cluster tightly above 0.4, reaching higher maximums but never expressing real doubt, with plenty of high-confidence red squares too.">
 <title>Stated confidence per fixture, shaped and coloured by result</title>
 <style>
-  text { fill: #1a1a1a; }
-  .axis, .tick, .rowline { stroke: #1a1a1a; }
+  text { fill: light-dark(#1a1a1a, #f0f0f0); }
+  .axis, .tick, .rowline { stroke: light-dark(#1a1a1a, #f0f0f0); }
   .rowline { opacity: 0.15; }
-  .label { fill: #1a1a1a; }
-  .dot-exact { fill: #15a815; }
-  .dot-correct { fill: #009999; }
-  .dot-wrong { fill: #d6261b; }
-  @media (prefers-color-scheme: dark) {
-    text { fill: #f0f0f0; }
-    .axis, .tick, .rowline { stroke: #f0f0f0; }
-    .label { fill: #f0f0f0; }
-    .dot-exact { fill: #19e619; }
-    .dot-correct { fill: #00e5e5; }
-    .dot-wrong { fill: #ff3b30; }
-  }
+  .label { fill: light-dark(#1a1a1a, #f0f0f0); }
+  .dot-exact { fill: light-dark(#15a815, #19e619); }
+  .dot-correct { fill: light-dark(#009999, #00e5e5); }
+  .dot-wrong { fill: light-dark(#d6261b, #ff3b30); }
 </style>
 <line class="axis" x1="150" y1="25" x2="150" y2="320" stroke-width="1.5"/>
 <line class="axis" x1="150" y1="320" x2="600" y2="320" stroke-width="1.5"/>

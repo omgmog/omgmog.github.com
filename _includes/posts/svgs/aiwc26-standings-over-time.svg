@@ -1,42 +1,24 @@
 <svg viewBox="0 0 830 420" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Line chart of cumulative points for all seven entrants across the 17 real tournament dates, 11 to 27 June. Claude Sonnet 4.6 and Claude Fable 5 pull away in the second half, Ranking Bot tracks in the middle of the pack throughout, and GPT-5.5 and Human 1.0 fall behind from the final week onward.">
 <title>Cumulative points over the course of the group stage</title>
 <style>
-  text { fill: #1a1a1a; }
-  .axis, .tick, .gridline { stroke: #1a1a1a; }
+  text { fill: light-dark(#1a1a1a, #f0f0f0); }
+  .axis, .tick, .gridline { stroke: light-dark(#1a1a1a, #f0f0f0); }
   .gridline { opacity: 0.12; }
   .line { fill: none; stroke-width: 2.4; }
-  .line-a { stroke: #1a5fb4; }
-  .line-b { stroke: #5fa8f5; }
-  .line-c { stroke: #15a815; }
-  .line-d { stroke: #7fd47f; }
-  .line-e { stroke: #888888; }
-  .line-f { stroke: #d6261b; }
-  .line-g { stroke: #c77f00; }
-  .label-a { fill: #1a5fb4; }
-  .label-b { fill: #5fa8f5; }
-  .label-c { fill: #15a815; }
-  .label-d { fill: #7fd47f; }
-  .label-e { fill: #888888; }
-  .label-f { fill: #d6261b; }
-  .label-g { fill: #c77f00; }
-  @media (prefers-color-scheme: dark) {
-    text { fill: #f0f0f0; }
-    .axis, .tick, .gridline { stroke: #f0f0f0; }
-    .line-a { stroke: #5fa8f5; }
-    .line-b { stroke: #9bc6f7; }
-    .line-c { stroke: #19e619; }
-    .line-d { stroke: #a3eaa3; }
-    .line-e { stroke: #aaaaaa; }
-    .line-f { stroke: #ff7b72; }
-    .line-g { stroke: #e0a030; }
-    .label-a { fill: #5fa8f5; }
-    .label-b { fill: #9bc6f7; }
-    .label-c { fill: #19e619; }
-    .label-d { fill: #a3eaa3; }
-    .label-e { fill: #aaaaaa; }
-    .label-f { fill: #ff7b72; }
-    .label-g { fill: #e0a030; }
-  }
+  .line-a { stroke: light-dark(#1a5fb4, #5fa8f5); }
+  .line-b { stroke: light-dark(#5fa8f5, #9bc6f7); }
+  .line-c { stroke: light-dark(#15a815, #19e619); }
+  .line-d { stroke: light-dark(#7fd47f, #a3eaa3); }
+  .line-e { stroke: light-dark(#888888, #aaaaaa); }
+  .line-f { stroke: light-dark(#d6261b, #ff7b72); }
+  .line-g { stroke: light-dark(#c77f00, #e0a030); }
+  .label-a { fill: light-dark(#1a5fb4, #5fa8f5); }
+  .label-b { fill: light-dark(#5fa8f5, #9bc6f7); }
+  .label-c { fill: light-dark(#15a815, #19e619); }
+  .label-d { fill: light-dark(#7fd47f, #a3eaa3); }
+  .label-e { fill: light-dark(#888888, #aaaaaa); }
+  .label-f { fill: light-dark(#d6261b, #ff7b72); }
+  .label-g { fill: light-dark(#c77f00, #e0a030); }
 </style>
 <line class="axis" x1="50" y1="30" x2="50" y2="380" stroke-width="1.5"/>
 <line class="axis" x1="50" y1="380" x2="640" y2="380" stroke-width="1.5"/>
