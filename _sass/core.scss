@@ -850,7 +850,7 @@ h3.post-title {
     gap: 0.25rem;
     margin: 0;
 
-    a {
+    a, .tag {
         display: inline-block;
         font-size: var(--text-sm);
         text-decoration: none;
@@ -859,10 +859,46 @@ h3.post-title {
         border-radius: 0.25rem;
 
         &:first-child { margin-left: 0; }
+    }
 
-        &:hover {
-            background-color: var(--color-text);
-            color: var(--color-bg);
+    a:hover {
+        background-color: var(--color-text);
+        color: var(--color-bg);
+    }
+}
+
+.timeline {
+    position: relative;
+    list-style: none;
+    margin: var(--gutter-size) 0;
+    padding-left: var(--gutter-size);
+    border-left: 2px solid rgba(var(--color-text-rgb) / 0.2);
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: var(--double-gutter-size);
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: calc(-1 * var(--gutter-size) - 0.4rem);
+            top: 0.4rem;
+            width: 0.7rem;
+            height: 0.7rem;
+            border-radius: 50%;
+            background: var(--color-bg);
+            border: 2px solid var(--color-text);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        p:first-child {
+            margin-top: 0;
+            padding-top: var(--quarter-gutter-size);
+        }
+        h3 {
+            margin-bottom: var(--gutter-size);
         }
     }
 }

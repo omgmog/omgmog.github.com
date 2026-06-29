@@ -1,0 +1,257 @@
+- name: "Minecraft: The Story of Mojang"
+  date: March 2011
+  type: film
+  platform: standalone
+  currency: USD
+  value: 30
+  url: http://www.kickstarter.com/projects/2pp/minecraft-the-story-of-mojang
+  body: >
+    My first ever Kickstarter was [2 Player Productions](https://www.doublefine.com/dftv/2pp)' documentary about [Mojang](https://www.mojang.com)'s
+    first year. It delivered in late 2012, and I took the DVD tier, so my name is
+    in the credits. I no longer own anything that can play the disc, but it's a
+    neat thing to have. On launch day 2PP uploaded the film to The Pirate Bay
+    themselves, asking people to buy it if they could rather than pretend piracy
+    wasn't going to happen, and it went free on YouTube the following year.
+
+- name: "GCW-Zero"
+  date: January 2013
+  type: console
+  platform: standalone
+  currency: USD
+  value: 155
+  url: http://www.kickstarter.com/projects/gcw/gcw-zero-open-source-gaming-handheld
+  body: >
+    An open-source Linux retro handheld built around the Ingenic JZ4770, pitched
+    as the spiritual successor to the Dingoo, by Justin Barwick (a [Dingoonity](https://boards.dingoonity.org)
+    regular). It delivered in 2013, but the shipping was a mess. We hosted the
+    official GCW Zero subforum on Dingoonity, and it turned into a wall of
+    "where's my order?" posts despite us having nothing to do with fulfilment. I
+    still have mine. It was underwhelming: by the time it arrived I had countless
+    other devices that did the same job, often better. The community software
+    carried it, but the hardware itself was nothing special.
+
+- name: "Sweetbox II"
+  date: March 2013
+  type: accessory
+  platform: raspberry-pi
+  currency: GBP
+  value: 32
+  url: https://www.kickstarter.com/projects/677951563/sweetbox-ii-the-perfect-case-for-your-raspberry-pi
+  body: >
+    A case for the Raspberry Pi. It arrived, but it fit an old model of Pi, so it
+    stopped being useful fairly quickly. I've had better cases since, and these
+    days I'd just 3D print an equivalent if I needed one.
+
+- name: "Fairywren"
+  date: July 2013
+  type: diy
+  platform: raspberry-pi
+  currency: GBP
+  value: 50
+  url: http://www.kickstarter.com/projects/kwang/mini-itx-motherboard-for-the-raspberry-pi-fairywre
+  body: >
+    A mini-ITX baseboard for the Raspberry Pi. It arrived. I never used it. I had
+    aspirations and never got round to it (ADHD caveman brain).
+
+- name: "RFIDler"
+  date: September 2013
+  type: diy
+  platform: standalone
+  currency: GBP
+  value: 24
+  url: http://www.kickstarter.com/projects/1708444109/rfidler-a-software-defined-rfid-reader-writer-emul
+  body: >
+    A software-defined RFID reader, writer and emulator. It arrived, and I never
+    worked out a good use for it. Writable RFID tags got cheap enough to buy and
+    write straight from my phone, so I never needed it. I've got a backburner idea
+    to make custom Tonies for the kids' Toniebox, but they'll probably grow up
+    before I get to it.
+
+- name: "Kano"
+  date: November 2013
+  type: diy
+  platform: raspberry-pi
+  currency: USD
+  value: 120
+  url: http://www.kickstarter.com/projects/alexklein/kano-a-computer-anyone-can-make
+  body: >
+    A build-it-yourself computer kit wrapped around a Raspberry Pi, aimed at
+    teaching kids to assemble and code. It delivered in 2014, a couple of months
+    late, which for hardware is nothing. It seemed like a nice bit of kit, so I
+    gave it to a nephew that Christmas. As far as I know the bright orange keyboard
+    is still going strong. Kano itself became a real London company, raising around
+    $45 million, doing the Harry Potter coding wand and a Windows machine with
+    Microsoft, before drifting away from Pi kits entirely into Stem consumer audio
+    (the Kanye West Stem Player) and splitting into two companies in 2023.
+
+- name: "Planets³"
+  date: March 2014
+  type: videogame
+  platform: standalone
+  currency: USD
+  value: 20
+  url: https://www.kickstarter.com/projects/1247991467/planets3
+  body: >
+    A voxel-based open-world RPG. It half delivered. Renamed [Stellar Overload](https://store.steampowered.com/app/345370/Stellar_Overload/), it
+    reached Steam early access, but Cubical Drift went bankrupt around 2018 and
+    pulled it from sale unfinished. Backers were left with a Steam key for a dead
+    game. I can't even remember playing it.
+
+- name: "LAST LIFE"
+  date: April 2014
+  type: videogame
+  platform: standalone
+  currency: USD
+  value: 15
+  url: https://www.kickstarter.com/projects/1717469366/last-life
+  body: >
+    A sci-fi noir adventure about investigating your own murder on Mars, with
+    [Double Fine](https://www.doublefine.com) attached as publisher. It never came out. Double Fine dropped it,
+    the creator kept expanding the scope, the money ran out, and it ended up
+    sitting unfinished on his hard drives. A complete write-off.
+
+- name: "MyPifi LED board"
+  date: June 2014
+  type: diy
+  platform: raspberry-pi
+  currency: GBP
+  value: 6
+  url: https://www.kickstarter.com/projects/mypifi/mypifi-led-board
+  body: >
+    An LED board kit for the Raspberry Pi. I remember soldering it together. I
+    couldn't tell you where it is now.
+
+- name: "TerraTech"
+  date: June 2014
+  type: videogame
+  platform: standalone
+  currency: GBP
+  value: 10
+  url: https://www.kickstarter.com/projects/payloadstudios/terratech-physics-based-vehicle-construction-and-c
+  body: >
+    Physics-based vehicle construction and combat from Payload Studios. This one
+    delivered properly. It left early access as a full release in 2018 and is still
+    a supported game. I have no memory of playing it.
+
+- name: "Espruino Pico"
+  date: November 2014
+  type: diy
+  platform: espruino
+  currency: GBP
+  value: 17
+  url: https://www.kickstarter.com/projects/gfw/espruino-pico-javascript-on-a-usb-stick
+  body: >
+    JavaScript on a USB stick, and the first of four things I backed from Gordon
+    Williams at [Espruino](https://www.espruino.com). He's a local creator and the campaigns were always fun to
+    back and tinker with, so once I'd backed one I kept coming back. It delivered,
+    as all of his did.
+
+- name: "The imossi N1 wallet"
+  date: August 2015
+  type: accessory
+  platform: standalone
+  currency: GBP
+  value: 29
+  url: https://www.kickstarter.com/projects/306717180/imossi-presents-the-n1-the-wallet-that-ditches-the
+  body: >
+    An RFID-protected wallet. I used it for about six years. These days I've got a
+    MagSafe card holder on the back of my phone and mostly pay by contactless, so
+    it's retired.
+
+- name: "Tingbot"
+  date: November 2015
+  type: diy
+  platform: raspberry-pi
+  currency: GBP
+  value: 50
+  url: https://www.kickstarter.com/projects/744235676/tingbot-raspberry-pi-made-fun
+  body: >
+    A Raspberry Pi gadget with a screen, meant to make the Pi fun to build on. It
+    delivered and I got into it for a bit, but in the end I needed the
+    Pi for another project. It's still in parts in my parts bin. I'd love to get it
+    running again, but I don't think the software stack is supported any more.
+
+- name: "Pine A64"
+  date: December 2015
+  type: diy
+  platform: standalone
+  currency: USD
+  value: 41
+  url: https://www.kickstarter.com/projects/pine64/pine-a64-first-15-64-bit-single-board-super-comput
+  body: >
+    A cheap 64-bit single-board computer pitched as a Raspberry Pi rival. It arrived
+    barebones, the OS images weren't great, and I already had Pis that did the job,
+    so it was in a drawer before long. The company stuck around where most "Pi
+    killers" didn't, and Pine64 went on to make the Pinebook, PinePhone, PineTime
+    and a line of RISC-V boards. The thing of theirs I actually use is the [Pinecil](https://pine64.com/product/pinecil-smart-mini-portable-soldering-iron/),
+    a USB-C soldering iron I bought later and still reach for often.
+
+- name: "Puck.js"
+  date: July 2016
+  type: diy
+  platform: espruino
+  currency: GBP
+  value: 47
+  note: for two
+  url: https://www.kickstarter.com/projects/gfw/puckjs-the-ground-breaking-bluetooth-beacon
+  body: >
+    Gordon's Bluetooth beacon, again running Espruino's JavaScript. I spent proper
+    time with these, contributing to a media-control script,
+    [nextSongPuck](https://github.com/omgmog/nextSongPuck), and actually used it.
+
+- name: "The Superbook"
+  date: August 2016
+  type: accessory
+  platform: standalone
+  currency: USD
+  value: 164
+  url: https://www.kickstarter.com/projects/andromium/the-superbook-turn-your-smartphone-into-a-laptop-f
+  body: >
+    A laptop shell that turned an Android phone into a laptop, from Andromium, later
+    Sentio. It raised nearly $3 million, one of the biggest hardware campaigns on
+    Kickstarter at the time, then unravelled. They shipped about 75% of units before
+    running out of money around 2019, with a distributor allegedly making off with
+    $300,000 of inventory. Mine did arrive, after a very long wait, and it completely
+    missed the mark. A 2016-era Android phone driving a laptop shell was beaten by
+    any number of cheap old laptops, several of which I now own. I've still got the
+    sheet of keyboard legend stickers and the Sentio-branded sleeve. The Superbook
+    itself, I couldn't tell you where it is.
+
+- name: "Bangle.js"
+  date: November 2019
+  type: wearable
+  platform: espruino
+  currency: GBP
+  value: 46
+  url: https://www.kickstarter.com/projects/gfw/banglejs-the-hackable-smart-watch
+  body: >
+    Gordon's hackable smartwatch. JavaScript on a watch (yes please, in principle). I
+    wore it and gave it a proper go, but it was chunky and the software side was a bit of
+    a bodge, so I went back to a better-supported watch of the time, a [Pebble](https://en.wikipedia.org/wiki/Pebble_(watch)) or
+    similar.
+
+- name: "Paper Apps Dungeon"
+  date: January 2021
+  type: tabletop
+  platform: standalone
+  currency: USD
+  value: 20
+  note: for two
+  url: https://www.kickstarter.com/projects/brintown/tiny-paper-dungeons
+  body: >
+    A dungeon game in a 3x5 notepad. Delivered, and it still ends up
+    in my bag from time to time. It's a nice way to play something without a screen,
+    and I'm holding onto it for when the kids are old enough to enjoy it.
+
+- name: "Bangle.js 2"
+  date: October 2021
+  type: wearable
+  platform: espruino
+  currency: GBP
+  value: 75
+  url: https://www.kickstarter.com/projects/gfw/banglejs-2-the-open-smart-watch
+  body: >
+    The second-generation open smartwatch from Espruino, and the last thing I've
+    backed. Much the same story as the first, though nicer made. I bought it mostly
+    to support Gordon. It sits in a drawer with my other watches now (I wear a Pixel
+    Watch 2 these days).
