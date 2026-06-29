@@ -592,6 +592,7 @@ nav {
 .social-links {
     display: flex;
     flex-direction: row;
+    margin-top: var(--gutter-size);
     margin-bottom: var(--gutter-size);
     justify-content: space-between;
 

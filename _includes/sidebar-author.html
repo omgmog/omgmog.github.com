@@ -2,7 +2,7 @@
     <h3 class="wide-h3 show-mobile">About the author</h3>
     <img src="{{ 'assets/max-2025.webp' | relative_url}}" alt="Photo of Max" class="u-photo author-photo">
     <div class="card-inner">
-        {{ site.data.author.bio_html }}
+        <p>{{ site.data.author.bio_html }}</p>
 
         <div class="social-links">{% for url in site.data.author.urls %}<a href="{{ url.link }}" rel="nofollow me" class="u-url" title="{{ url.label }}">{% if url.icon %}<svg aria-hidden="true" focusable="false"><use href="#{{ url.icon }}"></use></svg>{% else %}{{ url.label }}{% endif %}</a>{% endfor %}</div>
     </div>
