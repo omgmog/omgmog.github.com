@@ -124,6 +124,34 @@ $colors: (
 }
 
 
+// === CURSORS ===
+// Ripped Android 16 cursor set by blub (rw-designer.com), public domain
+
+@mixin custom-cursor($name, $hotspot-x, $hotspot-y, $fallback) {
+    cursor: url('/assets/cursors/#{$name}.png') #{$hotspot-x} #{$hotspot-y}, #{$fallback};
+}
+
+html {
+    @include custom-cursor('pointer_arrow', 5, 4, default);
+}
+
+a, button, .theme-toggle, [role="button"], input[type="submit"], input[type="button"] {
+    @include custom-cursor('pointer_hand', 12, 1, pointer);
+}
+
+input[type="text"], input[type="email"], input[type="search"], textarea {
+    @include custom-cursor('pointer_text', 16, 14, text);
+}
+
+[draggable="true"] {
+    @include custom-cursor('pointer_grab', 16, 16, grab);
+
+    &:active {
+        @include custom-cursor('pointer_grabbing', 16, 16, grabbing);
+    }
+}
+
+
 // === BASE ===
 
 html, body {
@@ -521,7 +549,6 @@ nav {
 .theme-toggle {
     background: none;
     border: none;
-    cursor: pointer;
     padding: 0;
     color: inherit;
     opacity: .6;
@@ -675,7 +702,7 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    cursor: default;
+    @include custom-cursor('pointer_arrow', 5, 4, default);
     user-select: none;
     margin-bottom: var(--gutter-size);
     margin-top: var(--double-gutter-size);
@@ -822,7 +849,6 @@ nav {
         background: none;
         color: var(--color-text);
         appearance: none;
-        cursor: pointer;
         opacity: .5;
         font-size: inherit;
         &:hover { opacity: 1; }
@@ -1102,7 +1128,6 @@ h3.post-title {
         border: 0;
         width: 1.5em;
         height: 1.5em;
-        cursor: pointer;
         vertical-align: bottom;
 
         svg {
@@ -1114,7 +1139,7 @@ h3.post-title {
         }
 
         &:disabled {
-            cursor: not-allowed;
+            @include custom-cursor('pointer_nodrop', 16, 16, not-allowed);
             opacity: 0.4;
         }
     }
@@ -1346,7 +1371,7 @@ figure {
 
         .figure-content.placeholder {
             background: rgba(var(--color-text-rgb) / 0.8);
-            cursor: pointer;
+            @include custom-cursor('pointer_hand', 12, 1, pointer);
             z-index: 0;
 
             img {
