@@ -860,6 +860,14 @@ nav {
     margin-bottom: var(--gutter-size);
 }
 
+.post-subtitle {
+    margin: calc(-1 * var(--gutter-size) / 2) 0 var(--gutter-size);
+    font-size: var(--text-sm);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 h1.post-title {
     font-size: max(var(--text-lg), 9cqi);
     text-wrap: balance;
@@ -1695,6 +1703,60 @@ figure {
                 right: 0;
                 margin: 0;
                 padding: 0;
+            }
+        }
+    }
+}
+
+// === LWAL LINK CARDS ===
+
+.lwal-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lwal-item {
+    padding: 0.75rem;
+    border: 1px solid rgba(var(--color-text-rgb) / 0.12);
+    border-radius: 0.5rem;
+    background-color: var(--color-bg-ultra);
+
+    &.lwal-link {
+        
+        .lwal-link-desc {
+            margin: 0;
+            font-size: var(--text-sm);
+            margin-bottom: 0.25rem;
+        }
+        .lwal-link-title {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: var(--text-sm);
+            line-height: 1.2;
+        }
+    }
+    
+    &.lwal-video {
+        .lwal-caption {
+            font-size: var(--text-sm);
+            margin: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .lwal-embed-wrap {
+            margin: 0;
+            max-width: 50%;
+
+            @media (max-width: 768px) {
+                max-width: 100%;
+            }
+        }
+
+        .lwal-embed {
+            margin: 0;
+
+            .figure-content.placeholder::before { 
+                font-size: calc(var(--text-sm) * 1.2); 
             }
         }
     }

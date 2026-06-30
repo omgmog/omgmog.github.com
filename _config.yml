@@ -21,6 +21,9 @@ collections:
   cardboctober:
     output: true
     permalink: /:collection/:title/
+  lwal:
+    output: true
+    permalink: /:collection/:title/
 defaults:
   - scope:
       type: "posts"
@@ -35,6 +38,11 @@ defaults:
       tags: [vr, cardboctober]
       content_type: article
       series: cardboctober
+  - scope:
+      type: "lwal"
+    values:
+      layout: post
+      content_type: article
   - scope:
       type: "pages"
     values:

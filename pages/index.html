@@ -11,6 +11,14 @@ layout: core
 {% endfor %}
 </ul>
 
+<h3 class="wide-h3">Links worth a look<a href="/lwal/">View all</a></h3>
+<ul class="post-list">
+{% assign lwal_posts = site.lwal | sort: "date" | reverse %}
+{% for post in lwal_posts limit:4 %}
+  {% include global/post-list-item.html hide_types=true hide_years=true hide_excerpt=true hide_counts=true %}
+{% endfor %}
+</ul>
+
 {% for section in site.data.homepage.sections %}
   <h3 class="wide-h3">{{ section.title }}</h3>
   {% include global/post-list-from-urls.html urls=section.urls %}
