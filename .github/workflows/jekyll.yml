@@ -98,7 +98,7 @@ jobs:
       - name: Send webmentions for changed posts
         if: github.event.inputs.send_all_webmentions != 'true'
         run: |
-          changed=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- _posts | tr '\n' ' ')
+          changed=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- _posts _lwal | tr '\n' ' ')
           if [ -n "$changed" ]; then
             bundle exec ruby scripts/send_webmentions.rb $changed
           else
