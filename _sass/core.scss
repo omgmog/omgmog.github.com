@@ -860,13 +860,6 @@ nav {
     margin-bottom: var(--gutter-size);
 }
 
-.post-subtitle {
-    margin: calc(-1 * var(--gutter-size) / 2) 0 var(--gutter-size);
-    font-size: var(--text-sm);
-    opacity: 0.6;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
 
 h1.post-title {
     font-size: max(var(--text-lg), 9cqi);

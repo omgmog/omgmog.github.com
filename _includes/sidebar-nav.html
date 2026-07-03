@@ -1,7 +1,7 @@
 <nav>
     <ul>
         {% assign is_blog_section = false %}
-        {% if page.url contains "/post/" or page.url contains "/cardboctober" or page.url contains "/tags/" %}
+        {% if page.url contains "/post/" or page.url contains "/cardboctober" or page.url contains "/tags/" or page.url contains "/lwal" %}
             {% assign is_blog_section = true %}
         {% endif %}
         {% for secondary in site.data.nav_secondary %}

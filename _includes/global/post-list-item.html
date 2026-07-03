@@ -5,6 +5,7 @@
     {% unless include.hide_date or include.hide_counts %}<div class="post-meta">
     {% unless include.hide_date %}<time class="dt-published" datetime="{{post.date|date_to_xmlschema}}">{{ post.date|date_to_string}}</time>{% endunless %}
     {% unless include.hide_counts %}{% include interactions/count.html post=post %}{% endunless %}
+    {% if post.collection == 'lwal' %}<p class="post-subtitle">Links worth a look, week {{ post.slug | split: '-' | last }}</p>{% endif %}
     </div>{% endunless %}
     <h3 class="post-title"><a href="{{ post.url }}" class="u-url p-name">{{ post.title }}</a></h3>
     {% unless post.archived %}{% unless include.hide_excerpt %}{% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>{% endif %}{% endunless %}{% endunless %}

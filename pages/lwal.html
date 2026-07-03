@@ -1,14 +1,14 @@
 ---
 title: Links worth a look
 permalink: /lwal/
-description: A weekly roundup of links I shared on social.omgmog.net, with a bit more room to breathe.
+description: A weekly roundup of links I shared on [social.omgmog.net](https://social.omgmog.net), with a bit more room to breathe.
 ---
-<p>{{ page.description }}</p>
+<p>{{ page.description | markdownify }}</p>
 
-<h3 class="wide-h3">All weeks</h3>
+<h3 class="wide-h3">All links</h3>
 <ul class="post-list">
   {% assign lwal_posts = site.lwal | sort: "date" | reverse %}
   {% for post in lwal_posts %}
-    {% include global/post-list-item.html hide_types=true hide_excerpt=true hide_counts=true %}
+    {% include global/post-list-item.html hide_types=true hide_years=true %}
   {% endfor %}
 </ul>
