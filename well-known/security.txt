@@ -1,0 +1,9 @@
+---
+permalink: /.well-known/security.txt
+layout: null
+---
+{% assign expires_year = site.time | date: "%Y" | plus: 10 %}
+{% assign email = site.data.author.urls | where: "label", "Email" | first %}
+{% assign email_address = email.link | remove: "mailto:" %}
+Contact: mailto:{{ email_address }}
+Expires: {{ expires_year }}-{{ site.time | date: "%m-%dT%H:%M:%S" }}Z

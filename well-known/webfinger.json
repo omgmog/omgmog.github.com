@@ -1,0 +1,28 @@
+---
+permalink: /.well-known/webfinger
+layout: null
+---
+{% assign author = site.data.author %}
+{% assign mastodon = author.urls | where: "label", "Mastodon" | first %}
+{
+  "subject": "acct:omgmog@blog.omgmog.net",
+  "aliases": [
+    "{{ author.home }}"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "{{ author.home }}"
+    },
+    {
+      "rel": "http://webfinger.net/rel/avatar",
+      "type": "image/png",
+      "href": "{{ author.avatar }}"
+    },
+    {
+      "rel": "me",
+      "href": "{{ mastodon.link }}"
+    }
+  ]
+}
