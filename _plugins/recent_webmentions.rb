@@ -6,7 +6,7 @@ module Jekyll
     AUTHOR_DOMAINS    = %w[omgmog.net omgmog.github.io twitter.com/omgmog indieweb.social/@omgmog].freeze
     AUTHOR_GH_LOGIN   = "omgmog".freeze
     AUTHOR_DISPLAY    = "Max Glenister".freeze
-    CONVERSATIONAL    = %w[in-reply-to mention-of].freeze
+    CONVERSATIONAL    = %w[in-reply-to mention-of like-of bookmark-of repost-of].freeze
     SITE_DOMAIN       = "blog.omgmog.net".freeze
     LIMIT             = 10
 
@@ -106,6 +106,12 @@ module Jekyll
         "icon-message-circle"
       elsif mention["wm-property"] == "in-reply-to"
         "icon-reply"
+      elsif mention["wm-property"] == "like-of"
+        "icon-heart"
+      elsif mention["wm-property"] == "bookmark-of"
+        "icon-bookmark"
+      elsif mention["wm-property"] == "repost-of"
+        "icon-repeat-2"
       elsif display_name(mention) == (mention.dig("author", "name") || "")
         "icon-megaphone"
       else
@@ -158,7 +164,13 @@ module Jekyll
         css_class  = "webmention github#{" is-author" if mention["is_author"]}"
         data_attrs = "data-source=\"github\" data-platform=\"#{mention["platform"]}\""
       elsif mention["wm-target"] && mention["author_name"]
-        wm_type    = mention["wm-property"] == "in-reply-to" ? "reply" : "mention"
+        wm_type    = case mention["wm-property"]
+                     when "in-reply-to"  then "reply"
+                     when "like-of"      then "like"
+                     when "bookmark-of"  then "bookmark"
+                     when "repost-of"    then "repost"
+                     else "mention"
+                     end
         css_class  = "webmention #{wm_type}#{" is-author" if mention["is_author"]}"
         data_attrs = "data-source=\"webmention\" data-platform=\"#{mention["platform"]}\""
       else
@@ -178,6 +190,12 @@ module Jekyll
         "#{post_link} shared on #{author_link}"
       elsif mention["wm-property"] == "in-reply-to"
         "#{author_link} replied to #{post_link}"
+      elsif mention["wm-property"] == "like-of"
+        "#{author_link} liked #{post_link}"
+      elsif mention["wm-property"] == "bookmark-of"
+        "#{author_link} bookmarked #{post_link}"
+      elsif mention["wm-property"] == "repost-of"
+        "#{author_link} reposted #{post_link}"
       else
         "#{author_link} mentioned #{post_link}"
       end
