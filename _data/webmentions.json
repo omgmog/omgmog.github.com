@@ -5535,7 +5535,7 @@
       "author": {
         "type": "card",
         "name": "The Book Club",
-        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:d4jkrca4x4fejypt6ewevkzo/bafkreihqihbuvq36drbzcgh5i2zppfd2kfe533qs45hgh2brfeq4omiltm",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:d4jkrca4x4fejypt6ewevkzo/bafkreiguxhsexrluulbiq45oyjtsxexmitzxmmjbscl7exoveuntlcgdpi",
         "url": "https://bsky.app/profile/the-bookclub.bsky.social"
       },
       "url": "https://bsky.app/profile/the-bookclub.bsky.social/post/3mp3pnvh4o22y",
@@ -5796,6 +5796,34 @@
       "wm-property": "repost-of",
       "wm-private": false,
       "sort_date": "2026-06-25T23:42:11Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Justin Sherrill",
+        "photo": "",
+        "url": "http://www.shiningsilence.com"
+      },
+      "url": "https://www.dragonflydigest.com/2026/07/05/lazy-reading-for-2026-07-05/",
+      "published": "2026-07-05T08:18:52-04:00",
+      "wm-received": "2026-07-05T12:19:31Z",
+      "wm-id": 2006658,
+      "wm-source": "https://www.dragonflydigest.com/2026/07/05/lazy-reading-for-2026-07-05/",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "name": "Lazy Reading for 2026/07/05",
+      "content": {
+        "html": "<p>This is entirely overflow links from last week, pre-posted.</p>\n<ul><li><a href=\"https://iffybooks.net/cyberdeck-meetup-notes/\">Cyberdeck Meetup Notes</a>.  (<a href=\"https://tilde.news/s/iyhmtm/cyberdeck_meetup_notes_june_15_2026\">via</a>)  I wish Iffy Books was closer; those are some <a href=\"https://iffybooks.net/\">fun events on the calendar</a>.</li>\n<li><a href=\"https://www.johncoulthart.com/feuilleton/2026/06/15/painting-with-light/\">Painting with Light</a>.</li>\n<li><a href=\"https://waxy.org/2026/06/the-wholesale-plagiarism-of-obscure-sorrows/\">The Wholesale Plagiarism of Obscure Sorrows</a>.  I was finding wholesale copies of this Digest back in I think 2008 or so.</li>\n<li><a href=\"https://usher.dev/posts/2026-02-18-using-claude-code-to-personalise-xteink-x4/\">Using Claude Code to Personalise the Xteink X4</a>.  Adding to some <a href=\"https://www.dragonflydigest.com/2026/05/03/lazy-reading-for-2026-05-03/\">previous links</a> about this device.  (<a href=\"https://ville.saalo.moi/2026/06/08/junited.html\">via</a>)</li>\n<li>And also this: <a href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\">The Xteink X4 E-Ink Reader</a>.</li>\n<li>Also probably related: <a href=\"https://antoniosantos.io/i-don-t-need-it-and-neither-do-you/\">I don’t need it (and neither do you)</a>.</li>\n<li><a href=\"https://moddedbear.com/gmail-thinks-im-stupid-so-i-left\">Gmail Thinks I’m Stupid, So I Left</a>.  (also <a href=\"https://ville.saalo.moi/2026/06/08/junited.html\">via</a>)</li>\n<li><a href=\"https://www.masswerk.at/nowgobang/2026/please-just-stop\">Please, Just Stop Ruining “10 PRINT”. Seriously</a>.</li>\n<li><a href=\"https://www.tumfatig.net/2026/connect-freebsd-to-openbsd-using-wireguard/\">Connect FreeBSD to OpenBSD using WireGuard</a>.</li>\n<li><a href=\"https://starlog.com/pages/starlog-50\">The Starlog 50</a>.</li>\n</ul>",
+        "text": "This is entirely overflow links from last week, pre-posted.\nCyberdeck Meetup Notes.  (via)  I wish Iffy Books was closer; those are some fun events on the calendar.\nPainting with Light.\nThe Wholesale Plagiarism of Obscure Sorrows.  I was finding wholesale copies of this Digest back in I think 2008 or so.\nUsing Claude Code to Personalise the Xteink X4.  Adding to some previous links about this device.  (via)\nAnd also this: The Xteink X4 E-Ink Reader.\nAlso probably related: I don’t need it (and neither do you).\nGmail Thinks I’m Stupid, So I Left.  (also via)\nPlease, Just Stop Ruining “10 PRINT”. Seriously.\nConnect FreeBSD to OpenBSD using WireGuard.\nThe Starlog 50."
+      },
+      "mention-of": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://www.dragonflydigest.com/2026/07/05/lazy-reading-for-2026-07-05/"
+      },
+      "sort_date": "2026-07-05T08:18:52-04:00"
     },
     {
       "type": "entry",
