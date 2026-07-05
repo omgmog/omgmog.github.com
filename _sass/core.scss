@@ -805,7 +805,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1em;
+    column-gap: 1em;
     flex-wrap: wrap;
 }
 
@@ -859,7 +859,9 @@ nav {
 .post-title {
     margin-bottom: var(--gutter-size);
 }
-
+p.post-subtitle {
+    margin: 0;
+}
 
 h1.post-title {
     font-size: max(var(--text-lg), 9cqi);
