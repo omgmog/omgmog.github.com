@@ -1,1053 +1,1243 @@
 (function () {
-    'use strict';
-    if (!('fetch' in window)) return;
-
-    const GH_FETCH_OPTS = {Accept: "application/vnd.github.v3.full+json", cache: "force-cache"};
-  
-    // Initialize templates safely with error handling
-    const getTemplateContent = (id) => {
-        const element = document.getElementById(id);
-        return element ? element.innerHTML : '';
-    };
-
-    const TYPES = {
-        'comment': {
-            template: getTemplateContent('tpl-comment'),
-            element: '#feed',
-            attributes: {
-                is_author_class: ['_is_author_class'],
-                verb: 'commented',
-                author_name: ['user', 'login'],
-                author_avatar_url: ['user', 'avatar_url'],
-                author_url: ['user', 'html_url'],
-                date: ['created_at'],
-                date_formatted: ['created_at'],
-                body: ['body'],
-                url: ['html_url'],
-                domain: ['html_url']
-            }
-        },
-        'reply': {
-            template: getTemplateContent('tpl-reply'),
-            element: '#feed',
-            attributes: {
-                is_author_class: ['_is_author_class'],
-                platform: ['_platform'],
-                verb: 'replied',
-                author_name: ['author', 'name'],
-                author_avatar_url: ['author', 'photo'],
-                author_url: ['author', 'url'],
-                date: ['published'],
-                date_formatted: ['published'],
-                body: ['content', 'text'],
-                url: ['url'],
-                domain: ['url']
-            }
-        },
-        'mention': {
-            template: getTemplateContent('tpl-mention'),
-            element: '#feed',
-            attributes: {
-                platform: ['_platform'],
-                verb: 'Mentioned',
-                url: ['url'],
-                date: ['published'],
-                date_formatted: ['published'],
-                domain: ['url']
-            }
-        },
-        'mention-rich': {
-            template: getTemplateContent('tpl-mention-rich'),
-            element: '#feed',
-            attributes: {
-                is_author_class: ['_is_author_class'],
-                platform: ['_platform'],
-                author_name: ['author', 'name'],
-                author_avatar_url: ['author', 'photo'],
-                author_url: ['author', 'url'],
-                summary: ['summary', 'value'],
-                date: ['published'],
-                date_formatted: ['published'],
-                verb: 'mentioned',
-                url: ['url'],
-                domain: ['url']
-            }
-        },
-        'mention-lemmy': {
-            template: getTemplateContent('tpl-mention-lemmy'),
-            element: '#feed',
-            attributes: {
-                author_name: ['author', 'name'],
-                url: ['url'],
-                community_name: ['community', 'name'],
-                community_url: ['community', 'url'],
-                community_host: ['community', 'url'],
-                date: ['published'],
-                date_formatted: ['published']
-            }
-        },
-        'bookmark-hn': {
-            template: getTemplateContent('tpl-bookmark-hn'),
-            element: '#feed',
-            attributes: {
-                author_name: ['author', 'name'],
-                url: ['url'],
-                date: ['published'],
-                date_formatted: ['published']
-            }
-        },
-        'bookmark-lobsters': {
-            template: getTemplateContent('tpl-bookmark-lobsters'),
-            element: '#feed',
-            attributes: {
-                author_name: ['author', 'name'],
-                url: ['url'],
-                date: ['published'],
-                date_formatted: ['published']
-            }
-        },
-        'like': {
-            template: getTemplateContent('tpl-like'),
-            element: '#likes',
-            attributes: {
-                author_name: ['author', 'name'],
-                author_avatar_url: ['author', 'photo'],
-                verb: 'liked',
-                domain: ['url']
-            }
-        },
-        'bookmark': {
-            template: getTemplateContent('tpl-bookmark'),
-            element: '#likes',
-            attributes: {
-                author_name: ['author', 'name'],
-                author_avatar_url: ['author', 'photo'],
-                verb: 'bookmarked',
-                domain: ['url']
-            }
-        },
-        'bookmark-reddit': {
-            template: getTemplateContent('tpl-bookmark-reddit'),
-            element: '#feed',
-            attributes: {
-                author_name: ['author', 'name'],
-                url: ['url'],
-                subreddit: ['url'],
-                date: ['published'],
-                date_formatted: ['published']
-            }
-        },
-        'repost': {
-            template: getTemplateContent('tpl-repost'),
-            element: '#likes',
-            attributes: {
-                author_name: ['author', 'name'],
-                author_avatar_url: ['author', 'photo'],
-                verb: 'reposted',
-                url: ['url'],
-                domain: ['url']
-            }
-        }
-    };
-
-    // Safely encode pageURL for localStorage keys
-    const pageURL_base64 = (typeof pageURL !== 'undefined' && pageURL && pageURL[0]) 
-        ? btoa(pageURL[0]) 
-        : btoa(window.location.href);
-
-    const VERBS = {
-        bookmark: ['Bookmark', 'Bookmarks'],
-        like: ['Like', 'Likes'],
-        mention: ['Mention', 'Mentions'],
-        reply: ['Reply', 'Replies'],
-        repost: ['Repost', 'Reposts']
-    };
-
-    // Snapshot pre-rendered counts before any JS writes to the DOM
-    const staticDomCounts = {};
-    (function() {
-        const el = document.querySelector('.interaction-stats');
-        if (!el) return;
-        Object.keys(VERBS).forEach(key => {
-            const val = parseInt(el.querySelector(`.${key} .value`)?.textContent || '0', 10);
-            if (val > 0) staticDomCounts[key] = val;
-        });
-    })();
-
-    const module = {};
-
-    module.fetchGithubIssue = async issueID => {
-        // If we previously stored a rate-limit reset and it's still in the future, skip requesting
-        if (module.isRateLimited()) {
-            const reset = module.getStoredRateLimitReset();
-            return { error: 'rate_limit', resetTime: reset };
-        }
-
-        try {
-            const response = await fetch(`https://api.github.com/repos/omgmog/omgmog.github.com/issues/${issueID}`, GH_FETCH_OPTS);
-            if (!response.ok) {
-                if (response.status === 403) {
-                    const resetTime = response.headers.get('x-ratelimit-reset');
-                    const rateLimitRemaining = response.headers.get('x-ratelimit-remaining');
-                    
-                    if (rateLimitRemaining === '0' && resetTime) {
-                        const resetDate = new Date(parseInt(resetTime) * 1000);
-                        console.warn(`GitHub API rate limit exceeded. Resets at ${resetDate.toLocaleTimeString()}`);
-                        module.storeRateLimitReset(resetDate);
-                        return { error: 'rate_limit', resetTime: resetDate };
-                    } else {
-                        console.warn('GitHub API access forbidden (403). Check repository permissions or authentication.');
-                        return { error: 'forbidden' };
-                    }
-                }
-                if (response.status === 410) {
-                    console.warn('GitHub issue is no longer available (410 Gone). Comments are closed.');
-                    return { error: 'gone' };
-                }
-                throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
-            }
-            // clear any stored rate limit on success
-            module.clearStoredRateLimit();
-            return await response.json();
-        } catch (error) {
-            console.warn('Failed to fetch GitHub issue:', error);
-            return { error: 'network' };
-        }
-    };
-
-    module.fetchGithubComments = async issueData => {
-        if (!issueData || !issueData.comments_url) {
-            console.warn('Invalid issue data provided to fetchGithubComments');
-            return [];
-        }
-        // Respect stored rate limit
-        if (module.isRateLimited()) {
-            const reset = module.getStoredRateLimitReset();
-            return { error: 'rate_limit', resetTime: reset };
-        }
-        
-        try {
-            const response = await fetch(issueData.comments_url, GH_FETCH_OPTS);
-            if (!response.ok) {
-                if (response.status === 403) {
-                    const resetTime = response.headers.get('x-ratelimit-reset');
-                    const rateLimitRemaining = response.headers.get('x-ratelimit-remaining');
-                    
-                    if (rateLimitRemaining === '0' && resetTime) {
-                        const resetDate = new Date(parseInt(resetTime) * 1000);
-                        console.warn(`GitHub API rate limit exceeded. Resets at ${resetDate.toLocaleTimeString()}`);
-                        module.storeRateLimitReset(resetDate);
-                        return { error: 'rate_limit', resetTime: resetDate };
-                    } else {
-                        console.warn('GitHub API access forbidden (403). Check repository permissions or authentication.');
-                        return { error: 'forbidden' };
-                    }
-                }
-                throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
-            }
-            // clear any stored rate limit on success
-            module.clearStoredRateLimit();
-            return await response.json();
-        } catch (error) {
-            console.warn('Failed to fetch GitHub comments:', error);
-            return { error: 'network' };
-        }
-    };
-
-    module.fetchWebmentions = async url => {
-        try {
-            const response = await fetch(`https://webmention.io/api/mentions.jf2?target=${url}&per-page=1000`);
-            if (!response.ok) {
-                throw new Error(`Webmention API error: ${response.status} ${response.statusText}`);
-            }
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.warn('Failed to fetch webmentions:', error);
-            return { children: [] };
-        }
-    };
-
-    const DEFAULT_DATE_OPTIONS = {
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric',
-    };
-    module.prettyDate = (dateString, options=DEFAULT_DATE_OPTIONS) => new Intl.DateTimeFormat('default', options).format(new Date(dateString));
-
-    module.renderThing = (type, data) => {
-        if (!type || !type.template || !type.attributes || !data) {
-            console.warn('Invalid type or data provided to renderThing');
-            return '';
-        }
-        
-        let template = type.template;
-        for (const attribute of Object.keys(type.attributes)) {
-            let value = data[type.attributes[attribute]];
-
-            // generally try and fallback for values
-            if (!value) {
-                value = type.attributes[attribute];
-            }
-            if (!value || (typeof value !== 'string')) {
-                value = data[type.attributes[attribute][0]];
-            }
-            if (!value || (typeof value !== 'string')) {
-                value = data[type.attributes[attribute][0]]?.[type.attributes[attribute][1]];
-            }
-
-            if (attribute === 'date') {
-                // sometimes the publish date isn't provided but we might know when the mention was received
-                value = value || data['wm-received'];
-            }
-            if (attribute === 'date_formatted') {
-                // sometimes the publish date isn't provided but we might know when the mention was received
-                value = value || data['wm-received'];
-                // format the date
-                value = module.prettyDate(value);
-            }
-
-            if (attribute === 'summary') {
-                const HTML_LIMIT = 1000;
-                const truncateText = text => {
-                    const word_limit = 50;
-                    let words = (text || '').replace(/\s+/g,' ').split(' ', word_limit + 1);
-                    if (words.length > word_limit) {
-                        words[word_limit - 1] += '&hellip;';
-                        words = words.slice(0, word_limit);
-                    }
-                    return words.join(' ');
-                };
-                if (data.summary?.value) {
-                    value = data.summary.value;
-                } else if (data.content?.html && data.content.html.length <= HTML_LIMIT) {
-                    value = data.content.html;
-                } else if (data.content?.html) {
-                    // Extract context around the mention link from large HTML
-                    const targetUrl = data['wm-target'] || '';
-                    let extracted = null;
-                    try {
-                        const doc = new DOMParser().parseFromString(data.content.html, 'text/html');
-                        const targetPath = targetUrl ? new URL(targetUrl).pathname : '';
-                        const link = doc.querySelector(`a[href="${targetUrl}"]`)
-                            || (targetPath && doc.querySelector(`a[href*="${targetPath}"]`));
-                        if (link) {
-                            const container = link.closest('p, blockquote, li') || link.parentElement;
-                            extracted = container ? container.innerHTML : link.outerHTML;
-                        }
-                    } catch(e) {}
-                    value = extracted || truncateText(data.content?.text);
-                } else {
-                    value = truncateText(data.content?.text);
-                }
-            }
-            if (attribute === 'body' || attribute === 'summary') {
-                // skip markdown parsing if already HTML
-                if (!/<[a-z][\s\S]*>/i.test(value)) {
-                    value = marked.parse(value);
-                }
-            }
-            if (attribute === 'subreddit') {
-                const match = (data.url || data['wm-source'] || '').match(/reddit\.com\/r\/([^/]+)/i);
-                value = match ? match[1] : '';
-            }
-            if (attribute === 'community_host') {
-                try {
-                    value = new URL(value).hostname;
-                } catch (error) {
-                    value = '';
-                }
-            }
-            if (attribute === 'domain') {
-                // extract the hostname from the url
-                try {
-                    value = new URL(value).hostname;
-                } catch (error) {
-                    console.warn('Invalid URL for domain extraction:', value);
-                    value = value || '';
-                }
-            }
-            if (attribute === 'author_name' && !value) {
-                try {
-                    value = new URL(data.url || data['wm-source']).hostname;
-                } catch (e) {}
-            }
-            if (attribute === 'author_url') {
-                // sometimes there isn't an author url
-                value = value || data.url;
-            }
-            if (attribute === 'url' ) {
-                // sometimes a canonical url is available!
-                value = data.rels?.canonical || value;
-
-                // If it's a Twitter webmention, use archive.org
-                if (value.match('https://twitter.com')) {
-                    const date = new Date(data['wm-received']);
-                    const [month, year] = [
-                        date.getMonth() + 1,
-                        date.getFullYear(),
-                    ];
-                    value = `https://web.archive.org/web/${year}${(month<10?'0':'')}${month}/${value}`;
-                }
-            }
-
-            template = template.replace(new RegExp('%' + attribute + '%', 'g'), value ?? '');
-        }
-      return template;
-    };
-
-    module.renderThings = things => {
-        if (!things || !things.type) return;
-        
-        let type;
-        let data = things.data?.children || things.data;
-        if (Array.isArray(data) && things.type === 'comment') {
-            data = data.filter(c => !preRenderedCommentIds.has(c.id));
-        }
-        if (Array.isArray(data) && things.type !== 'comment') {
-            data = [...data].sort((a, b) => new Date(a['wm-received'] || 0) - new Date(b['wm-received'] || 0));
-        }
-        if (things.type === 'comment') {
-            type = TYPES[things.type];
-            const state = things.state || 'closed'; // fallback to 'closed' if state is undefined
-            const hasComments = Array.isArray(things.data) && things.data.length > 0;
-            if (state === 'open' || hasComments) {
-                const el = document.querySelector('#comments');
-                if (el) el.style.display = 'block';
-            }
-            document.querySelectorAll(`.comments-${state}`).forEach(el => el.style.display = 'initial');
-        }
-        
-        if (!data || !Array.isArray(data)) return;
-        
-        data.forEach(item => {
-            if (!item || !item.type || !TYPES[item.type]) return;
-            
-            type = TYPES[item.type];
-            // if we have some content too, let's render it as a rich mention
-            if (item.content?.text && item.type === 'mention') {
-                type = TYPES['mention-rich'];
-            }
-            
-            const element = document.querySelector(type.element);
-            if (!element || !element.querySelector('.items')) return;
-            
-            element.querySelector('.items').innerHTML += module.renderThing(type, item);
-            element.style.display = 'block';
-        });
-    };
-
-    module.checkForFailedAvatars = () => {
-        document.querySelectorAll('#interactions .avatar').forEach(avatar => {
-            if (!avatar.getAttribute('src')) {
-                window.makeFallbackAvatar(avatar.dataset.username, avatar);
-            } else {
-                avatar.onerror = () => window.makeFallbackAvatar(avatar.dataset.username, avatar);
-                if (avatar.complete && avatar.naturalWidth === 0) window.makeFallbackAvatar(avatar.dataset.username, avatar);
-            }
-        });
-    };
-
-    module._wmConvCount = 0;
-
-    module.updateCommentCount = (githubCount = 0) => {
-        const statsElement = document.querySelector('.interaction-stats');
-        const commentSpan = statsElement?.querySelector('.comment');
-        if (!commentSpan) return;
-
-        const archivedCount = parseInt(commentSpan.dataset.archivedCount || '0', 10);
-        const wmConvPreRendered = parseInt(commentSpan.dataset.wmConvCount || '0', 10);
-        const preRenderedCount = typeof preRenderedCommentIds !== 'undefined' ? preRenderedCommentIds.size : 0;
-        const totalCount = archivedCount + wmConvPreRendered + preRenderedCount + githubCount + module._wmConvCount;
-
-        if (totalCount > 0) {
-            const valueSpan = commentSpan.querySelector('.value');
-            if (valueSpan) {
-                valueSpan.textContent = totalCount;
-            }
-            commentSpan.title = `${totalCount} Comment${totalCount === 1 ? '' : 's'}`;
-            commentSpan.removeAttribute('style');
-            statsElement?.removeAttribute('style');
-        }
-    };
-
-
-    module.updateWebmentionCounts = () => {
-        const data = interactions.webmentions?.data;
-        if (!data || !Array.isArray(data)) return;
-
-        const element = document.querySelector('.interaction-stats');
-        if (!element) return;
-
-        // Seed from pre-rendered static counts (snapshotted before any JS writes)
-        const counts = Object.assign({}, staticDomCounts);
-        let newWmConvCount = 0;
-
-        data.filter(m => !preRenderedWmIds.has(m['wm-id'])).forEach(mention => {
-            if (mention.type === 'reply' || mention.type === 'mention') {
-                newWmConvCount++;
-            } else if (mention.type && VERBS[mention.type]) {
-                counts[mention.type] = (counts[mention.type] || 0) + 1;
-            }
-        });
-
-        // Update reaction badges (like, bookmark, repost)
-        Object.entries(counts).forEach(([key, count]) => {
-            const parent = element.querySelector(`.${key}`);
-            if (!parent) return;
-            const value = parent.querySelector('.value');
-            if (!value) return;
-            value.innerHTML = count;
-            parent.title = `${count} ${VERBS[key][count === 1 ? 0 : 1]}`;
-            parent.removeAttribute('style');
-        });
-
-        if (Object.keys(counts).length > 0 || newWmConvCount > 0) {
-            element.removeAttribute('style');
-        }
-
-        // Fold new wm replies+mentions into the conversation badge
-        module._wmConvCount = newWmConvCount;
-        module.updateCommentCount(interactions.comments?.data?.length || 0);
-    };
-
-    module.renderArchivedComments = () => {
-        const archivedCommentsSection = document.querySelector('#archived-comments');
-        if (!archivedCommentsSection) return;
-
-        // fallback avatars for archived comments
-        archivedCommentsSection.querySelectorAll('.avatar').forEach(avatar => {
-            if (avatar.dataset.username === 'max') return; // skip my avatar
-            window.makeFallbackAvatar(avatar.dataset.username, avatar);
-        });
-    };
-
-    module.saveData = (what, where) => {
-        try {
-            localStorage.setItem(where, JSON.stringify(what));
-        } catch (error) {
-            console.warn('Failed to save data to localStorage:', error);
-        }
-    };
-
-    module.loadData = what => {
-        try {
-            const data = localStorage.getItem(what);
-            return data ? JSON.parse(data) : null;
-        } catch (error) {
-            console.warn('Failed to load data from localStorage:', error);
-            return null;
-        }
-    };
-
-    module.showRateLimitMessage = (resetTime) => {
-        const rateLimitElement = document.querySelector('#github-rate-limit');
-        if (rateLimitElement) {
-            const resetTimeSpan = rateLimitElement.querySelector('span');
-            if (resetTimeSpan) {
-                resetTimeSpan.textContent = resetTime.toLocaleTimeString();
-            }
-            rateLimitElement.style.display = 'block';
-            module.updateRetryButtonState(resetTime);
-        }
-    };
-    
-    module.hideRateLimitMessage = () => {
-        const rateLimitElement = document.querySelector('#github-rate-limit');
-        if (rateLimitElement) {
-            rateLimitElement.style.display = 'none';
-        }
-    };
-    
-    module.showCommentsClosed = () => {
-        document.querySelectorAll('.comments-open').forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.comments-closed').forEach(el => el.style.display = 'initial');
-    };
-    
-    // Note: retry behavior uses the generic '.reload' binding above
-
-
-    // Enhance retry button to be disabled while still rate-limited
-    module.updateRetryButtonState = (resetTime) => {
-        const now = Date.now();
-        const shouldEnable = !resetTime || resetTime.getTime() <= now;
-
-        document.querySelectorAll('#interactions .reload').forEach(b => {
-            const parts = (b.dataset.what || '').split(',').map(s => s.trim()).filter(Boolean);
-            // if button targets comments or no specific target, consider it relevant
-            if (parts.length === 0 || parts.includes('comments')) {
-                b.disabled = !shouldEnable;
-                b.title = shouldEnable ? 'Retry fetching comments now' : `Retry disabled until ${resetTime.toLocaleTimeString()}`;
-            }
-        });
-
-        if (!shouldEnable && resetTime) {
-            // schedule re-enable when reset passes
-            const ms = resetTime.getTime() - now + 1000;
-            setTimeout(() => {
-                document.querySelectorAll('#interactions .reload').forEach(b => {
-                    const parts = (b.dataset.what || '').split(',').map(s => s.trim()).filter(Boolean);
-                    if (parts.length === 0 || parts.includes('comments')) {
-                        b.disabled = false;
-                        b.title = 'Retry fetching comments now';
-                    }
-                });
-                module.clearStoredRateLimit();
-                module.hideRateLimitMessage();
-            }, ms);
-        }
-    };
-
-    // Rate limit persistence helpers (site-wide, not per-page)
-    const RATE_LIMIT_KEY = `github-rate-limit-reset`;
-
-    module.getStoredRateLimitReset = () => {
-        try {
-            const v = localStorage.getItem(RATE_LIMIT_KEY);
-            return v ? new Date(parseInt(v, 10)) : null;
-        } catch (e) {
-            return null;
-        }
-    };
-
-    module.storeRateLimitReset = resetDate => {
-        try {
-            if (resetDate instanceof Date && !isNaN(resetDate)) {
-                // store milliseconds since epoch to avoid timezone/precision issues
-                localStorage.setItem(RATE_LIMIT_KEY, String(resetDate.getTime()));
-            }
-        } catch (e) {
-            console.warn('Failed to persist rate limit reset time', e);
-        }
-    };
-
-    module.clearStoredRateLimit = () => {
-        try { localStorage.removeItem(RATE_LIMIT_KEY); } catch(e){}
-    };
-
-    // Check stored rate limit and avoid making requests until reset passes
-    module.isRateLimited = () => {
-        const reset = module.getStoredRateLimitReset();
-        if (!reset) return false;
-        const now = Date.now();
-        return reset.getTime() > now;
-    };
-
-    // is it more than half an hour old?
-    const now = Date.now();
-    const halfHour = 30 * 60 * 1000;
-    let interactions = {
-        date: module.loadData(`interactions-date-${pageURL_base64}`) || now - halfHour - 1,
-        comments: githubIssueID ? (module.loadData(`interactions-comments-${pageURL_base64}`) || {type:'comment',state:'closed',data:[]}) : {type:'comment',state:'closed',data:[]},
-        webmentions: module.loadData(`interactions-mentions-${pageURL_base64}`) || {}
-    };
-
-    module.renderFeed = () => {
-        const wmData = (interactions.webmentions?.data?.children || interactions.webmentions?.data || [])
-            .filter(m => !preRenderedWmIds.has(m['wm-id']));
-        const commentsData = interactions.comments?.data || [];
-
-        const isRedditBookmark = m => m.type === 'bookmark' && /reddit\.com\/r\//i.test(m.url || m['wm-source'] || '');
-        const isLemmyMention = m => m.type === 'mention' && !!m.community?.name;
-        const isHNBookmark = m => m.type === 'bookmark' && /news\.ycombinator\.com/i.test(m.url || m['wm-source'] || '');
-        const isLobstersRepost = m => m.type === 'repost' && /lobste\.rs/i.test(m.url || m['wm-source'] || '');
-
-        // Merge feed items: wm replies+mentions + reddit/HN/Lobsters reposts + new github comments, sorted by date
-        const feedWm = wmData.filter(m => m.type === 'reply' || m.type === 'mention' || isRedditBookmark(m) || isHNBookmark(m) || isLobstersRepost(m));
-        const newComments = commentsData.filter(c => !preRenderedCommentIds.has(c.id));
-        const merged = [...feedWm, ...newComments].sort((a, b) =>
-            new Date(a['wm-received'] || a.created_at || 0) - new Date(b['wm-received'] || b.created_at || 0)
-        );
-
-        // Handle issue open/closed state
-        const state = interactions.comments?.state || 'closed';
-        const otherState = state === 'open' ? 'closed' : 'open';
-        const feedEl = document.querySelector('#feed');
-        if (feedEl && (state === 'open' || merged.length > 0)) {
-            feedEl.style.display = 'block';
-        }
-        document.querySelectorAll(`.comments-${state}`).forEach(el => el.style.display = 'initial');
-        document.querySelectorAll(`.comments-${otherState}`).forEach(el => el.style.display = 'none');
-
-        // Helpers for author detection and platform classification
-        const AUTHOR_GH_LOGIN = 'omgmog';
-        const AUTHOR_DISPLAY_NAME = 'Max Glenister';
-        const AUTHOR_DOMAINS = ['omgmog.net', 'omgmog.github.io', 'twitter.com/omgmog', 'indieweb.social/@omgmog'];
-        const checkIsAuthor = item => {
-            if (item.type === 'comment') return item.user?.login?.toLowerCase() === AUTHOR_GH_LOGIN;
-            const url = item.author?.url || '';
-            const source = item['wm-source'] || '';
-            return AUTHOR_DOMAINS.some(d => url.includes(d) || source.includes(d));
-        };
-        const computePlatform = item => {
-            const url = item.url || item['wm-source'] || '';
-            const source = item['wm-source'] || '';
-            if (url.includes('reddit.com')) return 'reddit';
-            if (url.includes('news.ycombinator.com')) return 'hn';
-            if (url.includes('lobste.rs')) return 'lobsters';
-            if (url.includes('twitter.com')) return 'twitter';
-            if (source.includes('brid.gy')) return 'mastodon';
-            return 'web';
-        };
-
-        // Render merged items into #feed
-        if (!feedEl?.querySelector('.items')) return;
-        merged.forEach(item => {
-            if (!item.type) return;
-            let type = TYPES[item.type];
-            if (item.content?.text && item.type === 'mention') type = TYPES['mention-rich'];
-            if (isLemmyMention(item)) type = TYPES['mention-lemmy'];
-            if (isRedditBookmark(item)) type = TYPES['bookmark-reddit'];
-            if (isHNBookmark(item)) type = TYPES['bookmark-hn'];
-            if (isLobstersRepost(item)) type = TYPES['bookmark-lobsters'];
-            if (!type) return;
-
-            const isAuthor = checkIsAuthor(item);
-            const enriched = Object.assign({}, item);
-            enriched._is_author_class = isAuthor ? ' is-author' : '';
-            enriched._platform = computePlatform(item);
-            if (isAuthor) {
-                if (item.type === 'comment') {
-                    enriched.user = Object.assign({}, item.user, { login: AUTHOR_DISPLAY_NAME, avatar_url: '/assets/mog.svg' });
-                } else {
-                    enriched.author = Object.assign({}, item.author, { name: AUTHOR_DISPLAY_NAME, photo: '/assets/mog.svg' });
-                }
-            }
-
-            feedEl.querySelector('.items').innerHTML += module.renderThing(type, enriched);
-            feedEl.style.display = 'block';
-        });
-
-        // Render likes/bookmarks/reposts into #likes, deduped by author name
-        const likesEl = document.querySelector('#likes');
-        if (likesEl) {
-            const seenLikers = new Set(
-                Array.from(likesEl.querySelectorAll('.avatar[data-username]')).map(el => el.dataset.username).filter(Boolean)
-            );
-            const likesData = wmData.filter(m => {
-                if (m.type !== 'like' && m.type !== 'bookmark' && m.type !== 'repost') return false;
-                if (isRedditBookmark(m) || isHNBookmark(m) || isLobstersRepost(m)) return false;
-                const key = m.author?.name || '';
-                if (!key || seenLikers.has(key)) return false;
-                seenLikers.add(key);
-                return true;
-            });
-            if (likesData.length > 0) {
-                const likesList = likesEl.querySelector('.items');
-                if (likesList) {
-                    likesData.forEach(item => {
-                        const type = TYPES[item.type];
-                        if (!type) return;
-                        likesList.innerHTML += module.renderThing(type, item);
-                    });
-                    likesEl.style.display = 'block';
-                }
-            }
-        }
-
-        // Re-sort all feed children (static + dynamic) by datetime
-        const itemsEl = feedEl.querySelector('.items');
-        if (itemsEl) {
-            Array.from(itemsEl.children)
-                .sort((a, b) => {
-                    const aDate = a.querySelector('time')?.getAttribute('datetime') || '';
-                    const bDate = b.querySelector('time')?.getAttribute('datetime') || '';
-                    return aDate.localeCompare(bDate);
-                })
-                .forEach(child => itemsEl.appendChild(child));
-        }
-    };
-
-    module.renderAll = () => {
-        module.renderFeed();
-        module.updateCommentCount(interactions.comments?.data?.length || 0);
-        module.updateWebmentionCounts();
-        module.checkForFailedAvatars();
-    }
-
-    module.fetchAndCache = async (what = ['comments', 'webmentions']) => {
-        module.saveData(Date.now(), `interactions-date-${pageURL_base64}`);
-
-        if (what.includes('comments') && githubIssueID) {
-            const storedReset = module.getStoredRateLimitReset();
-            if (storedReset && storedReset.getTime() > Date.now()) {
-                module.showRateLimitMessage(storedReset);
-                module.updateRetryButtonState(storedReset);
-                return;
-            }
-            try {
-                const issue = await module.fetchGithubIssue(githubIssueID);
-                if (!issue || issue.error) {
-                    if (issue?.error === 'rate_limit' && issue.resetTime) {
-                        module.showRateLimitMessage(issue.resetTime);
-                        module.updateRetryButtonState(issue.resetTime);
-                    } else if (issue?.error === 'gone') {
-                        module.showCommentsClosed();
-                    }
-                    return;
-                }
-                const comments = await module.fetchGithubComments(issue);
-                if (comments?.error) {
-                    if (comments.error === 'rate_limit' && comments.resetTime) {
-                        module.showRateLimitMessage(comments.resetTime);
-                        module.updateRetryButtonState(comments.resetTime);
-                    }
-                    return;
-                }
-                module.hideRateLimitMessage();
-                module.clearStoredRateLimit();
-                module.updateRetryButtonState();
-                interactions.comments = {
-                    type: 'comment',
-                    state: issue.state || 'closed',
-                    data: (Array.isArray(comments) ? comments : []).filter(c => !preRenderedCommentIds.has(c.id)).map(comment => Object.assign(comment, { type: 'comment' }))
-                };
-                module.saveData(interactions.comments, `interactions-comments-${pageURL_base64}`);
-                module.updateCommentCount(interactions.comments.data.length);
-            } catch (error) {
-                console.warn('Error fetching comments:', error);
-            }
-        }
-
-        if (what.includes('webmentions') && pageURL) {
-            interactions.webmentions = { type: 'webmention', data: [] };
-            try {
-                const allMentions = await Promise.all(pageURL.map(url => module.fetchWebmentions(url).catch(e => null)));
-                allMentions.forEach(mentions => {
-                    if (!mentions || !mentions.children || !Array.isArray(mentions.children)) return;
-                    const validMentions = mentions.children
-                        .filter(mention => mention && mention['wm-property'])
-                        .map(mention => Object.assign(mention, {
-                            type: mention['wm-property']
-                                .replace('in-reply-to', 'reply')
-                                .replace('-of', '')
-                        }));
-                    const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
-                    interactions.webmentions.data = interactions.webmentions.data.concat(
-                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !preRenderedWmIds.has(m['wm-id']))
-                    );
-                });
-                module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
-                module.updateWebmentionCounts();
-            } catch (error) {
-                console.warn('Error fetching webmentions:', error);
-            }
-        }
-    };
-
-    module.fetchAndRender = async (what = ['comments', 'webmentions']) => {
-        module.saveData(Date.now(), `interactions-date-${pageURL_base64}`);
-
-        // COMMENTS
-        if (what.includes('comments') && githubIssueID) {
-            // If we have a stored reset time and it's still in the future, show message and don't fetch
-            const storedReset = module.getStoredRateLimitReset();
-            if (storedReset && storedReset.getTime() > Date.now()) {
-                module.showRateLimitMessage(storedReset);
-                module.updateRetryButtonState(storedReset);
-                return;
-            }
-
-            try {
-                const issue = await module.fetchGithubIssue(githubIssueID);
-                if (!issue || issue.error) {
-                    if (issue?.error === 'rate_limit' && issue.resetTime) {
-                        module.showRateLimitMessage(issue.resetTime);
-                        module.updateRetryButtonState(issue.resetTime);
-                        return;
-                    }
-                    if (issue?.error === 'gone') {
-                        module.showCommentsClosed();
-                        return;
-                    }
-                    // other errors: do nothing
-                    return;
-                }
-
-                const comments = await module.fetchGithubComments(issue);
-                if (comments?.error) {
-                    if (comments.error === 'rate_limit' && comments.resetTime) {
-                        module.showRateLimitMessage(comments.resetTime);
-                        module.updateRetryButtonState(comments.resetTime);
-                        return;
-                    }
-                    // other errors: do nothing
-                    return;
-                }
-
-                // success: clear rate-limit and render
-                module.hideRateLimitMessage();
-                module.clearStoredRateLimit();
-                module.updateRetryButtonState();
-
-                interactions.comments = {
-                    type: 'comment',
-                    state: issue.state || 'closed',
-                    data: (Array.isArray(comments) ? comments : []).filter(c => !preRenderedCommentIds.has(c.id)).map(comment => Object.assign(comment, { type: 'comment' }))
-                };
-                module.saveData(interactions.comments, `interactions-comments-${pageURL_base64}`);
-                module.renderFeed();
-                module.updateCommentCount(interactions.comments.data.length);
-                module.checkForFailedAvatars();
-            } catch (error) {
-                console.warn('Error fetching and rendering comments:', error);
-            }
-        }
-
-        // WEBMENTIONS
-        if (what.includes('webmentions') && pageURL) {
-            interactions.webmentions = {
-                type: 'webmention',
-                data: []
-            };
-
-            try {
-                const allMentions = await Promise.all(pageURL.map(url => module.fetchWebmentions(url).catch(e => null)));
-                allMentions.forEach(mentions => {
-                    if (!mentions || !mentions.children || !Array.isArray(mentions.children)) return;
-
-                    const validMentions = mentions.children
-                        .filter(mention => mention && mention['wm-property'])
-                        .map(mention => Object.assign(mention, {
-                            type: mention['wm-property']
-                                .replace('in-reply-to', 'reply')
-                                .replace('-of', '')
-                        }));
-
-                    const existingIds = new Set(interactions.webmentions.data.map(m => m['wm-id']));
-                    interactions.webmentions.data = interactions.webmentions.data.concat(
-                        validMentions.filter(m => !existingIds.has(m['wm-id']) && !preRenderedWmIds.has(m['wm-id']))
-                    );
-                });
-
-                module.saveData(interactions.webmentions, `interactions-mentions-${pageURL_base64}`);
-                module.clearItems(['webmentions']);
-                module.renderFeed();
-                module.updateWebmentionCounts();
-                module.checkForFailedAvatars();
-            } catch (error) {
-                console.warn('Error fetching and rendering webmentions:', error);
-            }
-        }
-
-    };
-    module.renderFetchDate = () => {
-        const fetchedDateElement = document.querySelector('#mentions-last-fetched');
-        if (!fetchedDateElement) return;
-        
-        const output = fetchedDateElement.querySelector('span');
-        if (!output) return;
-        
-        const lastFetchDate = module.loadData(`interactions-date-${pageURL_base64}`);
-        if (lastFetchDate) {
-            output.innerText = `${module.prettyDate(lastFetchDate, {...DEFAULT_DATE_OPTIONS, hour:'numeric', minute:'numeric' })}`;
-            fetchedDateElement.style.display = 'block';
-        }
-    }
-    module.clearItems = (what = ['comments', 'webmentions']) => {
-        let sections = []
-        if (what.includes('comments') || what.includes('webmentions')) {
-            sections.push('#feed');
-        }
-        if (what.includes('webmentions')) {
-            sections.push('#likes');
-        }
-        document.querySelectorAll(sections.join(',')).forEach(section => {
-            const list = section.querySelector('.items');
-            if (list) {
-                Array.from(list.children).forEach(child => {
-                    if (!child.classList.contains('static-item')) child.remove();
-                });
-            }
-            const hasStaticItems = list && list.querySelector('.static-item');
-            if (!hasStaticItems) {
-                section.style.display = section.dataset.display || 'none';
-            }
-        });
-    }
-
-    module.getLastUpdatedTime = () => module.loadData(`interactions-date-${pageURL_base64}`) || Date.now();
-
-    // Bind the reload buttons
-    document.querySelectorAll('#interactions .reload').forEach(button => {
-        const lastUpdate = module.getLastUpdatedTime();
-        button.title = `Last refreshed on ${module.prettyDate(lastUpdate, {...DEFAULT_DATE_OPTIONS, hour:'numeric', minute:'numeric' })}`;
-        button.onclick = async e => {
-            e.preventDefault();
-            const btn = e.currentTarget || button;
-            const raw = btn.dataset.what || '';
-            const whatToRefresh = raw.split(',').map(s => s.trim()).filter(Boolean);
-            const targets = whatToRefresh.length ? whatToRefresh : ['comments', 'webmentions'];
-
-            // disable related reload buttons for these targets
-            document.querySelectorAll('#interactions .reload').forEach(b => {
-                const parts = (b.dataset.what || '').split(',').map(s => s.trim());
-                if (targets.some(t => parts.includes(t))) {
-                    b.disabled = true;
-                    b.title = 'Refreshing...';
-                }
-            });
-
-            module.clearItems(targets);
-            await module.fetchAndRender(targets);
-
-            // Re-enable and update titles for affected buttons
-            document.querySelectorAll('#interactions .reload').forEach(b => {
-                const parts = (b.dataset.what || '').split(',').map(s => s.trim());
-                if (targets.some(t => parts.includes(t))) {
-                    b.disabled = false;
-                    const last = module.getLastUpdatedTime();
-                    b.title = `Last refreshed on ${module.prettyDate(last, {...DEFAULT_DATE_OPTIONS, hour:'numeric', minute:'numeric' })}`;
-                }
-            });
-            module.renderFetchDate(); 
-        }
+  "use strict";
+  if (!("fetch" in window)) return;
+
+  const GH_FETCH_OPTS = {
+    Accept: "application/vnd.github.v3.full+json",
+    cache: "force-cache",
+  };
+
+  // Initialize templates safely with error handling
+  const getTemplateContent = (id) => {
+    const element = document.getElementById(id);
+    return element ? element.innerHTML : "";
+  };
+
+  const TYPES = {
+    comment: {
+      template: getTemplateContent("tpl-comment"),
+      element: "#feed",
+      attributes: {
+        is_author_class: ["_is_author_class"],
+        verb: "commented",
+        author_name: ["user", "login"],
+        author_avatar_url: ["user", "avatar_url"],
+        author_url: ["user", "html_url"],
+        date: ["created_at"],
+        date_formatted: ["created_at"],
+        body: ["body"],
+        url: ["html_url"],
+        domain: ["html_url"],
+      },
+    },
+    reply: {
+      template: getTemplateContent("tpl-reply"),
+      element: "#feed",
+      attributes: {
+        is_author_class: ["_is_author_class"],
+        platform: ["_platform"],
+        verb: "replied",
+        author_name: ["author", "name"],
+        author_avatar_url: ["author", "photo"],
+        author_url: ["author", "url"],
+        date: ["published"],
+        date_formatted: ["published"],
+        body: ["content", "text"],
+        url: ["url"],
+        domain: ["url"],
+      },
+    },
+    mention: {
+      template: getTemplateContent("tpl-mention"),
+      element: "#feed",
+      attributes: {
+        platform: ["_platform"],
+        verb: "Mentioned",
+        url: ["url"],
+        date: ["published"],
+        date_formatted: ["published"],
+        domain: ["url"],
+      },
+    },
+    "mention-rich": {
+      template: getTemplateContent("tpl-mention-rich"),
+      element: "#feed",
+      attributes: {
+        is_author_class: ["_is_author_class"],
+        platform: ["_platform"],
+        author_name: ["author", "name"],
+        author_avatar_url: ["author", "photo"],
+        author_url: ["author", "url"],
+        summary: ["summary", "value"],
+        date: ["published"],
+        date_formatted: ["published"],
+        verb: "mentioned",
+        url: ["url"],
+        domain: ["url"],
+      },
+    },
+    "mention-lemmy": {
+      template: getTemplateContent("tpl-mention-lemmy"),
+      element: "#feed",
+      attributes: {
+        author_name: ["author", "name"],
+        url: ["url"],
+        community_name: ["community", "name"],
+        community_url: ["community", "url"],
+        community_host: ["community", "url"],
+        date: ["published"],
+        date_formatted: ["published"],
+      },
+    },
+    "bookmark-hn": {
+      template: getTemplateContent("tpl-bookmark-hn"),
+      element: "#feed",
+      attributes: {
+        author_name: ["author", "name"],
+        url: ["url"],
+        date: ["published"],
+        date_formatted: ["published"],
+      },
+    },
+    "bookmark-lobsters": {
+      template: getTemplateContent("tpl-bookmark-lobsters"),
+      element: "#feed",
+      attributes: {
+        author_name: ["author", "name"],
+        url: ["url"],
+        date: ["published"],
+        date_formatted: ["published"],
+      },
+    },
+    like: {
+      template: getTemplateContent("tpl-like"),
+      element: "#likes",
+      attributes: {
+        author_name: ["author", "name"],
+        author_avatar_url: ["author", "photo"],
+        verb: "liked",
+        domain: ["url"],
+      },
+    },
+    bookmark: {
+      template: getTemplateContent("tpl-bookmark"),
+      element: "#likes",
+      attributes: {
+        author_name: ["author", "name"],
+        author_avatar_url: ["author", "photo"],
+        verb: "bookmarked",
+        domain: ["url"],
+      },
+    },
+    "bookmark-reddit": {
+      template: getTemplateContent("tpl-bookmark-reddit"),
+      element: "#feed",
+      attributes: {
+        author_name: ["author", "name"],
+        url: ["url"],
+        subreddit: ["url"],
+        date: ["published"],
+        date_formatted: ["published"],
+      },
+    },
+    repost: {
+      template: getTemplateContent("tpl-repost"),
+      element: "#likes",
+      attributes: {
+        author_name: ["author", "name"],
+        author_avatar_url: ["author", "photo"],
+        verb: "reposted",
+        url: ["url"],
+        domain: ["url"],
+      },
+    },
+  };
+
+  // Safely encode pageURL for localStorage keys
+  const pageURL_base64 =
+    typeof pageURL !== "undefined" && pageURL && pageURL[0]
+      ? btoa(pageURL[0])
+      : btoa(window.location.href);
+
+  const VERBS = {
+    bookmark: ["Bookmark", "Bookmarks"],
+    like: ["Like", "Likes"],
+    mention: ["Mention", "Mentions"],
+    reply: ["Reply", "Replies"],
+    repost: ["Repost", "Reposts"],
+  };
+
+  // Snapshot pre-rendered counts before any JS writes to the DOM
+  const staticDomCounts = {};
+  (function () {
+    const el = document.querySelector(".interaction-stats");
+    if (!el) return;
+    Object.keys(VERBS).forEach((key) => {
+      const val = parseInt(
+        el.querySelector(`.${key} .value`)?.textContent || "0",
+        10,
+      );
+      if (val > 0) staticDomCounts[key] = val;
     });
-    
-    // Initialize retry button state based on any stored reset
-    const initialStoredReset = module.getStoredRateLimitReset();
-    if (initialStoredReset && initialStoredReset.getTime() > Date.now()) {
-        module.showRateLimitMessage(initialStoredReset);
-        module.updateRetryButtonState(initialStoredReset);
-    } else {
-        module.updateRetryButtonState();
+  })();
+
+  const module = {};
+
+  module.fetchGithubIssue = async (issueID) => {
+    // If we previously stored a rate-limit reset and it's still in the future, skip requesting
+    if (module.isRateLimited()) {
+      const reset = module.getStoredRateLimitReset();
+      return { error: "rate_limit", resetTime: reset };
     }
-    // Update count icons immediately from cached data
+
+    try {
+      const response = await fetch(
+        `https://api.github.com/repos/omgmog/omgmog.github.com/issues/${issueID}`,
+        GH_FETCH_OPTS,
+      );
+      if (!response.ok) {
+        if (response.status === 403) {
+          const resetTime = response.headers.get("x-ratelimit-reset");
+          const rateLimitRemaining = response.headers.get(
+            "x-ratelimit-remaining",
+          );
+
+          if (rateLimitRemaining === "0" && resetTime) {
+            const resetDate = new Date(parseInt(resetTime) * 1000);
+            console.warn(
+              `GitHub API rate limit exceeded. Resets at ${resetDate.toLocaleTimeString()}`,
+            );
+            module.storeRateLimitReset(resetDate);
+            return { error: "rate_limit", resetTime: resetDate };
+          } else {
+            console.warn(
+              "GitHub API access forbidden (403). Check repository permissions or authentication.",
+            );
+            return { error: "forbidden" };
+          }
+        }
+        if (response.status === 410) {
+          console.warn(
+            "GitHub issue is no longer available (410 Gone). Comments are closed.",
+          );
+          return { error: "gone" };
+        }
+        throw new Error(
+          `GitHub API error: ${response.status} ${response.statusText}`,
+        );
+      }
+      // clear any stored rate limit on success
+      module.clearStoredRateLimit();
+      return await response.json();
+    } catch (error) {
+      console.warn("Failed to fetch GitHub issue:", error);
+      return { error: "network" };
+    }
+  };
+
+  module.fetchGithubComments = async (issueData) => {
+    if (!issueData || !issueData.comments_url) {
+      console.warn("Invalid issue data provided to fetchGithubComments");
+      return [];
+    }
+    // Respect stored rate limit
+    if (module.isRateLimited()) {
+      const reset = module.getStoredRateLimitReset();
+      return { error: "rate_limit", resetTime: reset };
+    }
+
+    try {
+      const response = await fetch(issueData.comments_url, GH_FETCH_OPTS);
+      if (!response.ok) {
+        if (response.status === 403) {
+          const resetTime = response.headers.get("x-ratelimit-reset");
+          const rateLimitRemaining = response.headers.get(
+            "x-ratelimit-remaining",
+          );
+
+          if (rateLimitRemaining === "0" && resetTime) {
+            const resetDate = new Date(parseInt(resetTime) * 1000);
+            console.warn(
+              `GitHub API rate limit exceeded. Resets at ${resetDate.toLocaleTimeString()}`,
+            );
+            module.storeRateLimitReset(resetDate);
+            return { error: "rate_limit", resetTime: resetDate };
+          } else {
+            console.warn(
+              "GitHub API access forbidden (403). Check repository permissions or authentication.",
+            );
+            return { error: "forbidden" };
+          }
+        }
+        throw new Error(
+          `GitHub API error: ${response.status} ${response.statusText}`,
+        );
+      }
+      // clear any stored rate limit on success
+      module.clearStoredRateLimit();
+      return await response.json();
+    } catch (error) {
+      console.warn("Failed to fetch GitHub comments:", error);
+      return { error: "network" };
+    }
+  };
+
+  module.fetchWebmentions = async (url) => {
+    try {
+      const response = await fetch(
+        `https://webmention.io/api/mentions.jf2?target=${url}&per-page=1000`,
+      );
+      if (!response.ok) {
+        throw new Error(
+          `Webmention API error: ${response.status} ${response.statusText}`,
+        );
+      }
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.warn("Failed to fetch webmentions:", error);
+      return { children: [] };
+    }
+  };
+
+  const DEFAULT_DATE_OPTIONS = {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  };
+  module.prettyDate = (dateString, options = DEFAULT_DATE_OPTIONS) =>
+    new Intl.DateTimeFormat("default", options).format(new Date(dateString));
+
+  module.renderThing = (type, data) => {
+    if (!type || !type.template || !type.attributes || !data) {
+      console.warn("Invalid type or data provided to renderThing");
+      return "";
+    }
+
+    let template = type.template;
+    for (const attribute of Object.keys(type.attributes)) {
+      let value = data[type.attributes[attribute]];
+
+      // generally try and fallback for values
+      if (!value) {
+        value = type.attributes[attribute];
+      }
+      if (!value || typeof value !== "string") {
+        value = data[type.attributes[attribute][0]];
+      }
+      if (!value || typeof value !== "string") {
+        value =
+          data[type.attributes[attribute][0]]?.[type.attributes[attribute][1]];
+      }
+
+      if (attribute === "date") {
+        // sometimes the publish date isn't provided but we might know when the mention was received
+        value = value || data["wm-received"];
+      }
+      if (attribute === "date_formatted") {
+        // sometimes the publish date isn't provided but we might know when the mention was received
+        value = value || data["wm-received"];
+        // format the date
+        value = module.prettyDate(value);
+      }
+
+      if (attribute === "summary") {
+        const HTML_LIMIT = 1000;
+        const truncateText = (text) => {
+          const word_limit = 50;
+          let words = (text || "")
+            .replace(/\s+/g, " ")
+            .split(" ", word_limit + 1);
+          if (words.length > word_limit) {
+            words[word_limit - 1] += "&hellip;";
+            words = words.slice(0, word_limit);
+          }
+          return words.join(" ");
+        };
+        if (data.summary?.value) {
+          value = data.summary.value;
+        } else if (
+          data.content?.html &&
+          data.content.html.length <= HTML_LIMIT
+        ) {
+          value = data.content.html;
+        } else if (data.content?.html) {
+          // Extract context around the mention link from large HTML
+          const targetUrl = data["wm-target"] || "";
+          let extracted = null;
+          try {
+            const doc = new DOMParser().parseFromString(
+              data.content.html,
+              "text/html",
+            );
+            const targetPath = targetUrl ? new URL(targetUrl).pathname : "";
+            const link =
+              doc.querySelector(`a[href="${targetUrl}"]`) ||
+              (targetPath && doc.querySelector(`a[href*="${targetPath}"]`));
+            if (link) {
+              const container =
+                link.closest("p, blockquote, li") || link.parentElement;
+              extracted = container ? container.innerHTML : link.outerHTML;
+            }
+          } catch (e) {}
+          value = extracted || truncateText(data.content?.text);
+        } else {
+          value = truncateText(data.content?.text);
+        }
+      }
+      if (attribute === "body" || attribute === "summary") {
+        // skip markdown parsing if already HTML
+        if (!/<[a-z][\s\S]*>/i.test(value)) {
+          value = marked.parse(value);
+        }
+      }
+      if (attribute === "subreddit") {
+        const match = (data.url || data["wm-source"] || "").match(
+          /reddit\.com\/r\/([^/]+)/i,
+        );
+        value = match ? match[1] : "";
+      }
+      if (attribute === "community_host") {
+        try {
+          value = new URL(value).hostname;
+        } catch (error) {
+          value = "";
+        }
+      }
+      if (attribute === "domain") {
+        // extract the hostname from the url
+        try {
+          value = new URL(value).hostname;
+        } catch (error) {
+          console.warn("Invalid URL for domain extraction:", value);
+          value = value || "";
+        }
+      }
+      if (attribute === "author_name" && !value) {
+        try {
+          value = new URL(data.url || data["wm-source"]).hostname;
+        } catch (e) {}
+      }
+      if (attribute === "author_url") {
+        // sometimes there isn't an author url
+        value = value || data.url;
+      }
+      if (attribute === "url") {
+        // sometimes a canonical url is available!
+        value = data.rels?.canonical || value;
+
+        // If it's a Twitter webmention, use archive.org
+        if (value.match("https://twitter.com")) {
+          const date = new Date(data["wm-received"]);
+          const [month, year] = [date.getMonth() + 1, date.getFullYear()];
+          value = `https://web.archive.org/web/${year}${month < 10 ? "0" : ""}${month}/${value}`;
+        }
+      }
+
+      template = template.replace(
+        new RegExp("%" + attribute + "%", "g"),
+        value ?? "",
+      );
+    }
+    return template;
+  };
+
+  module.renderThings = (things) => {
+    if (!things || !things.type) return;
+
+    let type;
+    let data = things.data?.children || things.data;
+    if (Array.isArray(data) && things.type === "comment") {
+      data = data.filter((c) => !preRenderedCommentIds.has(c.id));
+    }
+    if (Array.isArray(data) && things.type !== "comment") {
+      data = [...data].sort(
+        (a, b) =>
+          new Date(a["wm-received"] || 0) - new Date(b["wm-received"] || 0),
+      );
+    }
+    if (things.type === "comment") {
+      type = TYPES[things.type];
+      const state = things.state || "closed"; // fallback to 'closed' if state is undefined
+      const hasComments = Array.isArray(things.data) && things.data.length > 0;
+      if (state === "open" || hasComments) {
+        const el = document.querySelector("#comments");
+        if (el) el.style.display = "block";
+      }
+      document
+        .querySelectorAll(`.comments-${state}`)
+        .forEach((el) => (el.style.display = "initial"));
+    }
+
+    if (!data || !Array.isArray(data)) return;
+
+    data.forEach((item) => {
+      if (!item || !item.type || !TYPES[item.type]) return;
+
+      type = TYPES[item.type];
+      // if we have some content too, let's render it as a rich mention
+      if (item.content?.text && item.type === "mention") {
+        type = TYPES["mention-rich"];
+      }
+
+      const element = document.querySelector(type.element);
+      if (!element || !element.querySelector(".items")) return;
+
+      element.querySelector(".items").innerHTML += module.renderThing(
+        type,
+        item,
+      );
+      element.style.display = "block";
+    });
+  };
+
+  module.checkForFailedAvatars = () => {
+    document.querySelectorAll("#interactions .avatar").forEach((avatar) => {
+      if (!avatar.getAttribute("src")) {
+        window.makeFallbackAvatar(avatar.dataset.username, avatar);
+      } else {
+        avatar.onerror = () =>
+          window.makeFallbackAvatar(avatar.dataset.username, avatar);
+        if (avatar.complete && avatar.naturalWidth === 0)
+          window.makeFallbackAvatar(avatar.dataset.username, avatar);
+      }
+    });
+  };
+
+  module._wmConvCount = 0;
+
+  module.updateCommentCount = (githubCount = 0) => {
+    const statsElement = document.querySelector(".interaction-stats");
+    const commentSpan = statsElement?.querySelector(".comment");
+    if (!commentSpan) return;
+
+    const archivedCount = parseInt(
+      commentSpan.dataset.archivedCount || "0",
+      10,
+    );
+    const wmConvPreRendered = parseInt(
+      commentSpan.dataset.wmConvCount || "0",
+      10,
+    );
+    const preRenderedCount =
+      typeof preRenderedCommentIds !== "undefined"
+        ? preRenderedCommentIds.size
+        : 0;
+    const totalCount =
+      archivedCount +
+      wmConvPreRendered +
+      preRenderedCount +
+      githubCount +
+      module._wmConvCount;
+
+    if (totalCount > 0) {
+      const valueSpan = commentSpan.querySelector(".value");
+      if (valueSpan) {
+        valueSpan.textContent = totalCount;
+      }
+      commentSpan.title = `${totalCount} Comment${totalCount === 1 ? "" : "s"}`;
+      commentSpan.removeAttribute("style");
+      statsElement?.removeAttribute("style");
+    }
+  };
+
+  module.updateWebmentionCounts = () => {
+    const data = interactions.webmentions?.data;
+    if (!data || !Array.isArray(data)) return;
+
+    const element = document.querySelector(".interaction-stats");
+    if (!element) return;
+
+    // Seed from pre-rendered static counts (snapshotted before any JS writes)
+    const counts = Object.assign({}, staticDomCounts);
+    let newWmConvCount = 0;
+
+    data
+      .filter((m) => !preRenderedWmIds.has(m["wm-id"]))
+      .forEach((mention) => {
+        if (mention.type === "reply" || mention.type === "mention") {
+          newWmConvCount++;
+        } else if (mention.type && VERBS[mention.type]) {
+          counts[mention.type] = (counts[mention.type] || 0) + 1;
+        }
+      });
+
+    // Update reaction badges (like, bookmark, repost)
+    Object.entries(counts).forEach(([key, count]) => {
+      const parent = element.querySelector(`.${key}`);
+      if (!parent) return;
+      const value = parent.querySelector(".value");
+      if (!value) return;
+      value.innerHTML = count;
+      parent.title = `${count} ${VERBS[key][count === 1 ? 0 : 1]}`;
+      parent.removeAttribute("style");
+    });
+
+    if (Object.keys(counts).length > 0 || newWmConvCount > 0) {
+      element.removeAttribute("style");
+    }
+
+    // Fold new wm replies+mentions into the conversation badge
+    module._wmConvCount = newWmConvCount;
+    module.updateCommentCount(interactions.comments?.data?.length || 0);
+  };
+
+  module.renderArchivedComments = () => {
+    const archivedCommentsSection =
+      document.querySelector("#archived-comments");
+    if (!archivedCommentsSection) return;
+
+    // fallback avatars for archived comments
+    archivedCommentsSection.querySelectorAll(".avatar").forEach((avatar) => {
+      if (avatar.dataset.username === "max") return; // skip my avatar
+      window.makeFallbackAvatar(avatar.dataset.username, avatar);
+    });
+  };
+
+  module.saveData = (what, where) => {
+    try {
+      localStorage.setItem(where, JSON.stringify(what));
+    } catch (error) {
+      console.warn("Failed to save data to localStorage:", error);
+    }
+  };
+
+  module.loadData = (what) => {
+    try {
+      const data = localStorage.getItem(what);
+      return data ? JSON.parse(data) : null;
+    } catch (error) {
+      console.warn("Failed to load data from localStorage:", error);
+      return null;
+    }
+  };
+
+  module.showRateLimitMessage = (resetTime) => {
+    const rateLimitElement = document.querySelector("#github-rate-limit");
+    if (rateLimitElement) {
+      const resetTimeSpan = rateLimitElement.querySelector("span");
+      if (resetTimeSpan) {
+        resetTimeSpan.textContent = resetTime.toLocaleTimeString();
+      }
+      rateLimitElement.style.display = "block";
+      module.updateRetryButtonState(resetTime);
+    }
+  };
+
+  module.hideRateLimitMessage = () => {
+    const rateLimitElement = document.querySelector("#github-rate-limit");
+    if (rateLimitElement) {
+      rateLimitElement.style.display = "none";
+    }
+  };
+
+  module.showCommentsClosed = () => {
+    document
+      .querySelectorAll(".comments-open")
+      .forEach((el) => (el.style.display = "none"));
+    document
+      .querySelectorAll(".comments-closed")
+      .forEach((el) => (el.style.display = "initial"));
+  };
+
+  // Note: retry behavior uses the generic '.reload' binding above
+
+  // Enhance retry button to be disabled while still rate-limited
+  module.updateRetryButtonState = (resetTime) => {
+    const now = Date.now();
+    const shouldEnable = !resetTime || resetTime.getTime() <= now;
+
+    document.querySelectorAll("#interactions .reload").forEach((b) => {
+      const parts = (b.dataset.what || "")
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+      // if button targets comments or no specific target, consider it relevant
+      if (parts.length === 0 || parts.includes("comments")) {
+        b.disabled = !shouldEnable;
+        b.title = shouldEnable
+          ? "Retry fetching comments now"
+          : `Retry disabled until ${resetTime.toLocaleTimeString()}`;
+      }
+    });
+
+    if (!shouldEnable && resetTime) {
+      // schedule re-enable when reset passes
+      const ms = resetTime.getTime() - now + 1000;
+      setTimeout(() => {
+        document.querySelectorAll("#interactions .reload").forEach((b) => {
+          const parts = (b.dataset.what || "")
+            .split(",")
+            .map((s) => s.trim())
+            .filter(Boolean);
+          if (parts.length === 0 || parts.includes("comments")) {
+            b.disabled = false;
+            b.title = "Retry fetching comments now";
+          }
+        });
+        module.clearStoredRateLimit();
+        module.hideRateLimitMessage();
+      }, ms);
+    }
+  };
+
+  // Rate limit persistence helpers (site-wide, not per-page)
+  const RATE_LIMIT_KEY = `github-rate-limit-reset`;
+
+  module.getStoredRateLimitReset = () => {
+    try {
+      const v = localStorage.getItem(RATE_LIMIT_KEY);
+      return v ? new Date(parseInt(v, 10)) : null;
+    } catch (e) {
+      return null;
+    }
+  };
+
+  module.storeRateLimitReset = (resetDate) => {
+    try {
+      if (resetDate instanceof Date && !isNaN(resetDate)) {
+        // store milliseconds since epoch to avoid timezone/precision issues
+        localStorage.setItem(RATE_LIMIT_KEY, String(resetDate.getTime()));
+      }
+    } catch (e) {
+      console.warn("Failed to persist rate limit reset time", e);
+    }
+  };
+
+  module.clearStoredRateLimit = () => {
+    try {
+      localStorage.removeItem(RATE_LIMIT_KEY);
+    } catch (e) {}
+  };
+
+  // Check stored rate limit and avoid making requests until reset passes
+  module.isRateLimited = () => {
+    const reset = module.getStoredRateLimitReset();
+    if (!reset) return false;
+    const now = Date.now();
+    return reset.getTime() > now;
+  };
+
+  // is it more than half an hour old?
+  const now = Date.now();
+  const halfHour = 30 * 60 * 1000;
+  let interactions = {
+    date:
+      module.loadData(`interactions-date-${pageURL_base64}`) ||
+      now - halfHour - 1,
+    comments: githubIssueID
+      ? module.loadData(`interactions-comments-${pageURL_base64}`) || {
+          type: "comment",
+          state: "closed",
+          data: [],
+        }
+      : { type: "comment", state: "closed", data: [] },
+    webmentions:
+      module.loadData(`interactions-mentions-${pageURL_base64}`) || {},
+  };
+
+  module.renderFeed = () => {
+    const wmData = (
+      interactions.webmentions?.data?.children ||
+      interactions.webmentions?.data ||
+      []
+    ).filter((m) => !preRenderedWmIds.has(m["wm-id"]));
+    const commentsData = interactions.comments?.data || [];
+
+    const isRedditBookmark = (m) =>
+      m.type === "bookmark" &&
+      /reddit\.com\/r\//i.test(m.url || m["wm-source"] || "");
+    const isLemmyMention = (m) => m.type === "mention" && !!m.community?.name;
+    const isHNBookmark = (m) =>
+      m.type === "bookmark" &&
+      /news\.ycombinator\.com/i.test(m.url || m["wm-source"] || "");
+    const isLobstersRepost = (m) =>
+      m.type === "repost" && /lobste\.rs/i.test(m.url || m["wm-source"] || "");
+
+    // Merge feed items: wm replies+mentions + reddit/HN/Lobsters reposts + new github comments, sorted by date
+    const feedWm = wmData.filter(
+      (m) =>
+        m.type === "reply" ||
+        m.type === "mention" ||
+        isRedditBookmark(m) ||
+        isHNBookmark(m) ||
+        isLobstersRepost(m),
+    );
+    const newComments = commentsData.filter(
+      (c) => !preRenderedCommentIds.has(c.id),
+    );
+    const merged = [...feedWm, ...newComments].sort(
+      (a, b) =>
+        new Date(a["wm-received"] || a.created_at || 0) -
+        new Date(b["wm-received"] || b.created_at || 0),
+    );
+
+    // Handle issue open/closed state
+    const state = interactions.comments?.state || "closed";
+    const otherState = state === "open" ? "closed" : "open";
+    const feedEl = document.querySelector("#feed");
+    if (feedEl && (state === "open" || merged.length > 0)) {
+      feedEl.style.display = "block";
+    }
+    document
+      .querySelectorAll(`.comments-${state}`)
+      .forEach((el) => (el.style.display = "initial"));
+    document
+      .querySelectorAll(`.comments-${otherState}`)
+      .forEach((el) => (el.style.display = "none"));
+
+    // Helpers for author detection and platform classification
+    const AUTHOR_GH_LOGIN = "omgmog";
+    const AUTHOR_DISPLAY_NAME = "Max Glenister";
+    const AUTHOR_DOMAINS = [
+      "omgmog.net",
+      "omgmog.github.io",
+      "twitter.com/omgmog",
+      "indieweb.social/@omgmog",
+    ];
+    const checkIsAuthor = (item) => {
+      if (item.type === "comment")
+        return item.user?.login?.toLowerCase() === AUTHOR_GH_LOGIN;
+      const url = item.author?.url || "";
+      const source = item["wm-source"] || "";
+      return AUTHOR_DOMAINS.some((d) => url.includes(d) || source.includes(d));
+    };
+    const computePlatform = (item) => {
+      const url = item.url || item["wm-source"] || "";
+      const source = item["wm-source"] || "";
+      if (url.includes("reddit.com")) return "reddit";
+      if (url.includes("news.ycombinator.com")) return "hn";
+      if (url.includes("lobste.rs")) return "lobsters";
+      if (url.includes("twitter.com")) return "twitter";
+      if (source.includes("brid.gy")) return "mastodon";
+      return "web";
+    };
+
+    // Render merged items into #feed
+    if (!feedEl?.querySelector(".items")) return;
+    merged.forEach((item) => {
+      if (!item.type) return;
+      let type = TYPES[item.type];
+      if (item.content?.text && item.type === "mention")
+        type = TYPES["mention-rich"];
+      if (isLemmyMention(item)) type = TYPES["mention-lemmy"];
+      if (isRedditBookmark(item)) type = TYPES["bookmark-reddit"];
+      if (isHNBookmark(item)) type = TYPES["bookmark-hn"];
+      if (isLobstersRepost(item)) type = TYPES["bookmark-lobsters"];
+      if (!type) return;
+
+      const isAuthor = checkIsAuthor(item);
+      const enriched = Object.assign({}, item);
+      enriched._is_author_class = isAuthor ? " is-author" : "";
+      enriched._platform = computePlatform(item);
+      if (isAuthor) {
+        if (item.type === "comment") {
+          enriched.user = Object.assign({}, item.user, {
+            login: AUTHOR_DISPLAY_NAME,
+            avatar_url: "/assets/mog.svg",
+          });
+        } else {
+          enriched.author = Object.assign({}, item.author, {
+            name: AUTHOR_DISPLAY_NAME,
+            photo: "/assets/mog.svg",
+          });
+        }
+      }
+
+      feedEl.querySelector(".items").innerHTML += module.renderThing(
+        type,
+        enriched,
+      );
+      feedEl.style.display = "block";
+    });
+
+    // Render likes/bookmarks/reposts into #likes, deduped by author name
+    const likesEl = document.querySelector("#likes");
+    if (likesEl) {
+      const seenLikers = new Set(
+        Array.from(likesEl.querySelectorAll(".avatar[data-username]"))
+          .map((el) => el.dataset.username)
+          .filter(Boolean),
+      );
+      const likesData = wmData.filter((m) => {
+        if (m.type !== "like" && m.type !== "bookmark" && m.type !== "repost")
+          return false;
+        if (isRedditBookmark(m) || isHNBookmark(m) || isLobstersRepost(m))
+          return false;
+        const key = m.author?.name || "";
+        if (!key || seenLikers.has(key)) return false;
+        seenLikers.add(key);
+        return true;
+      });
+      if (likesData.length > 0) {
+        const likesList = likesEl.querySelector(".items");
+        if (likesList) {
+          likesData.forEach((item) => {
+            const type = TYPES[item.type];
+            if (!type) return;
+            likesList.innerHTML += module.renderThing(type, item);
+          });
+          likesEl.style.display = "block";
+        }
+      }
+    }
+
+    // Re-sort all feed children (static + dynamic) by datetime
+    const itemsEl = feedEl.querySelector(".items");
+    if (itemsEl) {
+      Array.from(itemsEl.children)
+        .sort((a, b) => {
+          const aDate = a.querySelector("time")?.getAttribute("datetime") || "";
+          const bDate = b.querySelector("time")?.getAttribute("datetime") || "";
+          return aDate.localeCompare(bDate);
+        })
+        .forEach((child) => itemsEl.appendChild(child));
+    }
+  };
+
+  module.renderAll = () => {
+    module.renderFeed();
     module.updateCommentCount(interactions.comments?.data?.length || 0);
     module.updateWebmentionCounts();
+    module.checkForFailedAvatars();
+  };
 
-    // Fetch fresh data eagerly if cache is stale — saves to localStorage and updates counts,
-    // but does not render the stream (that happens lazily on scroll)
-    let fetchPromise = null;
-    if (new Date(interactions.date) < (now - halfHour)) {
-        fetchPromise = module.fetchAndCache();
-    }
+  module.fetchAndCache = async (what = ["comments", "webmentions"]) => {
+    module.saveData(Date.now(), `interactions-date-${pageURL_base64}`);
 
-    // Defer stream rendering until #interactions is visible
-    const interactionsSection = document.querySelector('#interactions');
-    const renderOnVisible = async () => {
-        try {
-            if (fetchPromise) await fetchPromise;
-            module.renderAll();
-        } catch (error) {
-            console.warn('Error during initial render:', error);
-            module.renderAll();
+    if (what.includes("comments") && githubIssueID) {
+      const storedReset = module.getStoredRateLimitReset();
+      if (storedReset && storedReset.getTime() > Date.now()) {
+        module.showRateLimitMessage(storedReset);
+        module.updateRetryButtonState(storedReset);
+        return;
+      }
+      try {
+        const issue = await module.fetchGithubIssue(githubIssueID);
+        if (!issue || issue.error) {
+          if (issue?.error === "rate_limit" && issue.resetTime) {
+            module.showRateLimitMessage(issue.resetTime);
+            module.updateRetryButtonState(issue.resetTime);
+          } else if (issue?.error === "gone") {
+            module.showCommentsClosed();
+          }
+          return;
         }
-        module.renderFetchDate();
-    };
-
-    if (interactionsSection && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    observer.disconnect();
-                    renderOnVisible();
-                }
-            },
-            { rootMargin: '200px' }
+        const comments = await module.fetchGithubComments(issue);
+        if (comments?.error) {
+          if (comments.error === "rate_limit" && comments.resetTime) {
+            module.showRateLimitMessage(comments.resetTime);
+            module.updateRetryButtonState(comments.resetTime);
+          }
+          return;
+        }
+        module.hideRateLimitMessage();
+        module.clearStoredRateLimit();
+        module.updateRetryButtonState();
+        interactions.comments = {
+          type: "comment",
+          state: issue.state || "closed",
+          data: (Array.isArray(comments) ? comments : [])
+            .filter((c) => !preRenderedCommentIds.has(c.id))
+            .map((comment) => Object.assign(comment, { type: "comment" })),
+        };
+        module.saveData(
+          interactions.comments,
+          `interactions-comments-${pageURL_base64}`,
         );
-        observer.observe(interactionsSection);
-    } else {
-        renderOnVisible();
+        module.updateCommentCount(interactions.comments.data.length);
+      } catch (error) {
+        console.warn("Error fetching comments:", error);
+      }
     }
-}());
+
+    if (what.includes("webmentions") && pageURL) {
+      interactions.webmentions = { type: "webmention", data: [] };
+      try {
+        const allMentions = await Promise.all(
+          pageURL.map((url) => module.fetchWebmentions(url).catch((e) => null)),
+        );
+        allMentions.forEach((mentions) => {
+          if (
+            !mentions ||
+            !mentions.children ||
+            !Array.isArray(mentions.children)
+          )
+            return;
+          const validMentions = mentions.children
+            .filter((mention) => mention && mention["wm-property"])
+            .map((mention) =>
+              Object.assign(mention, {
+                type: mention["wm-property"]
+                  .replace("in-reply-to", "reply")
+                  .replace("-of", ""),
+              }),
+            );
+          const existingIds = new Set(
+            interactions.webmentions.data.map((m) => m["wm-id"]),
+          );
+          interactions.webmentions.data = interactions.webmentions.data.concat(
+            validMentions.filter(
+              (m) =>
+                !existingIds.has(m["wm-id"]) &&
+                !preRenderedWmIds.has(m["wm-id"]),
+            ),
+          );
+        });
+        module.saveData(
+          interactions.webmentions,
+          `interactions-mentions-${pageURL_base64}`,
+        );
+        module.updateWebmentionCounts();
+      } catch (error) {
+        console.warn("Error fetching webmentions:", error);
+      }
+    }
+  };
+
+  module.fetchAndRender = async (what = ["comments", "webmentions"]) => {
+    module.saveData(Date.now(), `interactions-date-${pageURL_base64}`);
+
+    // COMMENTS
+    if (what.includes("comments") && githubIssueID) {
+      // If we have a stored reset time and it's still in the future, show message and don't fetch
+      const storedReset = module.getStoredRateLimitReset();
+      if (storedReset && storedReset.getTime() > Date.now()) {
+        module.showRateLimitMessage(storedReset);
+        module.updateRetryButtonState(storedReset);
+        return;
+      }
+
+      try {
+        const issue = await module.fetchGithubIssue(githubIssueID);
+        if (!issue || issue.error) {
+          if (issue?.error === "rate_limit" && issue.resetTime) {
+            module.showRateLimitMessage(issue.resetTime);
+            module.updateRetryButtonState(issue.resetTime);
+            return;
+          }
+          if (issue?.error === "gone") {
+            module.showCommentsClosed();
+            return;
+          }
+          // other errors: do nothing
+          return;
+        }
+
+        const comments = await module.fetchGithubComments(issue);
+        if (comments?.error) {
+          if (comments.error === "rate_limit" && comments.resetTime) {
+            module.showRateLimitMessage(comments.resetTime);
+            module.updateRetryButtonState(comments.resetTime);
+            return;
+          }
+          // other errors: do nothing
+          return;
+        }
+
+        // success: clear rate-limit and render
+        module.hideRateLimitMessage();
+        module.clearStoredRateLimit();
+        module.updateRetryButtonState();
+
+        interactions.comments = {
+          type: "comment",
+          state: issue.state || "closed",
+          data: (Array.isArray(comments) ? comments : [])
+            .filter((c) => !preRenderedCommentIds.has(c.id))
+            .map((comment) => Object.assign(comment, { type: "comment" })),
+        };
+        module.saveData(
+          interactions.comments,
+          `interactions-comments-${pageURL_base64}`,
+        );
+        module.renderFeed();
+        module.updateCommentCount(interactions.comments.data.length);
+        module.checkForFailedAvatars();
+      } catch (error) {
+        console.warn("Error fetching and rendering comments:", error);
+      }
+    }
+
+    // WEBMENTIONS
+    if (what.includes("webmentions") && pageURL) {
+      interactions.webmentions = {
+        type: "webmention",
+        data: [],
+      };
+
+      try {
+        const allMentions = await Promise.all(
+          pageURL.map((url) => module.fetchWebmentions(url).catch((e) => null)),
+        );
+        allMentions.forEach((mentions) => {
+          if (
+            !mentions ||
+            !mentions.children ||
+            !Array.isArray(mentions.children)
+          )
+            return;
+
+          const validMentions = mentions.children
+            .filter((mention) => mention && mention["wm-property"])
+            .map((mention) =>
+              Object.assign(mention, {
+                type: mention["wm-property"]
+                  .replace("in-reply-to", "reply")
+                  .replace("-of", ""),
+              }),
+            );
+
+          const existingIds = new Set(
+            interactions.webmentions.data.map((m) => m["wm-id"]),
+          );
+          interactions.webmentions.data = interactions.webmentions.data.concat(
+            validMentions.filter(
+              (m) =>
+                !existingIds.has(m["wm-id"]) &&
+                !preRenderedWmIds.has(m["wm-id"]),
+            ),
+          );
+        });
+
+        module.saveData(
+          interactions.webmentions,
+          `interactions-mentions-${pageURL_base64}`,
+        );
+        module.clearItems(["webmentions"]);
+        module.renderFeed();
+        module.updateWebmentionCounts();
+        module.checkForFailedAvatars();
+      } catch (error) {
+        console.warn("Error fetching and rendering webmentions:", error);
+      }
+    }
+  };
+  module.renderFetchDate = () => {
+    const fetchedDateElement = document.querySelector("#mentions-last-fetched");
+    if (!fetchedDateElement) return;
+
+    const output = fetchedDateElement.querySelector("span");
+    if (!output) return;
+
+    const lastFetchDate = module.loadData(
+      `interactions-date-${pageURL_base64}`,
+    );
+    if (lastFetchDate) {
+      output.innerText = `${module.prettyDate(lastFetchDate, { ...DEFAULT_DATE_OPTIONS, hour: "numeric", minute: "numeric" })}`;
+      fetchedDateElement.style.display = "block";
+    }
+  };
+  module.clearItems = (what = ["comments", "webmentions"]) => {
+    let sections = [];
+    if (what.includes("comments") || what.includes("webmentions")) {
+      sections.push("#feed");
+    }
+    if (what.includes("webmentions")) {
+      sections.push("#likes");
+    }
+    document.querySelectorAll(sections.join(",")).forEach((section) => {
+      const list = section.querySelector(".items");
+      if (list) {
+        Array.from(list.children).forEach((child) => {
+          if (!child.classList.contains("static-item")) child.remove();
+        });
+      }
+      const hasStaticItems = list && list.querySelector(".static-item");
+      if (!hasStaticItems) {
+        section.style.display = section.dataset.display || "none";
+      }
+    });
+  };
+
+  module.getLastUpdatedTime = () =>
+    module.loadData(`interactions-date-${pageURL_base64}`) || Date.now();
+
+  // Bind the reload buttons
+  document.querySelectorAll("#interactions .reload").forEach((button) => {
+    const lastUpdate = module.getLastUpdatedTime();
+    button.title = `Last refreshed on ${module.prettyDate(lastUpdate, { ...DEFAULT_DATE_OPTIONS, hour: "numeric", minute: "numeric" })}`;
+    button.onclick = async (e) => {
+      e.preventDefault();
+      const btn = e.currentTarget || button;
+      const raw = btn.dataset.what || "";
+      const whatToRefresh = raw
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+      const targets = whatToRefresh.length
+        ? whatToRefresh
+        : ["comments", "webmentions"];
+
+      // disable related reload buttons for these targets
+      document.querySelectorAll("#interactions .reload").forEach((b) => {
+        const parts = (b.dataset.what || "").split(",").map((s) => s.trim());
+        if (targets.some((t) => parts.includes(t))) {
+          b.disabled = true;
+          b.title = "Refreshing...";
+        }
+      });
+
+      module.clearItems(targets);
+      await module.fetchAndRender(targets);
+
+      // Re-enable and update titles for affected buttons
+      document.querySelectorAll("#interactions .reload").forEach((b) => {
+        const parts = (b.dataset.what || "").split(",").map((s) => s.trim());
+        if (targets.some((t) => parts.includes(t))) {
+          b.disabled = false;
+          const last = module.getLastUpdatedTime();
+          b.title = `Last refreshed on ${module.prettyDate(last, { ...DEFAULT_DATE_OPTIONS, hour: "numeric", minute: "numeric" })}`;
+        }
+      });
+      module.renderFetchDate();
+    };
+  });
+
+  // Initialize retry button state based on any stored reset
+  const initialStoredReset = module.getStoredRateLimitReset();
+  if (initialStoredReset && initialStoredReset.getTime() > Date.now()) {
+    module.showRateLimitMessage(initialStoredReset);
+    module.updateRetryButtonState(initialStoredReset);
+  } else {
+    module.updateRetryButtonState();
+  }
+  // Update count icons immediately from cached data
+  module.updateCommentCount(interactions.comments?.data?.length || 0);
+  module.updateWebmentionCounts();
+
+  // Fetch fresh data eagerly if cache is stale — saves to localStorage and updates counts,
+  // but does not render the stream (that happens lazily on scroll)
+  let fetchPromise = null;
+  if (new Date(interactions.date) < now - halfHour) {
+    fetchPromise = module.fetchAndCache();
+  }
+
+  // Defer stream rendering until #interactions is visible
+  const interactionsSection = document.querySelector("#interactions");
+  const renderOnVisible = async () => {
+    try {
+      if (fetchPromise) await fetchPromise;
+      module.renderAll();
+    } catch (error) {
+      console.warn("Error during initial render:", error);
+      module.renderAll();
+    }
+    module.renderFetchDate();
+  };
+
+  if (interactionsSection && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          observer.disconnect();
+          renderOnVisible();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    observer.observe(interactionsSection);
+  } else {
+    renderOnVisible();
+  }
+})();
