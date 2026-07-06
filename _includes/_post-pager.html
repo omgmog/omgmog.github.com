@@ -1,0 +1,27 @@
+<h3 class="wide-h3">{{ include.heading | default: 'All posts' }}</h3>
+
+{% assign current_post = include.current_post | default: page %}
+{% assign prev_post = include.prev_post | default: current_post.previous %}
+{% assign next_post = include.next_post | default: current_post.next %}
+<ul class="post-list sidebar-posts">
+    {% if prev_post.url %}
+    <li>
+        <div class="post-meta"><svg viewBox="0 0 24 24"><use href="#icon-move-left"/></svg> Previous</div>
+        <h3 class="post-title">
+            <a href="{{ prev_post.url }}">
+                {{ prev_post.title }}
+            </a>
+        </h3>
+    </li>
+    {% endif %}
+    {% if next_post.url %}
+    <li>
+        <div class="post-meta">Next <svg viewBox="0 0 24 24"><use href="#icon-move-right"/></svg></div>
+        <h3 class="post-title">
+            <a href="{{ next_post.url }}">
+                {{ next_post.title }}
+            </a>
+        </h3>
+    </li>
+    {% endif %}
+</ul>

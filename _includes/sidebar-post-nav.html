@@ -1,29 +1,27 @@
 {% if page.layout == 'post' %}
 
+{% if page.collection != 'posts' %}
 {% if page.previous or page.next %}
-<h3 class="wide-h3">Posts</h3>
-<ul class="post-list sidebar-posts">
-    {% if page.previous %}
-    <li>
-        <div class="post-meta"><svg viewBox="0 0 24 24"><use href="#icon-move-left"/></svg> Previous post</div>
-        <h3 class="post-title">
-            <a href="{{ page.previous.url }}">
-                {{ page.previous.title }}
-            </a>
-        </h3>
-    </li>
-    {% endif %}
-    {% if page.next %}
-    <li>
-        <div class="post-meta">Next post <svg viewBox="0 0 24 24"><use href="#icon-move-right"/></svg></div>
-        <h3 class="post-title">
-            <a href="{{ page.next.url }}">
-                {{ page.next.title }}
-            </a>
-        </h3>
-    </li>
-    {% endif %}
-</ul>
+{% capture collection_label %}{% case page.collection %}{% when 'lwal' %}LWAL{% when 'cardboctober' %}Cardboctober{% else %}Posts{% endcase %}{% endcapture %}
+{% include _post-pager.html heading=collection_label current_post=page %}
+{% endif %}
+{% endif %}
+
+{% assign all_posts = site.posts | concat: site.cardboctober | concat: site.lwal | sort: "date" | reverse %}
+{% assign all_index = -1 %}
+{% for p in all_posts %}
+    {% if p.url == page.url %}{% assign all_index = forloop.index0 %}{% break %}{% endif %}
+{% endfor %}
+{% if all_index > -1 %}
+{% assign all_previous = null %}
+{% assign all_next = null %}
+{% assign next_index = all_index | minus: 1 %}
+{% if all_index > 0 %}{% assign all_next = all_posts[next_index] %}{% endif %}
+{% assign previous_index = all_index | plus: 1 %}
+{% if previous_index < all_posts.size %}{% assign all_previous = all_posts[previous_index] %}{% endif %}
+{% if all_previous or all_next %}
+{% include _post-pager.html prev_post=all_previous next_post=all_next %}
+{% endif %}
 {% endif %}
 
 {% assign recent = site.posts | where_exp: "p", "p.url != page.url" | slice: 0, 5 %}
