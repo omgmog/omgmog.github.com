@@ -1,11 +1,5 @@
 {% if page.layout == 'post' %}
 
-{% if page.collection != 'posts' %}
-{% if page.previous or page.next %}
-{% capture collection_label %}{% case page.collection %}{% when 'lwal' %}LWAL{% when 'cardboctober' %}Cardboctober{% else %}Posts{% endcase %}{% endcapture %}
-{% include _post-pager.html heading=collection_label current_post=page %}
-{% endif %}
-{% endif %}
 
 {% assign all_posts = site.posts | concat: site.cardboctober | concat: site.lwal | sort: "date" | reverse %}
 {% assign all_index = -1 %}
@@ -24,19 +18,28 @@
 {% endif %}
 {% endif %}
 
+{% if page.collection != 'posts' %}
+{% if page.previous or page.next %}
+{% capture collection_label %}{% case page.collection %}{% when 'lwal' %}LWAL{% when 'cardboctober' %}Cardboctober{% else %}Posts{% endcase %}{% endcapture %}
+{% include _post-pager.html heading=collection_label current_post=page %}
+{% endif %}
+{% endif %}
+
 {% assign recent = site.posts | where_exp: "p", "p.url != page.url" | slice: 0, 5 %}
 {% assign recent_urls = "" | split: "" %}
 {% for p in recent %}{% assign recent_urls = recent_urls | push: p.url %}{% endfor %}
 
-<h3 class="wide-h3">Recent</h3>
-<ul class="post-list sidebar-posts">
-    {% for post in recent %}
-    <li>
-        <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></div>
-        <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    </li>
-    {% endfor %}
-</ul>
+<div class="sidebar-recent-posts vt">
+    <h3 class="wide-h3">Recent</h3>
+    <ul class="post-list sidebar-posts">
+        {% for post in recent %}
+        <li>
+            <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></div>
+            <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 
 {% assign truly_related = "" | split: "" %}
 {% for post in page.related_posts %}
@@ -51,6 +54,7 @@
 {% endfor %}
 {% assign truly_related = truly_related | sort: "date" | reverse %}
 {% if truly_related.size > 0 %}
+<div class="sidebar-related-posts vt"></div>
 <h3 class="wide-h3">Related</h3>
 <ul class="post-list sidebar-posts">
     {% for post in truly_related limit: 4 %}
@@ -60,6 +64,7 @@
     </li>
     {% endfor %}
 </ul>
+</div>
 {% endif %}
 
 {% endif %}

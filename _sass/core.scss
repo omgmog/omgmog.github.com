@@ -50,7 +50,7 @@ $colors: (
 
     --body-template-columns: 0 min(1600px, 100%) auto;
     --body-main-column: 2;
-    --main-template-columns: 1fr 5fr 2fr;
+  --main-template-columns: 1fr minmax(50%, 5fr) 2fr;
 
     --root-font-size: 24px;
     --gutter-size: 1rem;
@@ -319,30 +319,10 @@ main {
     }
 }
 
-.sidebar-right {
-    font-size: var(--text-base);
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    h3 {
-        margin-top: var(--gutter-size);
-        margin-bottom: var(--half-gutter-size);
-    }
-
-    .tags-list {
-        margin-bottom: var(--gutter-size);
-    }
-
-    @media (max-width: 768px) {
-        min-height: 0;
-    }
-}
-
 .page-content {
     padding: var(--gutter-size);
     container-type: inline-size;
-    font-size: .8rem;
+  font-size: 0.8rem;
 
     @media (min-width: 768px) {
         background-color: var(--color-bg);
@@ -571,6 +551,7 @@ nav {
 .post-author {
     .author-photo {
         max-width: 100%;
+    width: 25rem;
         aspect-ratio: 1;
     }
 
@@ -797,6 +778,32 @@ nav {
     li {
         margin-bottom: var(--double-gutter-size);
     }
+
+  li.post--lwal {
+    background-color: rgba(var(--color-brand-primary-rgb) / 0.1);
+    border: 2px dashed rgba(var(--color-brand-primary-rgb) / 0.4);
+    border-radius: .4rem;
+    padding: var(--gutter-size);
+    position: relative;
+
+    & + .post--lwal {
+        margin-top: calc(-1 * var(--gutter-size));
+    }
+
+    &::after {
+        content: '#LWAL';
+        color: rgba(var(--color-brand-primary-rgb) / 0.4);
+        position: absolute;
+        right: var(--half-gutter-size);
+        top: var(--half-gutter-size);
+        margin: auto;
+        rotate: 15deg;
+        font-size: var(--text-md);
+        font-weight: bold;
+        pointer-events: none;
+        font-family: "Fjalla One", sans-serif;
+    }
+  }
 }
 
 .post-meta {
@@ -858,6 +865,8 @@ nav {
 
 .post-title {
     margin-bottom: var(--gutter-size);
+  width: fit-content;
+  contain: layout;
 }
 p.post-subtitle {
     margin: 0;
@@ -865,13 +874,17 @@ p.post-subtitle {
 
 h1.post-title {
     font-size: max(var(--text-lg), 9cqi);
-    text-wrap: balance;
     margin-top: var(--gutter-size);
 }
 
 h3.post-title {
     font-size: var(--text-md);
     margin-top: var(--half-gutter-size);
+
+  .post--lwal & {
+    font-size: var(--text-base);
+    margin-bottom: 0;
+  }
 }
 
 .tags-list {
@@ -1755,4 +1768,106 @@ figure {
             }
         }
     }
+}
+
+.sidebar-right {
+  font-size: var(--text-base);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  > * {
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+}
+
+.sidebar-left {
+  view-transition-name: first-column;
+}
+.page-content {
+  view-transition-name: middle-column;
+}
+.sidebar-right {
+  view-transition-name: last-column;
+}
+::view-transition-group(first-column) {
+  z-index: 2;
+}
+
+::view-transition-group(middle-column) {
+  z-index: 1;
+}
+@keyframes slide-left-out {
+  from {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50vw) scaleX(0);
+    overflow-x: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-left-in {
+  from {
+    transform: translateX(-50vw) scaleX(0);
+    overflow-x: hidden;
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  ::view-transition-old(middle-column) {
+    animation: slide-left-out 0.1s forwards;
+  }
+
+  ::view-transition-new(middle-column) {
+    animation: slide-left-in 0.2s forwards; 
+    mix-blend-mode: normal;
+  }
+}
+
+.vt {
+  view-transition-name: var(--vtn);
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+}
+
+.sidebar-webmentions {
+  --vtn: sidebar-webmentions;
+}
+
+.sidebar-tags {
+  --vtn: sidebar-tags;
+}
+.sidebar-posts.all-posts {
+  --vtn: sidebar-posts-all-posts;
+}
+.sidebar-recent-posts {
+  --vtn: sidebar-recent-posts;
+}
+.sidebar-related-posts {
+  --vtn: sidebar-related-posts;
 }

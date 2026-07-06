@@ -1,9 +1,11 @@
-<h3 class="wide-h3">{{ include.heading | default: 'All posts' }}</h3>
+{% assign heading = include.heading | default: 'All posts' %}
+<div class=" sidebar-posts {{ heading | slugify }} vt">
+<h3 class="wide-h3">{{ heading }}</h3>
 
 {% assign current_post = include.current_post | default: page %}
 {% assign prev_post = include.prev_post | default: current_post.previous %}
 {% assign next_post = include.next_post | default: current_post.next %}
-<ul class="post-list sidebar-posts">
+<ul class="post-list">
     {% if prev_post.url %}
     <li>
         <div class="post-meta"><svg viewBox="0 0 24 24"><use href="#icon-move-left"/></svg> Previous</div>
@@ -25,3 +27,4 @@
     </li>
     {% endif %}
 </ul>
+</div>
