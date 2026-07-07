@@ -1,0 +1,39 @@
+name: Create Comments Issue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_posts/**'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  create-comments-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      - name: Find newly added posts
+        id: added
+        run: |
+          added=$(git diff --name-only --diff-filter=A HEAD^ HEAD -- '_posts/**' | tr '\n' ' ')
+          echo "files=$added" >> $GITHUB_OUTPUT
+
+      - name: Setup Ruby
+        if: steps.added.outputs.files != ''
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Create missing comments issues
+        if: steps.added.outputs.files != ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ADDED_POSTS: ${{ steps.added.outputs.files }}
+        run: ruby scripts/create_comments_issues.rb $ADDED_POSTS
