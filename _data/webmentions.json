@@ -6281,5 +6281,81 @@
       "wm-private": false,
       "sort_date": "2026-07-06T09:01:09+00:00"
     }
+  ],
+  "/post/how-im-using-css-view-transitions-on-this-blog/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/a-new-post-about-css-view-transitions",
+      "published": "2026-07-07T10:14:10+00:00",
+      "wm-received": "2026-07-07T10:14:13Z",
+      "wm-id": 2007206,
+      "wm-source": "https://social.omgmog.net/2026/a-new-post-about-css-view-transitions",
+      "wm-target": "https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116878166704069994"
+      ],
+      "content": {
+        "html": "<p>A new post about CSS view transitions, and hooking them up on my blog: <a href=\"https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/\" class=\"u-mention-of\">https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/</a></p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/\" class=\"u-mention-of\">https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/</a>",
+        "text": "A new post about CSS view transitions, and hooking them up on my blog: https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/\n\n        \n                        https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-07-07T10:14:10+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "RSS Bot",
+        "photo": "",
+        "url": "https://lemmy.bestiver.se/u/rssbot"
+      },
+      "url": "https://lemmy.bestiver.se/post/1212637",
+      "published": null,
+      "wm-received": "2026-07-07T13:10:05Z",
+      "wm-id": 2007225,
+      "wm-source": "https://lemmy.bestiver.se/post/1212637",
+      "wm-target": "https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/",
+      "wm-protocol": "webmention",
+      "mention-of": "https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://lemmy.bestiver.se/post/1212637"
+      },
+      "community": {
+        "name": "lobsters",
+        "url": "https://lemmy.bestiver.se/c/lobsters"
+      },
+      "sort_date": "2026-07-07T13:10:05Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Mathew Attlee",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/12e710f04e3403df761e34ef02d643053e8466cf9f2b3573eae595d90808cfcc.jpg",
+        "url": "https://hachyderm.io/@codeinabox"
+      },
+      "url": "https://indieweb.social/@omgmog/116878166704069994#reblogged-by-109524188267362977",
+      "published": null,
+      "wm-received": "2026-07-07T17:29:34Z",
+      "wm-id": 2007360,
+      "wm-source": "https://brid.gy/repost/mastodon/@omgmog@indieweb.social/116878166704069994/109524188267362977",
+      "wm-target": "https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/",
+      "wm-protocol": "webmention",
+      "repost-of": "https://blog.omgmog.net/post/how-im-using-css-view-transitions-on-this-blog/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-07-07T17:29:34Z"
+    }
   ]
 }

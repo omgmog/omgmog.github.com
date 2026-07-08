@@ -1115,5 +1115,23 @@
     "comments": [
 
     ]
+  },
+  "161": {
+    "state": "open",
+    "comments": [
+      {
+        "id": 4909748976,
+        "user": {
+          "login": "martrapp",
+          "avatar_url": "https://avatars.githubusercontent.com/u/94928215?v=4",
+          "html_url": "https://github.com/martrapp"
+        },
+        "body": "Excellent article, Max! I really enjoyed reading it. It is packed with practical tips and real world lessons that will no doubt save other people a lot of time when they run into the same issues.\n\nOne small addition: if one doesn't need the root cross-fade, another neat alternative to setting animations to `none` is to disable the root view transition group altogether with `:root { view-transition-name: none; }`.\n\n-- Martin from https://vtbag.dev",
+        "body_html": "<p dir=\"auto\">Excellent article, Max! I really enjoyed reading it. It is packed with practical tips and real world lessons that will no doubt save other people a lot of time when they run into the same issues.</p>\n<p dir=\"auto\">One small addition: if one doesn't need the root cross-fade, another neat alternative to setting animations to <code class=\"notranslate\">none</code> is to disable the root view transition group altogether with <code class=\"notranslate\">:root { view-transition-name: none; }</code>.</p>\n<p dir=\"auto\">-- Martin from <a href=\"https://vtbag.dev\" rel=\"nofollow\">https://vtbag.dev</a></p>",
+        "created_at": "2026-07-07T22:51:59Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/161#issuecomment-4909748976",
+        "sort_date": "2026-07-07T22:51:59Z"
+      }
+    ]
   }
 }
