@@ -1,10 +1,9 @@
 name: Create Comments Issue
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '_posts/**'
+  workflow_run:
+    workflows: ["Deploy Jekyll site to Pages"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -12,11 +11,13 @@ permissions:
 
 jobs:
   create-comments-issue:
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
         with:
+          ref: ${{ github.event.workflow_run.head_sha }}
           fetch-depth: 2
 
       - name: Find newly added posts
