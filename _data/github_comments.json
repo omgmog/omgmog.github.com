@@ -1021,7 +1021,19 @@
   "151": {
     "state": "open",
     "comments": [
-
+      {
+        "id": 4966669930,
+        "user": {
+          "login": "xFutuxe",
+          "avatar_url": "https://avatars.githubusercontent.com/u/65718499?v=4",
+          "html_url": "https://github.com/xFutuxe"
+        },
+        "body": "I always find this stuff so fascinating, the amount of data its handling in real time is staggering. And the pain of deploying something like this as you mentioned 🤣 ",
+        "body_html": "<p dir=\"auto\">I always find this stuff so fascinating, the amount of data its handling in real time is staggering. And the pain of deploying something like this as you mentioned 🤣</p>",
+        "created_at": "2026-07-14T07:54:39Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/151#issuecomment-4966669930",
+        "sort_date": "2026-07-14T07:54:39Z"
+      }
     ]
   },
   "152": {

@@ -4632,6 +4632,33 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-03-12T12:06:15+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/theyre-hositng-a-summit-to-talk-about",
+      "published": "2026-07-13T08:25:24+00:00",
+      "wm-received": "2026-07-13T08:25:27Z",
+      "wm-id": 2011717,
+      "wm-source": "https://social.omgmog.net/2026/theyre-hositng-a-summit-to-talk-about",
+      "wm-target": "https://blog.omgmog.net/post/your-forecast-is-accurate-and-still-wrong/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116911710217365223"
+      ],
+      "content": {
+        "html": "<p>They're hositng a summit to talk about weather icons! <a href=\"https://www.bbc.co.uk/news/articles/c1ly34z81qeo\" class=\"u-mention-of\">https://www.bbc.co.uk/news/articles/c1ly34z81qeo</a></p>\n\n<p>Also I wrote previously on this <a href=\"https://blog.omgmog.net/post/your-forecast-is-accurate-and-still-wrong/\" class=\"u-mention-of\">https://blog.omgmog.net/post/your-forecast-is-accurate-and-still-wrong/</a></p>\n\n        \n                        <a href=\"https://www.bbc.co.uk/news/articles/c1ly34z81qeo\" class=\"u-mention-of\">https://www.bbc.co.uk/news/articles/c1ly34z81qeo</a>\n                                        <a href=\"https://blog.omgmog.net/post/your-forecast-is-accurate-and-still-wrong/\" class=\"u-mention-of\">https://blog.omgmog.net/post/your-forecast-is-accurate-and-still-wrong/</a>",
+        "text": "They're hositng a summit to talk about weather icons! https://www.bbc.co.uk/news/articles/c1ly34z81qeo\n\nAlso I wrote previously on this https://blog.omgmog.net/post/your-forecast-is-accurate-and-still-wrong/\n\n        \n                        https://www.bbc.co.uk/news/articles/c1ly34z81qeo\n                                        https://blog.omgmog.net/post/your-forecast-is-accurate-and-still-wrong/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/your-forecast-is-accurate-and-still-wrong/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-07-13T08:25:24+00:00"
     }
   ],
   "/post/devterm-gameboy-printer/": [
@@ -6385,6 +6412,35 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-07-11T14:26:24+00:00"
+    }
+  ],
+  "/lwal/week-28/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/recap-of-things-ive-shared-this-past",
+      "published": "2026-07-13T09:34:07+00:00",
+      "wm-received": "2026-07-13T09:34:10Z",
+      "wm-id": 2011729,
+      "wm-source": "https://social.omgmog.net/2026/recap-of-things-ive-shared-this-past",
+      "wm-target": "https://blog.omgmog.net/lwal/week-28/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/116911980428748945"
+      ],
+      "content": {
+        "html": "<p>Recap of things I've shared this past week <a href=\"https://blog.omgmog.net/lwal/week-28/\" class=\"u-mention-of\">https://blog.omgmog.net/lwal/week-28/</a></p>\n\n        \n                        <a href=\"https://blog.omgmog.net/lwal/week-28/\" class=\"u-mention-of\">https://blog.omgmog.net/lwal/week-28/</a>",
+        "text": "Recap of things I've shared this past week https://blog.omgmog.net/lwal/week-28/\n\n        \n                        https://blog.omgmog.net/lwal/week-28/"
+      },
+      "mention-of": "https://blog.omgmog.net/lwal/week-28/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-07-13T09:34:07+00:00"
     }
   ]
 }
