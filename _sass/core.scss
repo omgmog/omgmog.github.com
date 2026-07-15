@@ -1397,6 +1397,40 @@ table {
   td {
     padding: 0.25rem;
   }
+
+  &.compact {
+    th,
+    td {
+      text-align: center;
+      padding: 0;
+    }
+  }
+}
+
+.query-result {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--gutter-size);
+
+  > div.highlighter-rouge,
+  > table {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+  }
+
+  > div.highlighter-rouge {
+    flex-basis: 66%;
+  }
+
+  > table {
+    flex-basis: 33%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 figure {
@@ -1421,9 +1455,16 @@ figure {
     margin-top: 0.5rem;
     font-size: 0.9em;
     color: rgba(var(--color-text-rgb) / 0.6);
+    text-align: right;
 
     p {
       margin: 0;
+    }
+  }
+  &.iframe {
+
+    &:has(figcaption) {
+      margin-bottom: var(--double-gutter-size);
     }
   }
 
