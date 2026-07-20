@@ -10,7 +10,7 @@
       </div>
     {% else %}
       <div class="lwal-item lwal-link">
-        {% if item.desc %}<p class="lwal-link-desc">{{ item.desc }}</p>{% endif %}
+        {% if item.desc %}<p class="lwal-link-desc">{{ item.desc | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
         <a href="{{ item.url }}" class="lwal-link-title u-bookmark-of" rel="nofollow" target="_blank">{{ item.title }}</a>
       </div>
     {% endif %}
