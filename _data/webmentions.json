@@ -6576,5 +6576,31 @@
       "wm-private": false,
       "sort_date": "2026-07-15T14:06:27+00:00"
     }
+  ],
+  "/lwal/week-29/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Henry",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/c91890e86d2136d9e080cb807f63ae4780c2ad6dad3b7e9e6f29c6f88a87eb30.jpg",
+        "url": "https://tech.lgbt/@henrahmagix"
+      },
+      "url": "https://tech.lgbt/@henrahmagix/116953336087726152",
+      "published": "2026-07-20T16:51:25+00:00",
+      "wm-received": "2026-07-20T17:04:49Z",
+      "wm-id": 2012892,
+      "wm-source": "https://brid.gy/post/mastodon/@omgmog@indieweb.social/116953336146154863",
+      "wm-target": "https://blog.omgmog.net/lwal/week-29/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>linksticle [Sega CD engineering deep-dives, a share-menu upgrade, and a daily word game](<a href=\"https://blog.omgmog.net/lwal/week-29/\"><span>https://</span><span>blog.omgmog.net/lwal/week-29/</span><span></span></a>) by <span class=\"h-card\"><a href=\"https://indieweb.social/@omgmog\" class=\"u-url\">@<span>omgmog</span></a></span></p>\n<a href=\"https://blog.omgmog.net/lwal/week-29/\">Sega CD engineering deep-dives, a share-menu upgrade, and a daily word game — Max Glenister</a>",
+        "text": "linksticle [Sega CD engineering deep-dives, a share-menu upgrade, and a daily word game](https://blog.omgmog.net/lwal/week-29/) by @omgmog\nSega CD engineering deep-dives, a share-menu upgrade, and a daily word game — Max Glenister"
+      },
+      "mention-of": "https://blog.omgmog.net/lwal/week-29/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-07-20T16:51:25+00:00"
+    }
   ]
 }
