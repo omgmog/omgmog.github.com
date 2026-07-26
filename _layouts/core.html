@@ -60,7 +60,7 @@
             {% include sidebar-author.html %}
             {% include sidebar-secondary-nav.html %}
             {% include sidebar-post-nav.html %}
-            {% include sidebar-tags.html %}
+            {% if page.layout == 'tag' or page.url == '/archive/' %}{% include sidebar-tags.html %}{% endif %}
             {% include sidebar-webmentions.html %}
             {% include sidebar-webring.html %}
         </aside>
