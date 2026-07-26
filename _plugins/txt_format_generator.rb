@@ -6,6 +6,7 @@ module Jekyll
   module TxtFormatFilters
     def iframes_to_urls(input)  = TxtGenerator.iframes_to_urls(input)
     def images_to_urls(input)   = TxtGenerator.images_to_urls(input, @context.registers[:site].config['url'])
+    def svgs_to_placeholders(input) = TxtGenerator.svgs_to_placeholders(input)
     def unwrap_links(input)     = TxtGenerator.unwrap_links(input,   @context.registers[:site].config['url'])
     def html_to_plain_text_convert(input) = TxtGenerator.to_plain(input)
     def wrap_lines(input, width = 80)     = TxtGenerator.wrap_lines(input, width)
@@ -33,6 +34,14 @@ module Jekyll
         url = $1
         url = "#{site_url}#{url}" if url.start_with?('/')
         "\n[IMAGE: #{url}]\n"
+      end
+    end
+
+    def self.svgs_to_placeholders(input)
+      return input unless input
+      input.gsub(/<figure[^>]*>\s*<svg.*?<\/svg>\s*(?:<figcaption>(.*?)<\/figcaption>)?\s*<\/figure>/im) do
+        caption = $1
+        caption ? "\n[IMAGE: #{caption.strip}]\n" : "\n[IMAGE: chart]\n"
       end
     end
 
@@ -79,6 +88,7 @@ module Jekyll
       body = doc.content.dup
       body = iframes_to_urls(body)
       body = images_to_urls(body, site_url)
+      body = svgs_to_placeholders(body)
       body = unwrap_links(body, site_url)
       body = to_plain(body)
       body = wrap_lines(body)

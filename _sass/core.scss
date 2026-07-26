@@ -1358,6 +1358,14 @@ h3.post-title {
       }
     }
 
+    .post-card-series-index {
+      font-size: var(--text-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgba(var(--color-text-rgb) / 0.6);
+      margin-bottom: 0.25rem;
+    }
+
     .post-card-summary {
       font-size: var(--text-sm);
       color: rgba(var(--color-text-rgb) / 0.6);
@@ -1449,6 +1457,12 @@ figure {
     line-height: 0;
     overflow: hidden;
     border-radius: inherit;
+  }
+
+  > svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   figcaption {
