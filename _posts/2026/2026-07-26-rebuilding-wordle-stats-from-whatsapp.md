@@ -80,7 +80,36 @@ I wrote a small Python script that parsed the export, keeping just my own messag
 🟩🟩🟩🟩🟩
 ```
 
-It de-duplicated by puzzle number, just in case I'd ever shared the same puzzle twice, then condensed all of it down to one plain CSV row per game:
+The actual extraction is one regex against the score line, plus a bit of logic to turn `X/6` into a proper win or loss:
+
+```python
+WORDLE_RE = re.compile(r"Wordle\s+([\d,]+)\s+([1-6X])/6", re.IGNORECASE)
+
+match = WORDLE_RE.search(message)
+puzzle_number = int(match.group(1).replace(",", ""))
+guess_raw = match.group(2).upper()
+won = guess_raw != "X"
+guesses = int(guess_raw) if won else None
+
+result = {
+    "date": "2022-01-19",
+    "puzzle_number": puzzle_number,
+    "guesses": guesses,
+    "won": won,
+}
+```
+
+I ran that over the three messages above, and this is what comes out the other end:
+
+```python
+[
+    {"date": "2022-01-19", "puzzle_number": 214, "guesses": 3, "won": True},
+    {"date": "2022-01-20", "puzzle_number": 215, "guesses": 5, "won": True},
+    {"date": "2022-01-21", "puzzle_number": 216, "guesses": 3, "won": True},
+]
+```
+
+From there it de-duplicated by puzzle number (in case I'd ever shared the same one twice) and condensed everything down to one plain CSV row per game:
 
 ```
 date,puzzle_number,guesses,won
@@ -104,7 +133,16 @@ Most other gaps are shorter, 3 to 7 days, and cluster in 2022 and early 2023. Th
 
 {% include posts/inline-svg.html src="wordle-guess-distribution.svg" class="full-width center" %}
 
-Since I've saved the actual grids and not just the guess counts, I can check whether a lucky green on the opener really helps. It does: a first guess with at least one green tile finishes in 3.79 guesses on average, against 4.11 when the opener comes back completely blank, a third of a guess saved just from one lucky letter landing in the right place.
+Since I've saved the actual grids and not just the guess counts, I can check whether a lucky green on the opener really helps. The grid rows themselves are just five-emoji lines, so pulling them out of a message is another regex, and checking for a green is just a string search on the first row:
+
+```python
+GRID_ROW_RE = re.compile(r"[⬛⬜🟨🟩]{5}")
+
+grid = [line for line in message.splitlines() if GRID_ROW_RE.fullmatch(line)]
+had_green_opener = "🟩" in grid[0]
+```
+
+Puzzle #216 from earlier, `🟨⬛⬛⬛🟩`, comes back `True`. It does help: a first guess with at least one green tile finishes in 3.79 guesses on average, against 4.11 when the opener comes back completely blank, a third of a guess saved just from one lucky letter landing in the right place.
 
 ## Habits by day and time
 
