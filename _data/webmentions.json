@@ -5159,11 +5159,11 @@
       "author": {
         "type": "card",
         "name": "Michael Harley",
-        "photo": "",
+        "photo": "https://avatars.webmention.io/michaelharley.net/9d877b708614b8f23bb7afe1ac76b334ee646b40a4d31c80544a0c3f478a74a7.png",
         "url": "https://michaelharley.net"
       },
       "url": "https://michaelharley.net/likes/2026/06/17/how-i-take-my-coffee-max-glenister/",
-      "published": "2026-06-17T11:43:48",
+      "published": "2026-06-17T07:43:48-04:00",
       "wm-received": "2026-06-17T11:45:33Z",
       "wm-id": 2003219,
       "wm-source": "https://michaelharley.net/likes/2026/06/17/how-i-take-my-coffee-max-glenister/",
@@ -5172,13 +5172,17 @@
       "photo": [
         "https://michaelharley.net/assets/images/avatar.svg"
       ],
+      "content": {
+        "html": "<a href=\"https://michaelharley.net\">Michael Harley</a>\n      \n      liked <a class=\"u-like-of\" href=\"https://blog.omgmog.net/post/how-i-take-my-coffee/\">How I take my coffee — Max Glenister</a>",
+        "text": "Michael Harley\n      \n      liked How I take my coffee — Max Glenister"
+      },
       "like-of": "https://blog.omgmog.net/post/how-i-take-my-coffee/",
       "wm-property": "like-of",
       "wm-private": false,
       "rels": {
         "canonical": "https://michaelharley.net/likes/2026/06/17/how-i-take-my-coffee-max-glenister/"
       },
-      "sort_date": "2026-06-17T11:43:48"
+      "sort_date": "2026-06-17T07:43:48-04:00"
     },
     {
       "type": "entry",
@@ -5294,11 +5298,11 @@
       "author": {
         "type": "card",
         "name": "Michael Harley",
-        "photo": "",
+        "photo": "https://avatars.webmention.io/michaelharley.net/9d877b708614b8f23bb7afe1ac76b334ee646b40a4d31c80544a0c3f478a74a7.png",
         "url": "https://michaelharley.net"
       },
       "url": "https://michaelharley.net/likes/2026/06/17/sending-webmentions-on-deploy/",
-      "published": "2026-06-17T00:00:00",
+      "published": "2026-06-17T00:00:00-04:00",
       "wm-received": "2026-06-17T12:16:46Z",
       "wm-id": 2003227,
       "wm-source": "https://michaelharley.net/likes/2026/06/17/sending-webmentions-on-deploy/",
@@ -5307,13 +5311,17 @@
       "photo": [
         "https://michaelharley.net/assets/images/avatar.svg"
       ],
+      "content": {
+        "html": "<a href=\"https://michaelharley.net\">Michael Harley</a>\n      \n      liked <a class=\"u-like-of\" href=\"https://blog.omgmog.net/post/sending-webmentions-on-deploy/\">Sending webmentions on deploy</a>",
+        "text": "Michael Harley\n      \n      liked Sending webmentions on deploy"
+      },
       "like-of": "https://blog.omgmog.net/post/sending-webmentions-on-deploy/",
       "wm-property": "like-of",
       "wm-private": false,
       "rels": {
         "canonical": "https://michaelharley.net/likes/2026/06/17/sending-webmentions-on-deploy/"
       },
-      "sort_date": "2026-06-17T00:00:00"
+      "sort_date": "2026-06-17T00:00:00-04:00"
     }
   ],
   "/post/downgrading-the-oneplus-7-pro-for-lineageos/": [
@@ -6011,19 +6019,23 @@
         "url": "https://michaelharley.net"
       },
       "url": "https://michaelharley.net/likes/2026/06/24/max-glenister/",
-      "published": "2026-06-24T17:19:14",
+      "published": "2026-06-24T13:19:14-04:00",
       "wm-received": "2026-06-24T17:21:01Z",
       "wm-id": 2004605,
       "wm-source": "https://michaelharley.net/likes/2026/06/24/max-glenister/",
       "wm-target": "https://blog.omgmog.net/post/making-gimp-feel-less-like-punishment/",
       "wm-protocol": "webmention",
+      "content": {
+        "html": "<a href=\"https://michaelharley.net\">Michael Harley</a>\n      \n      liked <a class=\"u-like-of\" href=\"https://blog.omgmog.net/post/making-gimp-feel-less-like-punishment/\">Max Glenister</a>",
+        "text": "Michael Harley\n      \n      liked Max Glenister"
+      },
       "like-of": "https://blog.omgmog.net/post/making-gimp-feel-less-like-punishment/",
       "wm-property": "like-of",
       "wm-private": false,
       "rels": {
         "canonical": "https://michaelharley.net/likes/2026/06/24/max-glenister/"
       },
-      "sort_date": "2026-06-24T17:19:14"
+      "sort_date": "2026-06-24T13:19:14-04:00"
     }
   ],
   "/post/enriching-webmentions-from-third-party-platforms/": [
@@ -6063,19 +6075,23 @@
         "url": "https://michaelharley.net"
       },
       "url": "https://michaelharley.net/likes/2026/06/26/max-glenister/",
-      "published": "2026-06-26T12:05:59",
+      "published": "2026-06-26T08:05:59-04:00",
       "wm-received": "2026-06-26T12:11:26Z",
       "wm-id": 2004887,
       "wm-source": "https://michaelharley.net/likes/2026/06/26/max-glenister/",
       "wm-target": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
       "wm-protocol": "webmention",
+      "content": {
+        "html": "<a href=\"https://michaelharley.net\">Michael Harley</a>\n      \n      liked <a class=\"u-like-of\" href=\"https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/\">Max Glenister</a>",
+        "text": "Michael Harley\n      \n      liked Max Glenister"
+      },
       "like-of": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
       "wm-property": "like-of",
       "wm-private": false,
       "rels": {
         "canonical": "https://michaelharley.net/likes/2026/06/26/max-glenister/"
       },
-      "sort_date": "2026-06-26T12:05:59"
+      "sort_date": "2026-06-26T08:05:59-04:00"
     },
     {
       "type": "entry",
@@ -6695,6 +6711,77 @@
       "wm-property": "like-of",
       "wm-private": false,
       "sort_date": "2026-07-27T15:35:47Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "RSS Bot",
+        "photo": "",
+        "url": "https://lemmy.bestiver.se/u/rssbot"
+      },
+      "url": "https://lemmy.bestiver.se/post/1267213",
+      "published": null,
+      "wm-received": "2026-08-04T14:40:05Z",
+      "wm-id": 2015982,
+      "wm-source": "https://lemmy.bestiver.se/post/1267213",
+      "wm-target": "https://blog.omgmog.net/post/rebuilding-wordle-stats-from-whatsapp/",
+      "wm-protocol": "webmention",
+      "mention-of": "https://blog.omgmog.net/post/rebuilding-wordle-stats-from-whatsapp/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://lemmy.bestiver.se/post/1267213"
+      },
+      "community": {
+        "name": "hackernews",
+        "url": "https://lemmy.bestiver.se/c/hackernews"
+      },
+      "sort_date": "2026-08-04T14:40:05Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "surprisetalk",
+        "photo": "",
+        "url": "https://news.ycombinator.com/user?id=surprisetalk"
+      },
+      "url": "https://news.ycombinator.com/item?id=49156969",
+      "published": "2026-08-03T15:20:13+00:00",
+      "wm-received": "2026-08-04T14:40:54Z",
+      "wm-id": 2015983,
+      "wm-source": "https://news.ycombinator.com/item?id=49156969",
+      "wm-target": "https://blog.omgmog.net/post/rebuilding-wordle-stats-from-whatsapp/",
+      "wm-protocol": "webmention",
+      "name": "Rebuilding and analysing 4 years of Wordle stats from WhatsApp chat logs",
+      "bookmark-of": "https://blog.omgmog.net/post/rebuilding-wordle-stats-from-whatsapp/",
+      "wm-property": "bookmark-of",
+      "wm-private": false,
+      "sort_date": "2026-08-03T15:20:13+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "photo": "",
+        "url": ""
+      },
+      "url": "https://themorningnews.org/behind-the-wheel/",
+      "published": null,
+      "wm-received": "2026-08-06T15:46:12Z",
+      "wm-id": 2016486,
+      "wm-source": "https://themorningnews.org/behind-the-wheel/",
+      "wm-target": "https://blog.omgmog.net/post/rebuilding-wordle-stats-from-whatsapp/",
+      "wm-protocol": "webmention",
+      "mention-of": "https://blog.omgmog.net/post/rebuilding-wordle-stats-from-whatsapp/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://themorningnews.org/behind-the-wheel/"
+      },
+      "sort_date": "2026-08-06T15:46:12Z"
     }
   ]
 }
