@@ -56,7 +56,7 @@
           </header>
           {% assign _html_limit = 1000 %}
           {% if item.summary.value %}<div>{{ item.summary.value | markdownify }}</div>
-          {% elsif item.content.html and item.content.html.size <= _html_limit %}<div>{{ item.content.html }}</div>
+          {% elsif item.content.html and item.content.html.size <= _html_limit %}<div>{{ item.content.html | sanitize_content_html }}</div>
           {% elsif item.content.text %}<div>{{ item.content.text | truncatewords: 50, "&hellip;" }}</div>
           {% endif %}
         </article>

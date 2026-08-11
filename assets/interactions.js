@@ -13,6 +13,28 @@
     return element ? element.innerHTML : "";
   };
 
+  // Webmention content only ever needs these elements; unwrap anything
+  // else (headings, spans, etc.) rather than trying to allowlist every
+  // way a source's markdown renderer might surprise us.
+  const ALLOWED_CONTENT_TAGS = new Set([
+    "P",
+    "UL",
+    "OL",
+    "LI",
+    "IMG",
+    "A",
+    "BLOCKQUOTE",
+  ]);
+  const sanitizeContentHtml = (html) => {
+    const doc = new DOMParser().parseFromString(html || "", "text/html");
+    doc.body.querySelectorAll("*").forEach((el) => {
+      if (!ALLOWED_CONTENT_TAGS.has(el.tagName)) {
+        el.replaceWith(...el.childNodes);
+      }
+    });
+    return doc.body.innerHTML;
+  };
+
   const TYPES = {
     comment: {
       template: getTemplateContent("tpl-comment"),
@@ -308,6 +330,15 @@
   module.prettyDate = (dateString, options = DEFAULT_DATE_OPTIONS) =>
     new Intl.DateTimeFormat("default", options).format(new Date(dateString));
 
+  // Matches Liquid's `date: "%b %-d, %Y"` used in the static feed
+  // (e.g. "Aug 11, 2026"), so JS- and build-time-rendered mentions read the same.
+  module.staticStyleDate = (dateString) =>
+    new Intl.DateTimeFormat("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    }).format(new Date(dateString));
+
   module.renderThing = (type, data) => {
     if (!type || !type.template || !type.attributes || !data) {
       console.warn("Invalid type or data provided to renderThing");
@@ -338,7 +369,7 @@
         // sometimes the publish date isn't provided but we might know when the mention was received
         value = value || data["wm-received"];
         // format the date
-        value = module.prettyDate(value);
+        value = module.staticStyleDate(value);
       }
 
       if (attribute === "summary") {
@@ -390,6 +421,7 @@
         if (!/<[a-z][\s\S]*>/i.test(value)) {
           value = marked.parse(value);
         }
+        value = sanitizeContentHtml(value);
       }
       if (attribute === "subreddit") {
         const match = (data.url || data["wm-source"] || "").match(

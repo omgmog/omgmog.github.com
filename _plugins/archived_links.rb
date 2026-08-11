@@ -33,21 +33,18 @@ Jekyll::Hooks.register :posts, :post_render do |post|
   end
 
   # Process links within the main article content
-  if post.output =~ /(<article class="post h-entry[\w\-\s]*?">.*?<\/article>)/m
+  # Split at the interactions section to avoid processing webmention/comment templates
+  if post.output =~ /(<div class="page-content e-content">.*?)(<section id="interactions")/m
     before_article = $`
     matched_article = $1
-    after_article = $'
+    after_article = $2 + $'
     post.output = before_article + rewrite_links.call(matched_article) + after_article
   end
 
-  # Process links within the archived comments section
-  # Boundary: from <div id="archived-comments"> to the next <h3 (which starts Comments/Webmentions)
-  if post.output.include?('id="archived-comments"')
-    post.output = post.output.sub(/(<div id="archived-comments">)(.*?)(<h3 )/m) do
-      opener = $1
-      comments_html = $2
-      closer = $3
-      opener + rewrite_links.call(comments_html) + closer
-    end
+  # Process links within archived comments (frontmatter-sourced, pre-2012 posts);
+  # these are the author's own copy of comments from the old commenting system,
+  # not live third-party content, so they get the same archive.org treatment.
+  post.output = post.output.gsub(/(<article class="reply[^"]*" data-source="archived">.*?<\/article>)/m) do
+    rewrite_links.call($1)
   end
 end

@@ -5,11 +5,11 @@ Jekyll::Hooks.register :posts, :post_render do |post|
   site_domain = site_url.gsub(/https?:\/\//, '')
 
   # Only process links within the main article content
-  # Split at </article> to avoid processing templates and interactions
-  if post.output =~ /(<article class="post h-entry">.*?<\/article>)/m
+  # Split at the interactions section to avoid processing webmention/comment templates
+  if post.output =~ /(<div class="page-content e-content">.*?)(<section id="interactions")/m
     before_article = $`
     article_content = $1
-    after_article = $'
+    after_article = $2 + $'
 
     # Parse and modify links only in the article content
     article_content = article_content.gsub(/<a\s+([^>]*?)href=["']([^"']+)["']([^>]*?)>/i) do
