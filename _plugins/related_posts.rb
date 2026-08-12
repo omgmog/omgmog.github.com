@@ -16,8 +16,9 @@ module Jekyll
           [candidate, shared]
         end
 
-        scored.select! { |_, score| score > 0 }
-        scored.sort_by! { |_, score| -score }
+        min_score = tags.length >= 3 ? 2 : 1
+        scored.select! { |_, score| score >= min_score }
+        scored.sort_by! { |candidate, score| [-score, -candidate.date.to_i] }
 
         post.data['related_posts'] = scored.first(LIMIT).map(&:first)
       end
