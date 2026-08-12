@@ -6783,5 +6783,34 @@
       },
       "sort_date": "2026-08-06T15:46:12Z"
     }
+  ],
+  "/post/hidizs-ap30-music-boy/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/ive-spent-five-weeks-with-the-hidizs",
+      "published": "2026-08-11T19:26:19+00:00",
+      "wm-received": "2026-08-11T19:26:21Z",
+      "wm-id": 2017893,
+      "wm-source": "https://social.omgmog.net/2026/ive-spent-five-weeks-with-the-hidizs",
+      "wm-target": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/117078516024696211"
+      ],
+      "content": {
+        "html": "<p>I've spent five weeks with the Hidizs AP30 Music Boy, a DAP that looks like a tiny Game Boy. Better audio hardware than the price suggests, firmware that's still being fixed, and no, you can't run games on it. I checked thoroughly.</p>\n\n<p><a href=\"https://blog.omgmog.net/post/hidizs-ap30-music-boy/\" class=\"u-mention-of\">https://blog.omgmog.net/post/hidizs-ap30-music-boy/</a> <a href=\"https://social.omgmog.net/tag/DAP\" class=\"p-category\">#DAP</a> <a href=\"https://social.omgmog.net/tag/audiophile\" class=\"p-category\">#audiophile</a> <a href=\"https://social.omgmog.net/tag/Hidizs\" class=\"p-category\">#Hidizs</a></p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/hidizs-ap30-music-boy/\" class=\"u-mention-of\">https://blog.omgmog.net/post/hidizs-ap30-music-boy/</a>",
+        "text": "I've spent five weeks with the Hidizs AP30 Music Boy, a DAP that looks like a tiny Game Boy. Better audio hardware than the price suggests, firmware that's still being fixed, and no, you can't run games on it. I checked thoroughly.\n\nhttps://blog.omgmog.net/post/hidizs-ap30-music-boy/ #DAP #audiophile #Hidizs\n\n        \n                        https://blog.omgmog.net/post/hidizs-ap30-music-boy/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-08-11T19:26:19+00:00"
+    }
   ]
 }
