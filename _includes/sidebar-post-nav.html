@@ -1,21 +1,8 @@
 {% if page.layout == 'post' %}
 
 
-{% assign all_posts = site.posts | concat: site.cardboctober | concat: site.lwal | sort: "date" | reverse %}
-{% assign all_index = -1 %}
-{% for p in all_posts %}
-    {% if p.url == page.url %}{% assign all_index = forloop.index0 %}{% break %}{% endif %}
-{% endfor %}
-{% if all_index > -1 %}
-{% assign all_previous = null %}
-{% assign all_next = null %}
-{% assign next_index = all_index | minus: 1 %}
-{% if all_index > 0 %}{% assign all_next = all_posts[next_index] %}{% endif %}
-{% assign previous_index = all_index | plus: 1 %}
-{% if previous_index < all_posts.size %}{% assign all_previous = all_posts[previous_index] %}{% endif %}
-{% if all_previous or all_next %}
-{% include _post-pager.html prev_post=all_previous next_post=all_next %}
-{% endif %}
+{% if page.all_previous or page.all_next %}
+{% include _post-pager.html prev_post=page.all_previous next_post=page.all_next %}
 {% endif %}
 
 {% if page.collection != 'posts' %}
