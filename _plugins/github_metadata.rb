@@ -6,6 +6,16 @@ module Jekyll
     priority :highest
 
     def generate(site)
+      github = (@@github ||= build_github_metadata)
+      site.config['github'] = github
+
+      Jekyll.logger.info "GitHub Metadata:", "Loaded for #{github['owner_name']}/#{github['repository_name']}"
+      Jekyll.logger.info "GitHub Metadata:", "Build revision: #{github['build_revision'][0..7]}"
+    end
+
+    private
+
+    def build_github_metadata
       github = {}
 
       # Extract repository info
@@ -39,14 +49,8 @@ module Jekyll
         github['build_revision'] = get_git_revision
       end
 
-      # Store in site config
-      site.config['github'] = github
-
-      Jekyll.logger.info "GitHub Metadata:", "Loaded for #{github['owner_name']}/#{github['repository_name']}"
-      Jekyll.logger.info "GitHub Metadata:", "Build revision: #{github['build_revision'][0..7]}"
+      github
     end
-
-    private
 
     def get_git_revision
       stdout, stderr, status = Open3.capture3('git', 'rev-parse', 'HEAD')
