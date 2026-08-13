@@ -5896,6 +5896,30 @@
       "type": "entry",
       "author": {
         "type": "card",
+        "name": "nilleb",
+        "photo": "https://cdn.bsky.app/img/avatar/plain/did:plc:kflooyw5fbmv6siiqwvnwqut/bafkreicotgfy7ukcm5wu4hbrh6vgdomtxu4v7ycxenvu6l27udofuvretq",
+        "url": "https://bsky.app/profile/nilleb.io"
+      },
+      "url": "https://bsky.app/profile/nilleb.io/post/3mt2qwbr33s2u",
+      "published": "2026-08-14T18:09:25+00:00",
+      "wm-received": "2026-08-14T18:09:30Z",
+      "wm-id": 2023370,
+      "wm-source": "https://bsky.brid.gy/convert/web/at://did:plc:kflooyw5fbmv6siiqwvnwqut/app.bsky.feed.post/3mt2qwbr33s2u%23bridgy-fed-create-2026-08-14T18:09:26.656886+00:00",
+      "wm-target": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "Original motivation: <a href=\"https://blog.omgmog.net/post/xteink-x4-e-ink-reader/\">blog.omgmog.net/post/xteink-...</a>",
+        "text": "Original motivation: blog.omgmog.net/post/xteink-..."
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/xteink-x4-e-ink-reader/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-08-14T18:09:25+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
         "name": "Beto Dealmeida",
         "photo": "https://avatars.webmention.io/robida.net/78a56a83f566d01b976bd19a7c49a5db5cac26bbe095602dd786c7a5709e54b3.jpg",
         "url": "https://robida.net/"
@@ -6811,6 +6835,78 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-08-11T19:26:19+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "VancityRenaults",
+        "photo": "https://avatars.webmention.io/www.redditstatic.com/696c30741b721a010a578ec44f6505e7b8ccbf8de0c4ee07d087ecad2e6ddb90.png",
+        "url": "https://reddit.com/user/VancityRenaults/"
+      },
+      "url": "https://reddit.com/r/DigitalAudioPlayer/comments/1vlr97g/my_hidizs_ap30_music_boy_review_after_five_weeks/p366uvi/",
+      "published": "2026-08-12T03:28:36+00:00",
+      "wm-received": "2026-08-12T09:14:23Z",
+      "wm-id": 2017988,
+      "wm-source": "https://brid.gy/comment/reddit/omgmog/1vlr97g/p366uvi",
+      "wm-target": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>Thanks for this write up. I found your review to be pretty fair and balanced, going into details about the cons of the devices whereas other reviewers mostly glossed over them. It seems like the high quality DAC and the retro aesthetics are the main things going for it, whereas the software (like most devices in this price range) is pretty much a mess. </p>",
+        "text": "Thanks for this write up. I found your review to be pretty fair and balanced, going into details about the cons of the devices whereas other reviewers mostly glossed over them. It seems like the high quality DAC and the retro aesthetics are the main things going for it, whereas the software (like most devices in this price range) is pretty much a mess."
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-08-12T03:28:36+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Spew120",
+        "photo": "https://avatars.webmention.io/styles.redditmedia.com/4ad1ca2618a46d79f56e5f4a57b75c2fa7a68773446c538ecaf0893fc2e2860f.png",
+        "url": "https://reddit.com/user/Spew120/"
+      },
+      "url": "https://reddit.com/r/DigitalAudioPlayer/comments/1vlr97g/my_hidizs_ap30_music_boy_review_after_five_weeks/p3889w9/",
+      "published": "2026-08-12T12:27:29+00:00",
+      "wm-received": "2026-08-12T13:20:33Z",
+      "wm-id": 2018011,
+      "wm-source": "https://brid.gy/comment/reddit/omgmog/1vlr97g/p3889w9",
+      "wm-target": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>Kind of looks disposable, like something you’d throw onto a keychain to be cute. However for less than $40 this would be a decent buy. Anything more you’d be getting fleeced. </p>",
+        "text": "Kind of looks disposable, like something you’d throw onto a keychain to be cute. However for less than $40 this would be a decent buy. Anything more you’d be getting fleeced."
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-08-12T12:27:29+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Background_Clue_3756",
+        "photo": "https://avatars.webmention.io/i.redd.it/1c384ec9bc02484d703cb3ade9a112db3e241b664226ceb39e2208240b79476e.png",
+        "url": "https://reddit.com/user/Background_Clue_3756/"
+      },
+      "url": "https://reddit.com/r/SBCGaming/comments/1vn3mod/my_hidizs_ap30_music_boy_review_after_five_weeks/p3fnvxv/",
+      "published": "2026-08-13T12:49:48+00:00",
+      "wm-received": "2026-08-13T13:13:57Z",
+      "wm-id": 2023239,
+      "wm-source": "https://brid.gy/comment/reddit/omgmog/1vn3mod/p3fnvxv",
+      "wm-target": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>I have been BOMBARDED with ads for this things and I was really interested in backing it. Still unsure, maybe more unsure due to this review.</p>\n\n<p>Thank you for it. I think I want to wait until the firmware matures.</p>",
+        "text": "I have been BOMBARDED with ads for this things and I was really interested in backing it. Still unsure, maybe more unsure due to this review.\n\nThank you for it. I think I want to wait until the firmware matures."
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-08-13T12:49:48+00:00"
     }
   ]
 }
