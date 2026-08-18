@@ -6907,6 +6907,59 @@
       "wm-property": "in-reply-to",
       "wm-private": false,
       "sort_date": "2026-08-13T12:49:48+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "CommercialSea8221",
+        "photo": "https://avatars.webmention.io/styles.redditmedia.com/7a73885a29facf0568eace70e834756b716004971165aff07e1ff7dec83b3b08.jpg",
+        "url": "https://reddit.com/user/CommercialSea8221/"
+      },
+      "url": "https://reddit.com/r/SBCGaming/comments/1vn3mod/my_hidizs_ap30_music_boy_review_after_five_weeks/p4kri2j/",
+      "published": "2026-08-19T07:35:35+00:00",
+      "wm-received": "2026-08-19T08:00:22Z",
+      "wm-id": 2024407,
+      "wm-source": "https://brid.gy/comment/reddit/omgmog/1vn3mod/p4kri2j",
+      "wm-target": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>First of all i don't believe in promises that the things will be resolved in the firmware soon, but I have seen last few weeks Hidizs releases two firmwares, one resolved the main issues thet early reviewers experienced and the second one recently released and they added 5 more games to the AP30, might be  few other things resolved which they revealed soon. My point is that the Hidizs shows their commitment which is rarely shown by a brand🤞🏼</p>",
+        "text": "First of all i don't believe in promises that the things will be resolved in the firmware soon, but I have seen last few weeks Hidizs releases two firmwares, one resolved the main issues thet early reviewers experienced and the second one recently released and they added 5 more games to the AP30, might be  few other things resolved which they revealed soon. My point is that the Hidizs shows their commitment which is rarely shown by a brand🤞🏼"
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-08-19T07:35:35+00:00"
+    }
+  ],
+  "/lwal/week-33/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/lwalweek-33",
+      "published": "2026-08-17T14:20:17+00:00",
+      "wm-received": "2026-08-17T14:20:20Z",
+      "wm-id": 2023984,
+      "wm-source": "https://social.omgmog.net/2026/lwalweek-33",
+      "wm-target": "https://blog.omgmog.net/lwal/week-33/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/117111286509282465"
+      ],
+      "content": {
+        "html": "<a href=\"https://blog.omgmog.net/lwal/week-33/\" class=\"u-mention-of\">https://blog.omgmog.net/lwal/week-33/</a>",
+        "text": "https://blog.omgmog.net/lwal/week-33/"
+      },
+      "mention-of": "https://blog.omgmog.net/lwal/week-33/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-08-17T14:20:17+00:00"
     }
   ]
 }
