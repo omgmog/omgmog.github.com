@@ -6216,6 +6216,41 @@
         "canonical": "https://michaelharley.net/posts/2026/06/27/webmentions-on-my-blog-part-1-incoming/"
       },
       "sort_date": "2026-06-27T11:25:47-04:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Yash Garg",
+        "photo": "https://yashgarg.dev/_astro/author.DG6hqZQo_bQqIs.webp",
+        "url": "https://yashgarg.dev"
+      },
+      "url": "https://yashgarg.dev/weekly-notes-34-2026/",
+      "published": "2026-08-23T09:03:00",
+      "wm-received": "2026-08-23T09:09:36Z",
+      "wm-id": 2025576,
+      "wm-source": "https://yashgarg.dev/weekly-notes-34-2026/",
+      "wm-target": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-protocol": "webmention",
+      "name": "Week 34/2026",
+      "summary": {
+        "content-type": "text/plain",
+        "value": "A slow and lazy week."
+      },
+      "photo": [
+        "https://yashgarg.dev/_astro/cover.DiVkzT8E_S4moT.webp"
+      ],
+      "content": {
+        "html": "Contents<ul><li> <a href=\"https://yashgarg.dev/weekly-notes-34-2026/#life\"> <span>1.</span> Life </a> </li><li> <a href=\"https://yashgarg.dev/weekly-notes-34-2026/#food\"> <span>2.</span> Food </a> </li><li> <a href=\"https://yashgarg.dev/weekly-notes-34-2026/#beanlore\"> <span>2.1.</span> Beanlore </a> </li><li> <a href=\"https://yashgarg.dev/weekly-notes-34-2026/#chaska-bun\"> <span>2.2.</span> Chaska Bun </a> </li><li> <a href=\"https://yashgarg.dev/weekly-notes-34-2026/#meta\"> <span>3.</span> Meta </a> </li><li> <a href=\"https://yashgarg.dev/weekly-notes-34-2026/#tech-stuff\"> <span>4.</span> Tech Stuff </a> </li><li> <a href=\"https://yashgarg.dev/weekly-notes-34-2026/#watching\"> <span>5.</span> Watching </a> </li><li> <a href=\"https://yashgarg.dev/weekly-notes-34-2026/#bonus\"> <span>6.</span> Bonus </a> </li> </ul><p>I think this is my 28th weeknote, which is a little surprising. I did not think I’d be this consistent with writing these, but here we are 😆</p>\n<h2><a href=\"https://yashgarg.dev/weekly-notes-34-2026/#life\">#</a>Life</h2>\n<p>To start off, I went to the hospital along with <a href=\"https://msfjarvis.dev/\">Harsh</a> since he was quite unwell, and each of us thought that the other person had the keys, basically creating a deadlock (too nerdy of a term?). When we came back to our flat, we realized that we were locked out. Great start to a Monday 😭 I eventually called a locksmith who opened the door latch in 10 minutes, and we were able to enter. <em>Note to self: never leave the house without your keys!</em> This was also one of those things I’ve heard from people, and now I have experienced it myself 🫠</p>\n<p>On Wednesday, I decided I would endure all the pain of going to banks, a few to close accounts and a few to open new ones. I closed two accounts and opened two others, so the net total was zero… Luckily, all this did not take much time out of my day, barely 2 hours for everything. I was also just walking around to hit my step goal instead of taking a vehicle :P The weather was the cherry on top!</p>\n<h2><a href=\"https://yashgarg.dev/weekly-notes-34-2026/#food\">#</a>Food</h2>\n<p>Not much on the cooking front this week, since Harsh was sick and we barely cooked anything at home. I mostly ate salads, but we did go out to eat twice later in the week.</p>\n<p>I’ve also been trying to create a proper meal plan that I can diligently follow every week. I made Chocolate Whey PB Oats for breakfast today, which turned out to be quite nice! I’m still trying to find more things I can meal prep.</p>\n<p>On a side note, why is whey protein so expensive these days? 😭</p>\n<h3><a href=\"https://yashgarg.dev/weekly-notes-34-2026/#beanlore\">#</a>Beanlore</h3>\n<p>A common friend of ours, <a href=\"https://www.devanshbajaj.dev/\">Devansh</a>, is in the city for a week, so we went out to meet him at <a href=\"https://www.instagram.com/beanloreindia/\">Beanlore</a>. It’s been a long time since I last met him, and it’s always nice catching up!</p>\n<p>We weren’t very hungry, so we just got ourselves a beverage and pink sauce pasta. Both were pretty good! I really liked the Hazelnut Latte, maybe I’ll go back for it ☕</p>\n <p> </p>   <h3><a href=\"https://yashgarg.dev/weekly-notes-34-2026/#chaska-bun\">#</a>Chaska Bun</h3>\n<p>I had made a plan with <a href=\"https://fknil.com/\">Fenil</a> earlier in the week to meet on Friday, tagged Harsh along, and we went to <a href=\"https://www.chaskabun.com/\">Chaska Bun</a> for some Tea and Bun Maska. The tea was quite nice and I got their Chicken Keema Bun, which was mid to be honest, not that great.</p>\n <p> </p>   <p>Fenil has also moved nearby recently, which is nice! We went to see the place he’s staying at and spent a lot of time there just <em>yapping.</em> I say yapping because we left our house at 5 PM and came back at 11 PM. Time flies — it’s always super nice to talk to friends about the most random things :)</p>\n <p> </p>   <p>While walking back home around 10 PM, we stopped again for some tea at <a href=\"https://maps.app.goo.gl/LW3QUzTnnUgxp2kr7\">Srindhi Coffee House</a>. Tea is a staple for us at this point 🤣</p>\n<h2><a href=\"https://yashgarg.dev/weekly-notes-34-2026/#meta\">#</a>Meta</h2>\n<p>I made some minor updates to my website mostly around <a href=\"https://indieweb.org/Webmention\">Webmentions</a> and <a href=\"https://join-lemmy.org/\">Lemmy</a>. By default, Lemmy does not have author metadata like Mastodon, so I had to enrich it manually using their API. This is a pretty common issue with most social media platforms, and it’s not really a problem with Lemmy specifically.</p>\n<p>Shoutout to <a href=\"https://omgmog.net/\">Max</a> for the <a href=\"https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/\">idea</a>!</p>\n<h2><a href=\"https://yashgarg.dev/weekly-notes-34-2026/#tech-stuff\">#</a>Tech Stuff</h2>\n<p>I have been brainstorming some ideas with AI and found a few solid ones that I’m now working on the specs for. I’m excited to be working on something new again!</p>\n<p>Apart from this, I was fighting with emails for the most part, and I wrote down my adventures in the post: <a href=\"https://yashgarg.dev/posts/the-schrodinger-email/\">The Schrödinger Email</a> which I published yesterday! This was a technical blog post after a while, it feels good to be writing one.</p>\n<h2><a href=\"https://yashgarg.dev/weekly-notes-34-2026/#watching\">#</a>Watching</h2>\n<p>I did not really watch a lot of stuff this week as opposed to the <a href=\"https://yashgarg.dev/weekly-notes-33-2026/\">last one</a>. I watched <a href=\"https://letterboxd.com/film/guardians-of-the-galaxy-vol-2/\">Guardians of the Galaxy Vol 2</a> and loved it! I think this and the first part are my favorite movies so far! The ending was quite emotional, which I did not expect, and I really enjoyed the movie as a whole ;)</p>\n<h2><a href=\"https://yashgarg.dev/weekly-notes-34-2026/#bonus\">#</a>Bonus</h2>\n<p>I saw way too many sleeping dog loafs this week, take a look!</p>\n <p> </p>  I wish I could sleep like this all the time...<p>Thanks for stopping by, and have an amazing week ahead! If you’d like to keep up with new posts, feel free to subscribe to <a href=\"https://yashgarg.dev/weekly-notes/feed.atom\">my weekly notes feed</a>.</p>",
+        "text": "Contents  1. Life    2. Food    2.1. Beanlore    2.2. Chaska Bun    3. Meta    4. Tech Stuff    5. Watching    6. Bonus   I think this is my 28th weeknote, which is a little surprising. I did not think I’d be this consistent with writing these, but here we are 😆\n#Life\nTo start off, I went to the hospital along with Harsh since he was quite unwell, and each of us thought that the other person had the keys, basically creating a deadlock (too nerdy of a term?). When we came back to our flat, we realized that we were locked out. Great start to a Monday 😭 I eventually called a locksmith who opened the door latch in 10 minutes, and we were able to enter. Note to self: never leave the house without your keys! This was also one of those things I’ve heard from people, and now I have experienced it myself 🫠\nOn Wednesday, I decided I would endure all the pain of going to banks, a few to close accounts and a few to open new ones. I closed two accounts and opened two others, so the net total was zero… Luckily, all this did not take much time out of my day, barely 2 hours for everything. I was also just walking around to hit my step goal instead of taking a vehicle :P The weather was the cherry on top!\n#Food\nNot much on the cooking front this week, since Harsh was sick and we barely cooked anything at home. I mostly ate salads, but we did go out to eat twice later in the week.\nI’ve also been trying to create a proper meal plan that I can diligently follow every week. I made Chocolate Whey PB Oats for breakfast today, which turned out to be quite nice! I’m still trying to find more things I can meal prep.\nOn a side note, why is whey protein so expensive these days? 😭\n#Beanlore\nA common friend of ours, Devansh, is in the city for a week, so we went out to meet him at Beanlore. It’s been a long time since I last met him, and it’s always nice catching up!\nWe weren’t very hungry, so we just got ourselves a beverage and pink sauce pasta. Both were pretty good! I really liked the Hazelnut Latte, maybe I’ll go back for it ☕\n     #Chaska Bun\nI had made a plan with Fenil earlier in the week to meet on Friday, tagged Harsh along, and we went to Chaska Bun for some Tea and Bun Maska. The tea was quite nice and I got their Chicken Keema Bun, which was mid to be honest, not that great.\n     Fenil has also moved nearby recently, which is nice! We went to see the place he’s staying at and spent a lot of time there just yapping. I say yapping because we left our house at 5 PM and came back at 11 PM. Time flies — it’s always super nice to talk to friends about the most random things :)\n     While walking back home around 10 PM, we stopped again for some tea at Srindhi Coffee House. Tea is a staple for us at this point 🤣\n#Meta\nI made some minor updates to my website mostly around Webmentions and Lemmy. By default, Lemmy does not have author metadata like Mastodon, so I had to enrich it manually using their API. This is a pretty common issue with most social media platforms, and it’s not really a problem with Lemmy specifically.\nShoutout to Max for the idea!\n#Tech Stuff\nI have been brainstorming some ideas with AI and found a few solid ones that I’m now working on the specs for. I’m excited to be working on something new again!\nApart from this, I was fighting with emails for the most part, and I wrote down my adventures in the post: The Schrödinger Email which I published yesterday! This was a technical blog post after a while, it feels good to be writing one.\n#Watching\nI did not really watch a lot of stuff this week as opposed to the last one. I watched Guardians of the Galaxy Vol 2 and loved it! I think this and the first part are my favorite movies so far! The ending was quite emotional, which I did not expect, and I really enjoyed the movie as a whole ;)\n#Bonus\nI saw way too many sleeping dog loafs this week, take a look!\n    I wish I could sleep like this all the time...Thanks for stopping by, and have an amazing week ahead! If you’d like to keep up with new posts, feel free to subscribe to my weekly notes feed."
+      },
+      "mention-of": "https://blog.omgmog.net/post/enriching-webmentions-from-third-party-platforms/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://yashgarg.dev/weekly-notes-34-2026/"
+      },
+      "sort_date": "2026-08-23T09:03:00"
     }
   ],
   "/post/how-the-five-ais-actually-did/": [
@@ -6907,6 +6942,59 @@
       "wm-property": "in-reply-to",
       "wm-private": false,
       "sort_date": "2026-08-13T12:49:48+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "CommercialSea8221",
+        "photo": "https://avatars.webmention.io/styles.redditmedia.com/7a73885a29facf0568eace70e834756b716004971165aff07e1ff7dec83b3b08.jpg",
+        "url": "https://reddit.com/user/CommercialSea8221/"
+      },
+      "url": "https://reddit.com/r/SBCGaming/comments/1vn3mod/my_hidizs_ap30_music_boy_review_after_five_weeks/p4kri2j/",
+      "published": "2026-08-19T07:35:35+00:00",
+      "wm-received": "2026-08-19T08:00:22Z",
+      "wm-id": 2024407,
+      "wm-source": "https://brid.gy/comment/reddit/omgmog/1vn3mod/p4kri2j",
+      "wm-target": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>First of all i don't believe in promises that the things will be resolved in the firmware soon, but I have seen last few weeks Hidizs releases two firmwares, one resolved the main issues thet early reviewers experienced and the second one recently released and they added 5 more games to the AP30, might be  few other things resolved which they revealed soon. My point is that the Hidizs shows their commitment which is rarely shown by a brand🤞🏼</p>",
+        "text": "First of all i don't believe in promises that the things will be resolved in the firmware soon, but I have seen last few weeks Hidizs releases two firmwares, one resolved the main issues thet early reviewers experienced and the second one recently released and they added 5 more games to the AP30, might be  few other things resolved which they revealed soon. My point is that the Hidizs shows their commitment which is rarely shown by a brand🤞🏼"
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-08-19T07:35:35+00:00"
+    }
+  ],
+  "/lwal/week-33/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/lwalweek-33",
+      "published": "2026-08-17T14:20:17+00:00",
+      "wm-received": "2026-08-17T14:20:20Z",
+      "wm-id": 2023984,
+      "wm-source": "https://social.omgmog.net/2026/lwalweek-33",
+      "wm-target": "https://blog.omgmog.net/lwal/week-33/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/117111286509282465"
+      ],
+      "content": {
+        "html": "<a href=\"https://blog.omgmog.net/lwal/week-33/\" class=\"u-mention-of\">https://blog.omgmog.net/lwal/week-33/</a>",
+        "text": "https://blog.omgmog.net/lwal/week-33/"
+      },
+      "mention-of": "https://blog.omgmog.net/lwal/week-33/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-08-17T14:20:17+00:00"
     }
   ]
 }
