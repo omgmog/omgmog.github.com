@@ -1,5 +1,5 @@
 - title: Phone
-  value: "[Google Pixel 7a](https://en.wikipedia.org/wiki/Pixel_7a)"
+  value: "[Google Pixel 11](https://en.wikipedia.org/wiki/Pixel_11)"
 - title: Watch
   value: "[Google Pixel Watch 2](https://en.wikipedia.org/wiki/Pixel_Watch_2)"
 - title: Portables
@@ -19,11 +19,11 @@
     - "[TrimUI Brick](https://www.trimuistore.com/products/trimui-brick-retro-handheld-game-console)"
 - title: 3D printers
   values:
+    - "[FlashForge AD5X](https://uk.flashforge.com/products/ad5x-3d-printer)"
     - "[Creality Ender 5 Pro](https://www.creality.com/products/ender-5-pro-3d-printer)"
     - "[Geeetech A10](https://www.geeetech.com/wiki/index.php/Geeetech_A10_3D_Printer)"
     - "[Anycubic Kossel Delta Linear Plus](https://store.anycubic.com/products/anycubic-kossel-3d-printer), [first impressions](/post/it-begins)"
 - title: Audio
   values: 
-  - "[Google Pixel Buds](https://store.google.com/us/product/pixel_buds)"
   - "[Anker Soundcore A1](https://uk.soundcore.com/products/life-a1)"
   - "[Logitech G635](https://www.logitechg.com/en-gb/products/gaming-audio/g635-7-1-surround-sound-gaming-headset.html)"
