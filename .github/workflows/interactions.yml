@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   actions: write
+  issues: read
 
 concurrency:
   group: data-commit
@@ -47,35 +48,9 @@ jobs:
         run: bundle exec ruby scripts/fetch_webmentions.rb
 
       - name: Fill in Mastodon replies missing a webmention
-        id: mastodon-replies
-        run: |
-          cp _data/webmentions.json /tmp/webmentions-before.json
-          bundle exec ruby scripts/fetch_mastodon_replies.rb
-          if cmp -s /tmp/webmentions-before.json _data/webmentions.json; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Fetch GitHub issues index
-        id: gh-index
-        run: |
-          curl -sf \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/omgmog/omgmog.github.com/issues?state=all&per_page=100" \
-            -o /tmp/gh-issues.json
-          echo "hash=$(sha256sum /tmp/gh-issues.json | cut -d' ' -f1)" >> $GITHUB_OUTPUT
-
-      - name: Restore GitHub comments cache
-        id: gh-cache
-        uses: actions/cache@v5
-        with:
-          path: _data/github_comments.json
-          key: github-comments-${{ steps.gh-index.outputs.hash }}
+        run: bundle exec ruby scripts/fetch_mastodon_replies.rb
 
       - name: Fetch GitHub comments
-        if: steps.gh-cache.outputs.cache-hit != 'true'
         run: bundle exec ruby scripts/fetch_github_comments.rb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
