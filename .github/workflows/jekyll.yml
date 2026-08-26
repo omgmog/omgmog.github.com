@@ -29,7 +29,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.4'
           bundler-cache: true
 
       - name: Setup Pages
@@ -83,7 +83,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.4'
           bundler-cache: true
 
       - name: Send webmentions for all posts

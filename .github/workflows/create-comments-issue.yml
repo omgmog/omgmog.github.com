@@ -30,7 +30,7 @@ jobs:
         if: steps.added.outputs.files != ''
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.4'
 
       - name: Create missing comments issues
         if: steps.added.outputs.files != ''
