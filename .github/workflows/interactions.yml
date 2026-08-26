@@ -9,6 +9,10 @@ permissions:
   contents: write
   actions: write
 
+concurrency:
+  group: data-commit
+  cancel-in-progress: false
+
 jobs:
   interactions:
     runs-on: ubuntu-latest
@@ -85,13 +89,24 @@ jobs:
           if git diff --staged --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
-            if [ "$(git log -1 --pretty=%s)" = "Update data" ]; then
+            last_subject=$(git log -1 --pretty=%s)
+            last_author=$(git log -1 --pretty=%ae)
+
+            if [ "$last_subject" = "Update data" ] && \
+               [ "$last_author" = "actions@github.com" ]; then
               git commit --amend --no-edit
-              git push --force-with-lease
             else
               git commit -m "Update data"
-              git push
             fi
+
+            for i in 1 2 3; do
+              if git push --force-with-lease; then
+                break
+              fi
+              echo "Push rejected, retrying ($i/3)..."
+              git pull --rebase
+            done
+
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
