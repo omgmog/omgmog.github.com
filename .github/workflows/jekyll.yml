@@ -98,7 +98,13 @@ jobs:
       - name: Send webmentions for changed posts
         if: github.event.inputs.send_all_webmentions != 'true'
         run: |
-          changed=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- _posts _lwal | tr '\n' ' ')
+          before="${{ github.event.before }}"
+          if [ -z "$before" ] || ! git cat-file -e "${before}^{commit}" 2>/dev/null; then
+            echo "No usable base ref, skipping webmention send"
+            exit 0
+          fi
+
+          changed=$(git diff --name-only "$before" "${{ github.sha }}" -- _posts _lwal | tr '\n' ' ')
           if [ -n "$changed" ]; then
             bundle exec ruby scripts/send_webmentions.rb $changed
           else
