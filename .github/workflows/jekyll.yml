@@ -37,10 +37,9 @@ jobs:
         uses: actions/configure-pages@v6
 
       - name: Restore image cache
-        id: image-cache
         uses: actions/cache@v5
         with:
-          path: _site/images/**/*.webp
+          path: .cache/images
           key: images-${{ hashFiles('images/**/*') }}
           restore-keys: |
             images-
@@ -51,14 +50,12 @@ jobs:
           JEKYLL_ENV: production
 
       - name: Install ImageMagick
-        if: steps.image-cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick libmagickwand-dev
 
       - name: Optimize images
-        if: steps.image-cache.outputs.cache-hit != 'true'
-        run: bundle exec ruby scripts/optimize_images.rb _site
+        run: bundle exec ruby scripts/optimize_images.rb _site .cache/images
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
