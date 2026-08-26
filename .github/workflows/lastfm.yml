@@ -19,27 +19,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Fetch Last.fm index
-        id: lastfm-index
-        run: |
-          curl -sf "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=moglenstar&api_key=6bcfcb1e0c192d84adf10cf95b0589e3&limit=1&format=json" -o /tmp/lastfm-index.json
-          echo "hash=$(sha256sum /tmp/lastfm-index.json | cut -d' ' -f1)" >> $GITHUB_OUTPUT
-
-      - name: Restore Last.fm cache
-        id: lastfm-cache
-        uses: actions/cache@v5
-        with:
-          path: _data/now/lastfm.json
-          key: lastfm-${{ steps.lastfm-index.outputs.hash }}
-
       - name: Set up Node.js
-        if: steps.lastfm-cache.outputs.cache-hit != 'true'
         uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Fetch Last.fm data
-        if: steps.lastfm-cache.outputs.cache-hit != 'true'
         env:
           LASTFM_USERNAME: moglenstar
           LASTFM_API_KEY: 6bcfcb1e0c192d84adf10cf95b0589e3
