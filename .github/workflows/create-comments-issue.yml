@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   issues: write
 
 jobs:
@@ -18,12 +19,23 @@ jobs:
         uses: actions/checkout@v6
         with:
           ref: ${{ github.event.workflow_run.head_sha }}
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Find newly added posts
         id: added
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          added=$(git diff --name-only --diff-filter=A HEAD^ HEAD -- '_posts/**' | tr '\n' ' ')
+          prev_sha=$(gh api "repos/${{ github.repository }}/actions/workflows/jekyll.yml/runs?status=success&per_page=2" \
+            --jq '.workflow_runs[1].head_sha // empty')
+
+          if [ -n "$prev_sha" ] && git cat-file -e "${prev_sha}^{commit}" 2>/dev/null; then
+            base="$prev_sha"
+          else
+            base="HEAD^"
+          fi
+
+          added=$(git diff --name-only --diff-filter=A "$base" HEAD -- '_posts/**' | tr '\n' ' ')
           echo "files=$added" >> $GITHUB_OUTPUT
 
       - name: Setup Ruby
