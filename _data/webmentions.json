@@ -7025,5 +7025,34 @@
       "wm-private": false,
       "sort_date": "2026-08-28T07:49:39+00:00"
     }
+  ],
+  "/post/migrating-from-pixel-7a-to-pixel-11/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/i-got-a-new-pixel-11-this",
+      "published": "2026-08-29T16:05:05+00:00",
+      "wm-received": "2026-08-29T16:05:08Z",
+      "wm-id": 2027072,
+      "wm-source": "https://social.omgmog.net/2026/i-got-a-new-pixel-11-this",
+      "wm-target": "https://blog.omgmog.net/post/migrating-from-pixel-7a-to-pixel-11/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/117179646303558299"
+      ],
+      "content": {
+        "html": "<p>I got a new Pixel 11 this week and moving from my Pixel 7a went pretty smoothly!</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/migrating-from-pixel-7a-to-pixel-11/\" class=\"u-mention-of\">https://blog.omgmog.net/post/migrating-from-pixel-7a-to-pixel-11/</a>",
+        "text": "I got a new Pixel 11 this week and moving from my Pixel 7a went pretty smoothly!\n\n        \n                        https://blog.omgmog.net/post/migrating-from-pixel-7a-to-pixel-11/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/migrating-from-pixel-7a-to-pixel-11/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-08-29T16:05:05+00:00"
+    }
   ]
 }

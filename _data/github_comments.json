@@ -699,7 +699,21 @@
   },
   "145": {
     "state": "open",
-    "comments": []
+    "comments": [
+      {
+        "id": 5462408711,
+        "user": {
+          "login": "3r1k0n",
+          "avatar_url": "https://avatars.githubusercontent.com/u/10796765?v=4",
+          "html_url": "https://github.com/3r1k0n"
+        },
+        "body": "A much simpler solution is connecting your laptop to your NAS via samba share and updating your browser's Download destination folder to one of the folders inside the NAS. I'm doing it for 400 GB of Google Takeout as we speak.",
+        "body_html": "<p dir=\"auto\">A much simpler solution is connecting your laptop to your NAS via samba share and updating your browser's Download destination folder to one of the folders inside the NAS. I'm doing it for 400 GB of Google Takeout as we speak.</p>",
+        "created_at": "2026-08-29T12:26:13Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/145#issuecomment-5462408711",
+        "sort_date": "2026-08-29T12:26:13Z"
+      }
+    ]
   },
   "146": {
     "state": "open",
@@ -932,5 +946,9 @@
         "sort_date": "2026-08-28T17:35:50Z"
       }
     ]
+  },
+  "167": {
+    "state": "open",
+    "comments": []
   }
 }
