@@ -7143,5 +7143,78 @@
       "wm-private": false,
       "sort_date": "2026-09-04T10:39:48+00:00"
     }
+  ],
+  "/post/antiquated-css/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://social.omgmog.net/file/68f0cc1ac4f2369a99b8eda6c8110916/thumb.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/new-blog-post-antiquated-css-and-why",
+      "published": "2026-09-10T05:27:11+00:00",
+      "wm-received": "2026-09-10T05:27:14Z",
+      "wm-id": 2030840,
+      "wm-source": "https://social.omgmog.net/2026/new-blog-post-antiquated-css-and-why",
+      "wm-target": "https://blog.omgmog.net/post/antiquated-css/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/117245085725772312"
+      ],
+      "content": {
+        "html": "<p>New blog post: Antiquated CSS and why we needed it</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/antiquated-css/\" class=\"u-mention-of\">https://blog.omgmog.net/post/antiquated-css/</a>",
+        "text": "New blog post: Antiquated CSS and why we needed it\n\n        \n                        https://blog.omgmog.net/post/antiquated-css/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/antiquated-css/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-09-10T05:27:11+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Jan Boddez",
+        "photo": "https://cdn.masto.host/indiewebsocial/accounts/avatars/000/091/894/original/4d8486f2f52c2721.png",
+        "url": "https://indieweb.social/@janboddez"
+      },
+      "url": "https://indieweb.social/@omgmog/117245085725772312#favorited-by-91894",
+      "published": null,
+      "wm-received": "2026-09-10T06:08:17Z",
+      "wm-id": 2030844,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/117245085725772312/91894",
+      "wm-target": "https://blog.omgmog.net/post/antiquated-css/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/antiquated-css/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-09-10T06:08:17Z"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Vale",
+        "photo": "https://cdn.masto.host/indiewebsocial/cache/accounts/avatars/111/335/228/917/281/008/original/eb1d704ca7dbdd7a.png",
+        "url": "https://fedi.vale.rocks/users/vale"
+      },
+      "url": "https://fedi.vale.rocks/objects/8be210fa-3542-4f40-921f-1329074eb89b",
+      "published": "2026-09-11T05:40:03+00:00",
+      "wm-received": "2026-09-11T06:13:38Z",
+      "wm-id": 2031016,
+      "wm-source": "https://brid.gy/comment/mastodon/@omgmog@indieweb.social/117250798785032907/117250798785032907",
+      "wm-target": "https://blog.omgmog.net/post/antiquated-css/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p>I’ve just discovered that <span class=\"h-card\"><a class=\"u-url\" href=\"https://indieweb.social/@omgmog\">@<span>omgmog</span></a></span> has published a very similar post after being prompted by my article on antiquated HTML. Great minds surely think alike! You can read his post here: <a href=\"https://blog.omgmog.net/post/antiquated-css/\">https://blog.omgmog.net/post/antiquated-css/</a></p>\n<a href=\"https://blog.omgmog.net/post/antiquated-css/\">Antiquated CSS and why we needed it — Max Glenister</a>",
+        "text": "I’ve just discovered that @omgmog has published a very similar post after being prompted by my article on antiquated HTML. Great minds surely think alike! You can read his post here: https://blog.omgmog.net/post/antiquated-css/\nAntiquated CSS and why we needed it — Max Glenister"
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/antiquated-css/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-09-11T05:40:03+00:00"
+    }
   ]
 }
