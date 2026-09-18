@@ -6,7 +6,7 @@ archived: true
 
 Having my printer tethered to my PC is less than ideal, it means the printer has to be quite close to the PC because of the length of the USB cable, so I've been exploring other options.
 
-I've got a Windows-powered tablet (the [Chuwi Vi10 Plus](https://blog.omgmog.net/reviews/chuwi-vi10-plus-review/) that I reviewed back in 2016) that isn't doing very much these days, so I thought why not use that with the printer?<!-- more -->
+I've got a Windows-powered tablet (the [Chuwi Vi10 Plus](/post/chuwi-vi10-plus-review/) that I reviewed back in 2016) that isn't doing very much these days, so I thought why not use that with the printer?<!-- more -->
 
 The tablet is large enough that it fits between two of the main upright pillars of the printer, so I figured I could design some simple brackets that would attach to the printer frame and hold the tablet in place.
 
