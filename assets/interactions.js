@@ -768,6 +768,17 @@
       module.loadData(`interactions-mentions-${pageURL_base64}`) || {},
   };
 
+  if (Array.isArray(interactions.comments?.data)) {
+    interactions.comments.data = interactions.comments.data.filter(
+      (c) => !preRenderedCommentIds.has(c.id),
+    );
+  }
+  if (Array.isArray(interactions.webmentions?.data)) {
+    interactions.webmentions.data = interactions.webmentions.data.filter(
+      (m) => !preRenderedWmIds.has(m["wm-id"]),
+    );
+  }
+
   module.renderFeed = () => {
     const wmData = (
       interactions.webmentions?.data?.children ||
