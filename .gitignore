@@ -17,3 +17,5 @@ desktop.ini
 .jekyll-cache
 
 vendor
+
+.env
