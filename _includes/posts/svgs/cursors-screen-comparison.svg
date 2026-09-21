@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 260" role="img" aria-labelledby="t d">
+<title id="t">Screen area since 1984, drawn to physical scale</title>
+<desc id="d">Three screens drawn to the same physical scale: a 32 inch 4K display, a 16 inch MacBook panel nested inside it, and the 9 inch original Macintosh screen. Each contains a mouse cursor drawn at the same true size, about 0.22 inches tall. The 1984 screen was around 34 square inches; the two modern panels together come to around 550.</desc>
+<style>
+  .f { fill: none; stroke: light-dark(#1a1a1a, #e8e8e8); stroke-width: 1; }
+  .f2 { stroke-dasharray: 3 3; }
+  .l { font: 500 11px ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif; fill: light-dark(#1a1a1a, #e8e8e8); }
+  .s { font: 400 9.5px ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif; fill: light-dark(#6b6b6b, #9a9a9a); }
+  .c { fill: light-dark(#1a1a1a, #e8e8e8); }
+</style>
+
+<rect class="f" x="20" y="25" width="390" height="220" rx="5"/>
+<text class="l" x="32" y="43">32" 4K display</text>
+<text class="s" x="32" y="56">438 sq in</text>
+
+<rect class="f f2" x="30" y="115" width="192" height="120" rx="4"/>
+<text class="l" x="40" y="133">16" MacBook</text>
+<text class="s" x="40" y="146">118 sq in</text>
+
+<rect class="f f2" x="240" y="168.5" width="99.5" height="66.5" rx="3"/>
+<text class="l" x="248" y="186">9" Mac, 1984</text>
+<text class="s" x="248" y="199">34 sq in</text>
+
+<path class="c" d="M355 95 L355 99.4 L356.1 98.4 L357.1 100 L357.8 99.6 L356.9 98 L358.2 97.9 Z"/>
+<path class="c" d="M150 205 L150 209.4 L151.1 208.4 L152.1 210 L152.8 209.6 L151.9 208 L153.2 207.9 Z"/>
+<path class="c" d="M300 218 L300 222.4 L301.1 221.4 L302.1 223 L302.8 222.6 L301.9 221 L303.2 220.9 Z"/>
+</svg>
