@@ -1,0 +1,18 @@
+services:
+  jekyll:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/site
+      - ../assets/css:/site/assets/css:ro
+      - ../assets/fonts:/site/assets/fonts:ro
+      - ../assets/js:/site/assets/js:ro
+      - ../assets/images:/site/assets/images:ro
+      - bundle-cache:/usr/local/bundle
+    environment:
+      - JEKYLL_ENV=development
+      - JEKYLL_GITHUB_TOKEN=${JEKYLL_GITHUB_TOKEN}
+    command: bash /site/docker-entrypoint.sh
+volumes:
+  bundle-cache:

@@ -2,6 +2,7 @@ permalink: /post/:title/
 timezone: Europe/London
 exclude: ["_dev.yml","_config.yml", ".gitignore", "README.md", ".jekyll-cache", "vendor", "Gemfile", "Gemfile.lock", "scripts", "node_modules", "Dockerfile", "docker-compose.yml", ".sass-cache"]
 url: "https://blog.omgmog.net"
+assets_url: "https://assets.omgmog.net"
 excerpt_separator: "<!-- more -->"
 keep_files: ["images/","assets/","CNAME"]
 markdown: kramdown
