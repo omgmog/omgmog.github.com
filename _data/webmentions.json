@@ -7216,5 +7216,35 @@
       "wm-private": false,
       "sort_date": "2026-09-11T05:40:03+00:00"
     }
+  ],
+  "/post/cardboctober-ten-years-on/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "photo": "https://avatars.webmention.io/social.omgmog.net/e020233100b5d9e77cc9245655f6e51ae9a12854820c07bc1f0a99c75499f69c.png",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/i-cant-believe-its-already-been-10",
+      "published": "2026-10-02T09:11:44+00:00",
+      "published_ts": 1790932304,
+      "wm-received": "2026-10-02T09:11:47Z",
+      "wm-id": 2037283,
+      "wm-source": "https://social.omgmog.net/2026/i-cant-believe-its-already-been-10",
+      "wm-target": "https://blog.omgmog.net/post/cardboctober-ten-years-on/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/117370539551089243"
+      ],
+      "content": {
+        "html": "<p>I can't believe it's already been 10 years since I ran Cardboctober!</p>\n\n<p>I've written a little retrospective on the platforms and technologies that have come and gone since then</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/cardboctober-ten-years-on/\" class=\"u-mention-of\">https://blog.omgmog.net/post/cardboctober-ten-years-on/</a>",
+        "text": "I can't believe it's already been 10 years since I ran Cardboctober!\n\nI've written a little retrospective on the platforms and technologies that have come and gone since then\n\n        \n                        https://blog.omgmog.net/post/cardboctober-ten-years-on/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/cardboctober-ten-years-on/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-10-02T09:11:44+00:00"
+    }
   ]
 }
