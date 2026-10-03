@@ -7245,6 +7245,52 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-10-02T09:11:44+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "johanna",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/80382f6decea77ac69ed62cd648a7ffd7635133276c9fc690ff0e69ea2796b58.jpg",
+        "url": "https://mastodon.social/@joladev"
+      },
+      "url": "https://mastodon.social/@joladev/117370847303818924",
+      "published": "2026-10-02T10:30:01+00:00",
+      "published_ts": 1790937001,
+      "wm-received": "2026-10-02T10:47:23Z",
+      "wm-id": 2037302,
+      "wm-source": "https://brid.gy/comment/mastodon/@omgmog@indieweb.social/117370539551089243/117370847348279344",
+      "wm-target": "https://blog.omgmog.net/post/cardboctober-ten-years-on/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://indieweb.social/@omgmog\" class=\"u-url\">@<span>omgmog</span></a></span> the RSS feed item has a plaintext link, but it doesn't work. It says \"/.txt\" instead of just \".txt\".</p>",
+        "text": "@omgmog the RSS feed item has a plaintext link, but it doesn't work. It says \"/.txt\" instead of just \".txt\"."
+      },
+      "in-reply-to": "https://blog.omgmog.net/post/cardboctober-ten-years-on/",
+      "wm-property": "in-reply-to",
+      "wm-private": false,
+      "sort_date": "2026-10-02T10:30:01+00:00"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Dan Pope",
+        "photo": "https://avatars.webmention.io/cdn.masto.host/fa2a89dc0503588a13c04a638549371590ca9c6c4a4f5a16179e8236747ac98b.jpg",
+        "url": "https://mastodon.me.uk/@danielthepope"
+      },
+      "url": "https://indieweb.social/@omgmog/117370539551089243#favorited-by-109342574903479382",
+      "published": null,
+      "published_ts": null,
+      "wm-received": "2026-10-02T10:47:24Z",
+      "wm-id": 2037303,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/117370539551089243/109342574903479382",
+      "wm-target": "https://blog.omgmog.net/post/cardboctober-ten-years-on/",
+      "wm-protocol": "webmention",
+      "like-of": "https://blog.omgmog.net/post/cardboctober-ten-years-on/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-10-02T10:47:24Z"
     }
   ]
 }
