@@ -12,7 +12,7 @@
 {% endif %}
 {% endif %}
 
-{% assign recent = site.posts | where_exp: "p", "p.url != page.url" | slice: 0, 5 %}
+{% assign recent = site.data.recent_posts | where_exp: "p", "p.url != page.url" | slice: 0, 5 %}
 {% assign recent_urls = "" | split: "" %}
 {% for p in recent %}{% assign recent_urls = recent_urls | push: p.url %}{% endfor %}
 
