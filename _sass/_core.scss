@@ -1,3 +1,16 @@
+@use "sass:color";
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+
+@function rgb-channels($value) {
+  $parts: ();
+  @each $channel in "red", "green", "blue" {
+    $parts: list.append($parts, color.channel($value, $channel, $space: rgb));
+  }
+  @return $parts;
+}
+
 // === FONTS ===
 
 /* fjalla-one-regular - latin */
@@ -35,7 +48,7 @@ $colors: (
 
 @mixin color-vars($light-map, $dark-map) {
   @each $name, $light-value in $light-map {
-    $dark-value: map-get($dark-map, $name);
+    $dark-value: map.get($dark-map, $name);
     --color-#{$name}: light-dark(#{$light-value}, #{$dark-value});
   }
 }
@@ -60,22 +73,22 @@ $colors: (
   --quarter-gutter-size: calc(var(--gutter-size) / 4);
 
   // Golden ratio type scale (φ = 1.618, base = 1rem)
-  --text-sm: #{(1 / $phi) * 1rem}; // 0.618rem
+  --text-sm: #{math.div(1,$phi) * 1rem}; // 0.618rem
   --text-base: 1rem;
   --text-md: #{$phi * 1rem}; // 1.618rem
   --text-lg: #{$phi * $phi * 1rem}; // 2.618rem
 
   // Default (light mode)
-  @each $name, $value in map-get($colors, light) {
+  @each $name, $value in map.get($colors, light) {
     --color-#{$name}: #{$value};
-    --color-#{$name}-rgb: #{red($value)} #{green($value)} #{blue($value)};
+    --color-#{$name}-rgb: #{rgb-channels($value)};
   }
 
   // Fallback: older browsers with prefers-color-scheme support
   @media (prefers-color-scheme: dark) {
-    @each $name, $value in map-get($colors, dark) {
+    @each $name, $value in map.get($colors, dark) {
       --color-#{$name}: #{$value};
-      --color-#{$name}-rgb: #{red($value)} #{green($value)} #{blue($value)};
+      --color-#{$name}-rgb: #{rgb-channels($value)};
     }
   }
 }
@@ -108,23 +121,23 @@ $colors: (
 // Modern browsers: light-dark() takes priority
 @supports (color: light-dark(white, black)) {
   :root {
-    @include color-vars(map-get($colors, light), map-get($colors, dark));
+    @include color-vars(map.get($colors, light), map.get($colors, dark));
   }
 }
 
 // Explicit theme overrides (set via localStorage)
 :root[data-theme="light"] {
   color-scheme: light;
-  @each $name, $value in map-get($colors, light) {
+  @each $name, $value in map.get($colors, light) {
     --color-#{$name}: #{$value};
-    --color-#{$name}-rgb: #{red($value)} #{green($value)} #{blue($value)};
+    --color-#{$name}-rgb: #{rgb-channels($value)};
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  @each $name, $value in map-get($colors, dark) {
+  @each $name, $value in map.get($colors, dark) {
     --color-#{$name}: #{$value};
-    --color-#{$name}-rgb: #{red($value)} #{green($value)} #{blue($value)};
+    --color-#{$name}-rgb: #{rgb-channels($value)};
   }
 }
 
