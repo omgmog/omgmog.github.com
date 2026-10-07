@@ -824,7 +824,8 @@
       "published": "2022-05-28T17:41:57.509Z",
       "wm-received": "2022-05-28T17:41:57.509Z",
       "sort_date": "2022-05-28T17:41:57.509Z",
-      "_author_key": "1e92e05e10090f5b"
+      "_pulled": true,
+      "_author_key": "30d72718a7a9503c"
     }
   ],
   "/": [
@@ -3653,6 +3654,35 @@
       },
       "sort_date": "2026-04-10T09:29:23Z",
       "_author_key": "e3b0c44298fc1c14"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "V.H. Belvadi",
+        "url": "https://vhbelvadi.com/"
+      },
+      "url": "https://vhbelvadi.com/webmention-copyright-privacy",
+      "published": null,
+      "published_ts": null,
+      "wm-received": "2026-10-10T21:34:58Z",
+      "wm-id": 2039308,
+      "wm-source": "https://vhbelvadi.com/webmention-copyright-privacy",
+      "wm-target": "https://blog.omgmog.net/post/baking-webmentions-into-the-build/",
+      "wm-protocol": "webmention",
+      "name": "Webmentions, copyright and privacy",
+      "content": {
+        "html": "<p>Kev Quirk recently published an interesting post wondering if <a href=\"https://kevquirk.com/privacy-and-webmentions\">webmentions violate privacy</a>. Someone’s argument to him was that an individual posting on one website did not ‘realise – or explicitly consent to – their replies being republished on an external blog’. This is an interesting argument against privacy violations, but not the strongest one. That would be what Kev calls ‘deletion persistence’. Along the same lines, it is also worth considering whether webmentions violate copyright.</p>\n<p>Let us start with copyright because it is more straightforward. In many aspects, privacy is comparable to copyright. The Center for Internet and Society at Stanford Law School briefly discussed something similar over ten years ago, asking whether <a href=\"https://cyberlaw.stanford.edu/press/when-you-copy-and-paste-tweet-it-illegal/\">copying and pasting Tweets is illegal</a> and concluding that it may well be, but it would depend on the contents of the Tweet. A few years after that, an American court ruled that <a href=\"https://www.kelleydrye.com/viewpoints/client-advisories/embedding-tweets-may-be-copyright-infringement\">embedding can violate copyright</a> especially if the content originally posted held exclusive right of display. This is relevant because in some ways webmentions are akin to embedding; if anything, they are even more direct reproductions than embedding.</p>\n<p>While the specifics of those discussion are not directly relevant here, their general approach is. Likewise, if there was an expectation of privacy at the time of posting a comment, that expectation cannot be violated.</p>\n<p>However, social media platforms have long set out expectations for privacy quite clearly. If you have a private account and you comment on a public post, your comment will be public. If a platform survives by duplicating content, as the Fediverse does across its many instances, whatever you post you do so knowing that the platform will quickly replicate your words across thousands of servers. So Kev is right in saying that, on the Fediverse at least, where decentralisation is a central feature, ‘Pulling a public reply onto kevquirk.com via a Webmention [sic] bridge is conceptually no different from fosstodon.org relaying a reply originally posted on mastodon.social.’</p>\n<p>But what about blogging platforms like micro.blog or mainstream <abbr>CMS</abbr>es like Wordpress or even <a href=\"https://blog.omgmog.net/post/baking-webmentions-into-the-build/\">Github</a> where decentralisation is neither a headline feature nor an expectation? One could argue that the fact that, in some cases at least, setting up webmentions support is a manual (and arduous) task amounts to an implicit approval for using published content in webmentions. All said and done, this weak argument would not hold up in court.</p>\n<p>The difference, I would argue, lies in republishing v reproducing. Note that the original argument positioned webmentions as ‘republishing’ content. I do not believe webmentions amount to republishing so much as reproducing. The difference lies in how the new work relates to the old work. Since it distinctly duplicates rather than updates or redistributes the comment to a new audience, it amounts to reproduction rather than republication. This argument works because both the original comment and the webmention are on the web, publicly, and therefore <em>not</em> accessible to a new audience to whom it had previously been inaccessible, further undoing the idea of a webmention amounting to republishing. This works for copyright, being fair use, not least because a website author never claims they wrote the comment in the webmention, nor that the ideas within it are theirs. If you are reproducing as a webmention a comment on social media made publicly by a public account with no expectation of privacy, your problems are solved at this point.</p>\n<p>However, the same argument muddies the waters when it comes to privacy for one reason alone: if the original is deleted and the webmention persists, it is breaking the ‘Right to be forgotten’ or the right to ‘erasure’ that exists in several countries in various, often unwritten forms. In much of Europe this expectation has been consistently upheld by courts. This is what Kev calls ‘deletion persistence’ referring to how the <em>state of being deleted</em> does not persist in the same way that the <em>state of being created</em> was made to persist automatically via a webmention feed. It can absolutely be argued that this violates privacy, but so long as ‘Right to be forgotten’ is nto enshrined in law globally, it will remain a grey area. Notably, this will remain a problem even if the original post or comment and account were all public.</p>\n<p>My implementation of webmentions on this site neither violates privacy nor copyright because I simply link back to the original comment or post, crediting its author here. For an example, look near the end of <a href=\"https://vhbelvadi.com/indieweb-carnival-future\">one of the IndieWeb Carnivals</a> I have hosted in the past. This is akin to <em>reposting</em> rather than <em>embedding</em>. As the American court  I mentioned earlier explained, ‘when a user “retweets” a post containing an image, he or she is merely providing a hyperlink to that post and is not displaying a full-sized version of the image on his or her own feed’. Therefore, this does not violate copyright. It likewise does not violate privacy either.</p>\n<p>I do not mean to pretend like my decision was driven by copyright or privacy concerns – I never considered either until Kev’s post broght them up. To me a webmention was simply a form of ‘sharing’ in line with all social media, a word I now realise carries a lot of weight. My motivations were different: content isolation. I previously outlined this <a href=\"https://vhbelvadi.com/manifesto#we-need-simpler-webmentions\">in my manifesto</a> arguing that webmentions by their nature extract content out of their original context, an idea that has no direct parallel in the publishing industry. It would be like if <em>The Times</em> published a letter that was sent to the editor of <em>The Guardian</em>. It will make sense if you look across both papers, but it is fundamentally out of context. In many ways webmentions that I see on many websites just end up looking like testimonials for a specific post rather than a meaningful discussion.</p>\n<p>Before we discuss copyright and privacy, it may be worthwhile thinking about just how sensible it is to reproduce the contents of a post or comment in their entirety at the bottom of every post we write. We might then, luckily, never have to talk about privacy at all.</p>",
+        "text": "Kev Quirk recently published an interesting post wondering if webmentions violate privacy. Someone’s argument to him was that an individual posting on one website did not ‘realise – or explicitly consent to – their replies being republished on an external blog’. This is an interesting argument against privacy violations, but not the strongest one. That would be what Kev calls ‘deletion persistence’. Along the same lines, it is also worth considering whether webmentions violate copyright.\nLet us start with copyright because it is more straightforward. In many aspects, privacy is comparable to copyright. The Center for Internet and Society at Stanford Law School briefly discussed something similar over ten years ago, asking whether copying and pasting Tweets is illegal and concluding that it may well be, but it would depend on the contents of the Tweet. A few years after that, an American court ruled that embedding can violate copyright especially if the content originally posted held exclusive right of display. This is relevant because in some ways webmentions are akin to embedding; if anything, they are even more direct reproductions than embedding.\nWhile the specifics of those discussion are not directly relevant here, their general approach is. Likewise, if there was an expectation of privacy at the time of posting a comment, that expectation cannot be violated.\nHowever, social media platforms have long set out expectations for privacy quite clearly. If you have a private account and you comment on a public post, your comment will be public. If a platform survives by duplicating content, as the Fediverse does across its many instances, whatever you post you do so knowing that the platform will quickly replicate your words across thousands of servers. So Kev is right in saying that, on the Fediverse at least, where decentralisation is a central feature, ‘Pulling a public reply onto kevquirk.com via a Webmention [sic] bridge is conceptually no different from fosstodon.org relaying a reply originally posted on mastodon.social.’\nBut what about blogging platforms like micro.blog or mainstream CMSes like Wordpress or even Github where decentralisation is neither a headline feature nor an expectation? One could argue that the fact that, in some cases at least, setting up webmentions support is a manual (and arduous) task amounts to an implicit approval for using published content in webmentions. All said and done, this weak argument would not hold up in court.\nThe difference, I would argue, lies in republishing v reproducing. Note that the original argument positioned webmentions as ‘republishing’ content. I do not believe webmentions amount to republishing so much as reproducing. The difference lies in how the new work relates to the old work. Since it distinctly duplicates rather than updates or redistributes the comment to a new audience, it amounts to reproduction rather than republication. This argument works because both the original comment and the webmention are on the web, publicly, and therefore not accessible to a new audience to whom it had previously been inaccessible, further undoing the idea of a webmention amounting to republishing. This works for copyright, being fair use, not least because a website author never claims they wrote the comment in the webmention, nor that the ideas within it are theirs. If you are reproducing as a webmention a comment on social media made publicly by a public account with no expectation of privacy, your problems are solved at this point.\nHowever, the same argument muddies the waters when it comes to privacy for one reason alone: if the original is deleted and the webmention persists, it is breaking the ‘Right to be forgotten’ or the right to ‘erasure’ that exists in several countries in various, often unwritten forms. In much of Europe this expectation has been consistently upheld by courts. This is what Kev calls ‘deletion persistence’ referring to how the state of being deleted does not persist in the same way that the state of being created was made to persist automatically via a webmention feed. It can absolutely be argued that this violates privacy, but so long as ‘Right to be forgotten’ is nto enshrined in law globally, it will remain a grey area. Notably, this will remain a problem even if the original post or comment and account were all public.\nMy implementation of webmentions on this site neither violates privacy nor copyright because I simply link back to the original comment or post, crediting its author here. For an example, look near the end of one of the IndieWeb Carnivals I have hosted in the past. This is akin to reposting rather than embedding. As the American court  I mentioned earlier explained, ‘when a user “retweets” a post containing an image, he or she is merely providing a hyperlink to that post and is not displaying a full-sized version of the image on his or her own feed’. Therefore, this does not violate copyright. It likewise does not violate privacy either.\nI do not mean to pretend like my decision was driven by copyright or privacy concerns – I never considered either until Kev’s post broght them up. To me a webmention was simply a form of ‘sharing’ in line with all social media, a word I now realise carries a lot of weight. My motivations were different: content isolation. I previously outlined this in my manifesto arguing that webmentions by their nature extract content out of their original context, an idea that has no direct parallel in the publishing industry. It would be like if The Times published a letter that was sent to the editor of The Guardian. It will make sense if you look across both papers, but it is fundamentally out of context. In many ways webmentions that I see on many websites just end up looking like testimonials for a specific post rather than a meaningful discussion.\nBefore we discuss copyright and privacy, it may be worthwhile thinking about just how sensible it is to reproduce the contents of a post or comment in their entirety at the bottom of every post we write. We might then, luckily, never have to talk about privacy at all."
+      },
+      "mention-of": "https://blog.omgmog.net/post/baking-webmentions-into-the-build/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://vhbelvadi.com/webmention-copyright-privacy"
+      },
+      "sort_date": "2026-10-10T21:34:58Z",
+      "_author_key": "2fe7e61882d23f0e"
     }
   ],
   "/post/finding-the-small-web-in-a-loud-internet/": [
@@ -3963,7 +3993,8 @@
       "published": "2026-06-26T11:04:50.468Z",
       "wm-received": "2026-06-26T11:04:50.468Z",
       "sort_date": "2026-06-26T11:04:50.468Z",
-      "_author_key": "f5745630569af06c"
+      "_pulled": true,
+      "_author_key": "4e6b5d5f6c0c690b"
     },
     {
       "type": "entry",
@@ -3995,7 +4026,8 @@
       "published": "2026-06-26T11:50:23.019Z",
       "wm-received": "2026-06-26T11:50:23.019Z",
       "sort_date": "2026-06-26T11:50:23.019Z",
-      "_author_key": "f5745630569af06c"
+      "_pulled": true,
+      "_author_key": "79f88f2a13b36456"
     }
   ],
   "/post/sending-webmentions-on-deploy/": [
@@ -4219,7 +4251,7 @@
     },
     {
       "type": "entry",
-      "url": "https://bsky.app/profile/the-bookclub.bsky.social/post/3mp3pnvh4o22y",
+      "url": "https://bsky.app/profile/did:plc:d4jkrca4x4fejypt6ewevkzo/post/3mp3pnvh4o22y",
       "published": "2026-06-25T05:38:43+00:00",
       "wm-received": "2026-06-25T05:39:21Z",
       "wm-id": 2004679,
@@ -4228,11 +4260,11 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-06-25T05:38:43+00:00",
-      "_author_key": "f3aa0109d5580077"
+      "_author_key": "e3b0c44298fc1c14"
     },
     {
       "type": "entry",
-      "url": "https://bsky.app/profile/yurikrupenin.bsky.social/post/3mp43iyc6yk2m",
+      "url": "https://bsky.app/profile/did:plc:jztv4dkp755bqegh5xr3ysed/post/3mp43iyc6yk2m",
       "published": "2026-06-25T09:10:43+00:00",
       "wm-received": "2026-06-25T09:10:54Z",
       "wm-id": 2004709,
@@ -4241,7 +4273,7 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-06-25T09:10:43+00:00",
-      "_author_key": "6da9620839699cfd"
+      "_author_key": "e3b0c44298fc1c14"
     },
     {
       "type": "entry",
@@ -4447,7 +4479,7 @@
     },
     {
       "type": "entry",
-      "url": "https://bsky.app/profile/nilleb.io/post/3mt2qwbr33s2u",
+      "url": "https://bsky.app/profile/did:plc:kflooyw5fbmv6siiqwvnwqut/post/3mt2qwbr33s2u",
       "published": "2026-08-14T18:09:25+00:00",
       "wm-received": "2026-08-14T18:09:30Z",
       "wm-id": 2023370,
@@ -4490,6 +4522,7 @@
       "published": "2026-06-23T20:02:55.000Z",
       "wm-received": "2026-06-23T20:02:55.000Z",
       "sort_date": "2026-06-23T20:02:55.000Z",
+      "_pulled": true,
       "_author_key": "21d0f6e0652fd00b"
     },
     {
@@ -4501,6 +4534,7 @@
       "published": "2026-06-24T08:25:22.000Z",
       "wm-received": "2026-06-24T08:25:22.000Z",
       "sort_date": "2026-06-24T08:25:22.000Z",
+      "_pulled": true,
       "_author_key": "06821bff1d597c49"
     },
     {
@@ -5629,6 +5663,58 @@
       "wm-private": false,
       "sort_date": "2026-10-02T10:47:24Z",
       "_author_key": "2974ff876aae9671"
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/cardboctober-ten-years-on/",
+      "url": "https://indieweb.social/@omgmog/117371012429638973",
+      "wm-source": "https://indieweb.social/@omgmog/117371012429638973",
+      "published": "2026-10-02T11:12:00.719Z",
+      "wm-received": "2026-10-02T11:12:00.719Z",
+      "sort_date": "2026-10-02T11:12:00.719Z",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "url": "https://indieweb.social/@omgmog"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@joladev\" class=\"u-url mention\">@<span>joladev</span></a></span> hey, thanks for the catch! Fix is just building/deploying now so should be resolved soon.</p>",
+        "text": "@ joladev hey, thanks for the catch! Fix is just building/deploying now so should be resolved soon."
+      },
+      "_author_key": "a607c9bc17f396ac",
+      "_own": true
+    }
+  ],
+  "/post/chasing-build-speed-on-jekyll-4/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/got-my-jekyll-build-time-down-by",
+      "published": "2026-10-07T15:56:50+00:00",
+      "published_ts": 1791388610,
+      "wm-received": "2026-10-07T15:56:53Z",
+      "wm-id": 2038390,
+      "wm-source": "https://social.omgmog.net/2026/got-my-jekyll-build-time-down-by",
+      "wm-target": "https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/117400444000824564"
+      ],
+      "content": {
+        "html": "<p>Got my Jekyll build time down by 75%</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/\" class=\"u-mention-of\">https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/</a>",
+        "text": "Got my Jekyll build time down by 75%\n\n        \n                        https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-10-07T15:56:50+00:00",
+      "_author_key": "c9c9fba9ad06aea2",
+      "_own": true
     }
   ]
 }
