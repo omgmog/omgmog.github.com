@@ -35,6 +35,119 @@
     return doc.body.innerHTML;
   };
 
+  const escapeHtml = (value) =>
+    String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+
+  // Display policy, mirrored from _plugins/webmention_policy.rb. Mentions that
+  // reached us through a silo or a bridge are only ever linked to or counted.
+  const SILO_HOSTS = [
+    "brid.gy",
+    "bsky.app",
+    "twitter.com",
+    "x.com",
+    "reddit.com",
+    "news.ycombinator.com",
+    "lobste.rs",
+    "indieweb.social",
+  ];
+  const hostOf = (url) => {
+    try {
+      return new URL(url).hostname.toLowerCase();
+    } catch (e) {
+      return "";
+    }
+  };
+  const isSiloHost = (host) =>
+    !!host &&
+    (host.split(".").includes("lemmy") ||
+      SILO_HOSTS.some((d) => host === d || host.endsWith("." + d)));
+  const FEDIVERSE_PATH =
+    /^\/(@[^/]+\/(statuses\/)?(\d+|[0-9A-HJKMNP-TV-Z]{26})|users\/[^/]+\/statuses\/\d+|post\/\d+|comment\/\d+)\/?$/;
+  const isFediverseUrl = (url) => {
+    try {
+      return FEDIVERSE_PATH.test(new URL(url).pathname);
+    } catch (e) {
+      return false;
+    }
+  };
+  const isSilo = (item) =>
+    [item["wm-source"], item.url].some(
+      (u) => isSiloHost(hostOf(u)) || isFediverseUrl(u),
+    );
+
+  // Who counts as me, and which webmentions are only pointers (a share on
+  // Reddit/HN/Lobsters, a community post, a link-only or text-less mention).
+  // Pointers are listed under Interactions; the rest is Discussion. Mirrors
+  // WebmentionPolicy.pointer? in _plugins/webmention_policy.rb.
+  const AUTHOR_GH_LOGIN = "omgmog";
+  const AUTHOR_DISPLAY_NAME = "Max Glenister";
+  const AUTHOR_DOMAINS = [
+    "omgmog.net",
+    "omgmog.github.io",
+    "twitter.com/omgmog",
+    "indieweb.social/@omgmog",
+  ];
+  const checkIsAuthor = (item) => {
+    if (item.type === "comment")
+      return item.user?.login?.toLowerCase() === AUTHOR_GH_LOGIN;
+    const url = item.author?.url || "";
+    const source = item["wm-source"] || "";
+    return AUTHOR_DOMAINS.some((d) => url.includes(d) || source.includes(d));
+  };
+  const isSharedLink = (m) => {
+    const src = m.url || m["wm-source"] || "";
+    return (
+      (m.type === "bookmark" &&
+        /reddit\.com\/r\/|news\.ycombinator\.com/i.test(src)) ||
+      (m.type === "repost" && /lobste\.rs/i.test(src))
+    );
+  };
+  const isPointer = (m) =>
+    isSharedLink(m) ||
+    (m.type === "mention" &&
+      (!!m.community?.name ||
+        (!checkIsAuthor(m) && (isSilo(m) || !m.content?.text))));
+
+  // Text avatars: no images are loaded from other people's hosts. Same
+  // initial and hue arithmetic as the avatar_* filters in the Ruby plugin.
+  const firstGrapheme = (s) =>
+    "Segmenter" in Intl
+      ? [...new Intl.Segmenter().segment(s)][0]?.segment
+      : Array.from(s)[0];
+  const initialOf = (name) => {
+    const words = (name || "").trim().split(/\s+/).filter(Boolean);
+    if (!words.length) return "?";
+    const named = words.filter((w) => /^[\p{L}\p{N}]/u.test(w));
+    const picks =
+      named.length >= 2 ? [named[0], named[named.length - 1]] : [words[0]];
+    return picks.map(firstGrapheme).join("").toUpperCase();
+  };
+  const hueOf = (name) =>
+    Array.from(new TextEncoder().encode(name || "")).reduce(
+      (h, b) => (h * 31 + b) % 360,
+      7,
+    );
+
+  const chipType = ({ icon, derive }) => ({
+    template: getTemplateContent("tpl-chip"),
+    element: "#feed",
+    derive,
+    attributes: {
+      platform: ["_platform"],
+      icon,
+      label: ["_label"],
+      what: ["_what"],
+      url: ["url"],
+      date: ["published"],
+      date_formatted: ["published"],
+    },
+  });
+
   const TYPES = {
     comment: {
       template: getTemplateContent("tpl-comment"),
@@ -43,7 +156,7 @@
         is_author_class: ["_is_author_class"],
         verb: "commented",
         author_name: ["user", "login"],
-        author_avatar_url: ["user", "avatar_url"],
+        avatar: ["user", "login"],
         author_url: ["user", "html_url"],
         date: ["created_at"],
         date_formatted: ["created_at"],
@@ -60,24 +173,12 @@
         platform: ["_platform"],
         verb: "replied",
         author_name: ["author", "name"],
-        author_avatar_url: ["author", "photo"],
+        avatar: ["author", "name"],
         author_url: ["author", "url"],
         date: ["published"],
         date_formatted: ["published"],
         body: ["content", "text"],
         url: ["url"],
-        domain: ["url"],
-      },
-    },
-    mention: {
-      template: getTemplateContent("tpl-mention"),
-      element: "#feed",
-      attributes: {
-        platform: ["_platform"],
-        verb: "Mentioned",
-        url: ["url"],
-        date: ["published"],
-        date_formatted: ["published"],
         domain: ["url"],
       },
     },
@@ -88,7 +189,7 @@
         is_author_class: ["_is_author_class"],
         platform: ["_platform"],
         author_name: ["author", "name"],
-        author_avatar_url: ["author", "photo"],
+        avatar: ["author", "name"],
         author_url: ["author", "url"],
         summary: ["summary", "value"],
         date: ["published"],
@@ -98,81 +199,42 @@
         domain: ["url"],
       },
     },
-    "mention-lemmy": {
-      template: getTemplateContent("tpl-mention-lemmy"),
-      element: "#feed",
-      attributes: {
-        author_name: ["author", "name"],
-        url: ["url"],
-        community_name: ["community", "name"],
-        community_url: ["community", "url"],
-        community_host: ["community", "url"],
-        date: ["published"],
-        date_formatted: ["published"],
+    // Pointers elsewhere (link-only rows, "shared on" cards). All use tpl-chip;
+    // derive() supplies the label and the sentence used for the tooltip.
+    "link-reply": chipType({
+      icon: "message-circle",
+      derive: (d) => ({ label: hostOf(d.url), what: `Reply on ${hostOf(d.url)}` }),
+    }),
+    "link-mention": chipType({
+      icon: "share",
+      derive: (d) => ({ label: hostOf(d.url), what: `Mentioned on ${hostOf(d.url)}` }),
+    }),
+    mention: chipType({
+      icon: "share",
+      derive: (d) => ({ label: hostOf(d.url), what: `Mentioned in ${hostOf(d.url)}` }),
+    }),
+    "mention-lemmy": chipType({
+      icon: "fediverse",
+      derive: (d) => {
+        const label = `!${d.community?.name}@${hostOf(d.community?.url)}`;
+        return { label, what: `Shared on the ${label} community` };
       },
-    },
-    "bookmark-hn": {
-      template: getTemplateContent("tpl-bookmark-hn"),
-      element: "#feed",
-      attributes: {
-        author_name: ["author", "name"],
-        url: ["url"],
-        date: ["published"],
-        date_formatted: ["published"],
+    }),
+    "bookmark-reddit": chipType({
+      icon: "reddit-color",
+      derive: (d) => {
+        const sub = ((d.url || d["wm-source"] || "").match(/reddit\.com\/r\/([^/]+)/i) || [])[1] || "";
+        return { label: `r/${sub}`, what: `Shared on the /r/${sub} subreddit` };
       },
-    },
-    "bookmark-lobsters": {
-      template: getTemplateContent("tpl-bookmark-lobsters"),
-      element: "#feed",
-      attributes: {
-        author_name: ["author", "name"],
-        url: ["url"],
-        date: ["published"],
-        date_formatted: ["published"],
-      },
-    },
-    like: {
-      template: getTemplateContent("tpl-like"),
-      element: "#likes",
-      attributes: {
-        author_name: ["author", "name"],
-        author_avatar_url: ["author", "photo"],
-        verb: "liked",
-        domain: ["url"],
-      },
-    },
-    bookmark: {
-      template: getTemplateContent("tpl-bookmark"),
-      element: "#likes",
-      attributes: {
-        author_name: ["author", "name"],
-        author_avatar_url: ["author", "photo"],
-        verb: "bookmarked",
-        domain: ["url"],
-      },
-    },
-    "bookmark-reddit": {
-      template: getTemplateContent("tpl-bookmark-reddit"),
-      element: "#feed",
-      attributes: {
-        author_name: ["author", "name"],
-        url: ["url"],
-        subreddit: ["url"],
-        date: ["published"],
-        date_formatted: ["published"],
-      },
-    },
-    repost: {
-      template: getTemplateContent("tpl-repost"),
-      element: "#likes",
-      attributes: {
-        author_name: ["author", "name"],
-        author_avatar_url: ["author", "photo"],
-        verb: "reposted",
-        url: ["url"],
-        domain: ["url"],
-      },
-    },
+    }),
+    "bookmark-hn": chipType({
+      icon: "hackernews",
+      derive: () => ({ label: "HN", what: "Shared on HN" }),
+    }),
+    "bookmark-lobsters": chipType({
+      icon: "lobsters",
+      derive: () => ({ label: "Lobsters", what: "Shared on Lobsters" }),
+    }),
   };
 
   // Safely encode pageURL for localStorage keys
@@ -187,6 +249,7 @@
     mention: ["Mention", "Mentions"],
     reply: ["Reply", "Replies"],
     repost: ["Repost", "Reposts"],
+    shared: ["Share or mention", "Shares and mentions"],
   };
 
   // Snapshot pre-rendered counts before any JS writes to the DOM
@@ -339,6 +402,18 @@
       day: "numeric",
     }).format(new Date(dateString));
 
+  module.avatarHtml = (data) => {
+    const name =
+      data.author?.name || data.user?.login || hostOf(data.url || data["wm-source"]);
+    if (data._is_author_class) {
+      return `<img src="/assets/mog.svg" alt="${escapeHtml(name)}'s avatar picture" class="avatar" loading="lazy">`;
+    }
+    return `<span class="avatar avatar-text" data-username="${escapeHtml(name)}" style="--h: ${hueOf(name)}" aria-hidden="true">${escapeHtml(initialOf(name))}</span>`;
+  };
+
+  // Attributes whose values are already HTML we generated or sanitised
+  const RAW_ATTRIBUTES = new Set(["body", "summary", "avatar"]);
+
   module.renderThing = (type, data) => {
     if (!type || !type.template || !type.attributes || !data) {
       console.warn("Invalid type or data provided to renderThing");
@@ -346,6 +421,7 @@
     }
 
     let template = type.template;
+    const derived = type.derive ? type.derive(data) : {};
     for (const attribute of Object.keys(type.attributes)) {
       let value = data[type.attributes[attribute]];
 
@@ -361,6 +437,9 @@
           data[type.attributes[attribute][0]]?.[type.attributes[attribute][1]];
       }
 
+      if (attribute === "avatar") {
+        value = module.avatarHtml(data);
+      }
       if (attribute === "date") {
         // sometimes the publish date isn't provided but we might know when the mention was received
         value = value || data["wm-received"];
@@ -466,9 +545,19 @@
         }
       }
 
+      if (attribute === "label" || attribute === "what") {
+        value = derived[attribute] || "";
+      }
+
+      // Values come from other people's sites, so escape anything that isn't
+      // HTML we built or sanitised ourselves. A function replacer keeps "$&"
+      // and friends in a value from being treated as replacement patterns.
+      const output = RAW_ATTRIBUTES.has(attribute)
+        ? (value ?? "")
+        : escapeHtml(value);
       template = template.replace(
         new RegExp("%" + attribute + "%", "g"),
-        value ?? "",
+        () => output,
       );
     }
     return template;
@@ -524,7 +613,7 @@
   };
 
   module.checkForFailedAvatars = () => {
-    document.querySelectorAll("#interactions .avatar").forEach((avatar) => {
+    document.querySelectorAll("#interactions img.avatar").forEach((avatar) => {
       if (!avatar.getAttribute("src")) {
         window.makeFallbackAvatar(avatar.dataset.username, avatar);
       } else {
@@ -573,6 +662,19 @@
     }
   };
 
+  // The numbers now showing in the header badge, kept so post lists can show
+  // them too (they only ever raise the built totals, see _layouts/core.html).
+  module.saveSummary = () => {
+    const el = document.querySelector(".interaction-stats");
+    if (!el) return;
+    const summary = {};
+    ["comment", "bookmark", "like", "shared", "repost"].forEach((key) => {
+      const n = parseInt(el.querySelector(`.${key} .value`)?.textContent || "0", 10);
+      if (n > 0) summary[key] = n;
+    });
+    module.saveData(summary, `interactions-summary-${pageURL_base64}`);
+  };
+
   module.updateWebmentionCounts = () => {
     const data = interactions.webmentions?.data;
     if (!data || !Array.isArray(data)) return;
@@ -587,7 +689,9 @@
     data
       .filter((m) => !preRenderedWmIds.has(m["wm-id"]))
       .forEach((mention) => {
-        if (mention.type === "reply" || mention.type === "mention") {
+        if (isPointer(mention)) {
+          counts.shared = (counts.shared || 0) + 1;
+        } else if (mention.type === "reply" || mention.type === "mention") {
           newWmConvCount++;
         } else if (mention.type && VERBS[mention.type]) {
           counts[mention.type] = (counts[mention.type] || 0) + 1;
@@ -603,6 +707,20 @@
       value.innerHTML = count;
       parent.title = `${count} ${VERBS[key][count === 1 ? 0 : 1]}`;
       parent.removeAttribute("style");
+    });
+
+    // The same totals in the Interactions block
+    Object.entries(counts).forEach(([key, count]) => {
+      document
+        .querySelectorAll(`#likes .reaction-chip[data-kind="${key}"]`)
+        .forEach((chip) => {
+          chip.querySelector(".value").textContent = count;
+          chip.querySelector(".noun").textContent =
+            VERBS[key][count === 1 ? 0 : 1].toLowerCase();
+          chip.removeAttribute("style");
+          const likesEl = document.querySelector("#likes");
+          if (likesEl) likesEl.style.display = "block";
+        });
     });
 
     if (Object.keys(counts).length > 0 || newWmConvCount > 0) {
@@ -819,7 +937,7 @@
     const state = interactions.comments?.state || "closed";
     const otherState = state === "open" ? "closed" : "open";
     const feedEl = document.querySelector("#feed");
-    if (feedEl && (state === "open" || merged.length > 0)) {
+    if (feedEl && (state === "open" || merged.some((m) => !isPointer(m)))) {
       feedEl.style.display = "block";
     }
     document
@@ -830,21 +948,6 @@
       .forEach((el) => (el.style.display = "none"));
 
     // Helpers for author detection and platform classification
-    const AUTHOR_GH_LOGIN = "omgmog";
-    const AUTHOR_DISPLAY_NAME = "Max Glenister";
-    const AUTHOR_DOMAINS = [
-      "omgmog.net",
-      "omgmog.github.io",
-      "twitter.com/omgmog",
-      "indieweb.social/@omgmog",
-    ];
-    const checkIsAuthor = (item) => {
-      if (item.type === "comment")
-        return item.user?.login?.toLowerCase() === AUTHOR_GH_LOGIN;
-      const url = item.author?.url || "";
-      const source = item["wm-source"] || "";
-      return AUTHOR_DOMAINS.some((d) => url.includes(d) || source.includes(d));
-    };
     const computePlatform = (item) => {
       const url = item.url || item["wm-source"] || "";
       const source = item["wm-source"] || "";
@@ -867,9 +970,17 @@
       if (isRedditBookmark(item)) type = TYPES["bookmark-reddit"];
       if (isHNBookmark(item)) type = TYPES["bookmark-hn"];
       if (isLobstersRepost(item)) type = TYPES["bookmark-lobsters"];
+      const isAuthor = checkIsAuthor(item);
+      if (
+        !isAuthor &&
+        (item.type === "reply" || item.type === "mention") &&
+        !isLemmyMention(item) &&
+        isSilo(item)
+      ) {
+        type = item.type === "reply" ? TYPES["link-reply"] : TYPES["link-mention"];
+      }
       if (!type) return;
 
-      const isAuthor = checkIsAuthor(item);
       const enriched = Object.assign({}, item);
       enriched._is_author_class = isAuthor ? " is-author" : "";
       enriched._platform = computePlatform(item);
@@ -887,54 +998,63 @@
         }
       }
 
-      feedEl.querySelector(".items").innerHTML += module.renderThing(
-        type,
-        enriched,
-      );
-      feedEl.style.display = "block";
+      // Pointers go under Interactions, next to the reaction counts.
+      const likesEl = document.querySelector("#likes");
+      const toLikes = isPointer(item) && likesEl?.querySelector(".items");
+      const target = toLikes ? likesEl : feedEl;
+      target
+        .querySelector(".items")
+        .insertAdjacentHTML("beforeend", module.renderThing(type, enriched));
+      target.style.display = "block";
     });
 
-    // Render likes/bookmarks/reposts into #likes, deduped by author name
-    const likesEl = document.querySelector("#likes");
-    if (likesEl) {
-      const seenLikers = new Set(
-        Array.from(likesEl.querySelectorAll(".avatar[data-username]"))
-          .map((el) => el.dataset.username)
-          .filter(Boolean),
-      );
-      const likesData = wmData.filter((m) => {
-        if (m.type !== "like" && m.type !== "bookmark" && m.type !== "repost")
-          return false;
-        if (isRedditBookmark(m) || isHNBookmark(m) || isLobstersRepost(m))
-          return false;
-        const key = m.author?.name || "";
-        if (!key || seenLikers.has(key)) return false;
-        seenLikers.add(key);
-        return true;
-      });
-      if (likesData.length > 0) {
-        const likesList = likesEl.querySelector(".items");
-        if (likesList) {
-          likesData.forEach((item) => {
-            const type = TYPES[item.type];
-            if (!type) return;
-            likesList.innerHTML += module.renderThing(type, item);
-          });
-          likesEl.style.display = "block";
-        }
-      }
+    // Likes, reposts and bookmarks are only ever shown as totals (see
+    // updateWebmentionCounts), so there is nothing to render for them here.
+
+    // Re-sort all feed children (static + dynamic). Same reading order as the
+    // static page: chips (pointers elsewhere), then webmention replies and
+    // mentions, then comments; each part by datetime.
+    const likesItems = document.querySelector("#likes .items");
+    if (likesItems) {
+      // Reaction totals stay first; shares and mentions follow by date.
+      const dateOf = (el) =>
+        el.querySelector("time")?.getAttribute("datetime") || "";
+      Array.from(likesItems.children)
+        .filter((el) => !el.classList.contains("reaction-chip"))
+        .sort((a, b) => dateOf(a).localeCompare(dateOf(b)))
+        .forEach((el) => likesItems.appendChild(el));
     }
 
-    // Re-sort all feed children (static + dynamic) by datetime
     const itemsEl = feedEl.querySelector(".items");
     if (itemsEl) {
-      Array.from(itemsEl.children)
-        .sort((a, b) => {
-          const aDate = a.querySelector("time")?.getAttribute("datetime") || "";
-          const bDate = b.querySelector("time")?.getAttribute("datetime") || "";
-          return aDate.localeCompare(bDate);
-        })
-        .forEach((child) => itemsEl.appendChild(child));
+      itemsEl.querySelectorAll(".thread-divider").forEach((hr) => hr.remove());
+      const sectionOf = (el) =>
+        el.matches(".chip, .chip-group")
+          ? "webmention"
+          : el.getAttribute("data-source");
+      const bucketOf = (el) =>
+        el.matches(".chip, .chip-group")
+          ? 0
+          : { webmention: 1, archived: 2 }[el.getAttribute("data-source")] ?? 3;
+      const sorted = Array.from(itemsEl.children).sort((a, b) => {
+        const byBucket = bucketOf(a) - bucketOf(b);
+        if (byBucket !== 0) return byBucket;
+        const aDate = a.querySelector("time")?.getAttribute("datetime") || "";
+        const bDate = b.querySelector("time")?.getAttribute("datetime") || "";
+        return aDate.localeCompare(bDate);
+      });
+      let prev = null;
+      sorted.forEach((child) => {
+        const section = sectionOf(child);
+        if (prev !== null && section !== prev) {
+          const hr = document.createElement("hr");
+          hr.className = "thread-divider";
+          hr.setAttribute("aria-hidden", "true");
+          itemsEl.appendChild(hr);
+        }
+        prev = section;
+        itemsEl.appendChild(child);
+      });
     }
   };
 
@@ -942,6 +1062,7 @@
     module.renderFeed();
     module.updateCommentCount(interactions.comments?.data?.length || 0);
     module.updateWebmentionCounts();
+    module.saveSummary();
     module.checkForFailedAvatars();
   };
 

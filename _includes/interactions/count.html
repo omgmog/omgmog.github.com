@@ -10,8 +10,12 @@
 {% assign _wm_bookmarks = _wm_c.bookmarks | default: 0 %}
 {% assign _wm_replies   = _wm_c.replies   | default: 0 %}
 {% assign _wm_reposts   = _wm_c.reposts   | default: 0 %}
+{% assign _wm_shared    = _wm_c.shared    | default: 0 %}
+{% comment %}Copies of the post elsewhere ("Also on") are listed with the shares, so they count there.{% endcomment %}
+{% assign _synd_n = post.syndication | size %}
+{% assign _wm_shared = _wm_shared | plus: _synd_n %}
 {% assign _has_wm = false %}
-{% if _wm_mentions > 0 or _wm_likes > 0 or _wm_bookmarks > 0 or _wm_replies > 0 or _wm_reposts > 0 %}{% assign _has_wm = true %}{% endif %}
+{% if _wm_mentions > 0 or _wm_likes > 0 or _wm_bookmarks > 0 or _wm_replies > 0 or _wm_reposts > 0 or _wm_shared > 0 %}{% assign _has_wm = true %}{% endif %}
 {% if include.post %}
   {% assign _href = post.url | append: "#interactions" %}
   {% assign _label = "Interactions for " | append: post.title %}
@@ -19,10 +23,11 @@
   {% assign _href = "#interactions" %}
 {% endif %}
 {% assign _total_comment_count = archived_count | plus: _gh_comment_count %}
-{% assign _conversational_count = _total_comment_count | plus: _wm_replies | plus: _wm_mentions %}
+{% assign _wm_conv = _wm_replies | plus: _wm_mentions %}
+{% assign _conversational_count = _total_comment_count | plus: _wm_conv %}
 <a class="interaction-stats" href="{{ _href }}"{% if _label %} aria-label="{{ _label }}"{% endif %}
 {% unless _conversational_count > 0 or has_comments_issue or _has_wm %} style="display: none"{% endunless %}>
-    <span class="comment"{% unless _conversational_count > 0 %} style="display: none"{% endunless %} data-archived-count="{{ archived_count }}" data-wm-conv-count="{{ _wm_replies | plus: _wm_mentions }}">
+    <span class="comment"{% unless _conversational_count > 0 %} style="display: none"{% endunless %} data-archived-count="{{ archived_count }}" data-gh-count="{{ _gh_comment_count }}" data-wm-conv-count="{{ _wm_conv }}">
         <svg viewBox="0 0 24 24"><use href="#icon-message-circle"/></svg>
         <span class="value">{{ _conversational_count }}</span>
     </span>
@@ -33,6 +38,10 @@
     <span class="like"{% unless _wm_likes > 0 %} style="display: none"{% endunless %}>
         <svg viewBox="0 0 24 24"><use href="#icon-heart"/></svg>
         <span class="value">{{ _wm_likes }}</span>
+    </span>
+    <span class="shared"{% unless _wm_shared > 0 %} style="display: none"{% endunless %}>
+        <svg viewBox="0 0 24 24"><use href="#icon-share"/></svg>
+        <span class="value">{{ _wm_shared }}</span>
     </span>
     <span class="repost"{% unless _wm_reposts > 0 %} style="display: none"{% endunless %}>
         <svg viewBox="0 0 24 24"><use href="#icon-repeat-2"/></svg>

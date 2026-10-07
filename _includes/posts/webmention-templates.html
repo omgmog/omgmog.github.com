@@ -1,6 +1,6 @@
 <script type="text/template" id="tpl-comment">
   <article class="reply%is_author_class%" data-source="github">
-    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" class="avatar" data-username="%author_name%" loading="lazy">
+    %avatar%
     <header>
       <h4><a href="%author_url%" rel="nofollow" class="name">%author_name%</a> %verb% <a href="%url%" rel="nofollow">on <time datetime="%date%">%date_formatted%</time> via %domain%</a></h4>
     </header>
@@ -9,63 +9,26 @@
 </script>
 <script type="text/template" id="tpl-reply">
   <article class="reply%is_author_class%" data-source="webmention" data-platform="%platform%">
-    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" class="avatar" data-username="%author_name%" loading="lazy">
+    %avatar%
     <header>
       <h4><a href="%author_url%" rel="nofollow" class="name">%author_name%</a> %verb% <a href="%url%" rel="nofollow">on <time datetime="%date%">%date_formatted%</time> via %domain%</a></h4>
     </header>
     <div>%body%</div>
   </article>
 </script>
-<script type="text/template" id="tpl-like">
-  <div class="like">
-    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name% on %domain%" class="avatar" data-username="%author_name%" loading="lazy">
-  </div>
-</script>
-<script type="text/template" id="tpl-bookmark">
-  <div class="like">
-    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" title="%verb% by %author_name% on %domain%" class="avatar" data-username="%author_name%" loading="lazy">
-  </div>
-</script>
-<script type="text/template" id="tpl-bookmark-reddit">
-  <article class="reply mention" data-source="webmention" data-platform="reddit">
-    <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-reddit-color"></use></svg>
-    <div><p>Shared on the <strong><a href="https://www.reddit.com/r/%subreddit%" rel="nofollow">/r/%subreddit%</a></strong> subreddit by <strong>%author_name%</strong> on <a href="%url%" rel="nofollow"><time datetime="%date%">%date_formatted%</time></a></p></div>
-  </article>
-</script>
-<script type="text/template" id="tpl-bookmark-hn">
-  <article class="reply mention" data-source="webmention" data-platform="hn">
-    <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-hackernews"></use></svg>
-    <div><p>Shared on <strong><a href="https://news.ycombinator.com/" rel="nofollow">HN</a></strong> by <strong>%author_name%</strong> on <a href="%url%" rel="nofollow"><time datetime="%date%">%date_formatted%</time></a></p></div>
-  </article>
-</script>
-<script type="text/template" id="tpl-bookmark-lobsters">
-  <article class="reply mention" data-source="webmention" data-platform="lobsters">
-    <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-lobsters"></use></svg>
-    <div><p>Shared on <strong><a href="https://lobste.rs/" rel="nofollow">Lobsters</a></strong> by <strong>%author_name%</strong> on <a href="%url%" rel="nofollow"><time datetime="%date%">%date_formatted%</time></a></p></div>
-  </article>
-</script>
-<script type="text/template" id="tpl-mention-lemmy">
-  <article class="reply mention" data-source="webmention" data-platform="lemmy">
-    <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-fediverse"></use></svg>
-    <div><p>Shared on the <strong><a href="%community_url%" rel="nofollow">!%community_name%@%community_host%</a></strong> community by <strong>%author_name%</strong> on <a href="%url%" rel="nofollow"><time datetime="%date%">%date_formatted%</time></a></p></div>
-  </article>
-</script>
-<script type="text/template" id="tpl-repost">
-  <div class="like">
-    <a href="%url%" rel="nofollow" title="%verb% by %author_name% on %domain%"><img src="%author_avatar_url%" alt="%author_name%'s avatar picture" class="avatar" data-username="%author_name%" loading="lazy"></a>
-  </div>
-</script>
-<script type="text/template" id="tpl-mention">
-  <article class="reply mention" data-source="webmention" data-platform="%platform%">
-    <div><p>%verb% in <a href="%url%" rel="nofollow">%url%</a> on <time datetime="%date%">%date_formatted%</time></p></div>
-  </article>
-</script>
 <script type="text/template" id="tpl-mention-rich">
   <article class="reply mention-rich%is_author_class%" data-source="webmention" data-platform="%platform%">
-    <img src="%author_avatar_url%" alt="%author_name%'s avatar picture" class="avatar" data-username="%author_name%" loading="lazy">
+    %avatar%
     <header>
       <h4><a href="%author_url%" rel="nofollow" class="name">%author_name%</a> %verb% <a href="%url%" rel="nofollow">on <time datetime="%date%">%date_formatted%</time> via %domain%</a></h4>
     </header>
     <div>%summary%</div>
   </article>
+</script>
+<script type="text/template" id="tpl-chip">
+  <a class="chip" href="%url%" rel="nofollow" data-source="webmention" data-platform="%platform%" title="%what% &middot; %date_formatted%">
+    <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-%icon%"></use></svg>
+    <span class="chip-label">%label%</span>
+    <span class="chip-meta">%what%, <time datetime="%date%">%date_formatted%</time></span>
+  </a>
 </script>

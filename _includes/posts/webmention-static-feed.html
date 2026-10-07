@@ -2,14 +2,20 @@
 {% assign _author_gh_login = "omgmog" %}
 {% assign _author_display_name = "Max Glenister" %}
 
+{% assign _prev_section = "" %}
 {% for item in include.items %}
+  {% if item._grouped %}{% continue %}{% endif %}
+  {% comment %}A thin rule marks where mentions, archived comments and the GitHub thread change over.{% endcomment %}
+  {% if item['wm-property'] %}{% assign _section = "external" %}{% elsif item.user %}{% assign _section = "github" %}{% else %}{% assign _section = "archived" %}{% endif %}
+  {% if _prev_section != "" and _prev_section != _section %}<hr class="thread-divider" aria-hidden="true">{% endif %}
+  {% assign _prev_section = _section %}
   {% if item['wm-property'] %}
     {% assign mention_url = item.url | default: item['wm-source'] %}
     {% assign mention_date = item.published | default: item['wm-received'] %}
-    {% assign mention_domain = mention_url | split: "/" | slice: 2 %}
+    {% assign mention_domain = mention_url | wm_host %}
     {% assign author_name = item.author.name | default: mention_domain %}
     {% assign author_url = item.author.url | default: mention_url %}
-    {% assign author_photo = item.author.photo %}
+    {% assign _mode = item._mode | default: "full" %}
     {% assign _is_author = false %}
     {% for _d in _author_domains %}
       {% if author_url contains _d or item['wm-source'] contains _d %}{% assign _is_author = true %}{% endif %}
@@ -22,61 +28,106 @@
     {% elsif mention_url contains 'twitter.com' %}{% assign _platform = "twitter" %}
     {% elsif item['wm-source'] contains 'brid.gy' %}{% assign _platform = "mastodon" %}
     {% endif %}
+    {% comment %}
+      Anything that is only a pointer elsewhere (a link row, a "shared on" card)
+      is rendered as a compact chip. Chips sit directly in .items and are laid
+      out inline, so consecutive ones read as a single wrapping icon row.
+    {% endcomment %}
+    {% assign _chip = false %}
+    {% assign _chip_noun = "" %}
     {% if item['wm-property'] == "repost-of" and _platform == "lobsters" %}
-      <article class="reply mention static-item" data-source="webmention" data-platform="lobsters">
-        <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-lobsters"></use></svg>
-        <div><p>Shared on <strong><a href="https://lobste.rs/" rel="nofollow">Lobsters</a></strong> by <strong>{{ author_name }}</strong> on <a href="{{ mention_url }}" rel="nofollow"><time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></a></p></div>
-      </article>
+      {% assign _chip = true %}{% assign _chip_icon = "lobsters" %}{% assign _chip_label = "Lobsters" %}{% assign _chip_what = "Shared on Lobsters" %}
     {% elsif item['wm-property'] == "bookmark-of" and _platform == "reddit" %}
       {% assign _subreddit_parts = mention_url | split: "/r/" %}
       {% assign _subreddit = "" %}
       {% if _subreddit_parts.size > 1 %}{% assign _subreddit = _subreddit_parts[1] | split: "/" | first %}{% endif %}
-      <article class="reply mention static-item" data-source="webmention" data-platform="reddit">
-        <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-reddit-color"></use></svg>
-        <div><p>Shared on the <strong><a href="https://www.reddit.com/r/{{ _subreddit }}" rel="nofollow">/r/{{ _subreddit }}</a></strong> subreddit by <strong>{{ author_name }}</strong> on <a href="{{ mention_url }}" rel="nofollow"><time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></a></p></div>
-      </article>
+      {% assign _chip = true %}{% assign _chip_icon = "reddit-color" %}
+      {% capture _chip_label %}r/{{ _subreddit }}{% endcapture %}
+      {% capture _chip_what %}Shared on the /r/{{ _subreddit }} subreddit{% endcapture %}
     {% elsif item['wm-property'] == "bookmark-of" and _platform == "hn" %}
-      <article class="reply mention static-item" data-source="webmention" data-platform="hn">
-        <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-hackernews"></use></svg>
-        <div><p>Shared on <strong><a href="https://news.ycombinator.com/" rel="nofollow">HN</a></strong> by <strong>{{ author_name }}</strong> on <a href="{{ mention_url }}" rel="nofollow"><time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></a></p></div>
-      </article>
+      {% assign _chip = true %}{% assign _chip_icon = "hackernews" %}{% assign _chip_label = "HN" %}{% assign _chip_what = "Shared on HN" %}
     {% elsif item['wm-property'] == "mention-of" and item.community %}
-      {% assign _community_host = item.community.url | split: "/" | slice: 2 | first %}
-      <article class="reply mention static-item" data-source="webmention" data-platform="lemmy">
-        <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-fediverse"></use></svg>
-        <div><p>Shared on the <strong><a href="{{ item.community.url }}" rel="nofollow">!{{ item.community.name }}@{{ _community_host }}</a></strong> community by <strong>{{ author_name }}</strong> on <a href="{{ mention_url }}" rel="nofollow"><time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></a></p></div>
-      </article>
+      {% assign _community_host = item.community.url | wm_host %}
+      {% assign _chip = true %}{% assign _chip_icon = "fediverse" %}
+      {% capture _chip_label %}!{{ item.community.name }}@{{ _community_host }}{% endcapture %}
+      {% capture _chip_what %}Shared on the {{ _chip_label }} community{% endcapture %}
+    {% elsif _mode == "link" %}
+      {% assign _chip = true %}
+      {% if item['wm-property'] == "in-reply-to" %}
+        {% assign _chip_icon = "message-circle" %}{% assign _chip_noun = "reply" %}
+        {% capture _chip_what %}Reply on {{ mention_domain }}{% endcapture %}
+      {% else %}
+        {% assign _chip_icon = "share" %}{% assign _chip_noun = "post" %}
+        {% capture _chip_what %}Mentioned on {{ mention_domain }}{% endcapture %}
+      {% endif %}
+      {% assign _chip_label = mention_domain %}
+    {% elsif item['wm-property'] == "mention-of" and _is_author != true and item.content.text == nil %}
+      {% assign _chip = true %}{% assign _chip_icon = "share" %}{% assign _chip_label = mention_domain %}
+      {% capture _chip_what %}Mentioned in {{ mention_domain }}{% endcapture %}
+    {% endif %}
+    {% if _chip and item._group_size %}
+      {% comment %}Every link-only item from one host: one chip that expands to the individual links.{% endcomment %}
+      {% assign _group_icon = _chip_icon %}
+      {% if item._group_kind != "mentions" %}{% assign _group_icon = "message-circle" %}{% endif %}
+      <details class="chip-group static-item" data-source="webmention" data-platform="{{ _platform }}">
+        <summary class="chip" title="{{ item._group_size }} {{ item._group_kind }} on {{ mention_domain | escape }}">
+          <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-{{ _group_icon }}"></use></svg>
+          <span class="chip-label">{{ _chip_label | escape }}</span>
+          <span class="chip-count">&times;{{ item._group_size }}</span>
+        </summary>
+        <div class="chip-group-items">
+          <a class="chip" href="{{ mention_url | escape }}" rel="nofollow" title="{{ _chip_what | escape }} &middot; {{ mention_date | date: "%b %-d, %Y" }}">
+            <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-{{ _chip_icon }}"></use></svg>
+            <span class="chip-label"><time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></span>
+            <span class="chip-meta">{{ _chip_what | escape }}</span>
+          </a>
+          {% for g in item._group_rest %}
+            {% assign _g_url = g.url | default: g['wm-source'] %}
+            {% assign _g_date = g.published | default: g['wm-received'] %}
+            {% if g['wm-property'] == "in-reply-to" %}
+              {% assign _g_icon = "message-circle" %}{% capture _g_what %}Reply on {{ mention_domain }}{% endcapture %}
+            {% else %}
+              {% assign _g_icon = "share" %}{% capture _g_what %}Mentioned on {{ mention_domain }}{% endcapture %}
+            {% endif %}
+            <a class="chip" href="{{ _g_url | escape }}" rel="nofollow" title="{{ _g_what | escape }} &middot; {{ _g_date | date: "%b %-d, %Y" }}">
+              <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-{{ _g_icon }}"></use></svg>
+              <span class="chip-label"><time datetime="{{ _g_date }}">{{ _g_date | date: "%b %-d, %Y" }}</time></span>
+              <span class="chip-meta">{{ _g_what | escape }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      </details>
+    {% elsif _chip %}
+      <a class="chip static-item" href="{{ mention_url | escape }}" rel="nofollow" data-source="webmention" data-platform="{{ _platform }}" title="{{ _chip_what | escape }} &middot; {{ mention_date | date: "%b %-d, %Y" }}">
+        <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-{{ _chip_icon }}"></use></svg>
+        <span class="chip-label">{{ _chip_label | escape }}</span>
+        <span class="chip-meta">{{ _chip_what | escape }}, <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></span>
+      </a>
     {% elsif item['wm-property'] == "mention-of" %}
       {% if item.content.text %}
         <article class="reply mention-rich static-item{% if _is_author %} is-author{% endif %}" data-source="webmention" data-platform="{{ _platform }}">
-          {% if _is_author %}<img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ author_name }}'s avatar picture" class="avatar" loading="lazy">
-          {% else %}<img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">{% endif %}
+          {% include posts/wm-avatar.html name=author_name is_author=_is_author %}
           <header>
-            <h4><a href="{{ author_url }}" rel="nofollow" class="name">{{ author_name }}</a> mentioned <a href="{{ mention_url }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain }}</a></h4>
+            <h4><a href="{{ author_url | escape }}" rel="nofollow" class="name">{{ author_name | escape }}</a> mentioned <a href="{{ mention_url | escape }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain | escape }}</a></h4>
           </header>
           {% assign _html_limit = 1000 %}
           {% if item.summary.value %}<div>{{ item.summary.value | markdownify }}</div>
           {% elsif item.content.html and item.content.html.size <= _html_limit %}<div>{{ item.content.html | sanitize_content_html }}</div>
-          {% elsif item.content.text %}<div>{{ item.content.text | truncatewords: 50, "&hellip;" }}</div>
+          {% elsif item.content.text %}<div>{{ item.content.text | truncatewords: 50, "&hellip;" | escape_once }}</div>
           {% endif %}
         </article>
       {% else %}
         <article class="reply mention static-item{% if _is_author %} is-author{% endif %}" data-source="webmention" data-platform="{{ _platform }}">
-          <div><p>Mentioned in <a href="{{ mention_url }}" rel="nofollow">{{ mention_url }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
+          <div><p>Mentioned in <a href="{{ mention_url | escape }}" rel="nofollow">{{ mention_url | escape }}</a> on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time></p></div>
         </article>
       {% endif %}
-    {% elsif item['wm-property'] == "in-reply-to" and item._filler %}
-      <article class="reply mention static-item" data-source="webmention" data-platform="mastodon">
-        <div><p>Someone replied on <strong>{{ item._filler_host }}</strong> &mdash; <a href="{{ mention_url }}" rel="nofollow">view reply</a> <small>(their account opts out of bridging, so we can't show it here)</small></p></div>
-      </article>
     {% elsif item['wm-property'] == "in-reply-to" %}
       <article class="reply static-item{% if _is_author %} is-author{% endif %}" data-source="webmention" data-platform="{{ _platform }}">
-        {% if _is_author %}<img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ author_name }}'s avatar picture" class="avatar" loading="lazy">
-        {% else %}<img {% if author_photo %}src="{{ author_photo }}"{% endif %} alt="{{ author_name }}'s avatar picture" class="avatar" data-username="{{ author_name }}" loading="lazy">{% endif %}
+        {% include posts/wm-avatar.html name=author_name is_author=_is_author %}
         <header>
-          <h4><a href="{{ author_url }}" rel="nofollow" class="name">{{ author_name }}</a> replied <a href="{{ mention_url }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain }}</a></h4>
+          <h4><a href="{{ author_url | escape }}" rel="nofollow" class="name">{{ author_name | escape }}</a> replied <a href="{{ mention_url | escape }}" rel="nofollow">on <time datetime="{{ mention_date }}">{{ mention_date | date: "%b %-d, %Y" }}</time> via {{ mention_domain | escape }}</a></h4>
         </header>
-        <div>{{ item.content.text | markdownify }}</div>
+        <div>{{ item.content.text | escape | markdownify }}</div>
       </article>
     {% endif %}
   {% elsif item.user %}
@@ -85,8 +136,8 @@
     {% assign _is_author = false %}
     {% if _author_lower == _author_gh_login %}{% assign _is_author = true %}{% endif %}
     <article class="reply static-item{% if _is_author %} is-author{% endif %}" data-source="github">
-      {% if _is_author %}<img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ _author_display_name }}'s avatar picture" class="avatar" loading="lazy">
-      {% else %}<img {% if item.user.avatar_url %}src="{{ item.user.avatar_url }}"{% endif %} alt="{{ _author }}'s avatar picture" class="avatar" data-username="{{ _author_lower }}" loading="lazy">{% endif %}
+      {% if _is_author %}{% assign _gh_name = _author_display_name %}{% else %}{% assign _gh_name = _author %}{% endif %}
+      {% include posts/wm-avatar.html name=_gh_name is_author=_is_author %}
       <header>
         <h4><a href="{{ item.user.html_url }}" rel="nofollow" class="name">{% if _is_author %}{{ _author_display_name }}{% else %}{{ _author }}{% endif %}</a> commented <a href="{{ item.html_url }}" rel="nofollow">on <time datetime="{{ item.created_at }}">{{ item.created_at | date: "%b %-d, %Y" }}</time> via github.com</a></h4>
       </header>
@@ -98,11 +149,8 @@
     {% assign _is_author = false %}
     {% if _author_lower == 'max' %}{% assign _is_author = true %}{% endif %}
     <article class="reply static-item{% if _is_author %} is-author{% endif %}" data-source="archived">
-      {% if _is_author %}
-        <img src="{{ '/assets/mog.svg' | relative_url }}" alt="{{ item.author }}'s avatar picture" class="avatar" loading="lazy">
-      {% else %}
-        <img class="avatar" data-username="{{ _author_lower }}" loading="lazy">
-      {% endif %}
+      {% if _is_author %}{% assign _ar_name = _author_display_name %}{% else %}{% assign _ar_name = item.author %}{% endif %}
+      {% include posts/wm-avatar.html name=_ar_name is_author=_is_author %}
       <header>
         <h4><span class="name">{% if _is_author %}{{ _author_display_name }}{% else %}{{ item.author }}{% endif %}</span> commented <time datetime="{{ item.date }}">{{ item.date }}</time></h4>
       </header>

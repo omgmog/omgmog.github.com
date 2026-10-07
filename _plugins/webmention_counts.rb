@@ -1,4 +1,5 @@
 require "set"
+require_relative "webmention_policy"
 
 module Jekyll
   class WebmentionCountsGenerator < Generator
@@ -23,8 +24,15 @@ module Jekyll
         key = PROPERTY_MAP[m["wm-property"]]
         next unless key
 
+        # Shares and link-only mentions are listed under Interactions as chips;
+        # they are counted once, as "shared", not as bookmarks or mentions.
+        if WebmentionPolicy.pointer?(m)
+          tally["shared"] += 1
+          next
+        end
+
         if REACTIONS.include?(m["wm-property"])
-          author_key = m.dig("author", "url") || m.dig("author", "name") || m["url"]
+          author_key = WebmentionPolicy.author_key(m)
           next if author_key && seen_reaction_authors.include?(author_key)
           seen_reaction_authors.add(author_key) if author_key
         end
@@ -43,6 +51,8 @@ module Jekyll
         keys = [post.url, *post.data["alternate_urls"]].compact.uniq
         mentions = keys.flat_map { |url| wm_data[url] || [] }
           .uniq { |m| m["wm-id"] || m["url"] }
+        synd = WebmentionPolicy.syndication_keys(post.data["syndication"])
+        mentions = mentions.reject { |m| WebmentionPolicy.syndicated?(m, synd) }
         next if mentions.empty?
 
         tally = tally_for(mentions)

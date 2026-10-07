@@ -3,20 +3,21 @@
 # front matter) and fills in replies that never produced a webmention - e.g.
 # because the replying account doesn't bridge ActivityPub to the web at all.
 #
-# Accounts that opt out of bridging (bio contains "nobridge") still get a
-# filler entry - a link and host, no name/avatar/content - rather than being
-# silently dropped or having their content pulled against their stated wishes.
+# These replies were pulled by us, not sent by their author, so they're stored
+# as link-only entries (url, date, host) for every account - never the
+# person's name, avatar or text. The exception is my own replies in the thread,
+# which are kept in full. See _plugins/webmention_policy.rb.
 require 'net/http'
 require 'json'
 require 'yaml'
 require 'cgi'
 require 'set'
+require_relative '../_plugins/webmention_policy'
 
 SITE_URL        = 'https://blog.omgmog.net'
 POSTS_DIR       = File.join(__dir__, '..', '_posts')
 WEBMENTIONS_FILE = File.join(__dir__, '..', '_data', 'webmentions.json')
 MASTODON_URL_REGEX = %r{\Ahttps?://([^/]+)/@[^/]+/(\d+)\z}
-NOBRIDGE_REGEX  = /no.?bridge/i
 
 def fetch_json(url)
   uri = URI(url)
@@ -38,49 +39,31 @@ def strip_html(html)
   CGI.unescapeHTML(html.to_s.gsub(/<[^>]+>/, ' ')).gsub(/\s+/, ' ').strip
 end
 
-def opted_out?(account)
-  NOBRIDGE_REGEX.match?(account['note'].to_s) || NOBRIDGE_REGEX.match?((account['fields'] || []).map { |f| f['value'] }.join(' '))
-end
-
 def build_mention(status, target_url)
-  account = status['account'] || {}
+  mention = {
+    'type' => 'entry',
+    'wm-property' => 'in-reply-to',
+    'wm-target' => target_url,
+    'url' => status['url'],
+    'wm-source' => status['url'],
+    'published' => status['created_at'],
+    'wm-received' => status['created_at'],
+    'sort_date' => status['created_at']
+  }
 
-  if opted_out?(account)
-    host = URI.parse(status['url']).host rescue account['acct'].to_s.split('@').last
-    {
-      'type' => 'entry',
-      'wm-property' => 'in-reply-to',
-      'wm-target' => target_url,
-      'url' => status['url'],
-      'wm-source' => status['url'],
-      'published' => status['created_at'],
-      'wm-received' => status['created_at'],
-      'sort_date' => status['created_at'],
-      '_filler' => true,
-      '_filler_host' => host
+  if WebmentionPolicy.own?('wm-source' => status['url'])
+    account = status['account'] || {}
+    mention['author'] = {
+      'type' => 'card',
+      'name' => account['display_name'].to_s.empty? ? account['username'] : account['display_name'],
+      'url' => account['url']
     }
+    mention['content'] = { 'html' => status['content'], 'text' => strip_html(status['content']) }
   else
-    {
-      'type' => 'entry',
-      'wm-property' => 'in-reply-to',
-      'wm-target' => target_url,
-      'url' => status['url'],
-      'wm-source' => status['url'],
-      'published' => status['created_at'],
-      'wm-received' => status['created_at'],
-      'sort_date' => status['created_at'],
-      'author' => {
-        'type' => 'card',
-        'name' => account['display_name'].to_s.empty? ? account['username'] : account['display_name'],
-        'photo' => account['avatar'],
-        'url' => account['url']
-      },
-      'content' => {
-        'html' => status['content'],
-        'text' => strip_html(status['content'])
-      }
-    }
+    mention['_pulled'] = true
   end
+
+  mention
 end
 
 webmentions = File.exist?(WEBMENTIONS_FILE) ? JSON.parse(File.read(WEBMENTIONS_FILE)) : {}

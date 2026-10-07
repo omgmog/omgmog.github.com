@@ -684,27 +684,23 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.webmention {
   display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  font-size: var(--text-sm);
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  column-gap: 0.25rem;
 
-  & + .webmention {
-    margin-top: var(--gutter-size);
-  }
+  // Every entry is a chip; they wrap together as one row of icons.
+  > .chip-item {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0 0 0.25rem;
 
-  svg {
-    width: 1em;
-    height: 1em;
-    flex-shrink: 0;
-    margin-top: 0.5em;
+    // The global `li a:first-child` pulls links 0.1em left, which would make a
+    // chip a hair narrower than its own text and wrap the last word.
+    > .chip {
+      margin: 0;
+    }
   }
 }
 
@@ -801,18 +797,113 @@ nav {
   }
 }
 
+// One tile size for every avatar and chip in the interactions area.
+$wm-tile: 2.4rem;
+
 .likes-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.3rem;
+  justify-content: flex-start;
+  gap: 0.25rem;
   margin-bottom: var(--gutter-size);
 
-  .avatar {
-    width: 2.4rem;
-    height: 2.4rem;
-    border-radius: 0.4rem;
+  // An expanded host group takes the full row, like in the discussion.
+  > .chip-group[open] {
+    flex: 0 0 100%;
   }
+}
+
+// Compact chips: pointers elsewhere and the reaction totals. Used in the
+// discussion, the Interactions block and the sidebar. Deliberately the same
+// outlined style as the tag list and the secondary nav (see .tags-list), so the
+// pieces of the sidebar read as one family.
+.chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  // No `width: max-content`: it would stop the chip shrinking below its full
+  // text width, which pushes a narrow grid column (the sidebar on mobile) wider
+  // than the screen.
+  max-width: 100%;
+  margin: 0;
+  padding: 0.25em 0.5em;
+  border: 1px solid var(--color-text);
+  border-radius: 0.25rem;
+  background: transparent;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  text-decoration: none;
+
+  .platform-icon {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    border-radius: 0.15em;
+  }
+
+  // Wraps rather than truncating: nothing is cut off, however long the title.
+  .chip-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  // The sentence and date, for screen readers (and the tooltip carries it for everyone else)
+  .chip-meta {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+// A run of link-only items from one host ("reddit.com x6"): a disclosure whose
+// summary is a chip. Open, it takes the full row and lists the individual links.
+.chip-group {
+  max-width: 100%;
+
+  > summary {
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    // A caret that flips when open
+    &::after {
+      content: "\25BE";
+      font-size: 0.8em;
+    }
+  }
+
+  &[open] > summary::after {
+    content: "\25B4";
+  }
+
+  .chip-count {
+    font-weight: bold;
+  }
+
+  .chip-group-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+    padding-left: 0.75rem;
+  }
+}
+
+// Inverts like a tag does. Colours are set explicitly because the global
+// `a:hover` would turn the text brand-yellow, unreadable on yellow.
+a.chip:hover,
+a.chip:focus-visible,
+summary.chip:hover,
+summary.chip:focus-visible {
+  background: var(--color-text);
+  color: var(--color-bg);
 }
 
 // === POSTS ===
@@ -1048,8 +1139,8 @@ h3.post-title {
   }
 
   .avatar {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: $wm-tile;
+    height: $wm-tile;
     overflow: hidden;
     border-radius: 0.4rem;
     border: 0;
@@ -1062,6 +1153,21 @@ h3.post-title {
       image-rendering: -webkit-crisp-edges;
       image-rendering: pixelated;
       image-rendering: crisp-edges;
+    }
+
+    // Initial in a tinted square instead of an image from someone else's host.
+    // --h is set inline per name; the translucent tint works on light and dark.
+    &.avatar-text {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-indent: 0;
+      font-size: var(--text-sm);
+      font-weight: bold;
+      line-height: 1;
+      user-select: none;
+      color: inherit;
+      background: hsl(var(--h, 220) 55% 50% / 0.22);
     }
   }
 
@@ -1173,26 +1279,15 @@ h3.post-title {
       }
     }
 
+    // My own replies sit in the same left-aligned column as everyone else's;
+    // only the tint marks them.
     &.is-author {
-      padding-left: 0;
-      padding-right: 3rem;
-
-      .avatar {
-        left: auto;
-        right: 0;
-      }
-
       > div {
-        border-left: none;
-        border-right: 3px solid rgba(var(--color-brand-primary-rgb) / 0.6);
-        border-radius: 0.4rem 0 0 0.4rem;
+        border-left-color: rgba(var(--color-brand-primary-rgb) / 0.6);
         background: rgba(var(--color-brand-primary-rgb) / 0.15);
 
         &::before {
-          border-right-color: transparent;
-          border-left-color: rgba(var(--color-brand-primary-rgb) / 0.6);
-          left: auto;
-          right: -1rem;
+          border-right-color: rgba(var(--color-brand-primary-rgb) / 0.6);
         }
       }
     }
@@ -1242,6 +1337,46 @@ h3.post-title {
     &:disabled {
       @include custom-cursor("pointer_nodrop", 16, 16, not-allowed);
       opacity: 0.4;
+    }
+  }
+
+  // Chips (see .chip) sit directly in the list and flow inline, so consecutive
+  // ones read as one wrapping row; a full reply is a flex item of its own
+  // that breaks the row.
+  #feed .items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    column-gap: 0.25rem;
+
+    > .reply {
+      flex: 0 0 100%;
+    }
+
+    > .chip,
+    > .chip-group {
+      margin-bottom: 0.25rem;
+    }
+
+    > .chip-group[open] {
+      flex: 0 0 100%;
+    }
+
+    // Quiet rule between the three parts of the discussion: mentions from
+    // elsewhere, archived comments, and the GitHub thread.
+    > .thread-divider {
+      flex: 0 0 100%;
+      height: 0.2rem;
+      margin: 0 0 var(--gutter-size);
+      padding: 0;
+      border: 0;
+      border-radius: 0.1rem;
+      background: rgba(var(--color-text-rgb) / 0.15);
+    }
+
+    > .chip + .reply,
+    > .chip-group + .reply {
+      margin-top: calc(var(--gutter-size) - 0.25rem);
     }
   }
 }

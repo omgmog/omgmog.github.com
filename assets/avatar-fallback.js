@@ -23,7 +23,7 @@ window.makeFallbackAvatar = function (text, img) {
   img.src = canvas.toDataURL();
   img.classList.add("fallback");
 };
-document.querySelectorAll(".avatar[data-username]").forEach(function (img) {
+document.querySelectorAll("img.avatar[data-username]").forEach(function (img) {
   if (!img.getAttribute("src")) {
     window.makeFallbackAvatar(img.dataset.username, img);
   } else {

@@ -41,7 +41,7 @@ jobs:
         uses: actions/cache@v5
         with:
           path: _data/webmentions.json
-          key: webmentions-${{ steps.morris-index.outputs.hash }}-${{ hashFiles('scripts/fetch_webmentions.rb') }}
+          key: webmentions-${{ steps.morris-index.outputs.hash }}-${{ hashFiles('scripts/fetch_webmentions.rb', 'scripts/minimise_webmentions.rb', '_plugins/webmention_policy.rb') }}
 
       - name: Fetch webmentions from Morris
         if: steps.wm-cache.outputs.cache-hit != 'true'
@@ -49,6 +49,9 @@ jobs:
 
       - name: Fill in Mastodon replies missing a webmention
         run: bundle exec ruby scripts/fetch_mastodon_replies.rb
+
+      - name: Drop personal data we don't display
+        run: bundle exec ruby scripts/minimise_webmentions.rb
 
       - name: Fetch GitHub comments
         run: bundle exec ruby scripts/fetch_github_comments.rb

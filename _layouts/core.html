@@ -102,9 +102,11 @@
     {% if content contains 'data-post-url' %}<script>
     document.addEventListener('DOMContentLoaded', function() {
         try {
-            const VERBS = {
+            const LABELS = {
+                comment: ['Comment', 'Comments'],
                 bookmark: ['Bookmark', 'Bookmarks'],
                 like: ['Like', 'Likes'],
+                shared: ['Share or mention', 'Shares and mentions'],
                 repost: ['Repost', 'Reposts']
             };
             document.querySelectorAll('[data-post-url]').forEach(li => {
@@ -112,41 +114,22 @@
                 const _b64 = btoa(url);
                 const el = li.querySelector('.interaction-stats');
                 if (!el) return;
-                const _applyCounts = counts => {
-                    Object.entries(counts).forEach(([key, count]) => {
-                        const parent = el.querySelector(`.${key}`);
-                        if (!parent) return;
-                        parent.querySelector('.value').innerHTML = count;
-                        parent.title = `${count} ${VERBS[key][count === 1 ? 0 : 1]}`;
-                        parent.removeAttribute('style');
-                    });
-                    if (Object.keys(counts).length > 0) el.removeAttribute('style');
-                };
-                let wmConvCount = 0;
-                const _mentions = JSON.parse(localStorage.getItem(`interactions-mentions-${_b64}`));
-                if (_mentions?.data?.length) {
-                    const counts = {};
-                    _mentions.data.forEach(m => {
-                        if (m.type === 'reply' || m.type === 'mention') {
-                            wmConvCount++;
-                        } else if (m.type && VERBS[m.type]) {
-                            counts[m.type] = (counts[m.type] || 0) + 1;
-                        }
-                    });
-                    _applyCounts(counts);
-                }
-                const commentSpan = el.querySelector('.comment');
-                const archivedCount = parseInt(commentSpan?.dataset?.archivedCount || '0', 10);
-                const wmConvPreRendered = parseInt(commentSpan?.dataset?.wmConvCount || '0', 10);
-                const _comments = JSON.parse(localStorage.getItem(`interactions-comments-${_b64}`));
-                const githubCount = _comments?.data?.length || 0;
-                const totalCount = archivedCount + wmConvPreRendered + githubCount + wmConvCount;
-                if (totalCount > 0 && commentSpan) {
-                    commentSpan.querySelector('.value').textContent = totalCount;
-                    commentSpan.title = `${totalCount} Comment${totalCount === 1 ? '' : 's'}`;
-                    commentSpan.removeAttribute('style');
+                // The page was built with totals. When this browser has visited the post
+                // it also holds the (possibly fresher) numbers shown there; those can only
+                // raise a built total, never replace it with a partial count.
+                const _summary = JSON.parse(localStorage.getItem(`interactions-summary-${_b64}`)) || {};
+                Object.entries(LABELS).forEach(([key, [one, many]]) => {
+                    const parent = el.querySelector(`.${key}`);
+                    const value = parent?.querySelector('.value');
+                    if (!value) return;
+                    const built = parseInt(value.textContent, 10) || 0;
+                    const n = Math.max(built, parseInt(_summary[key], 10) || 0);
+                    if (n <= 0) return;
+                    value.textContent = n;
+                    parent.title = `${n} ${n === 1 ? one : many}`;
+                    parent.removeAttribute('style');
                     el.removeAttribute('style');
-                }
+                });
             });
         } catch(e) {}
     });

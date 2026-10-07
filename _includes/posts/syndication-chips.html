@@ -1,0 +1,17 @@
+{% comment %}"Also on" chips for the post's own copies (front matter `syndication`).{% endcomment %}
+{% for _u in include.urls %}
+  {% assign _su = _u | strip %}
+  {% if _su == "" %}{% continue %}{% endif %}
+  {% assign _sh = _su | wm_host %}
+  {% assign _sicon = "share" %}{% assign _slabel = _sh %}
+  {% if _sh contains "linkedin.com" %}{% assign _sicon = "linkedin" %}{% assign _slabel = "LinkedIn" %}
+  {% elsif _sh == "indieweb.social" or _sh contains "mastodon" %}{% assign _sicon = "mastodon" %}{% assign _slabel = "Mastodon" %}
+  {% elsif _sh == "bsky.app" %}{% assign _slabel = "Bluesky" %}
+  {% elsif _sh == "social.omgmog.net" %}{% assign _sicon = "megaphone" %}{% assign _slabel = "social.omgmog.net" %}
+  {% endif %}
+  <a class="chip static-item" href="{{ _su | escape }}" rel="syndication" data-source="syndication" title="Also on {{ _slabel | escape }}">
+    <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-{{ _sicon }}"></use></svg>
+    <span class="chip-label">{{ _slabel | escape }}</span>
+    <span class="chip-meta">Also on {{ _slabel | escape }}</span>
+  </a>
+{% endfor %}

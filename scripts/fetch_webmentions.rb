@@ -29,33 +29,8 @@ rescue => e
   nil
 end
 
-BSKY_PROFILE_API = 'https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile'
-DID_PLC_REGEX = /did:plc:[a-z0-9]+/i
-
-bsky_profile_cache = {}
 lemmy_post_cache = {}
 lobsters_post_cache = {}
-
-def fetch_bsky_profile(did, cache)
-  return cache[did] if cache.key?(did)
-  cache[did] = fetch_json("#{BSKY_PROFILE_API}?actor=#{did}")
-end
-
-def enrich_bsky_mention(m, cache)
-  did = (m.dig('url').to_s + m.dig('wm-source').to_s)[DID_PLC_REGEX]
-  return unless did
-
-  profile = fetch_bsky_profile(did, cache)
-  return unless profile && profile['handle']
-
-  handle = profile['handle']
-  m['url'] = m['url']&.sub(did, handle)
-  m['author'] ||= {}
-  m['author']['type'] = 'card'
-  m['author']['name'] = profile['displayName'].to_s.empty? ? handle : profile['displayName']
-  m['author']['photo'] = profile['avatar'] || m['author']['photo']
-  m['author']['url'] = "https://bsky.app/profile/#{handle}"
-end
 
 LEMMY_URL_REGEX = %r{\Ahttps?://([^/]*lemmy[^/]*)/post/(\d+)}i
 
@@ -139,7 +114,6 @@ index.each do |path, hashes|
     next unless m
     source_domain = URI.parse(m['wm-source'] || '').host rescue nil
     next if source_domain && BLOCKED_DOMAINS.include?(source_domain)
-    enrich_bsky_mention(m, bsky_profile_cache)
     enrich_lemmy_mention(m, lemmy_post_cache)
     enrich_lobsters_mention(m, lobsters_post_cache)
     m['sort_date'] = m['published'] || m['wm-received'] || ''
