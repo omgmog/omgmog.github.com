@@ -824,7 +824,8 @@
       "published": "2022-05-28T17:41:57.509Z",
       "wm-received": "2022-05-28T17:41:57.509Z",
       "sort_date": "2022-05-28T17:41:57.509Z",
-      "_author_key": "1e92e05e10090f5b"
+      "_pulled": true,
+      "_author_key": "30d72718a7a9503c"
     }
   ],
   "/": [
@@ -3963,7 +3964,8 @@
       "published": "2026-06-26T11:04:50.468Z",
       "wm-received": "2026-06-26T11:04:50.468Z",
       "sort_date": "2026-06-26T11:04:50.468Z",
-      "_author_key": "f5745630569af06c"
+      "_pulled": true,
+      "_author_key": "4e6b5d5f6c0c690b"
     },
     {
       "type": "entry",
@@ -3995,7 +3997,8 @@
       "published": "2026-06-26T11:50:23.019Z",
       "wm-received": "2026-06-26T11:50:23.019Z",
       "sort_date": "2026-06-26T11:50:23.019Z",
-      "_author_key": "f5745630569af06c"
+      "_pulled": true,
+      "_author_key": "79f88f2a13b36456"
     }
   ],
   "/post/sending-webmentions-on-deploy/": [
@@ -4219,7 +4222,7 @@
     },
     {
       "type": "entry",
-      "url": "https://bsky.app/profile/the-bookclub.bsky.social/post/3mp3pnvh4o22y",
+      "url": "https://bsky.app/profile/did:plc:d4jkrca4x4fejypt6ewevkzo/post/3mp3pnvh4o22y",
       "published": "2026-06-25T05:38:43+00:00",
       "wm-received": "2026-06-25T05:39:21Z",
       "wm-id": 2004679,
@@ -4228,11 +4231,11 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-06-25T05:38:43+00:00",
-      "_author_key": "f3aa0109d5580077"
+      "_author_key": "e3b0c44298fc1c14"
     },
     {
       "type": "entry",
-      "url": "https://bsky.app/profile/yurikrupenin.bsky.social/post/3mp43iyc6yk2m",
+      "url": "https://bsky.app/profile/did:plc:jztv4dkp755bqegh5xr3ysed/post/3mp43iyc6yk2m",
       "published": "2026-06-25T09:10:43+00:00",
       "wm-received": "2026-06-25T09:10:54Z",
       "wm-id": 2004709,
@@ -4241,7 +4244,7 @@
       "wm-property": "mention-of",
       "wm-private": false,
       "sort_date": "2026-06-25T09:10:43+00:00",
-      "_author_key": "6da9620839699cfd"
+      "_author_key": "e3b0c44298fc1c14"
     },
     {
       "type": "entry",
@@ -4447,7 +4450,7 @@
     },
     {
       "type": "entry",
-      "url": "https://bsky.app/profile/nilleb.io/post/3mt2qwbr33s2u",
+      "url": "https://bsky.app/profile/did:plc:kflooyw5fbmv6siiqwvnwqut/post/3mt2qwbr33s2u",
       "published": "2026-08-14T18:09:25+00:00",
       "wm-received": "2026-08-14T18:09:30Z",
       "wm-id": 2023370,
@@ -4490,6 +4493,7 @@
       "published": "2026-06-23T20:02:55.000Z",
       "wm-received": "2026-06-23T20:02:55.000Z",
       "sort_date": "2026-06-23T20:02:55.000Z",
+      "_pulled": true,
       "_author_key": "21d0f6e0652fd00b"
     },
     {
@@ -4501,6 +4505,7 @@
       "published": "2026-06-24T08:25:22.000Z",
       "wm-received": "2026-06-24T08:25:22.000Z",
       "sort_date": "2026-06-24T08:25:22.000Z",
+      "_pulled": true,
       "_author_key": "06821bff1d597c49"
     },
     {
@@ -5629,6 +5634,58 @@
       "wm-private": false,
       "sort_date": "2026-10-02T10:47:24Z",
       "_author_key": "2974ff876aae9671"
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/cardboctober-ten-years-on/",
+      "url": "https://indieweb.social/@omgmog/117371012429638973",
+      "wm-source": "https://indieweb.social/@omgmog/117371012429638973",
+      "published": "2026-10-02T11:12:00.719Z",
+      "wm-received": "2026-10-02T11:12:00.719Z",
+      "sort_date": "2026-10-02T11:12:00.719Z",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "url": "https://indieweb.social/@omgmog"
+      },
+      "content": {
+        "html": "<p><span class=\"h-card\" translate=\"no\"><a href=\"https://mastodon.social/@joladev\" class=\"u-url mention\">@<span>joladev</span></a></span> hey, thanks for the catch! Fix is just building/deploying now so should be resolved soon.</p>",
+        "text": "@ joladev hey, thanks for the catch! Fix is just building/deploying now so should be resolved soon."
+      },
+      "_author_key": "a607c9bc17f396ac",
+      "_own": true
+    }
+  ],
+  "/post/chasing-build-speed-on-jekyll-4/": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Max Glenister",
+        "url": "https://social.omgmog.net/profile/max"
+      },
+      "url": "https://social.omgmog.net/2026/got-my-jekyll-build-time-down-by",
+      "published": "2026-10-07T15:56:50+00:00",
+      "published_ts": 1791388610,
+      "wm-received": "2026-10-07T15:56:53Z",
+      "wm-id": 2038390,
+      "wm-source": "https://social.omgmog.net/2026/got-my-jekyll-build-time-down-by",
+      "wm-target": "https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/",
+      "wm-protocol": "webmention",
+      "syndication": [
+        "https://indieweb.social/@omgmog/117400444000824564"
+      ],
+      "content": {
+        "html": "<p>Got my Jekyll build time down by 75%</p>\n\n        \n                        <a href=\"https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/\" class=\"u-mention-of\">https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/</a>",
+        "text": "Got my Jekyll build time down by 75%\n\n        \n                        https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/"
+      },
+      "mention-of": "https://blog.omgmog.net/post/chasing-build-speed-on-jekyll-4/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "sort_date": "2026-10-07T15:56:50+00:00",
+      "_author_key": "c9c9fba9ad06aea2",
+      "_own": true
     }
   ]
 }
