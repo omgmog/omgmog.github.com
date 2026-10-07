@@ -2,6 +2,9 @@
 title: The Hidizs AP30 Music Boy
 comments_issue: 165
 tags: [hardware, dap, review, kickstarter]
+syndication:
+  - https://indieweb.social/@omgmog/117078516024696211
+  - https://social.omgmog.net/2026/ive-spent-five-weeks-with-the-hidizs
 ---
 
 I saw the Hidizs AP30 Music Boy on Reddit and got curious enough to reach out to Hidizs to see if they'd send me one to review. It's a palm-sized DAP that [launched on Kickstarter](https://www.kickstarter.com/projects/hidizs/ap30-music-boy-the-first-truly-wearable-hi-res-music-player?ref=ckchy2) on 23 July 2026, and it's pitching itself as a companion device rather than a standalone player, something to clip to a bag, hang round a neck, or snap to the back of a phone. I've had it for five weeks now, including a holiday where I used it out and about, long enough to have formed opinions beyond "this is a cute novelty."

@@ -2,6 +2,9 @@
 title: Migrating from Pixel 7a to Pixel 11
 comments_issue: 167
 tags: [android, pixel, phones]
+syndication:
+  - https://indieweb.social/@omgmog/117179646303558299
+  - https://social.omgmog.net/2026/i-got-a-new-pixel-11-this
 ---
 
 Setting up a new phone always takes longer than it should, usually with at least one app or account causing grief along the way. This one didn't, which felt almost suspicious.

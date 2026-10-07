@@ -2,6 +2,9 @@
 title: "What's the most popular number in Hacker News titles?"
 comments_issue: 163
 tags: [programming, database]
+syndication:
+  - https://indieweb.social/@omgmog/116924031058781986
+  - https://social.omgmog.net/2026/new-blog-post-whats-the-most-popular
 ---
 
 Two consecutive titles on the HN front page yesterday had a 6 in them. This means _nothing_. But it's the sort of nothing that lodges in your brain until you do something about it, so what is the most popular number in Hacker News titles?

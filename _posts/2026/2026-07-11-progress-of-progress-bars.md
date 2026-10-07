@@ -2,6 +2,9 @@
 title: "The progress of progress bars"
 comments_issue: 162
 tags: [ux, design, ai]
+syndication:
+  - https://indieweb.social/@omgmog/116901805087031211
+  - https://social.omgmog.net/2026/new-blog-post-about-progress-bars-and
 ---
 
 I was waiting for Claude to answer a token-heavy question at work the other day, the little "Thinking…" label flickering into "Wibbling…" and then "Moseying…", and I caught myself doing the thing I always do when a spinner takes too long, staring at it, trying to divine meaning from the word choice. Is it nearly done? There's no percentage, no bar, just a word standing in for "trust me, something is happening." It sent me down a rabbit hole into where progress bars came from, and it turns out they were never really about progress at all.

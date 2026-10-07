@@ -2,6 +2,9 @@
 title: How I'm using CSS View Transitions on this blog
 comments_issue: 161
 tags: [web-development, css]
+syndication:
+  - https://indieweb.social/@omgmog/116878166704069994
+  - https://social.omgmog.net/2026/a-new-post-about-css-view-transitions
 ---
 
 In the old days of the web, animating between pages meant faking it with jQuery. Then came [pjax](https://github.com/defunkt/jquery-pjax), which used `pushState` to swap in fetched content and fake a full navigation without one, still relying on `popState` to stop the back button breaking. Every single-page app since has done some version of the same trick, intercept the link click, fetch the new content, swap it in, animate the swap yourself. It works, but it means every navigation runs through a JS router, even on a static blog that didn't need one otherwise.

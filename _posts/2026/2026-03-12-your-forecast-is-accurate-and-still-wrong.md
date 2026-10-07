@@ -5,6 +5,8 @@ tags: [ux, design]
 syndication:
   - https://social.omgmog.net/2026/ive-written-a-new-blog-post-your
   - https://indieweb.social/@omgmog/116216114443295294
+  - https://indieweb.social/@omgmog/116911710217365223
+  - https://social.omgmog.net/2026/theyre-hositng-a-summit-to-talk-about
 ---
 
 Icons work because they're fast. One glance, immediate meaning, no reading required. The tradeoff is that they compress complex information into a single symbol, and compression always drops something.

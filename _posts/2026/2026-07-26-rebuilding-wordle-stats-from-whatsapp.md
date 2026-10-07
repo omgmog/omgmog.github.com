@@ -2,6 +2,8 @@
 title: "Rebuilding and analysing 4 years of Wordle stats from WhatsApp chat logs"
 tags: [data, wordle, whatsapp, programming]
 comments_issue: 164
+syndication:
+  - https://indieweb.social/@omgmog/116991052075495714
 ---
 
 Yes, I'm still playing Wordle in 2026.

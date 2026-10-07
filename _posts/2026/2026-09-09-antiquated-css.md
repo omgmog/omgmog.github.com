@@ -2,6 +2,9 @@
 title: Antiquated CSS and why we needed it
 comments_issue: 169
 tags: [web-development, css]
+syndication:
+  - https://indieweb.social/@omgmog/117245085725772312
+  - https://social.omgmog.net/2026/new-blog-post-antiquated-css-and-why
 ---
 
 I came across a catalogue of [antiquated HTML snippets and artefacts](https://vale.rocks/posts/html-relics), the kind of markup we just accepted as necessary in the `<head>` of every site.

@@ -2,6 +2,9 @@
 title: How the five AIs actually did
 comments_issue: 158
 tags: [ai, llm, world-cup]
+syndication:
+  - https://indieweb.social/@omgmog/116827911437742759
+  - https://social.omgmog.net/2026/the-group-stage-is-over-and-so
 ---
 
 The Group Stage of the 2026 World Cup finished today, so it's time to mark the homework. Back in [the launch post]({% post_url 2026/2026-06-11-five-ais-predict-the-world-cup %}) five AI models, a deterministic lookup table, and one football fan predicted the same 72 fixtures before a ball was kicked. I've been scoring the results on [AIWC26](https://blog.omgmog.net/AIWC26/) each day as they came in. I've got no real opinion on the teams; I'm interested in what the scoring reveals about the models.

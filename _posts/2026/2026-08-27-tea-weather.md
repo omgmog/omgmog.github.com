@@ -2,6 +2,9 @@
 title: Tea weather
 comments_issue: 166
 tags: [life, coffee, tea]
+syndication:
+  - https://indieweb.social/@omgmog/117172035902753556
+  - https://social.omgmog.net/2026/feels-like-autumn-is-in-the-air
 ---
 
 One large mug, two [Yorkshire tea](https://www.yorkshiretea.co.uk/our-teas) bags, steeped in freshly boiled water for 2 minutes, squeeze and remove the bags, generous splash of milk.

@@ -2,6 +2,9 @@
 title: Cardboctober, ten years on
 comments_issue: 171
 tags: [vr, cardboctober, hardware]
+syndication:
+  - https://indieweb.social/@omgmog/117370539551089243
+  - https://social.omgmog.net/2026/i-cant-believe-its-already-been-10
 ---
 
 It has been 10 years since I ran Cardboctober, a month-long hackathon in which I created something new for Google Cardboard each day and wrote about it. I considered doing it again this year, but my time is spread thinner these days than it was in 2016, so I thought I'd do a bit of a retrospective on the WebVR and Google Cardboard scene instead.

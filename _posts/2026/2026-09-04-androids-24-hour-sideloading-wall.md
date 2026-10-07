@@ -2,6 +2,9 @@
 title: Android's 24 hour sideloading wall
 comments_issue: 168
 tags: [android, google, software]
+syndication:
+  - https://indieweb.social/@omgmog/117212341145889531
+  - https://social.omgmog.net/2026/new-post-postandroids-24-hour-sideloading-wall
 ---
 
 I was showing a friend the Pokémon [gen1recomp](https://github.com/bryanthaboi/gen1recomp) project on my phone the other day, and he wanted it on his. Easy enough. Hand over the APK and the files it needs, walk him through the setup, ten minutes while we're sat in the same room.

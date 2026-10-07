@@ -2,6 +2,9 @@
 title: "Every Kickstarter project I've backed"
 comments_issue: 159
 tags: [kickstarter, hardware, review]
+syndication:
+  - https://indieweb.social/@omgmog/116837908524927401
+  - https://social.omgmog.net/2026/postevery-kickstarter-project-ive-backed
 ---
 
 {%- assign count = site.data.crowdfunding | size -%}

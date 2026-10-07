@@ -5,6 +5,7 @@ tags: [indieweb, web-development, jekyll, guide, programming]
 series: webmentions
 syndication:
   - https://indieweb.social/@omgmog/108203284974135392
+  - https://social.omgmog.net/2022/sending-this-reply-from-a-fresh-instance
 ---
 
 I've added [Webmention](https://indieweb.org/Webmention) support to the posts on this blog.

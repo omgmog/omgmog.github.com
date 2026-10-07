@@ -5,6 +5,7 @@ comments_issue: 116
 syndication:
   - https://social.omgmog.net/2022/-i-was-complaining-about-css-not
   - https://indieweb.social/@omgmog/108250071839919233
+  - https://social.omgmog.net/2022/its-2022-and-css-only-child-isnt-aware
 ---
 
 I've been fiddling with an instance of [Known](https://withknown.com/opensource) over on [social.omgmog.net](https://social.omgmog.net). As part of my fiddling I've been trying out some of the plugins for Known. I came across the ["Render Emoji Unicode" plugin](https://github.com/mapkyca/KnownEmoji) but it was using an old library, and referencing an old version of Twemoji, so I updated it to use the latest [Twemoji](https://twemoji.twitter.com) library.
