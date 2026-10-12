@@ -5410,6 +5410,30 @@
       "wm-private": false,
       "sort_date": "2026-08-19T07:35:35+00:00",
       "_author_key": "8e5b6abb45a14e96"
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "",
+        "url": ""
+      },
+      "url": "https://averagetechnerds.com/hidizs-ap30-music-boy/",
+      "published": null,
+      "published_ts": null,
+      "wm-received": "2026-10-15T21:15:51Z",
+      "wm-id": 2041159,
+      "wm-source": "https://averagetechnerds.com/hidizs-ap30-music-boy/",
+      "wm-target": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-protocol": "webmention",
+      "mention-of": "https://blog.omgmog.net/post/hidizs-ap30-music-boy/",
+      "wm-property": "mention-of",
+      "wm-private": false,
+      "rels": {
+        "canonical": "https://averagetechnerds.com/hidizs-ap30-music-boy/"
+      },
+      "sort_date": "2026-10-15T21:15:51Z",
+      "_author_key": "e3b0c44298fc1c14"
     }
   ],
   "/lwal/week-33/": [
