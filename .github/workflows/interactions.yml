@@ -33,8 +33,16 @@ jobs:
       - name: Fetch Morris index
         id: morris-index
         run: |
-          curl -sf https://wm.omgmog.net/morris/data/index.json -o /tmp/morris-index.json
-          echo "hash=$(sha256sum /tmp/morris-index.json | cut -d' ' -f1)" >> $GITHUB_OUTPUT
+          code=$(curl -sS --retry 2 --retry-delay 3 \
+            -A "omgmog-blog-build/1.0 (+https://omgmog.net)" \
+            -o /tmp/morris-index.json -w '%{http_code}' \
+            https://wm.omgmog.net/morris/data/index.json)
+          echo "HTTP $code"
+          if [ "$code" != "200" ]; then
+            head -c 600 /tmp/morris-index.json; echo
+            exit 1
+          fi
+          echo "hash=$(sha256sum /tmp/morris-index.json | cut -d' ' -f1)" >> "$GITHUB_OUTPUT"
 
       - name: Restore webmentions cache
         id: wm-cache
