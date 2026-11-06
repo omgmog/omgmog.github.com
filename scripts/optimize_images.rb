@@ -9,7 +9,7 @@ cache_dir = ARGV[1] || '.cache/images'
 
 FileUtils.mkdir_p(cache_dir)
 
-image_files = Dir.glob(File.join(dest, 'images/**/*.{jpg,jpeg,png}')).reject { |f| f.include?('.webp') }
+image_files = Dir.glob(File.join(dest, 'images/**/*.{jpg,jpeg,png}')).reject { |f| f.include?('.webp') || f.include?('/images/og/') }   # the social images stay full-size PNGs
 
 if image_files.empty?
   puts "Image Optimizer: No images to process"
