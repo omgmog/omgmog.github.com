@@ -7,6 +7,8 @@ layout: core
 {% assign total = 0 %}
 {% for pair in counts %}{% assign total = total | plus: pair[1] %}{% endfor %}
 
+{% assign share_text = page.description %}{% unless share_text %}{% assign share_text = page.excerpt | split: "</p>" | first %}{% endunless %}
+
 <div class="split">
   <article class="split__main h-entry" data-pagefind-body>
     <span hidden data-pagefind-meta="category:{{ page.category }}"></span>
@@ -21,6 +23,11 @@ layout: core
           <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
           &bull; {{ page.reading_time }} min read
           {% if total > 0 %}&bull; <a href="#discussion">{{ total }} interaction{% unless total == 1 %}s{% endunless %}</a>{% endif %}
+        </span>
+        <span class="post-header__tools">
+          {% for alt in page.alternates %}<a class="tool-link" href="{{ alt.href }}" title="View this post as {{ alt.title }}"><svg aria-hidden="true"><use href="#icon-file-text"/></svg> {{ alt.title | capitalize }}</a>{% endfor %}
+          <button type="button" class="tool-link" data-share data-title="{{ page.title | escape }}" data-text="{{ share_text | strip_html | normalize_whitespace | strip | truncate: 200 | escape }}" data-url="{{ page.url | absolute_url }}"><svg aria-hidden="true"><use href="#icon-share-2"/></svg> <span data-share-label>Share</span></button>
+          <span class="visually-hidden" role="status" data-share-status></span>
         </span>
       </p>
 
