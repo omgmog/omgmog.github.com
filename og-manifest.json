@@ -1,0 +1,20 @@
+---
+permalink: /og-manifest.json
+layout: null
+sitemap: false
+---
+{% comment %}What scripts/og-images.mjs needs to draw each post's social image: one entry per article, plus the category colours. The deploy workflow deletes this file from the built site once the images exist.{% endcomment %}
+{% assign og_docs = site.documents | where: "content_type", "article" %}
+{
+  "categories": {{ site.data.categories | jsonify }},
+  "posts": [
+{% for doc in og_docs %}    {
+      "slug": {{ doc.slug | jsonify }},
+      "kind": {{ doc.collection | jsonify }},
+      "title": {{ doc.title | jsonify }},
+      "category": {{ doc.category | jsonify }},
+      "date": {{ doc.date | date: "%-d %b %Y" | jsonify }},
+      "meta": {% if doc.collection == "lwal" %}{% if doc.links.size == 1 %}"1 link"{% else %}{{ doc.links.size | append: " links" | jsonify }}{% endif %}{% else %}{{ doc.reading_time | append: " min read" | jsonify }}{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}  ]
+}

@@ -49,6 +49,19 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Restore social image cache
+        uses: actions/cache@v5
+        with:
+          path: .cache/og
+          key: og-${{ hashFiles('scripts/og-images.mjs', '_data/categories.yml') }}
+          restore-keys: |
+            og-
+
+      - name: Draw social images
+        run: |
+          CHROME=google-chrome OG_JOBS=4 node scripts/og-images.mjs
+          rm _site/og-manifest.json
+
       - name: Build search index
         run: npx -y pagefind@1.6.0 --site _site
 

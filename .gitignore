@@ -19,3 +19,6 @@ desktop.ini
 vendor
 
 .env
+# generated social images (scripts/og-images.mjs)
+.cache/
+images/og/

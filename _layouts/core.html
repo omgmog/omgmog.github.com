@@ -18,7 +18,8 @@
     <meta property="og:description" content="{{ description }}">
     <meta property="og:type" content="{{ page.content_type | default: 'website' }}">
     <meta property="og:url" content="{{ page_url }}">
-    <meta property="og:image" content="{{ page.ogimage | default: '/assets/ogimage-generic.png' | absolute_url }}">
+    {% if page.layout == 'post' %}{% capture og_image %}/images/og/{{ page.slug }}.png{% endcapture %}{% else %}{% assign og_image = '/images/og/default.png' %}{% endif %}
+    <meta property="og:image" content="{{ page.ogimage | default: og_image | absolute_url }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     {% if page.content_type == 'article' %}
