@@ -8,7 +8,6 @@ sitemap: false
   <header class="archive-head">
     <h1>There's nothing here</h1>
     <p class="archive-head__lede">This page doesn't exist, or it moved when the blog was reorganised.</p>
-    <p class="meta" id="message" hidden></p>
   </header>
   <p class="discussion-cta">
     <a class="btn btn--primary" href="/"><svg aria-hidden="true"><use href="#icon-compass"/></svg> Start here</a>
@@ -22,7 +21,7 @@ sitemap: false
     {% for thread in site.data.starthere.threads %}
     {% assign key = thread.category %}
     {% assign cat = site.data.categories[key] %}
-    {% assign count = site.data.all_posts_and_lwal | where: "category", key | size %}
+    {% assign count = site.data.category_counts[key] | default: 0 %}
     <li>
       <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
         <span class="badge badge--lg" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">
@@ -37,18 +36,3 @@ sitemap: false
     {% endfor %}
   </ul>
 </section>
-
-<script>
-  // Old posts that were archived out of the blog are still in the repo:
-  // offer a search for them.
-  (function () {
-    var path = window.location.pathname;
-    var prefix = '/post/';
-    if (path.indexOf(prefix) === -1) return;
-    var query = encodeURIComponent(path.replace(prefix, '').replace(/\//g, ''));
-    var repo = '{{ site.github.owner_name }}/{{ site.github.repository_name }}';
-    var el = document.getElementById('message');
-    el.innerHTML = 'I may have archived that post. Try looking on <a href="https://github.com/search?q=repo%3A' + repo + '+' + query + '&type=Code">GitHub</a>.';
-    el.hidden = false;
-  })();
-</script>
