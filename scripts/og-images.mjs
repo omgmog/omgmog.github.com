@@ -115,9 +115,9 @@ const postHtml = (p, cats, sprite) => {
 <div class="foot" style="color:${muted}"><span class="meta">${esc(p.date)} · ${esc(p.meta)}</span><span class="site" style="color:${ink}">blog.omgmog.net</span></div></div>`;
 };
 
-const defaultHtml = (cats, sprite) => `<div class="panel" style="background:#fff">
+const defaultHtml = (title, cats, sprite) => `<div class="panel" style="background:#fff">
 <div class="head"><span class="label">blog.omgmog.net</span><span class="rule" style="background:#ffea00"></span></div>
-<div class="title"><h1>Tinkering, CSS and small interface problems.</h1></div>
+<div class="title"><h1>${esc(title)}</h1></div>
 <div class="foot" style="color:rgba(26,26,26,0.6)"><span class="meta">${["blog", "design", "tinkering", "web", "data", "reviews"].map((k) => tile(sprite, k, cats[k])).join("")}<span style="margin-left:6px">Writing here since 2004</span></span><span class="site" style="color:#1a1a1a">Start here</span></div></div>`;
 
 const chrome = findChrome();
@@ -142,11 +142,12 @@ const font = fontBuf.toString("base64");
 const avatar = `data:image/svg+xml;base64,${avatarBuf.toString("base64")}`;
 const sprite = spriteBuf.toString("utf8");
 const cats = manifest.categories;
+const startTitle = decode(manifest.start_title); // the Start here headline, so the default image says what the page says
 
 mkdirSync(OUT, { recursive: true });
 mkdirSync(CACHE, { recursive: true });
 const jobs = [
-  { name: "default", inputs: { default: true, cats: ["blog", "design", "tinkering", "web", "data", "reviews"].map((k) => cats[k]) }, html: () => defaultHtml(cats, sprite) },
+  { name: "default", inputs: { default: true, title: startTitle, cats: ["blog", "design", "tinkering", "web", "data", "reviews"].map((k) => cats[k]) }, html: () => defaultHtml(startTitle, cats, sprite) },
   ...manifest.posts.map((p) => ({ name: p.slug, inputs: { p, cat: cats[p.category] }, html: () => postHtml(p, cats, sprite) })),
 ];
 let drawn = 0, reused = 0, failed = 0;

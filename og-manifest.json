@@ -6,6 +6,7 @@ sitemap: false
 {% comment %}What scripts/og-images.mjs needs to draw each post's social image: one entry per article, plus the category colours. The deploy workflow deletes this file from the built site once the images exist.{% endcomment %}
 {% assign og_docs = site.documents | where: "content_type", "article" %}
 {
+  "start_title": {{ site.data.starthere.intro.title | jsonify }},
   "categories": {{ site.data.categories | jsonify }},
   "posts": [
 {% for doc in og_docs %}    {
