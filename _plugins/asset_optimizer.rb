@@ -22,7 +22,12 @@ module Jekyll
       total_saved = 0
       js_files.each do |js_file|
         original = File.read(js_file)
-        minified = Terser.new.compile(original)
+        begin
+          minified = Terser.new.compile(original)
+        rescue Terser::Error => e   # ES modules (search.js uses top-level await) don't parse as scripts: ship them as written
+          Jekyll.logger.info "Asset Optimizer:", "Left #{File.basename(js_file)} as it is (#{e.message.lines.first.strip})"
+          next
+        end
         File.write(js_file, minified)
 
         saved = original.size - minified.size
