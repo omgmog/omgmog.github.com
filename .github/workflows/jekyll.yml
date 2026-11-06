@@ -21,7 +21,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -64,11 +64,6 @@ jobs:
 
       - name: Build search index
         run: npx -y pagefind@1.6.0 --site _site
-
-      - name: Install ImageMagick
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick libmagickwand-dev
 
       - name: Optimize images
         run: bundle exec ruby scripts/optimize_images.rb _site .cache/images
