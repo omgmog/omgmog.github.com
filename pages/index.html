@@ -4,7 +4,7 @@ title: Start here
 ---
 
 {% assign topic_max = 1 %}
-{% for c in site.data.categories %}{% assign n = site.data.category_counts[c[0]] | default: 0 %}{% if n > topic_max %}{% assign topic_max = n %}{% endif %}{% endfor %}
+{% for c in site.data.categories %}{% assign key = c[0] %}{% assign n = site.data.category_counts[key] | default: 0 %}{% if n > topic_max %}{% assign topic_max = n %}{% endif %}{% endfor %}
 <div class="start-top">
   <div class="start-top__clip" aria-hidden="true"></div>
   <header class="archive-head">
