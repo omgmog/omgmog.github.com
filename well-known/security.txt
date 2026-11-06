@@ -2,8 +2,9 @@
 permalink: /.well-known/security.txt
 layout: null
 ---
-{% assign expires_year = site.time | date: "%Y" | plus: 10 %}
+{% comment %}RFC 9116: Expires should be less than a year away; it moves forward with every build.{% endcomment %}
+{% assign expires = site.time | date: "%s" | plus: 31104000 %}
 {% assign email = site.data.author.urls | where: "label", "Email" | first %}
 {% assign email_address = email.link | remove: "mailto:" %}
 Contact: mailto:{{ email_address }}
-Expires: {{ expires_year }}-{{ site.time | date: "%m-%dT%H:%M:%S" }}Z
+Expires: {{ expires | date: "%Y-%m-%dT%H:%M:%SZ" }}
