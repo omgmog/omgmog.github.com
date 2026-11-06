@@ -32,6 +32,7 @@ archived_comments:
   date: March 30, 2014
   content: |
     Hey thanks for the tips guys - I gave up trying to use it on Windows, since even the default theme wouldn't render correctly. I'm using an Ubuntu VM now, and it works perfectly! Thanks anyway.
+category: blog
 ---
 
 2014 has been [heralded](http://www.typeandgrids.com/blog/goodbye-wordpress-2014-will-be-the-year-of-flat-file-cmses) as "the year of flat-file websites". This blog in fact uses [Jekyll](http://jekyllrb.com) to generate the very blog post you are reading.

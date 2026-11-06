@@ -2,6 +2,7 @@
 title: Recycled Parts
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 I spent some time around new year 3D printing Dungeons and Dragons (DnD) characters for a friend. His main character is an Elven archer or something. We went to looking online for models that fit the bill. There are lots of free [DnD miniature](https://www.thingiverse.com/search?sort=relevant&q=dnd+miniature&type=things) models on Thingiverse to download and print.<!-- more -->

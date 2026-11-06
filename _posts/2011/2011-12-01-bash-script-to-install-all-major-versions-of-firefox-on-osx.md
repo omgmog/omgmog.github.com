@@ -3,6 +3,7 @@ comments_issue: 22
 title: Bash script to install all major versions of Firefox on OS X
 tags: [programming, software, macos]
 archived: true
+category: tools
 ---
 
 I wrote a nice bash script that automatically downloads and installs the major versions of Firefox, sets up profiles for each and modifies the .app launchers so that they start with their designated profiles.

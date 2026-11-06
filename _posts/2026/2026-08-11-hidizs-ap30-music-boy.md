@@ -2,6 +2,7 @@
 title: The Hidizs AP30 Music Boy
 comments_issue: 165
 tags: [hardware, dap, review, kickstarter]
+category: reviews
 syndication:
   - https://indieweb.social/@omgmog/117078516024696211
   - https://social.omgmog.net/2026/ive-spent-five-weeks-with-the-hidizs

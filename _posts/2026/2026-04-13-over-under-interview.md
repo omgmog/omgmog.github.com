@@ -2,6 +2,7 @@
 title: I was interviewed for Over/Under
 comments_issue: 146
 tags: [interview, indieweb, life]
+category: life
 ---
 
 Hyde from [lazybea.rs](https://lazybea.rs/) runs a blog interview series called Over/Under, where bloggers rate a mix of topics as overrated or underrated, then pass a question along to the next person. [I'm issue 61](https://lazybea.rs/ovr-061/).

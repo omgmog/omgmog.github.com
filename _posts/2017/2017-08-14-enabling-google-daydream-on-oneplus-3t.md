@@ -2,6 +2,7 @@
 title: Enabling Google Daydream Support on OnePlus 3T
 tags: [android, vr, guide, google]
 archived: true
+category: tinkering
 ---
 I enabled Google Daydream support on my OnePlus 3T today and I'm pretty impressed.<!-- more -->
 

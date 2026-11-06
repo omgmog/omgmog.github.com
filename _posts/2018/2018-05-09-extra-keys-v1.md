@@ -2,6 +2,7 @@
 title: Extra small extra macro keys v1.0
 tags: [3d-printing, diy, hardware]
 archived: true
+category: tinkering
 ---
 
 After my previous macro key project back in January that used full-size arcade buttons, I was itching to make a more compact set of macro keys.<!-- more -->

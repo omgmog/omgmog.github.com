@@ -3,6 +3,7 @@ title: "..humbug, christmas break, and assignments"
 tags: [life]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 i'm taking an IT course, right?

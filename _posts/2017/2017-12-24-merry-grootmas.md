@@ -2,6 +2,7 @@
 title: Merry Grootmas
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 Another Groot print.. This time for my sister (she is obsessed with Groot, and who doesn't love plastic nick-nacks!?)

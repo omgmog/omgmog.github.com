@@ -3,6 +3,7 @@ title: I've been busy
 tags: [retro-gaming, handheld, site-related]
 archived: true
 archive: omgmog.net
+category: life
 ---
 
 I always find it hard to find things to write about when I have a blog. It's not that I don't have anything to say, it's just I don't like writing.

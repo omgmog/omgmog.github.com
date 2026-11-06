@@ -3,6 +3,7 @@ title: "Notched - indicate if Notch has replied to a topic on /r/minecraft comme
 tags: [userscripts, minecraft, reddit]
 archived: true
 archive: blog.omgmog.net
+category: tools
 ---
 
 Another Chrome userscript for reddit.com

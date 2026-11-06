@@ -2,6 +2,7 @@
 title: Migrating from Pixel 7a to Pixel 11
 comments_issue: 167
 tags: [android, pixel, phones]
+category: tools
 syndication:
   - https://indieweb.social/@omgmog/117179646303558299
   - https://social.omgmog.net/2026/i-got-a-new-pixel-11-this

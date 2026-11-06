@@ -3,6 +3,7 @@ title: "Well."
 tags: [life, hardware]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 a little over a week late, and at a time inconvenient to my night dwelling self..

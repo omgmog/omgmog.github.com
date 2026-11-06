@@ -20,6 +20,7 @@ archived_comments:
   date: December 29, 2016
   content: |
     instead of reusable mixin you could just use autoprefixer, much easier. write simple CSS as you want, and let it add the prefixes when you save.
+category: web
 ---
 
 I read an article recently that explained why a web design agency had stopped using CSS pre-processing as part of their development process, as a means to "optimise [their] internal workflow".

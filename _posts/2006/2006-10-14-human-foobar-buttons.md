@@ -3,6 +3,7 @@ title: "Human foobar buttons"
 tags: [software, pixel-art]
 archived: true
 archive: moglenstar.net
+category: design
 ---
 
 {% include posts/figure.html src="2006-10/human-foobar-preview.png" %}{:.center}

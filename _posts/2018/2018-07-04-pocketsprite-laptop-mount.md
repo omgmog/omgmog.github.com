@@ -2,6 +2,7 @@
 title: Pocket Sprite Laptop Mount
 tags: [3d-printing, diy, handheld, retro-gaming]
 archived: true
+category: tinkering
 ---
 
 I've been playing with this Pocket Sprite a bit lately. It's a tiny ESP32-based device that can emulate Gameboy, NES and various other classic game systems. <!-- more -->

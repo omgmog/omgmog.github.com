@@ -2,6 +2,7 @@
 title: Tablet Mounting Brackets from Scratch
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 Having my printer tethered to my PC is less than ideal, it means the printer has to be quite close to the PC because of the length of the USB cable, so I've been exploring other options.

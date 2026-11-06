@@ -12,6 +12,7 @@ archived_comments:
   date: February 18, 2011
   content: |
     Nothing bad with justified text in itself, if it's used correctly.In the first Smashing Book the text was justified really badly, and the pages had really wide gutters so as a result a lot of the words were split frequently making it hard to read.In the second Smashing Book there are still some issues with the justification, but the gutters are a much better size now so the words are easier to read.The biggest issue I've got with the layout of Smashing Book #2 is that there are pages that are over 60% quoted text, and there is little in the way of spacing between paragraphs, so it makes it hard to read the articles in bite-size chunks.An example:Page from Smashing Book #1 - http://uk.omg.li/4hA6Page from Smashing Book #2 - http://uk.omg.li/4hCo
+category: reviews
 ---
 
 {% include posts/figure.html src="2011-02/cover-crop.jpg" %}{:.center}

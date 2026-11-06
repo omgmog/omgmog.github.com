@@ -3,6 +3,7 @@ title: and it begins
 tags: [life, linux]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 i have the next two weeks off of school, its easter break.. rejoice.

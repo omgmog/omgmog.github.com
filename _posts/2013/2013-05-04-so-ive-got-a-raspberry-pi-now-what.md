@@ -11,6 +11,7 @@ archived_comments:
   date: May 31, 2013
   content: |
     Hi, see here: http://www.raspberrypi.org/...
+category: tinkering
 ---
 I was going to title this post "In which I moan about the Raspberry Pi", read on to find out why.
 

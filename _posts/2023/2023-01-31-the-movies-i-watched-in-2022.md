@@ -2,6 +2,7 @@
 title: The Movies I Watched in 2022
 tags: [jekyll, guide, life]
 comments_issue: 118
+category: data
 syndication:
   - https://social.omgmog.net/2023/i-finally-got-around-to-publishing-a
   - https://indieweb.social/@omgmog/109784861736204017

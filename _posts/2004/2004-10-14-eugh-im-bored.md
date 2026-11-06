@@ -3,6 +3,7 @@ title: "eugh - i'm bored."
 tags: [life, site-related]
 archived: true
 archive: moglenstar.net
+category: blog
 ---
 
 so i've been ill for the last week and a half, missed a bit of college last week because of it, unfortunately...

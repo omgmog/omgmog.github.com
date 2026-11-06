@@ -16,6 +16,7 @@ archived_comments:
   date: August 13, 2015
   content: |
     Thanks! {{ work.title }}is really important. I still used{{ post.title }}in my code. I changed it and now it works thanks!
+category: blog
 ---
 
 {% include posts/figure.html src="jekyllantipatterns.jpg" %}{:.massive.center}

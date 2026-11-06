@@ -3,6 +3,7 @@ title: "css, xhtml, and faking \"jet lag\""
 tags: [web-development]
 archived: true
 archive: moglenstar.net
+category: web
 ---
 
 i was fortunate enough to get today off from college - it's not as if i missed anything..

@@ -2,6 +2,7 @@
 title: Pug, Alpaca, Hodor.
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 I've been going a bit overboard with printing novelty models from Thingiverse lately.<!-- more -->

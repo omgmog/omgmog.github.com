@@ -3,6 +3,7 @@ comments_issue: 74
 title: Reddit imgur to filmot url changer
 tags: [userscripts, reddit]
 archived: true
+category: tools
 ---
 
 Browsing Reddit while at work probably isn't the best thing to do if trying to be productive, but sometimes it's necessary to unwind periodically.

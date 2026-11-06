@@ -8,6 +8,7 @@ archived_comments:
   date: April 09, 2016
   content: |
     a good way~. but i'm just need the src
+category: blog
 ---
 
 I decided that I want to show an image next to posts in my "article list" type pages in Jekyll.

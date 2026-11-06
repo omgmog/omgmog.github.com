@@ -384,6 +384,7 @@ archived_comments:
   date: March 03, 2017
   content: |
     How can I login as root after installing install.sh on a usb and rebooting and entering ctrl + u?What is the command?
+category: tinkering
 ---
 
 I concluded in my [previous post](/post/hands-on-with-the-hp-chromebook-11/) about the HP Chromebook 11 that it's a good device for casually browsing the internet, but it's no replacement for a regular laptop or desktop for getting stuff done.

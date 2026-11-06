@@ -3,6 +3,7 @@ title: "monday.. aaah, monday :)"
 tags: [life]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 had a kinda refreshing sleep last night... its great going to bed knowing you dont have to wake up before 8am in the morning :)

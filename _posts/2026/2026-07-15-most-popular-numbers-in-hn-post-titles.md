@@ -2,6 +2,7 @@
 title: "What's the most popular number in Hacker News titles?"
 comments_issue: 163
 tags: [programming, database]
+category: data
 syndication:
   - https://indieweb.social/@omgmog/116924031058781986
   - https://social.omgmog.net/2026/new-blog-post-whats-the-most-popular

@@ -3,6 +3,7 @@ comments_issue: 18
 title: Building JavaScript arrays from HTML using regular expressions
 tags: [programming, jquery]
 archived: true
+category: web
 ---
 
 Bit of idea ping-pong with [Tomas](http://tmayr.com) this evening, to provide a solution to something he is working on. He had some text in a table cell that needed to be split and put into an array, separating each line into two parts.

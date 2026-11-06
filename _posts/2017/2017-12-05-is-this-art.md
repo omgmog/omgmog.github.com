@@ -2,6 +2,7 @@
 title: Is this art?
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 Well it could be. The printer needs more calibration.

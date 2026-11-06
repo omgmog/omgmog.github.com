@@ -2,6 +2,7 @@
 title: New Printer Standoffs and a Rebuild
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 There are lots of [mods and additions for the Anycubic Kossel on Thingiverse](https://www.thingiverse.com/search?q=anycubic+kossel). I've been looking to reduce the footprint of my 3D printer for a while now as it currently shares the same desk as my PC. I came across a set of standoff legs and immediately downloaded and printed them.<!-- more -->

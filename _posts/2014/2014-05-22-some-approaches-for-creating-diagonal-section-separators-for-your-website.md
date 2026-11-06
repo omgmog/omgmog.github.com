@@ -20,6 +20,7 @@ archived_comments:
   date: June 16, 2016
   content: |
     Wow great info here.
+category: web
 ---
 
 In their simplest form, web pages are made of stacked rectangles. Every [block-level element](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements) takes up as much vertical space as the content requires, and fills as much horizontal space as is available. Additionally, block-level elements can have their width/height specified. When you have absolutely positioned, or floated elements this changes a bit but the rule pretty much sticks.

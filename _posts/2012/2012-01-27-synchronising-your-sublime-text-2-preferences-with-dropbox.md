@@ -32,6 +32,7 @@ archived_comments:
   date: October 05, 2012
   content: |
     One issue to be aware of is related to keystroke bindings. Windows and Mac keystroke bindings are different, so I suggest you do this only if all your computers run the same OS. Yes, I found this out the hard way! There may be a way around this issue but I don't know the solution.
+category: tools
 ---
 
 I use [Sublime Text 2](http://www.sublimetext.com/2) both at work and at home, and it's hard to manually keep my settings/packages in sync.

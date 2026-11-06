@@ -24,6 +24,7 @@ archived_comments:
   date: April 11, 2014
   content: |
     Using javascript to detect the browser for safari works for me.
+category: web
 ---
 Making assumptions during web development is never a good idea -- especially if your assumptions are about the way a new feature will behave across modern browsers. This is an issue because of two things:
 

@@ -16,6 +16,7 @@ archived_comments:
   date: June 17, 2013
   content: |
     Good post... Thanks
+category: blog
 ---
 Adding some functionality to Jekyll to allow integration of YouTube videos is a pretty easy task.
 

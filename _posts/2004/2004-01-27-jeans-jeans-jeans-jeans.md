@@ -3,6 +3,7 @@ title: Jeans jeans jeans jeans
 tags: [life]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 okey, change of plan yesterday...

@@ -3,6 +3,7 @@ title: Exploring OTA firmware updates on the Mangmi Air X
 comments_issue: 124
 tags: [guide, android, handheld]
 
+category: tinkering
 ---
 
 After [reviewing the Mangmi Air X](/post/review-mangmi-air-x/), I got curious about how the firmware updates worked. Mangmi have been pushing updates fairly regularly, which is great to see on a budget device. Officially they release full update packages via Google Drive links, but those have a tendency to disappear over time. I wanted to access the OTA update packages directly and back them up to archive.org alongside the original firmware.

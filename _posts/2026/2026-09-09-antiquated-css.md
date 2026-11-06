@@ -2,6 +2,7 @@
 title: Antiquated CSS and why we needed it
 comments_issue: 169
 tags: [web-development, css]
+category: web
 syndication:
   - https://indieweb.social/@omgmog/117245085725772312
   - https://social.omgmog.net/2026/new-blog-post-antiquated-css-and-why

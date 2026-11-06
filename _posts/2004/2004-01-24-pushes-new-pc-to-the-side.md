@@ -3,6 +3,7 @@ title: "*pushes new pc to the side*"
 tags: [life]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 ok.. no entry for friday.. i was too:

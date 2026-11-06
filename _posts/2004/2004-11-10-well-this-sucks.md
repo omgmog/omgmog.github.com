@@ -3,6 +3,7 @@ title: "well, this sucks."
 tags: [life, web-development]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 i'm finding myself with less and less time lately..

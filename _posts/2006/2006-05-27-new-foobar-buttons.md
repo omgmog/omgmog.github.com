@@ -7,6 +7,7 @@ archived_comments:
 - author: ing
   date: Jun 16th, 2006
   content: cool beans
+category: design
 ---
 
 created some new buttons for foobar2000, based on the playback buttons in windows media player 11.

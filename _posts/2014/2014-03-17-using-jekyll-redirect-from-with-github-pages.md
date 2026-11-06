@@ -3,6 +3,7 @@ title: Using "jekyll-redirect-from" with GitHub Pages
 comments_issue: 84
 tags: [jekyll, github-pages, guide]
 archived: true
+category: blog
 ---
 
 Last week GitHub finally [added support for some useful plugins](https://help.github.com/articles/redirects-on-github-pages) to their implementation of Jekyll used for GitHub Pages.

@@ -24,6 +24,7 @@ archived_comments:
   date: February 14, 2014
   content: |
     using mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmpI get an error: -bash: mysql_install_db: command not found
+category: tools
 ---
 I was having some issues getting MySQL installed on OS X 10.8 Mountain Lion, and then I came across [a useful article](http://madebyhoundstooth.com/blog/install-mysql-on-mountain-lion-with-homebrew/) describing how to do it.
 

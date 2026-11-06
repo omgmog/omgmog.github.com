@@ -24,6 +24,7 @@ archived_comments:
   date: March 22, 2014
   content: |
     dont have appropriate permissions... im on administrator account
+category: tools
 ---
 Out of the blue I started having an issue in my Terminal.app on Lion where downloaded scripts/applications wouldn't run. I first noticed this when trying to setup the Android SDK.
 

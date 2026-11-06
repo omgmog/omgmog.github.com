@@ -2,6 +2,7 @@
 title: A Bit of a Bodge To Make MASSIVE Emoji
 tags: [indieweb, emoji, programming, guide]
 comments_issue: 116
+category: blog
 syndication:
   - https://social.omgmog.net/2022/-i-was-complaining-about-css-not
   - https://indieweb.social/@omgmog/108250071839919233

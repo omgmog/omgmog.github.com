@@ -3,6 +3,7 @@ comments_issue: 61
 title: In which I find a better Imgur screenshot uploading application
 tags: [macos, software, review]
 archived: true
+category: reviews
 ---
 
 ... Well not much of a battle really, rather just some comments on my needs of an Imgur uploader, what I've been using historically, and what I'm now going to be using.

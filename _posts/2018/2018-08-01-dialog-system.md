@@ -2,6 +2,7 @@
 title: A Dialog System
 tags: [pico-8, programming]
 archived: true
+category: games
 ---
 This is a flexible dialog system I've come up with.
 

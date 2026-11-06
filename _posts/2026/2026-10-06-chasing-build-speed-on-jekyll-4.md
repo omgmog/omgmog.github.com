@@ -2,6 +2,7 @@
 title: Chasing build speed on Jekyll 4
 comments_issue: 172
 tags: [jekyll, css, site-related]
+category: blog
 ---
 
 I've been putting off upgrading from Jekyll 3.10. Partly late-adopter habit, partly because my setup worked fine, and a version bump seemed simple enough. I should know better by now. It mostly was.

@@ -3,6 +3,7 @@ title: 3D Printing a new remote control
 comments_issue: 101
 tags: [3d-printing, hardware]
 archived: true
+category: tinkering
 ---
 
 I bought a 3D printer back in November last year and have been steadily filling my home office with 3D-printed miniatures, things to fiddle with, and functional solutions to problems that I didn't realise needed fixing since then.

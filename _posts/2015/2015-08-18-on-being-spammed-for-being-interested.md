@@ -3,6 +3,7 @@ comments_issue: 83
 title: On being spammed for being interested
 tags: [email, git]
 archived: true
+category: life
 ---
 
 The amount of personal data that we give away these days is insane. It's true of a huge number of online services that "free isn't free", and that your personal data is the virtual currency by which you're able to use so many great services for "free".

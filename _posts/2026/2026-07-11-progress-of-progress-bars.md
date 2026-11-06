@@ -2,6 +2,7 @@
 title: "The progress of progress bars"
 comments_issue: 162
 tags: [ux, design, ai]
+category: design
 syndication:
   - https://indieweb.social/@omgmog/116901805087031211
   - https://social.omgmog.net/2026/new-blog-post-about-progress-bars-and

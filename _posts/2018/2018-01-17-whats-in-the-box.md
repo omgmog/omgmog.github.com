@@ -2,6 +2,7 @@
 title: What's in the box?
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 Well it's a bunch of buttons. This is a macro keyboard, by some description.

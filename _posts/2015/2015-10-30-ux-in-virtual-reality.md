@@ -2,6 +2,7 @@
 title: UX in Virtual Reality
 comments_issue: 86
 tags: [vr, ux, design, guide]
+category: games
 ---
 
 {% include posts/figure.html src="maxcardboard.jpg" %}{:.massive.center}

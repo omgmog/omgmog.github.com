@@ -509,6 +509,7 @@ archived_comments:
     [foo_uie_single_column_playlist.zip](http://users.bowie-cass.com/singa/foobar/bin/foo_uie_single_column_playlist.zip)
 
     Enjoy! :)
+category: design
 ---
 
 {% include posts/figure.html src="2006-09/mog_foo.png" %}{:.center}

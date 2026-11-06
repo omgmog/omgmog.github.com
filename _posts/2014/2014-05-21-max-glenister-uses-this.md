@@ -3,6 +3,7 @@ comments_issue: 65
 title: Max Glenister Uses This
 tags: [interview]
 archived: true
+category: life
 ---
 
 This is a Q/A article in the style of "[The Setup](http://usesthis.com/)".

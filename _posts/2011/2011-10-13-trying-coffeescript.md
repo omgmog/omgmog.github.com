@@ -3,6 +3,7 @@ title: "Trying coffeescript"
 tags: [programming]
 archived: true
 archive: blog.omgmog.net
+category: web
 ---
 
 Recently decided to give [coffeescript](http://jashkenas.github.com/coffee-script/) a go, it's nice and syntactically similar to other languages such as [Python](http://www.python.org/).

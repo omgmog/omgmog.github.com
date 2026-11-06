@@ -2,6 +2,7 @@
 title: A custom font
 tags: [pico-8, programming]
 archived: true
+category: games
 ---
 
 Out of the box Pico-8 has one font. It's the utilitarian answer to most problems. 3px by 5px and fairly legible.

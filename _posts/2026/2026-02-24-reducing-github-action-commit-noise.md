@@ -5,6 +5,7 @@ tags: [github-pages, programming, guide, git]
 syndication:
   - https://social.omgmog.net/2026/new-blog-post-reducing-commit-log-noise
   - https://indieweb.social/@omgmog/116131114865197098
+category: blog
 ---
 
 I have a "now playing" widget on my [/now page](/now) that shows the last track scrobbled to Last.fm. It's powered by a [GitHub Actions workflow](https://github.com/omgmog/omgmog.github.com/blob/main/.github/workflows/lastfm.yml) that polls the Last.fm API every hour and commits the result to the repo. It worked fine, but quietly polluted my commit history.

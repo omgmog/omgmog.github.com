@@ -20,6 +20,7 @@ archived_comments:
   date: December 03, 2013
   content: |
     Beautiful guide! Thank you so much.
+category: tinkering
 ---
 
 I had a Nokia N900 when they first came out, this was unfortunately shortly before Android had matured to a usable state, and so I didn't use my Nokia N900 for long.

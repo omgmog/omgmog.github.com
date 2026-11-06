@@ -3,6 +3,7 @@ title: "Google Plus userstyle for Reddit"
 tags: [userscripts, reddit, google]
 archived: true
 archive: blog.omgmog.net
+category: tools
 ---
 
 I created a userstyle for [Reddit](http://www.reddit.com) to make it look more like [Google+](http://plus.google.com) and other redesigned Google sites.

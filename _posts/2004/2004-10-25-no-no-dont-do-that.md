@@ -3,6 +3,7 @@ title: "no, no! dont do that!"
 tags: [windows, linux]
 archived: true
 archive: moglenstar.net
+category: tools
 ---
 
 so, i've just reinstalled windows xp, and did a complete format of my hard drive..

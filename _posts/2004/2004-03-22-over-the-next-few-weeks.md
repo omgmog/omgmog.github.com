@@ -3,6 +3,7 @@ title: over the next few weeks…
 tags: [life, site-related]
 archived: true
 archive: moglenstar.net
+category: blog
 ---
 
 ... i intend to get the site going properly, that means finishing the design and pages …

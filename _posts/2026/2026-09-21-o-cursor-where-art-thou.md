@@ -2,6 +2,7 @@
 title: O cursor, where art thou?
 comments_issue: 170
 tags: [macos, ux]
+category: design
 ---
 
 All too often on my computer, I'll finish typing something, reach for my mouse, and have no idea where the cursor has got to. Not on the monitor I was looking at. Possibly on the laptop screen, but I'd have to turn my head and check. So I do what I always do, shake the mouse until macOS inflates the cursor to the size of a dinner plate, and carry on.

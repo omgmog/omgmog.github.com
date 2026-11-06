@@ -2,6 +2,7 @@
 title: Android Auto on my HR-V's Android 4.0.4 head unit
 comments_issue: 174
 tags: [android, programming]
+category: tinkering
 ---
 
 I recently bought a 2018 Honda HR-V as our family car. It has a 7" touchscreen running Android 4.0.4, a version so old it predates Android Auto by about three years. It runs Android Auto now anyway, thanks to a small app I built over the course of a week.

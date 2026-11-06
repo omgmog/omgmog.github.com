@@ -3,6 +3,7 @@ comments_issue: 34
 title: 'So, I''ve got all of these Raspberry Pi accessories... now what?'
 tags: [raspberry-pi, hardware, diy]
 archived: true
+category: tinkering
 ---
 
 I wrote [back in May](/post/so-ive-got-a-raspberry-pi-now-what/) about having a Raspberry Pi, and very few ideas about what to do with it. Here's an update on the subject.

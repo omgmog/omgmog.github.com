@@ -3,6 +3,7 @@ comments_issue: 30
 title: Imgur Url Changer and pics/funny comment link subreddit remover aka reddit link stuff
 tags: [userscripts, reddit]
 archived: true
+category: tools
 ---
 
 I know, it sure is a catchy name!

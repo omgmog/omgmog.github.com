@@ -3,6 +3,7 @@ comments_issue: 57
 title: Better link underlines with Sass
 tags: [css, web-development, guide]
 archived: true
+category: web
 ---
 
 There has been some talk lately about how iOS 8 has started to handle typography descenders when text is underlined. They've done away with the usual overlapping line intersect in favour of a more aesthetically pleasing line crop.

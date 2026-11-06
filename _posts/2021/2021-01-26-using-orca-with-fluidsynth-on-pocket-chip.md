@@ -2,6 +2,7 @@
 title: Using ORCA with FluidSynth on the Pocket CHIP
 comments_issue: 106
 tags: [chip, guide, linux]
+category: tinkering
 ---
 
 This post is about using the [ORCA](https://hundredrabbits.itch.io/orca) _livecoding playground_ on the [Pocket CHIP](https://en.wikipedia.org/wiki/CHIP_(computer)#Pocket_CHIP_and_Pockulus)

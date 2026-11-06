@@ -3,6 +3,7 @@ title: Site updates
 tags: [site-related]
 archived: true
 archive: moglenstar.net
+category: blog
 ---
 
 Today i decided to make some changes/updates to the site..

@@ -2,6 +2,7 @@
 title: Useful bash aliases for VPS
 tags: [programming, server]
 archived: true
+category: tools
 ---
 
 Some useful `bash` aliases that I use on my VPS':

@@ -8,6 +8,7 @@ archived_comments:
   date: June 22, 2012
   content: |
     This was incredibly helpful, thank you!
+category: tools
 ---
 Using a lot of memory-intensive programs throughout the day, such as Virtualbox virtual machines, Photoshop and numerous browsers each with a couple of handfuls of tabs, you come to realise how bad the memory management in Mac OS X is.
 

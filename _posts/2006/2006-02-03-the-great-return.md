@@ -3,6 +3,7 @@ title: The great return
 tags: [site-related]
 archived: true
 archive: moglenstar.net
+category: blog
 ---
 
 so, moglenstar.net is back.. downtime recently (if anybody noticed, or cares) was because the domain expired..

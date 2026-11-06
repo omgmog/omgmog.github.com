@@ -24,6 +24,7 @@ archived_comments:
   date: September 19, 2014
   content: |
     Will depend entirely on what YouTube serve via the iframe.
+category: web
 ---
 Recently [Jenny](http://jennybroomfield.co.uk) asked me for a way to embed a YouTube video with a custom thumbnail that would play the video when clicked.
 

@@ -27,6 +27,7 @@ archived_comments:
   date: November 01, 2016
   content: |
     How does god eater burst with ppsspp run on this device and what is the best setting for god eater burst?
+category: reviews
 ---
 
 I’m back with another Android console out of China from GPD, the GPD XD. I've had the GPD XD for a couple of weeks now, and to be honest I've been unable to put it down! In short it's a great device for portable gaming, and it also handles my media needs with ease.

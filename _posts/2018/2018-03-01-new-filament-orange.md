@@ -2,6 +2,7 @@
 title: New Filament!
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 It's time for more filament! That PrimaValue Natural is serving me well, but I'm in need of a change of colour. I've still got about 1/2 of the spool left, but it'll be fine so long as I bag it well and stick it in a cupboard.<!-- more -->

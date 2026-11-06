@@ -3,6 +3,7 @@ comments_issue: 64
 title: Testing responsive layouts with the RWD bookmarklet
 tags: [responsive-design, software, web-development]
 archived: true
+category: web
 ---
 
 Lately I've been doing some work with responsive CSS and media queries. This bookmarklet has been very useful. It allows you to switch between four different browser widths (for iPad and iPhone in portrait/landscape orientations).

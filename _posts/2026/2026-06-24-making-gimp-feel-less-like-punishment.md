@@ -2,6 +2,7 @@
 title: Making GIMP feel less like punishment
 comments_issue: 156
 tags: [gimp, macos, design, guide]
+category: design
 ---
 
 [GIMP](https://www.gimp.org/) has always had an interface problem. I'm not blaming the GIMP team (they've built something powerful on a shoestring). They've been clear they're not interested in copying Photoshop wholesale; their [FAQ](https://www.gimp.org/docs/userfaq.html) argues that designing around actual user research beats imitating someone else's interface decisions.

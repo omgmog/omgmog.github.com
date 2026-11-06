@@ -2,6 +2,7 @@
 title: Kitchen Tongs Spacer
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 We've got this pair of wooden kitchen tongs that have been through the dishwasher one too many times and so their binding has lost it's elasticity. To fix this, I quickly modelled and printed a spacer to clip between the tongs, to restore some rigidity.<!-- more -->

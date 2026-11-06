@@ -16,6 +16,7 @@ archived_comments:
   date: May 10, 2012
   content: |
     Thanks for the background! I've been thinking of pulling in some of their less styles for buttons and button groups, but I agree that going 100% bootstrap can result in a pretty "me too" look.
+category: blog
 ---
 
 I decided it was time that I gave some attention to the design of my Jekyll-powered blog. I've been using a slightly modified version of the default Twitter Bootstrap theme since I moved to Jekyll, and that's just not good enough.

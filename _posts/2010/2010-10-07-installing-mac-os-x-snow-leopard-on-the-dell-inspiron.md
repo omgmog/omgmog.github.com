@@ -8,6 +8,7 @@ archived_comments:
   date: November 20, 2014
   content: |
     Any way you can help me with pre installation boot options for Inspiron 1720? I can't even get started.
+category: tinkering
 ---
 
 _This is an update to my [previous guide](/post/installing-os-x-snow-leopard-on-the-dell-inspiron-1525/). I've since changed platform for my site &mdash; and even changed computers &mdash; but there is enough interest in this guide to warrant a re-write, so here we go._

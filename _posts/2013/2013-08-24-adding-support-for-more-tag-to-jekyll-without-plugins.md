@@ -16,6 +16,7 @@ archived_comments:
   date: October 24, 2015
   content: |
     thanks
+category: blog
 ---
 Here's a quick tip for an approach I've started using to split post content at a given point for displaying in an archive page, without using a plugin.
 

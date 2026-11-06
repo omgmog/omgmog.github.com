@@ -10,6 +10,7 @@ archived_comments:
 - author: nostrich
   date: Apr 23rd, 2006
   content: Yeah, nice icon.
+category: design
 ---
 
 I created this utorrent program icon from silk icons by Mark James.

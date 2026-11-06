@@ -19,6 +19,7 @@ archived_comments:
   date: August 22, 2014
   content: |
     Thanks, great post, it fully helped me get set up.
+category: web
 ---
 Sass is a CSS-compatible preprocessor for CSS. It allows you to reduce the amount of duplication and complexity in your CSS by using variables, mixins (functions), nesting, and other cool things that should have existed in the CSS spec from the beginning.
 

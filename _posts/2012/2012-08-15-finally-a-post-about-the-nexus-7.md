@@ -7,6 +7,7 @@ archived_comments:
   date: November 26, 2012
   content: |
     Shame about Worms, hope they update it soon.
+category: reviews
 ---
 I've been putting this post off, and it has been hard. I usually like to declare my love for a new gadget just moments or hours after unboxing it; I've had a lot of tablets over the past couple of years that I've done that with, only to later change my mind, so I thought I'd use the Nexus 7 for a little while and then splooge about how much I love it, here on my blog.
 

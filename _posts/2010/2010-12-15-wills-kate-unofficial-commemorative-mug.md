@@ -3,6 +3,7 @@ title: "Wills & Kate unofficial commemorative mug by Chris Shipton"
 tags: [life]
 archived: true
 archive: blog.omgmog.net
+category: life
 ---
 
 I ordered a nice Wills & Kate royal engagement commemorative mug by Chris Shipton ([www.chrisshipton.com](http://www.chrisshipton.com)) from Zazzle. It arrived today.

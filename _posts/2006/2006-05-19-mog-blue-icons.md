@@ -3,6 +3,7 @@ title: "Mog Blue Icons"
 tags: [pixel-art, icons]
 archived: true
 archive: moglenstar.net
+category: design
 ---
 
 These were an experimental idea I had for some blog/CMS icons. I didn't pursue the idea very far, but what I've done I'm making available.

@@ -2,6 +2,7 @@
 title: Android's 24 hour sideloading wall
 comments_issue: 168
 tags: [android, google, software]
+category: tinkering
 syndication:
   - https://indieweb.social/@omgmog/117212341145889531
   - https://social.omgmog.net/2026/new-post-postandroids-24-hour-sideloading-wall

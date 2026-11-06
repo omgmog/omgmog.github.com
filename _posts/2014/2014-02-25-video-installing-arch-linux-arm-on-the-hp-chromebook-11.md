@@ -16,6 +16,7 @@ archived_comments:
   date: March 17, 2014
   content: |
     You would probably need to cross compile your own 3.9 kernel. My method simply uses the kernel package distributed by http://archlinuxarm.org/
+category: tinkering
 ---
 
 Just to follow up from my earlier post about [Installing Arch Linux on the HP Chromebook 11](/post/installing-arch-linux-arm-on-the-hp-chromebook-11/), I've put together a video of the process to show how simple it really is.

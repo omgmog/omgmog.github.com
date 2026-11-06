@@ -2,6 +2,7 @@
 title: LED Lighting and a Kill Switch
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 For the first (and definitely not the last) modification to my printer, I've added some LED lights. I've used a cheap strip of USB-powered RGB LEDs, and they're held in place around the top of the frame with their adhesive backing and some zip ties (for extra support!)<!-- more -->

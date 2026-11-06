@@ -8,6 +8,7 @@ archived_comments:
   date: October 22, 2010
   content: |
     I see you have eliminated the work element of the regime...
+category: life
 ---
 
 A typical weekday for me:

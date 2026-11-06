@@ -3,6 +3,7 @@ title: "No-hue Icons"
 tags: [pixel-art, icons]
 archived: true
 archive: moglenstar.net
+category: design
 ---
 
 I created these icons for a CMS I'm writing called CMOGS, but I figure if CMOGS is going to be free, why can't these be?

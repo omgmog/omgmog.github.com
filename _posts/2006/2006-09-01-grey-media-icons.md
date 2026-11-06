@@ -3,6 +3,7 @@ title: "Grey Media Icons"
 tags: [pixel-art, icons, software]
 archived: true
 archive: moglenstar.net
+category: design
 ---
 
 I made these to be used with foobar2000, but I guess you could use them anywhere that you need some media-control icons. 24bit PNG, 16x16, goes well with most colours.

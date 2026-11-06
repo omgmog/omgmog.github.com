@@ -12,6 +12,7 @@ archived_comments:
   date: April 23, 2014
   content: |
     One caveat is that if you wrap the stack in a parent div with a background color, that background color will hide the bottom pieces of paper. This is because those are being positioned absolutely with a negative z-index. One way I found to fix this is to add `position: relative; z-index: 0;` to the parent div. Example: http://jsfiddle.net/YZ62u/8/
+category: web
 ---
 This is just a short post about an unobtrusive CSS3 effect that I"ve used on some projects lately. Using the `::before` and `::after` CSS pseudo elements and some CSS3 styles you can make a simple HTML element look like a stack of paper sheets.
 

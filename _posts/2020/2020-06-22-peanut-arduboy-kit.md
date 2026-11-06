@@ -2,6 +2,7 @@
 title: Peanut Arduboy kit
 tags: [hardware, gaming, diy, handheld]
 archived: true
+category: tinkering
 ---
 
 I finally got around to assembling this little [Peanut kit](https://www.tindie.com/products/ampersand/peanut-kit/) that I bought from Tindie a couple of months ago.

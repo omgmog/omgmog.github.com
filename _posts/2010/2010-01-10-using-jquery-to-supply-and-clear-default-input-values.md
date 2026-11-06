@@ -3,6 +3,7 @@ title: Using jQuery to supply and clear default input values
 tags: [jquery, programming, guide]
 archived: true
 archive: omgmog.net
+category: web
 ---
 
 This is a repost of a solution I provided over at the smashing magazine forums. I'm posting it here as it's a pretty useful solution in itself.

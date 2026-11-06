@@ -2,6 +2,7 @@
 title: Garden Bin Hinge Pin
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 The first practical print that I've done.

@@ -32,6 +32,7 @@ archived_comments:
   date: July 10, 2016
   content: |
     I wrote a blog post about the screen resolution http://idleretrogaming.blog...
+category: reviews
 ---
 
 Today I'm refreshed to be reviewing a console that doesn't try to cram too much in to the form factor, but instead tried to focus on doing one thing well.

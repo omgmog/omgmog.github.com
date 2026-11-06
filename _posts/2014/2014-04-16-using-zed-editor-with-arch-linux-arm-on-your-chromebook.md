@@ -3,6 +3,7 @@ comments_issue: 47
 title: Using the Zed editor with Arch Linux ARM on your Chromebook
 tags: [chromebook, arch-linux, software, guide]
 archived: true
+category: tinkering
 ---
 
 I've been using Arch Linux on my HP Chromebook 11 for a little while now. One of the problems I've had with the setup has been that Sublime Text is not available for the ARM architecture.

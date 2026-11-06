@@ -5,6 +5,7 @@ tags: [guide, nintendo, android, retro-gaming]
 syndication:
   - https://social.omgmog.net/2026/postandroid-on-the-nintendo-switch
   - https://indieweb.social/@omgmog/115921132325289714
+category: tinkering
 ---
 
 A banned Switch sitting on a shelf is prime hardware for Android. Turns out the Tegra X1 that powered Breath of the Wild runs a full Android OS surprisingly well.

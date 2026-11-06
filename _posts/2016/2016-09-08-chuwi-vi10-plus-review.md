@@ -19,6 +19,7 @@ archived_comments:
   date: January 09, 2017
   content: |
     It might be my flash drive. I rented old 2.0 one.... and booted... All day lost because of the new flash drive.... O:)
+category: reviews
 ---
 
 {% include posts/figure.html src="2016-09-08/chuwivi10plus.png" %}{:.massive}

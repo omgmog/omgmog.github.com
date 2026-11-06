@@ -2,6 +2,7 @@
 title: Some Notes About Android Virtual Devices
 tags: [android, guide, software]
 archived: true
+category: tools
 ---
 
 ### Running AVD emulator from the Windows command line/Powershell/mingw32

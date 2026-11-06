@@ -3,6 +3,7 @@ title: "Creating the moanlog search form with CSS"
 tags: [css, guide]
 archived: true
 archive: omgmog.net
+category: web
 ---
 
 Styling form elements with CSS is never a fun task. Cross browser differences in how form elements are rendered, coupled with changes in font size and browser capabilities, makes predicting how a form will look, after you've applied a style to it, a hard job.

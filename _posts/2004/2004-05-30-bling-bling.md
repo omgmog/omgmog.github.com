@@ -3,6 +3,7 @@ title: "bling bling."
 tags: [life, hardware]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 damn, i'm broke at the moment.

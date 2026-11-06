@@ -8,6 +8,7 @@ archived_comments:
   date: June 27, 2014
   content: |
     Hi thought I'd post another solution. It's pure javascript and extends Array (not required if you don't want to)This is the fiddle if you'd like to play around. http://jsfiddle.net/spqr_pr...Array.prototype.groupItems = function() { var grouped = {}; for(var i = 0; i < this.length; i++){ grouped[this[i]] ? grouped[this[i]] += 1 : grouped[this[i]] = 1 } return grouped;}Thanks for your posts
+category: web
 ---
 
 Something that took a little while to pull of well while working on the [JS challenge this week](/post/js-challenge-070311/), thought I'd throw it up here as it has its uses practically for grouping like array values with totals:

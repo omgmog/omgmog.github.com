@@ -5,6 +5,7 @@ tags: [android, review, hardware, handheld]
 syndication:
   - https://social.omgmog.net/2026/anbernic-sent-me-an-rg-ds-to
   - https://indieweb.social/@omgmog/116730476793370054
+category: reviews
 ---
 
 Anbernic sent me an [RG DS](https://anbernic.com/products/rgds) to review. It's a clamshell Android handheld designed to evoke the Nintendo DS, running Android 14 on a Rockchip RK3568 with dual 4-inch screens. At around $95 (roughly £75), it sits in the same budget bracket as the [Mangmi Air X I reviewed last year](/post/review-mangmi-air-x/), but where that was a capable general-purpose handheld, this one has a much narrower brief.

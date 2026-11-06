@@ -16,6 +16,7 @@ archived_comments:
   date: September 16, 2014
   content: |
     I had to change the killall command to effectively stop the app.That one did work:sudo killall BBLaunchAgent
+category: tools
 ---
 If you happen to have installed the Blackberry Desktop Software and you want to remove it and it's annoying persistant daemons, you might have discovered that this can only be done by downloading the [70mb installer dmg](http://us.blackberry.com/software/desktop/desktop-mac.html), and running the uninstaller.
 

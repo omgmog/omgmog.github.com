@@ -2,6 +2,7 @@
 title: Tea weather
 comments_issue: 166
 tags: [life, coffee, tea]
+category: life
 syndication:
   - https://indieweb.social/@omgmog/117172035902753556
   - https://social.omgmog.net/2026/feels-like-autumn-is-in-the-air

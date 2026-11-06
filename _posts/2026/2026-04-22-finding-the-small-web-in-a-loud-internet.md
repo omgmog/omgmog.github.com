@@ -5,6 +5,7 @@ tags: [indieweb, life, reddit]
 syndication:
   - https://social.omgmog.net/2026/a-wild-new-blog-post-appears-postfinding-the-small-web-in-a-loud-internetalso
   - https://indieweb.social/@omgmog/116448892851029474
+category: blog
 ---
 
 My daily reading is deliberate at this point. I've settled on a small set of tools that surface the kind of internet I actually want, rather than whatever's performing well today.

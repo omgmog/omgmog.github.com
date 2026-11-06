@@ -3,6 +3,7 @@ title: With a lack of better words..
 tags: [site-related]
 archived: true
 archive: moglenstar.net
+category: blog
 ---
 
 yes, i've installed wordpress, and i'm using a template.. so shoot me.

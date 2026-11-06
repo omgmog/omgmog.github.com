@@ -36,6 +36,7 @@ archived_comments:
   date: April 06, 2014
   content: |
     I just have to thank yo men, thankx a llot, that's why i love Internet, there's allways an answere to what im looking for and free :D
+category: web
 ---
 In the process of rapid prototyping and trying out new CSS styles I often find myself making changes to styles within the inspector in Google Chrome. This works quite well, but I've always had a process like the following:
 

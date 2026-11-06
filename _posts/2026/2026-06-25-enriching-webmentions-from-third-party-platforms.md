@@ -3,6 +3,7 @@ title: Enriching webmentions from third-party platforms
 comments_issue: 157
 tags: [indieweb, jekyll, programming]
 series: webmentions
+category: blog
 syndication:
   - https://indieweb.social/@omgmog/116816101713570207
   - https://social.omgmog.net/2026/new-post-about-webmentions-postenriching-webmentions-from-third-party-platforms

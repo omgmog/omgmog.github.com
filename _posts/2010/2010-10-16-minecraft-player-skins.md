@@ -8,6 +8,7 @@ archived_comments:
   date: January 17, 2011
   content: |
     OMG HAT FORTRESS 2 NICE BRO
+category: games
 ---
 
 So, since I bought Minecraft (during the Halloween update period!), I've been spending a lot of my free time playing it.

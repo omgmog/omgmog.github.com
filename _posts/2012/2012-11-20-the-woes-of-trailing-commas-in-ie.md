@@ -3,6 +3,7 @@ comments_issue: 20
 title: The woes of trailing commas in IE
 tags: [programming, web-development, guide]
 archived: true
+category: web
 ---
 If you leave a trailing comma in your JavaScript code, you're a terrible person. It's right up there with [omitting semicolons](https://github.com/twitter/bootstrap/issues/3057) as far as I'm concerned.
 

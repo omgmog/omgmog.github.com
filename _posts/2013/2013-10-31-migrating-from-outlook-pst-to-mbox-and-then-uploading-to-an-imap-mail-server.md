@@ -12,6 +12,7 @@ archived_comments:
   date: July 03, 2015
   content: |
     To know more about the advanced mbox to pst converter tool is here: http://mbox2pstconverter.com/
+category: tools
 ---
 Microsoft Outlook uses a stupid/proprietary format to store mail locally. This is the burden I had to deal with recently while attempting to rescue mail from a friends dying computer.
 

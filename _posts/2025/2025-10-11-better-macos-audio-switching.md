@@ -5,6 +5,7 @@ tags: [guide, macos, software]
 syndication:
   - https://social.omgmog.net/2025/postbetter-macos-audio-switching
   - https://indieweb.social/@omgmog/115357178600304223
+category: tools
 ---
 
 The built-in audio output menu in macOS has always felt a bit limited. The icons aren’t very helpful, the device names can’t be customised, and if you’ve got a few different outputs, it becomes tricky to quickly tell what’s what.

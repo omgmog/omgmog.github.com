@@ -2,6 +2,7 @@
 title: Installing Ubuntu on MacBookPro 8,2
 tags: [linux, ubuntu, macos, guide]
 archived: true
+category: tinkering
 ---
 
 This MacbookPro8,2 has been through a lot. [I did some small upgrades back in 2012](https://blog.omgmog.net/post/upgrading-my-macbook-pro/), then in 2014 it experienced some issues with the dedicated GPU that many Macbook's of this model experienced.

@@ -3,6 +3,7 @@ title: "while the crowbar gets rusty.."
 tags: [gaming, life]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 i've been playing half-life 2 a lot this weekend, it's an amazing game, kudos goes out to valve for their amazing work on the game

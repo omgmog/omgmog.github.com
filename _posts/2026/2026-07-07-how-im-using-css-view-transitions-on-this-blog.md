@@ -2,6 +2,7 @@
 title: How I'm using CSS View Transitions on this blog
 comments_issue: 161
 tags: [web-development, css]
+category: web
 syndication:
   - https://indieweb.social/@omgmog/116878166704069994
   - https://social.omgmog.net/2026/a-new-post-about-css-view-transitions

@@ -8,6 +8,7 @@ archived_comments:
   date: May 07, 2012
   content: |
     No one expects anything in HTML emails to be honest, as long as they look ok, I don't care, I think it is an interesting technique.
+category: design
 ---
 Recently it was pointed out to me that [Pizza Express](http://www.pizzaexpress.com/) provide a nice fallback for photos on their picture-heavy emails. Take the following example, from a promotional email they sent out earlier this year:
 

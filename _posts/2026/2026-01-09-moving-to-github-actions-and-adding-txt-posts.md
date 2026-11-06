@@ -5,6 +5,7 @@ tags: [jekyll, guide, github-pages, site-related]
 syndication: 
   - https://social.omgmog.net/2026/postmoving-to-github-actions-and-adding-txt-postsas-a-result-of-reading-blog202512a-small-collection-of-text-only-websites-by
   - https://indieweb.social/@omgmog/115865892816110097
+category: blog
 ---
 
 This year I moved the blog from GitHub Pages' built-in Jekyll to a GitHub Actions workflow, then added .txt URL support for posts. Inspired by [Terence Eden's blog post](https://shkspr.mobi/blog/2025/12/a-small-collection-of-text-only-websites/) about text-only websites.

@@ -2,6 +2,7 @@
 title: An Audio Amp v1.0
 tags: [3d-printing, diy, hardware]
 archived: true
+category: tinkering
 ---
 
 My wife and I like to have the radio playing all night in our bedroom. Our radio only has one mono speaker and it sits on one side of the bed which means for it to be audible on both sides of the bed one person has to have a loud speaker next to their pillow.<!-- more -->

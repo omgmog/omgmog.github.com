@@ -2,6 +2,7 @@
 title: "Your forecast is accurate and still wrong"
 comments_issue: 142
 tags: [ux, design]
+category: design
 syndication:
   - https://social.omgmog.net/2026/ive-written-a-new-blog-post-your
   - https://indieweb.social/@omgmog/116216114443295294

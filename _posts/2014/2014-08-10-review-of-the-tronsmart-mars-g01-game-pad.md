@@ -35,6 +35,7 @@ archived_comments:
   date: July 25, 2016
   content: |
     Can some one help me with online portal where this product sells???link or something?https://twitter.com/latesto...
+category: reviews
 ---
 
 A different sort of review today, the [Mars G01 Game Pad from Tronsmart](http://www.tronsmart.com/Item/80).

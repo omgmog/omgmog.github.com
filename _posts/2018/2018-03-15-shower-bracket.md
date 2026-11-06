@@ -2,6 +2,7 @@
 title: Shower Bracket Spacer
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 I'm gradually working my way around the house, looking at little niggling problems and thinking of ways to fix them with 3D printing. Today I addressed an issue in the shower.<!-- more -->

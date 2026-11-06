@@ -3,6 +3,7 @@ title: "Waka Waka - Pacman Moleskine! and some Objective-C"
 tags: [life, programming, gaming]
 archived: true
 archive: blog.omgmog.net
+category: life
 ---
 
 Today my Pacman Moleskine arrived - I'm pretty excited, but I won't be using it until I fill my regular lined Moleskine.

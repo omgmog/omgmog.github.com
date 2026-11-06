@@ -2,6 +2,7 @@
 title: Print in Place Elephant
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 I'm enjoying printing some great models from Thingiverse.

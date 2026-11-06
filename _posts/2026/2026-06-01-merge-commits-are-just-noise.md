@@ -2,6 +2,7 @@
 title: Merge Commits Are Just Noise
 comments_issue: 148
 tags: [guide, programming, git]
+category: tools
 ---
 
 Run `git log --graph` on most team projects and you'll see the problem. Parallel lines everywhere, merge commits that just say "Merge branch 'feature/x' into develop". None of it useful. It's noise.

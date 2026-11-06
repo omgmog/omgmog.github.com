@@ -3,6 +3,7 @@ title: Two posts in one day...
 tags: [life, hardware]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 well, i got the memory problem sorted out.. now all i need is a different graphics card... it turns out the old tnt2 is incompatible with my current setup.. so until i buy a new card...

@@ -5,6 +5,7 @@ tags: [e-ink, android, review, hardware]
 syndication:
   - https://social.omgmog.net/2026/postbigme-b6-color-e-ink-tablet
   - https://indieweb.social/@omgmog/115961174502942417
+category: reviews
 ---
 
 I've owned plenty of Kindles and Android tablets over the years, but I've been curious about colour e-ink for a while - whether it's actually useful or just a _gimmick_.

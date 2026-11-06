@@ -3,6 +3,7 @@ comments_issue: 56
 title: My solution to the JavaScript challenge 07/03/11
 tags: [programming]
 archived: true
+category: web
 ---
 
 Okay so this solution is a bit later than I planned, but a busy working week and lack of motivation toward the end kind of got the better of me. Anyway, here's my solution to the challenge. I'm sure [Tomas](http://tmayr.com) will post his up soon.

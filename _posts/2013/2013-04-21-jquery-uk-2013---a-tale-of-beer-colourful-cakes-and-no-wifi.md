@@ -12,6 +12,7 @@ archived_comments:
   date: July 02, 2013
   content: |
     Well that's cool
+category: web
 ---
 
 Yesterday I attended the second jQuery conference in the UK (the first being last year, which I blogged about [here](/post/jquery-uk-conference-2012/)).

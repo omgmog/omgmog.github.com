@@ -2,6 +2,7 @@
 title: Approaches for a simple state system
 tags: [pico-8, programming]
 archived: true
+category: games
 ---
 
 There are lots of ways to achieve even the most simple goal in programming, and Pico-8 -- even with it's limited nature -- is no different to any other system.

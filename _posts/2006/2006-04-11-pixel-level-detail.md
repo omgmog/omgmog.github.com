@@ -14,6 +14,7 @@ archived_comments:
 - author: max
   date: Apr 12th, 2006
   content: Thanks for the tips Joe, dually noted.
+category: design
 ---
 
 It's probably by fault of my monitor, or the size that I'm attempting to do this, but when pixelling icons, it's hard to make distinguishable icons at less than 16x16 pixels.

@@ -3,6 +3,7 @@ title: Voyeurism
 tags: [life]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 .. i read an article the other day, amongst my web browsing..

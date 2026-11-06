@@ -8,6 +8,7 @@ archived_comments:
   date: April 15, 2011
   content: |
     This is fantastic! Thank you so much!- Tim.
+category: tools
 ---
 
 {% include posts/figure.html src="2011-01/gs-ss-fullmode.jpg" %}{:.center}

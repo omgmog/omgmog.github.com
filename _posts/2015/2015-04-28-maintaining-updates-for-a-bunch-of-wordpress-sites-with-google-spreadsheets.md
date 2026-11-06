@@ -3,6 +3,7 @@ comments_issue: 77
 title: Maintaining updates for a bunch of WordPress sites with Google Spreadsheets
 tags: [guide, google, software]
 archived: true
+category: tools
 ---
 
 Here's a useful trick I've come up with, to maintain a list of WordPress installations and easily see if they're up to date.

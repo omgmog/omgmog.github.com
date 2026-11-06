@@ -2,6 +2,7 @@
 title: Dialing in the Anycubic Kossel
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 Delta style 3D printers can be very fast and accurate, but to get that point you have to do a lot of calibration and "dialing in".

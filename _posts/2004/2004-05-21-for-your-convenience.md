@@ -3,6 +3,7 @@ title: "For your convenience"
 tags: [windows, guide]
 archived: true
 archive: moglenstar.net
+category: tools
 ---
 
 re-installing windows xp is, to be blunt, a pain in the ass.

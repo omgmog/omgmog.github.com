@@ -3,6 +3,7 @@ title: Pointless software
 tags: [software]
 archived: true
 archive: moglenstar.net
+category: tools
 ---
 
 .. what the hell is the point in this songbird crap :\|

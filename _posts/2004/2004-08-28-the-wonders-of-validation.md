@@ -3,6 +3,7 @@ title: The wonders of validation
 tags: [web-development]
 archived: true
 archive: moglenstar.net
+category: web
 ---
 
 [Microsoft.com](http://www.microsoft.com) got a redesign the other day..

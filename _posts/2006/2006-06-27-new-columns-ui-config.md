@@ -16,6 +16,7 @@ archived_comments:
   date: Jul 9th, 2006
   content: 'Spiffy dear. I can’t really say more than that, due to the fact I am still
     wearing off some Grey Goose and Tequila D: Pool parties, ftw.'
+category: design
 ---
 
 I've been working on this for a while, on and off.. it's not too complicated, and it comes with 5 colour schemes!

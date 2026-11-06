@@ -3,6 +3,7 @@ title: "A simple solution for a jQuery animation loop memory leak"
 tags: [jquery, programming, guide]
 archived: true
 archive: blog.omgmog.net
+category: web
 ---
 
 I'm probably stating something very obvious to everybody, but this is something that caused me a couple of hours of confusion.

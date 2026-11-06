@@ -3,6 +3,7 @@ title: "wow thats great."
 tags: [site-related, life]
 archived: true
 archive: moglenstar.net
+category: blog
 ---
 
 the only problem i find with providing the ability to comment on posts, on my site, is that

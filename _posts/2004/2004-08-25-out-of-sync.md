@@ -3,6 +3,7 @@ title: Out of sync
 tags: [life]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 the worst part to summer, is how boring it is.. yeah, ok most of the time the weather is great, and theres always someone willing to go on a bike ride, or what have you, but otherwise, i find myself sat at home, doing .. well, doing really nothing.

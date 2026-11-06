@@ -2,6 +2,7 @@
 title: My Birthday and Problems Printing Spidey
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 It's my Birthday, so I've been printing things for other people (as a way to justify printing stuff!)<!-- more -->

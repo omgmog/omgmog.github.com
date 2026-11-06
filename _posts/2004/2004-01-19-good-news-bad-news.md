@@ -3,6 +3,7 @@ title: Good news bad news
 tags: [life, hardware]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 wow, today has been fun.. well, kinda...

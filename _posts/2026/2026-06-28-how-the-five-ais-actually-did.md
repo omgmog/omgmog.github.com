@@ -2,6 +2,7 @@
 title: How the five AIs actually did
 comments_issue: 158
 tags: [ai, llm, world-cup]
+category: data
 syndication:
   - https://indieweb.social/@omgmog/116827911437742759
   - https://social.omgmog.net/2026/the-group-stage-is-over-and-so

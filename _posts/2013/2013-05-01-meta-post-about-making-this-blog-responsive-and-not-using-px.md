@@ -3,6 +3,7 @@ comments_issue: 63
 title: Meta post about making this blog responsive and not using px
 tags: [responsive-design, css, web-development, jekyll]
 archived: true
+category: blog
 ---
 If you're a returning visitor to _blomg_ you might notice some changes to the design.
 

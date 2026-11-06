@@ -7,6 +7,7 @@ archived_comments:
   date: June 13, 2016
   content: |
     Hi, this function is amazing but faces problem when it has to handle a file path with blank spaces.
+category: tools
 ---
 I arrived at this solution recently when looking to compress a massive print-quality PDF for the web.
 

@@ -3,6 +3,7 @@ title: Lego USB Stick
 tags: [diy, hardware]
 archived: true
 archive: moglenstar.net
+category: tinkering
 ---
 
 This probably isn't a new idea, but i think i executed it nicely..

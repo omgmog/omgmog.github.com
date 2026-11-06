@@ -3,6 +3,7 @@ comments_issue: 73
 title: Getting Notified when a process is using 100% CPU on Mac OS X
 tags: [macos, guide]
 archived: true
+category: tools
 ---
 
 {% include posts/figure.html src="hotmacbook.jpg" %}{:.massive.center}

@@ -2,6 +2,7 @@
 title: Children of Time book review
 tags: [review, life]
 archived: true
+category: reviews
 ---
 
 I've been using Good Reads lately to track what I'm reading ([mostly sci-fi and dystopian](https://www.goodreads.com/user/show/64286273-max-glenister)), and this week I've been reading my first suggestion _from_ Good Reads: [Adrian Tchaikovsky's "Children of Time"](https://www.goodreads.com/book/show/25499718-children-of-time).

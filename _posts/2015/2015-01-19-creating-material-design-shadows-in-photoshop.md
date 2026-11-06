@@ -40,6 +40,7 @@ archived_comments:
   date: January 16, 2017
   content: |
     Thank you! This is super helpful!
+category: design
 ---
 
 Somebody over on [Designer News](https://news.layervault.com/) asked how to re-create the various `z-height` shadow effects from [Google's Material Design](http://www.google.co.uk/design/spec/material-design/introduction.html) in Photoshop.

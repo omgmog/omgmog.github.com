@@ -3,6 +3,7 @@ title: Foobar2000 Tutorial
 tags: [software, guide]
 archived: true
 archive: moglenstar.net
+category: design
 ---
 
 Well, i've started putting together a tutorial for setting up foobar2000. I've seen plenty around, and there are plenty of cryptic foobar wiki's, but none of them made it simple enough. so without the crap, here it is

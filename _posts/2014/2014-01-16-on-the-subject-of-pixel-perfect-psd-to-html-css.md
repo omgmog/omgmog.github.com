@@ -23,6 +23,7 @@ archived_comments:
   date: May 19, 2014
   content: |
     Love this. Web designers with no web experience can be extremely detrimental to a project. I am a true believer that all web designers should have a basic understanding of web fundamentals such as HTML and CSS.I was given a project in illustrator and was expected to construct a pixel perfect design in the browser. The canvas width was not even set to the size expected in the browser. The inconsistency was maddening.We as engineers need to create modular applications. This is true for CSS as well. There needs to be consistency between screens, so we can create an application where we can reuse styles and code. Please do not give us a design where the same parts of the application are designed differently.
+category: web
 ---
 I read an [article](http://blog.teamtreehouse.com/pixel-perfect-front-end-development-matters) on the subject of implementing a PSD design of a website perfectly in HTML/CSS, and without wanting to spend my time writing a lengthy response in the comment form of a blog for it to disappear in to the depths of a blog that I don't visit very regularly, I figured I'd write my thoughts up as a blog post.
 

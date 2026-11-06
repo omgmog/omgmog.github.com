@@ -2,6 +2,7 @@
 title: A menu and state system
 tags: [pico-8, programming]
 archived: true
+category: games
 ---
 I've been playing with state systems lately, and decided to build a menu system to play with going between each state.
 

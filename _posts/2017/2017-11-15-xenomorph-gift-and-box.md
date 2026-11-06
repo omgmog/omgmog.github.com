@@ -2,6 +2,7 @@
 title: Xenomorph Gift and Box
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 It was my friend Dave's birthday, and he loves the Alien movie franchise.

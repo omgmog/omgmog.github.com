@@ -6,6 +6,7 @@ syndication:
     - https://social.omgmog.net/2023/ive-posted-a-short-blog-post-about
     - https://indieweb.social/@omgmog/109896836961993163
 
+category: life
 ---
 
 If you were familiar with [Dingoonity](https://boards.dingoonity.org), you might have noticed by now that I've made the decision to shut down the website.

@@ -3,6 +3,7 @@ comments_issue: 45
 title: Awesome Bash arrays
 tags: [programming, guide]
 archived: true
+category: tools
 ---
 Just some examples of how to do things with Bash arrays, and their analogous examples in Javascript.
 

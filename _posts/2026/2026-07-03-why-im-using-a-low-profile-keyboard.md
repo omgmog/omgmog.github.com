@@ -2,6 +2,7 @@
 title: "Why I'm using a low-profile keyboard (for now)"
 comments_issue: 160
 tags: [hardware, review, macos]
+category: reviews
 ---
 
 For years I was firmly in the mechanical keyboard camp, and specifically a 60% person. No numpad, no function row, no arrow cluster, just the keys I actually used, in a footprint small enough to leave room for the mouse. A handful of boards came and went, but they all had the same shape: clacky, and a bit of a statement piece on the desk. There's still a couple in the photo on my [now page](/now/), left over from that era.

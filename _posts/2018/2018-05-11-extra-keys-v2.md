@@ -2,6 +2,7 @@
 title: Extra small extra macro keys v2.0
 tags: [3d-printing, diy, hardware, programming]
 archived: true
+category: tinkering
 ---
 
 Well I took another look at the design of my macro keys project sooner than I expected. I started over with the design of the 3D-printed part of this project, and then moved the buttons and guts over from the previous version.<!-- more -->

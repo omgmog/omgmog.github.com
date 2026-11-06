@@ -3,6 +3,7 @@ title: "&lt;/summer&gt;"
 tags: [life]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 Well, Tommorow college starts, for me, should be my second year, but it will be my first, as im starting fresh at a new college.

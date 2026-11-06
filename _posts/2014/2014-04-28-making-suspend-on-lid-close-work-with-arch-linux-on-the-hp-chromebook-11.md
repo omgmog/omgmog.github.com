@@ -16,6 +16,7 @@ archived_comments:
   date: November 15, 2016
   content: |
     Thank you very much! Worked for me...
+category: tinkering
 ---
 
 The more time that I spend using Arch Linux on my HP Chromebook 11, the more things I find to tweak and tinker with.

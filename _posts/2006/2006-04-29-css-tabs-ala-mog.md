@@ -10,6 +10,7 @@ archived_comments:
 - author: Tim
   date: May 19th, 2006
   content: Nice one max. Your markup is always squeaky clean!
+category: web
 ---
 
 So i was playing with some css ideas the other day, during a random spur of boredom (ok, well it wasn't that random, infact i could have probably avoided it on account of i knew i would be bored.. but regardless..)

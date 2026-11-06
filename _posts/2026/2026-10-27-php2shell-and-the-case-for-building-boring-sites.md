@@ -2,6 +2,7 @@
 title: PHP2Shell and the case for building boring sites
 comments_issue: 173
 tags: [server, jekyll]
+category: web
 ---
 
 From Wednesday 21 October to the end of the weekend, I was patching an old VPS and moving a handful of sites onto a new one. PHP2Shell finally made the decision for me.

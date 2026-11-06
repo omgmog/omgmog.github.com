@@ -2,6 +2,7 @@
 title: New Filament!
 tags: [3d-printing]
 archived: true
+category: tinkering
 ---
 
 I bought some new filament! The 1kg of black that came with the printer has lasted me about 3 months, and so it was time to buy some more.<!-- more -->

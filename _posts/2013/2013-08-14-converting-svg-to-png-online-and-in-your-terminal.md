@@ -19,6 +19,7 @@ archived_comments:
   date: December 09, 2014
   content: |
     I suppose you should say "Don't blindly follow the instructions" then -- for most people updating and upgrading brew is a good first step, and if it's not they would know otherwise.
+category: tools
 ---
 This post is mostly for my own benefit on the rare occasion that I have to convert SVG files to PNG.
 

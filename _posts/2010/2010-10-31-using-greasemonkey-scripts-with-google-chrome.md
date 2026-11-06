@@ -3,6 +3,7 @@ comments_issue: 21
 title: Using Greasemonkey scripts with Google Chrome
 tags: [software, userscripts, programming, guide]
 archived: true
+category: tools
 ---
 
 This isn't new news, but it's something I've found quite useful.

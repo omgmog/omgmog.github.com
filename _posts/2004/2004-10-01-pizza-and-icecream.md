@@ -3,6 +3,7 @@ title: Pizza & icecream.
 tags: [life]
 archived: true
 archive: moglenstar.net
+category: life
 ---
 
 it was my nephews birthday today, his name is Morgan, and hes 4.

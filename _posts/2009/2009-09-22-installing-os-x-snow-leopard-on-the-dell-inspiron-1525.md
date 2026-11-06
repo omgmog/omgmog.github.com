@@ -57,6 +57,7 @@ archived_comments:
   content: >-
     @Dan – you could boot into verbose safe mode and see if it can continue, use
     the flags "-x -v" at the Chameleon screen
+category: tinkering
 ---
 
 I've had a Dell Inspiron 1525 for about 18 months now. It's not my main computer, so I'm often messing with it.

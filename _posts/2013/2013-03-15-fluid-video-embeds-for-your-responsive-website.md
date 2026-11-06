@@ -11,6 +11,7 @@ archived_comments:
 - author: "Martin Cadoux"
   date: September 06, 2014
   content: Great suggestion, thanks ! It's especially useful when dealing with the \<video\> element on iOS.
+category: web
 ---
 Recently I came across an interesting problem, fluidly scaling iframe/embed code on a responsive design.
 

@@ -38,12 +38,14 @@ defaults:
     values:
       layout: post
       tags: [vr, cardboctober]
+      category: games
       content_type: article
       series: cardboctober
   - scope:
       type: "lwal"
     values:
       layout: post
+      category: lwal
       content_type: article
   - scope:
       type: "pages"

@@ -3,6 +3,7 @@ title: "My first half-week with Kindle"
 tags: [review, hardware]
 archived: true
 archive: blog.omgmog.net
+category: reviews
 ---
 
 I've got lots of gadgets. I love gadgets. I've got a drawer full of portable games, and have a number of other non-game gadgets (though they're mostly all able to play videogames!)

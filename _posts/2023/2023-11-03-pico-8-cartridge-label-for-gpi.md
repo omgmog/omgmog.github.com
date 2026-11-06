@@ -2,6 +2,7 @@
 title: Pico-8 Cartridge Label for GPi Case
 tags: [pico-8, raspberry-pi, retro-gaming, diy]
 archived: true
+category: tinkering
 ---
 
 The [GPi Case](https://retroflag.com/GPi-CASE.html) is a fancy case for the Raspberry Pi Zero that gives you a screen, speaker, buttons and battery in a design reminiscent of the original DMG-001 Classic Game Boy. I've got mine set up to emulate some old game consoles. It's great.

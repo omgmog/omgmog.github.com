@@ -8,6 +8,7 @@ archived_comments:
   date: March 18, 2012
   content: |
     I wanna give you kids.
+category: tools
 ---
 I wrote briefly about my [install-all-firefox shell script](/post/bash-script-to-install-all-major-versions-of-firefox-on-osx/) back in December last year. Since then the script has received a complete rewrite, and some new features.
 

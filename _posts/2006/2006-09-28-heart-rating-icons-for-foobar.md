@@ -3,6 +3,7 @@ title: "heart rating icons for foobar"
 tags: [software, pixel-art]
 archived: true
 archive: moglenstar.net
+category: design
 ---
 
 {% include posts/figure.html src="2006-09/rating_hearts_preview.png" %}{:.center}

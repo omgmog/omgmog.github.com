@@ -3,6 +3,7 @@ title: A Foray Into Home Automation
 comments_issue: 102
 tags: [hardware, diy, raspberry-pi]
 archived: true
+category: tinkering
 ---
 
 This is an overview of why and how I decided to automate part of my home, and build my first IoT device...
