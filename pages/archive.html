@@ -55,7 +55,7 @@ description: A full archive of every post on the blog, sorted by year.
         {% for row in cat_rows %}
         {% assign key = row | split: "|" | last %}
         {% assign cat = site.data.categories[key] %}
-        {% assign n = site.data.all_posts_and_lwal | where: "category", key | size %}
+        {% assign n = site.data.category_counts[key] | default: 0 %}
         <li>
           <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
             <span class="badge" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}"><svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg></span>

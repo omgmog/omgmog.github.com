@@ -52,7 +52,7 @@ layout: core
         {% for entry in site.data.categories %}
         {% assign key = entry[0] %}
         {% if key != page.key %}
-        {% assign count = site.data.all_posts_and_lwal | where: "category", key | size %}
+        {% assign count = site.data.category_counts[key] | default: 0 %}
         <li>
           <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
             <span class="badge" style="--badge-bg: {{ entry[1].colour }}; --badge-ink: {{ entry[1].ink }}"><svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg></span>

@@ -4,7 +4,7 @@ title: Start here
 ---
 
 {% assign topic_max = 1 %}
-{% for c in site.data.categories %}{% assign n = site.data.all_posts_and_lwal | where: "category", c[0] | size %}{% if n > topic_max %}{% assign topic_max = n %}{% endif %}{% endfor %}
+{% for c in site.data.categories %}{% assign n = site.data.category_counts[c[0]] | default: 0 %}{% if n > topic_max %}{% assign topic_max = n %}{% endif %}{% endfor %}
 <div class="start-top">
   <div class="start-top__clip" aria-hidden="true"></div>
   <header class="archive-head">
@@ -20,7 +20,7 @@ title: Start here
         {% for c in site.data.categories %}
         {% assign key = c[0] %}
         {% assign cat = c[1] %}
-        {% assign n = site.data.all_posts_and_lwal | where: "category", key | size %}
+        {% assign n = site.data.category_counts[key] | default: 0 %}
         <li>
           <a class="token" href="/category/{{ key }}/" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}; --token-size: {{ n | times: 2.0 | divided_by: topic_max | plus: 2.5 }}rem">
             <svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg>
@@ -53,7 +53,7 @@ title: Start here
   <ul class="topic-grid topic-grid--3" role="list">
     {% for key in site.data.starthere.more_topics %}
     {% assign cat = site.data.categories[key] %}
-      {% assign count = site.data.all_posts_and_lwal | where: "category", key | size %}
+      {% assign count = site.data.category_counts[key] | default: 0 %}
     <li>
       <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
         <span class="badge badge--lg" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">

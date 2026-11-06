@@ -237,7 +237,7 @@ layout: core
         </span>
         <div class="card__head-text">
           <h3 class="card__title"><a href="/category/{{ page.category }}/">{{ cat.name }}</a></h3>
-          <span class="meta">{% assign cat_count = site.data.all_posts_and_lwal | where: "category", page.category | size %}{{ cat_count }} post{% unless cat_count == 1 %}s{% endunless %}</span>
+          <span class="meta">{% assign cat_count = site.data.category_counts[page.category] | default: 0 %}{{ cat_count }} post{% unless cat_count == 1 %}s{% endunless %}</span>
         </div>
       </div>
       <p class="card__summary">{{ cat.description }}</p>
@@ -264,8 +264,9 @@ layout: core
     <section aria-labelledby="recent-heading">
       <h2 id="recent-heading">Recent</h2>
       <ol class="post-list" role="list">
-        {% assign recentposts = site.data.all_posts | where_exp: "p", "p.url != page.url" | slice: 0, 3 %}
-        {% for rp in recentposts %}
+        {% assign recentposts = site.data.all_posts | slice: 0, 4 %}
+        {% assign shown = 0 %}
+        {% for rp in recentposts %}{% if rp.url == page.url or shown == 3 %}{% continue %}{% endif %}{% assign shown = shown | plus: 1 %}
         {% assign rcat = site.data.categories[rp.category] %}
         <li class="post-item"{% unless rp.category == 'lwal' %} style="--cat: {{ rcat.line | default: rcat.colour }}"{% endunless %}>
           <span class="badge" style="--badge-bg: {{ rcat.colour }}; --badge-ink: {{ rcat.ink }}">
@@ -286,7 +287,7 @@ layout: core
         {% for entry in site.data.categories %}
         {% assign key = entry[0] %}
         {% if key != page.category %}
-        {% assign count = site.data.all_posts_and_lwal | where: "category", key | size %}
+        {% assign count = site.data.category_counts[key] | default: 0 %}
         <li>
           <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
             <span class="badge" style="--badge-bg: {{ entry[1].colour }}; --badge-ink: {{ entry[1].ink }}">
