@@ -1,5 +1,5 @@
 ---
-title: Android Auto on my HR-V's Android 4.0.4 head unit
+title: "Android Auto on my HR-\u2060V's Android 4.0.4 head unit"
 comments_issue: 174
 tags: [android, programming]
 category: tinkering
