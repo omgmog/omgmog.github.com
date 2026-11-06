@@ -1,0 +1,60 @@
+---
+title: Search
+permalink: /search/
+description: Search every post, weekly link roundup and Cardboctober entry.
+---
+<header class="archive-head archive-head--wide">
+  <h1>Search</h1>
+  <div class="split search-band">
+    <div class="split__main">
+      <form class="search-form" role="search" action="/search/">
+        <label class="visually-hidden" for="q">Search the blog</label>
+        <svg aria-hidden="true"><use href="#icon-search"/></svg>
+        <input id="q" name="q" type="search" placeholder="Try &ldquo;webmentions&rdquo; or &ldquo;three.js&rdquo;" autocomplete="off">
+      </form>
+    </div>
+    {% include posts/index-stats.html class="split__aside" %}
+  </div>
+  <p id="search-status" role="status"></p>
+</header>
+
+<div class="split">
+  <div class="split__main">
+    <div id="search-empty">
+      <section aria-labelledby="try-heading">
+        <h2 id="try-heading">Try searching for</h2>
+        <ul class="tag-pills" role="list">
+          {% for t in site.data.sorted_tags limit: 14 %}<li><a class="tag-pill" href="/search/?q={{ t.name | uri_escape }}" data-q="{{ t.name }}">{{ t.name }}</a></li>{% endfor %}
+        </ul>
+      </section>
+      <section aria-labelledby="latest-heading">
+        <h2 id="latest-heading">Latest posts</h2>
+        <ul class="post-list" role="list">
+          {% for post in site.data.all_posts limit: 5 %}{% include posts/post-item.html post=post %}{% endfor %}
+        </ul>
+      </section>
+    </div>
+    <ul class="post-list" id="search-results" role="list" data-cats='{ {% for c in site.data.categories %}"{{ c[0] }}": {"name": {{ c[1].name | jsonify }}, "colour": "{{ c[1].colour }}", "ink": "{{ c[1].ink }}"}{% unless forloop.last %}, {% endunless %}{% endfor %} }'></ul>
+  </div>
+
+  <aside class="split__aside archive-aside">
+    <section aria-labelledby="filter-heading">
+      <h2 id="filter-heading">Categories</h2>
+      <ul class="topic-grid topic-grid--list" role="list">
+        {% for c in site.data.categories %}
+        {% assign key = c[0] %}
+        {% assign cat = c[1] %}
+        <li>
+          <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ cat.line | default: cat.colour }}">
+            <span class="badge" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}"><svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg></span>
+            <span class="topic-tile__text"><span class="topic-tile__name">{{ cat.name }}</span></span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+  </aside>
+</div>
+<link rel="modulepreload" href="/pagefind/pagefind.js">
+<script src="{{ '/assets/search.js' | relative_url }}" type="module"></script>
