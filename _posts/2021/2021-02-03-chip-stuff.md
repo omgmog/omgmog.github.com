@@ -1,5 +1,6 @@
 ---
 title: CHIP Stuff
+series: pocket-chip
 comments_issue: 107
 tags: [chip, guide, linux, hardware]
 category: tinkering

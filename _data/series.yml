@@ -1,4 +1,18 @@
+# Display titles for the `series:` value in a post's front matter. Shown on the series card, the "Part 2 of 5" line
+# and the /series/ page, which lists them in this order. A series with no entry here falls back to its key, capitalised.
+blog-internals:
+  title: How this blog is built
 webmentions:
   title: Webmentions
+five-ais:
+  title: Five AIs and the World Cup
+clockworkpi:
+  title: ClockworkPi handhelds
+mangmi-air-x:
+  title: The Mangmi Air X
+pocket-chip:
+  title: Pocket CHIP
+pico8-game:
+  title: Making a PICO-8 game
 cardboctober:
   title: Cardboctober

@@ -1,0 +1,44 @@
+---
+title: Series
+permalink: /series/
+description: Posts that belong together, grouped and in order.
+---
+{% assign series_count = 0 %}{% assign series_posts_total = 0 %}
+{% for entry in site.data.series %}{% assign n = site.data.all_posts | where: "series", entry[0] | size %}{% if n > 1 %}{% assign series_count = series_count | plus: 1 %}{% assign series_posts_total = series_posts_total | plus: n %}{% endif %}{% endfor %}
+
+<header class="archive-head">
+  <h1>Series</h1>
+  <p class="archive-head__lede">Posts that belong together, grouped and in order.</p>
+  <p class="meta">{{ series_count }} series &middot; {{ series_posts_total }} posts</p>
+</header>
+
+<div class="split">
+  <div class="split__main">
+    {% for entry in site.data.series %}
+    {% assign key = entry[0] %}
+    {% assign sposts = site.data.all_posts | where: "series", key | sort: "date" %}
+    {% if sposts.size > 1 %}
+    {% assign first_m = sposts.first.date | date: "%B %Y" %}{% assign last_m = sposts.last.date | date: "%B %Y" %}
+    <section id="{{ key }}" aria-labelledby="series-{{ key }}">
+      <h2 id="series-{{ key }}">{{ entry[1].title }}</h2>
+      <p class="meta">
+        {{ sposts.size }} posts &middot; {{ first_m }}{% unless first_m == last_m %} to {{ last_m }}{% endunless %}
+        {% if key == "cardboctober" %}&middot; <a href="/cardboctober/">See all the days</a>{% endif %}
+      </p>
+      {% unless key == "cardboctober" %}
+      <ol class="post-list" role="list">
+        {% for post in sposts %}{% include posts/post-item.html post=post noseries=true %}{% endfor %}
+      </ol>
+      {% endunless %}
+    </section>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <aside class="split__aside archive-aside">
+    <section aria-labelledby="jump-heading">
+      <h2 id="jump-heading">All series</h2>
+      {% include posts/series-tiles.html %}
+    </section>
+  </aside>
+</div>

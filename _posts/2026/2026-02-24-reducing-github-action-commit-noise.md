@@ -1,5 +1,6 @@
 ---
 title: Reducing commit log noise caused by a GitHub Action
+series: blog-internals
 comments_issue: 139
 tags: [github-pages, programming, guide, git]
 syndication:

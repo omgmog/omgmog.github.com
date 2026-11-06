@@ -1,5 +1,6 @@
 ---
 title: How the five AIs actually did
+series: five-ais
 comments_issue: 158
 tags: [ai, llm, world-cup]
 category: data

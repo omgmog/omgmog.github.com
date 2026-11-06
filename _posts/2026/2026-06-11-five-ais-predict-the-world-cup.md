@@ -1,5 +1,6 @@
 ---
 title: Five AIs predict the World Cup
+series: five-ais
 comments_issue: 150
 tags: [ai, llm, world-cup]
 syndication:

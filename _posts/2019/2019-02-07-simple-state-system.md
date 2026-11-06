@@ -1,5 +1,6 @@
 ---
 title: Approaches for a simple state system
+series: pico8-game
 tags: [pico-8, programming]
 archived: true
 category: games

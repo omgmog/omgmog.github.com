@@ -1,5 +1,6 @@
 ---
 title: "The Mangmi Air X"
+series: mangmi-air-x
 comments_issue: 123
 tags: [review, handheld, retro-gaming, android]
 syndication:

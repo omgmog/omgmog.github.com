@@ -1,5 +1,6 @@
 ---
 title: Chasing build speed on Jekyll 4
+series: blog-internals
 comments_issue: 172
 tags: [jekyll, css, site-related]
 category: blog

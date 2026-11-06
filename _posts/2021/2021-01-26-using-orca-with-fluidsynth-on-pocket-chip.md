@@ -1,5 +1,6 @@
 ---
 title: Using ORCA with FluidSynth on the Pocket CHIP
+series: pocket-chip
 comments_issue: 106
 tags: [chip, guide, linux]
 category: tinkering

@@ -1,5 +1,6 @@
 ---
 title: A Dialog System
+series: pico8-game
 tags: [pico-8, programming]
 archived: true
 category: games

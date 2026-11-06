@@ -1,5 +1,6 @@
 ---
 title: "GameShell Stuff"
+series: clockworkpi
 comments_issue: 109
 tags: [clockwork-pi, handheld, hardware, diy]
 syndication:

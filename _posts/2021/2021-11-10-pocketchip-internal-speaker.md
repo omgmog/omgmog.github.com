@@ -1,5 +1,6 @@
 ---
 title: Adding an internal speaker to the Pocket CHIP
+series: pocket-chip
 comments_issue: 111
 tags: [chip, guide, hardware, diy]
 category: tinkering

@@ -1,5 +1,6 @@
 ---
 title: Moving to GitHub Actions (and adding .txt posts)
+series: blog-internals
 comments_issue: 126
 tags: [jekyll, guide, github-pages, site-related]
 syndication: 

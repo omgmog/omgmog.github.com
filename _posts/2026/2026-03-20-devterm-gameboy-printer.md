@@ -1,5 +1,6 @@
 ---
 title: I turned my DevTerm into a Game Boy Camera and Printer
+series: clockworkpi
 comments_issue: 143
 tags: [clockwork-pi, hardware, retro-gaming, diy]
 syndication:

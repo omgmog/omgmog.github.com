@@ -1,5 +1,6 @@
 ---
 title: Plugins instead of patches
+series: blog-internals
 comments_issue: 131
 tags: [indieweb, programming, site-related]
 syndication:

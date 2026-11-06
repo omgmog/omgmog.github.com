@@ -1,5 +1,6 @@
 ---
 title: A custom font
+series: pico8-game
 tags: [pico-8, programming]
 archived: true
 category: games

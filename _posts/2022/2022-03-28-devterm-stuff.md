@@ -1,5 +1,6 @@
 ---
 title: "DevTerm Stuff"
+series: clockworkpi
 comments_issue: 113
 tags: [clockwork-pi, hardware, diy, linux]
 syndication:

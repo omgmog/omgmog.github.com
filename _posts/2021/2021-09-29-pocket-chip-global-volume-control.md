@@ -1,5 +1,6 @@
 ---
 title: Adding Global Volume Control to the Pocket CHIP
+series: pocket-chip
 comments_issue: 110
 tags: [chip, guide, linux]
 category: tinkering
