@@ -49,7 +49,6 @@
 {% endif %}
 {% if type contains "iframe" %}
 {% if include.src contains 'youtube.com' or include.src contains 'youtu.be' %}
-{% comment %}Youtube. Make it a lazy loader... {% endcomment %}
 {% if include.src contains '?v=' %}
   {% assign _yt_id = include.src | split: '?v=' | last | split: '&' | first %}
 {% else %}
@@ -57,13 +56,12 @@
 {% endif %}
 {% assign _yt_embed = 'https://www.youtube.com/embed/' | append: _yt_id %}
 <div data-src="{{ _yt_embed }}" class="figure-content placeholder" width="600" height="350">
+{% comment %}hqdefault.jpg exists for every video; the vi_webp/ copy 404s for some, and a <picture> source that 404s does not fall back to the <img>.{% endcomment %}
 <picture>
-  <source srcset="https://i.ytimg.com/vi_webp/{{ _yt_id }}/hqdefault.webp" type="image/webp">
   <img src="https://i.ytimg.com/vi/{{ _yt_id }}/hqdefault.jpg" loading="lazy" alt="">
 </picture>
 </div>
 {% else %}
-{% comment %}Some other sort of iframe then... {% endcomment %}
 <iframe class="figure-content" src="{{ include.src|replace:'http:','' }}" width="600" height="350"></iframe>
 {% endif %}
 {% endif %}

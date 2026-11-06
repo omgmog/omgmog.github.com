@@ -1,14 +1,18 @@
 ---
-title: Links worth a look
 permalink: /lwal/
-description: A weekly roundup of links I shared on [social.omgmog.net](https://social.omgmog.net), with a bit more room to breathe.
+layout: null
+sitemap: false
 ---
-<p>{{ page.description | markdownify }}</p>
-
-<h3 class="wide-h3">All links</h3>
-<ul class="post-list">
-  {% assign lwal_posts = site.lwal | sort: "date" | reverse %}
-  {% for post in lwal_posts %}
-    {% include global/post-list-item.html hide_types=true hide_years=true %}
-  {% endfor %}
-</ul>
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Links worth a look</title>
+  <link rel="canonical" href="{{ '/category/lwal/' | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/category/lwal/' | relative_url }}">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <p>Links worth a look now lives at <a href="{{ '/category/lwal/' | relative_url }}">{{ '/category/lwal/' | absolute_url }}</a>.</p>
+</body>
+</html>

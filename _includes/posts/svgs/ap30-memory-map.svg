@@ -1,11 +1,11 @@
-<svg viewBox="0 0 860 350" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Two-panel diagram: the AP30's 480MB eMMC is divided into a 28.67MB firmware partition, a 234MB unidentified region, and 210MB of internal storage; zooming into the firmware partition shows it splits into roughly 1.4MB of resident application code — containing the OS/driver layer, audio codec dispatch, and the MainMenu/Game UI — followed by codec objects, bitmap/string resources, and padding out to 28.67MB.">
+<svg class="post-svg" viewBox="0 0 860 350" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Two-panel diagram: the AP30's 480MB eMMC is divided into a 28.67MB firmware partition, a 234MB unidentified region, and 210MB of internal storage; zooming into the firmware partition shows it splits into roughly 1.4MB of resident application code — containing the OS/driver layer, audio codec dispatch, and the MainMenu/Game UI — followed by codec objects, bitmap/string resources, and padding out to 28.67MB.">
 <style>
-  text { fill: light-dark(#1a1a1a, #f0f0f0); }
-  .label { fill: light-dark(#1a1a1a, #f0f0f0); opacity: 0.6; }
-  .outline { stroke: light-dark(#1a1a1a, #f0f0f0); }
-  .panel { fill: light-dark(#fafafa, #000000); }
-  .accent { fill: #ffea00; }
-  .accent-text { fill: #000000; }
+  svg.post-svg text { fill: light-dark(#1a1a1a, #f0f0f0);}
+  svg.post-svg .label { fill: light-dark(#1a1a1a, #f0f0f0); opacity: 0.6;}
+  svg.post-svg .outline { stroke: light-dark(#1a1a1a, #f0f0f0);}
+  svg.post-svg .panel { fill: light-dark(#fafafa, #000000);}
+  svg.post-svg .accent { fill: #ffea00;}
+  svg.post-svg .accent-text { fill: #000000;}
 </style>
 
   <!-- ============ PANEL 1: full eMMC ============ -->

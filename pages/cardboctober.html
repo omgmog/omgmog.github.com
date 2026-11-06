@@ -1,14 +1,39 @@
 ---
 title: Cardboctober
 permalink: /cardboctober/
-description: In October 2016 I built a new Google Cardboard VR project every day for a month. Here are all 31 of them.
+description: A month of VR hacks for Google Cardboard, built with JavaScript and Three.js in October 2016.
 ---
-{% assign project = site.data.projects | where:"title","Cardboctober" | first %}
-<p>{{ project.description }}</p>
+{% assign days = site.cardboctober | where_exp: "p", "p.slug != 'cardboctober'" | sort: "date" %}
+{% assign announcement = site.cardboctober | where: "slug", "cardboctober" | first %}
 
-<h3 class="wide-h3">Posts</h3>
-<ul class="post-list">
-  {% for post in site.cardboctober %}
-    {% include global/post-list-item.html hide_types=true hide_years=true %}
+<header class="archive-head">
+  <h1>Cardboctober</h1>
+  <p class="archive-head__lede">I spent October 2016 creating a new VR project every day for Google Cardboard, built with JavaScript and Three.js. These are all {{ days.size }} of them.</p>
+  <div class="archive-head__actions">
+    <a class="btn btn--primary" href="https://cardboctober.github.io/max/"><svg aria-hidden="true"><use href="#icon-rectangle-goggles"/></svg> Try the hacks</a>
+    <a class="btn btn--outline" href="https://github.com/cardboctober/max"><svg aria-hidden="true"><use href="#icon-code-xml"/></svg> Source</a>
+    <a class="btn btn--outline" href="/talk-cardboctober/talk.html"><svg aria-hidden="true"><use href="#icon-presentation"/></svg> The talk</a>
+  </div>
+  <p class="meta">{{ days.size }} hacks &middot; October 2016{% if announcement %} &middot; New here? Start with <a href="{{ announcement.url }}">{{ announcement.title }}</a>{% endif %}</p>
+</header>
+
+<h2 id="days-heading">Day by day</h2>
+<ul class="media-grid media-grid--3" role="list" aria-labelledby="days-heading">
+  {% for post in days %}
+  {% assign day = post.date | date: "%d" %}
+  <li class="media-card">
+    <img class="media-card__img" src="{{ '/images/2016-10/' | append: day | append: '/thumb.jpg' | relative_url }}" alt="" loading="lazy">
+    <div class="media-card__body">
+      <span class="meta">Day {{ day | plus: 0 }} &middot; {{ post.date | date: "%a %-d %b" }}</span>
+      <a class="media-card__title" href="{{ post.url }}">{{ post.title | remove_first: day | remove_first: ": " }}</a>
+      {% if post.has_hack %}
+      <span class="media-card__links">
+        <a class="btn btn--primary btn--sm media-card__link" href="https://cardboctober.github.io/max/{{ day }}/">View hack</a>
+        <a class="btn btn--primary btn--sm media-card__link" href="https://github.com/cardboctober/max/tree/master/{{ day }}/">View source</a>
+        <a class="btn btn--primary btn--sm media-card__link" href="https://cardboctober.github.io/#{{ day }}">On the Cardboctober site</a>
+      </span>
+      {% endif %}
+    </div>
+  </li>
   {% endfor %}
 </ul>

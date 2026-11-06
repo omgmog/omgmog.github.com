@@ -44,9 +44,6 @@ Likes, reposts, and bookmarks are gone from the stream entirely. They used to sh
 
 Interaction counts also appear on the post listing pages now. Since the data is baked into the build, the counts render statically alongside each post title with no JS involved.
 
-{% assign demo_post = site.posts | where: "slug", "adding-support-for-webmentions" | first %}
-{% include global/post-list-item.html hide_years=true hide_types=true post=demo_post tag="div" %}{:.massive}
-
 
 ## Tidying up
 

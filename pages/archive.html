@@ -3,18 +3,78 @@ title: Archive
 permalink: /archive/
 description: A full archive of every post on the blog, sorted by year.
 ---
+{% assign posts = site.data.all_posts %}
+{% assign years = posts | group_by_exp: "p", "p.date | date: '%Y'" %}
 
-{% assign posts = site.posts | concat: site.cardboctober | sort: 'date' | reverse %}
-{% assign previous_year = '' %}
+<header class="archive-head">
+  <h1>{{ page.title }}</h1>
+  <p class="archive-head__lede">Everything I've written here since 2004.</p>
+  <p class="meta">{{ posts.size }} posts</p>
+</header>
 
-{% for post in posts %}
-  {% assign current_year = post.date | date: '%Y' %}
-  {% if current_year != previous_year %}
-    {% if previous_year != '' %}</ul>{% endif %}
-    <h3 class="wide-h3">{{ current_year }}</h3>
-    <ul class="post-list">
-    {% assign previous_year = current_year %}
-  {% endif %}
-  {% include global/post-list-item.html hide_years="true" hide_types="true" %}
-{% endfor %}
-</ul>
+<div class="split">
+  <div class="split__main">
+    {% comment %}Recent years in full; older years are a grid of links to their own pages (/archive/YYYY/).{% endcomment %}
+    {% assign full_from = 2020 %}
+    {% for year in years %}
+    {% assign y = year.name | plus: 0 %}
+    {% if y >= full_from %}
+    <section aria-labelledby="y{{ year.name }}">
+      <h2 id="y{{ year.name }}"><a class="year-link" href="/archive/{{ year.name }}/">{{ year.name }}</a></h2>
+      {% assign months = year.items | group_by_exp: "p", "p.date | date: '%B'" %}
+      {% for month in months %}
+      <h3 class="archive-month">{{ month.name }}</h3>
+      <ul class="post-list" role="list">
+        {% for post in month.items %}{% include posts/post-item.html post=post %}{% endfor %}
+      </ul>
+      {% endfor %}
+    </section>
+    {% endif %}
+    {% endfor %}
+
+    <section aria-labelledby="older-heading">
+      <h2 id="older-heading">Older</h2>
+      <ul class="year-grid" role="list">
+        {% for year in years %}
+        {% assign y = year.name | plus: 0 %}
+        {% if y < full_from %}
+        <li><a class="year-card" href="/archive/{{ year.name }}/"><span class="year-card__year">{{ year.name }}</span><span class="meta">{{ year.items.size }} post{% unless year.items.size == 1 %}s{% endunless %}</span></a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+
+  <aside class="split__aside archive-aside">
+    <section aria-labelledby="filter-heading">
+      <h2 id="filter-heading">Categories</h2>
+      {% assign cat_rows = "" | split: "" %}
+      {% for c in site.data.categories %}{% capture row %}{{ c[1].name }}|{{ c[0] }}{% endcapture %}{% assign cat_rows = cat_rows | push: row %}{% endfor %}
+      {% assign cat_rows = cat_rows | sort_natural %}
+      <ul class="topic-grid topic-grid--list" role="list">
+        {% for row in cat_rows %}
+        {% assign key = row | split: "|" | last %}
+        {% assign cat = site.data.categories[key] %}
+        {% assign n = site.data.all_posts_and_lwal | where: "category", key | size %}
+        <li>
+          <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
+            <span class="badge" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}"><svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg></span>
+            <span class="topic-tile__text"><span class="topic-tile__name">{{ cat.name }}</span></span>
+            <span class="meta">{{ n }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section aria-labelledby="series-heading">
+      <h2 id="series-heading">Series</h2>
+      {% include posts/series-tiles.html %}
+    </section>
+
+    <section aria-labelledby="years-heading">
+      <h2 id="years-heading">Posts by year</h2>
+      {% include posts/year-chart.html all=posts %}
+    </section>
+  </aside>
+</div>

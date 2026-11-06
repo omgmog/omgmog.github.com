@@ -1,0 +1,70 @@
+# Content for the Start here page (pages/index.html).
+#
+# Category names, summaries, colours and icons come from _data/categories.yml (keyed by
+# the same slug). Post titles, dates, read times, excerpts and response counts
+# come from the posts themselves, looked up by URL, so only the choices live here.
+
+intro:
+  title: "Things I&rsquo;m making, fixing and taking apart."
+  lede: >-
+    I've been writing here since 2004, mostly about hardware hacks and retro
+    handhelds, web development and UX, and whatever else I'm tinkering with.
+    If you're new, pick a thread below.
+  about_url: https://omgmog.net/
+  about_label: More about me
+
+# "Pick a thread": shown in this order. The first post is the "Start with"
+# (filled dot, excerpt); the rest follow on the timeline. The line under
+# each card title is the category's `summary` in categories.yml.
+threads:
+  - category: blog
+    posts:
+      - /post/archive-archaeology/
+      - /post/adding-support-for-webmentions/
+      - /post/finding-the-small-web-in-a-loud-internet/
+
+  - category: design
+    posts:
+      - /post/why-cant-i-read-this-picture-book/
+      - /post/your-forecast-is-accurate-and-still-wrong/
+      - /post/o-cursor-where-art-thou/
+
+  - category: reviews
+    posts:
+      - /post/ds-pico-flashcart/
+      - /post/xteink-x4-e-ink-reader/
+      - /post/review-mangmi-air-x/
+
+  - category: web
+    posts:
+      - /post/php2shell-and-the-case-for-building-boring-sites/
+      - /post/antiquated-css/
+      - /post/why-vendor-prefixes-are-still-in-your-css/
+
+  - category: data
+    posts:
+      - /post/most-popular-numbers-in-hn-post-titles/
+      - /post/rebuilding-wordle-stats-from-whatsapp/
+      - /post/every-kickstarter-project-ive-backed/
+
+  - category: tinkering
+    posts:
+      - /post/android-auto-on-an-android-4-head-unit/
+      - /post/a-foray-into-home-automation/
+      - /post/devterm-gameboy-printer/
+
+# "More topics": the categories without a thread, as tiles (badge, name, count).
+more_topics:
+  - games
+  - tools
+  - life
+
+# Side-by-side lists under the threads.
+latest_posts:
+  title: Latest posts
+  limit: 6
+  archive_label: Archive
+
+interactions:
+  title: Interactions
+  limit: 5

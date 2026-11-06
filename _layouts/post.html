@@ -1,66 +1,315 @@
 ---
 layout: core
 ---
-{% assign post = page %}
-{% include posts/webmention-vars.html %}
 
-{% if content contains '<pre' or content contains '<code' %}
-<link rel="stylesheet" href="{{ 'assets/pygments.css' | relative_url }}">
-{% endif %}
-{% if post.archive %}
-<link rel="stylesheet" href="{{ '/assets/eras.css' | relative_url }}">
-{% endif %}
+{% assign cat = site.data.categories[page.category] %}
+{% assign counts = site.data.webmention_counts[page.url] %}
+{% assign total = 0 %}
+{% for pair in counts %}{% assign total = total | plus: pair[1] %}{% endfor %}
 
-{% assign post_year = post.date | date: "%Y" | plus: 0 %}
-{% if post.archive %}
-  {% include posts/era-vars.html %}
-{% else %}
-  {% assign era_class = "" %}{% assign era_notice = "" %}
-{% endif %}
+<div class="split">
+  <article class="split__main h-entry" data-pagefind-body>
+    <span hidden data-pagefind-meta="category:{{ page.category }}"></span>
+    <span hidden data-pagefind-meta="date:{{ page.date | date_to_xmlschema }}"></span>
+    <header class="post-header">
+      <p class="post-header__meta" data-pagefind-ignore>
+        <a class="category-pill" href="/category/{{ page.category }}/" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">
+          <svg aria-hidden="true"><use href="#icon-cat-{{ page.category }}"/></svg>
+          {{ cat.name }}
+        </a>
+        <span class="meta">
+          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+          &bull; {{ page.reading_time }} min read
+          {% if total > 0 %}&bull; <a href="#discussion">{{ total }} interaction{% unless total == 1 %}s{% endunless %}</a>{% endif %}
+        </span>
+      </p>
 
-<div class="post-meta"><time class="dt-published" datetime="{{page.date|date_to_xmlschema}}">{{ page.date|date_to_string}}</time>{% if page.collection == 'lwal' %}<p class="post-subtitle">Links worth a look, week {{ page.slug | split: '-' | last }}</p>{% endif %}{% include interactions/count.html post=page %}<span class="alt-formats">{% if page.alternates %}{% for alt in page.alternates %}<a href="{{ alt.href }}" class="alt-format" title="{{ alt.title }}"><svg aria-hidden="true" focusable="false"><use href="#icon-format"></use></svg></a>{% endfor %}{% endif %}<button type="button" class="alt-format" id="share-post" data-title="{{ page.title | escape }}" data-url="{{ page.url | absolute_url }}" hidden title="Share"><svg aria-hidden="true" focusable="false"><use href="#icon-share-page"></use></svg></button></span></div>
-<h1 class="post-title p-name">{{ page.title }}</h1>
-<a class="u-url" href="{{ page.url | absolute_url }}" hidden></a>
-{% for _s in page.syndication %}{% if _s != "" %}<a class="u-syndication" rel="syndication" href="{{ _s | escape }}" hidden></a>{% endif %}{% endfor %}
-{% if page.tags %}<div class="tags-list">{% for tag in page.tags %}<a href="/tags/{{ tag | slugify }}/" class="tag tag-{{tag|slugify}}">#{{ tag }}</a>{% endfor %}</div>{% endif %}
+      <h1 class="p-name">{{ page.title }}</h1>
+      {% include posts/series-line.html post=page class="series-line--header" %}
+      <a class="u-url" href="{{ page.url | absolute_url }}" hidden></a>
+      <span class="p-author h-card" hidden data-pagefind-ignore><a class="u-url p-name" rel="me" href="{{ site.data.author.home }}">{{ site.author.name }}</a><img class="u-photo" src="{{ site.assets_url }}/images/max-2025.webp" alt=""></span>
+      {% for _s in page.syndication %}{% if _s != "" %}<a class="u-syndication" rel="syndication" href="{{ _s | escape }}" hidden></a>{% endif %}{% endfor %}
 
-{% assign cutoff_year = 2020 | plus: 0 %}
-{% assign old_difference = cutoff_year | minus: post_year %}
+      {% if page.tags.size > 0 %}
+      <ul class="tag-pills" role="list" data-pagefind-ignore>
+        {% for tag in page.tags %}<li><a class="tag-pill" href="/tags/{{ tag | slugify }}/">#{{ tag }}</a></li>{% endfor %}
+      </ul>
+      {% endif %}
+    </header>
 
-{% if era_notice != "" %}
-<blockquote class="archived-notice">{{ era_notice }}</blockquote>
-{% elsif post.archived or old_difference > 0 %}
-<blockquote class="archived-notice">This post was published in {{ post_year }} and is kept here for reference. It may contain information that's outdated or inaccurate.</blockquote>
-{% endif %}
+    {% comment %}Archived posts: a note on where the post came from, and for the old sites' posts a frame in that site's look (assets/src/css/eras.css).{% endcomment %}
+    {% assign post = page %}
+    {% assign post_year = page.date | date: "%Y" | plus: 0 %}
+    {% if page.archive %}{% include posts/era-vars.html %}{% else %}{% assign era_class = "" %}{% assign era_notice = "" %}{% endif %}
+    {% assign old_difference = 2020 | minus: post_year %}
+    {% if era_notice != "" %}
+    <aside class="archived-notice">{{ era_notice }}</aside>
+    {% elsif page.archived or old_difference > 0 %}
+    <aside class="archived-notice">This post was published in {{ post_year }} and is kept here for reference. It may contain information that&rsquo;s outdated or inaccurate.</aside>
+    {% endif %}
 
-{% if era_class != "" %}
-<div class="{{ era_class | strip }}">
-  <div class="era-fragment">
-    <div class="era-fragment-header">
-      <span class="era-fragment-domain">{{ era_label }}</span>
-      {% if era_tagline != "" %}<span class="era-fragment-tagline">{{ era_tagline }}</span>{% endif %}
+    {% if era_class != "" %}
+    <div class="era{{ era_class }}">
+      <div class="era-fragment">
+        <div class="era-fragment-header">
+          <span class="era-fragment-domain">{{ era_label }}</span>
+          {% if era_tagline != "" %}<span class="era-fragment-tagline">{{ era_tagline }}</span>{% endif %}
+          <span class="era-fragment-year">{{ post_year }}</span>
+        </div>
+        <div class="era-fragment-body prose e-content">
+          {{ content }}
+        </div>
+      </div>
     </div>
-    <div class="era-fragment-body {% if post.archived %}archived{% endif %}">{{ content }}</div>
-  </div>
+    {% else %}
+    <div class="prose e-content">
+      {{ content }}
+    </div>
+    {% endif %}
+
+    {% if page.links %}
+    <div class="prose">{% include lwal/links.html %}</div>
+    {% endif %}
+
+    {% if page.collection == "cardboctober" %}
+    {% include posts/cardboctober.html %}
+    {% else %}
+    {% assign cat_prev = page.category_previous %}
+    {% assign cat_next = page.category_next %}
+    {% if cat_prev or cat_next %}
+    <nav class="post-pager" aria-label="More in {{ cat.name }}" data-pagefind-ignore>
+      {% if cat_prev %}
+      <a class="post-pager__link post-pager__link--prev" href="{{ cat_prev.url }}">
+        <span class="post-pager__label"><svg aria-hidden="true"><use href="#icon-arrow-left"/></svg> Previous in {{ cat.name }}</span>
+        <span class="post-pager__title">{{ cat_prev.title }}</span>
+      </a>
+      {% endif %}
+      {% if cat_next %}
+      <a class="post-pager__link post-pager__link--next" href="{{ cat_next.url }}">
+        <span class="post-pager__label">Next in {{ cat.name }} <svg aria-hidden="true"><use href="#icon-arrow-right"/></svg></span>
+        <span class="post-pager__title">{{ cat_next.title }}</span>
+      </a>
+      {% endif %}
+    </nav>
+    {% endif %}
+
+    {% assign related = page.related_posts | slice: 0, 3 %}
+    {% if related.size > 0 %}
+    <section aria-labelledby="related-heading" data-pagefind-ignore>
+      <h2 id="related-heading">Related posts</h2>
+      <ul class="thread-grid" role="list">
+        {% for rp in related %}
+        {% assign rcat = site.data.categories[rp.category] %}
+        {% assign shared_tag = nil %}
+        {% for t in rp.tags %}
+          {% if page.tags contains t %}{% assign shared_tag = t %}{% break %}{% endif %}
+        {% endfor %}
+        <li class="card"{% unless rp.category == 'lwal' %} style="--cat: {{ rcat.line | default: rcat.colour }}"{% endunless %}>
+          <div class="card__head">
+            <span class="badge" style="--badge-bg: {{ rcat.colour }}; --badge-ink: {{ rcat.ink }}">
+              <svg aria-hidden="true"><use href="#icon-cat-{{ rp.category }}"/></svg>
+            </span>
+            <span class="meta">{{ rcat.name }}{% if shared_tag %} &middot; shares #{{ shared_tag }}{% endif %}</span>
+          </div>
+          <a class="post-item__title" href="{{ rp.url }}">{{ rp.title }}</a>
+          <p class="post-item__excerpt">{{ rp.excerpt | strip_html }}</p>
+          <span class="meta">{{ rp.date | date: "%B %Y" }} &bull; {{ rp.reading_time }} min read</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% endif %}
+
+    {% assign feed = page._wm_merged_feed %}
+    {% assign wm_counts = site.data.webmention_counts[page.url] %}
+    {% assign is_open = false %}
+    {% if page._wm_js["gh_state"] == "open" %}{% assign is_open = true %}{% endif %}
+    {% assign has_responses = false %}
+    {% if feed.size > 0 %}{% assign has_responses = true %}{% endif %}
+    {% assign synd_urls = page.syndication %}
+    {% assign has_shares = false %}
+    {% if synd_urls.size > 0 %}{% assign has_shares = true %}{% endif %}
+
+    {% if has_shares %}
+    {% comment %}Copies of this post published elsewhere, just above the Discussion where replies to them end up.{% endcomment %}
+    <div class="chip-row syndication-row">
+      <span class="syndication-row__label">Syndicated on</span>
+      {% include posts/syndication-chips.html urls=synd_urls %}
+    </div>
+    {% endif %}
+    <section id="discussion" data-pagefind-ignore aria-labelledby="discussion-heading"
+      data-targets="{{ site.url }}{{ page.url }}{% for u in page.alternate_urls %}|{{ site.url }}{{ u }}{% endfor %}"
+      data-wm-ids="{{ page._wm_js["wm_ids"] }}" data-gh-ids="{{ page._wm_js["gh_ids"] }}"
+      data-policy="{{ site.data.webmention_policy | jsonify | escape }}"
+      data-avatar="{{ site.assets_url }}/images/mog.svg"
+      data-issue="{{ page.comments_issue }}" data-author="{{ site.author.name }}"
+      data-syndication="{{ page.syndication | join: '|' }}"
+      data-counts='{{ wm_counts | jsonify }}'>
+      <h2 id="discussion-heading">Discussion</h2>
+
+      {% assign likes = page._wm_likes %}
+      {% assign reaction_groups = "like-of|likes|like|icon-heart,repost-of|reposts|repost|icon-repeat-2,bookmark-of|bookmarks|bookmark|icon-bookmark" | split: "," %}
+      {% capture reactions_html %}
+        {% for group in reaction_groups %}
+          {% assign gp = group | split: "|" %}
+          {% assign g_key = gp[1] %}
+          {% assign g_items = likes | where: "wm-property", gp[0] %}
+          {% assign g_total = wm_counts[g_key] | default: 0 | at_least: g_items.size %}
+          {% if g_total > 0 %}
+          <div class="reaction-group" data-type="{{ gp[0] }}">
+            <span class="reaction-group__count"><svg aria-hidden="true"><use href="#{{ gp[3] }}"/></svg> {{ g_total }} {{ gp[2] }}{% unless g_total == 1 %}s{% endunless %}</span>
+            {% if g_items.size > 0 %}
+            <ul class="reaction-group__people" role="list">
+              {% for m in g_items %}
+                {% assign like_url = m.url | default: m["wm-source"] %}
+                {% assign like_domain = like_url | remove_first: "https://" | remove_first: "http://" | split: "/" | first %}
+                {% assign like_name = m.author.name | default: like_domain %}
+                {% assign like_own = m._own %}
+                {% for d in site.data.webmention_policy.own_markers %}
+                  {% if m.author.url contains d or m["wm-source"] contains d %}{% assign like_own = true %}{% endif %}
+                {% endfor %}
+                {% if like_own %}{% assign like_name = site.author.name %}{% endif %}
+                <li title="{{ like_name }}" data-own="{% if like_own %}1{% endif %}">{% include posts/discussion-avatar.html name=like_name is_author=like_own extra_class="discussion-avatar--sm" %}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          {% endif %}
+        {% endfor %}
+      {% endcapture %}
+      {% assign reactions_html = reactions_html | strip %}
+      {% if reactions_html != "" %}<div class="discussion-reactions-bar">{{ reactions_html }}</div>{% endif %}
+
+      {% if has_responses %}
+      <ul class="discussion-feed" role="list">
+        {% assign prev_year = nil %}
+        {% for m in feed %}
+          {% assign this_year = m["sort_date"] | default: m["wm-received"] | default: m["published"] | default: m["created_at"] | date: "%Y" %}
+          {% if this_year != prev_year %}
+          <li class="discussion-year" role="presentation">
+            <span class="discussion-year__dot"></span>{{ this_year }}<span class="discussion-year__rule"></span>
+          </li>
+          {% assign prev_year = this_year %}
+          {% endif %}
+          {% include posts/discussion-item.html item=m %}
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="discussion-none"><svg aria-hidden="true"><use href="#icon-message-circle"/></svg> No interactions yet</p>
+      {% endif %}
+
+      <div class="discussion-reply">
+        <div class="discussion-reply__text">
+          {% if is_open %}
+          <p class="discussion-reply__title">Join the conversation</p>
+          <p class="discussion-reply__hint">Comment on the GitHub issue, or reply from your own site with a Webmention.</p>
+          {% else %}
+          <p class="discussion-reply__title">Comments are closed</p>
+          <p class="discussion-reply__hint">You can still reply from your own site with a Webmention.</p>
+          {% endif %}
+        </div>
+        <div class="discussion-reply__actions">
+          {% if is_open %}<a class="btn btn--primary" href="https://github.com/omgmog/omgmog.github.com/issues/{{ page.comments_issue }}"><svg aria-hidden="true"><use href="#icon-message-circle"/></svg> Comment on GitHub</a>{% endif %}
+          <a class="btn btn--outline" href="https://indieweb.org/Webmention"><svg aria-hidden="true"><use href="#icon-reply"/></svg> Reply with a Webmention</a>
+        </div>
+      </div>
+
+      <p class="meta discussion-fetched">Webmentions last fetched <span class="discussion-fetched__time">{{ site.time | date: "%-d %B %Y, %H:%M" }}</span> <button type="button" class="icon-btn discussion-refresh" title="Check for new replies" aria-label="Check for new replies"><svg aria-hidden="true"><use href="#icon-rotate-cw"/></svg></button><span class="discussion-fetched__status" role="status"></span></p>
+    </section>
+  </article>
+  <script src="{{ '/assets/discussion-refresh.js' | relative_url }}" defer></script>
+
+  <aside class="split__aside">
+    {% if page.series and page.collection != "cardboctober" %}{% include posts/series.html %}{% endif %}
+    <div class="card">
+      <div class="card__head">
+        <span class="badge badge--lg" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">
+          <svg aria-hidden="true"><use href="#icon-cat-{{ page.category }}"/></svg>
+        </span>
+        <div class="card__head-text">
+          <h3 class="card__title"><a href="/category/{{ page.category }}/">{{ cat.name }}</a></h3>
+          <span class="meta">{% assign cat_count = site.data.all_posts_and_lwal | where: "category", page.category | size %}{{ cat_count }} post{% unless cat_count == 1 %}s{% endunless %}</span>
+        </div>
+      </div>
+      <p class="card__summary">{{ cat.description }}</p>
+
+      {% comment %}On a post in a series the series card above is the timeline, so the category card is only its header and summary.{% endcomment %}
+      {% unless page.series and page.collection != "cardboctober" %}
+      <ol class="thread{% if page.category_thread_before %} thread--lead{% endif %}{% unless page.category_thread_after %} thread--closed{% endunless %}" style="--thread-colour: {{ cat.line | default: cat.colour }}">
+        {% for tp in page.category_thread %}
+        {% if tp.url == page.url %}
+        <li class="thread__item thread__item--current">
+          <span class="thread__title" aria-current="page">{{ page.title }}</span>
+        </li>
+        {% else %}
+        <li class="thread__item">
+          <a class="thread__title" href="{{ tp.url }}">{{ tp.title }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ol>
+      {% endunless %}
+
+    </div>
+
+    <section aria-labelledby="recent-heading">
+      <h2 id="recent-heading">Recent</h2>
+      <ol class="post-list" role="list">
+        {% assign recentposts = site.data.all_posts | where_exp: "p", "p.url != page.url" | slice: 0, 3 %}
+        {% for rp in recentposts %}
+        {% assign rcat = site.data.categories[rp.category] %}
+        <li class="post-item"{% unless rp.category == 'lwal' %} style="--cat: {{ rcat.line | default: rcat.colour }}"{% endunless %}>
+          <span class="badge" style="--badge-bg: {{ rcat.colour }}; --badge-ink: {{ rcat.ink }}">
+            <svg aria-hidden="true"><use href="#icon-cat-{{ rp.category }}"/></svg>
+          </span>
+          <div class="post-item__body">
+            <a class="post-item__title" href="{{ rp.url }}">{{ rp.title }}</a>
+            <span class="meta">{{ rp.reading_time }} min read &bull; {{ rp.date | date: "%-d %B %Y" }}</span>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section aria-labelledby="other-categories-heading">
+      <h2 id="other-categories-heading">Other categories</h2>
+      <ul class="topic-grid topic-grid--list" role="list">
+        {% for entry in site.data.categories %}
+        {% assign key = entry[0] %}
+        {% if key != page.category %}
+        {% assign count = site.data.all_posts_and_lwal | where: "category", key | size %}
+        <li>
+          <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
+            <span class="badge" style="--badge-bg: {{ entry[1].colour }}; --badge-ink: {{ entry[1].ink }}">
+              <svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg>
+            </span>
+            <span class="topic-tile__text">
+              <span class="topic-tile__name">{{ entry[1].name }}</span>
+            </span>
+            <span class="meta">{{ count }}</span>
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="author-bio h-card" aria-labelledby="author-heading">
+      <h2 id="author-heading" class="visually-hidden">Written by</h2>
+      <div class="author-bio__figure">
+        <canvas class="shapes author-bio__shape" data-shapes data-clip=".author-bio" data-still-below="0" aria-hidden="true"></canvas>
+        <img class="author-bio__photo u-photo" src="{{ site.assets_url }}/images/max-2025.webp" alt="{{ site.author.name }}" width="900" height="900" loading="lazy">
+      </div>
+      <p class="meta">Written by</p>
+      <p class="author-bio__name p-name">{{ site.author.name }}</p>
+      <p class="author-bio__text p-note">{{ site.data.author.bio }}</p>
+      <ul class="about-contact__list author-bio__links" role="list">
+        {% for u in site.data.author.urls %}
+        <li><a class="about-contact__link u-url" rel="me" href="{{ u.link }}" aria-label="{{ u.label }}" title="{{ u.label }}"><svg aria-hidden="true"><use href="#{{ u.icon }}"/></svg></a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </aside>
 </div>
-{% else %}
-<div class="{% if post.archived %}archived{% endif %}">{{ content }}</div>
-{% endif %}
-
-{% if page.links %}{% include lwal/links.html %}{% endif %}
-{% if page.collection == 'cardboctober' %}{% include posts/cardboctober.html %}{% endif %}
-{% if page.series %}{% include posts/series.html %}{% endif %}
-
-
-{% include posts/webmention-templates.html %}
-{% include posts/webmention-stream.html %}
-
-<script>
-if (navigator.share) {
-    var shareBtn = document.getElementById('share-post');
-    shareBtn.hidden = false;
-    shareBtn.addEventListener('click', function() {
-        navigator.share({ title: shareBtn.dataset.title, url: shareBtn.dataset.url });
-    });
-}
-</script>

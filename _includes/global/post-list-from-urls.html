@@ -1,6 +1,0 @@
-<ul class="post-grid">
-  {% for _url in include.urls %}
-    {% assign post = site.data.posts_by_url[_url] %}
-    {% if post %}{% include global/post-card.html %}{% endif %}
-  {% endfor %}
-</ul>

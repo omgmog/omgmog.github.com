@@ -1,25 +1,18 @@
 name: "Max Glenister"
-bio: "Max Glenister is an interface designer and senior full-stack developer from Oxfordshire. He writes mostly about front-end development and technology."
-bio_html: |
-  <a class="p-name u-url u-uid" href="https://omgmog.net/" rel="me">Max Glenister</a> is an <span class="p-job-title">Interface Designer and Senior Full-stack Developer</span> based in <span class="p-adr"><span class="p-region">Oxfordshire</span></span>. For work he spends his time designing, validating and implementing user interfaces. For fun he tinkers with Virtual Reality, 3D printing, embedded systems, game development and many other things.
+bio: "Max Glenister is an interface designer and full-stack developer with a frontend focus, from Oxfordshire. He writes mostly about front-end development and technology."
 home: "https://omgmog.net"
 avatar: "https://omgmog.net/faceicon.png"
+# Contact links: the post author block (icon only, in this order). Same four as the About page.
 urls:
-  - label: Github
-    link: https://github.com/omgmog
-    icon: icon-github
-  - label: LinkedIn
-    link: https://linkedin.com/in/omgmog
-    icon: icon-linkedin
   - label: Email
     link: mailto:hello@maxglenister.co.uk
     icon: icon-mail
+  - label: LinkedIn
+    link: https://www.linkedin.com/in/omgmog
+    icon: icon-linkedin
   - label: Mastodon
     link: https://indieweb.social/@omgmog
     icon: icon-mastodon
-  - label: Reddit
-    link: https://reddit.com/u/omgmog
-    icon: icon-reddit
-  - label: Discord
-    link: https://discordapp.com/users/omgmog#6206
-    icon: icon-discord
+  - label: GitHub
+    link: https://github.com/omgmog
+    icon: icon-github

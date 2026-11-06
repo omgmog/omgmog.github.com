@@ -6,12 +6,12 @@ module Jekyll
     safe true
     priority :low
 
-    AUTHOR_DOMAINS    = %w[omgmog.net omgmog.github.io twitter.com/omgmog indieweb.social/@omgmog].freeze
-    AUTHOR_GH_LOGIN   = "omgmog".freeze
+    AUTHOR_DOMAINS    = WebmentionPolicy::OWN_MARKERS
+    AUTHOR_GH_LOGIN   = WebmentionPolicy::POLICY["github_login"]
     AUTHOR_DISPLAY    = "Max Glenister".freeze
     CONVERSATIONAL    = %w[in-reply-to mention-of like-of bookmark-of repost-of].freeze
     SITE_DOMAIN       = "blog.omgmog.net".freeze
-    LIMIT             = 10
+    LIMIT             = 5
 
     def generate(site)
       mentions = collect_webmentions(site)
@@ -125,10 +125,10 @@ module Jekyll
         "icon-bookmark"
       elsif mention["wm-property"] == "repost-of"
         "icon-repeat-2"
-      elsif display_name(mention) == (mention.dig("author", "name") || "")
-        "icon-megaphone"
       else
-        "icon-share"
+        # One icon for every plain mention. It used to switch to a megaphone when the mention had a named
+        # author, which read as two kinds of "mentioned". (The megaphone is kept for my own social site.)
+        "icon-share-2"
       end
     end
 
@@ -183,41 +183,52 @@ module Jekyll
         kind = "comment"
         data_attrs = "data-source=\"github\" data-platform=\"#{mention["platform"]}\""
       elsif mention["wm-target"] && mention["author_name"]
-        kind = case mention["wm-property"]
-               when "in-reply-to" then "reply"
-               when "like-of"     then "like"
-               when "bookmark-of" then "bookmark"
-               when "repost-of"   then "repost"
-               else "mention"
-               end
+        wm_type    = case mention["wm-property"]
+                     when "in-reply-to"  then "reply"
+                     when "like-of"      then "like"
+                     when "bookmark-of"  then "bookmark"
+                     when "repost-of"    then "repost"
+                     else "mention"
+                     end
+        css_class  = "activity__item #{wm_type}#{" is-author" if mention["is_author"]}"
         data_attrs = "data-source=\"webmention\" data-platform=\"#{mention["platform"]}\""
       else
         return nil
       end
 
-      post_href = related_post ? related_post.url : mention["post_url"].to_s
-      title     = related_post ? related_post.data["title"].to_s : mention["post_url"].to_s
-      who       = mention["author_name"].to_s
-      what      = case kind
-                  when "comment"  then "#{who} commented on #{title}"
-                  when "reply"    then "#{who} replied to #{title}"
-                  when "like"     then "#{who} liked #{title}"
-                  when "bookmark" then "#{who} bookmarked #{title}"
-                  when "repost"   then "#{who} reposted #{title}"
-                  else "#{who} mentioned #{title}"
-                  end
-      date      = mention["date"].to_s
-      date_str  = begin; Date.parse(date).strftime("%b %d, %Y"); rescue; date; end
-      css_class = "chip-item #{kind}"
-      esc       = ->(v) { CGI.escapeHTML(v.to_s) }
+      post_href   = related_post ? related_post.url : mention["post_url"].to_s
+      post_label  = related_post ? related_post.data["title"].to_s : "<code>#{mention["post_url"]}</code>"
+      post_link   = "<a href=\"#{post_href}\" class=\"post-link\">#{post_label}</a>"
+      # The link goes to wherever the mention lives, which is another site: open it in a new tab and tell search
+      # engines not to follow it. (My own sites, which can appear here when I reply, stay as plain links.)
+      external    = mention["link_url"].to_s =~ %r{\Ahttps?://} && AUTHOR_DOMAINS.none? { |d| mention["link_url"].include?(d) }
+      link_attrs  = external ? " rel=\"nofollow noopener\" target=\"_blank\"" : ""
+      author_link = "<a href=\"#{mention["link_url"]}\"#{link_attrs} class=\"author-link activity__who\">#{mention["author_name"]}</a>"
+      date_str    = begin; Date.parse(mention["date"]).strftime("%-d %B %Y"); rescue; mention["date"].to_s; end
+
+      content = if source == "github"
+        "#{author_link} commented on #{post_link}"
+      elsif mention["author_name"].to_s.empty?
+        "#{post_link} shared on #{author_link}"
+      elsif mention["wm-property"] == "in-reply-to"
+        "#{author_link} replied to #{post_link}"
+      elsif mention["wm-property"] == "like-of"
+        "#{author_link} liked #{post_link}"
+      elsif mention["wm-property"] == "bookmark-of"
+        "#{author_link} bookmarked #{post_link}"
+      elsif mention["wm-property"] == "repost-of"
+        "#{author_link} reposted #{post_link}"
+      else
+        "#{author_link} mentioned #{post_link}"
+      end
 
       <<~HTML.chomp
             <li class="#{css_class}" #{data_attrs}>
-              <a class="chip" href="#{esc.call("#{post_href}#interactions")}" title="#{esc.call(what)} &middot; #{esc.call(date_str)}">
-                <svg class="platform-icon" aria-hidden="true"><use xlink:href="##{mention["icon"]}"></use></svg>
-                <span class="chip-label">#{esc.call(title)}</span>
-                <span class="chip-meta">#{esc.call(what)}, <time datetime="#{esc.call(date)}">#{esc.call(date_str)}</time></span>
-              </a>
+              <svg class="icon interaction-icon" aria-hidden="true"><use xlink:href="##{mention["icon"]}"></use></svg>
+              <div>
+                <p>#{content}</p>
+                <time class="meta" datetime="#{mention["date"]}">#{date_str}</time>
+              </div>
             </li>
       HTML
     end

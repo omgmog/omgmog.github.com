@@ -1,0 +1,95 @@
+---
+title: Now
+permalink: /now/
+last_modified_at: 2026-11-05T15:00:00
+description: What I'm currently up to — projects I'm working on, music I'm listening to, and the gear I'm using day to day.
+---
+{% assign track = site.data.now.lastfm %}
+
+<div class="now-head">
+  <header class="archive-head">
+    <h1>{{ page.title }}</h1>
+    <p class="archive-head__lede">What I'm working on, tinkering with and listening to at the moment, and the gear I'm doing it with. This is a <a href="https://nownownow.com">now page</a>.</p>
+    <p class="meta">Last updated {{ page.last_modified_at | date: "%-d %B %Y" }} &middot; Oxfordshire, UK</p>
+  </header>
+
+  {% if track %}
+  {% assign bars = "6,12,8,14,5,10,13,7,11,4,9,12,6,10,14,8,5,11,7,13,9,6,12,4" | split: "," %}
+  <a class="toast{% if track.now_playing %} toast--playing{% endif %}" href="{{ track.url }}">
+    <span class="toast__head">
+      <span class="toast__logo"><svg aria-hidden="true"><use href="#icon-music"/></svg></span>
+      <b>Last.fm</b>
+      <span>&middot; {% if track.now_playing %}Now playing{% else %}Last listened to{% endif %}</span>
+      {% unless track.now_playing %}<span class="toast__date">{{ track.played_at | date: "%-d %B" }}</span>{% endunless %}
+    </span>
+    <span class="toast__track">
+      <span class="toast__art"><svg aria-hidden="true"><use href="#icon-vinyl"/></svg></span>
+      <span class="toast__text">
+        <span class="toast__title">{{ track.track }}</span>
+        <span class="toast__artist">{{ track.artist }}</span>
+        <span class="toast__album">{{ track.album }}</span>
+      </span>
+    </span>
+    {% if track.now_playing %}<span class="toast__bars" aria-hidden="true">{% for h in bars %}<i style="height: {{ h }}px"></i>{% endfor %}</span>{% endif %}
+  </a>
+  {% endif %}
+</div>
+
+<div class="split">
+  <div class="split__main">
+    {% include posts/figure.html src="now/desk.jpg" alt="My desk" class="using__photo" %}
+
+    <section aria-labelledby="work-heading">
+      <h2 id="work-heading">Work</h2>
+      <p>I'm a Senior Full-stack Developer at <a href="https://consultantconnect.org.uk/">Consultant Connect</a>, working with Django, Angular, Sass and Dart/Flutter. Most of my time still goes on interface design and front-end work.</p>
+    </section>
+
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Side projects</h2>
+      <ul class="media-grid now-projects" role="list">
+        <li class="media-card">
+          <div class="media-card__body">
+            <a class="media-card__title" href="https://carbs.omgmog.net">Carbs calculator</a>
+            <p class="media-card__summary">A React PWA for working out insulin doses from carb intake and current blood glucose. It handles meal and correction boluses, insulin on board, and adjustments for high-fat meals and exercise. Everything stays on-device.</p>
+          </div>
+        </li>
+        <li class="media-card">
+          <div class="media-card__body">
+            <a class="media-card__title" href="https://remotehack.space/live">Airquotes The Podcast Airquotes</a>
+            <p class="media-card__summary">I've edited this short podcast since 2021. It's recorded during each Remote Hack, and every episode is on Spotify.</p>
+            <span class="media-card__links"><a class="btn btn--primary btn--sm media-card__link" href="https://remotehack.space">Remote Hack</a></span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="tinkering-heading">
+      <h2 id="tinkering-heading">Tinkering</h2>
+      <p>Handhelds and phones, mostly: taking things apart, flashing them with something else, and seeing what I can get running on them.</p>
+      <p class="now-cta"><a class="btn btn--primary" href="/category/tinkering/"><svg aria-hidden="true"><use href="#icon-cat-tinkering"/></svg> Read the tinkering posts</a></p>
+    </section>
+
+    <section aria-labelledby="writing-heading">
+      <h2 id="writing-heading">Writing</h2>
+      <p>A post here most weeks, plus <a href="/lwal/">Links Worth a Look</a> every Monday, rounding up what I've shared on <a href="https://social.omgmog.net">social.omgmog.net</a>.</p>
+      <p class="now-cta"><a class="btn btn--primary" href="/"><svg aria-hidden="true"><use href="#icon-compass"/></svg> Start reading</a></p>
+    </section>
+  </div>
+
+  <aside class="split__aside">
+    <section aria-labelledby="using-heading">
+      <h2 id="using-heading">Using</h2>
+      <ul class="using" role="list">
+        {% for item in site.data.now.hardware %}
+        <li class="using__group">
+          <span class="using__label"><span class="badge" style="--badge-bg: var(--ink-a12); --badge-ink: var(--ink)"><svg aria-hidden="true"><use href="#icon-{{ item.icon }}"/></svg></span> {{ item.title }}</span>
+          <ul>
+            {% if item.value %}<li>{{ item.value | markdownify | remove: "<p>" | remove: "</p>" }}</li>{% endif %}
+            {% for v in item.values %}<li>{{ v | markdownify | remove: "<p>" | remove: "</p>" }}</li>{% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </aside>
+</div>

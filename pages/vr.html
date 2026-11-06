@@ -3,36 +3,63 @@ title: VR Stuff
 permalink: /vr/
 description: VR experiments, talks, and projects built with web technologies since 2015.
 ---
-<p>I've been building VR experiences since 2015, back when WebVR was still finding its feet. I've given talks on developing immersive web experiences, and in 2016 I set myself a challenge: create a new VR project every day for a month. <a href="/cardboctober">I actually did it.</a></p>
+{% assign talks = site.data.vr.talks | sort: "date" | reverse %}
+{% assign vr_projects = site.data.projects | where: "vr", true | reverse %}
+{% assign vr_posts = site.tags.vr %}
+{% assign cardboctober_days = site.cardboctober | where_exp: "p", "p.slug != 'cardboctober'" %}
 
-<p>I'm interested in what's possible when you combine VR with web technologies. The accessibility, the immediacy, the weird experimental stuff you can't do anywhere else. This is where I document the experiments, talks, and projects that came out of that.</p>
+<header class="archive-head">
+  <h1>{{ page.title }}</h1>
+  <p class="archive-head__lede">I started building VR on the web in 2015, back when WebVR was still finding its feet. These are the talks, experiments and projects that came out of it.</p>
+  <p class="meta">{{ talks.size }} talks &middot; {{ vr_projects.size }} projects &middot; {{ cardboctober_days.size }} Cardboctober hacks &middot; {{ vr_posts.size }} posts</p>
+</header>
 
-<h3 class="wide-h3">Talks</h3>
-<ul class="post-grid">
-  {% for item in site.data.vr.talks %}
-    {% include global/data-card.html item=item %}
+<a class="feature-banner" href="/cardboctober/">
+  <svg class="feature-banner__logo" aria-hidden="true"><use href="#icon-rectangle-goggles"/></svg>
+  <span class="feature-banner__text">
+    <span class="feature-banner__title">Cardboctober</span>
+    <span>A new Google Cardboard VR hack every day for October 2016.</span>
+  </span>
+  <span class="feature-banner__more">See all {{ cardboctober_days.size }} <svg aria-hidden="true"><use href="#icon-arrow-right"/></svg></span>
+</a>
+
+<section aria-labelledby="talks-heading">
+<h2 id="talks-heading">Talks</h2>
+<ul class="media-grid media-grid--4" role="list">
+  {% for talk in talks %}
+  <li class="media-card">
+    {% if talk.img %}<img class="media-card__img" src="{{ talk.img | prepend: '/images/' | relative_url }}" alt="" loading="lazy">{% endif %}
+    <div class="media-card__body">
+      <a class="media-card__title" href="{{ talk.slides }}">{{ talk.title }}</a>
+      <p class="media-card__summary">{{ talk.summary }}</p>
+      <span class="meta">{{ talk.date | date: "%B %Y" }}</span>
+      {% if talk.source or talk.writeup %}<span class="media-card__links">{% if talk.source %}<a class="btn btn--primary btn--sm media-card__link" href="{{ talk.source }}">Source</a>{% endif %}{% if talk.writeup %}<a class="btn btn--primary btn--sm media-card__link" href="{{ talk.writeup }}">Write-up</a>{% endif %}</span>{% endif %}
+    </div>
+  </li>
   {% endfor %}
 </ul>
+</section>
 
-<h3 class="wide-h3">Projects</h3>
-{% assign vr_projects = site.data.projects | where: "vr", true %}
-<ul class="post-grid">
-  {% for item in vr_projects %}
-    {% include global/data-card.html item=item %}
+<section aria-labelledby="projects-heading">
+<h2 id="projects-heading">Projects</h2>
+<ul class="media-grid media-grid--3" role="list">
+  {% for project in vr_projects %}
+  {% assign img = project.img | first %}
+  <li class="media-card">
+    {% if img %}<img class="media-card__img" src="{{ img | prepend: '/images/' | relative_url }}" alt="" loading="lazy">{% endif %}
+    <div class="media-card__body">
+      <a class="media-card__title" href="{{ project.link }}">{{ project.title }}</a>
+      <p class="media-card__summary">{{ project.description }}</p>
+      {% if project.writeup %}<span class="media-card__links"><a class="btn btn--primary btn--sm media-card__link" href="{{ project.writeup }}">Write-up</a></span>{% endif %}
+    </div>
+  </li>
   {% endfor %}
 </ul>
+</section>
 
-<h3 class="wide-h3">Posts</h3>
-<ul class="post-list">
-  {% assign vr_posts = site.posts | where_exp:"post","post.tags contains 'vr'" %}
-  {% for post in vr_posts %}
-    {% include global/post-list-item.html hide_years=true %}
-  {% endfor %}
+<section aria-labelledby="posts-heading">
+<h2 id="posts-heading">Posts</h2>
+<ul class="post-list" role="list">
+  {% for post in vr_posts %}{% include posts/post-item.html post=post %}{% endfor %}
 </ul>
-
-<h3 class="wide-h3">Cardboctober posts</h3>
-<ul class="post-list">
-  {% for post in site.cardboctober %}
-    {% include global/post-list-item.html hide_years=true hide_types=true %}
-  {% endfor %}
-</ul>
+</section>

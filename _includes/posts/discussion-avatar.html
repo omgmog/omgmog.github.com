@@ -1,0 +1,12 @@
+{% comment %}include.name, include.is_author, include.extra_class. The author gets the mog.svg face on yellow; everyone else a coloured initials square, hue hashed from their name.{% endcomment %}
+{% assign words = include.name | split: " " %}
+{% assign initials = words[0] | slice: 0, 1 %}
+{% if words.size > 1 %}
+  {% assign second = words[1] | slice: 0, 1 %}
+  {% assign initials = initials | append: second %}
+{% endif %}
+{% if include.is_author %}
+  <span class="discussion-avatar discussion-avatar--author{% if include.extra_class %} {{ include.extra_class }}{% endif %}"><img src="{{ site.assets_url }}/images/mog.svg" alt="" width="36" height="36"></span>
+{% else %}
+  <span class="discussion-avatar{% if include.extra_class %} {{ include.extra_class }}{% endif %}" style="background: hsl({{ include.name | hash_hue }}, 55%, 40%)">{{ initials | upcase }}</span>
+{% endif %}

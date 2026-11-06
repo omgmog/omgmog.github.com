@@ -27,45 +27,23 @@ module Jekyll
       WebmentionPolicy.shared_link?(mention)
     end
 
-    # Link-only items from the same host collapse into one chip ("reddit.com
-    # x6") that expands to the individual links, so a host never appears twice.
-    # Called separately for the pointers (mentions) and for the link-only replies.
-    # The group sits where its first item was. That item carries _group_size,
-    # _group_kind and _group_rest; the rest are flagged _grouped so the template
-    # skips them. Flags are cleared first because site.data persists between
-    # regenerations.
-    def group_link_hosts!(feed)
-      feed.each do |m|
-        %w[_group_size _group_kind _group_rest _grouped].each { |k| m.delete(k) }
-      end
-
-      feed.select { |m| groupable?(m) }.group_by { |m| WebmentionPolicy.host_label(m) }.each_value do |items|
-        next if items.size < 2
-        items.first["_group_size"] = items.size
-        items.first["_group_kind"] = items.first["wm-property"] == "in-reply-to" ? "replies" : "mentions"
-        items.first["_group_rest"] = items.drop(1)
-        items.drop(1).each { |m| m["_grouped"] = true }
-      end
-    end
-
     # Rendered as a chip rather than a full row.
     def chip_item?(mention)
       WebmentionPolicy.pointer?(mention) || mention["_mode"] == "link"
     end
 
-    # Chips that are not shares or community posts, so same-host ones can merge.
-    def groupable?(mention)
-      return false if mention["community"] || WebmentionPolicy.shared_link?(mention)
-      return false unless CONVERSATIONAL.include?(mention["wm-property"])
-
-      WebmentionPolicy.pointer?(mention) || mention["_mode"] == "link"
+    def archived_sort_date(comment)
+      Date.parse(comment["date"].to_s).iso8601
+    rescue ArgumentError, TypeError
+      ""
     end
 
     def generate(site)
       wm_data = site.data["webmentions"] || {}
       gh_data = site.data["github_comments"] || {}
 
-      site.posts.docs.each do |post|
+      site.documents.each do |post|
+        next unless post.data["content_type"] == "article"
         next if post.data["published"] == false
 
         keys = [post.url, *post.data["alternate_urls"]].compact.uniq
@@ -74,7 +52,7 @@ module Jekyll
 
         page_mentions.each { |m| m["_mode"] = WebmentionPolicy.mode(m) }
 
-        # Copies of this post that mention it are the "Also on" row, not discussion.
+        # Copies of this post that mention it are the "Syndicated on" row, not discussion.
         synd = WebmentionPolicy.syndication_keys(post.data["syndication"])
 
         wm_feed = page_mentions
@@ -94,14 +72,15 @@ module Jekyll
         static_comments = static_issue&.dig("comments") || []
         gh_state        = static_issue&.dig("state") || "closed"
 
-        by_date = ->(m) { m["sort_date"] || m["wm-received"] || m["created_at"] || "" }
+        by_date = ->(m) { m["sort_date"] || m["wm-received"] || m["published"] || m["created_at"] || "" }
 
         external = wm_feed.sort_by(&by_date)
         pointers, discussion = external.partition { |m| WebmentionPolicy.pointer?(m) }
-        group_link_hosts!(pointers)
-        group_link_hosts!(discussion)
         reply_chips, replies = discussion.partition { |m| chip_item?(m) }
         comments = static_comments.sort_by(&by_date)
+        archived = (post.data["archived_comments"] || []).map do |c|
+          c.merge("sort_date" => archived_sort_date(c))
+        end
 
         # Interactions: shares and link-only mentions (chips), next to the
         # reaction counts. Discussion: link-only replies as chips, then replies
@@ -110,7 +89,12 @@ module Jekyll
         post.data["_wm_shared"]      = pointers
         post.data["_wm_external"]    = reply_chips + replies
         post.data["_wm_comments"]    = comments
-        post.data["_wm_merged_feed"] = pointers + reply_chips + replies + comments
+        # Pointers (_wm_shared) and link-only replies (_wm_reply_chips) are rendered
+        # as chips; the discussion timeline is date-ordered with archived comments.
+        page_mentions.each { |m| m["_pointer"] = false }
+        pointers.each { |m| m["_pointer"] = true }
+        timeline = archived + pointers + reply_chips + replies + comments
+        post.data["_wm_merged_feed"] = timeline.sort_by(&by_date)
         post.data["_wm_likes"]       = wm_likes
         post.data["_wm_js"] = {
           "wm_ids"   => page_mentions.map { |m| m["wm-id"] }.compact.join(","),

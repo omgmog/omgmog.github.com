@@ -1,0 +1,22 @@
+{% comment %}Posts per year as a timeline of bars, newest first. Params: all (every post), current (year, optional).{% endcomment %}
+{% assign sorted = include.all | sort: "date" %}
+{% assign newest = sorted.last.date | date: "%Y" | plus: 0 %}
+{% assign oldest = sorted.first.date | date: "%Y" | plus: 0 %}
+{% assign span = newest | minus: oldest %}
+{% assign by = include.all | group_by_exp: "p", "p.date | date: '%Y'" %}
+{% assign max_n = 1 %}
+{% for g in by %}{% if g.items.size > max_n %}{% assign max_n = g.items.size %}{% endif %}{% endfor %}
+<ol class="year-chart" role="list">
+  {% for i in (0..span) %}
+  {% assign yr = newest | minus: i | append: "" %}
+  {% assign g = by | where: "name", yr | first %}{% assign n = g.items.size | default: 0 %}
+  <li class="year-chart__row{% if n == 0 %} is-empty{% endif %}{% if yr == include.current %} is-current{% endif %}">
+    {% if n > 0 %}<a href="/archive/{{ yr }}/"{% if yr == include.current %} aria-current="page"{% endif %}>{% else %}<span>{% endif %}
+      <i class="year-chart__dot" aria-hidden="true"></i>
+      <b class="year-chart__year">{{ yr }}</b>
+      <span class="year-chart__bar" style="--w: {{ n | times: 100.0 | divided_by: max_n | round: 1 }}%" aria-hidden="true"></span>
+      <span class="year-chart__n">{{ n }}<span class="visually-hidden"> posts</span></span>
+    {% if n > 0 %}</a>{% else %}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ol>

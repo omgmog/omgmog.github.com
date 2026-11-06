@@ -1,6 +1,7 @@
 require "set"
 require "uri"
 require "digest"
+require "yaml"
 
 # Single source of truth for how a webmention may be displayed.
 #
@@ -16,34 +17,15 @@ require "digest"
 #
 # scripts/minimise_webmentions.rb applies the same rules to
 # _data/webmentions.json so personal data we won't display isn't kept in the
-# (public) repo either. assets/interactions.js mirrors silo?/own? for
+# (public) repo either. assets/discussion-refresh.js mirrors silo?/own? for
 # mentions fetched live in the browser; keep the two in step.
 module WebmentionPolicy
-  OWN_MARKERS = %w[
-    omgmog.net
-    omgmog.github.io
-    twitter.com/omgmog
-    indieweb.social/@omgmog
-  ].freeze
-
-  # Hosts whose mentions arrive via a bridge or a silo rather than from the
-  # author's own site. Matches the host and any subdomain (bsky.brid.gy).
-  SILO_HOSTS = %w[
-    brid.gy
-    bsky.app
-    twitter.com
-    x.com
-    reddit.com
-    news.ycombinator.com
-    lobste.rs
-    indieweb.social
-  ].freeze
-
-  # Status URLs on fediverse servers (Mastodon, GoToSocial, Lemmy). A server
-  # that sends a webmention on a user's behalf isn't the user choosing to.
-  FEDIVERSE_PATH = %r{\A/(@[^/]+/(statuses/)?(\d+|[0-9A-HJKMNP-TV-Z]{26})|users/[^/]+/statuses/\d+|post/\d+|comment/\d+)/?\z}
-
-  REACTIONS = %w[like-of bookmark-of repost-of].freeze
+  # The lists live in _data/webmention_policy.yml, shared with the page and the browser script.
+  POLICY = YAML.load_file(File.expand_path("../_data/webmention_policy.yml", __dir__)).freeze
+  OWN_MARKERS = POLICY["own_markers"].freeze
+  SILO_HOSTS  = POLICY["silo_hosts"].freeze
+  REACTIONS   = POLICY["reactions"].freeze
+  FEDIVERSE_PATH = %r{\A/(?:#{POLICY["fediverse_path"]})/?\z}
 
   # What survives minimising a silo mention: enough to count it, date it,
   # link to it and de-duplicate it. Nothing about the person.
@@ -68,7 +50,7 @@ module WebmentionPolicy
   # read: a share on Reddit/HN/Lobsters, a community post, or a mention that
   # is link-only (silo) or arrived without text. These are listed with the
   # reactions under Interactions; replies and mentions with content are the
-  # Discussion. Mirrors isPointer() in assets/interactions.js.
+  # Discussion. Mirrors pointer() in assets/discussion-refresh.js.
   def pointer?(mention)
     return true if shared_link?(mention)
     return false unless mention["wm-property"] == "mention-of"
@@ -173,8 +155,8 @@ module WebmentionPolicy
   # Up to two initials: the first letter of the first and last word ("Justin
   # Sherrill" -> "JS"), or one for a single word. Works on user-perceived
   # characters so emoji and combining marks stay whole. Words that don't start
-  # with a letter or digit ("(he/him)", "|") are skipped. Mirrors initialOf()
-  # in assets/interactions.js.
+  # with a letter or digit ("(he/him)", "|") are skipped. Mirrors initials()
+  # in assets/discussion-refresh.js.
   def initial(name, fallback = "?")
     words = name.to_s.strip.split(/\s+/).reject(&:empty?)
     return fallback if words.empty?
@@ -184,7 +166,7 @@ module WebmentionPolicy
     picks.map { |w| w.scan(/\X/).first }.join.upcase
   end
 
-  # Same arithmetic as hueOf() in assets/interactions.js.
+  # Same arithmetic as hue() in assets/discussion-refresh.js.
   def hue(name)
     name.to_s.each_byte.reduce(7) { |h, b| (h * 31 + b) % 360 }
   end

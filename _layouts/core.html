@@ -37,9 +37,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon-16x16.png' | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
-    <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fjalla-one-v13-latin-regular.woff2' | relative_url }}" crossorigin>
-    <link rel="stylesheet" href="{{ 'assets/style.css' | relative_url }}?v={{ '_sass/core.scss' | file_md5 }}a">
-    <script>(function(){var t=localStorage.getItem('theme');if(t&&t!=='auto')document.documentElement.setAttribute('data-theme',t);})()</script>
+    <link rel="preload" as="font" type="font/woff2" href="{{ site.assets_url }}/fonts/fjalla-one-v13-latin-regular.woff2" crossorigin>
+    <link rel="stylesheet" href="{{ site.assets_url }}/css/main.css">
+    <link rel="stylesheet" href="{{ site.assets_url }}/css/blog.css">
+    {% if page.archive %}<link rel="stylesheet" href="{{ site.assets_url }}/css/eras.css">{% endif %}
+    <script>(function(){var m=document.cookie.match(/(?:^|; )theme=(light|dark|auto)/),t=m?m[1]:null;if(!t){try{t=localStorage.getItem('theme')}catch(e){}}if(t&&t!=='auto')document.documentElement.setAttribute('data-theme',t);})()</script>
+    <script src="{{ site.assets_url }}/js/main.js" defer></script>
 
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="{{ '/feed.xml' | absolute_url }}">
     {% if page.alternates %}
@@ -47,94 +50,80 @@
         <link rel="alternate" type="{{ alternate.type }}" title="{{ alternate.title }}" href="{{ alternate.href }}">
         {% endfor %}
     {% endif %}
+    {% if page.ld_json %}<script type="application/ld+json">{{ page.ld_json | replace: "</", "<\/" }}</script>{% endif %}
 </head>
-<body>
-    <main{% if page.layout == 'post' %} class="h-entry"{% endif %}>
-        <aside class="sidebar sidebar-left">
-            {% include sidebar-header.html %}
-            {% include sidebar-nav.html %}
-        </aside>
-        <div class="page-content{% if page.layout == 'post' %} e-content{% endif %}">{{ content }}</div>
-        <aside class="sidebar sidebar-right">
-            {% include sidebar-theme-toggle.html %}
-            {% include sidebar-author.html %}
-            {% include sidebar-secondary-nav.html %}
-            {% include sidebar-post-nav.html %}
-            {% if page.layout == 'tag' or page.url == '/archive/' %}{% include sidebar-tags.html %}{% endif %}
-            {% include sidebar-webmentions.html %}
-            {% include sidebar-webring.html %}
-        </aside>
-    </main>
-    <footer class="main-footer">
-        <small>&copy; {{ site.posts.last.date | date: "%Y" }}&ndash;{{ site.time | date: "%Y" }} Max Glenister. Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><abbr title="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA</abbr></a>.</small>
-        <small>Last built: {% if site.github.build_revision %}<a href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}">{{ site.time | date_to_long_string }}</a>{% else %}{{ site.time | date_to_long_string }}{% endif %}</small>
+<body class="site">
+  <!-- the icon sprite from last time, so the icons are there on the first paint (main.js refreshes it) -->
+  <script>try{var s=localStorage.getItem('icon-sprite');if(s){var d=document.createElement('div');d.id='icon-sprite';d.hidden=true;d.innerHTML=s;document.body.prepend(d)}}catch(e){}</script>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Left rail: avatar + vertical name (horizontal below 900px) -->
+  <header class="site-name">
+    <a href="https://omgmog.net/" class="site-name__link">
+      <img class="site-name__avatar" src="{{ site.assets_url }}/images/mog.svg" alt="">
+      <span class="site-name__text">Max Glenister</span>
+    </a>
+  </header>
+
+  <div class="site-frame">
+    <!-- Tabs across the three sites; the current one joins the panel -->
+    <div class="site-bar">
+      <nav class="site-tabs" aria-label="Sites">
+        <a href="https://omgmog.net/">About</a>
+        <a href="https://blog.omgmog.net/" aria-current="page">Blog</a>
+        <a href="https://social.omgmog.net/">Social</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Theme: auto">
+        <svg class="theme-icon theme-icon--auto" aria-hidden="true"><use href="#icon-sun-moon"/></svg>
+        <svg class="theme-icon theme-icon--light" aria-hidden="true"><use href="#icon-sun"/></svg>
+        <svg class="theme-icon theme-icon--dark" aria-hidden="true"><use href="#icon-moon"/></svg>
+      </button>
+    </div>
+
+    <div class="panel">
+      <!-- Per-site sub-nav: Blog = Start here / Archive / Now / LWAL / Search,
+           Social = Everything / Links / Videos / Notes, About = none -->
+      <nav class="subnav" aria-label="Blog">
+        <a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>
+          <svg aria-hidden="true"><use href="#icon-compass"/></svg>
+          <span class="subnav__label">Start<span class="subnav__more"> here</span></span>
+        </a>
+        <a href="/archive/"{% if page.url == "/archive/" or page.url contains "/archive/" %} aria-current="page"{% endif %}>
+          <svg aria-hidden="true"><use href="#icon-archive"/></svg>
+          <span class="subnav__label">Archive</span>
+        </a>
+        <a href="/now/"{% if page.url == "/now/" %} aria-current="page"{% endif %}>
+          <svg aria-hidden="true"><use href="#icon-clock"/></svg>
+          <span class="subnav__label">Now</span>
+        </a>
+        <a href="/category/lwal/"{% if page.url contains "/category/lwal/" or page.url contains "/lwal/" %} aria-current="page"{% endif %} title="Links Worth a Look">
+          <svg aria-hidden="true"><use href="#icon-link"/></svg>
+          <span class="subnav__label">LWAL</span>
+        </a>
+        <a href="/search/"{% if page.url == "/search/" %} aria-current="page"{% endif %}>
+          <svg aria-hidden="true"><use href="#icon-search"/></svg>
+          <span class="subnav__label">Search</span>
+        </a>
+        <a class="subnav__cta" href="/feed.xml" aria-label="Subscribe to the RSS feed" title="Subscribe to the RSS feed">
+          <svg aria-hidden="true"><use href="#icon-rss"/></svg>
+        </a>
+      </nav>
+
+      <main id="main" class="content">
+        {{ content }}
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__row">
+        <small>© 2004–{{ site.time | date: "%Y" }} Max Glenister &middot; <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a><span class="site-footer__rss"> &middot; <a href="/feed.xml">RSS</a></span></small>
+        <nav class="webring" aria-label="IndieWeb Webring">
+          <a href="https://xn--sr8hvo.ws/previous" aria-label="Previous site in the IndieWeb Webring"><svg aria-hidden="true"><use href="#icon-arrow-left"/></svg></a>
+          <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a>
+          <a href="https://xn--sr8hvo.ws/next" aria-label="Next site in the IndieWeb Webring"><svg aria-hidden="true"><use href="#icon-arrow-right"/></svg></a>
+        </nav>
+      </div>
     </footer>
-    {% if content contains 'class="github-card"' %}<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>{% endif %}
-    {% include svg-icons.html %}
-    <script>
-    (function() {
-        var themes = ['auto', 'light', 'dark'];
-        var icons = { auto: 'icon-theme-auto', light: 'icon-sun', dark: 'icon-moon' };
-        var labels = { auto: 'auto', light: 'light', dark: 'dark' };
-        function getTheme() { return localStorage.getItem('theme') || 'auto'; }
-        function applyTheme(theme) {
-            var root = document.documentElement;
-            if (theme === 'auto') { root.removeAttribute('data-theme'); }
-            else { root.setAttribute('data-theme', theme); }
-            var btn = document.getElementById('theme-toggle');
-            if (!btn) return;
-            btn.querySelector('use').setAttribute('href', '#' + icons[theme]);
-            btn.setAttribute('title', 'Theme: ' + labels[theme]);
-        }
-        var btn = document.getElementById('theme-toggle');
-        if (btn) {
-            applyTheme(getTheme());
-            btn.addEventListener('click', function() {
-                var current = getTheme();
-                var next = themes[(themes.indexOf(current) + 1) % themes.length];
-                localStorage.setItem('theme', next);
-                applyTheme(next);
-            });
-        }
-    })();
-    </script>
-    {% include global/post-card-js.html %}
-    {% if content contains 'data-post-url' %}<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        try {
-            const LABELS = {
-                comment: ['Comment', 'Comments'],
-                bookmark: ['Bookmark', 'Bookmarks'],
-                like: ['Like', 'Likes'],
-                shared: ['Share or mention', 'Shares and mentions'],
-                repost: ['Repost', 'Reposts']
-            };
-            document.querySelectorAll('[data-post-url]').forEach(li => {
-                const url = li.getAttribute('data-post-url').replace(/http:\/\/(localhost|dev\.local|\d+\.\d+\.\d+\.\d+):\d+/g, 'https://blog.omgmog.net');
-                const _b64 = btoa(url);
-                const el = li.querySelector('.interaction-stats');
-                if (!el) return;
-                // The page was built with totals. When this browser has visited the post
-                // it also holds the (possibly fresher) numbers shown there; those can only
-                // raise a built total, never replace it with a partial count.
-                const _summary = JSON.parse(localStorage.getItem(`interactions-summary-${_b64}`)) || {};
-                Object.entries(LABELS).forEach(([key, [one, many]]) => {
-                    const parent = el.querySelector(`.${key}`);
-                    const value = parent?.querySelector('.value');
-                    if (!value) return;
-                    const built = parseInt(value.textContent, 10) || 0;
-                    const n = Math.max(built, parseInt(_summary[key], 10) || 0);
-                    if (n <= 0) return;
-                    value.textContent = n;
-                    parent.title = `${n} ${n === 1 ? one : many}`;
-                    parent.removeAttribute('style');
-                    el.removeAttribute('style');
-                });
-            });
-        } catch(e) {}
-    });
-    </script>{% endif %}
-    {% if content contains '<div data-src' %}<script src="{{ '/assets/lazy-iframe.js' | relative_url }}" defer></script>{% endif %}
-    <script type="application/ld+json">{{ page.ld_json }}</script>
+  </div>
 </body>
 </html>

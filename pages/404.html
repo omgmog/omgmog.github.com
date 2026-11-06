@@ -1,25 +1,54 @@
 ---
 title: Page not found
 permalink: "404.html"
+sitemap: false
 ---
-<h2>I couldn't find that page!</h2>
-<p id="message">Maybe you should <a href="{{ "/" | absolute_url }}">start again</a>?</a></p>
+<div class="not-found">
+  <span class="not-found__code" aria-hidden="true">404</span>
+  <header class="archive-head">
+    <h1>There's nothing here</h1>
+    <p class="archive-head__lede">This page doesn't exist, or it moved when the blog was reorganised.</p>
+    <p class="meta" id="message" hidden></p>
+  </header>
+  <p class="discussion-cta">
+    <a class="btn btn--primary" href="/"><svg aria-hidden="true"><use href="#icon-compass"/></svg> Start here</a>
+    <a class="btn btn--outline" href="/archive/"><svg aria-hidden="true"><use href="#icon-archive"/></svg> Archive</a>
+  </p>
+</div>
+
+<section aria-labelledby="threads-heading">
+  <h2 id="threads-heading">Or pick a thread</h2>
+  <ul class="topic-grid topic-grid--3" role="list">
+    {% for thread in site.data.starthere.threads %}
+    {% assign key = thread.category %}
+    {% assign cat = site.data.categories[key] %}
+    {% assign count = site.data.all_posts_and_lwal | where: "category", key | size %}
+    <li>
+      <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
+        <span class="badge badge--lg" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">
+          <svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg>
+        </span>
+        <span class="topic-tile__text">
+          <span class="topic-tile__name">{{ cat.name }}</span>
+          <span class="meta">{{ count }} posts</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
 
 <script>
-  const pathName = window.location.pathname;
-  const prefixes = ['/post/', '/reviews/', '/review/'];
-  const message_el = document.getElementById('message');
-
-  const repo = '{{site.github.owner_name}}/{{site.github.repository_name}}';
-  
-  prefixes.some(prefix => {
-    if (pathName.includes(prefix)) {
-      const query = pathName.replace(prefix, '').replace(/\//g, '');
-      const encodedQuery = encodeURIComponent(query);
-      const url = `https://github.com/search?q=repo%3A${repo}+${encodedQuery}&type=Code`;
-      message_el.innerHTML = `I may have archived that post. Try looking on <a href="${url}">Github</a>.`;
-      return true;
-    }
-    return false;
-  });
+  // Old posts that were archived out of the blog are still in the repo:
+  // offer a search for them.
+  (function () {
+    var path = window.location.pathname;
+    var prefix = '/post/';
+    if (path.indexOf(prefix) === -1) return;
+    var query = encodeURIComponent(path.replace(prefix, '').replace(/\//g, ''));
+    var repo = '{{ site.github.owner_name }}/{{ site.github.repository_name }}';
+    var el = document.getElementById('message');
+    el.innerHTML = 'I may have archived that post. Try looking on <a href="https://github.com/search?q=repo%3A' + repo + '+' + query + '&type=Code">GitHub</a>.';
+    el.hidden = false;
+  })();
 </script>

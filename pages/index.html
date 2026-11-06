@@ -1,26 +1,115 @@
 ---
-title: Blog
 permalink: /
-layout: core
+title: Start here
 ---
 
-<h3 class="wide-h3">Recent posts<a href="/archive">View all</a></h3>
-<ul class="post-list">
-{% assign posts = site.posts | sort: 'date' | reverse %}
-{% for post in posts limit:10 %}
-  {% include global/post-list-item.html hide_types=true hide_years=true %}
-{% endfor %}
-</ul>
+{% assign topic_max = 1 %}
+{% for c in site.data.categories %}{% assign n = site.data.all_posts_and_lwal | where: "category", c[0] | size %}{% if n > topic_max %}{% assign topic_max = n %}{% endif %}{% endfor %}
+<div class="start-top">
+  <div class="start-top__clip" aria-hidden="true"></div>
+  <header class="archive-head">
+    <h1>{{ site.data.starthere.intro.title }}</h1>
+    <p class="archive-head__lede intro-lede">{{ site.data.starthere.intro.lede | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+    <p class="meta">{{ site.data.all_posts_and_lwal | size }} posts by {{ site.author.name }} &bull; <a href="{{ site.data.starthere.intro.about_url }}" class="more-link">{{ site.data.starthere.intro.about_label }} <svg aria-hidden="true"><use href="#icon-arrow-right"/></svg></a></p>
+  </header>
 
-{% for section in site.data.homepage.sections %}
-  <h3 class="wide-h3">{{ section.title }}</h3>
-  {% include global/post-list-from-urls.html urls=section.urls %}
-{% endfor %}
+  <div class="constellation">
+    <canvas class="shapes constellation__shapes" data-shapes data-clip=".start-top__clip" data-r="0.5" data-cx="0.5" data-cy="0.5" data-fade="9,10" aria-hidden="true"></canvas>
+    <div class="constellation__stage" data-shapes-anchor>
+      <ul class="constellation__tokens" role="list" aria-label="Topics">
+        {% for c in site.data.categories %}
+        {% assign key = c[0] %}
+        {% assign cat = c[1] %}
+        {% assign n = site.data.all_posts_and_lwal | where: "category", key | size %}
+        <li>
+          <a class="token" href="/category/{{ key }}/" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}; --token-size: {{ n | times: 2.0 | divided_by: topic_max | plus: 2.5 }}rem">
+            <svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg>
+            <span class="token__label">{{ cat.name }} <b>{{ n }}</b></span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
 
-<h3 class="wide-h3">Recent reviews<a href="/reviews">View all</a></h3>
-<ul class="post-list">
-{% assign all_reviews = site.posts | where_exp:"post","post.tags contains 'review'" %}
-{% for post in all_reviews limit:5 %}
-  {% include global/post-list-item.html hide_types=true hide_years=true hide_date=true hide_excerpt=true hide_counts=true %}
+<section class="threads" aria-labelledby="threads-heading">
+  <h2 id="threads-heading">Pick a thread</h2>
+
+  <ul class="thread-grid" role="list">
+      {% for thread in site.data.starthere.threads %}
+      {% assign key = thread.category %}
+      {% assign cat = site.data.categories[key] %}
+      {% assign count = site.posts | where: "category", key | size %}
+      {% assign posts = thread.posts %}
+      <li>
+  {% include category.html key=key cat=cat count=count posts=posts %}
+  </li>
 {% endfor %}
-</ul>
+</ul>   
+</section>
+<section aria-labelledby="topics-heading">
+  <h2 id="topics-heading">More topics</h2>
+  <ul class="topic-grid topic-grid--3" role="list">
+    {% for key in site.data.starthere.more_topics %}
+    {% assign cat = site.data.categories[key] %}
+      {% assign count = site.data.all_posts_and_lwal | where: "category", key | size %}
+    <li>
+      <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
+        <span class="badge badge--lg" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">
+          <svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg>
+        </span>
+        <span class="topic-tile__text">
+          <span class="topic-tile__name">{{ cat.name }}</span>
+          <span class="meta">{{ count }} posts</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+<section aria-labelledby="search-heading">
+  <h2 id="search-heading">Looking for something?</h2>
+  <div class="split split--thirds search-band">
+    <div class="split__main">
+      <form class="search-form" role="search" action="/search/">
+        <label class="visually-hidden" for="q">Search the blog</label>
+        <svg aria-hidden="true"><use href="#icon-search"/></svg>
+        <input id="q" name="q" type="search" placeholder="Try &ldquo;webmentions&rdquo; or &ldquo;three.js&rdquo;" autocomplete="off">
+      </form>
+    </div>
+    {% include posts/index-stats.html class="split__aside" %}
+  </div>
+</section>
+<div class="split split--thirds">
+  <section class="split__main" aria-labelledby="latest-heading">
+    <h2 id="latest-heading">Latest posts</h2>
+    <ol class="post-list" role="list">
+    {% assign latestposts = site.data.all_posts | slice: 0, 5 %}
+    {% for sitepost in latestposts %}
+        {% assign cat = site.data.categories[sitepost.category] %}
+        {% assign counts = site.data.webmention_counts[sitepost.url] %}
+        {% assign total = 0 %}
+        {% for pair in counts %}{% assign total = total | plus: pair[1] %}{% endfor %}
+
+      <li class="post-item" style="--cat: {{ cat.line | default: cat.colour }}">
+        <span class="badge" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">
+          <svg aria-hidden="true"><use href="#icon-cat-{{ sitepost.category}}"/></svg>
+        </span>
+        <div class="post-item__body">
+          <a class="post-item__title" href="{{ sitepost.url }}">{{ sitepost.title }}</a>
+          <p class="post-item__excerpt">{{ sitepost.excerpt | strip_html }}</p>
+          <span class="meta">{{ sitepost.reading_time }} min read &bull; <time datetime="{{ sitepost.date | date_to_xmlschema }}">{{ sitepost.date | date: "%-d %B %Y" }}</time> {% if total > 0 %}&bull; {{ total }} interaction{% unless total < 2 %}s{% endunless %}{% endif %}</span>
+        </div>
+      </li>
+    {% endfor %}
+    </ol>
+  </section>
+
+  <section class="split__aside" aria-labelledby="interactions-heading">
+    <h2 id="interactions-heading">Interactions</h2>
+    <ol class="activity" role="list">
+      {{ site.data.sidebar_webmentions_html }}
+    </ol>
+  </section>
+</div>

@@ -1,0 +1,48 @@
+{% assign cat = include.cat %}
+{% assign count = include.count %}
+{% assign posts = include.posts %}
+
+<!-- cat icon and title-->
+<!-- blurb -->
+
+<!-- thread -->
+ <!-- first item, solid fill -->
+ <!-- rest of items -->
+
+<!-- all link -->
+
+<article class="card card--flat-sm" style="--cat: {{ cat.line | default: cat.colour }}">
+  <header class="card__head">
+    <span class="badge badge--lg" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">
+      <svg><use href="#icon-cat-{{ key }}"/></svg>
+    </span>
+    <div class="card__head-text">
+      <h3 class="card__title"><a href="/category/{{ key }}/">{{ cat.name }}</a></h3>
+      <span class="meta">{{ count }} post{% unless count == 1 %}s{% endunless %}</span>
+    </div>
+  </header>
+  <p class="card__summary">{{ cat.description }}</p>
+
+  <ol class="thread thread--closed" style="--thread-colour: {{ cat.line }}">
+    {% for threadlink in posts %}
+    {% assign postdata = site.data.posts_by_url[threadlink] %}
+    {% assign counts = site.data.webmention_counts[threadlink] %}
+    {% assign total = 0 %}
+    {% for pair in counts %}{% assign total = total | plus: pair[1] %}{% endfor %}
+    
+        {% if forloop.first %}
+    <li class="thread__item thread__item--start">
+      <span class="thread__label">Start with</span>
+      <a class="thread__title" href="{{ postdata.url }}">{{ postdata.title }}</a>
+      <p class="thread__excerpt">{{ postdata.excerpt | strip_html }}</p>
+      <span class="meta">{{ postdata.reading_time }} min read &bull; {{ postdata.date | date:"%B %Y" }} {% if total > 0 %}&bull; {{ total }} interaction{% unless total < 2 %}s{% endunless %}{% endif %}</span>
+    </li>
+        {% else %}
+    <li class="thread__item">
+      <a class="thread__title" href="{{ postdata.url }}">{{ postdata.title }}</a>
+      <span class="meta">{{ postdata.reading_time }} min read &bull; {{ postdata.date | date:"%B %Y" }} {% if total > 0 %}&bull; {{ total }} interaction{% unless total < 2 %}s{% endunless %}{% endif %}</span>
+    </li>
+        {% endif %}
+    {% endfor %}
+  </ol>
+</article>

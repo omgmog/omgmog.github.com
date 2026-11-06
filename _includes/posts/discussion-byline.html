@@ -1,0 +1,26 @@
+{% comment %}include.name, include.author_url, include.is_author, include.platform, include.type_label, include.date, include.date_url (author_url and date_url optional){% endcomment %}
+{% assign platform_name = "Website" %}
+{% case include.platform %}
+  {% when "mastodon" %}{% assign platform_name = "Mastodon" %}
+  {% when "bluesky" %}{% assign platform_name = "Bluesky" %}
+  {% when "reddit" %}{% assign platform_name = "Reddit" %}
+  {% when "hackernews" %}{% assign platform_name = "Hacker News" %}
+  {% when "lemmy" %}{% assign platform_name = "Lemmy" %}
+  {% when "lobsters" %}{% assign platform_name = "Lobsters" %}
+  {% when "twitter" %}{% assign platform_name = "Twitter" %}
+  {% when "github" %}{% assign platform_name = "GitHub" %}
+  {% when "archived" %}{% assign platform_name = "Archived" %}
+{% endcase %}
+<p class="discussion-item__byline">
+  {% if include.author_url %}
+    <a href="{{ include.author_url }}" rel="nofollow" class="discussion-item__name">{{ include.name }}</a>
+  {% else %}
+    <span class="discussion-item__name">{{ include.name }}</span>
+  {% endif %}
+  {% if include.is_author %}<span class="discussion-item__author-pill">Author</span>{% endif %}
+  <span class="discussion-item__platform"><span class="discussion-item__platform-dot" data-platform="{{ include.platform }}"></span>{{ platform_name }}</span>
+  <span class="meta">
+    {{ include.type_label }} &middot;
+    {% if include.date_url %}<a href="{{ include.date_url }}" rel="nofollow">{{ include.date }}</a>{% else %}{{ include.date }}{% endif %}
+  </span>
+</p>

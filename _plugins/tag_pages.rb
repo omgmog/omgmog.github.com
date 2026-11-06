@@ -3,14 +3,14 @@ module Jekyll
     safe true
 
     def generate(site)
-      site.tags.each_key do |tag|
-        site.pages << TagPage.new(site, tag)
+      site.tags.each do |tag, posts|
+        site.pages << TagPage.new(site, tag, posts)
       end
     end
   end
 
   class TagPage < Page
-    def initialize(site, tag)
+    def initialize(site, tag, posts)
       @site = site
       @base = site.source
       @dir  = File.join('tags', Utils.slugify(tag))
@@ -21,6 +21,12 @@ module Jekyll
 
       @data['tag']   = tag
       @data['title'] = "##{tag}"
+
+      # Categories the tagged posts are filed under, and tags that appear
+      # alongside this one, both most-used first.
+      top = ->(names) { names.tally.sort_by { |name, n| [-n, name] }.map { |name, n| { 'name' => name, 'count' => n } } }
+      @data['categories']   = top.call(posts.map { |d| d.data['category'] }.compact)
+      @data['related_tags'] = top.call(posts.flat_map { |d| Array(d.data['tags']) } - [tag]).first(10)
     end
   end
 end

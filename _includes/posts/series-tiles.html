@@ -1,0 +1,16 @@
+{% comment %}A tile per series (with 2+ posts), linking to its place on /series/. Shown in the Archive and Series sidebars.{% endcomment %}
+<ul class="topic-grid topic-grid--list" role="list">
+  {% for entry in site.data.series %}
+  {% assign key = entry[0] %}
+  {% assign n = site.data.all_posts | where: "series", key | size %}
+  {% if n > 1 %}
+  <li>
+    <a class="topic-tile" href="/series/#{{ key }}" style="--cat: var(--yellow-line)">
+      <span class="badge" style="--badge-bg: var(--ink-a12); --badge-ink: var(--ink)"><svg aria-hidden="true"><use href="#icon-layers"/></svg></span>
+      <span class="topic-tile__text"><span class="topic-tile__name">{{ entry[1].title }}</span></span>
+      <span class="meta">{{ n }}</span>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

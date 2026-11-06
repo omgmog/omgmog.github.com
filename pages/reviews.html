@@ -1,16 +1,18 @@
 ---
-title: Reviews
 permalink: /reviews/
-description: Hands-on reviews of gadgets and tech from Max Glenister. Less about specs, more about whether it's actually worth it.
+layout: null
+sitemap: false
 ---
-<p>I like to get my hands on new gadgets to see what they're really like. These aren't about specs or marketing hype, they're about how things actually feel and work in everyday use.</p>
-<p>Some posts are detailed deep dives, others are quick impressions, but they all aim to give a clear sense of whether something's worth it.</p>
-<p>If there's a gadget you'd like me to try, <a href="mailto:hello@maxglenister.co.uk?subject=Review%20request">drop me a line</a>.</p>
-
-<h3 class="wide-h3">All reviews</h3>
-<ul class="post-list">
-{% assign all_reviews = site.posts | where_exp:"post","post.tags contains 'review'" %}
-{% for post in all_reviews %}
-  {% include global/post-list-item.html hide_years="true" %}
-{% endfor %}
-</ul>
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Reviews</title>
+  <link rel="canonical" href="{{ '/category/reviews/' | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/category/reviews/' | relative_url }}">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <p>Reviews now lives at <a href="{{ '/category/reviews/' | relative_url }}">{{ '/category/reviews/' | absolute_url }}</a>.</p>
+</body>
+</html>

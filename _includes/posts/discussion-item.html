@@ -1,0 +1,101 @@
+{% comment %}One item from page._wm_merged_feed: a webmention (wm-property), a GitHub comment (user) or an archived comment (post front matter).{% endcomment %}
+{% assign item = include.item %}
+{% assign author_domains = site.data.webmention_policy.own_markers %}
+
+{% if item["wm-property"] %}
+  {% assign mention_url = item.url | default: item["wm-source"] %}
+  {% assign mention_date = item.published | default: item["wm-received"] %}
+  {% assign domain = mention_url | remove_first: "https://" | remove_first: "http://" | split: "/" | first %}
+  {% assign author_name = item.author.name | default: domain %}
+  {% assign author_url = item.author.url | default: mention_url %}
+  {% assign is_author = false %}
+  {% for d in author_domains %}
+    {% if author_url contains d or item["wm-source"] contains d %}{% assign is_author = true %}{% endif %}
+  {% endfor %}
+  {% if is_author %}{% assign author_name = site.author.name %}{% endif %}
+
+  {% assign platform = "website" %}
+  {% if mention_url contains "reddit.com" %}{% assign platform = "reddit" %}
+  {% elsif mention_url contains "news.ycombinator.com" %}{% assign platform = "hackernews" %}
+  {% elsif mention_url contains "lobste.rs" %}{% assign platform = "lobsters" %}
+  {% elsif mention_url contains "bsky.app" %}{% assign platform = "bluesky" %}
+  {% elsif mention_url contains "twitter.com" or mention_url contains "x.com" %}{% assign platform = "twitter" %}
+  {% elsif mention_url contains "lemmy" or item.community %}{% assign platform = "lemmy" %}
+  {% elsif item["wm-source"] contains "brid.gy" or mention_url contains "mastodon" or mention_url contains "indieweb.social" %}{% assign platform = "mastodon" %}
+  {% endif %}
+
+  {% comment %}Shares and link-only items are anonymised (see WebmentionPolicy): where, not who.{% endcomment %}
+  {% if item._pointer or item._mode == "link" %}
+    {% assign what = "Mentioned on" %}
+    {% assign label = domain %}
+    {% if item["wm-property"] == "in-reply-to" %}{% assign what = "Reply on" %}{% endif %}
+    {% if item["wm-property"] == "repost-of" and platform == "lobsters" %}
+      {% assign what = "Shared on" %}{% assign label = "Lobsters" %}
+    {% elsif item["wm-property"] == "bookmark-of" and platform == "reddit" %}
+      {% assign subreddit = mention_url | split: "/r/" | last | split: "/" | first %}
+      {% assign what = "Shared on" %}{% assign label = "r/" | append: subreddit %}
+    {% elsif item["wm-property"] == "bookmark-of" and platform == "hackernews" %}
+      {% assign what = "Shared on" %}{% assign label = "Hacker News" %}
+    {% elsif item.community %}
+      {% assign community_host = item.community.url | remove_first: "https://" | remove_first: "http://" | split: "/" | first %}
+      {% assign what = "Shared on" %}{% assign label = "!" | append: item.community.name | append: "@" | append: community_host %}
+    {% endif %}
+    <li class="discussion-item discussion-item--compact" data-platform="{{ platform }}">
+      <span class="discussion-item__dot"></span>
+      <p>{{ what }} {{ label }} <span class="meta">&middot; <a href="{{ mention_url }}" rel="nofollow">{{ mention_date | date: "%-d %B %Y" }}</a></span></p>
+    </li>
+  {% elsif item["wm-property"] == "mention-of" and item.content.text == blank and item.summary.value == blank %}
+    <li class="discussion-item discussion-item--compact" data-platform="{{ platform }}">
+      <span class="discussion-item__dot"></span>
+      <p><strong>{{ author_name }}</strong> shared this on {{ domain }} <span class="meta">&middot; <a href="{{ mention_url }}" rel="nofollow">{{ mention_date | date: "%-d %B %Y" }}</a></span></p>
+    </li>
+  {% else %}
+    {% assign mention_date_fmt = mention_date | date: "%-d %B %Y" %}
+    <li class="discussion-item{% if is_author %} discussion-item--author{% endif %}" data-platform="{{ platform }}">
+      {% include posts/discussion-avatar.html name=author_name is_author=is_author %}
+      <div class="discussion-item__body">
+        {% include posts/discussion-byline.html name=author_name author_url=author_url is_author=is_author platform=platform type_label=domain date=mention_date_fmt date_url=mention_url %}
+        {% assign html_size = item.content.html | size %}
+        {% if item.summary.value %}
+        <div class="discussion-item__content">{{ item.summary.value | markdownify }}</div>
+        {% elsif item.content.html and html_size <= 1000 %}
+        <div class="discussion-item__content">{{ item.content.html | sanitize_content_html }}</div>
+        {% else %}
+        <div class="discussion-item__content">{{ item.content.text | truncatewords: 60, "…" | markdownify }}</div>
+        {% endif %}
+      </div>
+    </li>
+  {% endif %}
+
+{% elsif item.user %}
+  {% assign gh_login = item.user.login | downcase %}
+  {% assign is_author = false %}
+  {% assign author_name = item.user.login %}
+  {% if gh_login == site.data.webmention_policy.github_login %}
+    {% assign is_author = true %}
+    {% assign author_name = site.author.name %}
+  {% endif %}
+  {% assign issue_number = item.html_url | split: "/issues/" | last | split: "#" | first %}
+  {% assign issue_label = "GitHub issue #" | append: issue_number %}
+  {% assign created_fmt = item.created_at | date: "%-d %B %Y" %}
+  <li class="discussion-item{% if is_author %} discussion-item--author{% endif %}" data-platform="github">
+    {% include posts/discussion-avatar.html name=author_name is_author=is_author %}
+    <div class="discussion-item__body">
+      {% include posts/discussion-byline.html name=author_name author_url=item.user.html_url is_author=is_author platform="github" type_label=issue_label date=created_fmt date_url=item.html_url %}
+      <div class="discussion-item__content">{{ item.body | markdownify }}</div>
+    </div>
+  </li>
+
+{% else %}
+  {% assign archived_author_lower = item.author | downcase %}
+  {% assign site_author_lower = site.author.name | downcase %}
+  {% assign is_author = false %}
+  {% if archived_author_lower == site_author_lower %}{% assign is_author = true %}{% endif %}
+  <li class="discussion-item{% if is_author %} discussion-item--author{% endif %}" data-platform="archived">
+    {% include posts/discussion-avatar.html name=item.author is_author=is_author %}
+    <div class="discussion-item__body">
+      {% include posts/discussion-byline.html name=item.author is_author=is_author platform="archived" type_label="archived comment" date=item.date %}
+      <div class="discussion-item__content">{{ item.content | markdownify }}</div>
+    </div>
+  </li>
+{% endif %}

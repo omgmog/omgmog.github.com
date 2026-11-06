@@ -1,0 +1,93 @@
+# One category per post, set with `category:` in front matter.
+#
+# Order matters: Jekyll keeps it, and it's the order used for "Other
+# categories" in sidebars. The first six are the Start here threads
+# (see _data/starthere.yml). The Archive filter sorts by name instead.
+#
+# name:        display name
+# icon:        Lucide icon name, available in the sprite as #icon-cat-<key>
+# colour:      badge fill (also --cat-<key> in tokens.css)
+# ink:         icon colour on the badge (passes 6:1+ on every colour)
+# line:        thread timeline strokes and dots; only differs where the badge
+#              colour is too faint as a 2px line on white
+# description: category page lede
+
+blog:
+  name: "Blog & IndieWeb"
+  icon: notebook-pen
+  colour: "#FFEA00"
+  ink: "#1a1a1a"
+  line: "#E0C200"
+  description: "How this site is built: Jekyll, webmentions, GitHub Actions and the small web."
+
+design:
+  name: "UX & Design"
+  icon: pen-tool
+  colour: "#FF7AB6"
+  ink: "#1a1a1a"
+  line: "#FF7AB6"
+  description: "Everyday interface details: cursors, progress bars, charts, and software that's harder to use than it should be."
+
+tinkering:
+  name: "Tinkering"
+  icon: wrench
+  colour: "#FF8A3D"
+  ink: "#1a1a1a"
+  line: "#FF8A3D"
+  description: "3D-printed fixes, Pocket CHIP and DevTerm projects, and Android hacks on old and unusual devices."
+
+web:
+  name: "Web Dev"
+  icon: code-xml
+  colour: "#4DA3FF"
+  ink: "#1a1a1a"
+  line: "#4DA3FF"
+  description: "How the web works today: modern CSS, old markup, and building boring, durable sites."
+
+data:
+  name: "Data & Experiments"
+  icon: flask-conical
+  colour: "#7BD35A"
+  ink: "#1a1a1a"
+  line: "#7BD35A"
+  description: "Small data projects: Wordle stats, Hacker News numbers, five AIs predicting the World Cup, and other things I counted for fun."
+
+reviews:
+  name: "Reviews"
+  icon: package-open
+  colour: "#2EC4B6"
+  ink: "#1a1a1a"
+  line: "#2EC4B6"
+  description: "Hands-on reviews of retro handhelds, e-ink devices and other small gadgets."
+
+games:
+  name: "Games & VR"
+  icon: gamepad-2
+  colour: "#A78BFA"
+  ink: "#1a1a1a"
+  line: "#A78BFA"
+  description: "Making games, from Pico-8 to vanilla web tech, and VR, including Cardboctober."
+
+tools:
+  name: "Software & Servers"
+  icon: terminal
+  colour: "#94A3B8"
+  ink: "#1a1a1a"
+  line: "#94A3B8"
+  description: "Self-hosting and everyday tooling: a home NAS, Tailscale, git and the setups behind my devices."
+
+life:
+  name: "Life"
+  icon: coffee
+  colour: "#D9B38C"
+  ink: "#1a1a1a"
+  line: "#D9B38C"
+  description: "Personal posts, from coffee and tea to interviews and winding down old projects."
+
+lwal:
+  name: "Links Worth a Look"
+  icon: link
+  colour: "var(--cat-lwal)"   # these invert in dark mode (see _tokens.css)
+  ink: "var(--cat-lwal-ink)"
+  line: "var(--cat-lwal)"
+  description: "A round-up of what caught my eye on social.omgmog.net"

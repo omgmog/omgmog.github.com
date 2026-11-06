@@ -47,7 +47,9 @@ module Jekyll
       wm_data = site.data["webmentions"] || {}
       counts = {}
 
-      site.posts.docs.each do |post|
+      site.documents.each do |post|
+        next unless post.data["content_type"] == "article"
+
         keys = [post.url, *post.data["alternate_urls"]].compact.uniq
         mentions = keys.flat_map { |url| wm_data[url] || [] }
           .uniq { |m| m["wm-id"] || m["url"] }

@@ -1,30 +1,30 @@
-<svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Line chart showing appearances of the top 10 numbers in Hacker News titles from 2007 to 2025. Most numbers track steadily upward then plateau. 19 spikes dramatically in 2020 due to COVID-19 before falling back. 4 spikes in 2023 due to GPT-4.">
+<svg class="post-svg" viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif" role="img" aria-label="Line chart showing appearances of the top 10 numbers in Hacker News titles from 2007 to 2025. Most numbers track steadily upward then plateau. 19 spikes dramatically in 2020 due to COVID-19 before falling back. 4 spikes in 2023 due to GPT-4.">
 <title>Top 10 numbers in HN titles, 2007–2025</title>
 <style>
-  text { fill: light-dark(#1a1a1a, #f0f0f0); font-size: 11px; }
-  .axis { stroke: light-dark(#1a1a1a, #f0f0f0); }
-  .gridline { stroke: light-dark(#1a1a1a, #f0f0f0); opacity: 0.1; }
-  .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
-  .l1  { stroke: light-dark(#1a5fb4, #5fa8f5); }
-  .l2  { stroke: light-dark(#3a86c8, #85bdf7); }
-  .l3  { stroke: light-dark(#15a815, #19e619); }
-  .l5  { stroke: light-dark(#59a000, #8fd000); }
-  .l10 { stroke: light-dark(#888888, #aaaaaa); }
-  .l4  { stroke: light-dark(#c77f00, #e0a030); }
-  .l7  { stroke: light-dark(#9b59b6, #c39bd3); }
-  .l8  { stroke: light-dark(#eb6834, #f0956a); }
-  .l6  { stroke: light-dark(#d6261b, #ff7b72); }
-  .l19 { stroke: light-dark(#2e2e2e, #cccccc); stroke-dasharray: 5 3; }
-  .c1  { fill: light-dark(#1a5fb4, #5fa8f5); }
-  .c2  { fill: light-dark(#3a86c8, #85bdf7); }
-  .c3  { fill: light-dark(#15a815, #19e619); }
-  .c5  { fill: light-dark(#59a000, #8fd000); }
-  .c10 { fill: light-dark(#888888, #aaaaaa); }
-  .c4  { fill: light-dark(#c77f00, #e0a030); }
-  .c7  { fill: light-dark(#9b59b6, #c39bd3); }
-  .c8  { fill: light-dark(#eb6834, #f0956a); }
-  .c6  { fill: light-dark(#d6261b, #ff7b72); }
-  .c19 { fill: light-dark(#2e2e2e, #cccccc); }
+  svg.post-svg text { fill: light-dark(#1a1a1a, #f0f0f0); font-size: 11px;}
+  svg.post-svg .axis { stroke: light-dark(#1a1a1a, #f0f0f0);}
+  svg.post-svg .gridline { stroke: light-dark(#1a1a1a, #f0f0f0); opacity: 0.1;}
+  svg.post-svg .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;}
+  svg.post-svg .l1 { stroke: light-dark(#1a5fb4, #5fa8f5);}
+  svg.post-svg .l2 { stroke: light-dark(#3a86c8, #85bdf7);}
+  svg.post-svg .l3 { stroke: light-dark(#15a815, #19e619);}
+  svg.post-svg .l5 { stroke: light-dark(#59a000, #8fd000);}
+  svg.post-svg .l10 { stroke: light-dark(#888888, #aaaaaa);}
+  svg.post-svg .l4 { stroke: light-dark(#c77f00, #e0a030);}
+  svg.post-svg .l7 { stroke: light-dark(#9b59b6, #c39bd3);}
+  svg.post-svg .l8 { stroke: light-dark(#eb6834, #f0956a);}
+  svg.post-svg .l6 { stroke: light-dark(#d6261b, #ff7b72);}
+  svg.post-svg .l19 { stroke: light-dark(#2e2e2e, #cccccc); stroke-dasharray: 5 3;}
+  svg.post-svg .c1 { fill: light-dark(#1a5fb4, #5fa8f5);}
+  svg.post-svg .c2 { fill: light-dark(#3a86c8, #85bdf7);}
+  svg.post-svg .c3 { fill: light-dark(#15a815, #19e619);}
+  svg.post-svg .c5 { fill: light-dark(#59a000, #8fd000);}
+  svg.post-svg .c10 { fill: light-dark(#888888, #aaaaaa);}
+  svg.post-svg .c4 { fill: light-dark(#c77f00, #e0a030);}
+  svg.post-svg .c7 { fill: light-dark(#9b59b6, #c39bd3);}
+  svg.post-svg .c8 { fill: light-dark(#eb6834, #f0956a);}
+  svg.post-svg .c6 { fill: light-dark(#d6261b, #ff7b72);}
+  svg.post-svg .c19 { fill: light-dark(#2e2e2e, #cccccc);}
 </style>
 
 <!-- axes -->

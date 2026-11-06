@@ -1,17 +1,21 @@
+{% comment %}The week's links (page.links). Each entry is my note (desc, or a youtube item's caption) above the thing it
+is about: a card (host and title, the whole card is the link) or a click-to-play embed.{% endcomment %}
 <div class="lwal-links">
   {% for item in page.links %}
     {% if item.youtube %}
-      <div class="lwal-item lwal-video">
+      <div class="lwal-entry lwal-video">
         <a href="{{ item.youtube }}" class="u-bookmark-of" hidden></a>
-        {% if item.caption %}<p class="lwal-caption">{{ item.caption }}</p>{% endif %}
-        <div class="lwal-embed-wrap">
-          {% include posts/figure.html type="iframe" src=item.youtube class="lwal-embed" %}
-        </div>
+        {% if item.caption %}<p class="lwal-note">{{ item.caption }}</p>{% endif %}
+        {% include posts/figure.html type="iframe" src=item.youtube %}
       </div>
     {% else %}
-      <div class="lwal-item lwal-link">
-        {% if item.desc %}<p class="lwal-link-desc">{{ item.desc | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
-        <a href="{{ item.url }}" class="lwal-link-title u-bookmark-of" rel="nofollow" target="_blank">{{ item.title }}</a>
+      {% assign host = item.url | remove_first: "https://" | remove_first: "http://" | split: "/" | first | remove_first: "www." %}
+      <div class="lwal-entry">
+        {% if item.desc %}<p class="lwal-note">{{ item.desc | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+        <div class="lwal-item lwal-link">
+          <span class="lwal-link-host">{{ host }}</span>
+          <a href="{{ item.url }}" class="lwal-link-title u-bookmark-of" rel="nofollow" target="_blank">{{ item.title }}<svg aria-hidden="true"><use href="#icon-arrow-up-right"/></svg></a>
+        </div>
       </div>
     {% endif %}
   {% endfor %}

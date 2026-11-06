@@ -1,10 +1,52 @@
 ---
 layout: core
 ---
+{% assign posts = site.tags[page.tag] %}
+{% assign years = posts | group_by_exp: "p", "p.date | date: '%Y'" %}
 
-<h1>#{{ page.tag }}</h1>
-<ul class="post-list">
-{% for post in site.tags[page.tag] %}
-  {% include global/post-list-item.html hide_types=true hide_years=true %}
-{% endfor %}
-</ul>
+<header class="archive-head">
+  <h1>#{{ page.tag }}</h1>
+  <p class="meta">{{ posts.size }} post{% unless posts.size == 1 %}s{% endunless %} across {{ page.categories.size }} categor{% if page.categories.size == 1 %}y{% else %}ies{% endif %}</p>
+</header>
+
+<div class="split">
+  <div class="split__main">
+    {% for year in years %}
+    <section aria-labelledby="y{{ year.name }}">
+      <h2 id="y{{ year.name }}">{{ year.name }}</h2>
+      <ul class="post-list" role="list">
+        {% for post in year.items %}{% include posts/post-item.html post=post %}{% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+
+  <aside class="split__aside">
+    <section aria-labelledby="filed-heading">
+      <h2 id="filed-heading">Filed under</h2>
+      <ul class="topic-grid topic-grid--list" role="list">
+        {% for c in page.categories %}
+        {% assign cat = site.data.categories[c.name] %}
+        <li>
+          <a class="topic-tile" href="/category/{{ c.name }}/" style="--cat: {{ site.data.categories[c.name].line | default: site.data.categories[c.name].colour }}">
+            <span class="badge" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}"><svg aria-hidden="true"><use href="#icon-cat-{{ c.name }}"/></svg></span>
+            <span class="topic-tile__text"><span class="topic-tile__name">{{ cat.name }}</span></span>
+            <span class="meta">{{ c.count }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    {% if page.related_tags.size > 0 %}
+    <section aria-labelledby="related-heading">
+      <h2 id="related-heading">Related tags</h2>
+      <ul class="tag-pills tag-pills--links" role="list">
+        {% for tag in page.related_tags %}
+        <li><a class="tag-pill" href="/tags/{{ tag.name | slugify }}/">#{{ tag.name }} <span>{{ tag.count }}</span></a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  </aside>
+</div>

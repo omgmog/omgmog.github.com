@@ -108,7 +108,7 @@ module Jekyll
         body,
         "",
         SEP,
-        "Published #{doc.date.strftime('%B %d, %Y')}",
+        "Published #{doc.date.strftime('%-d %B %Y')}",
         "",
         "Generated from the original post:",
         "#{site_url}#{doc.url}",

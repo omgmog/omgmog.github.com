@@ -1,0 +1,68 @@
+---
+layout: core
+---
+{% assign cat = page.cat %}
+{% assign posts = site.data.all_posts_and_lwal | where: "category", page.key %}
+{% assign years = posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+
+<header class="archive-head">
+  <h1 class="archive-head__title"><span class="badge badge--lg" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}"><svg aria-hidden="true"><use href="#icon-cat-{{ page.key }}"/></svg></span>{{ cat.name | default: page.key }}</h1>
+  {% if cat.description %}<p class="archive-head__lede">{{ cat.description }}</p>{% endif %}
+  <p class="meta">{{ posts.size }} posts &middot; {{ page.year_range }}</p>
+</header>
+
+{% if page.key == "games" %}
+<a class="feature-banner" href="/vr/">
+  <svg class="feature-banner__logo" aria-hidden="true"><use href="#icon-rectangle-goggles"/></svg>
+  <span class="feature-banner__text">
+    <span class="feature-banner__title">VR stuff</span>
+    <span>Talks, projects and posts from building VR on the web, plus Cardboctober.</span>
+  </span>
+  <span class="feature-banner__more">Explore <svg aria-hidden="true"><use href="#icon-arrow-right"/></svg></span>
+</a>
+{% endif %}
+
+<div class="split">
+  <div class="split__main">
+    {% for year in years %}
+    <section aria-labelledby="y{{ year.name }}">
+      <h2 id="y{{ year.name }}">{{ year.name }}</h2>
+      <ul class="post-list" role="list">
+        {% for post in year.items %}{% include posts/post-item.html post=post %}{% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
+
+  <aside class="split__aside">
+    {% if page.common_tags.size > 0 %}
+    <section aria-labelledby="tags-heading">
+      <h2 id="tags-heading">Common tags</h2>
+      <ul class="tag-pills tag-pills--links" role="list">
+        {% for tag in page.common_tags %}
+        <li><a class="tag-pill" href="/tags/{{ tag.name | slugify }}/">#{{ tag.name }} <span>{{ tag.count }}</span></a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    <section aria-labelledby="other-categories-heading">
+      <h2 id="other-categories-heading">Other categories</h2>
+      <ul class="topic-grid topic-grid--list" role="list">
+        {% for entry in site.data.categories %}
+        {% assign key = entry[0] %}
+        {% if key != page.key %}
+        {% assign count = site.data.all_posts_and_lwal | where: "category", key | size %}
+        <li>
+          <a class="topic-tile" href="/category/{{ key }}/" style="--cat: {{ site.data.categories[key].line | default: site.data.categories[key].colour }}">
+            <span class="badge" style="--badge-bg: {{ entry[1].colour }}; --badge-ink: {{ entry[1].ink }}"><svg aria-hidden="true"><use href="#icon-cat-{{ key }}"/></svg></span>
+            <span class="topic-tile__text"><span class="topic-tile__name">{{ entry[1].name }}</span></span>
+            <span class="meta">{{ count }}</span>
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+  </aside>
+</div>

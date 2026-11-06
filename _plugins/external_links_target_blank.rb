@@ -1,50 +1,47 @@
-# Plugin to automatically add target="_blank" to external links
+# Adds target="_blank" (and rel="noopener") to links to other sites inside a post's own content.
+# The content is the block marked e-content. The Discussion (webmentions, comments) gets the same, with
+# rel="nofollow noopener" on every outside link as well, since the people behind them aren't vouched for
+# (assets/discussion-refresh.js does the same to what it adds). The rest of the page (sidebar) is left alone,
+# as are internal, anchor, mailto and javascript links and links that already have a target.
 Jekyll::Hooks.register :posts, :post_render do |post|
-  site_url = post.site.config['url'] || ''
-  site_baseurl = post.site.config['baseurl'] || ''
-  site_domain = site_url.gsub(/https?:\/\//, '')
+  site_domain = (post.site.config["url"] || "").sub(%r{\Ahttps?://}, "")
 
-  # Only process links within the main article content
-  # Split at the interactions section to avoid processing webmention/comment templates
-  if post.output =~ /(<div class="page-content e-content">.*?)(<section id="interactions")/m
-    before_article = $`
-    article_content = $1
-    after_article = $2 + $'
+  start = post.output.index(/<div class="[^"]*\be-content\b[^"]*">/)
+  next unless start
 
-    # Parse and modify links only in the article content
-    article_content = article_content.gsub(/<a\s+([^>]*?)href=["']([^"']+)["']([^>]*?)>/i) do
-    before_href = $1
-    url = $2
-    after_href = $3
+  # The content ends where the post pager, the discussion or the end of the article starts.
+  stop = [post.output.index('<nav class="post-pager"', start),
+          post.output.index('<section id="discussion"', start),
+          post.output.index("</article>", start)].compact.min
+  next unless stop
 
-    # Skip if:
-    # - Internal link (starts with / or #)
-    # - Link to same domain
-    # - Mailto link
-    # - JavaScript link
-    skip_link = url.start_with?('/') ||
-                url.start_with?('#') ||
-                url.include?(site_domain) ||
-                url.start_with?('mailto:') ||
-                url.start_with?('javascript:')
-
-    if skip_link
-      # Return original link unchanged
-      "<a #{before_href}href=\"#{url}\"#{after_href}>"
+  content = post.output[start...stop].gsub(/<a\s+([^>]*?)href=["']([^"']+)["']([^>]*?)>/i) do
+    before, url, after = $1, $2, $3
+    internal = url.start_with?("/", "#", "mailto:", "javascript:") || (!site_domain.empty? && url.include?(site_domain))
+    if internal || after.include?("target=") || before.include?("target=")
+      "<a #{before}href=\"#{url}\"#{after}>"
     else
-      # Add target="_blank" if not already present
-      if after_href.include?('target=')
-        "<a #{before_href}href=\"#{url}\"#{after_href}>"
-      else
-        "<a #{before_href}href=\"#{url}\"#{after_href} target=\"_blank\">"
-      end
+      rel = (before + after).include?("rel=") ? "" : ' rel="noopener"'
+      "<a #{before}href=\"#{url}\"#{after} target=\"_blank\"#{rel}>"
     end
-    end
-
-    # Reconstruct the output with templates/interactions unchanged
-    post.output = before_article + article_content + after_article
-  else
-    # If article tag not found, don't process anything
-    # (this shouldn't happen in normal posts)
   end
+
+  post.output = post.output[0...start] + content + post.output[stop..]
+
+  d_start = post.output.index('<section id="discussion"')
+  d_stop  = d_start && post.output.index("</section>", d_start)
+  next unless d_stop
+
+  discussion = post.output[d_start...d_stop].gsub(/<a\s+([^>]*?)href=["']([^"']+)["']([^>]*?)>/i) do
+    before, url, after = $1, $2, $3
+    if url.start_with?("/", "#", "mailto:", "javascript:") || (!site_domain.empty? && url.include?(site_domain))
+      "<a #{before}href=\"#{url}\"#{after}>"
+    else
+      attrs = "#{before}href=\"#{url}\"#{after}".sub(/\s*\brel=["'][^"']*["']/i, "").strip
+      attrs += ' target="_blank"' unless attrs.include?("target=")
+      "<a #{attrs} rel=\"nofollow noopener\">"
+    end
+  end
+
+  post.output = post.output[0...d_start] + discussion + post.output[d_stop..]
 end

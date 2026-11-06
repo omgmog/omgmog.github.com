@@ -1,0 +1,41 @@
+# How a webmention may be displayed. The one place these lists live: read by
+# _plugins/webmention_policy.rb (and the plugins that use it), by
+# _includes/posts/discussion-item.html, and passed to assets/discussion-refresh.js
+# in a data attribute. The logic that uses them (mode, pointer, rendering) is
+# still written twice, in Ruby/Liquid and in that script; keep those in step.
+
+# My GitHub login, so my own comments get the Author badge.
+github_login: omgmog
+
+# Anything whose author URL or source contains one of these is me.
+own_markers:
+  - omgmog.net
+  - omgmog.github.io
+  - twitter.com/omgmog
+  - indieweb.social/@omgmog
+
+# Mentions from these hosts (and their subdomains) came via a silo or bridge,
+# not from the sender's own site.
+silo_hosts:
+  - brid.gy
+  - bsky.app
+  - twitter.com
+  - x.com
+  - reddit.com
+  - news.ycombinator.com
+  - lobste.rs
+  - indieweb.social
+
+# Status URL paths on fediverse servers (Mastodon, GoToSocial, Lemmy). Matched
+# against the whole path, with an optional trailing slash.
+fediverse_path: '@[^/]+/(?:statuses/)?(?:\d+|[0-9A-HJKMNP-TV-Z]{26})|users/[^/]+/statuses/\d+|post/\d+|comment/\d+'
+
+reactions:
+  - like-of
+  - bookmark-of
+  - repost-of
+
+# Webmention content: only these elements survive, with every attribute
+# dropped except a safe href/src.
+allowed_tags: [p, ul, ol, li, img, a, blockquote]
+safe_url: 'https?:|mailto:|/'

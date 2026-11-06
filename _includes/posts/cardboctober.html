@@ -1,13 +1,37 @@
+{% comment %}Day posts (has_hack) get the day's hack links, then prev/next within the series; the announcement post gets only the pager.{% endcomment %}
 {% if page.has_hack %}
-{% assign day_date = page.date|date:'%d' %}
-{% assign day_number = day_date|times:1 %}
-<h3 class="wide-h3">Cardboctober day {{ day_number }}</h3>
-<div class="cardboctober-nav">
-<p>
-    <a href="https://cardboctober.github.io/max/{{ day_date }}/">View this Cardboctober hack</a> &bull; <a href="https://github.com/cardboctober/max/tree/master/{{ day_date }}/">View the source code on Github</a>
-</p>
-<p>
-    View the other submissions for day {{ day_number}} on the <a href="https://cardboctober.github.io/#{{ day_date }}">Cardboctober website</a>.
-</p>
-</div>
+{% assign day = page.date | date: "%d" %}
+{% assign day_number = day | times: 1 %}
+<section class="feature-box" aria-labelledby="hack-heading" data-pagefind-ignore>
+  <svg class="feature-box__logo" role="img" aria-label="VR goggles"><use href="#icon-rectangle-goggles"/></svg>
+  <div class="feature-box__body">
+    <p class="feature-box__eyebrow">Cardboctober &middot; day {{ day_number }}</p>
+    <h3 id="hack-heading">Try this hack</h3>
+    <p class="feature-box__actions">
+      <a class="btn btn--primary" href="https://cardboctober.github.io/max/{{ day }}/"><svg aria-hidden="true"><use href="#icon-rectangle-goggles"/></svg> View this hack</a>
+      <a class="btn btn--on-feature" href="https://github.com/cardboctober/max/tree/master/{{ day }}/"><svg aria-hidden="true"><use href="#icon-code-xml"/></svg> View the source</a>
+    </p>
+    <p class="feature-box__more">See the other submissions for day {{ day_number }} on the <a href="https://cardboctober.github.io/#{{ day }}">Cardboctober website</a>.</p>
+  </div>
+</section>
 {% endif %}
+
+{% assign prev = page.series_previous %}
+{% assign next = page.series_next %}
+{% if prev or next %}
+<nav class="post-pager" aria-label="More Cardboctober">
+  {% if prev %}
+  <a class="post-pager__link post-pager__link--prev" href="{{ prev.url }}">
+    <span class="post-pager__label"><svg aria-hidden="true"><use href="#icon-arrow-left"/></svg> Previous Cardboctober</span>
+    <span class="post-pager__title">{{ prev.title }}</span>
+  </a>
+  {% endif %}
+  {% if next %}
+  <a class="post-pager__link post-pager__link--next" href="{{ next.url }}">
+    <span class="post-pager__label">Next Cardboctober <svg aria-hidden="true"><use href="#icon-arrow-right"/></svg></span>
+    <span class="post-pager__title">{{ next.title }}</span>
+  </a>
+  {% endif %}
+</nav>
+{% endif %}
+<a class="more-link" href="/cardboctober/">All Cardboctober days <svg aria-hidden="true"><use href="#icon-arrow-right"/></svg></a>

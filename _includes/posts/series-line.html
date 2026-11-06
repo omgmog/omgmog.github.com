@@ -1,0 +1,6 @@
+{% comment %}"Part 2 of 5 · Series title", linking to the series page. Params: post, class (optional). Nothing for posts not in a series, one-post series and Cardboctober (which has its own page).{% endcomment %}
+{% assign sp = include.post %}
+{% if sp.series and sp.series_total > 1 and sp.collection != "cardboctober" %}
+{% assign sp_title = site.data.series[sp.series].title %}{% unless sp_title %}{% assign sp_title = sp.series | capitalize %}{% endunless %}
+<span class="meta series-line {{ include.class }}"><svg aria-hidden="true"><use href="#icon-layers"/></svg> Part {{ sp.series_part }} of {{ sp.series_total }} &middot; <a href="/series/#{{ sp.series }}">{{ sp_title }}</a></span>
+{% endif %}

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 260" role="img" aria-labelledby="t d">
+<svg class="post-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 260" role="img" aria-labelledby="t d">
 <title id="t">Screen area since 1984, drawn to physical scale</title>
 <desc id="d">Three screens drawn to the same physical scale: a 32 inch 4K display, a 16 inch MacBook panel nested inside it, and the 9 inch original Macintosh screen. Each contains a mouse cursor drawn at the same true size, about 0.22 inches tall. The 1984 screen was around 34 square inches; the two modern panels together come to around 550.</desc>
 <style>
-  .f { fill: none; stroke: light-dark(#1a1a1a, #e8e8e8); stroke-width: 1; }
-  .f2 { stroke-dasharray: 3 3; }
-  .l { font: 500 11px ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif; fill: light-dark(#1a1a1a, #e8e8e8); }
-  .s { font: 400 9.5px ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif; fill: light-dark(#6b6b6b, #9a9a9a); }
-  .c { fill: light-dark(#1a1a1a, #e8e8e8); }
+  svg.post-svg .f { fill: none; stroke: light-dark(#1a1a1a, #e8e8e8); stroke-width: 1;}
+  svg.post-svg .f2 { stroke-dasharray: 3 3;}
+  svg.post-svg .l { font: 500 11px ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif; fill: light-dark(#1a1a1a, #e8e8e8);}
+  svg.post-svg .s { font: 400 9.5px ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif; fill: light-dark(#6b6b6b, #9a9a9a);}
+  svg.post-svg .c { fill: light-dark(#1a1a1a, #e8e8e8);}
 </style>
 
 <rect class="f" x="20" y="25" width="390" height="220" rx="5"/>

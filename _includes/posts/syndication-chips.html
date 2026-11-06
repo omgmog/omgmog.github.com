@@ -1,4 +1,4 @@
-{% comment %}"Also on" chips for the post's own copies (front matter `syndication`).{% endcomment %}
+{% comment %}"Syndicated on" chips for the post's own copies (front matter `syndication`).{% endcomment %}
 {% for _u in include.urls %}
   {% assign _su = _u | strip %}
   {% if _su == "" %}{% continue %}{% endif %}
@@ -9,9 +9,9 @@
   {% elsif _sh == "bsky.app" %}{% assign _slabel = "Bluesky" %}
   {% elsif _sh == "social.omgmog.net" %}{% assign _sicon = "megaphone" %}{% assign _slabel = "social.omgmog.net" %}
   {% endif %}
-  <a class="chip static-item" href="{{ _su | escape }}" rel="syndication" data-source="syndication" title="Also on {{ _slabel | escape }}">
+  <a class="chip chip--mine static-item" href="{{ _su | escape }}" rel="syndication" data-source="syndication" title="Syndicated on {{ _slabel | escape }}">
     <svg class="platform-icon" aria-hidden="true"><use xlink:href="#icon-{{ _sicon }}"></use></svg>
     <span class="chip-label">{{ _slabel | escape }}</span>
-    <span class="chip-meta">Also on {{ _slabel | escape }}</span>
+    <span class="chip-meta">Syndicated on {{ _slabel | escape }}</span>
   </a>
 {% endfor %}

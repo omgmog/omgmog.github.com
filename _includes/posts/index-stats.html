@@ -1,0 +1,9 @@
+{% comment %}Post count, total words and first year across everything that's searchable, as a row of big numbers.{% endcomment %}
+{% assign indexed = site.data.all_posts_and_lwal %}
+{% assign indexed_words = 0 %}
+{% for p in indexed %}{% assign w = p.content | number_of_words %}{% assign indexed_words = indexed_words | plus: w %}{% endfor %}
+<dl class="stats {{ include.class }}">
+  <div><dt>Posts</dt><dd>{{ indexed.size }}</dd></div>
+  <div><dt>Words</dt><dd>{{ indexed_words | divided_by: 1000 }}k</dd></div>
+  <div><dt>Since</dt><dd>{{ indexed.last.date | date: "%Y" }}</dd></div>
+</dl>
