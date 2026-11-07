@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% capture page_url %}{% if page.url == '/index.html' %}{{ site.url }}{% else %}{{ page.url | absolute_url }}{% endif %}{% endcapture %}
-    {% capture title %}{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}{% endcapture %}
+    {% capture title %}{% if page.url == '/' %}{{ site.title }}'s Blog{% else %}{% if page.collection == 'lwal' %}LWAL Week {{ page.slug | remove: 'week-' }}{% elsif page.tag %}Posts tagged {{ page.title }}{% else %}{{ page.title }}{% endif %} — {{ site.title }}'s Blog{% endif %}{% endcapture %}
     {% capture description %}{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip | truncate: 160 }}{% else %}{{ site.data.author.bio }}{% endif %}{% endcapture %}
 
     <title>{{ title }}</title>
