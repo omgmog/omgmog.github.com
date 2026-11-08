@@ -26,6 +26,7 @@ module Jekyll
       read_yaml(File.join(@base, "_layouts"), "archive_year.html")
 
       @data["year"]  = year
+      @data["hfeed"] = true
       @data["title"] = year.to_s
       @data["docs"]  = docs
       @data["newer_year"] = newer

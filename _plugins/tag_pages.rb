@@ -20,6 +20,7 @@ module Jekyll
       read_yaml(File.join(@base, '_layouts'), 'tag.html')
 
       @data['tag']   = tag
+      @data['hfeed'] = true
       @data['title'] = "##{tag}"
 
       # Categories the tagged posts are filed under, and tags that appear

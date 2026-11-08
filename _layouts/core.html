@@ -110,7 +110,7 @@
         </a>
       </nav>
 
-      <main id="main" class="content">
+      <main id="main" class="content{% if page.hfeed %} h-feed{% endif %}">
         {{ content }}
       </main>
     </div>

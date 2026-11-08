@@ -4,19 +4,19 @@
 {% assign total = 0 %}
 {% for pair in counts %}{% assign total = total | plus: pair[1] %}{% endfor %}
 {% assign cat = site.data.categories[post.category] %}
-<li class="post-item{% if include.plain %} post-item--plain{% endif %}" {% unless post.category == 'lwal' %} style="--cat: {{ cat.line | default: cat.colour | default: '#FFEA00' }}"{% endunless %}>
+<li class="post-item{% if include.plain %} post-item--plain{% endif %}{% if page.hfeed %} h-entry{% endif %}" {% unless post.category == 'lwal' %} style="--cat: {{ cat.line | default: cat.colour | default: '#FFEA00' }}"{% endunless %}>
   {% unless include.plain %}
   <span class="badge" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">
     <svg aria-hidden="true"><use href="#icon-cat-{{ post.category }}"/></svg>
   </span>
   {% endunless %}
   <div class="post-item__body">
-    <a class="post-item__title" href="{{ post.url }}">{{ post.title }}</a>
+    <a class="post-item__title{% if page.hfeed %} p-name u-url{% endif %}" href="{{ post.url }}">{{ post.title }}</a>
     {% if post.collection == "lwal" %}
-    <span class="meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.links.size }} links</span>
+    <span class="meta"><time{% if page.hfeed %} class="dt-published"{% endif %} datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.links.size }} links</span>
     {% else %}
     <p class="post-item__excerpt">{{ post.excerpt | strip_html | strip }}</p>
-    <span class="meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.reading_time }} min read{% if total > 0 %} &bull; {{ total }} interaction{% unless total == 1 %}s{% endunless %}{% endif %}</span>
+    <span class="meta"><time{% if page.hfeed %} class="dt-published"{% endif %} datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.reading_time }} min read{% if total > 0 %} &bull; {{ total }} interaction{% unless total == 1 %}s{% endunless %}{% endif %}</span>
     {% endif %}
     {% unless include.plain or include.noseries %}{% include posts/series-line.html post=post %}{% endunless %}
   </div>

@@ -25,6 +25,7 @@ module Jekyll
 
       cat = site.data.dig("categories", key)
       @data["key"]   = key
+      @data["hfeed"] = true
       @data["cat"]   = cat
       @data["title"] = cat && cat["name"] || key
 
