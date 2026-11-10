@@ -24,6 +24,12 @@ collections:
   lwal:
     output: true
     permalink: /:collection/:title/
+# "Mentioned elsewhere on this site" (see _plugins/backlinks.rb for the options).
+backlinks:
+  url: "https://blog.omgmog.net"             # not site.url, which `jekyll serve` rewrites to localhost
+  collections: [posts, lwal, cardboctober]   # valid as both link sources and targets
+  report_collections: [posts, cardboctober]  # listed in .jekyll-cache/backlinks-report.txt when they have 0-1 inbound links
+
 defaults:
   - scope:
       type: "posts"

@@ -9,7 +9,7 @@ Jekyll::Hooks.register :posts, :post_render do |post|
   start = post.output.index(/<div class="[^"]*\be-content\b[^"]*">/)
   next unless start
 
-  # The content ends where the post pager, the discussion or the end of the article starts.
+  # The content ends where the post pager (Cardboctober), the discussion or the end of the article starts.
   stop = [post.output.index('<nav class="post-pager"', start),
           post.output.index('<section id="discussion"', start),
           post.output.index("</article>", start)].compact.min

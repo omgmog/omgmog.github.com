@@ -78,29 +78,12 @@ layout: core
     <div class="prose">{% include lwal/links.html %}</div>
     {% endif %}
 
+    <!--linked-from-->
     {% if page.collection == "cardboctober" %}
     {% include posts/cardboctober.html %}
     {% else %}
-    {% assign cat_prev = page.category_previous %}
-    {% assign cat_next = page.category_next %}
-    {% if cat_prev or cat_next %}
-    <nav class="post-pager" aria-label="More in {{ cat.name }}" data-pagefind-ignore>
-      {% if cat_prev %}
-      <a class="post-pager__link post-pager__link--prev" href="{{ cat_prev.url }}">
-        <span class="post-pager__label"><svg aria-hidden="true"><use href="#icon-arrow-left"/></svg> Previous in {{ cat.name }}</span>
-        <span class="post-pager__title">{{ cat_prev.title }}</span>
-      </a>
-      {% endif %}
-      {% if cat_next %}
-      <a class="post-pager__link post-pager__link--next" href="{{ cat_next.url }}">
-        <span class="post-pager__label">Next in {{ cat.name }} <svg aria-hidden="true"><use href="#icon-arrow-right"/></svg></span>
-        <span class="post-pager__title">{{ cat_next.title }}</span>
-      </a>
-      {% endif %}
-    </nav>
-    {% endif %}
-
-    {% assign related = page.related_posts | slice: 0, 3 %}
+    {% comment %}Every candidate; _plugins/backlinks.rb drops the ones this post already links to or is linked from, and keeps three.{% endcomment %}
+    {% assign related = page.related_posts %}
     {% if related.size > 0 %}
     <section aria-labelledby="related-heading" data-pagefind-ignore>
       <h2 id="related-heading">Related posts</h2>

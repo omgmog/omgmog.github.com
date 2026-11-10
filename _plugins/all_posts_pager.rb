@@ -23,15 +23,12 @@ module Jekyll
         end
       end
 
-      # Same-category neighbours, for the post pager ("Previous/Next in
-      # <category>") and the "Filed under" sidebar thread.
+      # Same-category neighbours, for the "Filed under" sidebar thread.
       all.group_by { |doc| doc.data['category'] }.each_value do |docs|
         chronological = docs.sort_by { |doc| doc.date.to_i } # ascending
 
         chronological.each_with_index do |doc, i|
           doc.data['category_start']    = chronological.first
-          doc.data['category_previous'] = i > 0 ? chronological[i - 1] : nil
-          doc.data['category_next']     = i < chronological.length - 1 ? chronological[i + 1] : nil
 
           # Up to 3 consecutive posts (chronological), centred on this one,
           # shifted toward whichever side has more when near either end —
