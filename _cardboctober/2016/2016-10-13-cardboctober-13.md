@@ -3,7 +3,7 @@ title: "13: AAAAH! More Zombies"
 has_hack: true
 ---
 
-For today's hack I'm revisiting [yesterday's zombie game](/post/cardboctober-12) again. With a full re-write to un-bodge the implementation.
+For today's hack I'm revisiting [yesterday's zombie game](/cardboctober/cardboctober-12/) again. With a full re-write to un-bodge the implementation.
 
 <!-- more -->
 

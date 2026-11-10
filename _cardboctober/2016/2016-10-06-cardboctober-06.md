@@ -94,7 +94,7 @@ randomBens = pickCardSet(randomBens, benCount);
 
 ## Creating the play area
 
-Once we've got the array of random Ben pairs, generating the play area is just as simple as looping through the array and creating a textured `BoxGeometry` for each Ben. You can read more about this sort of thing in my "[Skyboxes and generating meshes](/post/cardboctober-04)" post.
+Once we've got the array of random Ben pairs, generating the play area is just as simple as looping through the array and creating a textured `BoxGeometry` for each Ben. You can read more about this sort of thing in my "[Skyboxes and generating meshes](/cardboctober/cardboctober-04/)" post.
 
 
 {% include posts/figure.html src="2016-10/06/bens5.png" %}{:.massive}
@@ -122,7 +122,7 @@ randomBens.forEach(function (ben, i) {
 
 ## Setting up the interaction
 
-Now that we've got the play area, it's a simple matter of triggering the main game logic when the user gazes at a Ben (lovingly) long enough. For this we're using `vreticle.js` just like in "[Even better gazed based look interaction](/post/cardboctober-03)".
+Now that we've got the play area, it's a simple matter of triggering the main game logic when the user gazes at a Ben (lovingly) long enough. For this we're using `vreticle.js` just like in "[Even better gazed based look interaction](/cardboctober/cardboctober-03/)".
 
 We keep a counter for the number of Bens looked at, and have some logic to compare the first to the second and see if they have a matching `id`. Based on this, we either play a "correct.mp3" or "wrong.mp3" using Howler, and then either remove the correctly matched pair or flip the cards back over.
 

@@ -140,6 +140,6 @@ The [txt-format.html](https://github.com/omgmog/omgmog.github.com/blob/main/_inc
 
 ## Results
 
-It works. This post is available as [HTML](https://blog.omgmog.net/post/moving-to-github-actions-and-adding-txt-posts/) and [.txt](https://blog.omgmog.net/post/moving-to-github-actions-and-adding-txt-posts.txt). The text version strips away HTML and wraps everything to 80 characters while keeping code blocks intact.
+It works. This post is available as [HTML](/post/moving-to-github-actions-and-adding-txt-posts/) and [.txt](/post/moving-to-github-actions-and-adding-txt-posts.txt). The text version strips away HTML and wraps everything to 80 characters while keeping code blocks intact.
 
 The real win was moving to GitHub Actions. I've got a _proper_ plugin system now - can write custom generators, filters, and tags without workarounds. The infrastructure's there if I want to extend Jekyll further down the line. As for the .txt URLs, I can't imagine many people will use them. The site's already pretty light. But the option's there.

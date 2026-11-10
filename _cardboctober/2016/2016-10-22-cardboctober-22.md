@@ -27,13 +27,13 @@ I'm going to be using the following libraries that we've utilised throughout Car
 
 If you want to catch up so that you can follow along this week, check out the following posts:
 
-- [01: Basic VR](/post/cardboctober-01)
-- [03: Even better gazed based look interaction](/post/cardboctober-03)
-- [04: Skyboxes and generating meshes](/post/cardboctober-04)
-- [06: VR Pairs Game](/post/cardboctober-06)
-- [08: Playing sounds](/post/cardboctober-08)
-- [11: Webaudio Beat Sequencer](/post/cardboctober-11)
-- [12: AAAAH! Zombies](/post/cardboctober-12)
-- [13: AAAAH! More Zombies](/post/cardboctober-13)
+- [01: Basic VR](/cardboctober/cardboctober-01/)
+- [03: Even better gazed based look interaction](/cardboctober/cardboctober-03/)
+- [04: Skyboxes and generating meshes](/cardboctober/cardboctober-04/)
+- [06: VR Pairs Game](/cardboctober/cardboctober-06/)
+- [08: Playing sounds](/cardboctober/cardboctober-08/)
+- [11: Webaudio Beat Sequencer](/cardboctober/cardboctober-11/)
+- [12: AAAAH! Zombies](/cardboctober/cardboctober-12/)
+- [13: AAAAH! More Zombies](/cardboctober/cardboctober-13/)
 
 I'll be using my [core.js](https://github.com/cardboctober/max/blob/master/js/core.js) library as with the rest of my hacks this month to simplify some of the work, so it's probably worth familiarising yourself with the utilities in there.

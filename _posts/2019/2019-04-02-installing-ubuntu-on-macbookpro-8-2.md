@@ -5,7 +5,7 @@ archived: true
 category: tinkering
 ---
 
-This MacbookPro8,2 has been through a lot. [I did some small upgrades back in 2012](https://blog.omgmog.net/post/upgrading-my-macbook-pro/), then in 2014 it experienced some issues with the dedicated GPU that many Macbook's of this model experienced.
+This MacbookPro8,2 has been through a lot. [I did some small upgrades back in 2012](/post/upgrading-my-macbook-pro/), then in 2014 it experienced some issues with the dedicated GPU that many Macbook's of this model experienced.
 
 For a while I managed to keep it running my forcefully disabling the dedicated GPU with some EFI trickery, and running some form of Linux for a while (I think I kept it going with [Elementary OS](https://elementary.io/)).
 

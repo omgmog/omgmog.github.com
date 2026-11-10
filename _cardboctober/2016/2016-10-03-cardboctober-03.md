@@ -3,7 +3,7 @@ title: "03: Even better gazed based look interaction"
 has_hack: true
 ---
 
-Improving on yesterday's [Raycaster based look interaction](/post/cardboctober-02), I've improved the raycasting experience.
+Improving on yesterday's [Raycaster based look interaction](/cardboctober/cardboctober-02/), I've improved the raycasting experience.
 
 I'm using a library called [vreticle.js](https://github.com/neuman/vreticle), though I've [tweaked it a bit](https://github.com/omgmog/vreticle).
 

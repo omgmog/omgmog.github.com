@@ -94,7 +94,7 @@ var line = new T.Line( geometry, material );
 scene.add( line );
 ```
 
-By this point the scene is coming together, there are 5 speaker/button pairs with connecting wires, but they don't do anything yet. For this we're back to using `vreticle.js` as in [previous](/post/cardboctober-03) [posts](/post/cardboctober-06).
+By this point the scene is coming together, there are 5 speaker/button pairs with connecting wires, but they don't do anything yet. For this we're back to using `vreticle.js` as in [previous](/cardboctober/cardboctober-03/) [posts](/cardboctober/cardboctober-06/).
 
 Inside the `speakers` loop again, add an `ongazelong` event function, and use `howler.js` to play a sound:
 

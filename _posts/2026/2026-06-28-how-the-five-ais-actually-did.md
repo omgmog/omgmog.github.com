@@ -9,7 +9,7 @@ syndication:
   - https://social.omgmog.net/2026/the-group-stage-is-over-and-so
 ---
 
-The Group Stage of the 2026 World Cup finished today, so it's time to mark the homework. Back in [the launch post]({% post_url 2026/2026-06-11-five-ais-predict-the-world-cup %}) five AI models, a deterministic lookup table, and one football fan predicted the same 72 fixtures before a ball was kicked. I've been scoring the results on [AIWC26](https://blog.omgmog.net/AIWC26/) each day as they came in. I've got no real opinion on the teams; I'm interested in what the scoring reveals about the models.
+The Group Stage of the 2026 World Cup finished today, so it's time to mark the homework. Back in [the launch post](/post/five-ais-predict-the-world-cup/) five AI models, a deterministic lookup table, and one football fan predicted the same 72 fixtures before a ball was kicked. I've been scoring the results on [AIWC26](https://blog.omgmog.net/AIWC26/) each day as they came in. I've got no real opinion on the teams; I'm interested in what the scoring reveals about the models.
 
 <!-- more -->
 
@@ -69,7 +69,7 @@ A third version of the same pattern shows up in the implied knockout bracket. At
 
 ## The draws thesis was half right, and the wrong model called it
 
-[The launch post]({% post_url 2026/2026-06-11-five-ais-predict-the-world-cup %}) noted a disagreement. The friend who became Human 1.0 reckoned the new 48-team format, where two thirds of the field survives the groups, would push the draw rate up past the historical quarter, and the models mostly didn't buy it. The final count was 20 of 72, 27.8%, almost exactly the historical rate and nowhere near the spike the format was supposed to produce.
+[The launch post](/post/five-ais-predict-the-world-cup/) noted a disagreement. The friend who became Human 1.0 reckoned the new 48-team format, where two thirds of the field survives the groups, would push the draw rate up past the historical quarter, and the models mostly didn't buy it. The final count was 20 of 72, 27.8%, almost exactly the historical rate and nowhere near the spike the format was supposed to produce.
 
 | Entrant | Predicted draws | Distance from actual (20) |
 |---|---|---|

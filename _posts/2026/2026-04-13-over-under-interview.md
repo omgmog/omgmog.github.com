@@ -21,6 +21,6 @@ The favourite books question caught me off guard a bit. Forced to save two: *Chi
 
 I also passed a question to the next blogger: 
 
-> How do you balance work and side projects? I’ve held a [blog since 2004](https://blog.omgmog.net/post/archive-archaeology/), I’ve got drawers full of half-finished projects, two kids and a day job that keeps me busy. Finding time for all of it without burning out or letting something slide is a constant negotiation. I’m curious how other people manage it, or if they’ve just accepted that some projects stay half-finished forever.
+> How do you balance work and side projects? I’ve held a [blog since 2004](/post/archive-archaeology/), I’ve got drawers full of half-finished projects, two kids and a day job that keeps me busy. Finding time for all of it without burning out or letting something slide is a constant negotiation. I’m curious how other people manage it, or if they’ve just accepted that some projects stay half-finished forever.
 
 I don't have the answer myself, which is part of why I asked.

@@ -45,27 +45,27 @@ So now that I've got that written down somewhere, I can continue with my big re-
 ## Cardboctober Week 4 recap:
 
 ### Day 22
-- [Putting it all together](https://blog.omgmog.net/post/cardboctober-22/) (Max)
+- [Putting it all together](/cardboctober/cardboctober-22/) (Max)
 - [Experiments in optimising three.js](https://medium.com/@peterjwest/experiments-in-optimising-three-js-9d934ccabf40) (Pete)
 
 ### Day 23
-- [Planning Tetrominoes in VR](https://blog.omgmog.net/post/cardboctober-23/) (Max)
+- [Planning Tetrominoes in VR](/cardboctober/cardboctober-23/) (Max)
 - [iOS North](https://cardboctober.github.io/pete/23/) (Pete)
 
 ### Day 24
-- [Basic Game Board](https://blog.omgmog.net/post/cardboctober-24/) (Max)
+- [Basic Game Board](/cardboctober/cardboctober-24/) (Max)
 - [Bullet time](https://cardboctober.github.io/pete/24/) (Pete)
 
 ### Day 25
-- [Creating and Moving Pieces](https://blog.omgmog.net/post/cardboctober-25/) (Max)
+- [Creating and Moving Pieces](/cardboctober/cardboctober-25/) (Max)
 - [Smart device pairing](https://cardboctober.github.io/pete/25/) (Pete)
 
 ### Day 26
-- [Rotating Pieces](https://blog.omgmog.net/post/cardboctober-26/) (Max)
+- [Rotating Pieces](/cardboctober/cardboctober-26/) (Max)
 - [Laser battle](https://cardboctober.github.io/pete/26/) (Pete)
 
 ### Day 27
-- [Moving with gaze 💩](https://blog.omgmog.net/post/cardboctober-27/) (Max)
+- [Moving with gaze 💩](/cardboctober/cardboctober-27/) (Max)
 - [Hairy ball](https://cardboctober.github.io/pete/27/) (Pete)
 
 ### Day 28
