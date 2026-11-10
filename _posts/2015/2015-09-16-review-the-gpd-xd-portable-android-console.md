@@ -30,7 +30,7 @@ archived_comments:
 category: reviews
 ---
 
-I’m back with another Android console out of China from GPD, the GPD XD. I've had the GPD XD for a couple of weeks now, and to be honest I've been unable to put it down! In short it's a great device for portable gaming, and it also handles my media needs with ease.
+I’m back with another Android console out of China from GPD (after [the G7](/post/more-portable-android-gaming-with-the-gpd-g7/) and [the G5A](/post/finally-a-review-of-the-gpd-g5a-android-handheld/)), the GPD XD. I've had the GPD XD for a couple of weeks now, and to be honest I've been unable to put it down! In short it's a great device for portable gaming, and it also handles my media needs with ease.
 
 This device was generously provided by [Geekbuying](http://www.geekbuying.com/), so I'll provide more information about where to buy the GPD XD from the Geekbuying store at the end of this review.
 

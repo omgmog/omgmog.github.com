@@ -8,7 +8,7 @@ category: tools
 
 I know, it sure is a catchy name!
 
-This is just a modification of my previous "Imgur to Filmot url changer" userscript for reddit.com
+This is just a modification of my previous ["Imgur to Filmot url changer"](/post/reddit-imgur-to-filmot-url-changer/) userscript for reddit.com
 
 <!-- more -->
 

@@ -8,7 +8,7 @@ category: games
 
 There are lots of ways to achieve even the most simple goal in programming, and Pico-8 -- even with it's limited nature -- is no different to any other system.
 
-Today I'm looking at state systems. There are lots of approaches to handling state out there, and each has their own pros and cons. In Pico-8 the main concern is keeping the token count low so that you can add more features to your game.
+Following on from [my menu and state system](/post/menu-system/), today I'm looking at state systems. There are lots of approaches to handling state out there, and each has their own pros and cons. In Pico-8 the main concern is keeping the token count low so that you can add more features to your game.
 
 
 ## Beginner state system

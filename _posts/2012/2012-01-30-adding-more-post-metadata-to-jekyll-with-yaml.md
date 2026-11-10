@@ -7,7 +7,7 @@ category: blog
 ---
 <strong>NB: This flurry of content might be shortlived, but for now I'm excited to be posting again so shush!</strong>
 
-Jekyll, as it turns out, is a really nice <s>blogging platform</s> static site generator. One of the nice things about it is the flexibility. In my current Jekyll set up I've added metadata to the [YAML](http://www.yaml.org/) for posts, so that I can optionally define a post cover (or image, if you'd prefer) and a width for the cover.
+Jekyll, as it turns out, is a really nice <s>blogging platform</s> static site generator. One of the nice things about it is the flexibility. In [my current Jekyll set up](/post/on-migrating-from-tumblr-to-jekyll-bootstrap/) I've added metadata to the [YAML](http://www.yaml.org/) for posts, so that I can optionally define a post cover (or image, if you'd prefer) and a width for the cover.
 
 <!-- more -->
 

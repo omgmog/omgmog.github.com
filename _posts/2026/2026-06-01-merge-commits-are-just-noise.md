@@ -5,7 +5,7 @@ tags: [guide, programming, git]
 category: tools
 ---
 
-Run `git log --graph` on most team projects and you'll see the problem. Parallel lines everywhere, merge commits that just say "Merge branch 'feature/x' into develop". None of it useful. It's noise.
+Run `git log --graph` on most team projects and you'll see the problem. Parallel lines everywhere, merge commits that just say "Merge branch 'feature/x' into develop". None of it useful. It's noise. (Merges aren't the only source: [an hourly GitHub Action was quietly doing the same to my own history](/post/reducing-github-action-commit-noise/).)
 
 I've been using a rebase-based workflow for years to avoid this. The history stays linear and the diffs stay readable. This post covers both the argument and the specific branch structure I use for team feature work.
 

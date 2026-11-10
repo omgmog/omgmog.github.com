@@ -9,7 +9,7 @@ I've been going a bit overboard with printing novelty models from Thingiverse la
 
 First up a simple/geometic pug. The simple details and angles come out nicely when 3D printed.
 
-Second the alpaca. This is much like the elephant I printed recently in how it prints in place.
+Second the alpaca. This is much like [the elephant I printed recently](/post/print-in-place-elephant/) in how it prints in place.
 
 Lastly a Hodor door stopper. I printed this a bit too small for my doors, but it turned out nicely still.
 

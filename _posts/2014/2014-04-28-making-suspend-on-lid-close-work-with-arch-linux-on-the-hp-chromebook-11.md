@@ -19,7 +19,7 @@ archived_comments:
 category: tinkering
 ---
 
-The more time that I spend using Arch Linux on my HP Chromebook 11, the more things I find to tweak and tinker with.
+The more time that I spend using Arch Linux on my HP Chromebook 11, the more things I find to tweak and tinker with (like [getting a proper editor working with Zed](/post/using-zed-editor-with-arch-linux-arm-on-your-chromebook/)).
 
 The latest thing I've addressed is making suspend work when the lid is closed. After speaking to [my resident Arch guru](http://lumbercoder.com) about it, he pointed me to a [blog post that he wrote on the subject](http://lumbercoder.com/2013/12/28/how-to-lock-screen-and-suspend-i3.html), before actually showing me how to make it work.
 

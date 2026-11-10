@@ -39,7 +39,7 @@ category: blog
 
 {% include posts/figure.html src="homeheroslide2.png" %}{:.massive.center}
 
-I've been using Jekyll in some form since [early 2012](https://github.com/omgmog/omgmog.github.com/commit/5d83bfbdf28895fd604ae811699cc3175cd7e1ad), and for me it works perfectly as a means to publish content.
+I've been using Jekyll in some form since [early 2012](https://github.com/omgmog/omgmog.github.com/commit/5d83bfbdf28895fd604ae811699cc3175cd7e1ad) ([here's how I migrated from Tumblr](/post/on-migrating-from-tumblr-to-jekyll-bootstrap/)), and for me it works perfectly as a means to publish content.
 
 <!-- more -->
 

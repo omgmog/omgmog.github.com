@@ -6,7 +6,7 @@ category: life
 ---
 
 
-These are based on my experience of organising SusHack in 2013 and 2014. For more information about SusHack, check out [https://sushack.github.io](https://sushack.github.io)
+These are based on my experience of organising SusHack in 2013 and 2014 (there's [a write-up of the second one](/post/sushack-2/)). For more information about SusHack, check out [https://sushack.github.io](https://sushack.github.io)
 
 <!-- more -->
 

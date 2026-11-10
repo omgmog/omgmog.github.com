@@ -45,7 +45,7 @@ Unlike on a real Chromebook device you get the Chromium variant of Chrome OS. It
 
 {% include posts/figure.html src="2022-04/Screenshot-2022-04-22-16-49-38.png" %}{:.center}
 
-I've been comparing CloudReady to the official Chrome OS on my Lenovo Ideapad Duet Chromebook. It's missing some features that I use a lot on the Lenovo, such as Android app support. I had some problems with the installer for the  Linux development environment, but besides that it all seems to work fine.
+I've been comparing CloudReady to the official Chrome OS on my [Lenovo Ideapad Duet Chromebook](/post/using-chromebook-lenovo-ideapad-duet-in-2020/). It's missing some features that I use a lot on the Lenovo, such as Android app support. I had some problems with the installer for the  Linux development environment, but besides that it all seems to work fine.
 
 {% include posts/figure.html src="2022-04/Screenshot-2022-04-22-16-50-18.png" %}{:.center}
 

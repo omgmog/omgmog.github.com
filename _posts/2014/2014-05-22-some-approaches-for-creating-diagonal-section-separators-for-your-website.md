@@ -74,7 +74,7 @@ This dimensions of the image are 1000 x 60 px. To work out the height as a perce
 
 `((height/width)*100) + 1` = `((60/1000)*100) + 1` = `7`.
 
-For this image then, we need the height of the element to be 7%. You can't just apply this using the `height` property though, as that will make the height 7% of the parent of the element, so we set the height to 0 and give the element a top padding of 7%:
+For this image then, we need the height of the element to be 7%. You can't just apply this using the `height` property though, as that will make the height 7% of the parent of the element, so we set the height to 0 and give the element a top padding of 7% (the same percentage-padding trick I used for [fluid video embeds](/post/fluid-video-embeds-for-your-responsive-website/)):
 
 ```css
 .diagonal-background {

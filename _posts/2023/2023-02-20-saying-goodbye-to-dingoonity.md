@@ -13,7 +13,7 @@ If you were familiar with [Dingoonity](https://boards.dingoonity.org), you might
 
 <!-- more -->
 
-I founded Dingoonity back in 2009 as a place for portable gaming enthusiasts to connect and share their passion for the Dingoo A320 and other niche Chinese handheld consoles. Over the years, we grew into a thriving community with members from all over the world. It's been an honor to be a part of that community and to see the incredible things that the community has accomplished.
+I founded Dingoonity [back in 2009](/post/ive-been-busy/) as a place for portable gaming enthusiasts to connect and share their passion for the Dingoo A320 and other niche Chinese handheld consoles. Over the years, we grew into a thriving community with members from all over the world. It's been an honor to be a part of that community and to see the incredible things that the community has accomplished.
 
 Over the years, we've had some amazing discussions, debates, and collaborations on the forums. From firmware hacks to game mods, we've explored the full extent of what these handheld devices are capable of. The Dingoonity forums were the go-to place for anyone interested in the world of niche portable gaming, and it's been a privilege to be a part of that.
 

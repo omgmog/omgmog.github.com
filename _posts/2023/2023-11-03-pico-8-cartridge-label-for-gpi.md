@@ -7,7 +7,7 @@ category: tinkering
 
 The [GPi Case](https://retroflag.com/GPi-CASE.html) is a fancy case for the Raspberry Pi Zero that gives you a screen, speaker, buttons and battery in a design reminiscent of the original DMG-001 Classic Game Boy. I've got mine set up to emulate some old game consoles. It's great.
 
-As the GPi Case uses a Raspberry Pi at its core, you can use it to run more than just game emulators. The Raspberry Pi plays [Pico-8](https://www.lexaloffle.com/pico-8.php) games wonderfully (Pico-8 officially supports Raspberry Pi as a platform, too!).
+As the GPi Case uses a Raspberry Pi at its core, you can use it to run more than just game emulators. The Raspberry Pi plays [Pico-8](https://www.lexaloffle.com/pico-8.php) games wonderfully (Pico-8 officially supports Raspberry Pi as a platform, too!). I first [set Pico-8 up on a Pi with the Waveshare Game HAT](/post/pico8-on-the-raspberrypi-with-gamehat/) back in 2019.
 
 {% include posts/figure.html src="pico-8/gpi.png" %}{:.center}
 

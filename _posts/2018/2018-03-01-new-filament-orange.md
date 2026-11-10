@@ -5,7 +5,7 @@ archived: true
 category: tinkering
 ---
 
-It's time for more filament! That PrimaValue Natural is serving me well, but I'm in need of a change of colour. I've still got about 1/2 of the spool left, but it'll be fine so long as I bag it well and stick it in a cupboard.<!-- more -->
+It's time for more filament! That [PrimaValue Natural](/post/new-filament/) is serving me well, but I'm in need of a change of colour. I've still got about 1/2 of the spool left, but it'll be fine so long as I bag it well and stick it in a cupboard.<!-- more -->
 
 I'm sticking with what I know, and going with another Prima Value: [Prima Filaments PV-PLA-175-1000-OR](https://www.3dprima.com/filament/primavalue-pla-filament-1-75mm-1-kg-spool-orange/a-22262/)
 

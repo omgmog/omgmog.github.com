@@ -5,7 +5,7 @@ archived: true
 category: tinkering
 ---
 
-Another Groot print.. This time for my sister (she is obsessed with Groot, and who doesn't love plastic nick-nacks!?)
+[Another Groot print](/post/I-am-groot/).. This time for my sister (she is obsessed with Groot, and who doesn't love plastic nick-nacks!?)
 
 These models are by [dav88](https://www.thingiverse.com/dav88/about) on Thingiverse. I printed them at quite a small scale, due to time constraints and demoing the 3D printer to the family.<!-- more -->
 

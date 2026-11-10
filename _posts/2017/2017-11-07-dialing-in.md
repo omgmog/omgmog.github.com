@@ -7,7 +7,7 @@ category: tinkering
 
 Delta style 3D printers can be very fast and accurate, but to get that point you have to do a lot of calibration and "dialing in".
 
-I've had a number of problems over the past week, starting with general inexperience, followed up with a failed calibration sensor.<!-- more -->
+I've had a number of problems with [the printer I bought at the end of October](/post/it-begins/) over the past week, starting with general inexperience, followed up with a failed calibration sensor.<!-- more -->
 
 The calibration sensor should allow you to automatically "level" the printer to get a good first layer on your print, so that each subsequent layer turns out perfect.
 

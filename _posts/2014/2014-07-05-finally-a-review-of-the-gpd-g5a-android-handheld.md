@@ -11,7 +11,7 @@ I've got another Android gaming handheld to review, the [GPD G5A from GamePad Di
 
 {% include posts/figure.html src="zFLcLJn.png" %}{:.center.massive}
 
-Apart from the obvious difference in screen size (5” vs 7” on the GPD G7), really the only difference in spec is the battery capacity.
+Apart from the obvious difference in screen size (5” vs 7” on [the GPD G7](/post/more-portable-android-gaming-with-the-gpd-g7/)), really the only difference in spec is the battery capacity.
 
 {% include posts/figure.html src="czXHVpz.png" %}{:.massive}
 

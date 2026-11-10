@@ -6,7 +6,7 @@ archived: true
 category: tools
 ---
 
-This is a userscript for Google Chrome (it might work with Firefox/Greasemonkey but I haven't tested). It binds the left/right keys to click on prev/next links.
+This is a userscript for Google Chrome ([here's how to use userscripts in Chrome](/post/using-greasemonkey-scripts-with-google-chrome/); it might work with Firefox/Greasemonkey but I haven't tested). It binds the left/right keys to click on prev/next links.
 
 <!-- more -->
 

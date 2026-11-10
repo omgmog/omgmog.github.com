@@ -5,7 +5,7 @@ archived: true
 category: tinkering
 ---
 
-After my previous macro key project back in January that used full-size arcade buttons, I was itching to make a more compact set of macro keys.<!-- more -->
+After [my previous macro key project](/post/whats-in-the-box/) back in January that used full-size arcade buttons, I was itching to make a more compact set of macro keys.<!-- more -->
 
 I bought a [sample set of different Cherry MX keys](https://amzn.to/2L9lrz9) -- these are the mechanical part of the keys, complete with key caps, but without a full keyboard. The keys are fully functional, so you can solder some wires to them and use them in place of a regular momentary switch in any project.
 

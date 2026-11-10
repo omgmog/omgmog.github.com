@@ -5,7 +5,7 @@ archived: true
 category: tinkering
 ---
 
-Well I took another look at the design of my macro keys project sooner than I expected. I started over with the design of the 3D-printed part of this project, and then moved the buttons and guts over from the previous version.<!-- more -->
+Well I took another look at the design of [my macro keys project](/post/extra-keys-v1/) sooner than I expected. I started over with the design of the 3D-printed part of this project, and then moved the buttons and guts over from the previous version.<!-- more -->
 
 This design works a lot nicer, and I figured I'd include some sample code for the Arduino Pro Micro here:
 

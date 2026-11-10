@@ -42,7 +42,7 @@ First of all, these two things are not mutually exclusive, I often use both toge
 
 One of the main nice features of Sass is that you can start a Sass watcher that watches for changes in a directory - when a change is detected it will re-process your SCSS files to CSS.
 
-This is explained in detail in the [Using Sass](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#using_sass) part of the Sass documentation, but it's a simple command and if you're using any other build processes it can be automatically started from them:
+This is explained in detail in the [Using Sass](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#using_sass) part of the Sass documentation (and in [my guide to getting started with Sass](/post/getting-started-with-using-sass-in-your-existing-website/)), but it's a simple command and if you're using any other build processes it can be automatically started from them:
 
 ```bash
 $ sass --watch input-directory:output-directory --style compressed

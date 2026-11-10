@@ -5,7 +5,7 @@ archived: true
 category: tinkering
 ---
 
-I bought some new filament! The 1kg of black that came with the printer has lasted me about 3 months, and so it was time to buy some more.<!-- more -->
+I bought some new filament! The 1kg of black that came with [the printer](/post/it-begins/) has lasted me about 3 months, and so it was time to buy some more.<!-- more -->
 
 I didn't look exhaustively for filament, I just looked on Amazon at some reviews and found a colour I liked at a price that I liked, and got it delivered the next day with Amazon Prime.
 
