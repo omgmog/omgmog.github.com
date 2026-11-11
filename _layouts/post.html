@@ -191,25 +191,28 @@ layout: core
       {% endif %}
 
       <div class="discussion-reply">
-        <div class="discussion-reply__text">
-          {% if is_open %}
-          <p class="discussion-reply__title">Join the conversation</p>
-          <p class="discussion-reply__hint">Comment on the GitHub issue, or reply from your own site with a Webmention.</p>
-          {% else %}
-          <p class="discussion-reply__title">Comments are closed</p>
-          <p class="discussion-reply__hint">You can still reply from your own site with a Webmention.</p>
-          {% endif %}
-        </div>
-        <div class="discussion-reply__actions">
+        <div class="discussion-reply__head">
+          <div class="discussion-reply__text">
+            <p class="discussion-reply__title">Join the conversation</p>
+            <p class="discussion-reply__hint">{% if is_open %}Comment on the GitHub issue, or reply{% else %}Reply{% endif %} from your own site with a <a href="https://indieweb.org/Webmention" target="_blank" rel="noopener">Webmention</a> (<a href="https://indieweb.org/Webmention#How_To_Send_Webmentions" target="_blank" rel="noopener">how?</a>).</p>
+          </div>
           {% if is_open %}<a class="btn btn--primary" href="https://github.com/omgmog/omgmog.github.com/issues/{{ page.comments_issue }}"><svg aria-hidden="true"><use href="#icon-message-circle"/></svg> Comment on GitHub</a>{% endif %}
-          <a class="btn btn--outline" href="https://indieweb.org/Webmention"><svg aria-hidden="true"><use href="#icon-reply"/></svg> Reply with a Webmention</a>
         </div>
+        <form class="wm-form" action="https://webmention.io/omgmog.net/webmention" method="post">
+          <div class="wm-form__row">
+            <input class="wm-form__input" type="url" name="source" required aria-label="Link to your reply" placeholder="Link to your reply, e.g. https://example.com/my-reply" autocomplete="url">
+            <input type="hidden" name="target" value="{{ page.url | absolute_url }}">
+            <button type="submit" class="btn btn--primary"><svg aria-hidden="true"><use href="#icon-reply"/></svg> Send Webmention</button>
+          </div>
+          <p class="wm-form__status" role="status"></p>
+        </form>
       </div>
 
       <p class="meta discussion-fetched">Webmentions last fetched <span class="discussion-fetched__time">{{ site.time | date: "%-d %B %Y, %H:%M" }}</span> <button type="button" class="icon-btn discussion-refresh" title="Check for new replies" aria-label="Check for new replies"><svg aria-hidden="true"><use href="#icon-rotate-cw"/></svg></button><span class="discussion-fetched__status" role="status"></span></p>
     </section>
   </article>
   <script src="{{ '/assets/discussion-refresh.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/webmention-form.js' | relative_url }}" defer></script>
 
   <aside class="split__aside">
     {% if page.series and page.collection != "cardboctober" %}{% include posts/series.html %}{% endif %}
