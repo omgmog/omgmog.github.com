@@ -16,8 +16,9 @@ module Jekyll
           [candidate, shared]
         end
 
-        min_score = tags.length >= 3 ? 2 : 1
-        scored.select! { |_, score| score >= min_score }
+        # Any shared tag qualifies, strongest first: the layout shows 3, after dropping posts this one already
+        # links to or is linked from (see backlinks.rb), so one-tag matches only backfill what is left.
+        scored.select! { |_, score| score >= 1 }
         scored.sort_by! { |candidate, score| [-score, -candidate.date.to_i] }
 
         post.data['related_posts'] = scored.first(LIMIT).map(&:first)
