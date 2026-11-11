@@ -1,6 +1,9 @@
 ---
 title: PHP2Shell and the case for building boring sites
 comments_issue: 173
+syndication:
+  - https://indieweb.social/@omgmog/117517659071559132
+  - https://social.omgmog.net/2026/new-blog-post-patching-an-old-vps
 tags: [server, jekyll]
 category: web
 ---

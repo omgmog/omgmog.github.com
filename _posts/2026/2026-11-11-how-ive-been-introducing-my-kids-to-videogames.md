@@ -1,6 +1,9 @@
 ---
 title: How I've been introducing my kids to videogames
 comments_issue: 175
+syndication:
+  - https://indieweb.social/@omgmog/117598471334355578
+  - https://social.omgmog.net/2026/new-blog-post-how-ive-been-introducing
 tags: [parenting, gaming, nintendo, retro-gaming]
 category: games
 ---

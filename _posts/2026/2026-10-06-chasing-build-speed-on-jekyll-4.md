@@ -2,6 +2,9 @@
 title: Chasing build speed on Jekyll 4
 series: blog-internals
 comments_issue: 172
+syndication:
+  - https://indieweb.social/@omgmog/117400444000824564
+  - https://social.omgmog.net/2026/got-my-jekyll-build-time-down-by
 tags: [jekyll, css, site-related]
 category: blog
 ---
