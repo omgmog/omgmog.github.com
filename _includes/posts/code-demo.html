@@ -1,0 +1,31 @@
+{% comment %}
+  Shows some HTML as a live demo with a Demo/Code switch (CSS only, no JS).
+  Needs `code_demo: true` in the post's front matter (loads code-demo.css).
+  Usage:
+  {% capture demo_code %}
+  <select name="size">
+    <option>Small</option>
+    <option>Medium</option>
+  </select>
+  {% endcapture %}
+  {% include posts/code-demo.html code=demo_code %}
+{% endcomment %}
+{% capture demo_id %}{% increment code_demo_id %}{% endcapture %}
+{% capture code_block %}
+```html
+{{- include.code -}}
+```
+{% endcapture %}
+
+<div class="code-demo-container">
+  <div class="code-demo-tabs" role="radiogroup" aria-label="Show the demo or its code">
+    <label><input type="radio" name="code-demo-{{ demo_id }}" value="demo" checked> Demo</label>
+    <label><input type="radio" name="code-demo-{{ demo_id }}" value="code"> Code</label>
+  </div>
+  <div class="code-demo-preview">
+    {{ include.code }}
+  </div>
+  <div class="code-demo-code">
+{{ code_block | markdownify }}
+  </div>
+</div>
