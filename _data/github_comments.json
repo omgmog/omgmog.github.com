@@ -659,7 +659,21 @@
   },
   "135": {
     "state": "open",
-    "comments": []
+    "comments": [
+      {
+        "id": 7166524064,
+        "user": {
+          "login": "46009361",
+          "avatar_url": "https://avatars.githubusercontent.com/u/165697051?v=4",
+          "html_url": "https://github.com/46009361"
+        },
+        "body": "Ironically, I was looking up why there's no tablet emoji when I found your article. I'm guessing it's too similar to the phone emoji, the only difference being resized proportions (usually 16:9 and 4:3).",
+        "body_html": "<p dir=\"auto\">Ironically, I was looking up why there's no tablet emoji when I found your article. I'm guessing it's too similar to the phone emoji, the only difference being resized proportions (usually 16:9 and 4:3).</p>",
+        "created_at": "2026-11-25T15:14:25Z",
+        "html_url": "https://github.com/omgmog/omgmog.github.com/issues/135#issuecomment-7166524064",
+        "sort_date": "2026-11-25T15:14:25Z"
+      }
+    ]
   },
   "136": {
     "state": "open",
@@ -980,6 +994,10 @@
     "comments": []
   },
   "175": {
+    "state": "open",
+    "comments": []
+  },
+  "176": {
     "state": "open",
     "comments": []
   }
