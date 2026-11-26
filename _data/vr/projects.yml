@@ -1,0 +1,17 @@
+- title: We're going to space
+  link: https://github.com/omgmog/were-going-to-space
+  writeup: https://omgmog.net/projects/vr/were-going-to-space/
+  description: "This was my entry for the 2017 Samsung VR Together Hackathon. It's a simple-ish Three.js WebVR scene that should work across most devices."
+  img: [vr/space.gif]
+
+- title: Cardboctober
+  link: https://cardboctober.github.io
+  writeup: https://omgmog.net/projects/vr/cardboctober/
+  description: "I spent October 2016 creating a new VR project every day for Google Cardboard, built with JavaScript, WebGL, and whatever web APIs seemed interesting at the time. I blogged the lot."
+  img: [vr/cardboctober-03.gif, vr/cardboctober-10.gif]
+
+- title: UX of VR
+  link: https://www.uxofvr.com
+  writeup: https://omgmog.net/projects/vr/ux-of-vr/
+  description: "I created this list of VR UX resources back in 2016. It has links to articles, talks, and other resources about designing for VR."
+  img: [uxofvr.png]

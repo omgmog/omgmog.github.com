@@ -57,6 +57,6 @@ The platforms Cardboctober was built for are mostly gone, but not everything fro
 
 There was never a follow-up month. Instead, I took over the Oxford VR Crowd meetup in 2017. It ran every two months, and I hosted five of them. I also put together [uxofvr.com](http://uxofvr.com), a collection of resources I'd learned from and curated. I also built a small game, [We're Going to Space](https://github.com/omgmog/were-going-to-space), for Samsung's VR Together hackathon. It was a Three.js WebVR scene for phones and headsets, more or less what I'd been doing with Cardboard. I didn't leave myself enough time for it, and spent too much of what I had tweening objects along paths.
 
-{% include posts/figure.html src="now/space.gif" %}{:.center}
+{% include posts/figure.html src="vr/space.gif" %}{:.center}
 
 Ten years on, the scene looks a lot like my cupboard: a stack of dead platforms and headsets I'm not getting rid of, and no obvious reason any of it should still matter. WebVR, Daydream, Gear VR, all gone. WebXR is alive but quiet. And the thing that's still going, the thing that cost the least and promised the least, is a folded piece of cardboard.

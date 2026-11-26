@@ -4,7 +4,7 @@ permalink: /vr/
 description: VR experiments, talks, and projects built with web technologies since 2015.
 ---
 {% assign talks = site.data.vr.talks | sort: "date" | reverse %}
-{% assign vr_projects = site.data.projects | where: "vr", true | reverse %}
+{% assign vr_projects = site.data.vr.projects | reverse %}
 {% assign vr_posts = site.tags.vr %}
 {% assign cardboctober_days = site.cardboctober | where_exp: "p", "p.slug != 'cardboctober'" %}
 
