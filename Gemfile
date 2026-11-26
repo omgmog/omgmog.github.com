@@ -13,3 +13,5 @@ gem "html_to_plain_text", "~> 1.0"  # For .txt format generation
 gem "terser", "~> 1.2"  # JS minification
 gem "htmlcompressor", "~> 0.4.0"  # HTML minification
 gem "mini_magick", "~> 4.12"  # Image optimization
+
+gem "omgmog-theme", git: "https://github.com/omgmog/omgmog-theme-jekyll", tag: "v0.1.0"

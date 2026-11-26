@@ -20,6 +20,7 @@ stop_jekyll() {
 
 trap stop_jekyll EXIT
 
+bundle install --quiet   # the theme is a path gem, so it can't be installed at image build
 start_jekyll
 
 while inotifywait -q -e modify,create,delete,move -r _plugins/ _config.yml; do

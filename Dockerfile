@@ -10,7 +10,5 @@ RUN git config --global --add safe.directory /site
 
 WORKDIR /site
 
-COPY Gemfile Gemfile.lock* ./
-RUN bundle install
 
 EXPOSE 4000
