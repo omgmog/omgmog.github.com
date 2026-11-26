@@ -180,7 +180,7 @@ module Jekyll
 
       if source == "github"
         return nil unless mention["author_name"].to_s != "" && mention["link_url"].to_s != ""
-        kind = "comment"
+        css_class  = "activity__item comment#{" is-author" if mention["is_author"]}"
         data_attrs = "data-source=\"github\" data-platform=\"#{mention["platform"]}\""
       elsif mention["wm-target"] && mention["author_name"]
         wm_type    = case mention["wm-property"]
