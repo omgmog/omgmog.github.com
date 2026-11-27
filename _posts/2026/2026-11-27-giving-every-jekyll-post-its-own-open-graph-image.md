@@ -102,9 +102,9 @@ spawn(chrome, ["--headless=new", "--window-size=1200,630", `--screenshot=${png}`
 Title length is the awkward part. A short title should be big and a long one has to shrink. A few lines of JavaScript in the page start at 136px and step down 2px at a time until the heading fits between the header and the footer. If a title doesn't fit even at 52px, the text is clamped to the last line that does.
 
 <div class="og-demos og-demos--thirds">
-{% include posts/figure.html src="og/tea-weather.png" title="A short title" alt="The card for a post titled Tea weather, with the title set very large on one line" %}
-{% include posts/figure.html src="og/o-cursor-where-art-thou.png" title="A medium title" alt="The card for a post titled O cursor, where art thou?, set on two lines" %}
-{% include posts/figure.html src="og/rebuilding-wordle-stats-from-whatsapp.png" title="A long title" alt="The card for a post titled Rebuilding and analysing 4 years of Wordle stats from WhatsApp chat logs, set smaller on three lines" %}
+{% include posts/og-demo.html layout="image" image="og/tea-weather.png" caption="A short title" alt="The card for a post titled Tea weather, with the title set very large on one line" %}
+{% include posts/og-demo.html layout="image" image="og/o-cursor-where-art-thou.png" caption="A medium title" alt="The card for a post titled O cursor, where art thou?, set on two lines" %}
+{% include posts/og-demo.html layout="image" image="og/rebuilding-wordle-stats-from-whatsapp.png" caption="A long title" alt="The card for a post titled Rebuilding and analysing 4 years of Wordle stats from WhatsApp chat logs, set smaller on three lines" %}
 </div>
 
 Each generated image is cached under a hash of what went into it (the post's manifest entry, its category, and a `TEMPLATE_VERSION` constant I bump when I change the design). If the hash matches a file in `.cache/og`, the script copies that file into place and Chrome never starts. A new or retitled post renders one image and everything else is a copy.
