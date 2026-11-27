@@ -1,6 +1,9 @@
 ---
 title: The small dropdown antipattern
 comments_issue: 176
+syndication:
+  - https://indieweb.social/@omgmog/117682392622150405
+  - https://social.omgmog.net/2026/new-blog-post-the-small-dropdown-antipatternpostthe-small-dropdown-antipattern
 category: design
 tags: [ux, design, web-development, forms]
 code_demo: true
