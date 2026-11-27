@@ -5819,5 +5819,97 @@
       "_author_key": "a607c9bc17f396ac",
       "_own": true
     }
+  ],
+  "/post/the-small-dropdown-antipattern/": [
+    {
+      "type": "entry",
+      "url": "https://indieweb.social/@omgmog/117682392622150405#favorited-by-109296893311862233",
+      "published": null,
+      "wm-received": "2026-11-27T08:15:36Z",
+      "wm-id": 2057831,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/117682392622150405/109296893311862233",
+      "wm-target": "https://blog.omgmog.net/post/the-small-dropdown-antipattern/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-11-27T08:15:36Z",
+      "_author_key": "2f885f781401af81"
+    },
+    {
+      "type": "entry",
+      "url": "https://indieweb.social/@omgmog/117682392622150405#favorited-by-110709595442343184",
+      "published": null,
+      "wm-received": "2026-11-27T08:15:36Z",
+      "wm-id": 2057832,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/117682392622150405/110709595442343184",
+      "wm-target": "https://blog.omgmog.net/post/the-small-dropdown-antipattern/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-11-27T08:15:36Z",
+      "_author_key": "ee62e1f761ada071"
+    },
+    {
+      "type": "entry",
+      "url": "https://indieweb.social/@omgmog/117682392622150405#favorited-by-109524188267362977",
+      "published": null,
+      "wm-received": "2026-11-27T08:15:43Z",
+      "wm-id": 2057833,
+      "wm-source": "https://brid.gy/like/mastodon/@omgmog@indieweb.social/117682392622150405/109524188267362977",
+      "wm-target": "https://blog.omgmog.net/post/the-small-dropdown-antipattern/",
+      "wm-property": "like-of",
+      "wm-private": false,
+      "sort_date": "2026-11-27T08:15:43Z",
+      "_author_key": "0387592123a79201"
+    },
+    {
+      "type": "entry",
+      "url": "https://indieweb.social/@omgmog/117682392622150405#reblogged-by-109364129030778308",
+      "published": null,
+      "wm-received": "2026-11-27T08:15:43Z",
+      "wm-id": 2057834,
+      "wm-source": "https://brid.gy/repost/mastodon/@omgmog@indieweb.social/117682392622150405/109364129030778308",
+      "wm-target": "https://blog.omgmog.net/post/the-small-dropdown-antipattern/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-11-27T08:15:43Z",
+      "_author_key": "4147324dffe01afc"
+    },
+    {
+      "type": "entry",
+      "url": "https://indieweb.social/@omgmog/117682392622150405#reblogged-by-109303137862554161",
+      "published": null,
+      "wm-received": "2026-11-27T08:15:47Z",
+      "wm-id": 2057835,
+      "wm-source": "https://brid.gy/repost/mastodon/@omgmog@indieweb.social/117682392622150405/109303137862554161",
+      "wm-target": "https://blog.omgmog.net/post/the-small-dropdown-antipattern/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-11-27T08:15:47Z",
+      "_author_key": "aa7ac508e3a78a73"
+    },
+    {
+      "type": "entry",
+      "url": "https://indieweb.social/@omgmog/117682392622150405#reblogged-by-109524188267362977",
+      "published": null,
+      "wm-received": "2026-11-27T08:15:49Z",
+      "wm-id": 2057836,
+      "wm-source": "https://brid.gy/repost/mastodon/@omgmog@indieweb.social/117682392622150405/109524188267362977",
+      "wm-target": "https://blog.omgmog.net/post/the-small-dropdown-antipattern/",
+      "wm-property": "repost-of",
+      "wm-private": false,
+      "sort_date": "2026-11-27T08:15:49Z",
+      "_author_key": "0387592123a79201"
+    },
+    {
+      "type": "entry",
+      "wm-property": "in-reply-to",
+      "wm-target": "https://blog.omgmog.net/post/the-small-dropdown-antipattern/",
+      "url": "https://hachyderm.io/@benjamineskola/117685085834893936",
+      "wm-source": "https://hachyderm.io/@benjamineskola/117685085834893936",
+      "published": "2026-11-26T22:25:00.000Z",
+      "wm-received": "2026-11-26T22:25:00.000Z",
+      "sort_date": "2026-11-26T22:25:00.000Z",
+      "_pulled": true,
+      "_author_key": "2f238966abb4dc5a"
+    }
   ]
 }
