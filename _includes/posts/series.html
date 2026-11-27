@@ -6,21 +6,8 @@
   <h3 id="series-heading" class="card__title">{{ series_title }}</h3>
   <ol class="thread thread--closed" style="--thread-colour: var(--yellow-line)">
     {% for sp in series_posts %}
-    {% assign sp_counts = site.data.webmention_counts[sp.url] %}
-    {% assign sp_total = 0 %}
-    {% for pair in sp_counts %}{% assign sp_total = sp_total | plus: pair[1] %}{% endfor %}
-    {% if sp.url == page.url %}
-    <li class="thread__item thread__item--current">
-      <span class="thread__title" aria-current="page">{{ sp.title }}</span>
-      <span class="meta">{{ sp.date | date: "%B %Y" }} &middot; {{ sp.reading_time }} min read {% include posts/interaction-count.html url=sp.url %}</span>
-    </li>
-    {% else %}
-    <li class="thread__item">
-      <span class="thread__label">Part {{ forloop.index }}</span>
-      <a class="thread__title" href="{{ sp.url }}">{{ sp.title }}</a>
-      <span class="meta">{{ sp.date | date: "%B %Y" }} &middot; {{ sp.reading_time }} min read {% include posts/interaction-count.html url=sp.url %}</span>
-    </li>
-    {% endif %}
+    {% capture part %}Part {{ forloop.index }}{% endcapture %}
+    {% include posts/thread-item.html post=sp label=part meta=true %}
     {% endfor %}
   </ol>
 </section>

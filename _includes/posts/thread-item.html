@@ -1,0 +1,8 @@
+{% comment %}One row of a thread (include.post). The row for the page being read is marked current. include.start adds the excerpt and the "start" styling, include.label is a small label above the title, include.meta adds the date, reading time and interaction count.{% endcomment %}
+{% assign tp = include.post %}{% assign current = false %}{% if tp.url == page.url %}{% assign current = true %}{% endif %}
+<li class="thread__item{% if include.start %} thread__item--start{% elsif current %} thread__item--current{% endif %}">
+  {% if include.label and current == false %}<span class="thread__label">{{ include.label }}</span>{% endif %}
+  {% if current %}<span class="thread__title" aria-current="page">{{ tp.title }}</span>{% else %}<a class="thread__title" href="{{ tp.url }}">{{ tp.title }}</a>{% endif %}
+  {% if include.start %}<p class="thread__excerpt">{{ tp.excerpt | strip_html }}</p>{% endif %}
+  {% if include.meta %}<span class="meta">{{ tp.date | date: "%B %Y" }} &bull; {{ tp.reading_time }} min read {% include posts/interaction-count.html url=tp.url %}</span>{% endif %}
+</li>

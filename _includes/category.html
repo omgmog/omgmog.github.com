@@ -26,23 +26,7 @@
   <ol class="thread thread--closed" style="--thread-colour: {{ cat.line }}">
     {% for threadlink in posts %}
     {% assign postdata = site.data.posts_by_url[threadlink] %}
-    {% assign counts = site.data.webmention_counts[threadlink] %}
-    {% assign total = 0 %}
-    {% for pair in counts %}{% assign total = total | plus: pair[1] %}{% endfor %}
-    
-        {% if forloop.first %}
-    <li class="thread__item thread__item--start">
-      <span class="thread__label">Start with</span>
-      <a class="thread__title" href="{{ postdata.url }}">{{ postdata.title }}</a>
-      <p class="thread__excerpt">{{ postdata.excerpt | strip_html }}</p>
-      <span class="meta">{{ postdata.reading_time }} min read &bull; {{ postdata.date | date:"%B %Y" }} {% include posts/interaction-count.html url=postdata.url %}</span>
-    </li>
-        {% else %}
-    <li class="thread__item">
-      <a class="thread__title" href="{{ postdata.url }}">{{ postdata.title }}</a>
-      <span class="meta">{{ postdata.reading_time }} min read &bull; {{ postdata.date | date:"%B %Y" }} {% include posts/interaction-count.html url=postdata.url %}</span>
-    </li>
-        {% endif %}
+    {% if forloop.first %}{% include posts/thread-item.html post=postdata start=true label="Start with" meta=true %}{% else %}{% include posts/thread-item.html post=postdata meta=true %}{% endif %}
     {% endfor %}
   </ol>
 </article>

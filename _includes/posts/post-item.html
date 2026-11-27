@@ -1,8 +1,5 @@
-{% comment %}One row of a post list (include.post). include.snippet (escaped HTML) replaces the excerpt (used for "Mentioned elsewhere on this site"). Sets --cat so the title takes the category's colour (LWAL is black, so it keeps the default link colour). include.plain leaves out the category badge.{% endcomment %}
+{% comment %}One row of a post list (include.post). include.snippet (escaped HTML) replaces the excerpt (used for "Mentioned elsewhere on this site"). Sets --cat so the title takes the category's colour (LWAL is black, so it keeps the default link colour). include.plain leaves out the category badge, include.compact the excerpt.{% endcomment %}
 {% assign post = include.post %}
-{% assign counts = site.data.webmention_counts[post.url] %}
-{% assign total = 0 %}
-{% for pair in counts %}{% assign total = total | plus: pair[1] %}{% endfor %}
 {% assign cat = site.data.categories[post.category] %}
 <li class="post-item{% if include.plain %} post-item--plain{% endif %}{% if page.hfeed %} h-entry{% endif %}" {% unless post.category == 'lwal' %} style="--cat: {{ cat.line | default: cat.colour | default: '#FFEA00' }}"{% endunless %}>
   {% unless include.plain %}
@@ -16,8 +13,8 @@
     {% if include.snippet %}<p class="post-item__excerpt">{{ include.snippet }}</p>{% endif %}
     <span class="meta"><time{% if page.hfeed %} class="dt-published"{% endif %} datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.links.size }} links</span>
     {% else %}
-    <p class="post-item__excerpt">{% if include.snippet %}{{ include.snippet }}{% else %}{{ post.excerpt | strip_html | strip }}{% endif %}</p>
-    <span class="meta"><time{% if page.hfeed %} class="dt-published"{% endif %} datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.reading_time }} min read {% include posts/interaction-count.html url=post.url %}</span>
+    {% unless include.compact %}<p class="post-item__excerpt">{% if include.snippet %}{{ include.snippet }}{% else %}{{ post.excerpt | strip_html | strip }}{% endif %}</p>{% endunless %}
+    <span class="meta"><time{% if page.hfeed %} class="dt-published"{% endif %} datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.reading_time }} min read  {% include posts/interaction-count.html url=post.url %}</span>
     {% endif %}
     {% unless include.plain or include.noseries %}{% include posts/series-line.html post=post %}{% endunless %}
   </div>

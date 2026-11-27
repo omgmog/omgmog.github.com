@@ -232,15 +232,7 @@ layout: core
       {% unless page.series and page.collection != "cardboctober" %}
       <ol class="thread{% if page.category_thread_before %} thread--lead{% endif %}{% unless page.category_thread_after %} thread--closed{% endunless %}" style="--thread-colour: {{ cat.line | default: cat.colour }}">
         {% for tp in page.category_thread %}
-        {% if tp.url == page.url %}
-        <li class="thread__item thread__item--current">
-          <span class="thread__title" aria-current="page">{{ page.title }}</span>
-        </li>
-        {% else %}
-        <li class="thread__item">
-          <a class="thread__title" href="{{ tp.url }}">{{ tp.title }}</a>
-        </li>
-        {% endif %}
+        {% include posts/thread-item.html post=tp %}
         {% endfor %}
       </ol>
       {% endunless %}
@@ -253,16 +245,7 @@ layout: core
         {% assign recentposts = site.data.all_posts | slice: 0, 4 %}
         {% assign shown = 0 %}
         {% for rp in recentposts %}{% if rp.url == page.url or shown == 3 %}{% continue %}{% endif %}{% assign shown = shown | plus: 1 %}
-        {% assign rcat = site.data.categories[rp.category] %}
-        <li class="post-item"{% unless rp.category == 'lwal' %} style="--cat: {{ rcat.line | default: rcat.colour }}"{% endunless %}>
-          <span class="badge" style="--badge-bg: {{ rcat.colour }}; --badge-ink: {{ rcat.ink }}">
-            <svg aria-hidden="true"><use href="#icon-cat-{{ rp.category }}"/></svg>
-          </span>
-          <div class="post-item__body">
-            <a class="post-item__title" href="{{ rp.url }}">{{ rp.title }}</a>
-            <span class="meta">{{ rp.reading_time }} min read &bull; {{ rp.date | date: "%-d %B %Y" }}</span>
-          </div>
-        </li>
+        {% include posts/post-item.html post=rp compact=true noseries=true %}
         {% endfor %}
       </ol>
     </section>

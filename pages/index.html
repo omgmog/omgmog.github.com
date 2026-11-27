@@ -87,21 +87,7 @@ title: Start here
     <ol class="post-list" role="list">
     {% assign latestposts = site.data.all_posts | slice: 0, 5 %}
     {% for sitepost in latestposts %}
-        {% assign cat = site.data.categories[sitepost.category] %}
-        {% assign counts = site.data.webmention_counts[sitepost.url] %}
-        {% assign total = 0 %}
-        {% for pair in counts %}{% assign total = total | plus: pair[1] %}{% endfor %}
-
-      <li class="post-item" style="--cat: {{ cat.line | default: cat.colour }}">
-        <span class="badge" style="--badge-bg: {{ cat.colour }}; --badge-ink: {{ cat.ink }}">
-          <svg aria-hidden="true"><use href="#icon-cat-{{ sitepost.category}}"/></svg>
-        </span>
-        <div class="post-item__body">
-          <a class="post-item__title" href="{{ sitepost.url }}">{{ sitepost.title }}</a>
-          <p class="post-item__excerpt">{{ sitepost.excerpt | strip_html }}</p>
-          <span class="meta">{{ sitepost.reading_time }} min read &bull; <time datetime="{{ sitepost.date | date_to_xmlschema }}">{{ sitepost.date | date: "%-d %B %Y" }}</time> {% include posts/interaction-count.html url=sitepost.url %}</span>
-        </div>
-      </li>
+        {% include posts/post-item.html post=sitepost noseries=true %}
     {% endfor %}
     </ol>
   </section>
