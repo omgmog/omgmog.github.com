@@ -1,6 +1,9 @@
 ---
 title: Giving every Jekyll post its own Open Graph image
 comments_issue: 177
+syndication:
+  - https://indieweb.social/@omgmog/117689402475567848
+  - https://social.omgmog.net/2026/new-blog-post-giving-every-jekyll-post
 series: blog-internals
 tags: [jekyll, site-related, guide, web-development]
 category: blog
