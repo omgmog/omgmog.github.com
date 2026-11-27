@@ -21,6 +21,8 @@
   const syndicated = new Set((d.syndication || "").split("|").map((u) => normUrl(u)).filter(Boolean));
   const seenWm = new Set((d.wmIds || "").split(",").filter(Boolean));
   const seenGh = new Set((d.ghIds || "").split(",").filter(Boolean));
+  const total = +d.total || 0;
+  let extra = 0; // webmentions on the page that the build doesn't have
   let counts = {};
   try {
     counts = JSON.parse(d.counts || "null") || {};
@@ -280,6 +282,15 @@
       return null;
     }
   };
+  // Lists and the header read this to show a count that includes what Refresh found
+  const COUNT_KEY = "interactions:" + new URL(targets[0]).pathname;
+  const saveCount = () => {
+    try {
+      if (extra) localStorage.setItem(COUNT_KEY, total + extra);
+      else localStorage.removeItem(COUNT_KEY);
+    } catch (e) {}
+    window.__interactionCounts?.();
+  };
   const stamp = (t) => {
     timeEl.textContent = `${fmtDate(t)}, ${t.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}`;
   };
@@ -314,6 +325,7 @@
       newGh.push(c);
     });
 
+    extra += newWm.length;
     if (newWm.length || newGh.length) renderReactions();
     return { wm: newWm, gh: newGh };
   }
@@ -328,6 +340,7 @@
       fetchComments().catch(() => (failed.push("GitHub"), [])),
     ]);
     const found = apply(wm, gh);
+    saveCount();
     const added = found.wm.length + found.gh.length;
 
     const now = new Date();
@@ -352,6 +365,7 @@
   if (cached) {
     apply(cached.wm || [], cached.gh || []);
     stamp(new Date(cached.t));
+    saveCount();
   }
   btn.addEventListener("click", refresh);
 })();

@@ -22,7 +22,7 @@ layout: core
         <span class="meta">
           <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
           &bull; {{ page.reading_time }} min read
-          {% if total > 0 %}&bull; <a href="#discussion">{{ total }} interaction{% unless total == 1 %}s{% endunless %}</a>{% endif %}
+          {% include posts/interaction-count.html url=page.url link=true %}
         </span>
         <span class="post-header__tools">
           {% for alt in page.alternates %}<a class="tool-link" href="{{ alt.href }}" title="View this post as {{ alt.title }}"><svg aria-hidden="true"><use href="#icon-file-text"/></svg> {{ alt.title | capitalize }}</a>{% endfor %}
@@ -135,7 +135,7 @@ layout: core
       data-policy="{{ site.data.webmention_policy | jsonify | escape }}"
       data-avatar="{{ site.assets_url }}/images/mog.svg"
       data-issue="{{ page.comments_issue }}" data-author="{{ site.author.name }}"
-      data-syndication="{{ page.syndication | join: '|' }}"
+      data-syndication="{{ page.syndication | join: '|' }}" data-total="{{ total }}"
       data-counts='{{ wm_counts | jsonify }}'>
       <h2 id="discussion-heading">Discussion</h2>
 

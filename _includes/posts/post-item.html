@@ -17,7 +17,7 @@
     <span class="meta"><time{% if page.hfeed %} class="dt-published"{% endif %} datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.links.size }} links</span>
     {% else %}
     <p class="post-item__excerpt">{% if include.snippet %}{{ include.snippet }}{% else %}{{ post.excerpt | strip_html | strip }}{% endif %}</p>
-    <span class="meta"><time{% if page.hfeed %} class="dt-published"{% endif %} datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.reading_time }} min read{% if total > 0 %} &bull; {{ total }} interaction{% unless total == 1 %}s{% endunless %}{% endif %}</span>
+    <span class="meta"><time{% if page.hfeed %} class="dt-published"{% endif %} datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time> &bull; {{ post.reading_time }} min read {% include posts/interaction-count.html url=post.url %}</span>
     {% endif %}
     {% unless include.plain or include.noseries %}{% include posts/series-line.html post=post %}{% endunless %}
   </div>

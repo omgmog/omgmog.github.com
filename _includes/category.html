@@ -35,12 +35,12 @@
       <span class="thread__label">Start with</span>
       <a class="thread__title" href="{{ postdata.url }}">{{ postdata.title }}</a>
       <p class="thread__excerpt">{{ postdata.excerpt | strip_html }}</p>
-      <span class="meta">{{ postdata.reading_time }} min read &bull; {{ postdata.date | date:"%B %Y" }} {% if total > 0 %}&bull; {{ total }} interaction{% unless total < 2 %}s{% endunless %}{% endif %}</span>
+      <span class="meta">{{ postdata.reading_time }} min read &bull; {{ postdata.date | date:"%B %Y" }} {% include posts/interaction-count.html url=postdata.url %}</span>
     </li>
         {% else %}
     <li class="thread__item">
       <a class="thread__title" href="{{ postdata.url }}">{{ postdata.title }}</a>
-      <span class="meta">{{ postdata.reading_time }} min read &bull; {{ postdata.date | date:"%B %Y" }} {% if total > 0 %}&bull; {{ total }} interaction{% unless total < 2 %}s{% endunless %}{% endif %}</span>
+      <span class="meta">{{ postdata.reading_time }} min read &bull; {{ postdata.date | date:"%B %Y" }} {% include posts/interaction-count.html url=postdata.url %}</span>
     </li>
         {% endif %}
     {% endfor %}

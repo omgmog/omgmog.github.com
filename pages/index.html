@@ -99,7 +99,7 @@ title: Start here
         <div class="post-item__body">
           <a class="post-item__title" href="{{ sitepost.url }}">{{ sitepost.title }}</a>
           <p class="post-item__excerpt">{{ sitepost.excerpt | strip_html }}</p>
-          <span class="meta">{{ sitepost.reading_time }} min read &bull; <time datetime="{{ sitepost.date | date_to_xmlschema }}">{{ sitepost.date | date: "%-d %B %Y" }}</time> {% if total > 0 %}&bull; {{ total }} interaction{% unless total < 2 %}s{% endunless %}{% endif %}</span>
+          <span class="meta">{{ sitepost.reading_time }} min read &bull; <time datetime="{{ sitepost.date | date_to_xmlschema }}">{{ sitepost.date | date: "%-d %B %Y" }}</time> {% include posts/interaction-count.html url=sitepost.url %}</span>
         </div>
       </li>
     {% endfor %}
