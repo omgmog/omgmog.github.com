@@ -1,0 +1,25 @@
+{% comment %}
+  Mock-up of a shared link's preview card, for comparing states of Open Graph data. Styles are in blog.css.
+  Leave out `title` to show the bare URL (no Open Graph tags); `description` and `image` are optional.
+  `image` is relative to /images/ like figure.html. layout="square" shows the compact card: the image cropped
+  square on the left, the text beside it. Alone, class="wide" caps a card at the width of a real preview; wrap several in <div class="og-demos"> to lay them out in a grid.
+  Usage:
+  {% include posts/og-demo.html title="A post" description="Its first lines." image="og/a-post.png" caption="Own image" class="wide" %}
+{% endcomment %}
+<figure class="og-demo {{ include.class }}">
+  {%- if include.caption %}
+  <figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" | strip }}</figcaption>
+  {%- endif %}
+  <div class="og-demo__card{% if include.layout == 'square' %} og-demo__card--square{% endif %}">
+    {%- if include.title -%}
+    {%- if include.image %}<img src="{{ include.image | prepend: '/images/' | relative_url }}" alt="" loading="lazy">{% endif %}
+    <div class="og-demo__body">
+      <span class="og-demo__host">blog.omgmog.net</span>
+      <strong>{{ include.title }}</strong>
+      {%- if include.description %}<p>{{ include.description }}</p>{% endif %}
+    </div>
+    {%- else -%}
+    <div class="og-demo__body og-demo__body--plain">{{ include.url | default: "https://blog.omgmog.net/" }}</div>
+    {%- endif %}
+  </div>
+</figure>
