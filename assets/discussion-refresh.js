@@ -271,17 +271,23 @@
     return r.json();
   }
 
-  async function refresh() {
-    btn.disabled = true;
-    btn.setAttribute("aria-busy", "true");
-    statusEl.textContent = "";
-    const failed = [];
-    const [wm, gh] = await Promise.all([
-      fetchMentions().catch(() => (failed.push("webmention.io"), [])),
-      fetchComments().catch(() => (failed.push("GitHub"), [])),
-    ]);
-    const added = [];
+  // What the last refresh found that the build didn't, kept per page so a reload shows it again.
+  const KEY = `discussion:${targets[0]}`;
+  const load = () => {
+    try {
+      return JSON.parse(localStorage.getItem(KEY)) || null;
+    } catch (e) {
+      return null;
+    }
+  };
+  const stamp = (t) => {
+    timeEl.textContent = `${fmtDate(t)}, ${t.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}`;
+  };
 
+  // Adds whatever isn't on the page yet; returns the new webmentions and comments.
+  function apply(wm, gh) {
+    const newWm = [];
+    const newGh = [];
     wm.filter((m) => m["wm-id"] && !seenWm.has(String(m["wm-id"])))
       .filter((m) => !(["in-reply-to", "mention-of"].includes(m["wm-property"]) && [m.url, m["wm-source"]].some((u) => syndicated.has(normUrl(u)))))
       .sort((a, b) => String(a["wm-received"]).localeCompare(String(b["wm-received"])))
@@ -295,32 +301,57 @@
             const mine = own(m);
             people[prop].push({ name: mine ? AUTHOR : m.author?.name || hostOf(m.url || m["wm-source"]), own: mine });
           }
-          added.push(m);
+          newWm.push(m);
         } else if (["in-reply-to", "mention-of"].includes(prop) || sharedLink(m)) {
           addToFeed(mentionItem(m), m.published || m["wm-received"]);
-          added.push(m);
+          newWm.push(m);
         }
       });
 
     gh.filter((c) => !seenGh.has(String(c.id))).forEach((c) => {
       seenGh.add(String(c.id));
       addToFeed(githubItem(c), c.created_at);
-      added.push(c);
+      newGh.push(c);
     });
 
-    if (added.length) {
-      renderReactions();
-    }
+    if (newWm.length || newGh.length) renderReactions();
+    return { wm: newWm, gh: newGh };
+  }
+
+  async function refresh() {
+    btn.disabled = true;
+    btn.setAttribute("aria-busy", "true");
+    statusEl.textContent = "";
+    const failed = [];
+    const [wm, gh] = await Promise.all([
+      fetchMentions().catch(() => (failed.push("webmention.io"), [])),
+      fetchComments().catch(() => (failed.push("GitHub"), [])),
+    ]);
+    const found = apply(wm, gh);
+    const added = found.wm.length + found.gh.length;
+
     const now = new Date();
-    timeEl.textContent = `${fmtDate(now)}, ${now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}`;
+    stamp(now);
+    if (!failed.length) {
+      // A failed fetch returns [] for that source, so only save a complete refresh
+      const old = load() || { wm: [], gh: [] };
+      try {
+        localStorage.setItem(KEY, JSON.stringify({ t: now.getTime(), wm: [...old.wm, ...found.wm], gh: [...old.gh, ...found.gh] }));
+      } catch (e) {}
+    }
     statusEl.textContent = failed.length
       ? ` Couldn't reach ${failed.join(" or ")}.`
-      : added.length
-        ? ` ${added.length} new.`
+      : added
+        ? ` ${added} new.`
         : " Nothing new.";
     btn.disabled = false;
     btn.removeAttribute("aria-busy");
   }
 
+  const cached = load();
+  if (cached) {
+    apply(cached.wm || [], cached.gh || []);
+    stamp(new Date(cached.t));
+  }
   btn.addEventListener("click", refresh);
 })();
